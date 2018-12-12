@@ -1,0 +1,12 @@
+{
+  "ecmaFeatures": {
+    "jsx": true
+  },
+  "extends": ["airbnb", "eslint:recommended", "prettier"],
+  "parser": "babel-eslint",
+  "plugins": ["prettier", "react", "react-native"],
+  "rules": {
+    "prettier/prettier": "error",
+    "react/jsx-filename-extension": [0]
+  }
+}
