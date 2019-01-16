@@ -1,10 +1,12 @@
 import React from "react";
-import { AppRegistry, StyleSheet, Text, View } from "react-native";
+import { AppRegistry, StyleSheet, View } from "react-native";
+
+import { Logo } from "components";
 
 const App = () => {
   return (
     <View style={styles.container}>
-      <Text style={styles.welcome}>Welcome to Elpis!</Text>
+      <Logo />
     </View>
   );
 };
@@ -15,11 +17,6 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
     backgroundColor: "#F5FCFF"
-  },
-  welcome: {
-    fontSize: 20,
-    textAlign: "center",
-    margin: 10
   }
 });
 
