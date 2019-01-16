@@ -2,11 +2,21 @@
   "ecmaFeatures": {
     "jsx": true
   },
-  "extends": ["airbnb", "eslint:recommended", "prettier"],
+  "extends": [
+    "airbnb",
+    "eslint:recommended",
+    "prettier",
+    "plugin:jest/recommended"
+  ],
   "parser": "babel-eslint",
-  "plugins": ["prettier", "react", "react-native"],
+  "parserOptions": {
+    "ecmaVersion": 6,
+    "sourceType": "module"
+  },
+  "plugins": ["jest", "prettier", "react", "react-native"],
   "rules": {
     "import/prefer-default-export": false,
+    "no-extraneous-dependencies": false,
     "prettier/prettier": "error",
     "react/jsx-filename-extension": [0]
   }
