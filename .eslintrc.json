@@ -6,6 +6,7 @@
   "parser": "babel-eslint",
   "plugins": ["prettier", "react", "react-native"],
   "rules": {
+    "import/prefer-default-export": false,
     "prettier/prettier": "error",
     "react/jsx-filename-extension": [0]
   }
