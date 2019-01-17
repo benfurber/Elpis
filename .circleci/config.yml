@@ -1,0 +1,22 @@
+workflows:
+  version: 2
+  test-and-deploy:
+    jobs:
+       — run_tests
+       — deploy_android:
+         requires:
+           — run_tests
+           filters:
+             branches:
+               only: 
+                 — production
+                 — staging
+       — deploy_ios:
+         requires:
+           — run_tests
+           — deploy_android
+           filters:
+             branches:
+               only:
+                 — production
+                 — staging
