@@ -1,7 +1,7 @@
 import React from "react";
 import { AppRegistry, StyleSheet, View } from "react-native";
 
-import { Logo } from "components";
+import { Logo } from "./components/logo";
 
 const App = () => {
   return (

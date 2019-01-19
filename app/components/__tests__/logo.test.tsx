@@ -2,7 +2,7 @@ import "react-native";
 import React from "react";
 import { shallow } from "enzyme";
 
-import { Logo } from "components";
+import { Logo } from "../logo";
 
 describe("Logo", () => {
   it("renders correctly", () => {
