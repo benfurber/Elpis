@@ -1,6 +1,9 @@
 // For a detailed explanation regarding each configuration property, visit:
 // https://jestjs.io/docs/en/configuration.html
 
+const { pathsToModuleNameMapper } = require("ts-jest/utils");
+const { compilerOptions } = require("./tsconfig");
+
 module.exports = {
   // All imported modules in your tests should be mocked automatically
   // automock: true,
@@ -12,7 +15,7 @@ module.exports = {
   // browser: false,
 
   // The directory where Jest should store its cached dependency information
-  // cacheDirectory: "/var/folders/vy/_9k80g490t5g030gmf2l29vr0000gn/T/jest_dx",
+  cacheDirectory: ".jest/cache",
 
   // Automatically clear mock calls and instances between every test
   clearMocks: true,
@@ -61,15 +64,12 @@ module.exports = {
   // ],
 
   // An array of file extensions your modules use
-  // moduleFileExtensions: [
-  //   "js",
-  //   "json",
-  //   "jsx",
-  //   "node"
-  // ],
+  moduleFileExtensions: ["js", "json", "jsx", "node", "ts", "tsx"],
 
   // A map from regular expressions to module names that allow to stub out resources with a single module
-  // moduleNameMapper: {},
+  moduleNameMapper: pathsToModuleNameMapper(compilerOptions.paths, {
+    prefix: "<rootDir>/"
+  }),
 
   // An array of regexp pattern strings, matched against all module paths before considered 'visible' to the module loader
   // modulePathIgnorePatterns: [],
@@ -131,15 +131,13 @@ module.exports = {
   // testLocationInResults: false,
 
   // The glob patterns Jest uses to detect test files
-  testMatch: ["**/__tests__/**/*.js?(x)", "**/?(*.)+(spec|test).js?(x)"],
+  testMatch: null,
 
   // An array of regexp pattern strings that are matched against all test paths, matched tests are skipped
-  // testPathIgnorePatterns: [
-  //   "/node_modules/"
-  // ],
+  testPathIgnorePatterns: ["\\.snap$", "<rootDir>/node_modules/"],
 
   // The regexp pattern Jest uses to detect test files
-  // testRegex: "",
+  testRegex: "(/__tests__/.*|\\.(test|spec))\\.(ts|tsx|js)$",
 
   // This option allows the use of a custom results processor
   // testResultsProcessor: null,
@@ -164,7 +162,9 @@ module.exports = {
   ],
 
   transform: {
-    "^.+\\.js$": "<rootDir>/node_modules/react-native/jest/preprocessor.js"
+    "^.+\\.js$": "<rootDir>/node_modules/react-native/jest/preprocessor.js",
+    "^.+\\.(js)$": "<rootDir>/node_modules/babel-jest",
+    "\\.(ts|tsx)$": "<rootDir>/node_modules/ts-jest/preprocessor.js"
   }
 
   // An array of regexp pattern strings that are matched against all modules before the module loader will automatically return a mock for them
