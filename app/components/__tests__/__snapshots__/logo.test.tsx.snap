@@ -17,17 +17,37 @@ ShallowWrapper {
     "key": undefined,
     "nodeType": "class",
     "props": Object {
-      "children": <Text
+      "children": <View
         style={
           Object {
-            "fontSize": 20,
-            "margin": 10,
-            "textAlign": "center",
+            "alignItems": "center",
+            "alignSelf": "flex-end",
+            "flex": 1,
+            "flexDirection": "row",
+            "width": "100%",
           }
         }
       >
-        Elpis
-      </Text>,
+        <Text
+          style={
+            Object {
+              "alignSelf": "flex-end",
+              "color": "#333",
+              "flex": 1,
+              "fontSize": 40,
+              "margin": 10,
+              "textAlign": "center",
+            }
+          }
+        >
+          Elpis
+        </Text>
+      </View>,
+      "style": Object {
+        "alignItems": "flex-end",
+        "flex": 1,
+        "flexDirection": "column",
+      },
     },
     "ref": null,
     "rendered": Object {
@@ -35,15 +55,48 @@ ShallowWrapper {
       "key": undefined,
       "nodeType": "class",
       "props": Object {
-        "children": "Elpis",
+        "children": <Text
+          style={
+            Object {
+              "alignSelf": "flex-end",
+              "color": "#333",
+              "flex": 1,
+              "fontSize": 40,
+              "margin": 10,
+              "textAlign": "center",
+            }
+          }
+        >
+          Elpis
+        </Text>,
         "style": Object {
-          "fontSize": 20,
-          "margin": 10,
-          "textAlign": "center",
+          "alignItems": "center",
+          "alignSelf": "flex-end",
+          "flex": 1,
+          "flexDirection": "row",
+          "width": "100%",
         },
       },
       "ref": null,
-      "rendered": "Elpis",
+      "rendered": Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "children": "Elpis",
+          "style": Object {
+            "alignSelf": "flex-end",
+            "color": "#333",
+            "flex": 1,
+            "fontSize": 40,
+            "margin": 10,
+            "textAlign": "center",
+          },
+        },
+        "ref": null,
+        "rendered": "Elpis",
+        "type": [Function],
+      },
       "type": [Function],
     },
     "type": [Function],
@@ -54,17 +107,37 @@ ShallowWrapper {
       "key": undefined,
       "nodeType": "class",
       "props": Object {
-        "children": <Text
+        "children": <View
           style={
             Object {
-              "fontSize": 20,
-              "margin": 10,
-              "textAlign": "center",
+              "alignItems": "center",
+              "alignSelf": "flex-end",
+              "flex": 1,
+              "flexDirection": "row",
+              "width": "100%",
             }
           }
         >
-          Elpis
-        </Text>,
+          <Text
+            style={
+              Object {
+                "alignSelf": "flex-end",
+                "color": "#333",
+                "flex": 1,
+                "fontSize": 40,
+                "margin": 10,
+                "textAlign": "center",
+              }
+            }
+          >
+            Elpis
+          </Text>
+        </View>,
+        "style": Object {
+          "alignItems": "flex-end",
+          "flex": 1,
+          "flexDirection": "column",
+        },
       },
       "ref": null,
       "rendered": Object {
@@ -72,15 +145,48 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "class",
         "props": Object {
-          "children": "Elpis",
+          "children": <Text
+            style={
+              Object {
+                "alignSelf": "flex-end",
+                "color": "#333",
+                "flex": 1,
+                "fontSize": 40,
+                "margin": 10,
+                "textAlign": "center",
+              }
+            }
+          >
+            Elpis
+          </Text>,
           "style": Object {
-            "fontSize": 20,
-            "margin": 10,
-            "textAlign": "center",
+            "alignItems": "center",
+            "alignSelf": "flex-end",
+            "flex": 1,
+            "flexDirection": "row",
+            "width": "100%",
           },
         },
         "ref": null,
-        "rendered": "Elpis",
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "children": "Elpis",
+            "style": Object {
+              "alignSelf": "flex-end",
+              "color": "#333",
+              "flex": 1,
+              "fontSize": 40,
+              "margin": 10,
+              "textAlign": "center",
+            },
+          },
+          "ref": null,
+          "rendered": "Elpis",
+          "type": [Function],
+        },
         "type": [Function],
       },
       "type": [Function],
