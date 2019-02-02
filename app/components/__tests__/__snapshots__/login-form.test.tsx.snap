@@ -18,13 +18,95 @@ ShallowWrapper {
     "nodeType": "class",
     "props": Object {
       "children": Array [
-        <Text>
-          Email
-        </Text>,
-        <Text>
-          Password
-        </Text>,
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "flexDirection": "row",
+              "margin": 10,
+            }
+          }
+        >
+          <TextInput
+            allowFontScaling={true}
+            style={
+              Object {
+                "backgroundColor": "rgb(255, 255, 255)",
+                "borderRadius": 5,
+                "flex": 2,
+                "height": 40,
+                "padding": 10,
+              }
+            }
+            underlineColorAndroid="transparent"
+            value="Email"
+          />
+        </View>,
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "flexDirection": "row",
+              "margin": 10,
+            }
+          }
+        >
+          <TextInput
+            allowFontScaling={true}
+            style={
+              Object {
+                "backgroundColor": "rgb(255, 255, 255)",
+                "borderRadius": 5,
+                "flex": 2,
+                "height": 40,
+                "padding": 10,
+              }
+            }
+            underlineColorAndroid="transparent"
+            value="Password"
+          />
+        </View>,
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "flexDirection": "row",
+              "margin": 10,
+            }
+          }
+        >
+          <TouchableOpacity
+            activeOpacity={0.2}
+            style={
+              Object {
+                "backgroundColor": "rgba(4, 71, 47, 0.75)",
+                "borderRadius": 100,
+                "color": "rgb(255, 255, 255)",
+                "paddingHorizontal": 20,
+                "paddingVertical": 10,
+              }
+            }
+          >
+            <Text
+              style={
+                Object {
+                  "color": "rgb(255, 255, 255)",
+                  "fontSize": 16,
+                  "fontWeight": "bold",
+                }
+              }
+            >
+              Login
+            </Text>
+          </TouchableOpacity>
+        </View>,
       ],
+      "style": Object {
+        "alignItems": "center",
+        "flex": 1,
+        "flexDirection": "column",
+        "justifyContent": "center",
+      },
     },
     "ref": null,
     "rendered": Array [
@@ -33,10 +115,47 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "class",
         "props": Object {
-          "children": "Email",
+          "children": <TextInput
+            allowFontScaling={true}
+            style={
+              Object {
+                "backgroundColor": "rgb(255, 255, 255)",
+                "borderRadius": 5,
+                "flex": 2,
+                "height": 40,
+                "padding": 10,
+              }
+            }
+            underlineColorAndroid="transparent"
+            value="Email"
+          />,
+          "style": Object {
+            "alignItems": "center",
+            "flexDirection": "row",
+            "margin": 10,
+          },
         },
         "ref": null,
-        "rendered": "Email",
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "allowFontScaling": true,
+            "style": Object {
+              "backgroundColor": "rgb(255, 255, 255)",
+              "borderRadius": 5,
+              "flex": 2,
+              "height": 40,
+              "padding": 10,
+            },
+            "underlineColorAndroid": "transparent",
+            "value": "Email",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
         "type": [Function],
       },
       Object {
@@ -44,10 +163,129 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "class",
         "props": Object {
-          "children": "Password",
+          "children": <TextInput
+            allowFontScaling={true}
+            style={
+              Object {
+                "backgroundColor": "rgb(255, 255, 255)",
+                "borderRadius": 5,
+                "flex": 2,
+                "height": 40,
+                "padding": 10,
+              }
+            }
+            underlineColorAndroid="transparent"
+            value="Password"
+          />,
+          "style": Object {
+            "alignItems": "center",
+            "flexDirection": "row",
+            "margin": 10,
+          },
         },
         "ref": null,
-        "rendered": "Password",
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "allowFontScaling": true,
+            "style": Object {
+              "backgroundColor": "rgb(255, 255, 255)",
+              "borderRadius": 5,
+              "flex": 2,
+              "height": 40,
+              "padding": 10,
+            },
+            "underlineColorAndroid": "transparent",
+            "value": "Password",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "children": <TouchableOpacity
+            activeOpacity={0.2}
+            style={
+              Object {
+                "backgroundColor": "rgba(4, 71, 47, 0.75)",
+                "borderRadius": 100,
+                "color": "rgb(255, 255, 255)",
+                "paddingHorizontal": 20,
+                "paddingVertical": 10,
+              }
+            }
+          >
+            <Text
+              style={
+                Object {
+                  "color": "rgb(255, 255, 255)",
+                  "fontSize": 16,
+                  "fontWeight": "bold",
+                }
+              }
+            >
+              Login
+            </Text>
+          </TouchableOpacity>,
+          "style": Object {
+            "alignItems": "center",
+            "flexDirection": "row",
+            "margin": 10,
+          },
+        },
+        "ref": null,
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "activeOpacity": 0.2,
+            "children": <Text
+              style={
+                Object {
+                  "color": "rgb(255, 255, 255)",
+                  "fontSize": 16,
+                  "fontWeight": "bold",
+                }
+              }
+            >
+              Login
+            </Text>,
+            "style": Object {
+              "backgroundColor": "rgba(4, 71, 47, 0.75)",
+              "borderRadius": 100,
+              "color": "rgb(255, 255, 255)",
+              "paddingHorizontal": 20,
+              "paddingVertical": 10,
+            },
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "children": "Login",
+              "style": Object {
+                "color": "rgb(255, 255, 255)",
+                "fontSize": 16,
+                "fontWeight": "bold",
+              },
+            },
+            "ref": null,
+            "rendered": "Login",
+            "type": [Function],
+          },
+          "type": [Function],
+        },
         "type": [Function],
       },
     ],
@@ -60,13 +298,95 @@ ShallowWrapper {
       "nodeType": "class",
       "props": Object {
         "children": Array [
-          <Text>
-            Email
-          </Text>,
-          <Text>
-            Password
-          </Text>,
+          <View
+            style={
+              Object {
+                "alignItems": "center",
+                "flexDirection": "row",
+                "margin": 10,
+              }
+            }
+          >
+            <TextInput
+              allowFontScaling={true}
+              style={
+                Object {
+                  "backgroundColor": "rgb(255, 255, 255)",
+                  "borderRadius": 5,
+                  "flex": 2,
+                  "height": 40,
+                  "padding": 10,
+                }
+              }
+              underlineColorAndroid="transparent"
+              value="Email"
+            />
+          </View>,
+          <View
+            style={
+              Object {
+                "alignItems": "center",
+                "flexDirection": "row",
+                "margin": 10,
+              }
+            }
+          >
+            <TextInput
+              allowFontScaling={true}
+              style={
+                Object {
+                  "backgroundColor": "rgb(255, 255, 255)",
+                  "borderRadius": 5,
+                  "flex": 2,
+                  "height": 40,
+                  "padding": 10,
+                }
+              }
+              underlineColorAndroid="transparent"
+              value="Password"
+            />
+          </View>,
+          <View
+            style={
+              Object {
+                "alignItems": "center",
+                "flexDirection": "row",
+                "margin": 10,
+              }
+            }
+          >
+            <TouchableOpacity
+              activeOpacity={0.2}
+              style={
+                Object {
+                  "backgroundColor": "rgba(4, 71, 47, 0.75)",
+                  "borderRadius": 100,
+                  "color": "rgb(255, 255, 255)",
+                  "paddingHorizontal": 20,
+                  "paddingVertical": 10,
+                }
+              }
+            >
+              <Text
+                style={
+                  Object {
+                    "color": "rgb(255, 255, 255)",
+                    "fontSize": 16,
+                    "fontWeight": "bold",
+                  }
+                }
+              >
+                Login
+              </Text>
+            </TouchableOpacity>
+          </View>,
         ],
+        "style": Object {
+          "alignItems": "center",
+          "flex": 1,
+          "flexDirection": "column",
+          "justifyContent": "center",
+        },
       },
       "ref": null,
       "rendered": Array [
@@ -75,10 +395,47 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "class",
           "props": Object {
-            "children": "Email",
+            "children": <TextInput
+              allowFontScaling={true}
+              style={
+                Object {
+                  "backgroundColor": "rgb(255, 255, 255)",
+                  "borderRadius": 5,
+                  "flex": 2,
+                  "height": 40,
+                  "padding": 10,
+                }
+              }
+              underlineColorAndroid="transparent"
+              value="Email"
+            />,
+            "style": Object {
+              "alignItems": "center",
+              "flexDirection": "row",
+              "margin": 10,
+            },
           },
           "ref": null,
-          "rendered": "Email",
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "allowFontScaling": true,
+              "style": Object {
+                "backgroundColor": "rgb(255, 255, 255)",
+                "borderRadius": 5,
+                "flex": 2,
+                "height": 40,
+                "padding": 10,
+              },
+              "underlineColorAndroid": "transparent",
+              "value": "Email",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
           "type": [Function],
         },
         Object {
@@ -86,10 +443,129 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "class",
           "props": Object {
-            "children": "Password",
+            "children": <TextInput
+              allowFontScaling={true}
+              style={
+                Object {
+                  "backgroundColor": "rgb(255, 255, 255)",
+                  "borderRadius": 5,
+                  "flex": 2,
+                  "height": 40,
+                  "padding": 10,
+                }
+              }
+              underlineColorAndroid="transparent"
+              value="Password"
+            />,
+            "style": Object {
+              "alignItems": "center",
+              "flexDirection": "row",
+              "margin": 10,
+            },
           },
           "ref": null,
-          "rendered": "Password",
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "allowFontScaling": true,
+              "style": Object {
+                "backgroundColor": "rgb(255, 255, 255)",
+                "borderRadius": 5,
+                "flex": 2,
+                "height": 40,
+                "padding": 10,
+              },
+              "underlineColorAndroid": "transparent",
+              "value": "Password",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "children": <TouchableOpacity
+              activeOpacity={0.2}
+              style={
+                Object {
+                  "backgroundColor": "rgba(4, 71, 47, 0.75)",
+                  "borderRadius": 100,
+                  "color": "rgb(255, 255, 255)",
+                  "paddingHorizontal": 20,
+                  "paddingVertical": 10,
+                }
+              }
+            >
+              <Text
+                style={
+                  Object {
+                    "color": "rgb(255, 255, 255)",
+                    "fontSize": 16,
+                    "fontWeight": "bold",
+                  }
+                }
+              >
+                Login
+              </Text>
+            </TouchableOpacity>,
+            "style": Object {
+              "alignItems": "center",
+              "flexDirection": "row",
+              "margin": 10,
+            },
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "activeOpacity": 0.2,
+              "children": <Text
+                style={
+                  Object {
+                    "color": "rgb(255, 255, 255)",
+                    "fontSize": 16,
+                    "fontWeight": "bold",
+                  }
+                }
+              >
+                Login
+              </Text>,
+              "style": Object {
+                "backgroundColor": "rgba(4, 71, 47, 0.75)",
+                "borderRadius": 100,
+                "color": "rgb(255, 255, 255)",
+                "paddingHorizontal": 20,
+                "paddingVertical": 10,
+              },
+            },
+            "ref": null,
+            "rendered": Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "children": "Login",
+                "style": Object {
+                  "color": "rgb(255, 255, 255)",
+                  "fontSize": 16,
+                  "fontWeight": "bold",
+                },
+              },
+              "ref": null,
+              "rendered": "Login",
+              "type": [Function],
+            },
+            "type": [Function],
+          },
           "type": [Function],
         },
       ],
