@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Component } from "react";
 import {
   StyleSheet,
   TextInput,
@@ -7,23 +7,58 @@ import {
   TouchableOpacity
 } from "react-native";
 
-const LoginForm = () => {
-  return (
-    <View style={styles.container}>
-      <View style={styles.row}>
-        <TextInput style={styles.input} value="Email" />
-      </View>
-      <View style={styles.row}>
-        <TextInput style={styles.input} value="Password" />
-      </View>
-      <View style={styles.row}>
-        <TouchableOpacity style={styles.button}>
-          <Text style={styles.buttonText}>Login</Text>
-        </TouchableOpacity>
-      </View>
-    </View>
-  );
+const CONSTANTS = {
+  email: "Email",
+  password: "Password"
 };
+
+interface Props {}
+interface State {
+  email: string;
+  password: string;
+}
+
+class LoginForm extends Component<Props, State> {
+  constructor(props: Props, state: State) {
+    super(props);
+    this.state = {
+      email: "",
+      password: ""
+    };
+  }
+
+  render() {
+    return (
+      <View style={styles.container}>
+        <View style={styles.row}>
+          <TextInput
+            keyboardType="email-address"
+            onChangeText={email => this.setState({ email })}
+            placeholder={CONSTANTS.email}
+            style={styles.input}
+            textContentType="emailAddress"
+            value={this.state.email}
+          />
+        </View>
+        <View style={styles.row}>
+          <TextInput
+            onChangeText={password => this.setState({ password })}
+            placeholder={CONSTANTS.password}
+            secureTextEntry
+            style={styles.input}
+            textContentType="password"
+            value={this.state.password}
+          />
+        </View>
+        <View style={styles.row}>
+          <TouchableOpacity style={styles.button}>
+            <Text style={styles.buttonText}>Login</Text>
+          </TouchableOpacity>
+        </View>
+      </View>
+    );
+  }
+}
 
 const styles = StyleSheet.create({
   button: {
