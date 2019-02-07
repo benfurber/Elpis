@@ -14,7 +14,9 @@ const CONSTANTS = {
   password: "Password"
 };
 
-interface Props {}
+interface Props {
+  navigation: any;
+}
 interface State {
   email: string;
   password: string;
@@ -30,6 +32,9 @@ class LoginForm extends Component<Props, State> {
   }
 
   render() {
+    const { navigation } = this.props;
+    const onPress = () => navigation.navigate("Feed");
+
     return (
       <View style={styles.container}>
         <View style={styles.row}>
@@ -53,7 +58,7 @@ class LoginForm extends Component<Props, State> {
           />
         </View>
         <View style={styles.row}>
-          <TouchableOpacity style={styles.button}>
+          <TouchableOpacity style={styles.button} onPress={onPress}>
             <Text style={styles.buttonText}>Login</Text>
           </TouchableOpacity>
         </View>

@@ -1,21 +1,29 @@
-import React from "react";
+import React, { Component } from "react";
 import { StyleSheet, View } from "react-native";
 
 import { LoginForm, Logo } from "components";
 import { colours } from "styles";
 
-const WelcomeScreen = () => {
-  return (
-    <View style={styles.container}>
-      <View style={styles.logo}>
-        <Logo />
+interface Props {
+  navigation: any;
+}
+
+class WelcomeScreen extends Component<Props> {
+  render() {
+    const { navigation } = this.props;
+
+    return (
+      <View style={styles.container}>
+        <View style={styles.logo}>
+          <Logo />
+        </View>
+        <View style={styles.loginForm}>
+          <LoginForm navigation={navigation} />
+        </View>
       </View>
-      <View style={styles.loginForm}>
-        <LoginForm />
-      </View>
-    </View>
-  );
-};
+    );
+  }
+}
 
 const styles = StyleSheet.create({
   container: {
