@@ -6,7 +6,8 @@
         "alias": {
           "components": "./app/components",
           "routes": "./app/routes",
-          "screens": "./app/screens"
+          "screens": "./app/screens",
+          "styles": "./app/styles"
         }
       }
     ]

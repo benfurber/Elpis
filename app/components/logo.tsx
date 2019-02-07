@@ -1,5 +1,6 @@
 import React from "react";
 import { View, StyleSheet, Text } from "react-native";
+import { colours } from "styles";
 
 const Logo = () => {
   return (
@@ -19,7 +20,7 @@ const styles = StyleSheet.create({
   },
   text: {
     alignSelf: "flex-end",
-    color: "#333",
+    color: colours.darkGrey,
     flex: 1,
     fontSize: 40,
     margin: 10,

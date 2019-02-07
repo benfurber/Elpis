@@ -2,6 +2,7 @@ import React from "react";
 import { StyleSheet, View } from "react-native";
 
 import { LoginForm, Logo } from "components";
+import { colours } from "styles";
 
 const WelcomeScreen = () => {
   return (
@@ -18,7 +19,7 @@ const WelcomeScreen = () => {
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: "rgba(198, 213, 225, 0.75)",
+    backgroundColor: colours.transparentBlue,
     flex: 1,
     flexDirection: "column"
   },

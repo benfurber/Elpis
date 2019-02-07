@@ -7,6 +7,8 @@ import {
   TouchableOpacity
 } from "react-native";
 
+import { colours } from "styles";
+
 const CONSTANTS = {
   email: "Email",
   password: "Password"
@@ -62,14 +64,14 @@ class LoginForm extends Component<Props, State> {
 
 const styles = StyleSheet.create({
   button: {
-    backgroundColor: "rgba(4, 71, 47, 0.75)",
+    backgroundColor: colours.emeraldGreen,
     borderRadius: 100,
-    color: "rgb(255, 255, 255)",
+    color: colours.pureWhite,
     paddingHorizontal: 20,
     paddingVertical: 10
   },
   buttonText: {
-    color: "rgb(255, 255, 255)",
+    color: colours.pureWhite,
     fontSize: 16,
     fontWeight: "bold"
   },
@@ -83,7 +85,7 @@ const styles = StyleSheet.create({
     flex: 1
   },
   input: {
-    backgroundColor: "rgb(255, 255, 255)",
+    backgroundColor: colours.pureWhite,
     borderRadius: 5,
     flex: 2,
     height: 40,
