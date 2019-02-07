@@ -32,7 +32,7 @@ ShallowWrapper {
           style={
             Object {
               "alignSelf": "flex-end",
-              "color": "#333",
+              "color": "rgb(51, 51, 51)",
               "flex": 1,
               "fontSize": 40,
               "margin": 10,
@@ -59,7 +59,7 @@ ShallowWrapper {
           style={
             Object {
               "alignSelf": "flex-end",
-              "color": "#333",
+              "color": "rgb(51, 51, 51)",
               "flex": 1,
               "fontSize": 40,
               "margin": 10,
@@ -86,7 +86,7 @@ ShallowWrapper {
           "children": "Elpis",
           "style": Object {
             "alignSelf": "flex-end",
-            "color": "#333",
+            "color": "rgb(51, 51, 51)",
             "flex": 1,
             "fontSize": 40,
             "margin": 10,
@@ -122,7 +122,7 @@ ShallowWrapper {
             style={
               Object {
                 "alignSelf": "flex-end",
-                "color": "#333",
+                "color": "rgb(51, 51, 51)",
                 "flex": 1,
                 "fontSize": 40,
                 "margin": 10,
@@ -149,7 +149,7 @@ ShallowWrapper {
             style={
               Object {
                 "alignSelf": "flex-end",
-                "color": "#333",
+                "color": "rgb(51, 51, 51)",
                 "flex": 1,
                 "fontSize": 40,
                 "margin": 10,
@@ -176,7 +176,7 @@ ShallowWrapper {
             "children": "Elpis",
             "style": Object {
               "alignSelf": "flex-end",
-              "color": "#333",
+              "color": "rgb(51, 51, 51)",
               "flex": 1,
               "fontSize": 40,
               "margin": 10,

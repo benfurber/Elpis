@@ -29,6 +29,9 @@ ShallowWrapper {
         >
           <TextInput
             allowFontScaling={true}
+            keyboardType="email-address"
+            onChangeText={[Function]}
+            placeholder="Email"
             style={
               Object {
                 "backgroundColor": "rgb(255, 255, 255)",
@@ -38,8 +41,9 @@ ShallowWrapper {
                 "padding": 10,
               }
             }
+            textContentType="emailAddress"
             underlineColorAndroid="transparent"
-            value="Email"
+            value=""
           />
         </View>,
         <View
@@ -53,6 +57,9 @@ ShallowWrapper {
         >
           <TextInput
             allowFontScaling={true}
+            onChangeText={[Function]}
+            placeholder="Password"
+            secureTextEntry={true}
             style={
               Object {
                 "backgroundColor": "rgb(255, 255, 255)",
@@ -62,8 +69,9 @@ ShallowWrapper {
                 "padding": 10,
               }
             }
+            textContentType="password"
             underlineColorAndroid="transparent"
-            value="Password"
+            value=""
           />
         </View>,
         <View
@@ -117,6 +125,9 @@ ShallowWrapper {
         "props": Object {
           "children": <TextInput
             allowFontScaling={true}
+            keyboardType="email-address"
+            onChangeText={[Function]}
+            placeholder="Email"
             style={
               Object {
                 "backgroundColor": "rgb(255, 255, 255)",
@@ -126,8 +137,9 @@ ShallowWrapper {
                 "padding": 10,
               }
             }
+            textContentType="emailAddress"
             underlineColorAndroid="transparent"
-            value="Email"
+            value=""
           />,
           "style": Object {
             "alignItems": "center",
@@ -142,6 +154,9 @@ ShallowWrapper {
           "nodeType": "class",
           "props": Object {
             "allowFontScaling": true,
+            "keyboardType": "email-address",
+            "onChangeText": [Function],
+            "placeholder": "Email",
             "style": Object {
               "backgroundColor": "rgb(255, 255, 255)",
               "borderRadius": 5,
@@ -149,8 +164,9 @@ ShallowWrapper {
               "height": 40,
               "padding": 10,
             },
+            "textContentType": "emailAddress",
             "underlineColorAndroid": "transparent",
-            "value": "Email",
+            "value": "",
           },
           "ref": null,
           "rendered": null,
@@ -165,6 +181,9 @@ ShallowWrapper {
         "props": Object {
           "children": <TextInput
             allowFontScaling={true}
+            onChangeText={[Function]}
+            placeholder="Password"
+            secureTextEntry={true}
             style={
               Object {
                 "backgroundColor": "rgb(255, 255, 255)",
@@ -174,8 +193,9 @@ ShallowWrapper {
                 "padding": 10,
               }
             }
+            textContentType="password"
             underlineColorAndroid="transparent"
-            value="Password"
+            value=""
           />,
           "style": Object {
             "alignItems": "center",
@@ -190,6 +210,9 @@ ShallowWrapper {
           "nodeType": "class",
           "props": Object {
             "allowFontScaling": true,
+            "onChangeText": [Function],
+            "placeholder": "Password",
+            "secureTextEntry": true,
             "style": Object {
               "backgroundColor": "rgb(255, 255, 255)",
               "borderRadius": 5,
@@ -197,8 +220,9 @@ ShallowWrapper {
               "height": 40,
               "padding": 10,
             },
+            "textContentType": "password",
             "underlineColorAndroid": "transparent",
-            "value": "Password",
+            "value": "",
           },
           "ref": null,
           "rendered": null,
@@ -309,6 +333,9 @@ ShallowWrapper {
           >
             <TextInput
               allowFontScaling={true}
+              keyboardType="email-address"
+              onChangeText={[Function]}
+              placeholder="Email"
               style={
                 Object {
                   "backgroundColor": "rgb(255, 255, 255)",
@@ -318,8 +345,9 @@ ShallowWrapper {
                   "padding": 10,
                 }
               }
+              textContentType="emailAddress"
               underlineColorAndroid="transparent"
-              value="Email"
+              value=""
             />
           </View>,
           <View
@@ -333,6 +361,9 @@ ShallowWrapper {
           >
             <TextInput
               allowFontScaling={true}
+              onChangeText={[Function]}
+              placeholder="Password"
+              secureTextEntry={true}
               style={
                 Object {
                   "backgroundColor": "rgb(255, 255, 255)",
@@ -342,8 +373,9 @@ ShallowWrapper {
                   "padding": 10,
                 }
               }
+              textContentType="password"
               underlineColorAndroid="transparent"
-              value="Password"
+              value=""
             />
           </View>,
           <View
@@ -397,6 +429,9 @@ ShallowWrapper {
           "props": Object {
             "children": <TextInput
               allowFontScaling={true}
+              keyboardType="email-address"
+              onChangeText={[Function]}
+              placeholder="Email"
               style={
                 Object {
                   "backgroundColor": "rgb(255, 255, 255)",
@@ -406,8 +441,9 @@ ShallowWrapper {
                   "padding": 10,
                 }
               }
+              textContentType="emailAddress"
               underlineColorAndroid="transparent"
-              value="Email"
+              value=""
             />,
             "style": Object {
               "alignItems": "center",
@@ -422,6 +458,9 @@ ShallowWrapper {
             "nodeType": "class",
             "props": Object {
               "allowFontScaling": true,
+              "keyboardType": "email-address",
+              "onChangeText": [Function],
+              "placeholder": "Email",
               "style": Object {
                 "backgroundColor": "rgb(255, 255, 255)",
                 "borderRadius": 5,
@@ -429,8 +468,9 @@ ShallowWrapper {
                 "height": 40,
                 "padding": 10,
               },
+              "textContentType": "emailAddress",
               "underlineColorAndroid": "transparent",
-              "value": "Email",
+              "value": "",
             },
             "ref": null,
             "rendered": null,
@@ -445,6 +485,9 @@ ShallowWrapper {
           "props": Object {
             "children": <TextInput
               allowFontScaling={true}
+              onChangeText={[Function]}
+              placeholder="Password"
+              secureTextEntry={true}
               style={
                 Object {
                   "backgroundColor": "rgb(255, 255, 255)",
@@ -454,8 +497,9 @@ ShallowWrapper {
                   "padding": 10,
                 }
               }
+              textContentType="password"
               underlineColorAndroid="transparent"
-              value="Password"
+              value=""
             />,
             "style": Object {
               "alignItems": "center",
@@ -470,6 +514,9 @@ ShallowWrapper {
             "nodeType": "class",
             "props": Object {
               "allowFontScaling": true,
+              "onChangeText": [Function],
+              "placeholder": "Password",
+              "secureTextEntry": true,
               "style": Object {
                 "backgroundColor": "rgb(255, 255, 255)",
                 "borderRadius": 5,
@@ -477,8 +524,9 @@ ShallowWrapper {
                 "height": 40,
                 "padding": 10,
               },
+              "textContentType": "password",
               "underlineColorAndroid": "transparent",
-              "value": "Password",
+              "value": "",
             },
             "ref": null,
             "rendered": null,
