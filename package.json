@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "format": "prettier --write '{*,{__mocks__,__tests__,app}/**/*}.js'",
+    "jest": "jest --watch",
     "lint": "./node_modules/.bin/eslint .",
     "open-android": "open -a /Applications/Android Studio.app ./android",
     "start": "node node_modules/react-native/local-cli/cli.js start --reset-cache",
