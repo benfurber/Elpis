@@ -1,7 +1,7 @@
 import React from "react";
 import { StyleSheet, View } from "react-native";
 
-import { LoginForm, Logo } from "components";
+import { Logo, Post } from "components";
 import { colours } from "styles";
 
 const FeedScreen = () => {
@@ -10,7 +10,9 @@ const FeedScreen = () => {
       <View style={styles.logo}>
         <Logo />
       </View>
-      <View style={styles.feedBody} />
+      <View style={styles.feedBody}>
+        <Post description="A string" />
+      </View>
     </View>
   );
 };
