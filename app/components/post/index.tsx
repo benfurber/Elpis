@@ -1,19 +1,30 @@
 import React from "react";
-import { View, StyleSheet, Text } from "react-native";
+import { StyleSheet, Text, View } from "react-native";
+
 import { colours, layout } from "styles";
+import { Icon } from "components";
 
 interface Props {
   description: string;
 }
+
+const iconSize = 30;
 
 const Post = (props: Props) => {
   const { description } = props;
   return (
     <View style={styles.container}>
       <View style={styles.tabs}>
-        <View style={[styles.tabWithBackground, styles.tabSelected]} />
-        <View style={styles.tabWithBackground} />
-        <View style={styles.tabWithBackground} />
+        <View style={[styles.tabWithBackground, styles.tabSelected]}>
+          <Icon name="palette" size={iconSize} />
+        </View>
+        <View style={styles.tabWithBackground}>
+          <Icon
+            colour={colours.navyBlueDarkTransparentHigh}
+            name="comments"
+            size={iconSize}
+          />
+        </View>
         <View style={styles.tabWithoutBackground} />
       </View>
       <View style={styles.body}>
@@ -50,6 +61,8 @@ const styles = StyleSheet.create({
     padding: layout.padding
   },
   tabs: {
+    alignContent: "center",
+    alignItems: "center",
     flexDirection: "row",
     width: "100%"
   },

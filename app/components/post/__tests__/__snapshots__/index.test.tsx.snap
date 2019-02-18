@@ -23,6 +23,8 @@ ShallowWrapper {
         <View
           style={
             Object {
+              "alignContent": "center",
+              "alignItems": "center",
               "flexDirection": "row",
               "width": "100%",
             }
@@ -45,7 +47,12 @@ ShallowWrapper {
                 },
               ]
             }
-          />
+          >
+            <customIcon
+              name="palette"
+              size={30}
+            />
+          </View>
           <View
             style={
               Object {
@@ -58,20 +65,13 @@ ShallowWrapper {
                 "paddingVertical": 8,
               }
             }
-          />
-          <View
-            style={
-              Object {
-                "backgroundColor": "rgba(255, 255, 255, 0.60)",
-                "borderTopLeftRadius": 5,
-                "borderTopRightRadius": 5,
-                "flex": 1,
-                "marginRight": 2,
-                "paddingHorizontal": 16,
-                "paddingVertical": 8,
-              }
-            }
-          />
+          >
+            <customIcon
+              colour="rgba(45, 82, 113, 0.60)"
+              name="comments"
+              size={30}
+            />
+          </View>
           <View
             style={
               Object {
@@ -139,7 +139,12 @@ ShallowWrapper {
                   },
                 ]
               }
-            />,
+            >
+              <customIcon
+                name="palette"
+                size={30}
+              />
+            </View>,
             <View
               style={
                 Object {
@@ -152,20 +157,13 @@ ShallowWrapper {
                   "paddingVertical": 8,
                 }
               }
-            />,
-            <View
-              style={
-                Object {
-                  "backgroundColor": "rgba(255, 255, 255, 0.60)",
-                  "borderTopLeftRadius": 5,
-                  "borderTopRightRadius": 5,
-                  "flex": 1,
-                  "marginRight": 2,
-                  "paddingHorizontal": 16,
-                  "paddingVertical": 8,
-                }
-              }
-            />,
+            >
+              <customIcon
+                colour="rgba(45, 82, 113, 0.60)"
+                name="comments"
+                size={30}
+              />
+            </View>,
             <View
               style={
                 Object {
@@ -180,6 +178,8 @@ ShallowWrapper {
             />,
           ],
           "style": Object {
+            "alignContent": "center",
+            "alignItems": "center",
             "flexDirection": "row",
             "width": "100%",
           },
@@ -191,6 +191,10 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "class",
             "props": Object {
+              "children": <customIcon
+                name="palette"
+                size={30}
+              />,
               "style": Array [
                 Object {
                   "backgroundColor": "rgba(255, 255, 255, 0.60)",
@@ -207,7 +211,18 @@ ShallowWrapper {
               ],
             },
             "ref": null,
-            "rendered": null,
+            "rendered": Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "name": "palette",
+                "size": 30,
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
             "type": [Function],
           },
           Object {
@@ -215,6 +230,11 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "class",
             "props": Object {
+              "children": <customIcon
+                colour="rgba(45, 82, 113, 0.60)"
+                name="comments"
+                size={30}
+              />,
               "style": Object {
                 "backgroundColor": "rgba(255, 255, 255, 0.60)",
                 "borderTopLeftRadius": 5,
@@ -226,26 +246,19 @@ ShallowWrapper {
               },
             },
             "ref": null,
-            "rendered": null,
-            "type": [Function],
-          },
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "class",
-            "props": Object {
-              "style": Object {
-                "backgroundColor": "rgba(255, 255, 255, 0.60)",
-                "borderTopLeftRadius": 5,
-                "borderTopRightRadius": 5,
-                "flex": 1,
-                "marginRight": 2,
-                "paddingHorizontal": 16,
-                "paddingVertical": 8,
+            "rendered": Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "colour": "rgba(45, 82, 113, 0.60)",
+                "name": "comments",
+                "size": 30,
               },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
             },
-            "ref": null,
-            "rendered": null,
             "type": [Function],
           },
           Object {
@@ -327,6 +340,8 @@ ShallowWrapper {
           <View
             style={
               Object {
+                "alignContent": "center",
+                "alignItems": "center",
                 "flexDirection": "row",
                 "width": "100%",
               }
@@ -349,7 +364,12 @@ ShallowWrapper {
                   },
                 ]
               }
-            />
+            >
+              <customIcon
+                name="palette"
+                size={30}
+              />
+            </View>
             <View
               style={
                 Object {
@@ -362,20 +382,13 @@ ShallowWrapper {
                   "paddingVertical": 8,
                 }
               }
-            />
-            <View
-              style={
-                Object {
-                  "backgroundColor": "rgba(255, 255, 255, 0.60)",
-                  "borderTopLeftRadius": 5,
-                  "borderTopRightRadius": 5,
-                  "flex": 1,
-                  "marginRight": 2,
-                  "paddingHorizontal": 16,
-                  "paddingVertical": 8,
-                }
-              }
-            />
+            >
+              <customIcon
+                colour="rgba(45, 82, 113, 0.60)"
+                name="comments"
+                size={30}
+              />
+            </View>
             <View
               style={
                 Object {
@@ -443,7 +456,12 @@ ShallowWrapper {
                     },
                   ]
                 }
-              />,
+              >
+                <customIcon
+                  name="palette"
+                  size={30}
+                />
+              </View>,
               <View
                 style={
                   Object {
@@ -456,20 +474,13 @@ ShallowWrapper {
                     "paddingVertical": 8,
                   }
                 }
-              />,
-              <View
-                style={
-                  Object {
-                    "backgroundColor": "rgba(255, 255, 255, 0.60)",
-                    "borderTopLeftRadius": 5,
-                    "borderTopRightRadius": 5,
-                    "flex": 1,
-                    "marginRight": 2,
-                    "paddingHorizontal": 16,
-                    "paddingVertical": 8,
-                  }
-                }
-              />,
+              >
+                <customIcon
+                  colour="rgba(45, 82, 113, 0.60)"
+                  name="comments"
+                  size={30}
+                />
+              </View>,
               <View
                 style={
                   Object {
@@ -484,6 +495,8 @@ ShallowWrapper {
               />,
             ],
             "style": Object {
+              "alignContent": "center",
+              "alignItems": "center",
               "flexDirection": "row",
               "width": "100%",
             },
@@ -495,6 +508,10 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "class",
               "props": Object {
+                "children": <customIcon
+                  name="palette"
+                  size={30}
+                />,
                 "style": Array [
                   Object {
                     "backgroundColor": "rgba(255, 255, 255, 0.60)",
@@ -511,7 +528,18 @@ ShallowWrapper {
                 ],
               },
               "ref": null,
-              "rendered": null,
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "function",
+                "props": Object {
+                  "name": "palette",
+                  "size": 30,
+                },
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
               "type": [Function],
             },
             Object {
@@ -519,6 +547,11 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "class",
               "props": Object {
+                "children": <customIcon
+                  colour="rgba(45, 82, 113, 0.60)"
+                  name="comments"
+                  size={30}
+                />,
                 "style": Object {
                   "backgroundColor": "rgba(255, 255, 255, 0.60)",
                   "borderTopLeftRadius": 5,
@@ -530,26 +563,19 @@ ShallowWrapper {
                 },
               },
               "ref": null,
-              "rendered": null,
-              "type": [Function],
-            },
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "class",
-              "props": Object {
-                "style": Object {
-                  "backgroundColor": "rgba(255, 255, 255, 0.60)",
-                  "borderTopLeftRadius": 5,
-                  "borderTopRightRadius": 5,
-                  "flex": 1,
-                  "marginRight": 2,
-                  "paddingHorizontal": 16,
-                  "paddingVertical": 8,
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "function",
+                "props": Object {
+                  "colour": "rgba(45, 82, 113, 0.60)",
+                  "name": "comments",
+                  "size": 30,
                 },
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
               },
-              "ref": null,
-              "rendered": null,
               "type": [Function],
             },
             Object {
