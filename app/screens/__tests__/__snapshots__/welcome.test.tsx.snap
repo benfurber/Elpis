@@ -3,7 +3,13 @@
 exports[`WelcomeScreen renders correctly 1`] = `
 ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <WelcomeScreen />,
+  Symbol(enzyme.__unrendered__): <WelcomeScreen
+    navigation={
+      Object {
+        "navigate": [MockFunction],
+      }
+    }
+  />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
     "getNode": [Function],
@@ -36,7 +42,13 @@ ShallowWrapper {
             }
           }
         >
-          <LoginForm />
+          <LoginForm
+            navigation={
+              Object {
+                "navigate": [MockFunction],
+              }
+            }
+          />
         </View>,
       ],
       "style": Object {
@@ -75,7 +87,13 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "class",
         "props": Object {
-          "children": <LoginForm />,
+          "children": <LoginForm
+            navigation={
+              Object {
+                "navigate": [MockFunction],
+              }
+            }
+          />,
           "style": Object {
             "alignItems": "center",
             "flex": 6,
@@ -87,7 +105,9 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "class",
           "props": Object {
-            "navigation": undefined,
+            "navigation": Object {
+              "navigate": [MockFunction],
+            },
           },
           "ref": null,
           "rendered": null,
@@ -123,7 +143,13 @@ ShallowWrapper {
               }
             }
           >
-            <LoginForm />
+            <LoginForm
+              navigation={
+                Object {
+                  "navigate": [MockFunction],
+                }
+              }
+            />
           </View>,
         ],
         "style": Object {
@@ -162,7 +188,13 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "class",
           "props": Object {
-            "children": <LoginForm />,
+            "children": <LoginForm
+              navigation={
+                Object {
+                  "navigate": [MockFunction],
+                }
+              }
+            />,
             "style": Object {
               "alignItems": "center",
               "flex": 6,
@@ -174,7 +206,9 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "class",
             "props": Object {
-              "navigation": undefined,
+              "navigation": Object {
+                "navigate": [MockFunction],
+              },
             },
             "ref": null,
             "rendered": null,
