@@ -16,16 +16,23 @@ const Post = (props: Props) => {
     <View style={styles.container}>
       <View style={styles.tabs}>
         <View style={[styles.tabWithBackground, styles.tabSelected]}>
-          <Icon name="palette" size={iconSize} />
+          <Icon name="palette" size={iconSize} style={styles.iconCentre} />
         </View>
         <View style={styles.tabWithBackground}>
           <Icon
             colour={colours.navyBlueDarkTransparentHigh}
             name="comments"
             size={iconSize}
+            style={styles.iconCentre}
           />
         </View>
-        <View style={styles.tabWithoutBackground} />
+        <View style={styles.tabWithoutBackground}>
+          <Icon
+            name="ellipsis-h"
+            size={iconSize - 5}
+            style={styles.iconRight}
+          />
+        </View>
       </View>
       <View style={styles.body}>
         <Text>{description}</Text>
@@ -53,6 +60,12 @@ const styles = StyleSheet.create({
   },
   container: {
     width: "100%"
+  },
+  iconCentre: {
+    alignSelf: "center"
+  },
+  iconRight: {
+    alignSelf: "flex-end"
   },
   footer: {
     backgroundColor: colours.navyBlueDark,

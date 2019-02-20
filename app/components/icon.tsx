@@ -1,5 +1,5 @@
 import React from "react";
-import { StyleSheet, View } from "react-native";
+import { View } from "react-native";
 import Icon from "react-native-vector-icons/FontAwesome5";
 
 import { colours } from "styles";
@@ -16,7 +16,7 @@ const customIcon = (props: Props) => {
   const { colour, name, size, solid, style } = props;
 
   return (
-    <View style={styles.container}>
+    <View>
       <Icon
         style={style || null}
         color={colour || colours.darkGrey}
@@ -27,11 +27,5 @@ const customIcon = (props: Props) => {
     </View>
   );
 };
-
-const styles = StyleSheet.create({
-  container: {
-    alignSelf: "center"
-  }
-});
 
 export { customIcon as Icon };
