@@ -1,5 +1,6 @@
 import React from "react";
 import { StyleSheet, Text, View } from "react-native";
+import FlexImage from "react-native-flex-image";
 
 import { colours, layout } from "styles";
 import { Icon } from "components";
@@ -35,7 +36,11 @@ const Post = (props: Props) => {
         </View>
       </View>
       <View style={styles.body}>
-        <Text>{description}</Text>
+        <FlexImage
+          source={require("../../assets/images/image_post_1.jpg")}
+          style={styles.image}
+        />
+        <Text style={styles.description}>{description}</Text>
       </View>
       <View style={styles.footer} />
     </View>
@@ -58,14 +63,19 @@ const styles = StyleSheet.create({
     padding: layout.padding,
     width: "100%"
   },
-  container: {
-    width: "100%"
-  },
+  container: {},
   iconCentre: {
     alignSelf: "center"
   },
+  description: {
+    marginVertical: 10
+  },
   iconRight: {
     alignSelf: "flex-end"
+  },
+  image: {
+    borderRadius: layout.borderRadius,
+    overflow: "hidden"
   },
   footer: {
     backgroundColor: colours.navyBlueDark,
