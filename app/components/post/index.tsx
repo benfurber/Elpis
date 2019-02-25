@@ -1,5 +1,5 @@
 import React from "react";
-import { StyleSheet, Text, View } from "react-native";
+import { Image, StyleSheet, Text, TouchableOpacity, View } from "react-native";
 import FlexImage from "react-native-flex-image";
 
 import { colours, layout } from "styles";
@@ -20,19 +20,23 @@ const Post = (props: Props) => {
           <Icon name="palette" size={iconSize} style={styles.iconCentre} />
         </View>
         <View style={styles.tabWithBackground}>
-          <Icon
-            colour={colours.navyBlueDarkTransparentHigh}
-            name="comments"
-            size={iconSize}
-            style={styles.iconCentre}
-          />
+          <TouchableOpacity>
+            <Icon
+              colour={colours.navyBlueDarkTransparentHigh}
+              name="comments"
+              size={iconSize}
+              style={styles.iconCentre}
+            />
+          </TouchableOpacity>
         </View>
         <View style={styles.tabWithoutBackground}>
-          <Icon
-            name="ellipsis-h"
-            size={iconSize - 5}
-            style={styles.iconRight}
-          />
+          <TouchableOpacity>
+            <Icon
+              name="ellipsis-h"
+              size={iconSize - 5}
+              style={styles.iconRight}
+            />
+          </TouchableOpacity>
         </View>
       </View>
       <View style={styles.body}>
@@ -42,7 +46,20 @@ const Post = (props: Props) => {
         />
         <Text style={styles.description}>{description}</Text>
       </View>
-      <View style={styles.footer} />
+      <View style={styles.footer}>
+        <View style={styles.followingContainer}>
+          <TouchableOpacity style={styles.followingButton}>
+            <Text style={styles.followingButtonText}>Following</Text>
+            <Icon name="user-check" />
+          </TouchableOpacity>
+        </View>
+        <View style={styles.avatarContainer}>
+          <Image
+            source={require("../../assets/images/empower_two_women_logo.png")}
+            style={styles.authorAvatar}
+          />
+        </View>
+      </View>
     </View>
   );
 };
@@ -57,13 +74,31 @@ const tabs = {
 };
 
 const styles = StyleSheet.create({
+  authorAvatar: {
+    backgroundColor: colours.navyBlueDark,
+    borderColor: colours.navyBlueDark,
+    borderRadius: 30,
+    borderWidth: 5,
+    height: 60,
+    overflow: "hidden",
+    position: "absolute",
+    top: -60,
+    width: 60
+  },
+  avatarContainer: {
+    alignItems: "center",
+    flex: 1,
+    flexDirection: "column"
+  },
   body: {
     backgroundColor: colours.whiteTransparent,
     borderTopRightRadius: layout.borderRadius,
     padding: layout.padding,
     width: "100%"
   },
-  container: {},
+  container: {
+    marginBottom: 20
+  },
   iconCentre: {
     alignSelf: "center"
   },
@@ -77,11 +112,29 @@ const styles = StyleSheet.create({
     borderRadius: layout.borderRadius,
     overflow: "hidden"
   },
-  footer: {
+  followingButton: {
+    alignSelf: "flex-end",
+    alignItems: "center",
+    backgroundColor: colours.whiteTransparent,
+    borderRadius: 99,
+    flex: 1,
+    flexDirection: "row",
+    justifyContent: "space-between",
+    paddingVertical: 5,
+    paddingHorizontal: 10
+  },
+  followingContainer: {
     backgroundColor: colours.navyBlueDark,
     borderBottomLeftRadius: layout.borderRadius,
     borderBottomRightRadius: layout.borderRadius,
+    flex: 1,
     padding: layout.padding
+  },
+  followingButtonText: {
+    paddingRight: 10
+  },
+  footer: {
+    backgroundColor: colours.whiteTransparent
   },
   tabs: {
     alignContent: "center",
