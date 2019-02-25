@@ -12,6 +12,7 @@
       "styles": ["app/styles"]
     },
     "allowSyntheticDefaultImports": true,
+    "noImplicitAny": false,
     "esModuleInterop": true
   }
 }
