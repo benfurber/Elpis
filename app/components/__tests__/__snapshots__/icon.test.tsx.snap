@@ -27,9 +27,6 @@ ShallowWrapper {
         solid={true}
         style={null}
       />,
-      "style": Object {
-        "alignSelf": "center",
-      },
     },
     "ref": null,
     "rendered": Object {
@@ -64,9 +61,6 @@ ShallowWrapper {
           solid={true}
           style={null}
         />,
-        "style": Object {
-          "alignSelf": "center",
-        },
       },
       "ref": null,
       "rendered": Object {

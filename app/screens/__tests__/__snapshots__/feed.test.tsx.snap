@@ -38,10 +38,15 @@ ShallowWrapper {
           <Post
             description="A string"
           />
+          <Post
+            description="A string"
+          />
+          <Post
+            description="A string"
+          />
         </View>,
       ],
       "style": Object {
-        "backgroundColor": "rgba(198, 213, 225, 0.75)",
         "flex": 1,
         "flexDirection": "column",
       },
@@ -76,29 +81,61 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "class",
         "props": Object {
-          "children": <Post
-            description="A string"
-          />,
+          "children": Array [
+            <Post
+              description="A string"
+            />,
+            <Post
+              description="A string"
+            />,
+            <Post
+              description="A string"
+            />,
+          ],
           "style": Object {
             "flex": 6,
           },
         },
         "ref": null,
-        "rendered": Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "function",
-          "props": Object {
-            "description": "A string",
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "description": "A string",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
           },
-          "ref": null,
-          "rendered": null,
-          "type": [Function],
-        },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "description": "A string",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "description": "A string",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+        ],
         "type": [Function],
       },
     ],
-    "type": [Function],
+    "type": [MockFunction],
   },
   Symbol(enzyme.__nodes__): Array [
     Object {
@@ -127,10 +164,15 @@ ShallowWrapper {
             <Post
               description="A string"
             />
+            <Post
+              description="A string"
+            />
+            <Post
+              description="A string"
+            />
           </View>,
         ],
         "style": Object {
-          "backgroundColor": "rgba(198, 213, 225, 0.75)",
           "flex": 1,
           "flexDirection": "column",
         },
@@ -165,29 +207,61 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "class",
           "props": Object {
-            "children": <Post
-              description="A string"
-            />,
+            "children": Array [
+              <Post
+                description="A string"
+              />,
+              <Post
+                description="A string"
+              />,
+              <Post
+                description="A string"
+              />,
+            ],
             "style": Object {
               "flex": 6,
             },
           },
           "ref": null,
-          "rendered": Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "function",
-            "props": Object {
-              "description": "A string",
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "description": "A string",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
             },
-            "ref": null,
-            "rendered": null,
-            "type": [Function],
-          },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "description": "A string",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "description": "A string",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+          ],
           "type": [Function],
         },
       ],
-      "type": [Function],
+      "type": [MockFunction],
     },
   ],
   Symbol(enzyme.__options__): Object {
