@@ -2,7 +2,14 @@ import React from "react";
 import { ScrollView, StyleSheet, View } from "react-native";
 
 import { Logo, Post } from "components";
-import { colours } from "styles";
+
+const postAuthor = {
+  avatarPath: require("../assets/images/empower_two_women_logo.png")
+};
+const post = {
+  description: "A string",
+  imagePath: require("../assets/images/image_post_1.jpg")
+};
 
 const FeedScreen = () => {
   return (
@@ -11,9 +18,9 @@ const FeedScreen = () => {
         <Logo />
       </View>
       <View style={styles.feedBody}>
-        <Post description="A string" />
-        <Post description="A string" />
-        <Post description="A string" />
+        <Post author={postAuthor} post={post} />
+        <Post author={postAuthor} post={post} />
+        <Post author={postAuthor} post={post} />
       </View>
     </ScrollView>
   );

@@ -4,7 +4,21 @@ exports[`Post renders correctly 1`] = `
 ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <Post
-    description="A string"
+    author={
+      Object {
+        "avatarPath": Object {
+          "testUri": "../../../app/assets/images/empower_two_women_logo.png",
+        },
+      }
+    }
+    post={
+      Object {
+        "description": "A string",
+        "imagePath": Object {
+          "testUri": "../../../app/assets/images/image_post_1.jpg",
+        },
+      }
+    }
   />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
@@ -55,7 +69,7 @@ ShallowWrapper {
           </Text>
         </View>,
         <Footer
-          avatarSource={
+          avatarPath={
             Object {
               "testUri": "../../../app/assets/images/empower_two_women_logo.png",
             }
@@ -154,7 +168,7 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "function",
         "props": Object {
-          "avatarSource": Object {
+          "avatarPath": Object {
             "testUri": "../../../app/assets/images/empower_two_women_logo.png",
           },
         },
@@ -207,7 +221,7 @@ ShallowWrapper {
             </Text>
           </View>,
           <Footer
-            avatarSource={
+            avatarPath={
               Object {
                 "testUri": "../../../app/assets/images/empower_two_women_logo.png",
               }
@@ -306,7 +320,7 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "function",
           "props": Object {
-            "avatarSource": Object {
+            "avatarPath": Object {
               "testUri": "../../../app/assets/images/empower_two_women_logo.png",
             },
           },

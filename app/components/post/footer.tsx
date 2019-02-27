@@ -4,9 +4,9 @@ import { Image, StyleSheet, Text, TouchableOpacity, View } from "react-native";
 import { colours, layout } from "styles";
 import { Icon } from "components";
 
-type Props = {
-  avatarSource: NodeRequire;
-};
+interface Props {
+  avatarPath: NodeRequire;
+}
 
 const Footer = (props: Props) => {
   return (
@@ -18,7 +18,7 @@ const Footer = (props: Props) => {
         </TouchableOpacity>
       </View>
       <View style={styles.avatarContainer}>
-        <Image source={props.avatarSource} style={styles.authorAvatar} />
+        <Image source={props.avatarPath} style={styles.authorAvatar} />
       </View>
     </View>
   );

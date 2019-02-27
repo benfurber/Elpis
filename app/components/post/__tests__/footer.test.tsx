@@ -8,7 +8,7 @@ describe("Footer", () => {
   it("renders correctly", () => {
     const component = shallow(
       <Footer
-        avatarSource={require("../../../assets/images/empower_two_women_logo.png")}
+        avatarPath={require("../../../assets/images/empower_two_women_logo.png")}
       />
     );
 

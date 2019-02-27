@@ -8,24 +8,27 @@ import { Footer } from "./footer";
 import { Tabs } from "./tabs";
 
 interface Props {
-  description: string;
+  author: {
+    avatarPath: NodeRequire;
+  };
+  post: {
+    description: string;
+    imagePath: NodeRequire;
+  };
 }
 
 const Post = (props: Props) => {
-  const { description } = props;
+  const { avatarPath } = props.author;
+  const { description, imagePath } = props.post;
+
   return (
     <View style={styles.container}>
       <Tabs />
       <View style={styles.body}>
-        <FlexImage
-          source={require("../../assets/images/image_post_1.jpg")}
-          style={styles.image}
-        />
+        <FlexImage source={imagePath} style={styles.image} />
         <Text style={styles.description}>{description}</Text>
       </View>
-      <Footer
-        avatarSource={require("../../assets/images/empower_two_women_logo.png")}
-      />
+      <Footer avatarPath={avatarPath} />
     </View>
   );
 };
