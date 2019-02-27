@@ -5,40 +5,17 @@ import FlexImage from "react-native-flex-image";
 import { colours, layout } from "styles";
 import { Icon } from "components";
 
+import { Tabs } from "./tabs";
+
 interface Props {
   description: string;
 }
-
-const iconSize = 30;
 
 const Post = (props: Props) => {
   const { description } = props;
   return (
     <View style={styles.container}>
-      <View style={styles.tabs}>
-        <View style={[styles.tabWithBackground, styles.tabSelected]}>
-          <Icon name="palette" size={iconSize} style={styles.iconCentre} />
-        </View>
-        <View style={styles.tabWithBackground}>
-          <TouchableOpacity>
-            <Icon
-              colour={colours.navyBlueDarkTransparentHigh}
-              name="comments"
-              size={iconSize}
-              style={styles.iconCentre}
-            />
-          </TouchableOpacity>
-        </View>
-        <View style={styles.tabWithoutBackground}>
-          <TouchableOpacity>
-            <Icon
-              name="ellipsis-h"
-              size={iconSize - 5}
-              style={styles.iconRight}
-            />
-          </TouchableOpacity>
-        </View>
-      </View>
+      <Tabs />
       <View style={styles.body}>
         <FlexImage
           source={require("../../assets/images/image_post_1.jpg")}
@@ -62,15 +39,6 @@ const Post = (props: Props) => {
       </View>
     </View>
   );
-};
-
-const tabs = {
-  borderTopLeftRadius: layout.borderRadius,
-  borderTopRightRadius: layout.borderRadius,
-  flex: 1,
-  marginRight: 2,
-  paddingHorizontal: 16,
-  paddingVertical: 8
 };
 
 const styles = StyleSheet.create({
@@ -99,14 +67,8 @@ const styles = StyleSheet.create({
   container: {
     marginBottom: 20
   },
-  iconCentre: {
-    alignSelf: "center"
-  },
   description: {
     marginVertical: 10
-  },
-  iconRight: {
-    alignSelf: "flex-end"
   },
   image: {
     borderRadius: layout.borderRadius,
@@ -135,22 +97,6 @@ const styles = StyleSheet.create({
   },
   footer: {
     backgroundColor: colours.whiteTransparent
-  },
-  tabs: {
-    alignContent: "center",
-    alignItems: "center",
-    flexDirection: "row",
-    width: "100%"
-  },
-  tabSelected: {
-    backgroundColor: colours.whiteTransparent
-  },
-  tabWithBackground: {
-    ...tabs,
-    backgroundColor: colours.whiteTransparentHigh
-  },
-  tabWithoutBackground: {
-    ...tabs
   }
 });
 
