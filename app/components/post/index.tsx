@@ -5,16 +5,12 @@ import FlexImage from "react-native-flex-image";
 import { colours, layout } from "styles";
 
 import { Footer } from "./footer";
+import { Author, Post as PostInterface } from "interfaces";
 import { Tabs } from "./tabs";
 
 interface Props {
-  author: {
-    avatarPath: NodeRequire;
-  };
-  post: {
-    description: string;
-    imagePath: NodeRequire;
-  };
+  author: Author;
+  post: PostInterface;
 }
 
 const Post = (props: Props) => {

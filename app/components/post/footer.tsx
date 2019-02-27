@@ -1,11 +1,12 @@
 import React from "react";
 import { Image, StyleSheet, Text, TouchableOpacity, View } from "react-native";
 
-import { colours, layout } from "styles";
 import { Icon } from "components";
+import { Author } from "interfaces";
+import { colours, layout } from "styles";
 
 interface Props {
-  avatarPath: NodeRequire;
+  avatarPath: Author["avatarPath"];
 }
 
 const Footer = (props: Props) => {
