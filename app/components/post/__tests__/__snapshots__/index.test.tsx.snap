@@ -54,7 +54,13 @@ ShallowWrapper {
             A string
           </Text>
         </View>,
-        <Footer />,
+        <Footer
+          avatarSource={
+            Object {
+              "testUri": "../../../app/assets/images/empower_two_women_logo.png",
+            }
+          }
+        />,
       ],
       "style": Object {
         "marginBottom": 20,
@@ -147,7 +153,11 @@ ShallowWrapper {
         "instance": null,
         "key": undefined,
         "nodeType": "function",
-        "props": Object {},
+        "props": Object {
+          "avatarSource": Object {
+            "testUri": "../../../app/assets/images/empower_two_women_logo.png",
+          },
+        },
         "ref": null,
         "rendered": null,
         "type": [Function],
@@ -196,7 +206,13 @@ ShallowWrapper {
               A string
             </Text>
           </View>,
-          <Footer />,
+          <Footer
+            avatarSource={
+              Object {
+                "testUri": "../../../app/assets/images/empower_two_women_logo.png",
+              }
+            }
+          />,
         ],
         "style": Object {
           "marginBottom": 20,
@@ -289,7 +305,11 @@ ShallowWrapper {
           "instance": null,
           "key": undefined,
           "nodeType": "function",
-          "props": Object {},
+          "props": Object {
+            "avatarSource": Object {
+              "testUri": "../../../app/assets/images/empower_two_women_logo.png",
+            },
+          },
           "ref": null,
           "rendered": null,
           "type": [Function],

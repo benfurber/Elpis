@@ -4,7 +4,11 @@ import { Image, StyleSheet, Text, TouchableOpacity, View } from "react-native";
 import { colours, layout } from "styles";
 import { Icon } from "components";
 
-const Footer = () => {
+type Props = {
+  avatarSource: NodeRequire;
+};
+
+const Footer = (props: Props) => {
   return (
     <View style={styles.footer}>
       <View style={styles.followingContainer}>
@@ -14,10 +18,7 @@ const Footer = () => {
         </TouchableOpacity>
       </View>
       <View style={styles.avatarContainer}>
-        <Image
-          source={require("../../assets/images/empower_two_women_logo.png")}
-          style={styles.authorAvatar}
-        />
+        <Image source={props.avatarSource} style={styles.authorAvatar} />
       </View>
     </View>
   );

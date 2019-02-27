@@ -23,7 +23,9 @@ const Post = (props: Props) => {
         />
         <Text style={styles.description}>{description}</Text>
       </View>
-      <Footer />
+      <Footer
+        avatarSource={require("../../assets/images/empower_two_women_logo.png")}
+      />
     </View>
   );
 };
