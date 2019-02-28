@@ -4,15 +4,14 @@ exports[`Post renders correctly 1`] = `
 ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <Post
-    author={
-      Object {
-        "avatarPath": Object {
-          "testUri": "../../../app/assets/images/empower_two_women_logo.png",
-        },
-      }
-    }
     post={
       Object {
+        "author": Object {
+          "avatarPath": Object {
+            "testUri": "../../../app/assets/images/empower_two_women_logo.png",
+          },
+        },
+        "date": 2000-01-01T00:00:00.000Z,
         "description": "A string",
         "imagePath": Object {
           "testUri": "../../../app/assets/images/image_post_1.jpg",
@@ -67,6 +66,20 @@ ShallowWrapper {
           >
             A string
           </Text>
+          <Text
+            style={
+              Array [
+                Object {
+                  "fontStyle": "italic",
+                },
+                Object {
+                  "marginVertical": 10,
+                },
+              ]
+            }
+          >
+            01/01/2000
+          </Text>
         </View>,
         <Footer
           avatarPath={
@@ -119,6 +132,20 @@ ShallowWrapper {
             >
               A string
             </Text>,
+            <Text
+              style={
+                Array [
+                  Object {
+                    "fontStyle": "italic",
+                  },
+                  Object {
+                    "marginVertical": 10,
+                  },
+                ]
+              }
+            >
+              01/01/2000
+            </Text>,
           ],
           "style": Object {
             "backgroundColor": "rgba(255, 255, 255, 0.85)",
@@ -158,6 +185,25 @@ ShallowWrapper {
             },
             "ref": null,
             "rendered": "A string",
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "children": "01/01/2000",
+              "style": Array [
+                Object {
+                  "fontStyle": "italic",
+                },
+                Object {
+                  "marginVertical": 10,
+                },
+              ],
+            },
+            "ref": null,
+            "rendered": "01/01/2000",
             "type": [Function],
           },
         ],
@@ -219,6 +265,20 @@ ShallowWrapper {
             >
               A string
             </Text>
+            <Text
+              style={
+                Array [
+                  Object {
+                    "fontStyle": "italic",
+                  },
+                  Object {
+                    "marginVertical": 10,
+                  },
+                ]
+              }
+            >
+              01/01/2000
+            </Text>
           </View>,
           <Footer
             avatarPath={
@@ -271,6 +331,20 @@ ShallowWrapper {
               >
                 A string
               </Text>,
+              <Text
+                style={
+                  Array [
+                    Object {
+                      "fontStyle": "italic",
+                    },
+                    Object {
+                      "marginVertical": 10,
+                    },
+                  ]
+                }
+              >
+                01/01/2000
+              </Text>,
             ],
             "style": Object {
               "backgroundColor": "rgba(255, 255, 255, 0.85)",
@@ -310,6 +384,25 @@ ShallowWrapper {
               },
               "ref": null,
               "rendered": "A string",
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "children": "01/01/2000",
+                "style": Array [
+                  Object {
+                    "fontStyle": "italic",
+                  },
+                  Object {
+                    "marginVertical": 10,
+                  },
+                ],
+              },
+              "ref": null,
+              "rendered": "01/01/2000",
               "type": [Function],
             },
           ],

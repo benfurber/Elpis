@@ -36,16 +36,17 @@ ShallowWrapper {
           }
         >
           <Post
-            author={
-              Object {
-                "avatarPath": Object {
-                  "testUri": "../../../app/assets/images/empower_two_women_logo.png",
-                },
-              }
-            }
             post={
               Object {
-                "description": "A string",
+                "author": Object {
+                  "avatarPath": Object {
+                    "testUri": "../../../app/assets/images/empower_two_women_logo.png",
+                  },
+                },
+                "date": 2018-02-17T00:00:00.000Z,
+                "description": "Maju Coutinho estreia na bancada do Jornal Nacional 
+
+Maria Júlia Coutinho estreou neste sábado, 16 de Fevereiro, como âncora do Jornal Nacional. O debute da primeira mulher negra na bancada do principal jornalístico da televisão brasileira rendeu elogios e muita comoção nas redes sociais.",
                 "imagePath": Object {
                   "testUri": "../../../app/assets/images/image_post_1.jpg",
                 },
@@ -53,16 +54,17 @@ ShallowWrapper {
             }
           />
           <Post
-            author={
-              Object {
-                "avatarPath": Object {
-                  "testUri": "../../../app/assets/images/empower_two_women_logo.png",
-                },
-              }
-            }
             post={
               Object {
-                "description": "A string",
+                "author": Object {
+                  "avatarPath": Object {
+                    "testUri": "../../../app/assets/images/empower_two_women_logo.png",
+                  },
+                },
+                "date": 2018-02-17T00:00:00.000Z,
+                "description": "Maju Coutinho estreia na bancada do Jornal Nacional 
+
+Maria Júlia Coutinho estreou neste sábado, 16 de Fevereiro, como âncora do Jornal Nacional. O debute da primeira mulher negra na bancada do principal jornalístico da televisão brasileira rendeu elogios e muita comoção nas redes sociais.",
                 "imagePath": Object {
                   "testUri": "../../../app/assets/images/image_post_1.jpg",
                 },
@@ -70,16 +72,17 @@ ShallowWrapper {
             }
           />
           <Post
-            author={
-              Object {
-                "avatarPath": Object {
-                  "testUri": "../../../app/assets/images/empower_two_women_logo.png",
-                },
-              }
-            }
             post={
               Object {
-                "description": "A string",
+                "author": Object {
+                  "avatarPath": Object {
+                    "testUri": "../../../app/assets/images/empower_two_women_logo.png",
+                  },
+                },
+                "date": 2018-02-17T00:00:00.000Z,
+                "description": "Maju Coutinho estreia na bancada do Jornal Nacional 
+
+Maria Júlia Coutinho estreou neste sábado, 16 de Fevereiro, como âncora do Jornal Nacional. O debute da primeira mulher negra na bancada do principal jornalístico da televisão brasileira rendeu elogios e muita comoção nas redes sociais.",
                 "imagePath": Object {
                   "testUri": "../../../app/assets/images/image_post_1.jpg",
                 },
@@ -125,16 +128,17 @@ ShallowWrapper {
         "props": Object {
           "children": Array [
             <Post
-              author={
-                Object {
-                  "avatarPath": Object {
-                    "testUri": "../../../app/assets/images/empower_two_women_logo.png",
-                  },
-                }
-              }
               post={
                 Object {
-                  "description": "A string",
+                  "author": Object {
+                    "avatarPath": Object {
+                      "testUri": "../../../app/assets/images/empower_two_women_logo.png",
+                    },
+                  },
+                  "date": 2018-02-17T00:00:00.000Z,
+                  "description": "Maju Coutinho estreia na bancada do Jornal Nacional 
+
+Maria Júlia Coutinho estreou neste sábado, 16 de Fevereiro, como âncora do Jornal Nacional. O debute da primeira mulher negra na bancada do principal jornalístico da televisão brasileira rendeu elogios e muita comoção nas redes sociais.",
                   "imagePath": Object {
                     "testUri": "../../../app/assets/images/image_post_1.jpg",
                   },
@@ -142,16 +146,17 @@ ShallowWrapper {
               }
             />,
             <Post
-              author={
-                Object {
-                  "avatarPath": Object {
-                    "testUri": "../../../app/assets/images/empower_two_women_logo.png",
-                  },
-                }
-              }
               post={
                 Object {
-                  "description": "A string",
+                  "author": Object {
+                    "avatarPath": Object {
+                      "testUri": "../../../app/assets/images/empower_two_women_logo.png",
+                    },
+                  },
+                  "date": 2018-02-17T00:00:00.000Z,
+                  "description": "Maju Coutinho estreia na bancada do Jornal Nacional 
+
+Maria Júlia Coutinho estreou neste sábado, 16 de Fevereiro, como âncora do Jornal Nacional. O debute da primeira mulher negra na bancada do principal jornalístico da televisão brasileira rendeu elogios e muita comoção nas redes sociais.",
                   "imagePath": Object {
                     "testUri": "../../../app/assets/images/image_post_1.jpg",
                   },
@@ -159,16 +164,17 @@ ShallowWrapper {
               }
             />,
             <Post
-              author={
-                Object {
-                  "avatarPath": Object {
-                    "testUri": "../../../app/assets/images/empower_two_women_logo.png",
-                  },
-                }
-              }
               post={
                 Object {
-                  "description": "A string",
+                  "author": Object {
+                    "avatarPath": Object {
+                      "testUri": "../../../app/assets/images/empower_two_women_logo.png",
+                    },
+                  },
+                  "date": 2018-02-17T00:00:00.000Z,
+                  "description": "Maju Coutinho estreia na bancada do Jornal Nacional 
+
+Maria Júlia Coutinho estreou neste sábado, 16 de Fevereiro, como âncora do Jornal Nacional. O debute da primeira mulher negra na bancada do principal jornalístico da televisão brasileira rendeu elogios e muita comoção nas redes sociais.",
                   "imagePath": Object {
                     "testUri": "../../../app/assets/images/image_post_1.jpg",
                   },
@@ -187,13 +193,16 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "function",
             "props": Object {
-              "author": Object {
-                "avatarPath": Object {
-                  "testUri": "../../../app/assets/images/empower_two_women_logo.png",
-                },
-              },
               "post": Object {
-                "description": "A string",
+                "author": Object {
+                  "avatarPath": Object {
+                    "testUri": "../../../app/assets/images/empower_two_women_logo.png",
+                  },
+                },
+                "date": 2018-02-17T00:00:00.000Z,
+                "description": "Maju Coutinho estreia na bancada do Jornal Nacional 
+
+Maria Júlia Coutinho estreou neste sábado, 16 de Fevereiro, como âncora do Jornal Nacional. O debute da primeira mulher negra na bancada do principal jornalístico da televisão brasileira rendeu elogios e muita comoção nas redes sociais.",
                 "imagePath": Object {
                   "testUri": "../../../app/assets/images/image_post_1.jpg",
                 },
@@ -208,13 +217,16 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "function",
             "props": Object {
-              "author": Object {
-                "avatarPath": Object {
-                  "testUri": "../../../app/assets/images/empower_two_women_logo.png",
-                },
-              },
               "post": Object {
-                "description": "A string",
+                "author": Object {
+                  "avatarPath": Object {
+                    "testUri": "../../../app/assets/images/empower_two_women_logo.png",
+                  },
+                },
+                "date": 2018-02-17T00:00:00.000Z,
+                "description": "Maju Coutinho estreia na bancada do Jornal Nacional 
+
+Maria Júlia Coutinho estreou neste sábado, 16 de Fevereiro, como âncora do Jornal Nacional. O debute da primeira mulher negra na bancada do principal jornalístico da televisão brasileira rendeu elogios e muita comoção nas redes sociais.",
                 "imagePath": Object {
                   "testUri": "../../../app/assets/images/image_post_1.jpg",
                 },
@@ -229,13 +241,16 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "function",
             "props": Object {
-              "author": Object {
-                "avatarPath": Object {
-                  "testUri": "../../../app/assets/images/empower_two_women_logo.png",
-                },
-              },
               "post": Object {
-                "description": "A string",
+                "author": Object {
+                  "avatarPath": Object {
+                    "testUri": "../../../app/assets/images/empower_two_women_logo.png",
+                  },
+                },
+                "date": 2018-02-17T00:00:00.000Z,
+                "description": "Maju Coutinho estreia na bancada do Jornal Nacional 
+
+Maria Júlia Coutinho estreou neste sábado, 16 de Fevereiro, como âncora do Jornal Nacional. O debute da primeira mulher negra na bancada do principal jornalístico da televisão brasileira rendeu elogios e muita comoção nas redes sociais.",
                 "imagePath": Object {
                   "testUri": "../../../app/assets/images/image_post_1.jpg",
                 },
@@ -276,16 +291,17 @@ ShallowWrapper {
             }
           >
             <Post
-              author={
-                Object {
-                  "avatarPath": Object {
-                    "testUri": "../../../app/assets/images/empower_two_women_logo.png",
-                  },
-                }
-              }
               post={
                 Object {
-                  "description": "A string",
+                  "author": Object {
+                    "avatarPath": Object {
+                      "testUri": "../../../app/assets/images/empower_two_women_logo.png",
+                    },
+                  },
+                  "date": 2018-02-17T00:00:00.000Z,
+                  "description": "Maju Coutinho estreia na bancada do Jornal Nacional 
+
+Maria Júlia Coutinho estreou neste sábado, 16 de Fevereiro, como âncora do Jornal Nacional. O debute da primeira mulher negra na bancada do principal jornalístico da televisão brasileira rendeu elogios e muita comoção nas redes sociais.",
                   "imagePath": Object {
                     "testUri": "../../../app/assets/images/image_post_1.jpg",
                   },
@@ -293,16 +309,17 @@ ShallowWrapper {
               }
             />
             <Post
-              author={
-                Object {
-                  "avatarPath": Object {
-                    "testUri": "../../../app/assets/images/empower_two_women_logo.png",
-                  },
-                }
-              }
               post={
                 Object {
-                  "description": "A string",
+                  "author": Object {
+                    "avatarPath": Object {
+                      "testUri": "../../../app/assets/images/empower_two_women_logo.png",
+                    },
+                  },
+                  "date": 2018-02-17T00:00:00.000Z,
+                  "description": "Maju Coutinho estreia na bancada do Jornal Nacional 
+
+Maria Júlia Coutinho estreou neste sábado, 16 de Fevereiro, como âncora do Jornal Nacional. O debute da primeira mulher negra na bancada do principal jornalístico da televisão brasileira rendeu elogios e muita comoção nas redes sociais.",
                   "imagePath": Object {
                     "testUri": "../../../app/assets/images/image_post_1.jpg",
                   },
@@ -310,16 +327,17 @@ ShallowWrapper {
               }
             />
             <Post
-              author={
-                Object {
-                  "avatarPath": Object {
-                    "testUri": "../../../app/assets/images/empower_two_women_logo.png",
-                  },
-                }
-              }
               post={
                 Object {
-                  "description": "A string",
+                  "author": Object {
+                    "avatarPath": Object {
+                      "testUri": "../../../app/assets/images/empower_two_women_logo.png",
+                    },
+                  },
+                  "date": 2018-02-17T00:00:00.000Z,
+                  "description": "Maju Coutinho estreia na bancada do Jornal Nacional 
+
+Maria Júlia Coutinho estreou neste sábado, 16 de Fevereiro, como âncora do Jornal Nacional. O debute da primeira mulher negra na bancada do principal jornalístico da televisão brasileira rendeu elogios e muita comoção nas redes sociais.",
                   "imagePath": Object {
                     "testUri": "../../../app/assets/images/image_post_1.jpg",
                   },
@@ -365,16 +383,17 @@ ShallowWrapper {
           "props": Object {
             "children": Array [
               <Post
-                author={
-                  Object {
-                    "avatarPath": Object {
-                      "testUri": "../../../app/assets/images/empower_two_women_logo.png",
-                    },
-                  }
-                }
                 post={
                   Object {
-                    "description": "A string",
+                    "author": Object {
+                      "avatarPath": Object {
+                        "testUri": "../../../app/assets/images/empower_two_women_logo.png",
+                      },
+                    },
+                    "date": 2018-02-17T00:00:00.000Z,
+                    "description": "Maju Coutinho estreia na bancada do Jornal Nacional 
+
+Maria Júlia Coutinho estreou neste sábado, 16 de Fevereiro, como âncora do Jornal Nacional. O debute da primeira mulher negra na bancada do principal jornalístico da televisão brasileira rendeu elogios e muita comoção nas redes sociais.",
                     "imagePath": Object {
                       "testUri": "../../../app/assets/images/image_post_1.jpg",
                     },
@@ -382,16 +401,17 @@ ShallowWrapper {
                 }
               />,
               <Post
-                author={
-                  Object {
-                    "avatarPath": Object {
-                      "testUri": "../../../app/assets/images/empower_two_women_logo.png",
-                    },
-                  }
-                }
                 post={
                   Object {
-                    "description": "A string",
+                    "author": Object {
+                      "avatarPath": Object {
+                        "testUri": "../../../app/assets/images/empower_two_women_logo.png",
+                      },
+                    },
+                    "date": 2018-02-17T00:00:00.000Z,
+                    "description": "Maju Coutinho estreia na bancada do Jornal Nacional 
+
+Maria Júlia Coutinho estreou neste sábado, 16 de Fevereiro, como âncora do Jornal Nacional. O debute da primeira mulher negra na bancada do principal jornalístico da televisão brasileira rendeu elogios e muita comoção nas redes sociais.",
                     "imagePath": Object {
                       "testUri": "../../../app/assets/images/image_post_1.jpg",
                     },
@@ -399,16 +419,17 @@ ShallowWrapper {
                 }
               />,
               <Post
-                author={
-                  Object {
-                    "avatarPath": Object {
-                      "testUri": "../../../app/assets/images/empower_two_women_logo.png",
-                    },
-                  }
-                }
                 post={
                   Object {
-                    "description": "A string",
+                    "author": Object {
+                      "avatarPath": Object {
+                        "testUri": "../../../app/assets/images/empower_two_women_logo.png",
+                      },
+                    },
+                    "date": 2018-02-17T00:00:00.000Z,
+                    "description": "Maju Coutinho estreia na bancada do Jornal Nacional 
+
+Maria Júlia Coutinho estreou neste sábado, 16 de Fevereiro, como âncora do Jornal Nacional. O debute da primeira mulher negra na bancada do principal jornalístico da televisão brasileira rendeu elogios e muita comoção nas redes sociais.",
                     "imagePath": Object {
                       "testUri": "../../../app/assets/images/image_post_1.jpg",
                     },
@@ -427,13 +448,16 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "function",
               "props": Object {
-                "author": Object {
-                  "avatarPath": Object {
-                    "testUri": "../../../app/assets/images/empower_two_women_logo.png",
-                  },
-                },
                 "post": Object {
-                  "description": "A string",
+                  "author": Object {
+                    "avatarPath": Object {
+                      "testUri": "../../../app/assets/images/empower_two_women_logo.png",
+                    },
+                  },
+                  "date": 2018-02-17T00:00:00.000Z,
+                  "description": "Maju Coutinho estreia na bancada do Jornal Nacional 
+
+Maria Júlia Coutinho estreou neste sábado, 16 de Fevereiro, como âncora do Jornal Nacional. O debute da primeira mulher negra na bancada do principal jornalístico da televisão brasileira rendeu elogios e muita comoção nas redes sociais.",
                   "imagePath": Object {
                     "testUri": "../../../app/assets/images/image_post_1.jpg",
                   },
@@ -448,13 +472,16 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "function",
               "props": Object {
-                "author": Object {
-                  "avatarPath": Object {
-                    "testUri": "../../../app/assets/images/empower_two_women_logo.png",
-                  },
-                },
                 "post": Object {
-                  "description": "A string",
+                  "author": Object {
+                    "avatarPath": Object {
+                      "testUri": "../../../app/assets/images/empower_two_women_logo.png",
+                    },
+                  },
+                  "date": 2018-02-17T00:00:00.000Z,
+                  "description": "Maju Coutinho estreia na bancada do Jornal Nacional 
+
+Maria Júlia Coutinho estreou neste sábado, 16 de Fevereiro, como âncora do Jornal Nacional. O debute da primeira mulher negra na bancada do principal jornalístico da televisão brasileira rendeu elogios e muita comoção nas redes sociais.",
                   "imagePath": Object {
                     "testUri": "../../../app/assets/images/image_post_1.jpg",
                   },
@@ -469,13 +496,16 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "function",
               "props": Object {
-                "author": Object {
-                  "avatarPath": Object {
-                    "testUri": "../../../app/assets/images/empower_two_women_logo.png",
-                  },
-                },
                 "post": Object {
-                  "description": "A string",
+                  "author": Object {
+                    "avatarPath": Object {
+                      "testUri": "../../../app/assets/images/empower_two_women_logo.png",
+                    },
+                  },
+                  "date": 2018-02-17T00:00:00.000Z,
+                  "description": "Maju Coutinho estreia na bancada do Jornal Nacional 
+
+Maria Júlia Coutinho estreou neste sábado, 16 de Fevereiro, como âncora do Jornal Nacional. O debute da primeira mulher negra na bancada do principal jornalístico da televisão brasileira rendeu elogios e muita comoção nas redes sociais.",
                   "imagePath": Object {
                     "testUri": "../../../app/assets/images/image_post_1.jpg",
                   },

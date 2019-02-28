@@ -3,6 +3,8 @@ export interface Author {
 }
 
 export interface Post {
+  author: Author;
+  date: Date;
   description: string;
   imagePath: NodeRequire;
 }

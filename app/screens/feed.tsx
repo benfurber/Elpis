@@ -3,11 +3,13 @@ import { ScrollView, StyleSheet, View } from "react-native";
 
 import { Logo, Post } from "components";
 
-const postAuthor = {
-  avatarPath: require("assets/images/empower_two_women_logo.png")
-};
 const post = {
-  description: "A string",
+  author: {
+    avatarPath: require("assets/images/empower_two_women_logo.png")
+  },
+  date: new Date("2018-02-17"),
+  description:
+    "Maju Coutinho estreia na bancada do Jornal Nacional \n\nMaria Júlia Coutinho estreou neste sábado, 16 de Fevereiro, como âncora do Jornal Nacional. O debute da primeira mulher negra na bancada do principal jornalístico da televisão brasileira rendeu elogios e muita comoção nas redes sociais.",
   imagePath: require("assets/images/image_post_1.jpg")
 };
 
@@ -18,9 +20,9 @@ const FeedScreen = () => {
         <Logo />
       </View>
       <View style={styles.feedBody}>
-        <Post author={postAuthor} post={post} />
-        <Post author={postAuthor} post={post} />
-        <Post author={postAuthor} post={post} />
+        <Post post={post} />
+        <Post post={post} />
+        <Post post={post} />
       </View>
     </ScrollView>
   );

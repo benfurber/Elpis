@@ -5,26 +5,34 @@ import FlexImage from "react-native-flex-image";
 import { colours, layout } from "styles";
 
 import { Footer } from "./footer";
-import { Author, Post as PostInterface } from "interfaces";
+import { Post as PostInterface } from "interfaces";
 import { Tabs } from "./tabs";
 
 interface Props {
-  author: Author;
   post: PostInterface;
 }
 
+const formatDate = (date: Date) => {
+  const formatOptions = {
+    day: "2-digit",
+    month: "2-digit",
+    year: "numeric"
+  };
+  return date.toLocaleString("en-GB", formatOptions);
+};
+
 const Post = (props: Props) => {
-  const { avatarPath } = props.author;
-  const { description, imagePath } = props.post;
+  const { author, date, description, imagePath } = props.post;
 
   return (
     <View style={styles.container}>
       <Tabs />
       <View style={styles.body}>
         <FlexImage source={imagePath} style={styles.image} />
-        <Text style={styles.description}>{description}</Text>
+        <Text style={styles.text}>{description}</Text>
+        <Text style={[styles.date, styles.text]}>{formatDate(date)}</Text>
       </View>
-      <Footer avatarPath={avatarPath} />
+      <Footer avatarPath={author.avatarPath} />
     </View>
   );
 };
@@ -39,7 +47,10 @@ const styles = StyleSheet.create({
   container: {
     marginBottom: 20
   },
-  description: {
+  date: {
+    fontStyle: "italic"
+  },
+  text: {
     marginVertical: 10
   },
   image: {
