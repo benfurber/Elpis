@@ -12,6 +12,7 @@ describe("Post", () => {
       },
       date: new Date("2000-01-01"),
       description: "A string",
+      id: "10387-314fs-12asdbj",
       imagePath: require("assets/images/image_post_1.jpg")
     };
     const component = shallow(<Post post={post} />);
