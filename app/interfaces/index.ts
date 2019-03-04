@@ -5,7 +5,7 @@ export interface Author {
 export interface Post {
   author: Author;
   date: Date;
-  description: string;
+  description: string | null;
   id: string;
   imagePath: NodeRequire;
 }

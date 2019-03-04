@@ -445,3 +445,389 @@ ShallowWrapper {
   },
 }
 `;
+
+exports[`Post renders correctly if not description is provided 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Post
+    post={
+      Object {
+        "author": Object {
+          "avatarPath": Object {
+            "testUri": "../../../app/assets/images/empower_two_women_logo.png",
+          },
+        },
+        "date": 2000-01-01T00:00:00.000Z,
+        "description": null,
+        "id": "10387-314fs-12asdbj",
+        "imagePath": Object {
+          "testUri": "../../../app/assets/images/image_post_1.jpg",
+        },
+      }
+    }
+  />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "class",
+    "props": Object {
+      "children": Array [
+        <Tabs />,
+        <View
+          style={
+            Object {
+              "backgroundColor": "rgba(255, 255, 255, 0.85)",
+              "borderTopRightRadius": 5,
+              "padding": 10,
+              "width": "100%",
+            }
+          }
+        >
+          <FlexImage
+            source={
+              Object {
+                "testUri": "../../../app/assets/images/image_post_1.jpg",
+              }
+            }
+            style={
+              Object {
+                "borderRadius": 5,
+                "overflow": "hidden",
+              }
+            }
+          />
+          <Text
+            style={
+              Array [
+                Object {
+                  "fontStyle": "italic",
+                },
+                Object {
+                  "marginVertical": 10,
+                },
+              ]
+            }
+          >
+            01/01/2000
+          </Text>
+        </View>,
+        <Footer
+          avatarPath={
+            Object {
+              "testUri": "../../../app/assets/images/empower_two_women_logo.png",
+            }
+          }
+        />,
+      ],
+      "style": Object {
+        "marginBottom": 20,
+      },
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {},
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "children": Array [
+            <FlexImage
+              source={
+                Object {
+                  "testUri": "../../../app/assets/images/image_post_1.jpg",
+                }
+              }
+              style={
+                Object {
+                  "borderRadius": 5,
+                  "overflow": "hidden",
+                }
+              }
+            />,
+            undefined,
+            <Text
+              style={
+                Array [
+                  Object {
+                    "fontStyle": "italic",
+                  },
+                  Object {
+                    "marginVertical": 10,
+                  },
+                ]
+              }
+            >
+              01/01/2000
+            </Text>,
+          ],
+          "style": Object {
+            "backgroundColor": "rgba(255, 255, 255, 0.85)",
+            "borderTopRightRadius": 5,
+            "padding": 10,
+            "width": "100%",
+          },
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "source": Object {
+                "testUri": "../../../app/assets/images/image_post_1.jpg",
+              },
+              "style": Object {
+                "borderRadius": 5,
+                "overflow": "hidden",
+              },
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          undefined,
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "children": "01/01/2000",
+              "style": Array [
+                Object {
+                  "fontStyle": "italic",
+                },
+                Object {
+                  "marginVertical": 10,
+                },
+              ],
+            },
+            "ref": null,
+            "rendered": "01/01/2000",
+            "type": [Function],
+          },
+        ],
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "avatarPath": Object {
+            "testUri": "../../../app/assets/images/empower_two_women_logo.png",
+          },
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+    ],
+    "type": [Function],
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "class",
+      "props": Object {
+        "children": Array [
+          <Tabs />,
+          <View
+            style={
+              Object {
+                "backgroundColor": "rgba(255, 255, 255, 0.85)",
+                "borderTopRightRadius": 5,
+                "padding": 10,
+                "width": "100%",
+              }
+            }
+          >
+            <FlexImage
+              source={
+                Object {
+                  "testUri": "../../../app/assets/images/image_post_1.jpg",
+                }
+              }
+              style={
+                Object {
+                  "borderRadius": 5,
+                  "overflow": "hidden",
+                }
+              }
+            />
+            <Text
+              style={
+                Array [
+                  Object {
+                    "fontStyle": "italic",
+                  },
+                  Object {
+                    "marginVertical": 10,
+                  },
+                ]
+              }
+            >
+              01/01/2000
+            </Text>
+          </View>,
+          <Footer
+            avatarPath={
+              Object {
+                "testUri": "../../../app/assets/images/empower_two_women_logo.png",
+              }
+            }
+          />,
+        ],
+        "style": Object {
+          "marginBottom": 20,
+        },
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {},
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "children": Array [
+              <FlexImage
+                source={
+                  Object {
+                    "testUri": "../../../app/assets/images/image_post_1.jpg",
+                  }
+                }
+                style={
+                  Object {
+                    "borderRadius": 5,
+                    "overflow": "hidden",
+                  }
+                }
+              />,
+              undefined,
+              <Text
+                style={
+                  Array [
+                    Object {
+                      "fontStyle": "italic",
+                    },
+                    Object {
+                      "marginVertical": 10,
+                    },
+                  ]
+                }
+              >
+                01/01/2000
+              </Text>,
+            ],
+            "style": Object {
+              "backgroundColor": "rgba(255, 255, 255, 0.85)",
+              "borderTopRightRadius": 5,
+              "padding": 10,
+              "width": "100%",
+            },
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "source": Object {
+                  "testUri": "../../../app/assets/images/image_post_1.jpg",
+                },
+                "style": Object {
+                  "borderRadius": 5,
+                  "overflow": "hidden",
+                },
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            undefined,
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "children": "01/01/2000",
+                "style": Array [
+                  Object {
+                    "fontStyle": "italic",
+                  },
+                  Object {
+                    "marginVertical": 10,
+                  },
+                ],
+              },
+              "ref": null,
+              "rendered": "01/01/2000",
+              "type": [Function],
+            },
+          ],
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "avatarPath": Object {
+              "testUri": "../../../app/assets/images/empower_two_women_logo.png",
+            },
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+      ],
+      "type": [Function],
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getDerivedStateFromProps": true,
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+  },
+}
+`;

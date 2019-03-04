@@ -24,12 +24,18 @@ const formatDate = (date: Date) => {
 const Post = (props: Props) => {
   const { author, date, description, imagePath } = props.post;
 
+  const renderBodyText = () => {
+    if (description) {
+      return <Text style={styles.text}>{description}</Text>;
+    }
+  };
+
   return (
     <View style={styles.container}>
       <Tabs />
       <View style={styles.body}>
         <FlexImage source={imagePath} style={styles.image} />
-        <Text style={styles.text}>{description}</Text>
+        {renderBodyText()}
         <Text style={[styles.date, styles.text]}>{formatDate(date)}</Text>
       </View>
       <Footer avatarPath={author.avatarPath} />

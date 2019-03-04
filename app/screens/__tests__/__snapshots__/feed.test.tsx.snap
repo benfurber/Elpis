@@ -53,6 +53,19 @@ Maria Júlia Coutinho estreou neste sábado, 16 de Fevereiro, como âncora do Jo
                     "testUri": "../../../app/assets/images/image_post_1.jpg",
                   },
                 },
+                Object {
+                  "author": Object {
+                    "avatarPath": Object {
+                      "testUri": "../../../app/assets/images/empower_two_women_logo.png",
+                    },
+                  },
+                  "date": 2018-02-11T00:00:00.000Z,
+                  "description": null,
+                  "id": "324869-saf80as-ssae",
+                  "imagePath": Object {
+                    "testUri": "../../../app/assets/images/image_post_2.jpg",
+                  },
+                },
               ]
             }
             disableVirtualization={false}
@@ -122,6 +135,19 @@ Maria Júlia Coutinho estreou neste sábado, 16 de Fevereiro, como âncora do Jo
                     "testUri": "../../../app/assets/images/image_post_1.jpg",
                   },
                 },
+                Object {
+                  "author": Object {
+                    "avatarPath": Object {
+                      "testUri": "../../../app/assets/images/empower_two_women_logo.png",
+                    },
+                  },
+                  "date": 2018-02-11T00:00:00.000Z,
+                  "description": null,
+                  "id": "324869-saf80as-ssae",
+                  "imagePath": Object {
+                    "testUri": "../../../app/assets/images/image_post_2.jpg",
+                  },
+                },
               ]
             }
             disableVirtualization={false}
@@ -160,6 +186,19 @@ Maria Júlia Coutinho estreou neste sábado, 16 de Fevereiro, como âncora do Jo
                 "id": "98y723-23048-23480",
                 "imagePath": Object {
                   "testUri": "../../../app/assets/images/image_post_1.jpg",
+                },
+              },
+              Object {
+                "author": Object {
+                  "avatarPath": Object {
+                    "testUri": "../../../app/assets/images/empower_two_women_logo.png",
+                  },
+                },
+                "date": 2018-02-11T00:00:00.000Z,
+                "description": null,
+                "id": "324869-saf80as-ssae",
+                "imagePath": Object {
+                  "testUri": "../../../app/assets/images/image_post_2.jpg",
                 },
               },
             ],
@@ -224,6 +263,19 @@ Maria Júlia Coutinho estreou neste sábado, 16 de Fevereiro, como âncora do Jo
                     "id": "98y723-23048-23480",
                     "imagePath": Object {
                       "testUri": "../../../app/assets/images/image_post_1.jpg",
+                    },
+                  },
+                  Object {
+                    "author": Object {
+                      "avatarPath": Object {
+                        "testUri": "../../../app/assets/images/empower_two_women_logo.png",
+                      },
+                    },
+                    "date": 2018-02-11T00:00:00.000Z,
+                    "description": null,
+                    "id": "324869-saf80as-ssae",
+                    "imagePath": Object {
+                      "testUri": "../../../app/assets/images/image_post_2.jpg",
                     },
                   },
                 ]
@@ -295,6 +347,19 @@ Maria Júlia Coutinho estreou neste sábado, 16 de Fevereiro, como âncora do Jo
                       "testUri": "../../../app/assets/images/image_post_1.jpg",
                     },
                   },
+                  Object {
+                    "author": Object {
+                      "avatarPath": Object {
+                        "testUri": "../../../app/assets/images/empower_two_women_logo.png",
+                      },
+                    },
+                    "date": 2018-02-11T00:00:00.000Z,
+                    "description": null,
+                    "id": "324869-saf80as-ssae",
+                    "imagePath": Object {
+                      "testUri": "../../../app/assets/images/image_post_2.jpg",
+                    },
+                  },
                 ]
               }
               disableVirtualization={false}
@@ -333,6 +398,19 @@ Maria Júlia Coutinho estreou neste sábado, 16 de Fevereiro, como âncora do Jo
                   "id": "98y723-23048-23480",
                   "imagePath": Object {
                     "testUri": "../../../app/assets/images/image_post_1.jpg",
+                  },
+                },
+                Object {
+                  "author": Object {
+                    "avatarPath": Object {
+                      "testUri": "../../../app/assets/images/empower_two_women_logo.png",
+                    },
+                  },
+                  "date": 2018-02-11T00:00:00.000Z,
+                  "description": null,
+                  "id": "324869-saf80as-ssae",
+                  "imagePath": Object {
+                    "testUri": "../../../app/assets/images/image_post_2.jpg",
                   },
                 },
               ],
