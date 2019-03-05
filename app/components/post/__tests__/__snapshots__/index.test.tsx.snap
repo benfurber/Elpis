@@ -35,53 +35,15 @@ ShallowWrapper {
     "props": Object {
       "children": Array [
         <Tabs />,
-        <View
-          style={
+        <Body
+          date={2000-01-01T00:00:00.000Z}
+          description="A string"
+          imagePath={
             Object {
-              "backgroundColor": "rgba(255, 255, 255, 0.85)",
-              "borderTopRightRadius": 5,
-              "padding": 10,
-              "width": "100%",
+              "testUri": "../../../app/assets/images/image_post_1.jpg",
             }
           }
-        >
-          <FlexImage
-            source={
-              Object {
-                "testUri": "../../../app/assets/images/image_post_1.jpg",
-              }
-            }
-            style={
-              Object {
-                "borderRadius": 5,
-                "overflow": "hidden",
-              }
-            }
-          />
-          <Text
-            style={
-              Object {
-                "marginVertical": 10,
-              }
-            }
-          >
-            A string
-          </Text>
-          <Text
-            style={
-              Array [
-                Object {
-                  "fontStyle": "italic",
-                },
-                Object {
-                  "marginVertical": 10,
-                },
-              ]
-            }
-          >
-            01/01/2000
-          </Text>
-        </View>,
+        />,
         <Footer
           avatarPath={
             Object {
@@ -108,106 +70,16 @@ ShallowWrapper {
       Object {
         "instance": null,
         "key": undefined,
-        "nodeType": "class",
+        "nodeType": "function",
         "props": Object {
-          "children": Array [
-            <FlexImage
-              source={
-                Object {
-                  "testUri": "../../../app/assets/images/image_post_1.jpg",
-                }
-              }
-              style={
-                Object {
-                  "borderRadius": 5,
-                  "overflow": "hidden",
-                }
-              }
-            />,
-            <Text
-              style={
-                Object {
-                  "marginVertical": 10,
-                }
-              }
-            >
-              A string
-            </Text>,
-            <Text
-              style={
-                Array [
-                  Object {
-                    "fontStyle": "italic",
-                  },
-                  Object {
-                    "marginVertical": 10,
-                  },
-                ]
-              }
-            >
-              01/01/2000
-            </Text>,
-          ],
-          "style": Object {
-            "backgroundColor": "rgba(255, 255, 255, 0.85)",
-            "borderTopRightRadius": 5,
-            "padding": 10,
-            "width": "100%",
+          "date": 2000-01-01T00:00:00.000Z,
+          "description": "A string",
+          "imagePath": Object {
+            "testUri": "../../../app/assets/images/image_post_1.jpg",
           },
         },
         "ref": null,
-        "rendered": Array [
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "class",
-            "props": Object {
-              "source": Object {
-                "testUri": "../../../app/assets/images/image_post_1.jpg",
-              },
-              "style": Object {
-                "borderRadius": 5,
-                "overflow": "hidden",
-              },
-            },
-            "ref": null,
-            "rendered": null,
-            "type": [Function],
-          },
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "class",
-            "props": Object {
-              "children": "A string",
-              "style": Object {
-                "marginVertical": 10,
-              },
-            },
-            "ref": null,
-            "rendered": "A string",
-            "type": [Function],
-          },
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "class",
-            "props": Object {
-              "children": "01/01/2000",
-              "style": Array [
-                Object {
-                  "fontStyle": "italic",
-                },
-                Object {
-                  "marginVertical": 10,
-                },
-              ],
-            },
-            "ref": null,
-            "rendered": "01/01/2000",
-            "type": [Function],
-          },
-        ],
+        "rendered": null,
         "type": [Function],
       },
       Object {
@@ -234,53 +106,15 @@ ShallowWrapper {
       "props": Object {
         "children": Array [
           <Tabs />,
-          <View
-            style={
+          <Body
+            date={2000-01-01T00:00:00.000Z}
+            description="A string"
+            imagePath={
               Object {
-                "backgroundColor": "rgba(255, 255, 255, 0.85)",
-                "borderTopRightRadius": 5,
-                "padding": 10,
-                "width": "100%",
+                "testUri": "../../../app/assets/images/image_post_1.jpg",
               }
             }
-          >
-            <FlexImage
-              source={
-                Object {
-                  "testUri": "../../../app/assets/images/image_post_1.jpg",
-                }
-              }
-              style={
-                Object {
-                  "borderRadius": 5,
-                  "overflow": "hidden",
-                }
-              }
-            />
-            <Text
-              style={
-                Object {
-                  "marginVertical": 10,
-                }
-              }
-            >
-              A string
-            </Text>
-            <Text
-              style={
-                Array [
-                  Object {
-                    "fontStyle": "italic",
-                  },
-                  Object {
-                    "marginVertical": 10,
-                  },
-                ]
-              }
-            >
-              01/01/2000
-            </Text>
-          </View>,
+          />,
           <Footer
             avatarPath={
               Object {
@@ -307,106 +141,16 @@ ShallowWrapper {
         Object {
           "instance": null,
           "key": undefined,
-          "nodeType": "class",
+          "nodeType": "function",
           "props": Object {
-            "children": Array [
-              <FlexImage
-                source={
-                  Object {
-                    "testUri": "../../../app/assets/images/image_post_1.jpg",
-                  }
-                }
-                style={
-                  Object {
-                    "borderRadius": 5,
-                    "overflow": "hidden",
-                  }
-                }
-              />,
-              <Text
-                style={
-                  Object {
-                    "marginVertical": 10,
-                  }
-                }
-              >
-                A string
-              </Text>,
-              <Text
-                style={
-                  Array [
-                    Object {
-                      "fontStyle": "italic",
-                    },
-                    Object {
-                      "marginVertical": 10,
-                    },
-                  ]
-                }
-              >
-                01/01/2000
-              </Text>,
-            ],
-            "style": Object {
-              "backgroundColor": "rgba(255, 255, 255, 0.85)",
-              "borderTopRightRadius": 5,
-              "padding": 10,
-              "width": "100%",
+            "date": 2000-01-01T00:00:00.000Z,
+            "description": "A string",
+            "imagePath": Object {
+              "testUri": "../../../app/assets/images/image_post_1.jpg",
             },
           },
           "ref": null,
-          "rendered": Array [
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "class",
-              "props": Object {
-                "source": Object {
-                  "testUri": "../../../app/assets/images/image_post_1.jpg",
-                },
-                "style": Object {
-                  "borderRadius": 5,
-                  "overflow": "hidden",
-                },
-              },
-              "ref": null,
-              "rendered": null,
-              "type": [Function],
-            },
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "class",
-              "props": Object {
-                "children": "A string",
-                "style": Object {
-                  "marginVertical": 10,
-                },
-              },
-              "ref": null,
-              "rendered": "A string",
-              "type": [Function],
-            },
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "class",
-              "props": Object {
-                "children": "01/01/2000",
-                "style": Array [
-                  Object {
-                    "fontStyle": "italic",
-                  },
-                  Object {
-                    "marginVertical": 10,
-                  },
-                ],
-              },
-              "ref": null,
-              "rendered": "01/01/2000",
-              "type": [Function],
-            },
-          ],
+          "rendered": null,
           "type": [Function],
         },
         Object {
@@ -481,44 +225,15 @@ ShallowWrapper {
     "props": Object {
       "children": Array [
         <Tabs />,
-        <View
-          style={
+        <Body
+          date={2000-01-01T00:00:00.000Z}
+          description={null}
+          imagePath={
             Object {
-              "backgroundColor": "rgba(255, 255, 255, 0.85)",
-              "borderTopRightRadius": 5,
-              "padding": 10,
-              "width": "100%",
+              "testUri": "../../../app/assets/images/image_post_1.jpg",
             }
           }
-        >
-          <FlexImage
-            source={
-              Object {
-                "testUri": "../../../app/assets/images/image_post_1.jpg",
-              }
-            }
-            style={
-              Object {
-                "borderRadius": 5,
-                "overflow": "hidden",
-              }
-            }
-          />
-          <Text
-            style={
-              Array [
-                Object {
-                  "fontStyle": "italic",
-                },
-                Object {
-                  "marginVertical": 10,
-                },
-              ]
-            }
-          >
-            01/01/2000
-          </Text>
-        </View>,
+        />,
         <Footer
           avatarPath={
             Object {
@@ -545,85 +260,16 @@ ShallowWrapper {
       Object {
         "instance": null,
         "key": undefined,
-        "nodeType": "class",
+        "nodeType": "function",
         "props": Object {
-          "children": Array [
-            <FlexImage
-              source={
-                Object {
-                  "testUri": "../../../app/assets/images/image_post_1.jpg",
-                }
-              }
-              style={
-                Object {
-                  "borderRadius": 5,
-                  "overflow": "hidden",
-                }
-              }
-            />,
-            undefined,
-            <Text
-              style={
-                Array [
-                  Object {
-                    "fontStyle": "italic",
-                  },
-                  Object {
-                    "marginVertical": 10,
-                  },
-                ]
-              }
-            >
-              01/01/2000
-            </Text>,
-          ],
-          "style": Object {
-            "backgroundColor": "rgba(255, 255, 255, 0.85)",
-            "borderTopRightRadius": 5,
-            "padding": 10,
-            "width": "100%",
+          "date": 2000-01-01T00:00:00.000Z,
+          "description": null,
+          "imagePath": Object {
+            "testUri": "../../../app/assets/images/image_post_1.jpg",
           },
         },
         "ref": null,
-        "rendered": Array [
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "class",
-            "props": Object {
-              "source": Object {
-                "testUri": "../../../app/assets/images/image_post_1.jpg",
-              },
-              "style": Object {
-                "borderRadius": 5,
-                "overflow": "hidden",
-              },
-            },
-            "ref": null,
-            "rendered": null,
-            "type": [Function],
-          },
-          undefined,
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "class",
-            "props": Object {
-              "children": "01/01/2000",
-              "style": Array [
-                Object {
-                  "fontStyle": "italic",
-                },
-                Object {
-                  "marginVertical": 10,
-                },
-              ],
-            },
-            "ref": null,
-            "rendered": "01/01/2000",
-            "type": [Function],
-          },
-        ],
+        "rendered": null,
         "type": [Function],
       },
       Object {
@@ -650,44 +296,15 @@ ShallowWrapper {
       "props": Object {
         "children": Array [
           <Tabs />,
-          <View
-            style={
+          <Body
+            date={2000-01-01T00:00:00.000Z}
+            description={null}
+            imagePath={
               Object {
-                "backgroundColor": "rgba(255, 255, 255, 0.85)",
-                "borderTopRightRadius": 5,
-                "padding": 10,
-                "width": "100%",
+                "testUri": "../../../app/assets/images/image_post_1.jpg",
               }
             }
-          >
-            <FlexImage
-              source={
-                Object {
-                  "testUri": "../../../app/assets/images/image_post_1.jpg",
-                }
-              }
-              style={
-                Object {
-                  "borderRadius": 5,
-                  "overflow": "hidden",
-                }
-              }
-            />
-            <Text
-              style={
-                Array [
-                  Object {
-                    "fontStyle": "italic",
-                  },
-                  Object {
-                    "marginVertical": 10,
-                  },
-                ]
-              }
-            >
-              01/01/2000
-            </Text>
-          </View>,
+          />,
           <Footer
             avatarPath={
               Object {
@@ -714,85 +331,16 @@ ShallowWrapper {
         Object {
           "instance": null,
           "key": undefined,
-          "nodeType": "class",
+          "nodeType": "function",
           "props": Object {
-            "children": Array [
-              <FlexImage
-                source={
-                  Object {
-                    "testUri": "../../../app/assets/images/image_post_1.jpg",
-                  }
-                }
-                style={
-                  Object {
-                    "borderRadius": 5,
-                    "overflow": "hidden",
-                  }
-                }
-              />,
-              undefined,
-              <Text
-                style={
-                  Array [
-                    Object {
-                      "fontStyle": "italic",
-                    },
-                    Object {
-                      "marginVertical": 10,
-                    },
-                  ]
-                }
-              >
-                01/01/2000
-              </Text>,
-            ],
-            "style": Object {
-              "backgroundColor": "rgba(255, 255, 255, 0.85)",
-              "borderTopRightRadius": 5,
-              "padding": 10,
-              "width": "100%",
+            "date": 2000-01-01T00:00:00.000Z,
+            "description": null,
+            "imagePath": Object {
+              "testUri": "../../../app/assets/images/image_post_1.jpg",
             },
           },
           "ref": null,
-          "rendered": Array [
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "class",
-              "props": Object {
-                "source": Object {
-                  "testUri": "../../../app/assets/images/image_post_1.jpg",
-                },
-                "style": Object {
-                  "borderRadius": 5,
-                  "overflow": "hidden",
-                },
-              },
-              "ref": null,
-              "rendered": null,
-              "type": [Function],
-            },
-            undefined,
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "class",
-              "props": Object {
-                "children": "01/01/2000",
-                "style": Array [
-                  Object {
-                    "fontStyle": "italic",
-                  },
-                  Object {
-                    "marginVertical": 10,
-                  },
-                ],
-              },
-              "ref": null,
-              "rendered": "01/01/2000",
-              "type": [Function],
-            },
-          ],
+          "rendered": null,
           "type": [Function],
         },
         Object {
