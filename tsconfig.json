@@ -6,11 +6,15 @@
     "strict": true,
     "baseUrl": "./",
     "paths": {
+      "assets/*": ["app/assets/*"],
       "components": ["app/components"],
+      "interfaces": ["app/interfaces"],
       "routes": ["app/routes"],
-      "screens": ["app/screens"]
+      "screens": ["app/screens"],
+      "styles": ["app/styles"]
     },
     "allowSyntheticDefaultImports": true,
+    "noImplicitAny": false,
     "esModuleInterop": true
   }
 }

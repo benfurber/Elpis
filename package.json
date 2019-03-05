@@ -4,17 +4,21 @@
   "private": true,
   "scripts": {
     "format": "prettier --write '{*,{__mocks__,__tests__,app}/**/*}.js'",
+    "jest": "jest --watch",
     "lint": "./node_modules/.bin/eslint .",
     "open-android": "open -a /Applications/Android Studio.app ./android",
     "start": "node node_modules/react-native/local-cli/cli.js start --reset-cache",
     "test": "jest"
   },
   "dependencies": {
+    "@types/react-native-vector-icons": "^4.6.4",
     "@types/react-navigation": "^3.0.1",
     "eslint-plugin-prettier": "^3.0.0",
     "react": "16.6.1",
     "react-native": "0.57.7",
+    "react-native-flex-image": "^1.2.1",
     "react-native-gesture-handler": "^1.0.12",
+    "react-native-vector-icons": "^6.3.0",
     "react-navigation": "^3.0.9"
   },
   "devDependencies": {

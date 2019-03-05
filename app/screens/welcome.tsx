@@ -1,22 +1,43 @@
-import React from "react";
+import React, { Component } from "react";
 import { StyleSheet, View } from "react-native";
 
-import { Logo } from "components";
+import { LoginForm, Logo } from "components";
+import { colours } from "styles";
 
-const WelcomeScreen = () => {
-  return (
-    <View style={styles.container}>
-      <Logo />
-    </View>
-  );
-};
+interface Props {
+  navigation: any;
+}
+
+class WelcomeScreen extends Component<Props> {
+  render() {
+    const { navigation } = this.props;
+
+    return (
+      <View style={styles.container}>
+        <View style={styles.logo}>
+          <Logo />
+        </View>
+        <View style={styles.loginForm}>
+          <LoginForm navigation={navigation} />
+        </View>
+      </View>
+    );
+  }
+}
 
 const styles = StyleSheet.create({
   container: {
+    backgroundColor: colours.transparentBlue,
     flex: 1,
-    justifyContent: "center",
-    alignItems: "center",
-    backgroundColor: "#F5FCFF"
+    flexDirection: "column"
+  },
+  loginForm: {
+    flex: 6,
+    alignItems: "center"
+  },
+  logo: {
+    flex: 1,
+    alignItems: "stretch"
   }
 });
 
