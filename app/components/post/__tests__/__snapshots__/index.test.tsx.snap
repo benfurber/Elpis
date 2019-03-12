@@ -34,7 +34,10 @@ ShallowWrapper {
     "nodeType": "class",
     "props": Object {
       "children": Array [
-        <Tabs />,
+        <Tabs
+          onPressComments={[Function]}
+          onPressPost={[Function]}
+        />,
         <Body
           date={2000-01-01T00:00:00.000Z}
           description="A string"
@@ -62,7 +65,10 @@ ShallowWrapper {
         "instance": null,
         "key": undefined,
         "nodeType": "function",
-        "props": Object {},
+        "props": Object {
+          "onPressComments": [Function],
+          "onPressPost": [Function],
+        },
         "ref": null,
         "rendered": null,
         "type": [Function],
@@ -105,7 +111,10 @@ ShallowWrapper {
       "nodeType": "class",
       "props": Object {
         "children": Array [
-          <Tabs />,
+          <Tabs
+            onPressComments={[Function]}
+            onPressPost={[Function]}
+          />,
           <Body
             date={2000-01-01T00:00:00.000Z}
             description="A string"
@@ -133,7 +142,10 @@ ShallowWrapper {
           "instance": null,
           "key": undefined,
           "nodeType": "function",
-          "props": Object {},
+          "props": Object {
+            "onPressComments": [Function],
+            "onPressPost": [Function],
+          },
           "ref": null,
           "rendered": null,
           "type": [Function],
@@ -224,7 +236,10 @@ ShallowWrapper {
     "nodeType": "class",
     "props": Object {
       "children": Array [
-        <Tabs />,
+        <Tabs
+          onPressComments={[Function]}
+          onPressPost={[Function]}
+        />,
         <Body
           date={2000-01-01T00:00:00.000Z}
           description={null}
@@ -252,7 +267,10 @@ ShallowWrapper {
         "instance": null,
         "key": undefined,
         "nodeType": "function",
-        "props": Object {},
+        "props": Object {
+          "onPressComments": [Function],
+          "onPressPost": [Function],
+        },
         "ref": null,
         "rendered": null,
         "type": [Function],
@@ -295,7 +313,10 @@ ShallowWrapper {
       "nodeType": "class",
       "props": Object {
         "children": Array [
-          <Tabs />,
+          <Tabs
+            onPressComments={[Function]}
+            onPressPost={[Function]}
+          />,
           <Body
             date={2000-01-01T00:00:00.000Z}
             description={null}
@@ -323,7 +344,10 @@ ShallowWrapper {
           "instance": null,
           "key": undefined,
           "nodeType": "function",
-          "props": Object {},
+          "props": Object {
+            "onPressComments": [Function],
+            "onPressPost": [Function],
+          },
           "ref": null,
           "rendered": null,
           "type": [Function],

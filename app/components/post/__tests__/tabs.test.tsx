@@ -6,7 +6,12 @@ import { Tabs } from "../tabs";
 
 describe("Tabs", () => {
   it("renders correctly", () => {
-    const component = shallow(<Tabs />);
+    const onPressComments = jest.fn();
+    const onPressPost = jest.fn();
+
+    const component = shallow(
+      <Tabs onPressComments={onPressComments} onPressPost={onPressPost} />
+    );
 
     expect(component).toMatchSnapshot();
   });
