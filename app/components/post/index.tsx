@@ -1,5 +1,6 @@
 import React from "react";
 import { StyleSheet, View } from "react-native";
+import { NavigationScreenProp } from "react-navigation";
 
 import { Post as PostInterface } from "interfaces";
 
@@ -8,6 +9,7 @@ import { Footer } from "./footer";
 import { Tabs } from "./tabs";
 
 interface Props {
+  navigation: NavigationScreenProp<any, any>;
   post: PostInterface;
 }
 

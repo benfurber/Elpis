@@ -4,6 +4,9 @@ import { shallow } from "enzyme";
 
 import { Post } from "components";
 
+let navigation;
+jest.mock(navigation, () => jest.fn());
+
 describe("Post", () => {
   it("renders correctly", () => {
     const post = {
@@ -15,7 +18,7 @@ describe("Post", () => {
       id: "10387-314fs-12asdbj",
       imagePath: require("assets/images/image_post_1.jpg")
     };
-    const component = shallow(<Post post={post} />);
+    const component = shallow(<Post post={post} navigation={navigation} />);
 
     expect(component).toMatchSnapshot();
   });
@@ -30,7 +33,7 @@ describe("Post", () => {
       id: "10387-314fs-12asdbj",
       imagePath: require("assets/images/image_post_1.jpg")
     };
-    const component = shallow(<Post post={post} />);
+    const component = shallow(<Post post={post} navigation={navigation} />);
 
     expect(component).toMatchSnapshot();
   });

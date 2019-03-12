@@ -4,7 +4,8 @@ import { shallow } from "enzyme";
 
 import { WelcomeScreen } from "screens";
 
-const navigation = { navigate: jest.fn() };
+let navigation;
+jest.mock(navigation, () => jest.fn());
 
 describe("WelcomeScreen", () => {
   it("renders correctly", () => {

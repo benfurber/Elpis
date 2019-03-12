@@ -2,6 +2,11 @@ import React from "react";
 import { FlatList, ScrollView, StyleSheet, View } from "react-native";
 
 import { Logo, Post } from "components";
+import { NavigationType } from "interfaces";
+
+interface Props {
+  navigation: NavigationType;
+}
 
 const posts = [
   {
@@ -25,7 +30,7 @@ const posts = [
   }
 ];
 
-const FeedScreen = () => {
+const FeedScreen = (props: Props) => {
   return (
     <ScrollView style={styles.container}>
       <View style={styles.logo}>
@@ -35,7 +40,9 @@ const FeedScreen = () => {
         <FlatList
           data={posts}
           keyExtractor={({ id }) => id}
-          renderItem={({ item }) => <Post post={item} />}
+          renderItem={({ item }) => (
+            <Post navigation={props.navigation} post={item} />
+          )}
         />
       </View>
     </ScrollView>
