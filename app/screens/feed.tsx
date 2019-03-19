@@ -3,6 +3,7 @@ import { FlatList, ScrollView, StyleSheet, View } from "react-native";
 
 import { Logo, Post } from "components";
 import { NavigationType } from "interfaces";
+import { colours } from "styles";
 
 interface Props {
   navigation: NavigationType;
@@ -51,6 +52,7 @@ const FeedScreen = (props: Props) => {
 
 const styles = StyleSheet.create({
   container: {
+    backgroundColor: colours.transparentBlue,
     flex: 1,
     flexDirection: "column"
   },

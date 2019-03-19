@@ -83,6 +83,7 @@ Maria Júlia Coutinho estreou neste sábado, 16 de Fevereiro, como âncora do Jo
         </View>,
       ],
       "style": Object {
+        "backgroundColor": "rgba(198, 213, 225, 0.75)",
         "flex": 1,
         "flexDirection": "column",
       },
@@ -295,6 +296,7 @@ Maria Júlia Coutinho estreou neste sábado, 16 de Fevereiro, como âncora do Jo
           </View>,
         ],
         "style": Object {
+          "backgroundColor": "rgba(198, 213, 225, 0.75)",
           "flex": 1,
           "flexDirection": "column",
         },
