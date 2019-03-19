@@ -1,9 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`PostScreen renders correctly 1`] = `
+exports[`Footer renders correctly 1`] = `
 ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <PostScreen />,
+  Symbol(enzyme.__unrendered__): <Comments />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
     "getNode": [Function],
@@ -17,11 +17,14 @@ ShallowWrapper {
     "key": undefined,
     "nodeType": "class",
     "props": Object {
-      "children": <Post />,
+      "children": <Text>
+        COMMENTS
+      </Text>,
       "style": Object {
-        "backgroundColor": "rgba(198, 213, 225, 0.75)",
-        "flex": 1,
-        "flexDirection": "column",
+        "backgroundColor": "rgba(255, 255, 255, 0.85)",
+        "borderTopRightRadius": 5,
+        "padding": 10,
+        "width": "100%",
       },
     },
     "ref": null,
@@ -30,12 +33,10 @@ ShallowWrapper {
       "key": undefined,
       "nodeType": "class",
       "props": Object {
-        "navigation": undefined,
-        "post": undefined,
-        "setDisplay": undefined,
+        "children": "COMMENTS",
       },
       "ref": null,
-      "rendered": null,
+      "rendered": "COMMENTS",
       "type": [Function],
     },
     "type": [Function],
@@ -46,11 +47,14 @@ ShallowWrapper {
       "key": undefined,
       "nodeType": "class",
       "props": Object {
-        "children": <Post />,
+        "children": <Text>
+          COMMENTS
+        </Text>,
         "style": Object {
-          "backgroundColor": "rgba(198, 213, 225, 0.75)",
-          "flex": 1,
-          "flexDirection": "column",
+          "backgroundColor": "rgba(255, 255, 255, 0.85)",
+          "borderTopRightRadius": 5,
+          "padding": 10,
+          "width": "100%",
         },
       },
       "ref": null,
@@ -59,12 +63,10 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "class",
         "props": Object {
-          "navigation": undefined,
-          "post": undefined,
-          "setDisplay": undefined,
+          "children": "COMMENTS",
         },
         "ref": null,
-        "rendered": null,
+        "rendered": "COMMENTS",
         "type": [Function],
       },
       "type": [Function],

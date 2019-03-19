@@ -12,18 +12,39 @@ interface Props {
 class PostScreen extends Component<Props> {
   getPost() {
     const { navigation } = this.props;
+    return navigation.getParam("post", null);
+  }
 
-    let post;
+  getSetDisplay() {
+    const { navigation } = this.props;
+
+    let setDisplay;
     if (navigation) {
-      post = navigation.getParam("post", null);
+      setDisplay = navigation.getParam("setDisplay", "body");
     }
-    return post;
+    return setDisplay;
+  }
+
+  getParam(param: string) {
+    const { navigation } = this.props;
+
+    let theParam;
+    if (navigation) {
+      theParam = navigation.getParam(param);
+    }
+    return theParam;
   }
 
   render() {
+    const { navigation } = this.props;
+
     return (
       <View style={styles.container}>
-        <Post navigation={this.props.navigation} post={this.getPost()} />
+        <Post
+          navigation={this.props.navigation}
+          post={this.getParam("post")}
+          setDisplay={this.getParam("setDisplay")}
+        />
       </View>
     );
   }
