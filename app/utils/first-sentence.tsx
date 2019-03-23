@@ -1,5 +1,5 @@
 const firstSentence = (fullString: string) => {
-  const regex = /^(.*?(?<!\b\w)[.?!\n\r])\s+[A-Z0-9]/;
+  const regex = /^(.*?[.?!\n\r])\s+[A-Z0-9]/;
 
   if (fullString.match(regex)) {
     let firstLine = fullString.split(regex)[1];
