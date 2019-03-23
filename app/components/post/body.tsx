@@ -40,7 +40,7 @@ const styles = StyleSheet.create({
   body: {
     backgroundColor: colours.whiteTransparent,
     borderTopRightRadius: layout.borderRadius,
-    padding: layout.padding,
+    padding: layout.spacing,
     width: "100%"
   },
   date: {

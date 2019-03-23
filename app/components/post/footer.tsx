@@ -41,7 +41,7 @@ const styles = StyleSheet.create({
     borderBottomLeftRadius: layout.borderRadius,
     borderBottomRightRadius: layout.borderRadius,
     flex: 1,
-    padding: layout.padding * 2
+    padding: layout.spacing * 2
   },
   footer: {
     backgroundColor: colours.whiteTransparent

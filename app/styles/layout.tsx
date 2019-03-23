@@ -1,6 +1,8 @@
 const layout = {
   borderRadius: 5,
-  padding: 10
+  spacingXS: 3,
+  spacingS: 6,
+  spacing: 10
 };
 
 export { layout };
