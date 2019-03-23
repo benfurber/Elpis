@@ -1,12 +1,24 @@
 import React from "react";
 import { StyleSheet, Text, View } from "react-native";
 
+import { Post } from "interfaces";
 import { colours, layout } from "styles";
+import { firstSentence } from "utils";
 
-const Comments = () => {
+interface Props {
+  description: Post["description"];
+}
+
+const Comments = (props: Props) => {
+  const shortDescription = () => {
+    if (props.description) {
+      return firstSentence(props.description);
+    }
+  };
+
   return (
     <View style={styles.body}>
-      <Text>COMMENTS</Text>
+      <Text>{shortDescription()}</Text>
     </View>
   );
 };

@@ -40,7 +40,9 @@ ShallowWrapper {
           onPressComments={[Function]}
           onPressPost={[Function]}
         />,
-        <Comments />,
+        <Comments
+          description="A string"
+        />,
         <Footer
           avatarPath={
             Object {
@@ -72,7 +74,9 @@ ShallowWrapper {
         "instance": null,
         "key": undefined,
         "nodeType": "function",
-        "props": Object {},
+        "props": Object {
+          "description": "A string",
+        },
         "ref": null,
         "rendered": null,
         "type": [Function],
@@ -105,7 +109,9 @@ ShallowWrapper {
             onPressComments={[Function]}
             onPressPost={[Function]}
           />,
-          <Comments />,
+          <Comments
+            description="A string"
+          />,
           <Footer
             avatarPath={
               Object {
@@ -137,7 +143,9 @@ ShallowWrapper {
           "instance": null,
           "key": undefined,
           "nodeType": "function",
-          "props": Object {},
+          "props": Object {
+            "description": "A string",
+          },
           "ref": null,
           "rendered": null,
           "type": [Function],

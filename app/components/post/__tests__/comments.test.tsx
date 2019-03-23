@@ -4,9 +4,9 @@ import { shallow } from "enzyme";
 
 import { Comments } from "../comments";
 
-describe("Footer", () => {
+describe("Comments", () => {
   it("renders correctly", () => {
-    const component = shallow(<Comments />);
+    const component = shallow(<Comments description={"A simple string"} />);
 
     expect(component).toMatchSnapshot();
   });
