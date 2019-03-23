@@ -4,15 +4,7 @@ import FlexImage from "react-native-flex-image";
 
 import { Post } from "interfaces";
 import { colours, layout } from "styles";
-
-const formatDate = (date: Date) => {
-  const formatOptions = {
-    day: "2-digit",
-    month: "2-digit",
-    year: "numeric"
-  };
-  return date.toLocaleString("en-GB", formatOptions);
-};
+import { formatDate } from "utils";
 
 interface Props {
   date: Post["date"];
