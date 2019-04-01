@@ -1,11 +1,14 @@
 import React from "react";
-import { Image, StyleSheet, Text, View, ScrollView } from "react-native";
+import { FlatList, StyleSheet, Text, View, ScrollView } from "react-native";
 
-import { Post } from "interfaces";
+import { Comment as CommentInterface, Post } from "interfaces";
 import { colours, layout, typography } from "styles";
 import { firstSentence } from "utils";
 
+import { Comment } from "./comment";
+
 interface Props {
+  comments: [CommentInterface] | null;
   description: Post["description"];
 }
 
@@ -20,6 +23,18 @@ const Comments = (props: Props) => {
     }
   };
 
+  const renderComments = () => {
+    if (props.comments) {
+      return (
+        <FlatList
+          data={props.comments}
+          keyExtractor={({ id }) => id}
+          renderItem={({ item }) => <Comment item={item} />}
+        />
+      );
+    }
+  };
+
   return (
     <View style={styles.container}>
       <ScrollView>
@@ -27,54 +42,7 @@ const Comments = (props: Props) => {
         <View style={styles.commentsHeadingContainer}>
           <Text style={styles.commentsHeading}>x Comments - x Topics</Text>
         </View>
-        <View style={styles.commentContainer}>
-          <View style={styles.avatarContainer}>
-            <View style={styles.badge}>
-              <Text style={styles.badgeText}>4</Text>
-            </View>
-            <View>
-              <Image
-                source={require("assets/images/profile-pic-may.jpg")}
-                style={styles.image}
-              />
-            </View>
-          </View>
-          <View style={styles.commentBodyContainer}>
-            <Text style={styles.commentTitle}>
-              Meu pai fez o que ela mandou…
-            </Text>
-            <Text style={styles.commentDate}>Há 7 minutos atrás</Text>
-            <Text>
-              Dá certo sim, o meu pai, por exemplo, fugiu quando eu tinha 5 anos
-              e eu não faço ideia da onde ele esteja. Nunca mais voltou, pena
-              que a violência só piorou.
-            </Text>
-          </View>
-        </View>
-        <View style={styles.commentContainer}>
-          <View style={styles.avatarContainer}>
-            <View style={styles.badge}>
-              <Text style={styles.badgeText}>4</Text>
-            </View>
-            <View>
-              <Image
-                source={require("assets/images/profile-pic-may.jpg")}
-                style={styles.image}
-              />
-            </View>
-          </View>
-          <View style={styles.commentBodyContainer}>
-            <Text style={styles.commentTitle}>
-              Meu pai fez o que ela mandou…
-            </Text>
-            <Text style={styles.commentDate}>Há 7 minutos atrás</Text>
-            <Text>
-              Dá certo sim, o meu pai, por exemplo, fugiu quando eu tinha 5 anos
-              e eu não faço ideia da onde ele esteja. Nunca mais voltou, pena
-              que a violência só piorou.
-            </Text>
-          </View>
-        </View>
+        {renderComments()}
       </ScrollView>
     </View>
   );
@@ -129,9 +97,6 @@ const styles = StyleSheet.create({
   badgeText: {
     color: colours.pureWhite,
     fontSize: typography.fontSizeS
-  },
-  date: {
-    fontStyle: "italic"
   },
   titleContainer: {
     backgroundColor: colours.whiteTransparent,

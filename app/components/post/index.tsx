@@ -52,8 +52,8 @@ class Post extends Component<Props, State> {
   }
 
   renderComments() {
-    const { description } = this.props.post;
-    return <Comments description={description} />;
+    const { comments, description } = this.props.post;
+    return <Comments comments={comments} description={description} />;
   }
 
   renderContent() {

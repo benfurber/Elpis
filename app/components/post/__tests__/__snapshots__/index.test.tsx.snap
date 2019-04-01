@@ -75,6 +75,7 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "function",
         "props": Object {
+          "comments": undefined,
           "description": "A string",
         },
         "ref": null,
@@ -144,6 +145,7 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "function",
           "props": Object {
+            "comments": undefined,
             "description": "A string",
           },
           "ref": null,

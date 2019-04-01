@@ -2,9 +2,9 @@ import "react-native";
 import React from "react";
 import { shallow } from "enzyme";
 
-import { Comments } from "../comments";
+import { Comment } from "../comment";
 
-describe("Comments", () => {
+describe("Comment", () => {
   it("renders correctly", () => {
     const comment = {
       author: {
@@ -18,9 +18,7 @@ describe("Comments", () => {
       totalReplies: 4
     };
 
-    const component = shallow(
-      <Comments comments={[comment]} description={"A simple string"} />
-    );
+    const component = shallow(<Comment item={comment} />);
 
     expect(component).toMatchSnapshot();
   });

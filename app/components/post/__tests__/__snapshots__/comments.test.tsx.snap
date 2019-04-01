@@ -4,6 +4,22 @@ exports[`Comments renders correctly 1`] = `
 ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <Comments
+    comments={
+      Array [
+        Object {
+          "author": Object {
+            "avatarPath": Object {
+              "testUri": "../../../app/assets/images/profile-pic-may.jpg",
+            },
+          },
+          "body": "Dá certo sim, o meu pai, por exemplo, fugiu quando eu tinha 5 anos e eu não faço ideia da onde ele esteja. Nunca mais voltou, pena que a violência só piorou.",
+          "dateCreated": 2019-01-01T00:00:00.000Z,
+          "id": "21097",
+          "title": "Meu pai fez o que ela mandou…",
+          "totalReplies": 4,
+        },
+      ]
+    }
     description="A simple string"
   />,
   Symbol(enzyme.__renderer__): Object {
@@ -59,198 +75,35 @@ ShallowWrapper {
             x Comments - x Topics
           </Text>
         </View>
-        <View
-          style={
-            Object {
-              "flex": 1,
-              "flexDirection": "row",
-              "marginBottom": 10,
-            }
-          }
-        >
-          <View
-            style={
+        <FlatList
+          data={
+            Array [
               Object {
-                "width": 60,
-              }
-            }
-          >
-            <View
-              style={
-                Object {
-                  "alignItems": "center",
-                  "backgroundColor": "rgb(45, 82, 113)",
-                  "borderRadius": 11,
-                  "flexDirection": "column",
-                  "height": 22,
-                  "justifyContent": "center",
-                  "left": 35,
-                  "position": "absolute",
-                  "width": 22,
-                  "zIndex": 1,
-                }
-              }
-            >
-              <Text
-                style={
-                  Object {
-                    "color": "rgb(255, 255, 255)",
-                    "fontSize": 12,
-                  }
-                }
-              >
-                4
-              </Text>
-            </View>
-            <View>
-              <Component
-                source={
-                  Object {
+                "author": Object {
+                  "avatarPath": Object {
                     "testUri": "../../../app/assets/images/profile-pic-may.jpg",
-                  }
-                }
-                style={
-                  Object {
-                    "backgroundColor": "rgba(4, 71, 47, 0.75)",
-                    "borderRadius": 25,
-                    "height": 50,
-                    "marginTop": 10,
-                    "overflow": "hidden",
-                    "width": 50,
-                  }
-                }
-              />
-            </View>
-          </View>
-          <View
-            style={
-              Object {
-                "marginLeft": 10,
-              }
-            }
-          >
-            <Text
-              style={
-                Object {
-                  "fontSize": 18,
-                  "marginBottom": 6,
-                }
-              }
-            >
-              Meu pai fez o que ela mandou…
-            </Text>
-            <Text
-              style={
-                Object {
-                  "color": "rgb(51, 51, 51)",
-                  "fontStyle": "italic",
-                  "marginBottom": 10,
-                }
-              }
-            >
-              Há 7 minutos atrás
-            </Text>
-            <Text>
-              Dá certo sim, o meu pai, por exemplo, fugiu quando eu tinha 5 anos e eu não faço ideia da onde ele esteja. Nunca mais voltou, pena que a violência só piorou.
-            </Text>
-          </View>
-        </View>
-        <View
-          style={
-            Object {
-              "flex": 1,
-              "flexDirection": "row",
-              "marginBottom": 10,
-            }
+                  },
+                },
+                "body": "Dá certo sim, o meu pai, por exemplo, fugiu quando eu tinha 5 anos e eu não faço ideia da onde ele esteja. Nunca mais voltou, pena que a violência só piorou.",
+                "dateCreated": 2019-01-01T00:00:00.000Z,
+                "id": "21097",
+                "title": "Meu pai fez o que ela mandou…",
+                "totalReplies": 4,
+              },
+            ]
           }
-        >
-          <View
-            style={
-              Object {
-                "width": 60,
-              }
-            }
-          >
-            <View
-              style={
-                Object {
-                  "alignItems": "center",
-                  "backgroundColor": "rgb(45, 82, 113)",
-                  "borderRadius": 11,
-                  "flexDirection": "column",
-                  "height": 22,
-                  "justifyContent": "center",
-                  "left": 35,
-                  "position": "absolute",
-                  "width": 22,
-                  "zIndex": 1,
-                }
-              }
-            >
-              <Text
-                style={
-                  Object {
-                    "color": "rgb(255, 255, 255)",
-                    "fontSize": 12,
-                  }
-                }
-              >
-                4
-              </Text>
-            </View>
-            <View>
-              <Component
-                source={
-                  Object {
-                    "testUri": "../../../app/assets/images/profile-pic-may.jpg",
-                  }
-                }
-                style={
-                  Object {
-                    "backgroundColor": "rgba(4, 71, 47, 0.75)",
-                    "borderRadius": 25,
-                    "height": 50,
-                    "marginTop": 10,
-                    "overflow": "hidden",
-                    "width": 50,
-                  }
-                }
-              />
-            </View>
-          </View>
-          <View
-            style={
-              Object {
-                "marginLeft": 10,
-              }
-            }
-          >
-            <Text
-              style={
-                Object {
-                  "fontSize": 18,
-                  "marginBottom": 6,
-                }
-              }
-            >
-              Meu pai fez o que ela mandou…
-            </Text>
-            <Text
-              style={
-                Object {
-                  "color": "rgb(51, 51, 51)",
-                  "fontStyle": "italic",
-                  "marginBottom": 10,
-                }
-              }
-            >
-              Há 7 minutos atrás
-            </Text>
-            <Text>
-              Dá certo sim, o meu pai, por exemplo, fugiu quando eu tinha 5 anos e eu não faço ideia da onde ele esteja. Nunca mais voltou, pena que a violência só piorou.
-            </Text>
-          </View>
-        </View>
+          disableVirtualization={false}
+          horizontal={false}
+          initialNumToRender={10}
+          keyExtractor={[Function]}
+          maxToRenderPerBatch={10}
+          numColumns={1}
+          onEndReachedThreshold={2}
+          renderItem={[Function]}
+          scrollEventThrottle={50}
+          updateCellsBatchingPeriod={50}
+          windowSize={21}
+        />
       </ScrollView>,
       "style": Object {
         "backgroundColor": "rgba(255, 255, 255, 0.85)",
@@ -305,198 +158,35 @@ ShallowWrapper {
               x Comments - x Topics
             </Text>
           </View>,
-          <View
-            style={
-              Object {
-                "flex": 1,
-                "flexDirection": "row",
-                "marginBottom": 10,
-              }
-            }
-          >
-            <View
-              style={
+          <FlatList
+            data={
+              Array [
                 Object {
-                  "width": 60,
-                }
-              }
-            >
-              <View
-                style={
-                  Object {
-                    "alignItems": "center",
-                    "backgroundColor": "rgb(45, 82, 113)",
-                    "borderRadius": 11,
-                    "flexDirection": "column",
-                    "height": 22,
-                    "justifyContent": "center",
-                    "left": 35,
-                    "position": "absolute",
-                    "width": 22,
-                    "zIndex": 1,
-                  }
-                }
-              >
-                <Text
-                  style={
-                    Object {
-                      "color": "rgb(255, 255, 255)",
-                      "fontSize": 12,
-                    }
-                  }
-                >
-                  4
-                </Text>
-              </View>
-              <View>
-                <Component
-                  source={
-                    Object {
+                  "author": Object {
+                    "avatarPath": Object {
                       "testUri": "../../../app/assets/images/profile-pic-may.jpg",
-                    }
-                  }
-                  style={
-                    Object {
-                      "backgroundColor": "rgba(4, 71, 47, 0.75)",
-                      "borderRadius": 25,
-                      "height": 50,
-                      "marginTop": 10,
-                      "overflow": "hidden",
-                      "width": 50,
-                    }
-                  }
-                />
-              </View>
-            </View>
-            <View
-              style={
-                Object {
-                  "marginLeft": 10,
-                }
-              }
-            >
-              <Text
-                style={
-                  Object {
-                    "fontSize": 18,
-                    "marginBottom": 6,
-                  }
-                }
-              >
-                Meu pai fez o que ela mandou…
-              </Text>
-              <Text
-                style={
-                  Object {
-                    "color": "rgb(51, 51, 51)",
-                    "fontStyle": "italic",
-                    "marginBottom": 10,
-                  }
-                }
-              >
-                Há 7 minutos atrás
-              </Text>
-              <Text>
-                Dá certo sim, o meu pai, por exemplo, fugiu quando eu tinha 5 anos e eu não faço ideia da onde ele esteja. Nunca mais voltou, pena que a violência só piorou.
-              </Text>
-            </View>
-          </View>,
-          <View
-            style={
-              Object {
-                "flex": 1,
-                "flexDirection": "row",
-                "marginBottom": 10,
-              }
+                    },
+                  },
+                  "body": "Dá certo sim, o meu pai, por exemplo, fugiu quando eu tinha 5 anos e eu não faço ideia da onde ele esteja. Nunca mais voltou, pena que a violência só piorou.",
+                  "dateCreated": 2019-01-01T00:00:00.000Z,
+                  "id": "21097",
+                  "title": "Meu pai fez o que ela mandou…",
+                  "totalReplies": 4,
+                },
+              ]
             }
-          >
-            <View
-              style={
-                Object {
-                  "width": 60,
-                }
-              }
-            >
-              <View
-                style={
-                  Object {
-                    "alignItems": "center",
-                    "backgroundColor": "rgb(45, 82, 113)",
-                    "borderRadius": 11,
-                    "flexDirection": "column",
-                    "height": 22,
-                    "justifyContent": "center",
-                    "left": 35,
-                    "position": "absolute",
-                    "width": 22,
-                    "zIndex": 1,
-                  }
-                }
-              >
-                <Text
-                  style={
-                    Object {
-                      "color": "rgb(255, 255, 255)",
-                      "fontSize": 12,
-                    }
-                  }
-                >
-                  4
-                </Text>
-              </View>
-              <View>
-                <Component
-                  source={
-                    Object {
-                      "testUri": "../../../app/assets/images/profile-pic-may.jpg",
-                    }
-                  }
-                  style={
-                    Object {
-                      "backgroundColor": "rgba(4, 71, 47, 0.75)",
-                      "borderRadius": 25,
-                      "height": 50,
-                      "marginTop": 10,
-                      "overflow": "hidden",
-                      "width": 50,
-                    }
-                  }
-                />
-              </View>
-            </View>
-            <View
-              style={
-                Object {
-                  "marginLeft": 10,
-                }
-              }
-            >
-              <Text
-                style={
-                  Object {
-                    "fontSize": 18,
-                    "marginBottom": 6,
-                  }
-                }
-              >
-                Meu pai fez o que ela mandou…
-              </Text>
-              <Text
-                style={
-                  Object {
-                    "color": "rgb(51, 51, 51)",
-                    "fontStyle": "italic",
-                    "marginBottom": 10,
-                  }
-                }
-              >
-                Há 7 minutos atrás
-              </Text>
-              <Text>
-                Dá certo sim, o meu pai, por exemplo, fugiu quando eu tinha 5 anos e eu não faço ideia da onde ele esteja. Nunca mais voltou, pena que a violência só piorou.
-              </Text>
-            </View>
-          </View>,
+            disableVirtualization={false}
+            horizontal={false}
+            initialNumToRender={10}
+            keyExtractor={[Function]}
+            maxToRenderPerBatch={10}
+            numColumns={1}
+            onEndReachedThreshold={2}
+            renderItem={[Function]}
+            scrollEventThrottle={50}
+            updateCellsBatchingPeriod={50}
+            windowSize={21}
+          />,
         ],
       },
       "ref": null,
@@ -583,681 +273,34 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "class",
           "props": Object {
-            "children": Array [
-              <View
-                style={
-                  Object {
-                    "width": 60,
-                  }
-                }
-              >
-                <View
-                  style={
-                    Object {
-                      "alignItems": "center",
-                      "backgroundColor": "rgb(45, 82, 113)",
-                      "borderRadius": 11,
-                      "flexDirection": "column",
-                      "height": 22,
-                      "justifyContent": "center",
-                      "left": 35,
-                      "position": "absolute",
-                      "width": 22,
-                      "zIndex": 1,
-                    }
-                  }
-                >
-                  <Text
-                    style={
-                      Object {
-                        "color": "rgb(255, 255, 255)",
-                        "fontSize": 12,
-                      }
-                    }
-                  >
-                    4
-                  </Text>
-                </View>
-                <View>
-                  <Component
-                    source={
-                      Object {
-                        "testUri": "../../../app/assets/images/profile-pic-may.jpg",
-                      }
-                    }
-                    style={
-                      Object {
-                        "backgroundColor": "rgba(4, 71, 47, 0.75)",
-                        "borderRadius": 25,
-                        "height": 50,
-                        "marginTop": 10,
-                        "overflow": "hidden",
-                        "width": 50,
-                      }
-                    }
-                  />
-                </View>
-              </View>,
-              <View
-                style={
-                  Object {
-                    "marginLeft": 10,
-                  }
-                }
-              >
-                <Text
-                  style={
-                    Object {
-                      "fontSize": 18,
-                      "marginBottom": 6,
-                    }
-                  }
-                >
-                  Meu pai fez o que ela mandou…
-                </Text>
-                <Text
-                  style={
-                    Object {
-                      "color": "rgb(51, 51, 51)",
-                      "fontStyle": "italic",
-                      "marginBottom": 10,
-                    }
-                  }
-                >
-                  Há 7 minutos atrás
-                </Text>
-                <Text>
-                  Dá certo sim, o meu pai, por exemplo, fugiu quando eu tinha 5 anos e eu não faço ideia da onde ele esteja. Nunca mais voltou, pena que a violência só piorou.
-                </Text>
-              </View>,
+            "data": Array [
+              Object {
+                "author": Object {
+                  "avatarPath": Object {
+                    "testUri": "../../../app/assets/images/profile-pic-may.jpg",
+                  },
+                },
+                "body": "Dá certo sim, o meu pai, por exemplo, fugiu quando eu tinha 5 anos e eu não faço ideia da onde ele esteja. Nunca mais voltou, pena que a violência só piorou.",
+                "dateCreated": 2019-01-01T00:00:00.000Z,
+                "id": "21097",
+                "title": "Meu pai fez o que ela mandou…",
+                "totalReplies": 4,
+              },
             ],
-            "style": Object {
-              "flex": 1,
-              "flexDirection": "row",
-              "marginBottom": 10,
-            },
+            "disableVirtualization": false,
+            "horizontal": false,
+            "initialNumToRender": 10,
+            "keyExtractor": [Function],
+            "maxToRenderPerBatch": 10,
+            "numColumns": 1,
+            "onEndReachedThreshold": 2,
+            "renderItem": [Function],
+            "scrollEventThrottle": 50,
+            "updateCellsBatchingPeriod": 50,
+            "windowSize": 21,
           },
           "ref": null,
-          "rendered": Array [
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "class",
-              "props": Object {
-                "children": Array [
-                  <View
-                    style={
-                      Object {
-                        "alignItems": "center",
-                        "backgroundColor": "rgb(45, 82, 113)",
-                        "borderRadius": 11,
-                        "flexDirection": "column",
-                        "height": 22,
-                        "justifyContent": "center",
-                        "left": 35,
-                        "position": "absolute",
-                        "width": 22,
-                        "zIndex": 1,
-                      }
-                    }
-                  >
-                    <Text
-                      style={
-                        Object {
-                          "color": "rgb(255, 255, 255)",
-                          "fontSize": 12,
-                        }
-                      }
-                    >
-                      4
-                    </Text>
-                  </View>,
-                  <View>
-                    <Component
-                      source={
-                        Object {
-                          "testUri": "../../../app/assets/images/profile-pic-may.jpg",
-                        }
-                      }
-                      style={
-                        Object {
-                          "backgroundColor": "rgba(4, 71, 47, 0.75)",
-                          "borderRadius": 25,
-                          "height": 50,
-                          "marginTop": 10,
-                          "overflow": "hidden",
-                          "width": 50,
-                        }
-                      }
-                    />
-                  </View>,
-                ],
-                "style": Object {
-                  "width": 60,
-                },
-              },
-              "ref": null,
-              "rendered": Array [
-                Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "class",
-                  "props": Object {
-                    "children": <Text
-                      style={
-                        Object {
-                          "color": "rgb(255, 255, 255)",
-                          "fontSize": 12,
-                        }
-                      }
-                    >
-                      4
-                    </Text>,
-                    "style": Object {
-                      "alignItems": "center",
-                      "backgroundColor": "rgb(45, 82, 113)",
-                      "borderRadius": 11,
-                      "flexDirection": "column",
-                      "height": 22,
-                      "justifyContent": "center",
-                      "left": 35,
-                      "position": "absolute",
-                      "width": 22,
-                      "zIndex": 1,
-                    },
-                  },
-                  "ref": null,
-                  "rendered": Object {
-                    "instance": null,
-                    "key": undefined,
-                    "nodeType": "class",
-                    "props": Object {
-                      "children": "4",
-                      "style": Object {
-                        "color": "rgb(255, 255, 255)",
-                        "fontSize": 12,
-                      },
-                    },
-                    "ref": null,
-                    "rendered": "4",
-                    "type": [Function],
-                  },
-                  "type": [Function],
-                },
-                Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "class",
-                  "props": Object {
-                    "children": <Component
-                      source={
-                        Object {
-                          "testUri": "../../../app/assets/images/profile-pic-may.jpg",
-                        }
-                      }
-                      style={
-                        Object {
-                          "backgroundColor": "rgba(4, 71, 47, 0.75)",
-                          "borderRadius": 25,
-                          "height": 50,
-                          "marginTop": 10,
-                          "overflow": "hidden",
-                          "width": 50,
-                        }
-                      }
-                    />,
-                  },
-                  "ref": null,
-                  "rendered": Object {
-                    "instance": null,
-                    "key": undefined,
-                    "nodeType": "class",
-                    "props": Object {
-                      "source": Object {
-                        "testUri": "../../../app/assets/images/profile-pic-may.jpg",
-                      },
-                      "style": Object {
-                        "backgroundColor": "rgba(4, 71, 47, 0.75)",
-                        "borderRadius": 25,
-                        "height": 50,
-                        "marginTop": 10,
-                        "overflow": "hidden",
-                        "width": 50,
-                      },
-                    },
-                    "ref": null,
-                    "rendered": null,
-                    "type": [Function],
-                  },
-                  "type": [Function],
-                },
-              ],
-              "type": [Function],
-            },
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "class",
-              "props": Object {
-                "children": Array [
-                  <Text
-                    style={
-                      Object {
-                        "fontSize": 18,
-                        "marginBottom": 6,
-                      }
-                    }
-                  >
-                    Meu pai fez o que ela mandou…
-                  </Text>,
-                  <Text
-                    style={
-                      Object {
-                        "color": "rgb(51, 51, 51)",
-                        "fontStyle": "italic",
-                        "marginBottom": 10,
-                      }
-                    }
-                  >
-                    Há 7 minutos atrás
-                  </Text>,
-                  <Text>
-                    Dá certo sim, o meu pai, por exemplo, fugiu quando eu tinha 5 anos e eu não faço ideia da onde ele esteja. Nunca mais voltou, pena que a violência só piorou.
-                  </Text>,
-                ],
-                "style": Object {
-                  "marginLeft": 10,
-                },
-              },
-              "ref": null,
-              "rendered": Array [
-                Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "class",
-                  "props": Object {
-                    "children": "Meu pai fez o que ela mandou…",
-                    "style": Object {
-                      "fontSize": 18,
-                      "marginBottom": 6,
-                    },
-                  },
-                  "ref": null,
-                  "rendered": "Meu pai fez o que ela mandou…",
-                  "type": [Function],
-                },
-                Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "class",
-                  "props": Object {
-                    "children": "Há 7 minutos atrás",
-                    "style": Object {
-                      "color": "rgb(51, 51, 51)",
-                      "fontStyle": "italic",
-                      "marginBottom": 10,
-                    },
-                  },
-                  "ref": null,
-                  "rendered": "Há 7 minutos atrás",
-                  "type": [Function],
-                },
-                Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "class",
-                  "props": Object {
-                    "children": "Dá certo sim, o meu pai, por exemplo, fugiu quando eu tinha 5 anos e eu não faço ideia da onde ele esteja. Nunca mais voltou, pena que a violência só piorou.",
-                  },
-                  "ref": null,
-                  "rendered": "Dá certo sim, o meu pai, por exemplo, fugiu quando eu tinha 5 anos e eu não faço ideia da onde ele esteja. Nunca mais voltou, pena que a violência só piorou.",
-                  "type": [Function],
-                },
-              ],
-              "type": [Function],
-            },
-          ],
-          "type": [Function],
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "class",
-          "props": Object {
-            "children": Array [
-              <View
-                style={
-                  Object {
-                    "width": 60,
-                  }
-                }
-              >
-                <View
-                  style={
-                    Object {
-                      "alignItems": "center",
-                      "backgroundColor": "rgb(45, 82, 113)",
-                      "borderRadius": 11,
-                      "flexDirection": "column",
-                      "height": 22,
-                      "justifyContent": "center",
-                      "left": 35,
-                      "position": "absolute",
-                      "width": 22,
-                      "zIndex": 1,
-                    }
-                  }
-                >
-                  <Text
-                    style={
-                      Object {
-                        "color": "rgb(255, 255, 255)",
-                        "fontSize": 12,
-                      }
-                    }
-                  >
-                    4
-                  </Text>
-                </View>
-                <View>
-                  <Component
-                    source={
-                      Object {
-                        "testUri": "../../../app/assets/images/profile-pic-may.jpg",
-                      }
-                    }
-                    style={
-                      Object {
-                        "backgroundColor": "rgba(4, 71, 47, 0.75)",
-                        "borderRadius": 25,
-                        "height": 50,
-                        "marginTop": 10,
-                        "overflow": "hidden",
-                        "width": 50,
-                      }
-                    }
-                  />
-                </View>
-              </View>,
-              <View
-                style={
-                  Object {
-                    "marginLeft": 10,
-                  }
-                }
-              >
-                <Text
-                  style={
-                    Object {
-                      "fontSize": 18,
-                      "marginBottom": 6,
-                    }
-                  }
-                >
-                  Meu pai fez o que ela mandou…
-                </Text>
-                <Text
-                  style={
-                    Object {
-                      "color": "rgb(51, 51, 51)",
-                      "fontStyle": "italic",
-                      "marginBottom": 10,
-                    }
-                  }
-                >
-                  Há 7 minutos atrás
-                </Text>
-                <Text>
-                  Dá certo sim, o meu pai, por exemplo, fugiu quando eu tinha 5 anos e eu não faço ideia da onde ele esteja. Nunca mais voltou, pena que a violência só piorou.
-                </Text>
-              </View>,
-            ],
-            "style": Object {
-              "flex": 1,
-              "flexDirection": "row",
-              "marginBottom": 10,
-            },
-          },
-          "ref": null,
-          "rendered": Array [
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "class",
-              "props": Object {
-                "children": Array [
-                  <View
-                    style={
-                      Object {
-                        "alignItems": "center",
-                        "backgroundColor": "rgb(45, 82, 113)",
-                        "borderRadius": 11,
-                        "flexDirection": "column",
-                        "height": 22,
-                        "justifyContent": "center",
-                        "left": 35,
-                        "position": "absolute",
-                        "width": 22,
-                        "zIndex": 1,
-                      }
-                    }
-                  >
-                    <Text
-                      style={
-                        Object {
-                          "color": "rgb(255, 255, 255)",
-                          "fontSize": 12,
-                        }
-                      }
-                    >
-                      4
-                    </Text>
-                  </View>,
-                  <View>
-                    <Component
-                      source={
-                        Object {
-                          "testUri": "../../../app/assets/images/profile-pic-may.jpg",
-                        }
-                      }
-                      style={
-                        Object {
-                          "backgroundColor": "rgba(4, 71, 47, 0.75)",
-                          "borderRadius": 25,
-                          "height": 50,
-                          "marginTop": 10,
-                          "overflow": "hidden",
-                          "width": 50,
-                        }
-                      }
-                    />
-                  </View>,
-                ],
-                "style": Object {
-                  "width": 60,
-                },
-              },
-              "ref": null,
-              "rendered": Array [
-                Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "class",
-                  "props": Object {
-                    "children": <Text
-                      style={
-                        Object {
-                          "color": "rgb(255, 255, 255)",
-                          "fontSize": 12,
-                        }
-                      }
-                    >
-                      4
-                    </Text>,
-                    "style": Object {
-                      "alignItems": "center",
-                      "backgroundColor": "rgb(45, 82, 113)",
-                      "borderRadius": 11,
-                      "flexDirection": "column",
-                      "height": 22,
-                      "justifyContent": "center",
-                      "left": 35,
-                      "position": "absolute",
-                      "width": 22,
-                      "zIndex": 1,
-                    },
-                  },
-                  "ref": null,
-                  "rendered": Object {
-                    "instance": null,
-                    "key": undefined,
-                    "nodeType": "class",
-                    "props": Object {
-                      "children": "4",
-                      "style": Object {
-                        "color": "rgb(255, 255, 255)",
-                        "fontSize": 12,
-                      },
-                    },
-                    "ref": null,
-                    "rendered": "4",
-                    "type": [Function],
-                  },
-                  "type": [Function],
-                },
-                Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "class",
-                  "props": Object {
-                    "children": <Component
-                      source={
-                        Object {
-                          "testUri": "../../../app/assets/images/profile-pic-may.jpg",
-                        }
-                      }
-                      style={
-                        Object {
-                          "backgroundColor": "rgba(4, 71, 47, 0.75)",
-                          "borderRadius": 25,
-                          "height": 50,
-                          "marginTop": 10,
-                          "overflow": "hidden",
-                          "width": 50,
-                        }
-                      }
-                    />,
-                  },
-                  "ref": null,
-                  "rendered": Object {
-                    "instance": null,
-                    "key": undefined,
-                    "nodeType": "class",
-                    "props": Object {
-                      "source": Object {
-                        "testUri": "../../../app/assets/images/profile-pic-may.jpg",
-                      },
-                      "style": Object {
-                        "backgroundColor": "rgba(4, 71, 47, 0.75)",
-                        "borderRadius": 25,
-                        "height": 50,
-                        "marginTop": 10,
-                        "overflow": "hidden",
-                        "width": 50,
-                      },
-                    },
-                    "ref": null,
-                    "rendered": null,
-                    "type": [Function],
-                  },
-                  "type": [Function],
-                },
-              ],
-              "type": [Function],
-            },
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "class",
-              "props": Object {
-                "children": Array [
-                  <Text
-                    style={
-                      Object {
-                        "fontSize": 18,
-                        "marginBottom": 6,
-                      }
-                    }
-                  >
-                    Meu pai fez o que ela mandou…
-                  </Text>,
-                  <Text
-                    style={
-                      Object {
-                        "color": "rgb(51, 51, 51)",
-                        "fontStyle": "italic",
-                        "marginBottom": 10,
-                      }
-                    }
-                  >
-                    Há 7 minutos atrás
-                  </Text>,
-                  <Text>
-                    Dá certo sim, o meu pai, por exemplo, fugiu quando eu tinha 5 anos e eu não faço ideia da onde ele esteja. Nunca mais voltou, pena que a violência só piorou.
-                  </Text>,
-                ],
-                "style": Object {
-                  "marginLeft": 10,
-                },
-              },
-              "ref": null,
-              "rendered": Array [
-                Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "class",
-                  "props": Object {
-                    "children": "Meu pai fez o que ela mandou…",
-                    "style": Object {
-                      "fontSize": 18,
-                      "marginBottom": 6,
-                    },
-                  },
-                  "ref": null,
-                  "rendered": "Meu pai fez o que ela mandou…",
-                  "type": [Function],
-                },
-                Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "class",
-                  "props": Object {
-                    "children": "Há 7 minutos atrás",
-                    "style": Object {
-                      "color": "rgb(51, 51, 51)",
-                      "fontStyle": "italic",
-                      "marginBottom": 10,
-                    },
-                  },
-                  "ref": null,
-                  "rendered": "Há 7 minutos atrás",
-                  "type": [Function],
-                },
-                Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "class",
-                  "props": Object {
-                    "children": "Dá certo sim, o meu pai, por exemplo, fugiu quando eu tinha 5 anos e eu não faço ideia da onde ele esteja. Nunca mais voltou, pena que a violência só piorou.",
-                  },
-                  "ref": null,
-                  "rendered": "Dá certo sim, o meu pai, por exemplo, fugiu quando eu tinha 5 anos e eu não faço ideia da onde ele esteja. Nunca mais voltou, pena que a violência só piorou.",
-                  "type": [Function],
-                },
-              ],
-              "type": [Function],
-            },
-          ],
+          "rendered": null,
           "type": [Function],
         },
       ],
@@ -1311,198 +354,35 @@ ShallowWrapper {
               x Comments - x Topics
             </Text>
           </View>
-          <View
-            style={
-              Object {
-                "flex": 1,
-                "flexDirection": "row",
-                "marginBottom": 10,
-              }
-            }
-          >
-            <View
-              style={
+          <FlatList
+            data={
+              Array [
                 Object {
-                  "width": 60,
-                }
-              }
-            >
-              <View
-                style={
-                  Object {
-                    "alignItems": "center",
-                    "backgroundColor": "rgb(45, 82, 113)",
-                    "borderRadius": 11,
-                    "flexDirection": "column",
-                    "height": 22,
-                    "justifyContent": "center",
-                    "left": 35,
-                    "position": "absolute",
-                    "width": 22,
-                    "zIndex": 1,
-                  }
-                }
-              >
-                <Text
-                  style={
-                    Object {
-                      "color": "rgb(255, 255, 255)",
-                      "fontSize": 12,
-                    }
-                  }
-                >
-                  4
-                </Text>
-              </View>
-              <View>
-                <Component
-                  source={
-                    Object {
+                  "author": Object {
+                    "avatarPath": Object {
                       "testUri": "../../../app/assets/images/profile-pic-may.jpg",
-                    }
-                  }
-                  style={
-                    Object {
-                      "backgroundColor": "rgba(4, 71, 47, 0.75)",
-                      "borderRadius": 25,
-                      "height": 50,
-                      "marginTop": 10,
-                      "overflow": "hidden",
-                      "width": 50,
-                    }
-                  }
-                />
-              </View>
-            </View>
-            <View
-              style={
-                Object {
-                  "marginLeft": 10,
-                }
-              }
-            >
-              <Text
-                style={
-                  Object {
-                    "fontSize": 18,
-                    "marginBottom": 6,
-                  }
-                }
-              >
-                Meu pai fez o que ela mandou…
-              </Text>
-              <Text
-                style={
-                  Object {
-                    "color": "rgb(51, 51, 51)",
-                    "fontStyle": "italic",
-                    "marginBottom": 10,
-                  }
-                }
-              >
-                Há 7 minutos atrás
-              </Text>
-              <Text>
-                Dá certo sim, o meu pai, por exemplo, fugiu quando eu tinha 5 anos e eu não faço ideia da onde ele esteja. Nunca mais voltou, pena que a violência só piorou.
-              </Text>
-            </View>
-          </View>
-          <View
-            style={
-              Object {
-                "flex": 1,
-                "flexDirection": "row",
-                "marginBottom": 10,
-              }
+                    },
+                  },
+                  "body": "Dá certo sim, o meu pai, por exemplo, fugiu quando eu tinha 5 anos e eu não faço ideia da onde ele esteja. Nunca mais voltou, pena que a violência só piorou.",
+                  "dateCreated": 2019-01-01T00:00:00.000Z,
+                  "id": "21097",
+                  "title": "Meu pai fez o que ela mandou…",
+                  "totalReplies": 4,
+                },
+              ]
             }
-          >
-            <View
-              style={
-                Object {
-                  "width": 60,
-                }
-              }
-            >
-              <View
-                style={
-                  Object {
-                    "alignItems": "center",
-                    "backgroundColor": "rgb(45, 82, 113)",
-                    "borderRadius": 11,
-                    "flexDirection": "column",
-                    "height": 22,
-                    "justifyContent": "center",
-                    "left": 35,
-                    "position": "absolute",
-                    "width": 22,
-                    "zIndex": 1,
-                  }
-                }
-              >
-                <Text
-                  style={
-                    Object {
-                      "color": "rgb(255, 255, 255)",
-                      "fontSize": 12,
-                    }
-                  }
-                >
-                  4
-                </Text>
-              </View>
-              <View>
-                <Component
-                  source={
-                    Object {
-                      "testUri": "../../../app/assets/images/profile-pic-may.jpg",
-                    }
-                  }
-                  style={
-                    Object {
-                      "backgroundColor": "rgba(4, 71, 47, 0.75)",
-                      "borderRadius": 25,
-                      "height": 50,
-                      "marginTop": 10,
-                      "overflow": "hidden",
-                      "width": 50,
-                    }
-                  }
-                />
-              </View>
-            </View>
-            <View
-              style={
-                Object {
-                  "marginLeft": 10,
-                }
-              }
-            >
-              <Text
-                style={
-                  Object {
-                    "fontSize": 18,
-                    "marginBottom": 6,
-                  }
-                }
-              >
-                Meu pai fez o que ela mandou…
-              </Text>
-              <Text
-                style={
-                  Object {
-                    "color": "rgb(51, 51, 51)",
-                    "fontStyle": "italic",
-                    "marginBottom": 10,
-                  }
-                }
-              >
-                Há 7 minutos atrás
-              </Text>
-              <Text>
-                Dá certo sim, o meu pai, por exemplo, fugiu quando eu tinha 5 anos e eu não faço ideia da onde ele esteja. Nunca mais voltou, pena que a violência só piorou.
-              </Text>
-            </View>
-          </View>
+            disableVirtualization={false}
+            horizontal={false}
+            initialNumToRender={10}
+            keyExtractor={[Function]}
+            maxToRenderPerBatch={10}
+            numColumns={1}
+            onEndReachedThreshold={2}
+            renderItem={[Function]}
+            scrollEventThrottle={50}
+            updateCellsBatchingPeriod={50}
+            windowSize={21}
+          />
         </ScrollView>,
         "style": Object {
           "backgroundColor": "rgba(255, 255, 255, 0.85)",
@@ -1557,198 +437,35 @@ ShallowWrapper {
                 x Comments - x Topics
               </Text>
             </View>,
-            <View
-              style={
-                Object {
-                  "flex": 1,
-                  "flexDirection": "row",
-                  "marginBottom": 10,
-                }
-              }
-            >
-              <View
-                style={
+            <FlatList
+              data={
+                Array [
                   Object {
-                    "width": 60,
-                  }
-                }
-              >
-                <View
-                  style={
-                    Object {
-                      "alignItems": "center",
-                      "backgroundColor": "rgb(45, 82, 113)",
-                      "borderRadius": 11,
-                      "flexDirection": "column",
-                      "height": 22,
-                      "justifyContent": "center",
-                      "left": 35,
-                      "position": "absolute",
-                      "width": 22,
-                      "zIndex": 1,
-                    }
-                  }
-                >
-                  <Text
-                    style={
-                      Object {
-                        "color": "rgb(255, 255, 255)",
-                        "fontSize": 12,
-                      }
-                    }
-                  >
-                    4
-                  </Text>
-                </View>
-                <View>
-                  <Component
-                    source={
-                      Object {
+                    "author": Object {
+                      "avatarPath": Object {
                         "testUri": "../../../app/assets/images/profile-pic-may.jpg",
-                      }
-                    }
-                    style={
-                      Object {
-                        "backgroundColor": "rgba(4, 71, 47, 0.75)",
-                        "borderRadius": 25,
-                        "height": 50,
-                        "marginTop": 10,
-                        "overflow": "hidden",
-                        "width": 50,
-                      }
-                    }
-                  />
-                </View>
-              </View>
-              <View
-                style={
-                  Object {
-                    "marginLeft": 10,
-                  }
-                }
-              >
-                <Text
-                  style={
-                    Object {
-                      "fontSize": 18,
-                      "marginBottom": 6,
-                    }
-                  }
-                >
-                  Meu pai fez o que ela mandou…
-                </Text>
-                <Text
-                  style={
-                    Object {
-                      "color": "rgb(51, 51, 51)",
-                      "fontStyle": "italic",
-                      "marginBottom": 10,
-                    }
-                  }
-                >
-                  Há 7 minutos atrás
-                </Text>
-                <Text>
-                  Dá certo sim, o meu pai, por exemplo, fugiu quando eu tinha 5 anos e eu não faço ideia da onde ele esteja. Nunca mais voltou, pena que a violência só piorou.
-                </Text>
-              </View>
-            </View>,
-            <View
-              style={
-                Object {
-                  "flex": 1,
-                  "flexDirection": "row",
-                  "marginBottom": 10,
-                }
+                      },
+                    },
+                    "body": "Dá certo sim, o meu pai, por exemplo, fugiu quando eu tinha 5 anos e eu não faço ideia da onde ele esteja. Nunca mais voltou, pena que a violência só piorou.",
+                    "dateCreated": 2019-01-01T00:00:00.000Z,
+                    "id": "21097",
+                    "title": "Meu pai fez o que ela mandou…",
+                    "totalReplies": 4,
+                  },
+                ]
               }
-            >
-              <View
-                style={
-                  Object {
-                    "width": 60,
-                  }
-                }
-              >
-                <View
-                  style={
-                    Object {
-                      "alignItems": "center",
-                      "backgroundColor": "rgb(45, 82, 113)",
-                      "borderRadius": 11,
-                      "flexDirection": "column",
-                      "height": 22,
-                      "justifyContent": "center",
-                      "left": 35,
-                      "position": "absolute",
-                      "width": 22,
-                      "zIndex": 1,
-                    }
-                  }
-                >
-                  <Text
-                    style={
-                      Object {
-                        "color": "rgb(255, 255, 255)",
-                        "fontSize": 12,
-                      }
-                    }
-                  >
-                    4
-                  </Text>
-                </View>
-                <View>
-                  <Component
-                    source={
-                      Object {
-                        "testUri": "../../../app/assets/images/profile-pic-may.jpg",
-                      }
-                    }
-                    style={
-                      Object {
-                        "backgroundColor": "rgba(4, 71, 47, 0.75)",
-                        "borderRadius": 25,
-                        "height": 50,
-                        "marginTop": 10,
-                        "overflow": "hidden",
-                        "width": 50,
-                      }
-                    }
-                  />
-                </View>
-              </View>
-              <View
-                style={
-                  Object {
-                    "marginLeft": 10,
-                  }
-                }
-              >
-                <Text
-                  style={
-                    Object {
-                      "fontSize": 18,
-                      "marginBottom": 6,
-                    }
-                  }
-                >
-                  Meu pai fez o que ela mandou…
-                </Text>
-                <Text
-                  style={
-                    Object {
-                      "color": "rgb(51, 51, 51)",
-                      "fontStyle": "italic",
-                      "marginBottom": 10,
-                    }
-                  }
-                >
-                  Há 7 minutos atrás
-                </Text>
-                <Text>
-                  Dá certo sim, o meu pai, por exemplo, fugiu quando eu tinha 5 anos e eu não faço ideia da onde ele esteja. Nunca mais voltou, pena que a violência só piorou.
-                </Text>
-              </View>
-            </View>,
+              disableVirtualization={false}
+              horizontal={false}
+              initialNumToRender={10}
+              keyExtractor={[Function]}
+              maxToRenderPerBatch={10}
+              numColumns={1}
+              onEndReachedThreshold={2}
+              renderItem={[Function]}
+              scrollEventThrottle={50}
+              updateCellsBatchingPeriod={50}
+              windowSize={21}
+            />,
           ],
         },
         "ref": null,
@@ -1835,681 +552,34 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "class",
             "props": Object {
-              "children": Array [
-                <View
-                  style={
-                    Object {
-                      "width": 60,
-                    }
-                  }
-                >
-                  <View
-                    style={
-                      Object {
-                        "alignItems": "center",
-                        "backgroundColor": "rgb(45, 82, 113)",
-                        "borderRadius": 11,
-                        "flexDirection": "column",
-                        "height": 22,
-                        "justifyContent": "center",
-                        "left": 35,
-                        "position": "absolute",
-                        "width": 22,
-                        "zIndex": 1,
-                      }
-                    }
-                  >
-                    <Text
-                      style={
-                        Object {
-                          "color": "rgb(255, 255, 255)",
-                          "fontSize": 12,
-                        }
-                      }
-                    >
-                      4
-                    </Text>
-                  </View>
-                  <View>
-                    <Component
-                      source={
-                        Object {
-                          "testUri": "../../../app/assets/images/profile-pic-may.jpg",
-                        }
-                      }
-                      style={
-                        Object {
-                          "backgroundColor": "rgba(4, 71, 47, 0.75)",
-                          "borderRadius": 25,
-                          "height": 50,
-                          "marginTop": 10,
-                          "overflow": "hidden",
-                          "width": 50,
-                        }
-                      }
-                    />
-                  </View>
-                </View>,
-                <View
-                  style={
-                    Object {
-                      "marginLeft": 10,
-                    }
-                  }
-                >
-                  <Text
-                    style={
-                      Object {
-                        "fontSize": 18,
-                        "marginBottom": 6,
-                      }
-                    }
-                  >
-                    Meu pai fez o que ela mandou…
-                  </Text>
-                  <Text
-                    style={
-                      Object {
-                        "color": "rgb(51, 51, 51)",
-                        "fontStyle": "italic",
-                        "marginBottom": 10,
-                      }
-                    }
-                  >
-                    Há 7 minutos atrás
-                  </Text>
-                  <Text>
-                    Dá certo sim, o meu pai, por exemplo, fugiu quando eu tinha 5 anos e eu não faço ideia da onde ele esteja. Nunca mais voltou, pena que a violência só piorou.
-                  </Text>
-                </View>,
+              "data": Array [
+                Object {
+                  "author": Object {
+                    "avatarPath": Object {
+                      "testUri": "../../../app/assets/images/profile-pic-may.jpg",
+                    },
+                  },
+                  "body": "Dá certo sim, o meu pai, por exemplo, fugiu quando eu tinha 5 anos e eu não faço ideia da onde ele esteja. Nunca mais voltou, pena que a violência só piorou.",
+                  "dateCreated": 2019-01-01T00:00:00.000Z,
+                  "id": "21097",
+                  "title": "Meu pai fez o que ela mandou…",
+                  "totalReplies": 4,
+                },
               ],
-              "style": Object {
-                "flex": 1,
-                "flexDirection": "row",
-                "marginBottom": 10,
-              },
+              "disableVirtualization": false,
+              "horizontal": false,
+              "initialNumToRender": 10,
+              "keyExtractor": [Function],
+              "maxToRenderPerBatch": 10,
+              "numColumns": 1,
+              "onEndReachedThreshold": 2,
+              "renderItem": [Function],
+              "scrollEventThrottle": 50,
+              "updateCellsBatchingPeriod": 50,
+              "windowSize": 21,
             },
             "ref": null,
-            "rendered": Array [
-              Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "class",
-                "props": Object {
-                  "children": Array [
-                    <View
-                      style={
-                        Object {
-                          "alignItems": "center",
-                          "backgroundColor": "rgb(45, 82, 113)",
-                          "borderRadius": 11,
-                          "flexDirection": "column",
-                          "height": 22,
-                          "justifyContent": "center",
-                          "left": 35,
-                          "position": "absolute",
-                          "width": 22,
-                          "zIndex": 1,
-                        }
-                      }
-                    >
-                      <Text
-                        style={
-                          Object {
-                            "color": "rgb(255, 255, 255)",
-                            "fontSize": 12,
-                          }
-                        }
-                      >
-                        4
-                      </Text>
-                    </View>,
-                    <View>
-                      <Component
-                        source={
-                          Object {
-                            "testUri": "../../../app/assets/images/profile-pic-may.jpg",
-                          }
-                        }
-                        style={
-                          Object {
-                            "backgroundColor": "rgba(4, 71, 47, 0.75)",
-                            "borderRadius": 25,
-                            "height": 50,
-                            "marginTop": 10,
-                            "overflow": "hidden",
-                            "width": 50,
-                          }
-                        }
-                      />
-                    </View>,
-                  ],
-                  "style": Object {
-                    "width": 60,
-                  },
-                },
-                "ref": null,
-                "rendered": Array [
-                  Object {
-                    "instance": null,
-                    "key": undefined,
-                    "nodeType": "class",
-                    "props": Object {
-                      "children": <Text
-                        style={
-                          Object {
-                            "color": "rgb(255, 255, 255)",
-                            "fontSize": 12,
-                          }
-                        }
-                      >
-                        4
-                      </Text>,
-                      "style": Object {
-                        "alignItems": "center",
-                        "backgroundColor": "rgb(45, 82, 113)",
-                        "borderRadius": 11,
-                        "flexDirection": "column",
-                        "height": 22,
-                        "justifyContent": "center",
-                        "left": 35,
-                        "position": "absolute",
-                        "width": 22,
-                        "zIndex": 1,
-                      },
-                    },
-                    "ref": null,
-                    "rendered": Object {
-                      "instance": null,
-                      "key": undefined,
-                      "nodeType": "class",
-                      "props": Object {
-                        "children": "4",
-                        "style": Object {
-                          "color": "rgb(255, 255, 255)",
-                          "fontSize": 12,
-                        },
-                      },
-                      "ref": null,
-                      "rendered": "4",
-                      "type": [Function],
-                    },
-                    "type": [Function],
-                  },
-                  Object {
-                    "instance": null,
-                    "key": undefined,
-                    "nodeType": "class",
-                    "props": Object {
-                      "children": <Component
-                        source={
-                          Object {
-                            "testUri": "../../../app/assets/images/profile-pic-may.jpg",
-                          }
-                        }
-                        style={
-                          Object {
-                            "backgroundColor": "rgba(4, 71, 47, 0.75)",
-                            "borderRadius": 25,
-                            "height": 50,
-                            "marginTop": 10,
-                            "overflow": "hidden",
-                            "width": 50,
-                          }
-                        }
-                      />,
-                    },
-                    "ref": null,
-                    "rendered": Object {
-                      "instance": null,
-                      "key": undefined,
-                      "nodeType": "class",
-                      "props": Object {
-                        "source": Object {
-                          "testUri": "../../../app/assets/images/profile-pic-may.jpg",
-                        },
-                        "style": Object {
-                          "backgroundColor": "rgba(4, 71, 47, 0.75)",
-                          "borderRadius": 25,
-                          "height": 50,
-                          "marginTop": 10,
-                          "overflow": "hidden",
-                          "width": 50,
-                        },
-                      },
-                      "ref": null,
-                      "rendered": null,
-                      "type": [Function],
-                    },
-                    "type": [Function],
-                  },
-                ],
-                "type": [Function],
-              },
-              Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "class",
-                "props": Object {
-                  "children": Array [
-                    <Text
-                      style={
-                        Object {
-                          "fontSize": 18,
-                          "marginBottom": 6,
-                        }
-                      }
-                    >
-                      Meu pai fez o que ela mandou…
-                    </Text>,
-                    <Text
-                      style={
-                        Object {
-                          "color": "rgb(51, 51, 51)",
-                          "fontStyle": "italic",
-                          "marginBottom": 10,
-                        }
-                      }
-                    >
-                      Há 7 minutos atrás
-                    </Text>,
-                    <Text>
-                      Dá certo sim, o meu pai, por exemplo, fugiu quando eu tinha 5 anos e eu não faço ideia da onde ele esteja. Nunca mais voltou, pena que a violência só piorou.
-                    </Text>,
-                  ],
-                  "style": Object {
-                    "marginLeft": 10,
-                  },
-                },
-                "ref": null,
-                "rendered": Array [
-                  Object {
-                    "instance": null,
-                    "key": undefined,
-                    "nodeType": "class",
-                    "props": Object {
-                      "children": "Meu pai fez o que ela mandou…",
-                      "style": Object {
-                        "fontSize": 18,
-                        "marginBottom": 6,
-                      },
-                    },
-                    "ref": null,
-                    "rendered": "Meu pai fez o que ela mandou…",
-                    "type": [Function],
-                  },
-                  Object {
-                    "instance": null,
-                    "key": undefined,
-                    "nodeType": "class",
-                    "props": Object {
-                      "children": "Há 7 minutos atrás",
-                      "style": Object {
-                        "color": "rgb(51, 51, 51)",
-                        "fontStyle": "italic",
-                        "marginBottom": 10,
-                      },
-                    },
-                    "ref": null,
-                    "rendered": "Há 7 minutos atrás",
-                    "type": [Function],
-                  },
-                  Object {
-                    "instance": null,
-                    "key": undefined,
-                    "nodeType": "class",
-                    "props": Object {
-                      "children": "Dá certo sim, o meu pai, por exemplo, fugiu quando eu tinha 5 anos e eu não faço ideia da onde ele esteja. Nunca mais voltou, pena que a violência só piorou.",
-                    },
-                    "ref": null,
-                    "rendered": "Dá certo sim, o meu pai, por exemplo, fugiu quando eu tinha 5 anos e eu não faço ideia da onde ele esteja. Nunca mais voltou, pena que a violência só piorou.",
-                    "type": [Function],
-                  },
-                ],
-                "type": [Function],
-              },
-            ],
-            "type": [Function],
-          },
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "class",
-            "props": Object {
-              "children": Array [
-                <View
-                  style={
-                    Object {
-                      "width": 60,
-                    }
-                  }
-                >
-                  <View
-                    style={
-                      Object {
-                        "alignItems": "center",
-                        "backgroundColor": "rgb(45, 82, 113)",
-                        "borderRadius": 11,
-                        "flexDirection": "column",
-                        "height": 22,
-                        "justifyContent": "center",
-                        "left": 35,
-                        "position": "absolute",
-                        "width": 22,
-                        "zIndex": 1,
-                      }
-                    }
-                  >
-                    <Text
-                      style={
-                        Object {
-                          "color": "rgb(255, 255, 255)",
-                          "fontSize": 12,
-                        }
-                      }
-                    >
-                      4
-                    </Text>
-                  </View>
-                  <View>
-                    <Component
-                      source={
-                        Object {
-                          "testUri": "../../../app/assets/images/profile-pic-may.jpg",
-                        }
-                      }
-                      style={
-                        Object {
-                          "backgroundColor": "rgba(4, 71, 47, 0.75)",
-                          "borderRadius": 25,
-                          "height": 50,
-                          "marginTop": 10,
-                          "overflow": "hidden",
-                          "width": 50,
-                        }
-                      }
-                    />
-                  </View>
-                </View>,
-                <View
-                  style={
-                    Object {
-                      "marginLeft": 10,
-                    }
-                  }
-                >
-                  <Text
-                    style={
-                      Object {
-                        "fontSize": 18,
-                        "marginBottom": 6,
-                      }
-                    }
-                  >
-                    Meu pai fez o que ela mandou…
-                  </Text>
-                  <Text
-                    style={
-                      Object {
-                        "color": "rgb(51, 51, 51)",
-                        "fontStyle": "italic",
-                        "marginBottom": 10,
-                      }
-                    }
-                  >
-                    Há 7 minutos atrás
-                  </Text>
-                  <Text>
-                    Dá certo sim, o meu pai, por exemplo, fugiu quando eu tinha 5 anos e eu não faço ideia da onde ele esteja. Nunca mais voltou, pena que a violência só piorou.
-                  </Text>
-                </View>,
-              ],
-              "style": Object {
-                "flex": 1,
-                "flexDirection": "row",
-                "marginBottom": 10,
-              },
-            },
-            "ref": null,
-            "rendered": Array [
-              Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "class",
-                "props": Object {
-                  "children": Array [
-                    <View
-                      style={
-                        Object {
-                          "alignItems": "center",
-                          "backgroundColor": "rgb(45, 82, 113)",
-                          "borderRadius": 11,
-                          "flexDirection": "column",
-                          "height": 22,
-                          "justifyContent": "center",
-                          "left": 35,
-                          "position": "absolute",
-                          "width": 22,
-                          "zIndex": 1,
-                        }
-                      }
-                    >
-                      <Text
-                        style={
-                          Object {
-                            "color": "rgb(255, 255, 255)",
-                            "fontSize": 12,
-                          }
-                        }
-                      >
-                        4
-                      </Text>
-                    </View>,
-                    <View>
-                      <Component
-                        source={
-                          Object {
-                            "testUri": "../../../app/assets/images/profile-pic-may.jpg",
-                          }
-                        }
-                        style={
-                          Object {
-                            "backgroundColor": "rgba(4, 71, 47, 0.75)",
-                            "borderRadius": 25,
-                            "height": 50,
-                            "marginTop": 10,
-                            "overflow": "hidden",
-                            "width": 50,
-                          }
-                        }
-                      />
-                    </View>,
-                  ],
-                  "style": Object {
-                    "width": 60,
-                  },
-                },
-                "ref": null,
-                "rendered": Array [
-                  Object {
-                    "instance": null,
-                    "key": undefined,
-                    "nodeType": "class",
-                    "props": Object {
-                      "children": <Text
-                        style={
-                          Object {
-                            "color": "rgb(255, 255, 255)",
-                            "fontSize": 12,
-                          }
-                        }
-                      >
-                        4
-                      </Text>,
-                      "style": Object {
-                        "alignItems": "center",
-                        "backgroundColor": "rgb(45, 82, 113)",
-                        "borderRadius": 11,
-                        "flexDirection": "column",
-                        "height": 22,
-                        "justifyContent": "center",
-                        "left": 35,
-                        "position": "absolute",
-                        "width": 22,
-                        "zIndex": 1,
-                      },
-                    },
-                    "ref": null,
-                    "rendered": Object {
-                      "instance": null,
-                      "key": undefined,
-                      "nodeType": "class",
-                      "props": Object {
-                        "children": "4",
-                        "style": Object {
-                          "color": "rgb(255, 255, 255)",
-                          "fontSize": 12,
-                        },
-                      },
-                      "ref": null,
-                      "rendered": "4",
-                      "type": [Function],
-                    },
-                    "type": [Function],
-                  },
-                  Object {
-                    "instance": null,
-                    "key": undefined,
-                    "nodeType": "class",
-                    "props": Object {
-                      "children": <Component
-                        source={
-                          Object {
-                            "testUri": "../../../app/assets/images/profile-pic-may.jpg",
-                          }
-                        }
-                        style={
-                          Object {
-                            "backgroundColor": "rgba(4, 71, 47, 0.75)",
-                            "borderRadius": 25,
-                            "height": 50,
-                            "marginTop": 10,
-                            "overflow": "hidden",
-                            "width": 50,
-                          }
-                        }
-                      />,
-                    },
-                    "ref": null,
-                    "rendered": Object {
-                      "instance": null,
-                      "key": undefined,
-                      "nodeType": "class",
-                      "props": Object {
-                        "source": Object {
-                          "testUri": "../../../app/assets/images/profile-pic-may.jpg",
-                        },
-                        "style": Object {
-                          "backgroundColor": "rgba(4, 71, 47, 0.75)",
-                          "borderRadius": 25,
-                          "height": 50,
-                          "marginTop": 10,
-                          "overflow": "hidden",
-                          "width": 50,
-                        },
-                      },
-                      "ref": null,
-                      "rendered": null,
-                      "type": [Function],
-                    },
-                    "type": [Function],
-                  },
-                ],
-                "type": [Function],
-              },
-              Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "class",
-                "props": Object {
-                  "children": Array [
-                    <Text
-                      style={
-                        Object {
-                          "fontSize": 18,
-                          "marginBottom": 6,
-                        }
-                      }
-                    >
-                      Meu pai fez o que ela mandou…
-                    </Text>,
-                    <Text
-                      style={
-                        Object {
-                          "color": "rgb(51, 51, 51)",
-                          "fontStyle": "italic",
-                          "marginBottom": 10,
-                        }
-                      }
-                    >
-                      Há 7 minutos atrás
-                    </Text>,
-                    <Text>
-                      Dá certo sim, o meu pai, por exemplo, fugiu quando eu tinha 5 anos e eu não faço ideia da onde ele esteja. Nunca mais voltou, pena que a violência só piorou.
-                    </Text>,
-                  ],
-                  "style": Object {
-                    "marginLeft": 10,
-                  },
-                },
-                "ref": null,
-                "rendered": Array [
-                  Object {
-                    "instance": null,
-                    "key": undefined,
-                    "nodeType": "class",
-                    "props": Object {
-                      "children": "Meu pai fez o que ela mandou…",
-                      "style": Object {
-                        "fontSize": 18,
-                        "marginBottom": 6,
-                      },
-                    },
-                    "ref": null,
-                    "rendered": "Meu pai fez o que ela mandou…",
-                    "type": [Function],
-                  },
-                  Object {
-                    "instance": null,
-                    "key": undefined,
-                    "nodeType": "class",
-                    "props": Object {
-                      "children": "Há 7 minutos atrás",
-                      "style": Object {
-                        "color": "rgb(51, 51, 51)",
-                        "fontStyle": "italic",
-                        "marginBottom": 10,
-                      },
-                    },
-                    "ref": null,
-                    "rendered": "Há 7 minutos atrás",
-                    "type": [Function],
-                  },
-                  Object {
-                    "instance": null,
-                    "key": undefined,
-                    "nodeType": "class",
-                    "props": Object {
-                      "children": "Dá certo sim, o meu pai, por exemplo, fugiu quando eu tinha 5 anos e eu não faço ideia da onde ele esteja. Nunca mais voltou, pena que a violência só piorou.",
-                    },
-                    "ref": null,
-                    "rendered": "Dá certo sim, o meu pai, por exemplo, fugiu quando eu tinha 5 anos e eu não faço ideia da onde ele esteja. Nunca mais voltou, pena que a violência só piorou.",
-                    "type": [Function],
-                  },
-                ],
-                "type": [Function],
-              },
-            ],
+            "rendered": null,
             "type": [Function],
           },
         ],
