@@ -2,10 +2,10 @@ import React, { Component } from "react";
 import { StyleSheet, Text, View } from "react-native";
 import { NavigationScreenProp } from "react-navigation";
 
+import { Comments } from "components";
 import { Post as PostInterface } from "interfaces";
 
 import { Body } from "./body";
-import { Comments } from "./comments";
 import { Footer } from "./footer";
 import { Tabs } from "./tabs";
 

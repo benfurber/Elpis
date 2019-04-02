@@ -72,7 +72,10 @@ ShallowWrapper {
               }
             }
           >
-            x Comments - x Topics
+            4
+             Comments - 
+            1
+             Topics
           </Text>
         </View>
         <FlatList
@@ -155,7 +158,10 @@ ShallowWrapper {
                 }
               }
             >
-              x Comments - x Topics
+              4
+               Comments - 
+              1
+               Topics
             </Text>
           </View>,
           <FlatList
@@ -244,7 +250,10 @@ ShallowWrapper {
                 }
               }
             >
-              x Comments - x Topics
+              4
+               Comments - 
+              1
+               Topics
             </Text>,
             "style": Object {
               "marginBottom": 10,
@@ -256,14 +265,24 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "class",
             "props": Object {
-              "children": "x Comments - x Topics",
+              "children": Array [
+                4,
+                " Comments - ",
+                1,
+                " Topics",
+              ],
               "style": Object {
                 "fontSize": 18,
                 "fontWeight": "bold",
               },
             },
             "ref": null,
-            "rendered": "x Comments - x Topics",
+            "rendered": Array [
+              4,
+              " Comments - ",
+              1,
+              " Topics",
+            ],
             "type": [Function],
           },
           "type": [Function],
@@ -351,7 +370,10 @@ ShallowWrapper {
                 }
               }
             >
-              x Comments - x Topics
+              4
+               Comments - 
+              1
+               Topics
             </Text>
           </View>
           <FlatList
@@ -434,7 +456,10 @@ ShallowWrapper {
                   }
                 }
               >
-                x Comments - x Topics
+                4
+                 Comments - 
+                1
+                 Topics
               </Text>
             </View>,
             <FlatList
@@ -523,7 +548,10 @@ ShallowWrapper {
                   }
                 }
               >
-                x Comments - x Topics
+                4
+                 Comments - 
+                1
+                 Topics
               </Text>,
               "style": Object {
                 "marginBottom": 10,
@@ -535,14 +563,24 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "class",
               "props": Object {
-                "children": "x Comments - x Topics",
+                "children": Array [
+                  4,
+                  " Comments - ",
+                  1,
+                  " Topics",
+                ],
                 "style": Object {
                   "fontSize": 18,
                   "fontWeight": "bold",
                 },
               },
               "ref": null,
-              "rendered": "x Comments - x Topics",
+              "rendered": Array [
+                4,
+                " Comments - ",
+                1,
+                " Topics",
+              ],
               "type": [Function],
             },
             "type": [Function],

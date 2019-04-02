@@ -1,7 +1,7 @@
 import React from "react";
 import { FlatList, StyleSheet, Text, View, ScrollView } from "react-native";
 
-import { Comment as CommentInterface, Post } from "interfaces";
+import { Post } from "interfaces";
 import { colours, layout, typography } from "styles";
 import { firstSentence } from "utils";
 
@@ -35,12 +35,29 @@ const Comments = (props: Props) => {
     }
   };
 
+  const topLevelComments = () => {
+    return props.comments.length;
+  };
+
+  const totalComments = () => {
+    if (props.comments) {
+      let runningTotal = 0;
+      props.comments.forEach(comment => {
+        runningTotal = +comment.totalReplies;
+      });
+
+      return runningTotal;
+    }
+  };
+
   return (
     <View style={styles.container}>
       <ScrollView>
         {renderDescription()}
         <View style={styles.commentsHeadingContainer}>
-          <Text style={styles.commentsHeading}>x Comments - x Topics</Text>
+          <Text style={styles.commentsHeading}>
+            {totalComments()} Comments - {topLevelComments()} Topics
+          </Text>
         </View>
         {renderComments()}
       </ScrollView>

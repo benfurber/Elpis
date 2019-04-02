@@ -2,7 +2,7 @@ import "react-native";
 import React from "react";
 import { shallow } from "enzyme";
 
-import { Comments } from "../comments";
+import { Comments } from "..";
 
 describe("Comments", () => {
   it("renders correctly", () => {
