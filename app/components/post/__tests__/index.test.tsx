@@ -14,6 +14,7 @@ describe("Post", () => {
         author: {
           avatarPath: require("assets/images/empower_two_women_logo.png")
         },
+        comments: [],
         date: new Date("2000-01-01"),
         description: "A string",
         id: "10387-314fs-12asdbj",
@@ -32,6 +33,7 @@ describe("Post", () => {
         author: {
           avatarPath: require("assets/images/empower_two_women_logo.png")
         },
+        comments: [],
         date: new Date("2000-01-01"),
         description: null,
         id: "10387-314fs-12asdbj",
@@ -49,6 +51,19 @@ describe("Post", () => {
         author: {
           avatarPath: require("assets/images/empower_two_women_logo.png")
         },
+        comments: [
+          {
+            author: {
+              avatarPath: require("assets/images/profile-pic-may.jpg")
+            },
+            body:
+              "Dá certo sim, o meu pai, por exemplo, fugiu quando eu tinha 5 anos e eu não faço ideia da onde ele esteja. Nunca mais voltou, pena que a violência só piorou.",
+            dateCreated: new Date("2019-01-01"),
+            id: "21097",
+            title: "Meu pai fez o que ela mandou…",
+            totalReplies: 4
+          }
+        ],
         date: new Date("2000-01-01"),
         description: "A string",
         id: "10387-314fs-12asdbj",

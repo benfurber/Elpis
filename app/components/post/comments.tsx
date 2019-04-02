@@ -8,7 +8,7 @@ import { firstSentence } from "utils";
 import { Comment } from "./comment";
 
 interface Props {
-  comments: [CommentInterface] | null;
+  comments: Post["comments"];
   description: Post["description"];
 }
 
