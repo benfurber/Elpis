@@ -5,70 +5,13 @@ import { NavigationType, Post } from "interfaces";
 import { colours, layout, typography } from "styles";
 import { firstSentence } from "utils";
 
-import { Comment } from "./comment";
+interface Props {}
 
-const labels = {
-  comments: "Comentários",
-  topics: "Tópicos"
-};
-
-interface Props {
-  comments: Post["comments"];
-  description: Post["description"];
-  navigation: NavigationType;
-}
-
-const Comments = (props: Props) => {
-  const renderDescription = () => {
-    if (props.description) {
-      return (
-        <View style={styles.titleContainer}>
-          <Text style={styles.title}>{firstSentence(props.description)}</Text>
-        </View>
-      );
-    }
-  };
-
-  const renderComments = () => {
-    if (props.comments) {
-      return (
-        <FlatList
-          data={props.comments}
-          keyExtractor={({ id }) => id}
-          renderItem={({ item }) => (
-            <Comment item={item} navigation={props.navigation} />
-          )}
-        />
-      );
-    }
-  };
-
-  const topLevelComments = () => {
-    return props.comments.length;
-  };
-
-  const totalComments = () => {
-    if (props.comments) {
-      let runningTotal = 0;
-      props.comments.forEach(comment => {
-        runningTotal = +comment.totalReplies;
-      });
-
-      return runningTotal;
-    }
-  };
-
+const Replies = (props: Props) => {
   return (
     <View style={styles.container}>
       <ScrollView>
-        {renderDescription()}
-        <View style={styles.commentsHeadingContainer}>
-          <Text style={styles.commentsHeading}>
-            {totalComments()} {labels.comments} - {topLevelComments()}{" "}
-            {labels.topics}
-          </Text>
-        </View>
-        {renderComments()}
+        <Text>HEllo</Text>
       </ScrollView>
     </View>
   );
@@ -81,6 +24,7 @@ const styles = StyleSheet.create({
   container: {
     backgroundColor: colours.whiteTransparent,
     borderTopRightRadius: layout.borderRadius,
+    padding: layout.spacing,
     width: "100%"
   },
   commentContainer: {
@@ -101,8 +45,7 @@ const styles = StyleSheet.create({
     marginBottom: layout.spacingS
   },
   commentsHeadingContainer: {
-    marginBottom: layout.spacing,
-    marginHorizontal: layout.spacing
+    marginBottom: layout.spacing
   },
   commentsHeading: {
     fontSize: typography.fontSizeL,
@@ -127,7 +70,7 @@ const styles = StyleSheet.create({
   titleContainer: {
     backgroundColor: colours.whiteTransparent,
     borderRadius: layout.borderRadius,
-    margin: layout.spacing,
+    marginBottom: layout.spacing,
     padding: layout.spacing
   },
   title: {
@@ -144,4 +87,4 @@ const styles = StyleSheet.create({
   }
 });
 
-export { Comments };
+export { Replies };

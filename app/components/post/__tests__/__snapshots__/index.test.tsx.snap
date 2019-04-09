@@ -10,6 +10,7 @@ ShallowWrapper {
           "avatarPath": Object {
             "testUri": "../../../app/assets/images/empower_two_women_logo.png",
           },
+          "name": "Empodere Duas Mulheres",
         },
         "comments": Array [
           Object {
@@ -17,6 +18,7 @@ ShallowWrapper {
               "avatarPath": Object {
                 "testUri": "../../../app/assets/images/profile-pic-may.jpg",
               },
+              "name": "May F",
             },
             "body": "Dá certo sim, o meu pai, por exemplo, fugiu quando eu tinha 5 anos e eu não faço ideia da onde ele esteja. Nunca mais voltou, pena que a violência só piorou.",
             "dateCreated": 2019-01-01T00:00:00.000Z,
@@ -62,6 +64,7 @@ ShallowWrapper {
                   "avatarPath": Object {
                     "testUri": "../../../app/assets/images/profile-pic-may.jpg",
                   },
+                  "name": "May F",
                 },
                 "body": "Dá certo sim, o meu pai, por exemplo, fugiu quando eu tinha 5 anos e eu não faço ideia da onde ele esteja. Nunca mais voltou, pena que a violência só piorou.",
                 "dateCreated": 2019-01-01T00:00:00.000Z,
@@ -111,6 +114,7 @@ ShallowWrapper {
                 "avatarPath": Object {
                   "testUri": "../../../app/assets/images/profile-pic-may.jpg",
                 },
+                "name": "May F",
               },
               "body": "Dá certo sim, o meu pai, por exemplo, fugiu quando eu tinha 5 anos e eu não faço ideia da onde ele esteja. Nunca mais voltou, pena que a violência só piorou.",
               "dateCreated": 2019-01-01T00:00:00.000Z,
@@ -120,6 +124,7 @@ ShallowWrapper {
             },
           ],
           "description": "A string",
+          "navigation": undefined,
         },
         "ref": null,
         "rendered": null,
@@ -161,6 +166,7 @@ ShallowWrapper {
                     "avatarPath": Object {
                       "testUri": "../../../app/assets/images/profile-pic-may.jpg",
                     },
+                    "name": "May F",
                   },
                   "body": "Dá certo sim, o meu pai, por exemplo, fugiu quando eu tinha 5 anos e eu não faço ideia da onde ele esteja. Nunca mais voltou, pena que a violência só piorou.",
                   "dateCreated": 2019-01-01T00:00:00.000Z,
@@ -210,6 +216,7 @@ ShallowWrapper {
                   "avatarPath": Object {
                     "testUri": "../../../app/assets/images/profile-pic-may.jpg",
                   },
+                  "name": "May F",
                 },
                 "body": "Dá certo sim, o meu pai, por exemplo, fugiu quando eu tinha 5 anos e eu não faço ideia da onde ele esteja. Nunca mais voltou, pena que a violência só piorou.",
                 "dateCreated": 2019-01-01T00:00:00.000Z,
@@ -219,6 +226,7 @@ ShallowWrapper {
               },
             ],
             "description": "A string",
+            "navigation": undefined,
           },
           "ref": null,
           "rendered": null,
@@ -271,6 +279,7 @@ ShallowWrapper {
           "avatarPath": Object {
             "testUri": "../../../app/assets/images/empower_two_women_logo.png",
           },
+          "name": "Empodere Duas Mulheres",
         },
         "comments": Array [],
         "date": 2000-01-01T00:00:00.000Z,
@@ -479,6 +488,7 @@ ShallowWrapper {
           "avatarPath": Object {
             "testUri": "../../../app/assets/images/empower_two_women_logo.png",
           },
+          "name": "Empodere Duas Mulheres",
         },
         "comments": Array [],
         "date": 2000-01-01T00:00:00.000Z,

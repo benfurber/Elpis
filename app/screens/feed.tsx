@@ -11,7 +11,8 @@ interface Props {
 
 const comment = {
   author: {
-    avatarPath: require("assets/images/profile-pic-may.jpg")
+    avatarPath: require("assets/images/profile-pic-may.jpg"),
+    name: "Maynara F"
   },
   body:
     "Dá certo sim, o meu pai, por exemplo, fugiu quando eu tinha 5 anos e eu não faço ideia da onde ele esteja. Nunca mais voltou, pena que a violência só piorou.",
@@ -25,7 +26,8 @@ const posts = [
   {
     id: "98y723-23048-23480",
     author: {
-      avatarPath: require("assets/images/empower_two_women_logo.png")
+      avatarPath: require("assets/images/empower_two_women_logo.png"),
+      name: "Empodere Duas Mulheres"
     },
     comments: [comment],
     date: new Date("2018-02-17"),
@@ -36,7 +38,8 @@ const posts = [
   {
     id: "324869-saf80as-ssae",
     author: {
-      avatarPath: require("assets/images/empower_two_women_logo.png")
+      avatarPath: require("assets/images/empower_two_women_logo.png"),
+      name: "Empodere Duas Mulheres"
     },
     comments: [],
     date: new Date("2018-02-11"),

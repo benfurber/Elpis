@@ -43,7 +43,7 @@ class Post extends Component<Props, State> {
   };
 
   onPressPost = () => {
-    return this.props.navigation.goBack();
+    return this.props.navigation.pop();
   };
 
   renderBody() {
@@ -53,7 +53,13 @@ class Post extends Component<Props, State> {
 
   renderComments() {
     const { comments, description } = this.props.post;
-    return <Comments comments={comments} description={description} />;
+    return (
+      <Comments
+        comments={comments}
+        description={description}
+        navigation={this.props.navigation}
+      />
+    );
   }
 
   renderContent() {

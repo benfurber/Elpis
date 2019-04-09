@@ -11,6 +11,7 @@ ShallowWrapper {
             "avatarPath": Object {
               "testUri": "../../../app/assets/images/profile-pic-may.jpg",
             },
+            "name": "May F",
           },
           "body": "Dá certo sim, o meu pai, por exemplo, fugiu quando eu tinha 5 anos e eu não faço ideia da onde ele esteja. Nunca mais voltou, pena que a violência só piorou.",
           "dateCreated": 2019-01-01T00:00:00.000Z,
@@ -41,7 +42,7 @@ ShallowWrapper {
             Object {
               "backgroundColor": "rgba(255, 255, 255, 0.85)",
               "borderRadius": 5,
-              "marginBottom": 10,
+              "margin": 10,
               "padding": 10,
             }
           }
@@ -61,6 +62,7 @@ ShallowWrapper {
           style={
             Object {
               "marginBottom": 10,
+              "marginHorizontal": 10,
             }
           }
         >
@@ -73,9 +75,12 @@ ShallowWrapper {
             }
           >
             4
-             Comments - 
+             
+            Comentários
+             - 
             1
-             Topics
+             
+            Tópicos
           </Text>
         </View>
         <FlatList
@@ -86,6 +91,7 @@ ShallowWrapper {
                   "avatarPath": Object {
                     "testUri": "../../../app/assets/images/profile-pic-may.jpg",
                   },
+                  "name": "May F",
                 },
                 "body": "Dá certo sim, o meu pai, por exemplo, fugiu quando eu tinha 5 anos e eu não faço ideia da onde ele esteja. Nunca mais voltou, pena que a violência só piorou.",
                 "dateCreated": 2019-01-01T00:00:00.000Z,
@@ -111,7 +117,6 @@ ShallowWrapper {
       "style": Object {
         "backgroundColor": "rgba(255, 255, 255, 0.85)",
         "borderTopRightRadius": 5,
-        "padding": 10,
         "width": "100%",
       },
     },
@@ -127,7 +132,7 @@ ShallowWrapper {
               Object {
                 "backgroundColor": "rgba(255, 255, 255, 0.85)",
                 "borderRadius": 5,
-                "marginBottom": 10,
+                "margin": 10,
                 "padding": 10,
               }
             }
@@ -147,6 +152,7 @@ ShallowWrapper {
             style={
               Object {
                 "marginBottom": 10,
+                "marginHorizontal": 10,
               }
             }
           >
@@ -159,9 +165,12 @@ ShallowWrapper {
               }
             >
               4
-               Comments - 
+               
+              Comentários
+               - 
               1
-               Topics
+               
+              Tópicos
             </Text>
           </View>,
           <FlatList
@@ -172,6 +181,7 @@ ShallowWrapper {
                     "avatarPath": Object {
                       "testUri": "../../../app/assets/images/profile-pic-may.jpg",
                     },
+                    "name": "May F",
                   },
                   "body": "Dá certo sim, o meu pai, por exemplo, fugiu quando eu tinha 5 anos e eu não faço ideia da onde ele esteja. Nunca mais voltou, pena que a violência só piorou.",
                   "dateCreated": 2019-01-01T00:00:00.000Z,
@@ -215,7 +225,7 @@ ShallowWrapper {
             "style": Object {
               "backgroundColor": "rgba(255, 255, 255, 0.85)",
               "borderRadius": 5,
-              "marginBottom": 10,
+              "margin": 10,
               "padding": 10,
             },
           },
@@ -251,12 +261,16 @@ ShallowWrapper {
               }
             >
               4
-               Comments - 
+               
+              Comentários
+               - 
               1
-               Topics
+               
+              Tópicos
             </Text>,
             "style": Object {
               "marginBottom": 10,
+              "marginHorizontal": 10,
             },
           },
           "ref": null,
@@ -267,9 +281,12 @@ ShallowWrapper {
             "props": Object {
               "children": Array [
                 4,
-                " Comments - ",
+                " ",
+                "Comentários",
+                " - ",
                 1,
-                " Topics",
+                " ",
+                "Tópicos",
               ],
               "style": Object {
                 "fontSize": 18,
@@ -279,9 +296,12 @@ ShallowWrapper {
             "ref": null,
             "rendered": Array [
               4,
-              " Comments - ",
+              " ",
+              "Comentários",
+              " - ",
               1,
-              " Topics",
+              " ",
+              "Tópicos",
             ],
             "type": [Function],
           },
@@ -298,6 +318,7 @@ ShallowWrapper {
                   "avatarPath": Object {
                     "testUri": "../../../app/assets/images/profile-pic-may.jpg",
                   },
+                  "name": "May F",
                 },
                 "body": "Dá certo sim, o meu pai, por exemplo, fugiu quando eu tinha 5 anos e eu não faço ideia da onde ele esteja. Nunca mais voltou, pena que a violência só piorou.",
                 "dateCreated": 2019-01-01T00:00:00.000Z,
@@ -339,7 +360,7 @@ ShallowWrapper {
               Object {
                 "backgroundColor": "rgba(255, 255, 255, 0.85)",
                 "borderRadius": 5,
-                "marginBottom": 10,
+                "margin": 10,
                 "padding": 10,
               }
             }
@@ -359,6 +380,7 @@ ShallowWrapper {
             style={
               Object {
                 "marginBottom": 10,
+                "marginHorizontal": 10,
               }
             }
           >
@@ -371,9 +393,12 @@ ShallowWrapper {
               }
             >
               4
-               Comments - 
+               
+              Comentários
+               - 
               1
-               Topics
+               
+              Tópicos
             </Text>
           </View>
           <FlatList
@@ -384,6 +409,7 @@ ShallowWrapper {
                     "avatarPath": Object {
                       "testUri": "../../../app/assets/images/profile-pic-may.jpg",
                     },
+                    "name": "May F",
                   },
                   "body": "Dá certo sim, o meu pai, por exemplo, fugiu quando eu tinha 5 anos e eu não faço ideia da onde ele esteja. Nunca mais voltou, pena que a violência só piorou.",
                   "dateCreated": 2019-01-01T00:00:00.000Z,
@@ -409,7 +435,6 @@ ShallowWrapper {
         "style": Object {
           "backgroundColor": "rgba(255, 255, 255, 0.85)",
           "borderTopRightRadius": 5,
-          "padding": 10,
           "width": "100%",
         },
       },
@@ -425,7 +450,7 @@ ShallowWrapper {
                 Object {
                   "backgroundColor": "rgba(255, 255, 255, 0.85)",
                   "borderRadius": 5,
-                  "marginBottom": 10,
+                  "margin": 10,
                   "padding": 10,
                 }
               }
@@ -445,6 +470,7 @@ ShallowWrapper {
               style={
                 Object {
                   "marginBottom": 10,
+                  "marginHorizontal": 10,
                 }
               }
             >
@@ -457,9 +483,12 @@ ShallowWrapper {
                 }
               >
                 4
-                 Comments - 
+                 
+                Comentários
+                 - 
                 1
-                 Topics
+                 
+                Tópicos
               </Text>
             </View>,
             <FlatList
@@ -470,6 +499,7 @@ ShallowWrapper {
                       "avatarPath": Object {
                         "testUri": "../../../app/assets/images/profile-pic-may.jpg",
                       },
+                      "name": "May F",
                     },
                     "body": "Dá certo sim, o meu pai, por exemplo, fugiu quando eu tinha 5 anos e eu não faço ideia da onde ele esteja. Nunca mais voltou, pena que a violência só piorou.",
                     "dateCreated": 2019-01-01T00:00:00.000Z,
@@ -513,7 +543,7 @@ ShallowWrapper {
               "style": Object {
                 "backgroundColor": "rgba(255, 255, 255, 0.85)",
                 "borderRadius": 5,
-                "marginBottom": 10,
+                "margin": 10,
                 "padding": 10,
               },
             },
@@ -549,12 +579,16 @@ ShallowWrapper {
                 }
               >
                 4
-                 Comments - 
+                 
+                Comentários
+                 - 
                 1
-                 Topics
+                 
+                Tópicos
               </Text>,
               "style": Object {
                 "marginBottom": 10,
+                "marginHorizontal": 10,
               },
             },
             "ref": null,
@@ -565,9 +599,12 @@ ShallowWrapper {
               "props": Object {
                 "children": Array [
                   4,
-                  " Comments - ",
+                  " ",
+                  "Comentários",
+                  " - ",
                   1,
-                  " Topics",
+                  " ",
+                  "Tópicos",
                 ],
                 "style": Object {
                   "fontSize": 18,
@@ -577,9 +614,12 @@ ShallowWrapper {
               "ref": null,
               "rendered": Array [
                 4,
-                " Comments - ",
+                " ",
+                "Comentários",
+                " - ",
                 1,
-                " Topics",
+                " ",
+                "Tópicos",
               ],
               "type": [Function],
             },
@@ -596,6 +636,7 @@ ShallowWrapper {
                     "avatarPath": Object {
                       "testUri": "../../../app/assets/images/profile-pic-may.jpg",
                     },
+                    "name": "May F",
                   },
                   "body": "Dá certo sim, o meu pai, por exemplo, fugiu quando eu tinha 5 anos e eu não faço ideia da onde ele esteja. Nunca mais voltou, pena que a violência só piorou.",
                   "dateCreated": 2019-01-01T00:00:00.000Z,

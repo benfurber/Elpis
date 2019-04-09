@@ -6,7 +6,8 @@ import { PostScreen } from "screens";
 
 const post = {
   author: {
-    avatarPath: require("assets/images/empower_two_women_logo.png")
+    avatarPath: require("assets/images/empower_two_women_logo.png"),
+    name: "Empodere Duas Mulheres"
   },
   date: new Date("2000-01-01"),
   description: "A string",

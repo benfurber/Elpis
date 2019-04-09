@@ -7,8 +7,7 @@ enum headerMode {
 }
 
 const stackConfig = {
-  headerMode: headerMode["None"],
-  initialRouteName: "Feed"
+  headerMode: headerMode["None"]
 };
 
 const FeedStack = createStackNavigator(
@@ -16,7 +15,10 @@ const FeedStack = createStackNavigator(
     Feed: FeedScreen,
     Post: PostScreen
   },
-  stackConfig
+  {
+    initialRouteName: "Feed",
+    ...stackConfig
+  }
 );
 
 const RootStack = createSwitchNavigator({
