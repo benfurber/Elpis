@@ -7,6 +7,7 @@ import { formatDate } from "utils";
 
 interface Props {
   item: CommentInterface;
+  navigation: NavigationType;
 }
 
 interface State {
