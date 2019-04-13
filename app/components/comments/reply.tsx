@@ -41,11 +41,6 @@ const styles = StyleSheet.create({
   authorDetails: {
     paddingLeft: layout.spacing
   },
-  authorName: {
-    fontSize: typography.fontSizeL,
-    fontWeight: "bold",
-    marginBottom: layout.spacingS
-  },
   body: {
     paddingVertical: layout.spacing
   },
@@ -58,22 +53,6 @@ const styles = StyleSheet.create({
     alignItems: "center",
     flexDirection: "row",
     paddingVertical: layout.spacing
-  },
-  featured: {
-    backgroundColor: colours.transparentBlue,
-    padding: layout.spacing
-  },
-  link: {
-    fontStyle: "italic",
-    marginHorizontal: layout.spacingS,
-    padding: layout.spacing
-  },
-  smallTitle: {
-    fontSize: typography.fontSize
-  },
-  text: {
-    flex: 1,
-    flexWrap: "nowrap"
   }
 });
 
