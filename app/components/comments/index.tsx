@@ -36,10 +36,6 @@ const Comments = (props: Props) => {
       return noComments();
     }
 
-    const titleText = `${totalComments()} ${
-      labels.comments
-    } - ${topLevelComments()} ${labels.topics}`;
-
     return (
       <ScrollView>
         <View style={styles.commentsHeadingContainer}>
@@ -70,10 +66,6 @@ const Comments = (props: Props) => {
     );
   };
 
-  const topLevelComments = () => {
-    return props.comments.length;
-  };
-
   const totalComments = () => {
     let runningTotal = 0;
     props.comments.forEach(comment => {
@@ -82,6 +74,10 @@ const Comments = (props: Props) => {
 
     return runningTotal;
   };
+
+  const titleText = `${totalComments()} ${labels.comments} - ${
+    props.comments.length
+  } ${labels.topics}`;
 
   return (
     <View style={styles.container}>
