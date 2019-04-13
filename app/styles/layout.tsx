@@ -1,8 +1,11 @@
+const base = 10;
+
 const layout = {
-  borderRadius: 5,
-  spacingXS: 3,
-  spacingS: 6,
-  spacing: 10
+  borderRadius: base / 2,
+  spacingXS: base / 3,
+  spacingS: base / 2,
+  spacing: base,
+  spacingL: base * 2
 };
 
 export { layout };
