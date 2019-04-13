@@ -9,7 +9,8 @@ import { Comment } from "./comment";
 
 const labels = {
   comments: "Comentários",
-  topics: "Tópicos"
+  topics: "Tópicos",
+  noComments: "Nenhum comentário ainda - faça o primeiro!"
 };
 
 interface Props {
@@ -30,17 +31,41 @@ const Comments = (props: Props) => {
   };
 
   const renderComments = () => {
-    if (props.comments) {
-      return (
-        <FlatList
-          data={props.comments}
-          keyExtractor={({ id }) => id}
-          renderItem={({ item }) => (
-            <Comment item={item} navigation={props.navigation} />
-          )}
-        />
-      );
+    if (totalComments() === 0) {
+      return noComments();
     }
+
+    return (
+      <ScrollView>
+        <View style={styles.commentsHeadingContainer}>
+          <Text style={styles.commentsHeading}>
+            {totalComments()} {labels.comments} - {topLevelComments()}{" "}
+            {labels.topics}
+          </Text>
+        </View>
+        {commentsLoop()}
+      </ScrollView>
+    );
+  };
+
+  const commentsLoop = () => {
+    return (
+      <FlatList
+        data={props.comments}
+        keyExtractor={({ id }) => id}
+        renderItem={({ item }) => (
+          <Comment item={item} navigation={props.navigation} />
+        )}
+      />
+    );
+  };
+
+  const noComments = () => {
+    return (
+      <View style={styles.noComments}>
+        <Text style={styles.title}>{labels.noComments}</Text>
+      </View>
+    );
   };
 
   const topLevelComments = () => {
@@ -48,28 +73,18 @@ const Comments = (props: Props) => {
   };
 
   const totalComments = () => {
-    if (props.comments) {
-      let runningTotal = 0;
-      props.comments.forEach(comment => {
-        runningTotal = +comment.totalReplies;
-      });
+    let runningTotal = 0;
+    props.comments.forEach(comment => {
+      runningTotal = +comment.totalReplies;
+    });
 
-      return runningTotal;
-    }
+    return runningTotal;
   };
 
   return (
     <View style={styles.container}>
-      <ScrollView>
-        {renderDescription()}
-        <View style={styles.commentsHeadingContainer}>
-          <Text style={styles.commentsHeading}>
-            {totalComments()} {labels.comments} - {topLevelComments()}{" "}
-            {labels.topics}
-          </Text>
-        </View>
-        {renderComments()}
-      </ScrollView>
+      {renderDescription()}
+      {renderComments()}
     </View>
   );
 };
@@ -141,6 +156,10 @@ const styles = StyleSheet.create({
     marginTop: 10,
     overflow: "hidden",
     width: 50
+  },
+  noComments: {
+    paddingHorizontal: layout.spacing,
+    paddingVertical: layout.spacingL
   }
 });
 

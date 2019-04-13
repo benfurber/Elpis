@@ -5,6 +5,8 @@ import { Comment as CommentInterface, NavigationType } from "interfaces";
 import { colours, layout, typography } from "styles";
 import { formatDate } from "utils";
 
+import { Replies } from "./replies";
+
 interface Props {
   item: CommentInterface;
   navigation: NavigationType;
@@ -13,10 +15,6 @@ interface Props {
 interface State {
   display: "comment" | "replies";
 }
-
-const labels = {
-  backButton: "Voltar aos Comentários"
-};
 
 class Comment extends Component<Props, State> {
   constructor(props) {
@@ -34,7 +32,7 @@ class Comment extends Component<Props, State> {
     this.setState({ display: "replies" });
   };
 
-  renderComment = () => {
+  renderComment() {
     const { item } = this.props;
 
     return (
@@ -61,47 +59,13 @@ class Comment extends Component<Props, State> {
         </View>
       </TouchableOpacity>
     );
-  };
-
-  renderReplies = () => {
-    const { item } = this.props;
-
-    return (
-      <View>
-        <View>
-          <TouchableOpacity onPress={this.onPressComment}>
-            <Text style={styles.link}>&#60; {labels.backButton}</Text>
-          </TouchableOpacity>
-        </View>
-
-        <View style={styles.featured}>
-          <View style={styles.featuredDetails}>
-            <Image source={item.author.avatarPath} style={styles.imageLarge} />
-
-            <View style={styles.featuredAuthorDetails}>
-              <Text style={styles.commentTitle}>{item.author.name}</Text>
-              <Text style={styles.commentDate}>
-                {formatDate(item.dateCreated)}
-              </Text>
-            </View>
-          </View>
-
-          <View>
-            <Text>{item.title}</Text>
-            <Text>{item.body}</Text>
-          </View>
-        </View>
-
-        <View>
-          <Text>Replies container</Text>
-        </View>
-      </View>
-    );
-  };
+  }
 
   render() {
     if (this.state.display === "replies") {
-      return this.renderReplies();
+      return (
+        <Replies item={this.props.item} onPressComment={this.onPressComment} />
+      );
     }
 
     return this.renderComment();

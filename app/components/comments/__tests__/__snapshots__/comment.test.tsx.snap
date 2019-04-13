@@ -15,6 +15,19 @@ ShallowWrapper {
         "body": "Dá certo sim, o meu pai, por exemplo, fugiu quando eu tinha 5 anos e eu não faço ideia da onde ele esteja. Nunca mais voltou, pena que a violência só piorou.",
         "dateCreated": 2019-01-01T00:00:00.000Z,
         "id": "21097",
+        "replies": Array [
+          Object {
+            "author": Object {
+              "avatarPath": Object {
+                "testUri": "../../../app/assets/images/profile-pic-may.jpg",
+              },
+              "name": "Benita F",
+            },
+            "body": "Nao.",
+            "dateCreated": 2019-01-01T00:00:00.000Z,
+            "id": "21097",
+          },
+        ],
         "title": "Meu pai fez o que ela mandou…",
         "totalReplies": 1,
       }
@@ -111,7 +124,7 @@ ShallowWrapper {
             style={
               Object {
                 "fontSize": 18,
-                "marginBottom": 6,
+                "marginBottom": 5,
               }
             }
           >
@@ -216,7 +229,7 @@ ShallowWrapper {
               style={
                 Object {
                   "fontSize": 18,
-                  "marginBottom": 6,
+                  "marginBottom": 5,
                 }
               }
             >
@@ -419,7 +432,7 @@ ShallowWrapper {
                 style={
                   Object {
                     "fontSize": 18,
-                    "marginBottom": 6,
+                    "marginBottom": 5,
                   }
                 }
               >
@@ -463,7 +476,7 @@ ShallowWrapper {
                 "children": "Meu pai fez o que ela mandou…",
                 "style": Object {
                   "fontSize": 18,
-                  "marginBottom": 6,
+                  "marginBottom": 5,
                 },
               },
               "ref": null,
@@ -593,7 +606,7 @@ ShallowWrapper {
               style={
                 Object {
                   "fontSize": 18,
-                  "marginBottom": 6,
+                  "marginBottom": 5,
                 }
               }
             >
@@ -698,7 +711,7 @@ ShallowWrapper {
                 style={
                   Object {
                     "fontSize": 18,
-                    "marginBottom": 6,
+                    "marginBottom": 5,
                   }
                 }
               >
@@ -901,7 +914,7 @@ ShallowWrapper {
                   style={
                     Object {
                       "fontSize": 18,
-                      "marginBottom": 6,
+                      "marginBottom": 5,
                     }
                   }
                 >
@@ -945,7 +958,7 @@ ShallowWrapper {
                   "children": "Meu pai fez o que ela mandou…",
                   "style": Object {
                     "fontSize": 18,
-                    "marginBottom": 6,
+                    "marginBottom": 5,
                   },
                 },
                 "ref": null,
@@ -1027,6 +1040,7 @@ ShallowWrapper {
         "body": "Dá certo sim, o meu pai, por exemplo, fugiu quando eu tinha 5 anos e eu não faço ideia da onde ele esteja. Nunca mais voltou, pena que a violência só piorou.",
         "dateCreated": 2019-01-01T00:00:00.000Z,
         "id": "21097",
+        "replies": Array [],
         "title": "Meu pai fez o que ela mandou…",
         "totalReplies": 0,
       }
@@ -1123,7 +1137,7 @@ ShallowWrapper {
             style={
               Object {
                 "fontSize": 18,
-                "marginBottom": 6,
+                "marginBottom": 5,
               }
             }
           >
@@ -1228,7 +1242,7 @@ ShallowWrapper {
               style={
                 Object {
                   "fontSize": 18,
-                  "marginBottom": 6,
+                  "marginBottom": 5,
                 }
               }
             >
@@ -1431,7 +1445,7 @@ ShallowWrapper {
                 style={
                   Object {
                     "fontSize": 18,
-                    "marginBottom": 6,
+                    "marginBottom": 5,
                   }
                 }
               >
@@ -1475,7 +1489,7 @@ ShallowWrapper {
                 "children": "Meu pai fez o que ela mandou…",
                 "style": Object {
                   "fontSize": 18,
-                  "marginBottom": 6,
+                  "marginBottom": 5,
                 },
               },
               "ref": null,
@@ -1605,7 +1619,7 @@ ShallowWrapper {
               style={
                 Object {
                   "fontSize": 18,
-                  "marginBottom": 6,
+                  "marginBottom": 5,
                 }
               }
             >
@@ -1710,7 +1724,7 @@ ShallowWrapper {
                 style={
                   Object {
                     "fontSize": 18,
-                    "marginBottom": 6,
+                    "marginBottom": 5,
                   }
                 }
               >
@@ -1913,7 +1927,7 @@ ShallowWrapper {
                   style={
                     Object {
                       "fontSize": 18,
-                      "marginBottom": 6,
+                      "marginBottom": 5,
                     }
                   }
                 >
@@ -1957,7 +1971,7 @@ ShallowWrapper {
                   "children": "Meu pai fez o que ela mandou…",
                   "style": Object {
                     "fontSize": 18,
-                    "marginBottom": 6,
+                    "marginBottom": 5,
                   },
                 },
                 "ref": null,
