@@ -10,6 +10,7 @@ export interface Comment {
   body: string;
   dateCreated: Date;
   id: string;
+  replies: Array<Reply> | [];
   title: string;
   totalReplies: number;
 }
@@ -23,4 +24,11 @@ export interface Post {
   description: string | null;
   id: string;
   imagePath: NodeRequire;
+}
+
+export interface Reply {
+  author: Author;
+  body: string;
+  dateCreated: Date;
+  id: string;
 }
