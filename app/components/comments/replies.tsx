@@ -45,6 +45,43 @@ class Replies extends Component<Props> {
     );
   }
 
+  renderBackButton() {
+    return (
+      <View>
+        <TouchableOpacity onPress={this.props.onPressComment}>
+          <Text style={styles.link}>&#60; {labels.backButton}</Text>
+        </TouchableOpacity>
+      </View>
+    );
+  }
+
+  renderComment() {
+    const { item } = this.props;
+
+    return (
+      <View style={styles.featured}>
+        <View style={styles.featuredDetails}>
+          <Image
+            source={item.author.avatarPath}
+            style={elements.imageRoundLarge}
+          />
+
+          <View style={styles.featuredAuthorDetails}>
+            <Title text={item.author.name} />
+            <Text style={elements.textDate}>
+              {formatDate(item.dateCreated)}
+            </Text>
+          </View>
+        </View>
+
+        <View>
+          <Title text={item.title} small />
+          <Text>{item.body}</Text>
+        </View>
+      </View>
+    );
+  }
+
   renderReplies() {
     const { totalReplies } = this.props.item;
 
@@ -63,37 +100,10 @@ class Replies extends Component<Props> {
   }
 
   render() {
-    const { item } = this.props;
-
     return (
       <View>
-        <View>
-          <TouchableOpacity onPress={this.props.onPressComment}>
-            <Text style={styles.link}>&#60; {labels.backButton}</Text>
-          </TouchableOpacity>
-        </View>
-
-        <View style={styles.featured}>
-          <View style={styles.featuredDetails}>
-            <Image
-              source={item.author.avatarPath}
-              style={elements.imageRoundLarge}
-            />
-
-            <View style={styles.featuredAuthorDetails}>
-              <Title text={item.author.name} />
-              <Text style={elements.textDate}>
-                {formatDate(item.dateCreated)}
-              </Text>
-            </View>
-          </View>
-
-          <View>
-            <Title text={item.title} small />
-            <Text>{item.body}</Text>
-          </View>
-        </View>
-
+        {this.renderBackButton()}
+        {this.renderComment()}
         {this.renderReplies()}
       </View>
     );
