@@ -1,8 +1,9 @@
 import React, { Component } from "react";
 import { Image, StyleSheet, Text, TouchableOpacity, View } from "react-native";
 
+import { Title } from "components";
 import { Comment as CommentInterface, NavigationType } from "interfaces";
-import { colours, layout, typography } from "styles";
+import { colours, elements, layout, typography } from "styles";
 import { formatDate } from "utils";
 
 import { Replies } from "./replies";
@@ -45,12 +46,12 @@ class Comment extends Component<Props, State> {
             <View>
               <Image
                 source={item.author.avatarPath}
-                style={styles.imageMedium}
+                style={elements.imageRound}
               />
             </View>
           </View>
           <View style={styles.commentBodyContainer}>
-            <Text style={styles.commentTitle}>{item.title}</Text>
+            <Title text={item.title} />
             <Text style={styles.commentDate}>
               {formatDate(item.dateCreated)}
             </Text>
@@ -88,13 +89,8 @@ const styles = StyleSheet.create({
     marginBottom: layout.spacing
   },
   commentDate: {
-    color: colours.darkGrey,
-    fontStyle: "italic",
-    marginBottom: layout.spacing
-  },
-  commentTitle: {
-    fontSize: typography.fontSizeL,
-    marginBottom: layout.spacingS
+    marginBottom: layout.spacing,
+    ...elements.textDate
   },
   badge: {
     alignItems: "center",
@@ -111,37 +107,6 @@ const styles = StyleSheet.create({
   badgeText: {
     color: colours.pureWhite,
     fontSize: typography.fontSizeS
-  },
-  featured: {
-    backgroundColor: colours.transparentBlue,
-    padding: layout.spacing
-  },
-  featuredAuthorDetails: {
-    paddingLeft: layout.spacing
-  },
-  featuredDetails: {
-    flexDirection: "row"
-  },
-  imageLarge: {
-    backgroundColor: colours.emeraldGreen,
-    borderRadius: 30,
-    height: 60,
-    marginBottom: 10,
-    overflow: "hidden",
-    width: 60
-  },
-  imageMedium: {
-    backgroundColor: colours.emeraldGreen,
-    borderRadius: 25,
-    height: 50,
-    marginTop: 10,
-    overflow: "hidden",
-    width: 50
-  },
-  link: {
-    fontStyle: "italic",
-    marginHorizontal: layout.spacingS,
-    padding: layout.spacing
   },
   text: {
     flex: 1,

@@ -3,7 +3,7 @@ import { StyleSheet, Text, View } from "react-native";
 import FlexImage from "react-native-flex-image";
 
 import { Post } from "interfaces";
-import { colours, layout } from "styles";
+import { colours, elements, layout } from "styles";
 import { formatDate } from "utils";
 
 interface Props {
@@ -23,7 +23,9 @@ const Body = (props: Props) => {
     <View style={styles.body}>
       <FlexImage source={props.imagePath} style={styles.image} />
       {renderBodyText()}
-      <Text style={[styles.date, styles.text]}>{formatDate(props.date)}</Text>
+      <Text style={[elements.textDate, styles.text]}>
+        {formatDate(props.date)}
+      </Text>
     </View>
   );
 };
@@ -34,9 +36,6 @@ const styles = StyleSheet.create({
     borderTopRightRadius: layout.borderRadius,
     padding: layout.spacing,
     width: "100%"
-  },
-  date: {
-    fontStyle: "italic"
   },
   text: {
     marginVertical: 10

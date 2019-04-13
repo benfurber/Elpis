@@ -1,6 +1,7 @@
 import React from "react";
 import { FlatList, StyleSheet, Text, View, ScrollView } from "react-native";
 
+import { Title } from "components";
 import { NavigationType, Post } from "interfaces";
 import { colours, layout, typography } from "styles";
 import { firstSentence } from "utils";
@@ -24,7 +25,7 @@ const Comments = (props: Props) => {
     if (props.description) {
       return (
         <View style={styles.titleContainer}>
-          <Text style={styles.title}>{firstSentence(props.description)}</Text>
+          <Title text={firstSentence(props.description)} />
         </View>
       );
     }
@@ -35,13 +36,14 @@ const Comments = (props: Props) => {
       return noComments();
     }
 
+    const titleText = `${totalComments()} ${
+      labels.comments
+    } - ${topLevelComments()} ${labels.topics}`;
+
     return (
       <ScrollView>
         <View style={styles.commentsHeadingContainer}>
-          <Text style={styles.commentsHeading}>
-            {totalComments()} {labels.comments} - {topLevelComments()}{" "}
-            {labels.topics}
-          </Text>
+          <Title text={titleText} />
         </View>
         {commentsLoop()}
       </ScrollView>
@@ -63,7 +65,7 @@ const Comments = (props: Props) => {
   const noComments = () => {
     return (
       <View style={styles.noComments}>
-        <Text style={styles.title}>{labels.noComments}</Text>
+        <Title text={labels.noComments} />
       </View>
     );
   };
@@ -90,72 +92,20 @@ const Comments = (props: Props) => {
 };
 
 const styles = StyleSheet.create({
-  avatarContainer: {
-    width: 60
-  },
   container: {
     backgroundColor: colours.whiteTransparent,
     borderTopRightRadius: layout.borderRadius,
     width: "100%"
   },
-  commentContainer: {
-    flex: 1,
-    flexDirection: "row",
-    marginBottom: layout.spacing
-  },
-  commentBodyContainer: {
-    marginLeft: layout.spacing
-  },
-  commentDate: {
-    color: colours.darkGrey,
-    fontStyle: "italic",
-    marginBottom: layout.spacing
-  },
-  commentTitle: {
-    fontSize: typography.fontSizeL,
-    marginBottom: layout.spacingS
-  },
   commentsHeadingContainer: {
     marginBottom: layout.spacing,
     marginHorizontal: layout.spacing
-  },
-  commentsHeading: {
-    fontSize: typography.fontSizeL,
-    fontWeight: "bold"
-  },
-  badge: {
-    alignItems: "center",
-    backgroundColor: colours.navyBlueDark,
-    borderRadius: 11,
-    flexDirection: "column",
-    height: 22,
-    justifyContent: "center",
-    left: 35,
-    position: "absolute",
-    width: 22,
-    zIndex: 1
-  },
-  badgeText: {
-    color: colours.pureWhite,
-    fontSize: typography.fontSizeS
   },
   titleContainer: {
     backgroundColor: colours.whiteTransparent,
     borderRadius: layout.borderRadius,
     margin: layout.spacing,
     padding: layout.spacing
-  },
-  title: {
-    fontSize: typography.fontSizeL,
-    fontWeight: "bold"
-  },
-  image: {
-    backgroundColor: colours.emeraldGreen,
-    borderRadius: 25,
-    height: 50,
-    marginTop: 10,
-    overflow: "hidden",
-    width: 50
   },
   noComments: {
     paddingHorizontal: layout.spacing,

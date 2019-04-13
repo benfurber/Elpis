@@ -2,7 +2,7 @@ import { NavigationScreenProp } from "react-navigation";
 
 export interface Author {
   avatarPath: NodeRequire;
-  name: String;
+  name: string;
 }
 
 export interface Comment {

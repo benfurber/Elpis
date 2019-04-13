@@ -48,16 +48,9 @@ ShallowWrapper {
             }
           }
         >
-          <Text
-            style={
-              Object {
-                "fontSize": 18,
-                "fontWeight": "bold",
-              }
-            }
-          >
-            A simple string
-          </Text>
+          <Title
+            text="A simple string"
+          />
         </View>,
         <View
           style={
@@ -67,16 +60,9 @@ ShallowWrapper {
             }
           }
         >
-          <Text
-            style={
-              Object {
-                "fontSize": 18,
-                "fontWeight": "bold",
-              }
-            }
-          >
-            Nenhum comentário ainda - faça o primeiro!
-          </Text>
+          <Title
+            text="Nenhum comentário ainda - faça o primeiro!"
+          />
         </View>,
       ],
       "style": Object {
@@ -92,16 +78,9 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "class",
         "props": Object {
-          "children": <Text
-            style={
-              Object {
-                "fontSize": 18,
-                "fontWeight": "bold",
-              }
-            }
-          >
-            A simple string
-          </Text>,
+          "children": <Title
+            text="A simple string"
+          />,
           "style": Object {
             "backgroundColor": "rgba(255, 255, 255, 0.85)",
             "borderRadius": 5,
@@ -113,16 +92,12 @@ ShallowWrapper {
         "rendered": Object {
           "instance": null,
           "key": undefined,
-          "nodeType": "class",
+          "nodeType": "function",
           "props": Object {
-            "children": "A simple string",
-            "style": Object {
-              "fontSize": 18,
-              "fontWeight": "bold",
-            },
+            "text": "A simple string",
           },
           "ref": null,
-          "rendered": "A simple string",
+          "rendered": null,
           "type": [Function],
         },
         "type": [Function],
@@ -132,16 +107,9 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "class",
         "props": Object {
-          "children": <Text
-            style={
-              Object {
-                "fontSize": 18,
-                "fontWeight": "bold",
-              }
-            }
-          >
-            Nenhum comentário ainda - faça o primeiro!
-          </Text>,
+          "children": <Title
+            text="Nenhum comentário ainda - faça o primeiro!"
+          />,
           "style": Object {
             "paddingHorizontal": 10,
             "paddingVertical": 20,
@@ -151,16 +119,12 @@ ShallowWrapper {
         "rendered": Object {
           "instance": null,
           "key": undefined,
-          "nodeType": "class",
+          "nodeType": "function",
           "props": Object {
-            "children": "Nenhum comentário ainda - faça o primeiro!",
-            "style": Object {
-              "fontSize": 18,
-              "fontWeight": "bold",
-            },
+            "text": "Nenhum comentário ainda - faça o primeiro!",
           },
           "ref": null,
-          "rendered": "Nenhum comentário ainda - faça o primeiro!",
+          "rendered": null,
           "type": [Function],
         },
         "type": [Function],
@@ -185,16 +149,9 @@ ShallowWrapper {
               }
             }
           >
-            <Text
-              style={
-                Object {
-                  "fontSize": 18,
-                  "fontWeight": "bold",
-                }
-              }
-            >
-              A simple string
-            </Text>
+            <Title
+              text="A simple string"
+            />
           </View>,
           <View
             style={
@@ -204,16 +161,9 @@ ShallowWrapper {
               }
             }
           >
-            <Text
-              style={
-                Object {
-                  "fontSize": 18,
-                  "fontWeight": "bold",
-                }
-              }
-            >
-              Nenhum comentário ainda - faça o primeiro!
-            </Text>
+            <Title
+              text="Nenhum comentário ainda - faça o primeiro!"
+            />
           </View>,
         ],
         "style": Object {
@@ -229,16 +179,9 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "class",
           "props": Object {
-            "children": <Text
-              style={
-                Object {
-                  "fontSize": 18,
-                  "fontWeight": "bold",
-                }
-              }
-            >
-              A simple string
-            </Text>,
+            "children": <Title
+              text="A simple string"
+            />,
             "style": Object {
               "backgroundColor": "rgba(255, 255, 255, 0.85)",
               "borderRadius": 5,
@@ -250,16 +193,12 @@ ShallowWrapper {
           "rendered": Object {
             "instance": null,
             "key": undefined,
-            "nodeType": "class",
+            "nodeType": "function",
             "props": Object {
-              "children": "A simple string",
-              "style": Object {
-                "fontSize": 18,
-                "fontWeight": "bold",
-              },
+              "text": "A simple string",
             },
             "ref": null,
-            "rendered": "A simple string",
+            "rendered": null,
             "type": [Function],
           },
           "type": [Function],
@@ -269,16 +208,9 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "class",
           "props": Object {
-            "children": <Text
-              style={
-                Object {
-                  "fontSize": 18,
-                  "fontWeight": "bold",
-                }
-              }
-            >
-              Nenhum comentário ainda - faça o primeiro!
-            </Text>,
+            "children": <Title
+              text="Nenhum comentário ainda - faça o primeiro!"
+            />,
             "style": Object {
               "paddingHorizontal": 10,
               "paddingVertical": 20,
@@ -288,16 +220,12 @@ ShallowWrapper {
           "rendered": Object {
             "instance": null,
             "key": undefined,
-            "nodeType": "class",
+            "nodeType": "function",
             "props": Object {
-              "children": "Nenhum comentário ainda - faça o primeiro!",
-              "style": Object {
-                "fontSize": 18,
-                "fontWeight": "bold",
-              },
+              "text": "Nenhum comentário ainda - faça o primeiro!",
             },
             "ref": null,
-            "rendered": "Nenhum comentário ainda - faça o primeiro!",
+            "rendered": null,
             "type": [Function],
           },
           "type": [Function],
@@ -357,16 +285,9 @@ ShallowWrapper {
             }
           }
         >
-          <Text
-            style={
-              Object {
-                "fontSize": 18,
-                "fontWeight": "bold",
-              }
-            }
-          >
-            A simple string
-          </Text>
+          <Title
+            text="A simple string"
+          />
         </View>,
         <View
           style={
@@ -376,16 +297,9 @@ ShallowWrapper {
             }
           }
         >
-          <Text
-            style={
-              Object {
-                "fontSize": 18,
-                "fontWeight": "bold",
-              }
-            }
-          >
-            Nenhum comentário ainda - faça o primeiro!
-          </Text>
+          <Title
+            text="Nenhum comentário ainda - faça o primeiro!"
+          />
         </View>,
       ],
       "style": Object {
@@ -401,16 +315,9 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "class",
         "props": Object {
-          "children": <Text
-            style={
-              Object {
-                "fontSize": 18,
-                "fontWeight": "bold",
-              }
-            }
-          >
-            A simple string
-          </Text>,
+          "children": <Title
+            text="A simple string"
+          />,
           "style": Object {
             "backgroundColor": "rgba(255, 255, 255, 0.85)",
             "borderRadius": 5,
@@ -422,16 +329,12 @@ ShallowWrapper {
         "rendered": Object {
           "instance": null,
           "key": undefined,
-          "nodeType": "class",
+          "nodeType": "function",
           "props": Object {
-            "children": "A simple string",
-            "style": Object {
-              "fontSize": 18,
-              "fontWeight": "bold",
-            },
+            "text": "A simple string",
           },
           "ref": null,
-          "rendered": "A simple string",
+          "rendered": null,
           "type": [Function],
         },
         "type": [Function],
@@ -441,16 +344,9 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "class",
         "props": Object {
-          "children": <Text
-            style={
-              Object {
-                "fontSize": 18,
-                "fontWeight": "bold",
-              }
-            }
-          >
-            Nenhum comentário ainda - faça o primeiro!
-          </Text>,
+          "children": <Title
+            text="Nenhum comentário ainda - faça o primeiro!"
+          />,
           "style": Object {
             "paddingHorizontal": 10,
             "paddingVertical": 20,
@@ -460,16 +356,12 @@ ShallowWrapper {
         "rendered": Object {
           "instance": null,
           "key": undefined,
-          "nodeType": "class",
+          "nodeType": "function",
           "props": Object {
-            "children": "Nenhum comentário ainda - faça o primeiro!",
-            "style": Object {
-              "fontSize": 18,
-              "fontWeight": "bold",
-            },
+            "text": "Nenhum comentário ainda - faça o primeiro!",
           },
           "ref": null,
-          "rendered": "Nenhum comentário ainda - faça o primeiro!",
+          "rendered": null,
           "type": [Function],
         },
         "type": [Function],
@@ -494,16 +386,9 @@ ShallowWrapper {
               }
             }
           >
-            <Text
-              style={
-                Object {
-                  "fontSize": 18,
-                  "fontWeight": "bold",
-                }
-              }
-            >
-              A simple string
-            </Text>
+            <Title
+              text="A simple string"
+            />
           </View>,
           <View
             style={
@@ -513,16 +398,9 @@ ShallowWrapper {
               }
             }
           >
-            <Text
-              style={
-                Object {
-                  "fontSize": 18,
-                  "fontWeight": "bold",
-                }
-              }
-            >
-              Nenhum comentário ainda - faça o primeiro!
-            </Text>
+            <Title
+              text="Nenhum comentário ainda - faça o primeiro!"
+            />
           </View>,
         ],
         "style": Object {
@@ -538,16 +416,9 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "class",
           "props": Object {
-            "children": <Text
-              style={
-                Object {
-                  "fontSize": 18,
-                  "fontWeight": "bold",
-                }
-              }
-            >
-              A simple string
-            </Text>,
+            "children": <Title
+              text="A simple string"
+            />,
             "style": Object {
               "backgroundColor": "rgba(255, 255, 255, 0.85)",
               "borderRadius": 5,
@@ -559,16 +430,12 @@ ShallowWrapper {
           "rendered": Object {
             "instance": null,
             "key": undefined,
-            "nodeType": "class",
+            "nodeType": "function",
             "props": Object {
-              "children": "A simple string",
-              "style": Object {
-                "fontSize": 18,
-                "fontWeight": "bold",
-              },
+              "text": "A simple string",
             },
             "ref": null,
-            "rendered": "A simple string",
+            "rendered": null,
             "type": [Function],
           },
           "type": [Function],
@@ -578,16 +445,9 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "class",
           "props": Object {
-            "children": <Text
-              style={
-                Object {
-                  "fontSize": 18,
-                  "fontWeight": "bold",
-                }
-              }
-            >
-              Nenhum comentário ainda - faça o primeiro!
-            </Text>,
+            "children": <Title
+              text="Nenhum comentário ainda - faça o primeiro!"
+            />,
             "style": Object {
               "paddingHorizontal": 10,
               "paddingVertical": 20,
@@ -597,16 +457,12 @@ ShallowWrapper {
           "rendered": Object {
             "instance": null,
             "key": undefined,
-            "nodeType": "class",
+            "nodeType": "function",
             "props": Object {
-              "children": "Nenhum comentário ainda - faça o primeiro!",
-              "style": Object {
-                "fontSize": 18,
-                "fontWeight": "bold",
-              },
+              "text": "Nenhum comentário ainda - faça o primeiro!",
             },
             "ref": null,
-            "rendered": "Nenhum comentário ainda - faça o primeiro!",
+            "rendered": null,
             "type": [Function],
           },
           "type": [Function],

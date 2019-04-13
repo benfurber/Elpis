@@ -8,8 +8,9 @@ import {
   FlatList
 } from "react-native";
 
+import { Title } from "components";
 import { Comment } from "interfaces";
-import { colours, layout, typography } from "styles";
+import { colours, elements, layout, typography } from "styles";
 import { formatDate } from "utils";
 
 import { Reply } from "./reply";
@@ -74,18 +75,21 @@ class Replies extends Component<Props> {
 
         <View style={styles.featured}>
           <View style={styles.featuredDetails}>
-            <Image source={item.author.avatarPath} style={styles.imageLarge} />
+            <Image
+              source={item.author.avatarPath}
+              style={elements.imageRoundLarge}
+            />
 
             <View style={styles.featuredAuthorDetails}>
-              <Text style={styles.highLightText}>{item.author.name}</Text>
-              <Text style={styles.commentDate}>
+              <Title text={item.author.name} />
+              <Text style={elements.textDate}>
                 {formatDate(item.dateCreated)}
               </Text>
             </View>
           </View>
 
           <View>
-            <Text style={styles.highLightText}>{item.title}</Text>
+            <Title text={item.title} small />
             <Text>{item.body}</Text>
           </View>
         </View>
@@ -97,69 +101,26 @@ class Replies extends Component<Props> {
 }
 
 const styles = StyleSheet.create({
-  avatarContainer: {
-    width: 60
-  },
-  commentContainer: {
-    alignItems: "stretch",
-    flex: 1,
-    flexDirection: "row",
-    margin: layout.spacing
-  },
-  commentBodyContainer: {
-    flex: 1,
-    marginLeft: layout.spacing,
-    marginBottom: layout.spacing
-  },
-  commentDate: {
-    color: colours.darkGrey,
-    fontStyle: "italic",
-    marginBottom: layout.spacing
-  },
-  badge: {
-    alignItems: "center",
-    backgroundColor: colours.navyBlueDark,
-    borderRadius: 11,
-    flexDirection: "column",
-    height: 22,
-    justifyContent: "center",
-    left: 35,
-    position: "absolute",
-    width: 22,
-    zIndex: 1
-  },
-  badgeText: {
-    color: colours.pureWhite,
-    fontSize: typography.fontSizeS
-  },
   featured: {
     backgroundColor: colours.transparentBlue,
-    padding: layout.spacing,
-    marginBottom: layout.spacingL
+    marginBottom: layout.spacingL,
+    padding: layout.spacing
   },
   featuredAuthorDetails: {
     paddingLeft: layout.spacing
   },
   featuredDetails: {
-    flexDirection: "row"
-  },
-  highLightText: {
-    fontSize: typography.fontSizeL,
-    fontWeight: "bold",
-    marginBottom: layout.spacingS
-  },
-  imageLarge: {
-    backgroundColor: colours.emeraldGreen,
-    borderRadius: 30,
-    height: 60,
-    marginBottom: 10,
-    overflow: "hidden",
-    width: 60
+    alignItems: "center",
+    flexDirection: "row",
+    marginBottom: layout.spacing
   },
   link: {
     fontStyle: "italic",
     marginHorizontal: layout.spacingS,
     padding: layout.spacing
+  },
+  smallTitle: {
+    fontSize: typography.fontSize
   },
   subHeading: {
     fontStyle: "italic",

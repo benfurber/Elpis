@@ -52,6 +52,7 @@ ShallowWrapper {
           style={
             Array [
               Object {
+                "color": "rgb(51, 51, 51)",
                 "fontStyle": "italic",
               },
               Object {
@@ -111,6 +112,7 @@ ShallowWrapper {
           "children": "01/01/2000",
           "style": Array [
             Object {
+              "color": "rgb(51, 51, 51)",
               "fontStyle": "italic",
             },
             Object {
@@ -158,6 +160,7 @@ ShallowWrapper {
             style={
               Array [
                 Object {
+                  "color": "rgb(51, 51, 51)",
                   "fontStyle": "italic",
                 },
                 Object {
@@ -217,6 +220,7 @@ ShallowWrapper {
             "children": "01/01/2000",
             "style": Array [
               Object {
+                "color": "rgb(51, 51, 51)",
                 "fontStyle": "italic",
               },
               Object {
