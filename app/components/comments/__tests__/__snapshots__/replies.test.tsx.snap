@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Replies when there are no replies renders correctly 1`] = `
+exports[`Comments<Replies> when there are no replies renders correctly 1`] = `
 ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <Replies
@@ -940,7 +940,7 @@ ShallowWrapper {
 }
 `;
 
-exports[`Replies when there are replies renders correctly 1`] = `
+exports[`Comments<Replies> when there are replies renders correctly 1`] = `
 ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <Replies

@@ -4,7 +4,7 @@ import { shallow } from "enzyme";
 
 import { Reply } from "../reply";
 
-describe("Reply", () => {
+describe("Comments<Reply>", () => {
   it("renders correctly", () => {
     const item = {
       author: {

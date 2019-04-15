@@ -7,7 +7,7 @@ import { Comment } from "../comment";
 let navigation;
 jest.mock(navigation, () => jest.fn());
 
-describe("Comment", () => {
+describe("Comments<Comment>", () => {
   describe("with replies", () => {
     it("renders correctly", () => {
       const reply = {
@@ -15,11 +15,10 @@ describe("Comment", () => {
           avatarPath: require("assets/images/profile-pic-may.jpg"),
           name: "Benita F"
         },
-        body:
-          "Nao.",
+        body: "Nao.",
         dateCreated: new Date("2019-01-01"),
         id: "21097"
-      }
+      };
       const comment = {
         author: {
           avatarPath: require("assets/images/profile-pic-may.jpg"),
@@ -34,11 +33,13 @@ describe("Comment", () => {
         replies: [reply]
       };
 
-      const component = shallow(<Comment item={comment} navigation={navigation} />);
+      const component = shallow(
+        <Comment item={comment} navigation={navigation} />
+      );
 
       expect(component).toMatchSnapshot();
     });
-  })
+  });
 
   describe("without replies", () => {
     it("renders correctly", () => {
@@ -56,9 +57,11 @@ describe("Comment", () => {
         replies: []
       };
 
-      const component = shallow(<Comment item={comment} navigation={navigation} />);
+      const component = shallow(
+        <Comment item={comment} navigation={navigation} />
+      );
 
       expect(component).toMatchSnapshot();
     });
-  })
+  });
 });

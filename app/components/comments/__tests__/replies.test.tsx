@@ -4,7 +4,7 @@ import { shallow } from "enzyme";
 
 import { Replies } from "../replies";
 
-describe("Replies", () => {
+describe("Comments<Replies>", () => {
   describe("when there are replies", () => {
     it("renders correctly", () => {
       const reply1 = {
