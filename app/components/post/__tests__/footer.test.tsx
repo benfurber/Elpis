@@ -4,7 +4,7 @@ import { shallow } from "enzyme";
 
 import { Footer } from "../footer";
 
-describe("Footer", () => {
+describe("Post<Footer>", () => {
   it("renders correctly", () => {
     const component = shallow(
       <Footer

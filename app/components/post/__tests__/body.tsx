@@ -4,7 +4,7 @@ import { shallow } from "enzyme";
 
 import { Body } from "../body";
 
-describe("Body", () => {
+describe("Post<Body>", () => {
   it("renders correctly", () => {
     const date = new Date("2000-01-01");
     const description = "A string";

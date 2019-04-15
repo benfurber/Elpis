@@ -4,7 +4,7 @@ import { shallow } from "enzyme";
 
 import { Tabs } from "../tabs";
 
-describe("Tabs", () => {
+describe("Post<Tabs>", () => {
   it("renders correctly when displaying the body", () => {
     const onPressComments = jest.fn();
     const onPressPost = jest.fn();
