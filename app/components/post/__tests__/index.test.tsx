@@ -64,8 +64,9 @@ describe("Post", () => {
               "Dá certo sim, o meu pai, por exemplo, fugiu quando eu tinha 5 anos e eu não faço ideia da onde ele esteja. Nunca mais voltou, pena que a violência só piorou.",
             dateCreated: new Date("2019-01-01"),
             id: "21097",
+            replies: [],
             title: "Meu pai fez o que ela mandou…",
-            totalReplies: 4
+            totalReplies: 0
           }
         ],
         date: new Date("2000-01-01"),
