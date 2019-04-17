@@ -764,10 +764,10 @@
   resolved "https://registry.yarnpkg.com/@types/prop-types/-/prop-types-15.5.8.tgz#8ae4e0ea205fe95c3901a5a1df7f66495e3a56ce"
   integrity sha512-3AQoUxQcQtLHsK25wtTWIoIpgYjH3vSDroZOUr7PpCHw/jLY1RB9z9E8dBT/OSmwStVgkRNvdh+ZHNiomRieaw==
 
-"@types/react-addons-test-utils@^0.14.23":
-  version "0.14.23"
-  resolved "https://registry.yarnpkg.com/@types/react-addons-test-utils/-/react-addons-test-utils-0.14.23.tgz#42117a27b96d1467a651997a3ca2eb07cb617dc3"
-  integrity sha512-/JGmKImAOB6rwBBAZCaPdlF5AnDm2sL+PyAZYru55fDl9YV5xRK5tjCydJevUDTkTYT13yBZMBUxifCoVwsWCQ==
+"@types/react-addons-test-utils@^0.14.24":
+  version "0.14.24"
+  resolved "https://registry.yarnpkg.com/@types/react-addons-test-utils/-/react-addons-test-utils-0.14.24.tgz#efb40bfb632af79830e3b8cd8b95f635249d23f7"
+  integrity sha512-N6wNbXORPDIOdiv0Eml/BM9fAVA3qaoU4s0tD0NFzkYKiSSLeRuxzp1EvylnD8k8WBFjy+IvwXIa/Y01kphUZQ==
   dependencies:
     "@types/react" "*"
 
