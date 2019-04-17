@@ -19,10 +19,12 @@ ShallowWrapper {
     "key": undefined,
     "nodeType": "class",
     "props": Object {
-      "children": <FA5iconClass
+      "children": <IconClass
+        brand={false}
         color="rgb(51, 51, 51)"
         light={false}
         name="rocket"
+        regular={false}
         size={20}
         solid={true}
         style={null}
@@ -34,9 +36,11 @@ ShallowWrapper {
       "key": undefined,
       "nodeType": "class",
       "props": Object {
+        "brand": false,
         "color": "rgb(51, 51, 51)",
         "light": false,
         "name": "rocket",
+        "regular": false,
         "size": 20,
         "solid": true,
         "style": null,
@@ -53,10 +57,12 @@ ShallowWrapper {
       "key": undefined,
       "nodeType": "class",
       "props": Object {
-        "children": <FA5iconClass
+        "children": <IconClass
+          brand={false}
           color="rgb(51, 51, 51)"
           light={false}
           name="rocket"
+          regular={false}
           size={20}
           solid={true}
           style={null}
@@ -68,9 +74,11 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "class",
         "props": Object {
+          "brand": false,
           "color": "rgb(51, 51, 51)",
           "light": false,
           "name": "rocket",
+          "regular": false,
           "size": 20,
           "solid": true,
           "style": null,
