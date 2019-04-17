@@ -4,9 +4,12 @@ import { shallow } from "enzyme";
 
 import { FeedScreen } from "screens";
 
+let navigation;
+jest.mock(navigation, () => jest.fn());
+
 describe("FeedScreen", () => {
   it("renders correctly", () => {
-    const component = shallow(<FeedScreen />);
+    const component = shallow(<FeedScreen navigation={navigation} />);
 
     expect(component).toMatchSnapshot();
   });

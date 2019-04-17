@@ -43,7 +43,47 @@ ShallowWrapper {
                     "avatarPath": Object {
                       "testUri": "../../../app/assets/images/empower_two_women_logo.png",
                     },
+                    "name": "Empodere Duas Mulheres",
                   },
+                  "comments": Array [
+                    Object {
+                      "author": Object {
+                        "avatarPath": Object {
+                          "testUri": "../../../app/assets/images/profile-pic-may.jpg",
+                        },
+                        "name": "Maynara F",
+                      },
+                      "body": "Dá certo sim, o meu pai, por exemplo, fugiu quando eu tinha 5 anos e eu não faço ideia da onde ele esteja. Nunca mais voltou, pena que a violência só piorou.",
+                      "dateCreated": 2019-01-01T00:00:00.000Z,
+                      "id": "21097",
+                      "replies": Array [
+                        Object {
+                          "author": Object {
+                            "avatarPath": Object {
+                              "testUri": "../../../app/assets/images/profile-pic-annon.png",
+                            },
+                            "name": "Kelli S",
+                          },
+                          "body": "Meu pai também fez o mesmo. Logo depois que minha mãe pediu o divórcio porque sofria violência dentro de casa, ele pegou as malas, se mudou e sumiu no mundo. Nem faço mais questão de saber pra onde ele foi.",
+                          "dateCreated": 2019-01-02T00:00:00.000Z,
+                          "id": "21098",
+                        },
+                        Object {
+                          "author": Object {
+                            "avatarPath": Object {
+                              "testUri": "../../../app/assets/images/profile-pic-annon.png",
+                            },
+                            "name": "Kelli S",
+                          },
+                          "body": "Nem faço mais questão de saber pra onde ele foi.",
+                          "dateCreated": 2019-01-03T00:00:00.000Z,
+                          "id": "21099",
+                        },
+                      ],
+                      "title": "Meu pai fez o que ela mandou…",
+                      "totalReplies": 2,
+                    },
+                  ],
                   "date": 2018-02-17T00:00:00.000Z,
                   "description": "Maju Coutinho estreia na bancada do Jornal Nacional 
 
@@ -58,7 +98,9 @@ Maria Júlia Coutinho estreou neste sábado, 16 de Fevereiro, como âncora do Jo
                     "avatarPath": Object {
                       "testUri": "../../../app/assets/images/empower_two_women_logo.png",
                     },
+                    "name": "Empodere Duas Mulheres",
                   },
+                  "comments": Array [],
                   "date": 2018-02-11T00:00:00.000Z,
                   "description": null,
                   "id": "324869-saf80as-ssae",
@@ -83,6 +125,7 @@ Maria Júlia Coutinho estreou neste sábado, 16 de Fevereiro, como âncora do Jo
         </View>,
       ],
       "style": Object {
+        "backgroundColor": "rgba(198, 213, 225, 0.75)",
         "flex": 1,
         "flexDirection": "column",
       },
@@ -125,7 +168,47 @@ Maria Júlia Coutinho estreou neste sábado, 16 de Fevereiro, como âncora do Jo
                     "avatarPath": Object {
                       "testUri": "../../../app/assets/images/empower_two_women_logo.png",
                     },
+                    "name": "Empodere Duas Mulheres",
                   },
+                  "comments": Array [
+                    Object {
+                      "author": Object {
+                        "avatarPath": Object {
+                          "testUri": "../../../app/assets/images/profile-pic-may.jpg",
+                        },
+                        "name": "Maynara F",
+                      },
+                      "body": "Dá certo sim, o meu pai, por exemplo, fugiu quando eu tinha 5 anos e eu não faço ideia da onde ele esteja. Nunca mais voltou, pena que a violência só piorou.",
+                      "dateCreated": 2019-01-01T00:00:00.000Z,
+                      "id": "21097",
+                      "replies": Array [
+                        Object {
+                          "author": Object {
+                            "avatarPath": Object {
+                              "testUri": "../../../app/assets/images/profile-pic-annon.png",
+                            },
+                            "name": "Kelli S",
+                          },
+                          "body": "Meu pai também fez o mesmo. Logo depois que minha mãe pediu o divórcio porque sofria violência dentro de casa, ele pegou as malas, se mudou e sumiu no mundo. Nem faço mais questão de saber pra onde ele foi.",
+                          "dateCreated": 2019-01-02T00:00:00.000Z,
+                          "id": "21098",
+                        },
+                        Object {
+                          "author": Object {
+                            "avatarPath": Object {
+                              "testUri": "../../../app/assets/images/profile-pic-annon.png",
+                            },
+                            "name": "Kelli S",
+                          },
+                          "body": "Nem faço mais questão de saber pra onde ele foi.",
+                          "dateCreated": 2019-01-03T00:00:00.000Z,
+                          "id": "21099",
+                        },
+                      ],
+                      "title": "Meu pai fez o que ela mandou…",
+                      "totalReplies": 2,
+                    },
+                  ],
                   "date": 2018-02-17T00:00:00.000Z,
                   "description": "Maju Coutinho estreia na bancada do Jornal Nacional 
 
@@ -140,7 +223,9 @@ Maria Júlia Coutinho estreou neste sábado, 16 de Fevereiro, como âncora do Jo
                     "avatarPath": Object {
                       "testUri": "../../../app/assets/images/empower_two_women_logo.png",
                     },
+                    "name": "Empodere Duas Mulheres",
                   },
+                  "comments": Array [],
                   "date": 2018-02-11T00:00:00.000Z,
                   "description": null,
                   "id": "324869-saf80as-ssae",
@@ -178,7 +263,47 @@ Maria Júlia Coutinho estreou neste sábado, 16 de Fevereiro, como âncora do Jo
                   "avatarPath": Object {
                     "testUri": "../../../app/assets/images/empower_two_women_logo.png",
                   },
+                  "name": "Empodere Duas Mulheres",
                 },
+                "comments": Array [
+                  Object {
+                    "author": Object {
+                      "avatarPath": Object {
+                        "testUri": "../../../app/assets/images/profile-pic-may.jpg",
+                      },
+                      "name": "Maynara F",
+                    },
+                    "body": "Dá certo sim, o meu pai, por exemplo, fugiu quando eu tinha 5 anos e eu não faço ideia da onde ele esteja. Nunca mais voltou, pena que a violência só piorou.",
+                    "dateCreated": 2019-01-01T00:00:00.000Z,
+                    "id": "21097",
+                    "replies": Array [
+                      Object {
+                        "author": Object {
+                          "avatarPath": Object {
+                            "testUri": "../../../app/assets/images/profile-pic-annon.png",
+                          },
+                          "name": "Kelli S",
+                        },
+                        "body": "Meu pai também fez o mesmo. Logo depois que minha mãe pediu o divórcio porque sofria violência dentro de casa, ele pegou as malas, se mudou e sumiu no mundo. Nem faço mais questão de saber pra onde ele foi.",
+                        "dateCreated": 2019-01-02T00:00:00.000Z,
+                        "id": "21098",
+                      },
+                      Object {
+                        "author": Object {
+                          "avatarPath": Object {
+                            "testUri": "../../../app/assets/images/profile-pic-annon.png",
+                          },
+                          "name": "Kelli S",
+                        },
+                        "body": "Nem faço mais questão de saber pra onde ele foi.",
+                        "dateCreated": 2019-01-03T00:00:00.000Z,
+                        "id": "21099",
+                      },
+                    ],
+                    "title": "Meu pai fez o que ela mandou…",
+                    "totalReplies": 2,
+                  },
+                ],
                 "date": 2018-02-17T00:00:00.000Z,
                 "description": "Maju Coutinho estreia na bancada do Jornal Nacional 
 
@@ -193,7 +318,9 @@ Maria Júlia Coutinho estreou neste sábado, 16 de Fevereiro, como âncora do Jo
                   "avatarPath": Object {
                     "testUri": "../../../app/assets/images/empower_two_women_logo.png",
                   },
+                  "name": "Empodere Duas Mulheres",
                 },
+                "comments": Array [],
                 "date": 2018-02-11T00:00:00.000Z,
                 "description": null,
                 "id": "324869-saf80as-ssae",
@@ -255,7 +382,47 @@ Maria Júlia Coutinho estreou neste sábado, 16 de Fevereiro, como âncora do Jo
                       "avatarPath": Object {
                         "testUri": "../../../app/assets/images/empower_two_women_logo.png",
                       },
+                      "name": "Empodere Duas Mulheres",
                     },
+                    "comments": Array [
+                      Object {
+                        "author": Object {
+                          "avatarPath": Object {
+                            "testUri": "../../../app/assets/images/profile-pic-may.jpg",
+                          },
+                          "name": "Maynara F",
+                        },
+                        "body": "Dá certo sim, o meu pai, por exemplo, fugiu quando eu tinha 5 anos e eu não faço ideia da onde ele esteja. Nunca mais voltou, pena que a violência só piorou.",
+                        "dateCreated": 2019-01-01T00:00:00.000Z,
+                        "id": "21097",
+                        "replies": Array [
+                          Object {
+                            "author": Object {
+                              "avatarPath": Object {
+                                "testUri": "../../../app/assets/images/profile-pic-annon.png",
+                              },
+                              "name": "Kelli S",
+                            },
+                            "body": "Meu pai também fez o mesmo. Logo depois que minha mãe pediu o divórcio porque sofria violência dentro de casa, ele pegou as malas, se mudou e sumiu no mundo. Nem faço mais questão de saber pra onde ele foi.",
+                            "dateCreated": 2019-01-02T00:00:00.000Z,
+                            "id": "21098",
+                          },
+                          Object {
+                            "author": Object {
+                              "avatarPath": Object {
+                                "testUri": "../../../app/assets/images/profile-pic-annon.png",
+                              },
+                              "name": "Kelli S",
+                            },
+                            "body": "Nem faço mais questão de saber pra onde ele foi.",
+                            "dateCreated": 2019-01-03T00:00:00.000Z,
+                            "id": "21099",
+                          },
+                        ],
+                        "title": "Meu pai fez o que ela mandou…",
+                        "totalReplies": 2,
+                      },
+                    ],
                     "date": 2018-02-17T00:00:00.000Z,
                     "description": "Maju Coutinho estreia na bancada do Jornal Nacional 
 
@@ -270,7 +437,9 @@ Maria Júlia Coutinho estreou neste sábado, 16 de Fevereiro, como âncora do Jo
                       "avatarPath": Object {
                         "testUri": "../../../app/assets/images/empower_two_women_logo.png",
                       },
+                      "name": "Empodere Duas Mulheres",
                     },
+                    "comments": Array [],
                     "date": 2018-02-11T00:00:00.000Z,
                     "description": null,
                     "id": "324869-saf80as-ssae",
@@ -295,6 +464,7 @@ Maria Júlia Coutinho estreou neste sábado, 16 de Fevereiro, como âncora do Jo
           </View>,
         ],
         "style": Object {
+          "backgroundColor": "rgba(198, 213, 225, 0.75)",
           "flex": 1,
           "flexDirection": "column",
         },
@@ -337,7 +507,47 @@ Maria Júlia Coutinho estreou neste sábado, 16 de Fevereiro, como âncora do Jo
                       "avatarPath": Object {
                         "testUri": "../../../app/assets/images/empower_two_women_logo.png",
                       },
+                      "name": "Empodere Duas Mulheres",
                     },
+                    "comments": Array [
+                      Object {
+                        "author": Object {
+                          "avatarPath": Object {
+                            "testUri": "../../../app/assets/images/profile-pic-may.jpg",
+                          },
+                          "name": "Maynara F",
+                        },
+                        "body": "Dá certo sim, o meu pai, por exemplo, fugiu quando eu tinha 5 anos e eu não faço ideia da onde ele esteja. Nunca mais voltou, pena que a violência só piorou.",
+                        "dateCreated": 2019-01-01T00:00:00.000Z,
+                        "id": "21097",
+                        "replies": Array [
+                          Object {
+                            "author": Object {
+                              "avatarPath": Object {
+                                "testUri": "../../../app/assets/images/profile-pic-annon.png",
+                              },
+                              "name": "Kelli S",
+                            },
+                            "body": "Meu pai também fez o mesmo. Logo depois que minha mãe pediu o divórcio porque sofria violência dentro de casa, ele pegou as malas, se mudou e sumiu no mundo. Nem faço mais questão de saber pra onde ele foi.",
+                            "dateCreated": 2019-01-02T00:00:00.000Z,
+                            "id": "21098",
+                          },
+                          Object {
+                            "author": Object {
+                              "avatarPath": Object {
+                                "testUri": "../../../app/assets/images/profile-pic-annon.png",
+                              },
+                              "name": "Kelli S",
+                            },
+                            "body": "Nem faço mais questão de saber pra onde ele foi.",
+                            "dateCreated": 2019-01-03T00:00:00.000Z,
+                            "id": "21099",
+                          },
+                        ],
+                        "title": "Meu pai fez o que ela mandou…",
+                        "totalReplies": 2,
+                      },
+                    ],
                     "date": 2018-02-17T00:00:00.000Z,
                     "description": "Maju Coutinho estreia na bancada do Jornal Nacional 
 
@@ -352,7 +562,9 @@ Maria Júlia Coutinho estreou neste sábado, 16 de Fevereiro, como âncora do Jo
                       "avatarPath": Object {
                         "testUri": "../../../app/assets/images/empower_two_women_logo.png",
                       },
+                      "name": "Empodere Duas Mulheres",
                     },
+                    "comments": Array [],
                     "date": 2018-02-11T00:00:00.000Z,
                     "description": null,
                     "id": "324869-saf80as-ssae",
@@ -390,7 +602,47 @@ Maria Júlia Coutinho estreou neste sábado, 16 de Fevereiro, como âncora do Jo
                     "avatarPath": Object {
                       "testUri": "../../../app/assets/images/empower_two_women_logo.png",
                     },
+                    "name": "Empodere Duas Mulheres",
                   },
+                  "comments": Array [
+                    Object {
+                      "author": Object {
+                        "avatarPath": Object {
+                          "testUri": "../../../app/assets/images/profile-pic-may.jpg",
+                        },
+                        "name": "Maynara F",
+                      },
+                      "body": "Dá certo sim, o meu pai, por exemplo, fugiu quando eu tinha 5 anos e eu não faço ideia da onde ele esteja. Nunca mais voltou, pena que a violência só piorou.",
+                      "dateCreated": 2019-01-01T00:00:00.000Z,
+                      "id": "21097",
+                      "replies": Array [
+                        Object {
+                          "author": Object {
+                            "avatarPath": Object {
+                              "testUri": "../../../app/assets/images/profile-pic-annon.png",
+                            },
+                            "name": "Kelli S",
+                          },
+                          "body": "Meu pai também fez o mesmo. Logo depois que minha mãe pediu o divórcio porque sofria violência dentro de casa, ele pegou as malas, se mudou e sumiu no mundo. Nem faço mais questão de saber pra onde ele foi.",
+                          "dateCreated": 2019-01-02T00:00:00.000Z,
+                          "id": "21098",
+                        },
+                        Object {
+                          "author": Object {
+                            "avatarPath": Object {
+                              "testUri": "../../../app/assets/images/profile-pic-annon.png",
+                            },
+                            "name": "Kelli S",
+                          },
+                          "body": "Nem faço mais questão de saber pra onde ele foi.",
+                          "dateCreated": 2019-01-03T00:00:00.000Z,
+                          "id": "21099",
+                        },
+                      ],
+                      "title": "Meu pai fez o que ela mandou…",
+                      "totalReplies": 2,
+                    },
+                  ],
                   "date": 2018-02-17T00:00:00.000Z,
                   "description": "Maju Coutinho estreia na bancada do Jornal Nacional 
 
@@ -405,7 +657,9 @@ Maria Júlia Coutinho estreou neste sábado, 16 de Fevereiro, como âncora do Jo
                     "avatarPath": Object {
                       "testUri": "../../../app/assets/images/empower_two_women_logo.png",
                     },
+                    "name": "Empodere Duas Mulheres",
                   },
+                  "comments": Array [],
                   "date": 2018-02-11T00:00:00.000Z,
                   "description": null,
                   "id": "324869-saf80as-ssae",

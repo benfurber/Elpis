@@ -2,10 +2,11 @@ import React, { Component } from "react";
 import { StyleSheet, View } from "react-native";
 
 import { LoginForm, Logo } from "components";
+import { NavigationType } from "interfaces";
 import { colours } from "styles";
 
 interface Props {
-  navigation: any;
+  navigation: NavigationType;
 }
 
 class WelcomeScreen extends Component<Props> {

@@ -6,14 +6,28 @@ import { Icon } from "components";
 
 const iconSize = 30;
 
-const Tabs = () => {
+interface Props {
+  onPressComments: () => any;
+  onPressPost: () => any;
+  display: string;
+}
+
+const Tabs = (props: Props) => {
+  const selectedTab = tab => {
+    if (tab === props.display) {
+      return styles.tabSelected;
+    }
+  };
+
   return (
     <View style={styles.tabs}>
-      <View style={[styles.tabWithBackground, styles.tabSelected]}>
-        <Icon name="palette" size={iconSize} style={styles.iconCentre} />
+      <View style={[styles.tabWithBackground, selectedTab("body")]}>
+        <TouchableOpacity onPress={props.onPressPost}>
+          <Icon name="palette" size={iconSize} style={styles.iconCentre} />
+        </TouchableOpacity>
       </View>
-      <View style={styles.tabWithBackground}>
-        <TouchableOpacity>
+      <View style={[styles.tabWithBackground, selectedTab("comments")]}>
+        <TouchableOpacity onPress={props.onPressComments}>
           <Icon
             colour={colours.navyBlueDarkTransparentHigh}
             name="comments"

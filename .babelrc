@@ -9,7 +9,8 @@
           "interfaces": "./app/interfaces",
           "routes": "./app/routes",
           "screens": "./app/screens",
-          "styles": "./app/styles"
+          "styles": "./app/styles",
+          "utils": "./app/utils"
         }
       }
     ]

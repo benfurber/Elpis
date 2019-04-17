@@ -4,34 +4,82 @@ import { shallow } from "enzyme";
 
 import { Post } from "components";
 
-describe("Post", () => {
-  it("renders correctly", () => {
-    const post = {
-      author: {
-        avatarPath: require("assets/images/empower_two_women_logo.png")
-      },
-      date: new Date("2000-01-01"),
-      description: "A string",
-      id: "10387-314fs-12asdbj",
-      imagePath: require("assets/images/image_post_1.jpg")
-    };
-    const component = shallow(<Post post={post} />);
+let navigation;
+jest.mock(navigation, () => jest.fn());
 
-    expect(component).toMatchSnapshot();
+describe("Post", () => {
+  describe("when the body is set to display", () => {
+    it("renders correctly", () => {
+      const post = {
+        author: {
+          avatarPath: require("assets/images/empower_two_women_logo.png"),
+          name: "Empodere Duas Mulheres"
+        },
+        comments: [],
+        date: new Date("2000-01-01"),
+        description: "A string",
+        id: "10387-314fs-12asdbj",
+        imagePath: require("assets/images/image_post_1.jpg")
+      };
+      const setDisplay = "body";
+      const component = shallow(
+        <Post post={post} navigation={navigation} setDisplay={setDisplay} />
+      );
+
+      expect(component).toMatchSnapshot();
+    });
+
+    it("renders correctly if not description is provided", () => {
+      const post = {
+        author: {
+          avatarPath: require("assets/images/empower_two_women_logo.png"),
+          name: "Empodere Duas Mulheres"
+        },
+        comments: [],
+        date: new Date("2000-01-01"),
+        description: null,
+        id: "10387-314fs-12asdbj",
+        imagePath: require("assets/images/image_post_1.jpg")
+      };
+      const component = shallow(<Post post={post} navigation={navigation} />);
+
+      expect(component).toMatchSnapshot();
+    });
   });
 
-  it("renders correctly if not description is provided", () => {
-    const post = {
-      author: {
-        avatarPath: require("assets/images/empower_two_women_logo.png")
-      },
-      date: new Date("2000-01-01"),
-      description: null,
-      id: "10387-314fs-12asdbj",
-      imagePath: require("assets/images/image_post_1.jpg")
-    };
-    const component = shallow(<Post post={post} />);
+  describe("when comments are set to display", () => {
+    it("renders correctly", () => {
+      const post = {
+        author: {
+          avatarPath: require("assets/images/empower_two_women_logo.png"),
+          name: "Empodere Duas Mulheres"
+        },
+        comments: [
+          {
+            author: {
+              avatarPath: require("assets/images/profile-pic-may.jpg"),
+              name: "May F"
+            },
+            body:
+              "Dá certo sim, o meu pai, por exemplo, fugiu quando eu tinha 5 anos e eu não faço ideia da onde ele esteja. Nunca mais voltou, pena que a violência só piorou.",
+            dateCreated: new Date("2019-01-01"),
+            id: "21097",
+            replies: [],
+            title: "Meu pai fez o que ela mandou…",
+            totalReplies: 0
+          }
+        ],
+        date: new Date("2000-01-01"),
+        description: "A string",
+        id: "10387-314fs-12asdbj",
+        imagePath: require("assets/images/image_post_1.jpg")
+      };
+      const setDisplay = "comments";
+      const component = shallow(
+        <Post post={post} navigation={navigation} setDisplay={setDisplay} />
+      );
 
-    expect(component).toMatchSnapshot();
+      expect(component).toMatchSnapshot();
+    });
   });
 });
