@@ -1,692 +1,109 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Post when comments are set to display renders correctly 1`] = `
-ShallowWrapper {
-  Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <Post
-    post={
-      Object {
-        "author": Object {
-          "avatarPath": Object {
-            "testUri": "../../../app/assets/images/empower_two_women_logo.png",
-          },
-          "name": "Empodere Duas Mulheres",
-        },
-        "comments": Array [
-          Object {
-            "author": Object {
-              "avatarPath": Object {
-                "testUri": "../../../app/assets/images/profile-pic-may.jpg",
-              },
-              "name": "May F",
+<View
+  style={
+    Object {
+      "marginBottom": 20,
+    }
+  }
+>
+  <Tabs
+    display="comments"
+    onPressComments={[Function]}
+    onPressPost={[Function]}
+  />
+  <Comments
+    comments={
+      Array [
+        Object {
+          "author": Object {
+            "avatarPath": Object {
+              "testUri": "../../../app/assets/images/profile-pic-may.jpg",
             },
-            "body": "Dá certo sim, o meu pai, por exemplo, fugiu quando eu tinha 5 anos e eu não faço ideia da onde ele esteja. Nunca mais voltou, pena que a violência só piorou.",
-            "dateCreated": 2019-01-01T00:00:00.000Z,
-            "id": "21097",
-            "replies": Array [],
-            "title": "Meu pai fez o que ela mandou…",
-            "totalReplies": 0,
+            "name": "May F",
           },
-        ],
-        "date": 2000-01-01T00:00:00.000Z,
-        "description": "A string",
-        "id": "10387-314fs-12asdbj",
-        "imagePath": Object {
-          "testUri": "../../../app/assets/images/image_post_1.jpg",
+          "body": "Dá certo sim, o meu pai, por exemplo, fugiu quando eu tinha 5 anos e eu não faço ideia da onde ele esteja. Nunca mais voltou, pena que a violência só piorou.",
+          "dateCreated": 2019-01-01T00:00:00.000Z,
+          "id": "21097",
+          "replies": Array [],
+          "title": "Meu pai fez o que ela mandou…",
+          "totalReplies": 0,
         },
+      ]
+    }
+    description="A string"
+  />
+  <Footer
+    avatarPath={
+      Object {
+        "testUri": "../../../app/assets/images/empower_two_women_logo.png",
       }
     }
-    setDisplay="comments"
-  />,
-  Symbol(enzyme.__renderer__): Object {
-    "batchedUpdates": [Function],
-    "getNode": [Function],
-    "render": [Function],
-    "simulateError": [Function],
-    "simulateEvent": [Function],
-    "unmount": [Function],
-  },
-  Symbol(enzyme.__node__): Object {
-    "instance": null,
-    "key": undefined,
-    "nodeType": "class",
-    "props": Object {
-      "children": Array [
-        <Tabs
-          display="comments"
-          onPressComments={[Function]}
-          onPressPost={[Function]}
-        />,
-        <Comments
-          comments={
-            Array [
-              Object {
-                "author": Object {
-                  "avatarPath": Object {
-                    "testUri": "../../../app/assets/images/profile-pic-may.jpg",
-                  },
-                  "name": "May F",
-                },
-                "body": "Dá certo sim, o meu pai, por exemplo, fugiu quando eu tinha 5 anos e eu não faço ideia da onde ele esteja. Nunca mais voltou, pena que a violência só piorou.",
-                "dateCreated": 2019-01-01T00:00:00.000Z,
-                "id": "21097",
-                "replies": Array [],
-                "title": "Meu pai fez o que ela mandou…",
-                "totalReplies": 0,
-              },
-            ]
-          }
-          description="A string"
-        />,
-        <Footer
-          avatarPath={
-            Object {
-              "testUri": "../../../app/assets/images/empower_two_women_logo.png",
-            }
-          }
-        />,
-      ],
-      "style": Object {
-        "marginBottom": 20,
-      },
-    },
-    "ref": null,
-    "rendered": Array [
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "function",
-        "props": Object {
-          "display": "comments",
-          "onPressComments": [Function],
-          "onPressPost": [Function],
-        },
-        "ref": null,
-        "rendered": null,
-        "type": [Function],
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "function",
-        "props": Object {
-          "comments": Array [
-            Object {
-              "author": Object {
-                "avatarPath": Object {
-                  "testUri": "../../../app/assets/images/profile-pic-may.jpg",
-                },
-                "name": "May F",
-              },
-              "body": "Dá certo sim, o meu pai, por exemplo, fugiu quando eu tinha 5 anos e eu não faço ideia da onde ele esteja. Nunca mais voltou, pena que a violência só piorou.",
-              "dateCreated": 2019-01-01T00:00:00.000Z,
-              "id": "21097",
-              "replies": Array [],
-              "title": "Meu pai fez o que ela mandou…",
-              "totalReplies": 0,
-            },
-          ],
-          "description": "A string",
-          "navigation": undefined,
-        },
-        "ref": null,
-        "rendered": null,
-        "type": [Function],
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "function",
-        "props": Object {
-          "avatarPath": Object {
-            "testUri": "../../../app/assets/images/empower_two_women_logo.png",
-          },
-        },
-        "ref": null,
-        "rendered": null,
-        "type": [Function],
-      },
-    ],
-    "type": [Function],
-  },
-  Symbol(enzyme.__nodes__): Array [
-    Object {
-      "instance": null,
-      "key": undefined,
-      "nodeType": "class",
-      "props": Object {
-        "children": Array [
-          <Tabs
-            display="comments"
-            onPressComments={[Function]}
-            onPressPost={[Function]}
-          />,
-          <Comments
-            comments={
-              Array [
-                Object {
-                  "author": Object {
-                    "avatarPath": Object {
-                      "testUri": "../../../app/assets/images/profile-pic-may.jpg",
-                    },
-                    "name": "May F",
-                  },
-                  "body": "Dá certo sim, o meu pai, por exemplo, fugiu quando eu tinha 5 anos e eu não faço ideia da onde ele esteja. Nunca mais voltou, pena que a violência só piorou.",
-                  "dateCreated": 2019-01-01T00:00:00.000Z,
-                  "id": "21097",
-                  "replies": Array [],
-                  "title": "Meu pai fez o que ela mandou…",
-                  "totalReplies": 0,
-                },
-              ]
-            }
-            description="A string"
-          />,
-          <Footer
-            avatarPath={
-              Object {
-                "testUri": "../../../app/assets/images/empower_two_women_logo.png",
-              }
-            }
-          />,
-        ],
-        "style": Object {
-          "marginBottom": 20,
-        },
-      },
-      "ref": null,
-      "rendered": Array [
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "function",
-          "props": Object {
-            "display": "comments",
-            "onPressComments": [Function],
-            "onPressPost": [Function],
-          },
-          "ref": null,
-          "rendered": null,
-          "type": [Function],
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "function",
-          "props": Object {
-            "comments": Array [
-              Object {
-                "author": Object {
-                  "avatarPath": Object {
-                    "testUri": "../../../app/assets/images/profile-pic-may.jpg",
-                  },
-                  "name": "May F",
-                },
-                "body": "Dá certo sim, o meu pai, por exemplo, fugiu quando eu tinha 5 anos e eu não faço ideia da onde ele esteja. Nunca mais voltou, pena que a violência só piorou.",
-                "dateCreated": 2019-01-01T00:00:00.000Z,
-                "id": "21097",
-                "replies": Array [],
-                "title": "Meu pai fez o que ela mandou…",
-                "totalReplies": 0,
-              },
-            ],
-            "description": "A string",
-            "navigation": undefined,
-          },
-          "ref": null,
-          "rendered": null,
-          "type": [Function],
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "function",
-          "props": Object {
-            "avatarPath": Object {
-              "testUri": "../../../app/assets/images/empower_two_women_logo.png",
-            },
-          },
-          "ref": null,
-          "rendered": null,
-          "type": [Function],
-        },
-      ],
-      "type": [Function],
-    },
-  ],
-  Symbol(enzyme.__options__): Object {
-    "adapter": ReactSixteenAdapter {
-      "options": Object {
-        "enableComponentDidUpdateOnSetState": true,
-        "lifecycles": Object {
-          "componentDidUpdate": Object {
-            "onSetState": true,
-          },
-          "getDerivedStateFromProps": true,
-          "getSnapshotBeforeUpdate": true,
-          "setState": Object {
-            "skipsComponentDidUpdateOnNullish": true,
-          },
-        },
-      },
-    },
-  },
-}
+  />
+</View>
 `;
 
 exports[`Post when the body is set to display renders correctly 1`] = `
-ShallowWrapper {
-  Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <Post
-    post={
+<View
+  style={
+    Object {
+      "marginBottom": 20,
+    }
+  }
+>
+  <Tabs
+    display="body"
+    onPressComments={[Function]}
+    onPressPost={[Function]}
+  />
+  <Body
+    date={2000-01-01T00:00:00.000Z}
+    description="A string"
+    imagePath={
       Object {
-        "author": Object {
-          "avatarPath": Object {
-            "testUri": "../../../app/assets/images/empower_two_women_logo.png",
-          },
-          "name": "Empodere Duas Mulheres",
-        },
-        "comments": Array [],
-        "date": 2000-01-01T00:00:00.000Z,
-        "description": "A string",
-        "id": "10387-314fs-12asdbj",
-        "imagePath": Object {
-          "testUri": "../../../app/assets/images/image_post_1.jpg",
-        },
+        "testUri": "../../../app/assets/images/image_post_1.jpg",
       }
     }
-    setDisplay="body"
-  />,
-  Symbol(enzyme.__renderer__): Object {
-    "batchedUpdates": [Function],
-    "getNode": [Function],
-    "render": [Function],
-    "simulateError": [Function],
-    "simulateEvent": [Function],
-    "unmount": [Function],
-  },
-  Symbol(enzyme.__node__): Object {
-    "instance": null,
-    "key": undefined,
-    "nodeType": "class",
-    "props": Object {
-      "children": Array [
-        <Tabs
-          display="body"
-          onPressComments={[Function]}
-          onPressPost={[Function]}
-        />,
-        <Body
-          date={2000-01-01T00:00:00.000Z}
-          description="A string"
-          imagePath={
-            Object {
-              "testUri": "../../../app/assets/images/image_post_1.jpg",
-            }
-          }
-        />,
-        <Footer
-          avatarPath={
-            Object {
-              "testUri": "../../../app/assets/images/empower_two_women_logo.png",
-            }
-          }
-        />,
-      ],
-      "style": Object {
-        "marginBottom": 20,
-      },
-    },
-    "ref": null,
-    "rendered": Array [
+  />
+  <Footer
+    avatarPath={
       Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "function",
-        "props": Object {
-          "display": "body",
-          "onPressComments": [Function],
-          "onPressPost": [Function],
-        },
-        "ref": null,
-        "rendered": null,
-        "type": [Function],
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "function",
-        "props": Object {
-          "date": 2000-01-01T00:00:00.000Z,
-          "description": "A string",
-          "imagePath": Object {
-            "testUri": "../../../app/assets/images/image_post_1.jpg",
-          },
-        },
-        "ref": null,
-        "rendered": null,
-        "type": [Function],
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "function",
-        "props": Object {
-          "avatarPath": Object {
-            "testUri": "../../../app/assets/images/empower_two_women_logo.png",
-          },
-        },
-        "ref": null,
-        "rendered": null,
-        "type": [Function],
-      },
-    ],
-    "type": [Function],
-  },
-  Symbol(enzyme.__nodes__): Array [
-    Object {
-      "instance": null,
-      "key": undefined,
-      "nodeType": "class",
-      "props": Object {
-        "children": Array [
-          <Tabs
-            display="body"
-            onPressComments={[Function]}
-            onPressPost={[Function]}
-          />,
-          <Body
-            date={2000-01-01T00:00:00.000Z}
-            description="A string"
-            imagePath={
-              Object {
-                "testUri": "../../../app/assets/images/image_post_1.jpg",
-              }
-            }
-          />,
-          <Footer
-            avatarPath={
-              Object {
-                "testUri": "../../../app/assets/images/empower_two_women_logo.png",
-              }
-            }
-          />,
-        ],
-        "style": Object {
-          "marginBottom": 20,
-        },
-      },
-      "ref": null,
-      "rendered": Array [
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "function",
-          "props": Object {
-            "display": "body",
-            "onPressComments": [Function],
-            "onPressPost": [Function],
-          },
-          "ref": null,
-          "rendered": null,
-          "type": [Function],
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "function",
-          "props": Object {
-            "date": 2000-01-01T00:00:00.000Z,
-            "description": "A string",
-            "imagePath": Object {
-              "testUri": "../../../app/assets/images/image_post_1.jpg",
-            },
-          },
-          "ref": null,
-          "rendered": null,
-          "type": [Function],
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "function",
-          "props": Object {
-            "avatarPath": Object {
-              "testUri": "../../../app/assets/images/empower_two_women_logo.png",
-            },
-          },
-          "ref": null,
-          "rendered": null,
-          "type": [Function],
-        },
-      ],
-      "type": [Function],
-    },
-  ],
-  Symbol(enzyme.__options__): Object {
-    "adapter": ReactSixteenAdapter {
-      "options": Object {
-        "enableComponentDidUpdateOnSetState": true,
-        "lifecycles": Object {
-          "componentDidUpdate": Object {
-            "onSetState": true,
-          },
-          "getDerivedStateFromProps": true,
-          "getSnapshotBeforeUpdate": true,
-          "setState": Object {
-            "skipsComponentDidUpdateOnNullish": true,
-          },
-        },
-      },
-    },
-  },
-}
+        "testUri": "../../../app/assets/images/empower_two_women_logo.png",
+      }
+    }
+  />
+</View>
 `;
 
 exports[`Post when the body is set to display renders correctly if not description is provided 1`] = `
-ShallowWrapper {
-  Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <Post
-    post={
+<View
+  style={
+    Object {
+      "marginBottom": 20,
+    }
+  }
+>
+  <Tabs
+    display="body"
+    onPressComments={[Function]}
+    onPressPost={[Function]}
+  />
+  <Body
+    date={2000-01-01T00:00:00.000Z}
+    description={null}
+    imagePath={
       Object {
-        "author": Object {
-          "avatarPath": Object {
-            "testUri": "../../../app/assets/images/empower_two_women_logo.png",
-          },
-          "name": "Empodere Duas Mulheres",
-        },
-        "comments": Array [],
-        "date": 2000-01-01T00:00:00.000Z,
-        "description": null,
-        "id": "10387-314fs-12asdbj",
-        "imagePath": Object {
-          "testUri": "../../../app/assets/images/image_post_1.jpg",
-        },
+        "testUri": "../../../app/assets/images/image_post_1.jpg",
       }
     }
-  />,
-  Symbol(enzyme.__renderer__): Object {
-    "batchedUpdates": [Function],
-    "getNode": [Function],
-    "render": [Function],
-    "simulateError": [Function],
-    "simulateEvent": [Function],
-    "unmount": [Function],
-  },
-  Symbol(enzyme.__node__): Object {
-    "instance": null,
-    "key": undefined,
-    "nodeType": "class",
-    "props": Object {
-      "children": Array [
-        <Tabs
-          display="body"
-          onPressComments={[Function]}
-          onPressPost={[Function]}
-        />,
-        <Body
-          date={2000-01-01T00:00:00.000Z}
-          description={null}
-          imagePath={
-            Object {
-              "testUri": "../../../app/assets/images/image_post_1.jpg",
-            }
-          }
-        />,
-        <Footer
-          avatarPath={
-            Object {
-              "testUri": "../../../app/assets/images/empower_two_women_logo.png",
-            }
-          }
-        />,
-      ],
-      "style": Object {
-        "marginBottom": 20,
-      },
-    },
-    "ref": null,
-    "rendered": Array [
+  />
+  <Footer
+    avatarPath={
       Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "function",
-        "props": Object {
-          "display": "body",
-          "onPressComments": [Function],
-          "onPressPost": [Function],
-        },
-        "ref": null,
-        "rendered": null,
-        "type": [Function],
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "function",
-        "props": Object {
-          "date": 2000-01-01T00:00:00.000Z,
-          "description": null,
-          "imagePath": Object {
-            "testUri": "../../../app/assets/images/image_post_1.jpg",
-          },
-        },
-        "ref": null,
-        "rendered": null,
-        "type": [Function],
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "function",
-        "props": Object {
-          "avatarPath": Object {
-            "testUri": "../../../app/assets/images/empower_two_women_logo.png",
-          },
-        },
-        "ref": null,
-        "rendered": null,
-        "type": [Function],
-      },
-    ],
-    "type": [Function],
-  },
-  Symbol(enzyme.__nodes__): Array [
-    Object {
-      "instance": null,
-      "key": undefined,
-      "nodeType": "class",
-      "props": Object {
-        "children": Array [
-          <Tabs
-            display="body"
-            onPressComments={[Function]}
-            onPressPost={[Function]}
-          />,
-          <Body
-            date={2000-01-01T00:00:00.000Z}
-            description={null}
-            imagePath={
-              Object {
-                "testUri": "../../../app/assets/images/image_post_1.jpg",
-              }
-            }
-          />,
-          <Footer
-            avatarPath={
-              Object {
-                "testUri": "../../../app/assets/images/empower_two_women_logo.png",
-              }
-            }
-          />,
-        ],
-        "style": Object {
-          "marginBottom": 20,
-        },
-      },
-      "ref": null,
-      "rendered": Array [
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "function",
-          "props": Object {
-            "display": "body",
-            "onPressComments": [Function],
-            "onPressPost": [Function],
-          },
-          "ref": null,
-          "rendered": null,
-          "type": [Function],
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "function",
-          "props": Object {
-            "date": 2000-01-01T00:00:00.000Z,
-            "description": null,
-            "imagePath": Object {
-              "testUri": "../../../app/assets/images/image_post_1.jpg",
-            },
-          },
-          "ref": null,
-          "rendered": null,
-          "type": [Function],
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "function",
-          "props": Object {
-            "avatarPath": Object {
-              "testUri": "../../../app/assets/images/empower_two_women_logo.png",
-            },
-          },
-          "ref": null,
-          "rendered": null,
-          "type": [Function],
-        },
-      ],
-      "type": [Function],
-    },
-  ],
-  Symbol(enzyme.__options__): Object {
-    "adapter": ReactSixteenAdapter {
-      "options": Object {
-        "enableComponentDidUpdateOnSetState": true,
-        "lifecycles": Object {
-          "componentDidUpdate": Object {
-            "onSetState": true,
-          },
-          "getDerivedStateFromProps": true,
-          "getSnapshotBeforeUpdate": true,
-          "setState": Object {
-            "skipsComponentDidUpdateOnNullish": true,
-          },
-        },
-      },
-    },
-  },
-}
+        "testUri": "../../../app/assets/images/empower_two_women_logo.png",
+      }
+    }
+  />
+</View>
 `;
