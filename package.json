@@ -8,7 +8,7 @@
     "lint": "./node_modules/.bin/eslint .",
     "open-android": "open -a /Applications/Android Studio.app ./android",
     "start": "node node_modules/react-native/local-cli/cli.js start --reset-cache",
-    "test": "jest"
+    "test": "eslint . && jest"
   },
   "dependencies": {
     "@types/enzyme": "^3.9.1",
