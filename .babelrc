@@ -4,6 +4,7 @@
       "module-resolver",
       {
         "alias": {
+          "app": "./app",
           "assets": "./app/assets",
           "components": "./app/components",
           "interfaces": "./app/interfaces",
