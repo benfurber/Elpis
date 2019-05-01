@@ -6,6 +6,7 @@
     "strict": true,
     "baseUrl": "./",
     "paths": {
+      "app": ["app"],
       "assets/*": ["app/assets/*"],
       "components": ["app/components"],
       "interfaces": ["app/interfaces"],
