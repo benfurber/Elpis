@@ -1,14 +1,17 @@
-import React from "react";
-import { FlatList, StyleSheet, Text, View, ScrollView } from "react-native";
+import React, { Component } from "react";
+import { FlatList, StyleSheet, View, ScrollView } from "react-native";
 
 import { Title } from "components";
 import { NavigationType, Post } from "interfaces";
-import { colours, layout, typography } from "styles";
+import { colours, layout } from "styles";
 import { firstSentence } from "utils";
 
 import { Comment } from "./comment";
+import { TextField } from "components";
 
 const labels = {
+  addYourComment: "Adicione o seu comentário...",
+  comment: "Comentar",
   comments: "Comentários",
   topics: "Tópicos",
   noComments: "Nenhum comentário ainda - faça o primeiro!"
@@ -20,81 +23,110 @@ interface Props {
   navigation: NavigationType;
 }
 
-const Comments = (props: Props) => {
-  const renderDescription = () => {
-    if (props.description) {
+interface State {
+  textInput: string;
+}
+
+class Comments extends Component<Props, State> {
+  constructor(props) {
+    super(props);
+    this.state = {
+      textInput: ""
+    };
+  }
+
+  renderDescription = () => {
+    if (this.props.description) {
       return (
         <View style={styles.titleContainer}>
-          <Title text={firstSentence(props.description)} />
+          <Title text={firstSentence(this.props.description)} />
         </View>
       );
     }
   };
 
-  const renderComments = () => {
-    if (totalComments() === 0) {
-      return noComments();
-    }
-
+  commentsLoop() {
     return (
-      <ScrollView>
-        <View style={styles.commentsHeadingContainer}>
-          <Title text={titleText} />
-        </View>
-        {commentsLoop()}
-      </ScrollView>
-    );
-  };
+      <View>
+        {this.noComments()}
 
-  const commentsLoop = () => {
-    return (
-      <FlatList
-        data={props.comments}
-        keyExtractor={({ id }) => id}
-        renderItem={({ item }) => (
-          <Comment item={item} navigation={props.navigation} />
-        )}
-      />
-    );
-  };
-
-  const noComments = () => {
-    return (
-      <View style={styles.noComments}>
-        <Title text={labels.noComments} />
+        <FlatList
+          data={this.props.comments}
+          keyExtractor={({ id }) => id}
+          renderItem={({ item }) => (
+            <Comment item={item} navigation={this.props.navigation} />
+          )}
+        />
       </View>
     );
-  };
+  }
 
-  const totalComments = () => {
-    let runningTotal = 0;
-    props.comments.forEach(comment => {
-      runningTotal = +comment.totalReplies;
+  noComments() {
+    if (this.totalComments() === 0) {
+      return (
+        <View style={styles.noComments}>
+          <Title text={labels.noComments} />
+        </View>
+      );
+    }
+  }
+
+  totalComments() {
+    let runningTotal = this.props.comments.length;
+
+    this.props.comments.forEach(comment => {
+      runningTotal += comment.totalReplies;
     });
 
     return runningTotal;
+  }
+
+  onChangeText = string => {
+    this.setState({ textInput: string });
   };
 
-  const titleText = `${totalComments()} ${labels.comments} - ${
-    props.comments.length
-  } ${labels.topics}`;
+  onSubmit() {
+    console.log(this.state.textInput);
+  }
 
-  return (
-    <View style={styles.container}>
-      {renderDescription()}
-      {renderComments()}
-    </View>
-  );
-};
+  render() {
+    const titleText = `${this.totalComments()} ${labels.comments} - ${
+      this.props.comments.length
+    } ${labels.topics}`;
+
+    return (
+      <View style={styles.container}>
+        <ScrollView>
+          {this.renderDescription()}
+
+          <View style={styles.commentsHeadingContainer}>
+            <Title text={titleText} />
+          </View>
+
+          {this.commentsLoop()}
+        </ScrollView>
+
+        <TextField
+          buttonText={labels.comment}
+          inputText={labels.addYourComment}
+          onChangeText={string => this.onChangeText(string)}
+          onSubmit={() => this.onSubmit()}
+          value={this.state.textInput}
+        />
+      </View>
+    );
+  }
+}
 
 const styles = StyleSheet.create({
   container: {
     backgroundColor: colours.whiteTransparent,
     borderTopRightRadius: layout.borderRadius,
+    flex: 1,
     width: "100%"
   },
   commentsHeadingContainer: {
-    marginBottom: layout.spacing,
+    marginVertical: layout.spacingL,
     marginHorizontal: layout.spacing
   },
   titleContainer: {

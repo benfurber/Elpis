@@ -34,6 +34,12 @@ class Post extends Component<Props, State> {
     }
   }
 
+  fullHeight() {
+    if (this.state.display !== "body") {
+      return styles.fullHeight;
+    }
+  }
+
   onPressComments = () => {
     const { navigation, post } = this.props;
     return navigation.navigate("Post", {
@@ -47,8 +53,13 @@ class Post extends Component<Props, State> {
   };
 
   renderBody() {
-    const { date, description, imagePath } = this.props.post;
-    return <Body date={date} description={description} imagePath={imagePath} />;
+    const { author, date, description, imagePath } = this.props.post;
+    return (
+      <View>
+        <Body date={date} description={description} imagePath={imagePath} />
+        <Footer avatarPath={author.avatarPath} />
+      </View>
+    );
   }
 
   renderComments() {
@@ -82,17 +93,14 @@ class Post extends Component<Props, State> {
   }
 
   render() {
-    const { author } = this.props.post;
-
     return (
-      <View style={styles.container}>
+      <View style={[styles.container, this.fullHeight()]}>
         <Tabs
           onPressComments={this.onPressComments}
           onPressPost={this.onPressPost}
           display={this.state.display}
         />
         {this.renderContent()}
-        <Footer avatarPath={author.avatarPath} />
       </View>
     );
   }
@@ -101,6 +109,10 @@ class Post extends Component<Props, State> {
 const styles = StyleSheet.create({
   container: {
     marginBottom: 20
+  },
+  fullHeight: {
+    alignItems: "stretch",
+    height: "100%"
   }
 });
 
