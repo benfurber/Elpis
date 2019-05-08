@@ -14,6 +14,7 @@ import { TouchableOpacity } from "react-native-gesture-handler";
 
 const textInputHeight = 45;
 const keyboardVerticalOffset = Platform.OS === "ios" ? 45 + textInputHeight : 0;
+let textInputRef;
 
 interface Props {
   buttonText: string;
@@ -25,7 +26,7 @@ interface Props {
 
 class TextField extends Component<Props> {
   focusKeyboard() {
-    return true;
+    textInputRef.focus();
   }
 
   render() {
@@ -41,6 +42,7 @@ class TextField extends Component<Props> {
         </View>
         <View style={styles.textInputContainer}>
           <TextInput
+            ref={component => (textInputRef = component)}
             multiline={true}
             onChangeText={text => this.props.onChangeText(text)}
             onSubmitEditing={() => this.props.onSubmit()}
