@@ -1,5 +1,6 @@
 import React, { Component } from "react";
-import { Image, StyleSheet, Text, TouchableOpacity, View } from "react-native";
+import { Image, StyleSheet, Text, View } from "react-native";
+import { TouchableOpacity } from "react-native-gesture-handler";
 
 import { Title } from "components";
 import { Comment as CommentInterface, NavigationType } from "interfaces";
@@ -11,6 +12,7 @@ import { Replies } from "./replies";
 interface Props {
   item: CommentInterface;
   navigation: NavigationType;
+  onPress: () => any;
 }
 
 interface State {
@@ -37,7 +39,7 @@ class Comment extends Component<Props, State> {
     const { item } = this.props;
 
     return (
-      <TouchableOpacity onPress={this.onPressReplies}>
+      <TouchableOpacity onPress={() => this.props.onPress()}>
         <View style={styles.commentContainer}>
           <View style={styles.avatarContainer}>
             <View style={styles.badge}>

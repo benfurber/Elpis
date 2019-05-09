@@ -7,10 +7,9 @@ import {
   KeyboardAvoidingView,
   Platform
 } from "react-native";
+import { TouchableOpacity } from "react-native-gesture-handler";
 
 import { colours, layout } from "styles";
-
-import { TouchableOpacity } from "react-native-gesture-handler";
 
 const textInputHeight = 45;
 const keyboardVerticalOffset = Platform.OS === "ios" ? 45 + textInputHeight : 0;

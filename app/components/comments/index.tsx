@@ -4,9 +4,10 @@ import { FlatList, StyleSheet, View, ScrollView } from "react-native";
 import { Title } from "components";
 import { NavigationType, Post } from "interfaces";
 import { colours, layout } from "styles";
-import { firstSentence } from "utils";
+import { totalComments } from "utils";
 
 import { Comment } from "./comment";
+import { Header } from "./header";
 import { TextField } from "components";
 
 const labels = {
@@ -25,25 +26,27 @@ interface Props {
 
 interface State {
   textInput: string;
+  display: "Comments" | "Replies";
 }
 
 class Comments extends Component<Props, State> {
   constructor(props) {
     super(props);
     this.state = {
-      textInput: ""
+      textInput: "",
+      display: "Comments"
     };
   }
 
-  renderDescription = () => {
-    if (this.props.description) {
-      return (
-        <View style={styles.titleContainer}>
-          <Title text={firstSentence(this.props.description)} />
-        </View>
-      );
+  componentDidUpdate(_prevProps, prevState) {
+    if (prevState.display != this.state.display) {
+      console.log(this.state.display);
     }
-  };
+  }
+
+  setDisplay() {
+    this.setState({ display: "Replies" });
+  }
 
   commentsLoop() {
     return (
@@ -54,7 +57,11 @@ class Comments extends Component<Props, State> {
           data={this.props.comments}
           keyExtractor={({ id }) => id}
           renderItem={({ item }) => (
-            <Comment item={item} navigation={this.props.navigation} />
+            <Comment
+              item={item}
+              navigation={this.props.navigation}
+              onPress={() => this.setDisplay()}
+            />
           )}
         />
       </View>
@@ -62,23 +69,13 @@ class Comments extends Component<Props, State> {
   }
 
   noComments() {
-    if (this.totalComments() === 0) {
+    if (totalComments(this.props.comments) === 0) {
       return (
         <View style={styles.noComments}>
           <Title text={labels.noComments} />
         </View>
       );
     }
-  }
-
-  totalComments() {
-    let runningTotal = this.props.comments.length;
-
-    this.props.comments.forEach(comment => {
-      runningTotal += comment.totalReplies;
-    });
-
-    return runningTotal;
   }
 
   onChangeText = string => {
@@ -90,18 +87,13 @@ class Comments extends Component<Props, State> {
   }
 
   render() {
-    const titleText = `${this.totalComments()} ${labels.comments} - ${
-      this.props.comments.length
-    } ${labels.topics}`;
-
     return (
       <View style={styles.container}>
         <ScrollView>
-          {this.renderDescription()}
-
-          <View style={styles.commentsHeadingContainer}>
-            <Title text={titleText} />
-          </View>
+          <Header
+            comments={this.props.comments}
+            description={this.props.description}
+          />
 
           {this.commentsLoop()}
         </ScrollView>

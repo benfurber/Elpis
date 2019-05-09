@@ -20,7 +20,14 @@ exports[`TextField renders correctly 1`] = `
       }
     }
   >
-    <Component
+    <TouchableOpacity
+      activeOpacity={0.2}
+      delayLongPress={600}
+      extraButtonProps={
+        Object {
+          "rippleColor": "transparent",
+        }
+      }
       onPress={[Function]}
     >
       <Text
@@ -33,7 +40,7 @@ exports[`TextField renders correctly 1`] = `
       >
         The button
       </Text>
-    </Component>
+    </TouchableOpacity>
   </View>
   <View
     style={
