@@ -1,21 +1,22 @@
 import React, { Component } from "react";
 import { FlatList, StyleSheet, View, ScrollView } from "react-native";
 
-import { Title } from "components";
+import { TextField, Title } from "components";
 import { NavigationType, Post } from "interfaces";
 import { colours, layout } from "styles";
 import { totalComments } from "utils";
 
-import { Comment } from "./comment";
+import { CommentsLoop } from "./comments-loop";
 import { Header } from "./header";
-import { TextField } from "components";
+import { Replies } from "./replies";
 
 const labels = {
   addYourComment: "Adicione o seu comentário...",
   comment: "Comentar",
   comments: "Comentários",
   topics: "Tópicos",
-  noComments: "Nenhum comentário ainda - faça o primeiro!"
+  noComments: "Nenhum comentário ainda - faça o primeiro!",
+  noReplies: "Nenhuma resposta ainda. Seja a primeira!"
 };
 
 interface Props {
@@ -26,7 +27,7 @@ interface Props {
 
 interface State {
   textInput: string;
-  display: "Comments" | "Replies";
+  commentId: null | string;
 }
 
 class Comments extends Component<Props, State> {
@@ -34,48 +35,34 @@ class Comments extends Component<Props, State> {
     super(props);
     this.state = {
       textInput: "",
-      display: "Comments"
+      commentId: null
     };
   }
 
-  componentDidUpdate(_prevProps, prevState) {
-    if (prevState.display != this.state.display) {
-      console.log(this.state.display);
-    }
+  setDisplay(commentId) {
+    this.setState({
+      commentId
+    });
   }
 
-  setDisplay() {
-    this.setState({ display: "Replies" });
-  }
-
-  commentsLoop() {
+  header() {
     return (
-      <View>
-        {this.noComments()}
-
-        <FlatList
-          data={this.props.comments}
-          keyExtractor={({ id }) => id}
-          renderItem={({ item }) => (
-            <Comment
-              item={item}
-              navigation={this.props.navigation}
-              onPress={() => this.setDisplay()}
-            />
-          )}
-        />
-      </View>
+      <Header
+        comments={this.props.comments}
+        description={this.props.description}
+      />
     );
   }
 
-  noComments() {
-    if (totalComments(this.props.comments) === 0) {
-      return (
-        <View style={styles.noComments}>
-          <Title text={labels.noComments} />
-        </View>
-      );
-    }
+  allComments() {
+    return (
+      <CommentsLoop
+        comments={this.props.comments}
+        header={this.header()}
+        noComments={labels.noComments}
+        onPress={commentId => this.setDisplay(commentId)}
+      />
+    );
   }
 
   onChangeText = string => {
@@ -86,17 +73,43 @@ class Comments extends Component<Props, State> {
     console.log(this.state.textInput);
   }
 
+  selectComment() {
+    const { comments } = this.props;
+    const { commentId } = this.state;
+
+    return comments.filter(comment => {
+      if (comment.id == commentId) {
+        return comment;
+      }
+    })[0];
+  }
+
+  renderReplies() {
+    const item = this.selectComment();
+    return (
+      <Replies
+        header={this.header()}
+        item={item}
+        noReplies={labels.noReplies}
+        onPress={() => this.setDisplay(null)}
+      />
+    );
+  }
+
+  renderDisplay() {
+    const { commentId } = this.state;
+
+    if (commentId !== null) {
+      return this.renderReplies();
+    }
+
+    return this.allComments();
+  }
+
   render() {
     return (
       <View style={styles.container}>
-        <ScrollView>
-          <Header
-            comments={this.props.comments}
-            description={this.props.description}
-          />
-
-          {this.commentsLoop()}
-        </ScrollView>
+        <ScrollView>{this.renderDisplay()}</ScrollView>
 
         <TextField
           buttonText={labels.comment}

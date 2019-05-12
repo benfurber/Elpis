@@ -13,17 +13,19 @@ import { Comment } from "interfaces";
 import { colours, elements, layout, typography } from "styles";
 import { formatDate } from "utils";
 
+import { NoContent } from "./no-content";
 import { Reply } from "./reply";
 
 interface Props {
   item: Comment;
-  onPressComment: () => void;
+  header: object;
+  noReplies: string;
+  onPress: Function;
 }
 
 const labels = {
   backButton: "Voltar aos Comentários",
-  replies: "respostas",
-  noReplies: "Nenhuma resposta ainda. Seja a primeira!"
+  replies: "respostas"
 };
 
 class Replies extends Component<Props> {
@@ -38,17 +40,13 @@ class Replies extends Component<Props> {
   }
 
   noReplies() {
-    return (
-      <View>
-        <Text>{labels.noReplies}</Text>
-      </View>
-    );
+    return <NoContent text={this.props.noReplies} />;
   }
 
   renderBackButton() {
     return (
       <View>
-        <TouchableOpacity onPress={this.props.onPressComment}>
+        <TouchableOpacity onPress={() => this.props.onPress()}>
           <Text style={styles.link}>&#60; {labels.backButton}</Text>
         </TouchableOpacity>
       </View>
@@ -102,6 +100,7 @@ class Replies extends Component<Props> {
   render() {
     return (
       <View>
+        {this.props.header}
         {this.renderBackButton()}
         {this.renderComment()}
         {this.renderReplies()}

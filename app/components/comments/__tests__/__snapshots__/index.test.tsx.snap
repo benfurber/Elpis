@@ -12,7 +12,7 @@ exports[`Comments when there are comments renders correctly 1`] = `
   }
 >
   <ScrollViewMock>
-    <Header
+    <CommentsLoop
       comments={
         Array [
           Object {
@@ -31,42 +31,32 @@ exports[`Comments when there are comments renders correctly 1`] = `
           },
         ]
       }
-      description="A simple string"
-    />
-    <View>
-      <FlatList
-        data={
-          Array [
-            Object {
-              "author": Object {
-                "avatarPath": Object {
-                  "testUri": "../../../app/assets/images/profile-pic-may.jpg",
+      header={
+        <Header
+          comments={
+            Array [
+              Object {
+                "author": Object {
+                  "avatarPath": Object {
+                    "testUri": "../../../app/assets/images/profile-pic-may.jpg",
+                  },
+                  "name": "May F",
                 },
-                "name": "May F",
+                "body": "Dá certo sim, o meu pai, por exemplo, fugiu quando eu tinha 5 anos e eu não faço ideia da onde ele esteja. Nunca mais voltou, pena que a violência só piorou.",
+                "dateCreated": 2019-01-01T00:00:00.000Z,
+                "id": "21097",
+                "replies": Array [],
+                "title": "Meu pai fez o que ela mandou…",
+                "totalReplies": 0,
               },
-              "body": "Dá certo sim, o meu pai, por exemplo, fugiu quando eu tinha 5 anos e eu não faço ideia da onde ele esteja. Nunca mais voltou, pena que a violência só piorou.",
-              "dateCreated": 2019-01-01T00:00:00.000Z,
-              "id": "21097",
-              "replies": Array [],
-              "title": "Meu pai fez o que ela mandou…",
-              "totalReplies": 0,
-            },
-          ]
-        }
-        disableVirtualization={false}
-        horizontal={false}
-        initialNumToRender={10}
-        keyExtractor={[Function]}
-        maxToRenderPerBatch={10}
-        numColumns={1}
-        onEndReachedThreshold={2}
-        removeClippedSubviews={false}
-        renderItem={[Function]}
-        scrollEventThrottle={50}
-        updateCellsBatchingPeriod={50}
-        windowSize={21}
-      />
-    </View>
+            ]
+          }
+          description="A simple string"
+        />
+      }
+      noComments="Nenhum comentário ainda - faça o primeiro!"
+      onPress={[Function]}
+    />
   </ScrollViewMock>
   <TextField
     buttonText="Comentar"
@@ -90,39 +80,17 @@ exports[`Comments when there are no comments renders correctly 1`] = `
   }
 >
   <ScrollViewMock>
-    <Header
+    <CommentsLoop
       comments={Array []}
-      description="A simple string"
-    />
-    <View>
-      <View
-        style={
-          Object {
-            "paddingHorizontal": 10,
-            "paddingVertical": 20,
-          }
-        }
-      >
-        <Title
-          text="Nenhum comentário ainda - faça o primeiro!"
+      header={
+        <Header
+          comments={Array []}
+          description="A simple string"
         />
-      </View>
-      <FlatList
-        data={Array []}
-        disableVirtualization={false}
-        horizontal={false}
-        initialNumToRender={10}
-        keyExtractor={[Function]}
-        maxToRenderPerBatch={10}
-        numColumns={1}
-        onEndReachedThreshold={2}
-        removeClippedSubviews={false}
-        renderItem={[Function]}
-        scrollEventThrottle={50}
-        updateCellsBatchingPeriod={50}
-        windowSize={21}
-      />
-    </View>
+      }
+      noComments="Nenhum comentário ainda - faça o primeiro!"
+      onPress={[Function]}
+    />
   </ScrollViewMock>
   <TextField
     buttonText="Comentar"

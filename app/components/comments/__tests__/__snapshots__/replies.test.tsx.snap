@@ -87,11 +87,7 @@ exports[`Comments<Replies> when there are no replies renders correctly 1`] = `
       </Text>
     </View>
   </View>
-  <View>
-    <Text>
-      Nenhuma resposta ainda. Seja a primeira!
-    </Text>
-  </View>
+  <NoContent />
 </View>
 `;
 

@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Comments<NoContent> renders correctly 1`] = `
+<View
+  style={
+    Object {
+      "paddingHorizontal": 10,
+      "paddingVertical": 20,
+    }
+  }
+>
+  <Title
+    text="No content to show!"
+  />
+</View>
+`;

@@ -4,12 +4,7 @@ import { StyleSheet, View } from "react-native";
 import { Title } from "components";
 import { Post } from "interfaces";
 import { colours, layout } from "styles";
-import { firstSentence, totalComments } from "utils";
-
-const labels = {
-  comments: "Comentários",
-  topics: "Tópicos"
-};
+import { firstSentence } from "utils";
 
 interface Props {
   comments: Post["comments"];
@@ -17,7 +12,9 @@ interface Props {
 }
 
 class Header extends Component<Props> {
-  renderDescription = () => {
+  renderDescription = () => {};
+
+  render() {
     if (this.props.description) {
       return (
         <View style={styles.titleContainer}>
@@ -25,24 +22,6 @@ class Header extends Component<Props> {
         </View>
       );
     }
-  };
-
-  render() {
-    const { comments } = this.props;
-
-    const titleText = `${totalComments(comments)} ${labels.comments} - ${
-      comments.length
-    } ${labels.topics}`;
-
-    return (
-      <View>
-        {this.renderDescription()}
-
-        <View style={styles.commentsHeadingContainer}>
-          <Title text={titleText} />
-        </View>
-      </View>
-    );
   }
 }
 
