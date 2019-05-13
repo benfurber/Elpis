@@ -4,9 +4,6 @@ import { shallow } from "enzyme";
 
 import { Comment } from "../comment";
 
-let navigation;
-jest.mock(navigation, () => jest.fn());
-
 describe("Comments<Comment>", () => {
   describe("with replies", () => {
     it("renders correctly", () => {
@@ -34,9 +31,7 @@ describe("Comments<Comment>", () => {
       };
       const onPress = () => jest.fn();
 
-      const component = shallow(
-        <Comment item={comment} navigation={navigation} onPress={onPress} />
-      );
+      const component = shallow(<Comment item={comment} onPress={onPress} />);
 
       expect(component).toMatchSnapshot();
     });
@@ -59,9 +54,7 @@ describe("Comments<Comment>", () => {
       };
       const onPress = () => jest.fn();
 
-      const component = shallow(
-        <Comment item={comment} navigation={navigation} onPress={onPress} />
-      );
+      const component = shallow(<Comment item={comment} onPress={onPress} />);
 
       expect(component).toMatchSnapshot();
     });

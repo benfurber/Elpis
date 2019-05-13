@@ -1,5 +1,5 @@
-import "react-native";
 import React from "react";
+import { Text } from "react-native";
 import { shallow } from "enzyme";
 
 import { Replies } from "../replies";
@@ -41,10 +41,17 @@ describe("Comments<Replies>", () => {
         title: "Meu pai fez o que ela mandou…",
         totalReplies: 2
       };
-      const onPressComment = () => jest.fn();
+      const header = <Text>Header with post details</Text>;
+      const noReplies = "No replies label";
+      const onPress = () => jest.fn();
 
       const component = shallow(
-        <Replies item={item} onPressComment={onPressComment} />
+        <Replies
+          item={item}
+          header={header}
+          noReplies={noReplies}
+          onPress={onPress}
+        />
       );
 
       expect(component).toMatchSnapshot();
@@ -66,10 +73,17 @@ describe("Comments<Replies>", () => {
         title: "Meu pai fez o que ela mandou…",
         totalReplies: 0
       };
-      const onPressComment = () => jest.fn();
+      const header = <Text>Header with post details</Text>;
+      const noReplies = "No replies right now, add one!";
+      const onPress = () => jest.fn();
 
       const component = shallow(
-        <Replies item={item} onPressComment={onPressComment} />
+        <Replies
+          item={item}
+          header={header}
+          noReplies={noReplies}
+          onPress={onPress}
+        />
       );
 
       expect(component).toMatchSnapshot();
