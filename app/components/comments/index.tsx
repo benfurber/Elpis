@@ -12,11 +12,13 @@ import { Replies } from "./replies";
 
 const labels = {
   addYourComment: "Adicione o seu comentário...",
+  addYourReply: "Adicione o seu resposta...",
   comment: "Comentar",
   comments: "Comentários",
+  reply: "Resposta",
   topics: "Tópicos",
   noComments: "Nenhum comentário ainda - faça o primeiro!",
-  noReplies: "Nenhuma resposta ainda. Seja a primeira!"
+  noReplies: "Nenhuma resposta ainda - faça a primeira!"
 };
 
 interface Props {
@@ -54,17 +56,6 @@ class Comments extends Component<Props, State> {
     );
   }
 
-  allComments() {
-    return (
-      <CommentsLoop
-        comments={this.props.comments}
-        header={this.header()}
-        noComments={labels.noComments}
-        onPress={commentId => this.setDisplay(commentId)}
-      />
-    );
-  }
-
   onChangeText = string => {
     this.setState({ textInput: string });
   };
@@ -84,6 +75,53 @@ class Comments extends Component<Props, State> {
     })[0];
   }
 
+  renderAllComments() {
+    return (
+      <CommentsLoop
+        comments={this.props.comments}
+        header={this.header()}
+        noComments={labels.noComments}
+        onPress={commentId => this.setDisplay(commentId)}
+      />
+    );
+  }
+
+  renderAddResponse() {
+    const { commentId } = this.state;
+
+    if (commentId !== null) {
+      return (
+        <TextField
+          buttonText={labels.reply}
+          inputText={labels.addYourReply}
+          onChangeText={string => this.onChangeText(string)}
+          onSubmit={() => this.onSubmit()}
+          value={this.state.textInput}
+        />
+      );
+    }
+
+    return (
+      <TextField
+        buttonText={labels.comment}
+        inputText={labels.addYourComment}
+        onChangeText={string => this.onChangeText(string)}
+        onSubmit={() => this.onSubmit()}
+        value={this.state.textInput}
+      />
+    );
+  }
+
+  renderDisplay() {
+    const { commentId } = this.state;
+
+    if (commentId !== null) {
+      return <ScrollView>{this.renderReplies()}</ScrollView>;
+    }
+
+    return <ScrollView>{this.renderAllComments()}</ScrollView>;
+  }
+
   renderReplies() {
     const item = this.selectComment();
     return (
@@ -96,28 +134,11 @@ class Comments extends Component<Props, State> {
     );
   }
 
-  renderDisplay() {
-    const { commentId } = this.state;
-
-    if (commentId !== null) {
-      return this.renderReplies();
-    }
-
-    return this.allComments();
-  }
-
   render() {
     return (
       <View style={styles.container}>
-        <ScrollView>{this.renderDisplay()}</ScrollView>
-
-        <TextField
-          buttonText={labels.comment}
-          inputText={labels.addYourComment}
-          onChangeText={string => this.onChangeText(string)}
-          onSubmit={() => this.onSubmit()}
-          value={this.state.textInput}
-        />
+        {this.renderDisplay()}
+        {this.renderAddResponse()}
       </View>
     );
   }
@@ -133,6 +154,9 @@ const styles = StyleSheet.create({
   commentsHeadingContainer: {
     marginVertical: layout.spacingL,
     marginHorizontal: layout.spacing
+  },
+  scrollView: {
+    paddingBottom: layout.spacingXL
   },
   titleContainer: {
     backgroundColor: colours.whiteTransparent,

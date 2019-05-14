@@ -52,6 +52,7 @@ class CommentsLoop extends Component<Props> {
           {this.noComments()}
 
           <FlatList
+            contentContainerStyle={{ paddingBottom: layout.spacingXL }}
             data={this.props.comments}
             keyExtractor={({ id }) => id}
             renderItem={({ item }) => (
@@ -69,8 +70,6 @@ class CommentsLoop extends Component<Props> {
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: colours.whiteTransparent,
-    borderTopRightRadius: layout.borderRadius,
     flex: 1,
     width: "100%"
   },

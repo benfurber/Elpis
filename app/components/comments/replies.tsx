@@ -32,6 +32,7 @@ class Replies extends Component<Props> {
   repliesLoop() {
     return (
       <FlatList
+        contentContainerStyle={{ paddingBottom: layout.spacingXL }}
         data={this.props.item.replies}
         keyExtractor={({ id }) => id}
         renderItem={({ item }) => <Reply item={item} />}
