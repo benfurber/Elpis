@@ -26,7 +26,7 @@
     "react-native-git-upgrade": "^0.2.7",
     "react-native-keyboard-aware-scroll-view": "^0.8.0",
     "react-native-vector-icons": "^6.4.2",
-    "react-navigation": "3.8.1"
+    "react-navigation": "3.9.1"
   },
   "devDependencies": {
     "@babel/core": "^7.4.3",
