@@ -1,43 +1,22 @@
 import React, { Component } from "react";
-import { Image, StyleSheet, Text, TouchableOpacity, View } from "react-native";
+import { Image, StyleSheet, Text, View } from "react-native";
+import { TouchableOpacity } from "react-native-gesture-handler";
 
 import { Title } from "components";
-import { Comment as CommentInterface, NavigationType } from "interfaces";
+import { Comment as CommentInterface } from "interfaces";
 import { colours, elements, layout, typography } from "styles";
 import { formatDate } from "utils";
 
-import { Replies } from "./replies";
-
 interface Props {
   item: CommentInterface;
-  navigation: NavigationType;
+  onPress: (number) => any;
 }
 
-interface State {
-  display: "comment" | "replies";
-}
-
-class Comment extends Component<Props, State> {
-  constructor(props) {
-    super(props);
-    this.state = {
-      display: "comment"
-    };
-  }
-
-  onPressComment = () => {
-    this.setState({ display: "comment" });
-  };
-
-  onPressReplies = () => {
-    this.setState({ display: "replies" });
-  };
-
-  renderComment() {
+class Comment extends Component<Props> {
+  render() {
     const { item } = this.props;
-
     return (
-      <TouchableOpacity onPress={this.onPressReplies}>
+      <TouchableOpacity onPress={() => this.props.onPress(item.id)}>
         <View style={styles.commentContainer}>
           <View style={styles.avatarContainer}>
             <View style={styles.badge}>
@@ -60,16 +39,6 @@ class Comment extends Component<Props, State> {
         </View>
       </TouchableOpacity>
     );
-  }
-
-  render() {
-    if (this.state.display === "replies") {
-      return (
-        <Replies item={this.props.item} onPressComment={this.onPressComment} />
-      );
-    }
-
-    return this.renderComment();
   }
 }
 

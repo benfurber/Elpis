@@ -3,6 +3,12 @@
 exports[`Comments<Comment> with replies renders correctly 1`] = `
 <TouchableOpacity
   activeOpacity={0.2}
+  delayLongPress={600}
+  extraButtonProps={
+    Object {
+      "rippleColor": "transparent",
+    }
+  }
   onPress={[Function]}
 >
   <View
@@ -109,6 +115,12 @@ exports[`Comments<Comment> with replies renders correctly 1`] = `
 exports[`Comments<Comment> without replies renders correctly 1`] = `
 <TouchableOpacity
   activeOpacity={0.2}
+  delayLongPress={600}
+  extraButtonProps={
+    Object {
+      "rippleColor": "transparent",
+    }
+  }
   onPress={[Function]}
 >
   <View

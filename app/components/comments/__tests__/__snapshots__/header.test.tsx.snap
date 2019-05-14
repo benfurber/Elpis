@@ -1,0 +1,35 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Comments<Header> with comments renders correctly 1`] = `
+<View
+  style={
+    Object {
+      "backgroundColor": "rgba(255, 255, 255, 0.85)",
+      "borderRadius": 5,
+      "margin": 10,
+      "padding": 10,
+    }
+  }
+>
+  <Title
+    text="Article description"
+  />
+</View>
+`;
+
+exports[`Comments<Header> without comments renders correctly 1`] = `
+<View
+  style={
+    Object {
+      "backgroundColor": "rgba(255, 255, 255, 0.85)",
+      "borderRadius": 5,
+      "margin": 10,
+      "padding": 10,
+    }
+  }
+>
+  <Title
+    text="A slightly longer article description"
+  />
+</View>
+`;

@@ -3,9 +3,15 @@
 exports[`Post when comments are set to display renders correctly 1`] = `
 <View
   style={
-    Object {
-      "marginBottom": 20,
-    }
+    Array [
+      Object {
+        "marginBottom": 20,
+      },
+      Object {
+        "alignItems": "stretch",
+        "height": "100%",
+      },
+    ]
   }
 >
   <Tabs
@@ -34,22 +40,18 @@ exports[`Post when comments are set to display renders correctly 1`] = `
     }
     description="A string"
   />
-  <Footer
-    avatarPath={
-      Object {
-        "testUri": "../../../app/assets/images/empower_two_women_logo.png",
-      }
-    }
-  />
 </View>
 `;
 
 exports[`Post when the body is set to display renders correctly 1`] = `
 <View
   style={
-    Object {
-      "marginBottom": 20,
-    }
+    Array [
+      Object {
+        "marginBottom": 20,
+      },
+      undefined,
+    ]
   }
 >
   <Tabs
@@ -57,31 +59,36 @@ exports[`Post when the body is set to display renders correctly 1`] = `
     onPressComments={[Function]}
     onPressPost={[Function]}
   />
-  <Body
-    date={2000-01-01T00:00:00.000Z}
-    description="A string"
-    imagePath={
-      Object {
-        "testUri": "../../../app/assets/images/image_post_1.jpg",
+  <View>
+    <Body
+      date={2000-01-01T00:00:00.000Z}
+      description="A string"
+      imagePath={
+        Object {
+          "testUri": "../../../app/assets/images/image_post_1.jpg",
+        }
       }
-    }
-  />
-  <Footer
-    avatarPath={
-      Object {
-        "testUri": "../../../app/assets/images/empower_two_women_logo.png",
+    />
+    <Footer
+      avatarPath={
+        Object {
+          "testUri": "../../../app/assets/images/empower_two_women_logo.png",
+        }
       }
-    }
-  />
+    />
+  </View>
 </View>
 `;
 
 exports[`Post when the body is set to display renders correctly if not description is provided 1`] = `
 <View
   style={
-    Object {
-      "marginBottom": 20,
-    }
+    Array [
+      Object {
+        "marginBottom": 20,
+      },
+      undefined,
+    ]
   }
 >
   <Tabs
@@ -89,21 +96,23 @@ exports[`Post when the body is set to display renders correctly if not descripti
     onPressComments={[Function]}
     onPressPost={[Function]}
   />
-  <Body
-    date={2000-01-01T00:00:00.000Z}
-    description={null}
-    imagePath={
-      Object {
-        "testUri": "../../../app/assets/images/image_post_1.jpg",
+  <View>
+    <Body
+      date={2000-01-01T00:00:00.000Z}
+      description={null}
+      imagePath={
+        Object {
+          "testUri": "../../../app/assets/images/image_post_1.jpg",
+        }
       }
-    }
-  />
-  <Footer
-    avatarPath={
-      Object {
-        "testUri": "../../../app/assets/images/empower_two_women_logo.png",
+    />
+    <Footer
+      avatarPath={
+        Object {
+          "testUri": "../../../app/assets/images/empower_two_women_logo.png",
+        }
       }
-    }
-  />
+    />
+  </View>
 </View>
 `;
