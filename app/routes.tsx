@@ -22,8 +22,8 @@ const FeedStack = createStackNavigator(
 );
 
 const RootStack = createSwitchNavigator({
-  Feed: FeedStack,
   Welcome: WelcomeScreen,
+  Feed: FeedStack,
 });
 
 export { RootStack };

@@ -7,17 +7,19 @@ import {
   TouchableOpacity,
 } from "react-native";
 
-import { colours } from "styles";
+import { colours, elements } from "styles";
 
-const CONSTANTS = {
+const labels = {
   email: "Email",
-  password: "Password",
+  login: "Entrar",
+  password: "Senha",
 };
 
 interface Props {
   navigation: any;
 }
 interface State {
+  display: "active" | "loading";
   email: string;
   password: string;
 }
@@ -26,22 +28,52 @@ class LoginForm extends Component<Props, State> {
   constructor(props) {
     super(props);
     this.state = {
+      display: "active",
       email: "",
       password: "",
     };
   }
 
-  render() {
-    const { navigation } = this.props;
-    const onPress = () => navigation.navigate("Feed");
+  onPress() {
+    this.setState({ display: "loading" });
+    this.props.navigation.navigate("Feed");
+  }
 
+  renderButton() {
+    if (this.state.display == "loading") {
+      return (
+        <View style={styles.row}>
+          <TouchableOpacity
+            style={styles.buttonLoading}
+            onPress={() => this.onPress()}
+            disabled
+          >
+            <Text style={styles.buttonText}>{labels.login}</Text>
+          </TouchableOpacity>
+        </View>
+      );
+    }
+
+    return (
+      <View style={styles.row}>
+        <TouchableOpacity
+          style={styles.buttonActive}
+          onPress={() => this.onPress()}
+        >
+          <Text style={styles.buttonText}>{labels.login}</Text>
+        </TouchableOpacity>
+      </View>
+    );
+  }
+
+  render() {
     return (
       <View style={styles.container}>
         <View style={styles.row}>
           <TextInput
             keyboardType="email-address"
             onChangeText={email => this.setState({ email })}
-            placeholder={CONSTANTS.email}
+            placeholder={labels.email}
             style={styles.input}
             textContentType="emailAddress"
             value={this.state.email}
@@ -50,30 +82,26 @@ class LoginForm extends Component<Props, State> {
         <View style={styles.row}>
           <TextInput
             onChangeText={password => this.setState({ password })}
-            placeholder={CONSTANTS.password}
+            placeholder={labels.password}
             secureTextEntry
             style={styles.input}
             textContentType="password"
             value={this.state.password}
           />
         </View>
-        <View style={styles.row}>
-          <TouchableOpacity style={styles.button} onPress={onPress}>
-            <Text style={styles.buttonText}>Login</Text>
-          </TouchableOpacity>
-        </View>
+        {this.renderButton()}
       </View>
     );
   }
 }
 
 const styles = StyleSheet.create({
-  button: {
-    backgroundColor: colours.emeraldGreen,
-    borderRadius: 100,
-    color: colours.pureWhite,
-    paddingHorizontal: 20,
-    paddingVertical: 10,
+  buttonActive: {
+    ...elements.button,
+  },
+  buttonLoading: {
+    ...elements.button,
+    backgroundColor: colours.lightGrey,
   },
   buttonText: {
     color: colours.pureWhite,

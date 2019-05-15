@@ -13,6 +13,12 @@ const elements = StyleSheet.create({
   standardText: {
     fontFamily: "Lato",
   },
+  button: {
+    backgroundColor: colours.emeraldGreen,
+    borderRadius: 100,
+    paddingHorizontal: 20,
+    paddingVertical: 10,
+  },
   textDate: {
     color: colours.darkGrey,
     fontStyle: "italic",

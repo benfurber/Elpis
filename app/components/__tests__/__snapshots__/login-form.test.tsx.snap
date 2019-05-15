@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`LoginForm renders correctly 1`] = `
+exports[`LoginForm when active renders correctly 1`] = `
 <View
   style={
     Object {
@@ -52,7 +52,7 @@ exports[`LoginForm renders correctly 1`] = `
     <TextInput
       allowFontScaling={true}
       onChangeText={[Function]}
-      placeholder="Password"
+      placeholder="Senha"
       rejectResponderTermination={true}
       secureTextEntry={true}
       style={
@@ -85,7 +85,6 @@ exports[`LoginForm renders correctly 1`] = `
         Object {
           "backgroundColor": "rgba(4, 71, 47, 0.75)",
           "borderRadius": 100,
-          "color": "rgb(255, 255, 255)",
           "paddingHorizontal": 20,
           "paddingVertical": 10,
         }
@@ -100,7 +99,114 @@ exports[`LoginForm renders correctly 1`] = `
           }
         }
       >
-        Login
+        Entrar
+      </Text>
+    </TouchableOpacity>
+  </View>
+</View>
+`;
+
+exports[`LoginForm when loading renders correctly 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "center",
+      "flex": 1,
+      "flexDirection": "column",
+      "justifyContent": "center",
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "flexDirection": "row",
+        "margin": 10,
+      }
+    }
+  >
+    <TextInput
+      allowFontScaling={true}
+      keyboardType="email-address"
+      onChangeText={[Function]}
+      placeholder="Email"
+      rejectResponderTermination={true}
+      style={
+        Object {
+          "backgroundColor": "rgb(255, 255, 255)",
+          "borderRadius": 5,
+          "flex": 2,
+          "height": 40,
+          "padding": 10,
+        }
+      }
+      textContentType="emailAddress"
+      underlineColorAndroid="transparent"
+      value=""
+    />
+  </View>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "flexDirection": "row",
+        "margin": 10,
+      }
+    }
+  >
+    <TextInput
+      allowFontScaling={true}
+      onChangeText={[Function]}
+      placeholder="Senha"
+      rejectResponderTermination={true}
+      secureTextEntry={true}
+      style={
+        Object {
+          "backgroundColor": "rgb(255, 255, 255)",
+          "borderRadius": 5,
+          "flex": 2,
+          "height": 40,
+          "padding": 10,
+        }
+      }
+      textContentType="password"
+      underlineColorAndroid="transparent"
+      value=""
+    />
+  </View>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "flexDirection": "row",
+        "margin": 10,
+      }
+    }
+  >
+    <TouchableOpacity
+      activeOpacity={0.2}
+      disabled={true}
+      onPress={[Function]}
+      style={
+        Object {
+          "backgroundColor": "rgba(51,51,51,0.25)",
+          "borderRadius": 100,
+          "paddingHorizontal": 20,
+          "paddingVertical": 10,
+        }
+      }
+    >
+      <Text
+        style={
+          Object {
+            "color": "rgb(255, 255, 255)",
+            "fontSize": 16,
+            "fontWeight": "bold",
+          }
+        }
+      >
+        Entrar
       </Text>
     </TouchableOpacity>
   </View>
