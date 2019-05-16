@@ -73,6 +73,10 @@
 		<string>Zocial.ttf</string>
 		<string>creteround-italic.ttf</string>
 		<string>creteround-regular.ttf</string>
+		<string>lato-bold.ttf</string>
+		<string>lato-bolditalic.ttf</string>
+		<string>lato-italic.ttf</string>
+		<string>lato-regular.ttf</string>
 	</array>
 </dict>
 </plist>

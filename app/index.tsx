@@ -1,11 +1,14 @@
 import React from "react";
 import { AppRegistry, StyleSheet } from "react-native";
 import { createAppContainer, SafeAreaView } from "react-navigation";
+import { setCustomText } from "react-native-global-props";
 
 import { RootStack } from "routes";
-import { colours } from "styles";
+import { colours, elements } from "styles";
 
 const AppContainer = createAppContainer(RootStack);
+
+setCustomText({ style: { ...elements.standardText } });
 
 const App = () => {
   return (
