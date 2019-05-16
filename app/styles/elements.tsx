@@ -10,6 +10,9 @@ const standard = StyleSheet.create({
 });
 
 const elements = StyleSheet.create({
+  standardText: {
+    fontFamily: "Lato"
+  },
   textDate: {
     color: colours.darkGrey,
     fontStyle: "italic"

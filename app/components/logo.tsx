@@ -22,6 +22,7 @@ const styles = StyleSheet.create({
     alignSelf: "flex-end",
     color: colours.darkGrey,
     flex: 1,
+    fontFamily: "Crete Round",
     fontSize: 40,
     margin: 10,
     textAlign: "center"
