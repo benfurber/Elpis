@@ -6,7 +6,7 @@ exports[`Logo renders correctly 1`] = `
     Object {
       "alignItems": "flex-end",
       "flex": 1,
-      "flexDirection": "column",
+      "flexDirection": "row",
     }
   }
 >
@@ -17,19 +17,35 @@ exports[`Logo renders correctly 1`] = `
         "alignSelf": "flex-end",
         "flex": 1,
         "flexDirection": "row",
+        "justifyContent": "center",
+        "marginBottom": 10,
         "width": "100%",
       }
     }
   >
+    <FlexImage
+      source={
+        Object {
+          "testUri": "../../../app/assets/images/logo.png",
+        }
+      }
+      style={
+        Object {
+          "borderRadius": 20,
+          "height": 40,
+          "overflow": "hidden",
+          "width": 40,
+        }
+      }
+    />
     <Text
       style={
         Object {
           "alignSelf": "flex-end",
           "color": "rgb(51, 51, 51)",
-          "flex": 1,
           "fontFamily": "Crete Round",
-          "fontSize": 40,
-          "margin": 10,
+          "fontSize": 32,
+          "marginLeft": 10,
           "textAlign": "center",
         }
       }
