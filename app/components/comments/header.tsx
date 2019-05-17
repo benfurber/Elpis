@@ -12,8 +12,6 @@ interface Props {
 }
 
 class Header extends Component<Props> {
-  renderDescription = () => {};
-
   render() {
     if (this.props.description) {
       return (
@@ -22,6 +20,8 @@ class Header extends Component<Props> {
         </View>
       );
     }
+
+    return null;
   }
 }
 
