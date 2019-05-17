@@ -44,6 +44,19 @@ const comment = {
   totalReplies: 2
 };
 
+const comment2 = {
+  author: {
+    avatarPath: require("assets/images/profile-pic-may.jpg"),
+    name: "Maynara II"
+  },
+  body: "Nunca mais voltou, pena que a violência só piorou.",
+  dateCreated: new Date("2019-02-01"),
+  id: "21100",
+  replies: [],
+  title: "",
+  totalReplies: 0
+};
+
 const posts = [
   {
     id: "98y723-23048-23480",
@@ -51,7 +64,7 @@ const posts = [
       avatarPath: require("assets/images/empower_two_women_logo.png"),
       name: "Empodere Duas Mulheres"
     },
-    comments: [comment],
+    comments: [comment, comment2],
     date: new Date("2018-02-17"),
     description:
       "Maju Coutinho estreia na bancada do Jornal Nacional \n\nMaria Júlia Coutinho estreou neste sábado, 16 de Fevereiro, como âncora do Jornal Nacional. O debute da primeira mulher negra na bancada do principal jornalístico da televisão brasileira rendeu elogios e muita comoção nas redes sociais.",

@@ -75,6 +75,20 @@ exports[`FeedScreen renders correctly 1`] = `
                 "title": "Meu pai fez o que ela mandou…",
                 "totalReplies": 2,
               },
+              Object {
+                "author": Object {
+                  "avatarPath": Object {
+                    "testUri": "../../../app/assets/images/profile-pic-may.jpg",
+                  },
+                  "name": "Maynara II",
+                },
+                "body": "Nunca mais voltou, pena que a violência só piorou.",
+                "dateCreated": 2019-02-01T00:00:00.000Z,
+                "id": "21100",
+                "replies": Array [],
+                "title": "",
+                "totalReplies": 0,
+              },
             ],
             "date": 2018-02-17T00:00:00.000Z,
             "description": "Maju Coutinho estreia na bancada do Jornal Nacional 
