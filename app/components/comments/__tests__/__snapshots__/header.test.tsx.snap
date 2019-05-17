@@ -33,3 +33,5 @@ exports[`Comments<Header> without comments renders correctly 1`] = `
   />
 </View>
 `;
+
+exports[`Comments<Header> without description renders correctly 1`] = `""`;
