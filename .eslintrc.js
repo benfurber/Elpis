@@ -2,14 +2,15 @@ module.exports = {
   extends: [
     "airbnb",
     "eslint:recommended",
-    "prettier",
+    "prettier/@typescript-eslint",
     "plugin:@typescript-eslint/recommended",
     "plugin:jest/recommended",
-    "plugin:react/recommended"
+    "plugin:react/recommended",
+    "plugin:prettier/recommended"
   ],
   parser: "@typescript-eslint/parser",
   parserOptions: {
-    ecmaVersion: 6,
+    ecmaVersion: 2018,
     sourceType: "module"
   },
   plugins: ["jest", "prettier", "react", "react-native"],
