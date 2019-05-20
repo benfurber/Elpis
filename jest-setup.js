@@ -11,9 +11,9 @@ Object.assign(NativeModules, {
     dropGestureHandler: jest.fn(),
     updateGestureHandler: jest.fn(),
     State: {},
-    Directions: {}
+    Directions: {},
   },
   PlatformConstants: {
-    forceTouchAvailable: false
-  }
+    forceTouchAvailable: false,
+  },
 });

@@ -18,7 +18,7 @@ describe("TextField", () => {
         onChangeText={() => jest.fn()}
         onSubmit={() => jest.fn()}
         value={value}
-      />
+      />,
     );
 
     expect(component).toMatchSnapshot();
@@ -36,7 +36,7 @@ describe("TextField", () => {
         onChangeText={() => jest.fn()}
         onSubmit={() => jest.fn()}
         value={value}
-      />
+      />,
     );
 
     const renderedChild = component.find(Text).shallow();

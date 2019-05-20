@@ -13,17 +13,17 @@ describe("Post", () => {
       const post = {
         author: {
           avatarPath: require("assets/images/empower_two_women_logo.png"),
-          name: "Empodere Duas Mulheres"
+          name: "Empodere Duas Mulheres",
         },
         comments: [],
         date: new Date("2000-01-01"),
         description: "A string",
         id: "10387-314fs-12asdbj",
-        imagePath: require("assets/images/image_post_1.jpg")
+        imagePath: require("assets/images/image_post_1.jpg"),
       };
       const setDisplay = "body";
       const component = shallow(
-        <Post post={post} navigation={navigation} setDisplay={setDisplay} />
+        <Post post={post} navigation={navigation} setDisplay={setDisplay} />,
       );
 
       expect(component).toMatchSnapshot();
@@ -33,13 +33,13 @@ describe("Post", () => {
       const post = {
         author: {
           avatarPath: require("assets/images/empower_two_women_logo.png"),
-          name: "Empodere Duas Mulheres"
+          name: "Empodere Duas Mulheres",
         },
         comments: [],
         date: new Date("2000-01-01"),
         description: null,
         id: "10387-314fs-12asdbj",
-        imagePath: require("assets/images/image_post_1.jpg")
+        imagePath: require("assets/images/image_post_1.jpg"),
       };
       const component = shallow(<Post post={post} navigation={navigation} />);
 
@@ -52,13 +52,13 @@ describe("Post", () => {
       const post = {
         author: {
           avatarPath: require("assets/images/empower_two_women_logo.png"),
-          name: "Empodere Duas Mulheres"
+          name: "Empodere Duas Mulheres",
         },
         comments: [
           {
             author: {
               avatarPath: require("assets/images/profile-pic-may.jpg"),
-              name: "May F"
+              name: "May F",
             },
             body:
               "Dá certo sim, o meu pai, por exemplo, fugiu quando eu tinha 5 anos e eu não faço ideia da onde ele esteja. Nunca mais voltou, pena que a violência só piorou.",
@@ -66,17 +66,17 @@ describe("Post", () => {
             id: "21097",
             replies: [],
             title: "Meu pai fez o que ela mandou…",
-            totalReplies: 0
-          }
+            totalReplies: 0,
+          },
         ],
         date: new Date("2000-01-01"),
         description: "A string",
         id: "10387-314fs-12asdbj",
-        imagePath: require("assets/images/image_post_1.jpg")
+        imagePath: require("assets/images/image_post_1.jpg"),
       };
       const setDisplay = "comments";
       const component = shallow(
-        <Post post={post} navigation={navigation} setDisplay={setDisplay} />
+        <Post post={post} navigation={navigation} setDisplay={setDisplay} />,
       );
 
       expect(component).toMatchSnapshot();

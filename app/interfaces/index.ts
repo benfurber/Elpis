@@ -10,16 +10,17 @@ export interface Comment {
   body: string;
   dateCreated: Date;
   id: string;
-  replies: Array<Reply> | [];
+  replies: Reply[] | [];
   title: string;
   totalReplies: number;
 }
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 export type NavigationType = NavigationScreenProp<any, any>;
 
 export interface Post {
   author: Author;
-  comments: Array<Comment> | [];
+  comments: Comment[] | [];
   date: Date;
   description: string | null;
   id: string;

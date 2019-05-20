@@ -6,7 +6,7 @@ const colours = {
   pureWhite: "rgb(255, 255, 255)",
   transparentBlue: "rgba(198, 213, 225, 0.75)",
   whiteTransparent: "rgba(255, 255, 255, 0.85)",
-  whiteTransparentHigh: "rgba(255, 255, 255, 0.60)"
+  whiteTransparentHigh: "rgba(255, 255, 255, 0.60)",
 };
 
 export { colours };

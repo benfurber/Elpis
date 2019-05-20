@@ -9,7 +9,7 @@ describe("Post<Footer>", () => {
     const component = shallow(
       <Footer
         avatarPath={require("assets/images/empower_two_women_logo.png")}
-      />
+      />,
     );
 
     expect(component).toMatchSnapshot();

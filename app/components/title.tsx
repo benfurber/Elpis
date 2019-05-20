@@ -5,7 +5,7 @@ import { layout, typography } from "styles";
 
 interface Props {
   small?: true;
-  style?: any;
+  style?: object;
   text: string;
 }
 
@@ -28,8 +28,8 @@ const styles = StyleSheet.create({
   title: {
     fontFamily: "Crete Round",
     fontWeight: "bold",
-    marginBottom: layout.spacingS
-  }
+    marginBottom: layout.spacingS,
+  },
 });
 
 export { Title };

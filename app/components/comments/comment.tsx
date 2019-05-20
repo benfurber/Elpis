@@ -9,7 +9,7 @@ import { formatDate } from "utils";
 
 interface Props {
   item: CommentInterface;
-  onPress: (number) => any;
+  onPress: (number) => void;
 }
 
 class Comment extends Component<Props> {
@@ -44,22 +44,22 @@ class Comment extends Component<Props> {
 
 const styles = StyleSheet.create({
   avatarContainer: {
-    width: 60
+    width: 60,
   },
   commentContainer: {
     alignItems: "stretch",
     flex: 1,
     flexDirection: "row",
-    margin: layout.spacing
+    margin: layout.spacing,
   },
   commentBodyContainer: {
     flex: 1,
     marginLeft: layout.spacing,
-    marginBottom: layout.spacing
+    marginBottom: layout.spacing,
   },
   commentDate: {
     marginBottom: layout.spacing,
-    ...elements.textDate
+    ...elements.textDate,
   },
   badge: {
     alignItems: "center",
@@ -71,16 +71,16 @@ const styles = StyleSheet.create({
     left: 35,
     position: "absolute",
     width: 22,
-    zIndex: 1
+    zIndex: 1,
   },
   badgeText: {
     color: colours.pureWhite,
-    fontSize: typography.fontSizeS
+    fontSize: typography.fontSizeS,
   },
   text: {
     flex: 1,
-    flexWrap: "nowrap"
-  }
+    flexWrap: "nowrap",
+  },
 });
 
 export { Comment };

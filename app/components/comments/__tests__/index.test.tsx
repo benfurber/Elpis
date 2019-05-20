@@ -13,7 +13,7 @@ describe("Comments", () => {
       const comment = {
         author: {
           avatarPath: require("assets/images/profile-pic-may.jpg"),
-          name: "May F"
+          name: "May F",
         },
         body:
           "Dá certo sim, o meu pai, por exemplo, fugiu quando eu tinha 5 anos e eu não faço ideia da onde ele esteja. Nunca mais voltou, pena que a violência só piorou.",
@@ -21,7 +21,7 @@ describe("Comments", () => {
         id: "21097",
         replies: [],
         title: "Meu pai fez o que ela mandou…",
-        totalReplies: 0
+        totalReplies: 0,
       };
 
       const component = shallow(
@@ -29,7 +29,7 @@ describe("Comments", () => {
           comments={[comment]}
           description={"A simple string"}
           navigation={navigation}
-        />
+        />,
       );
 
       expect(component).toMatchSnapshot();
@@ -43,7 +43,7 @@ describe("Comments", () => {
           comments={[]}
           description={"A simple string"}
           navigation={navigation}
-        />
+        />,
       );
 
       expect(component).toMatchSnapshot();

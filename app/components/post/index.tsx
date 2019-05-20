@@ -1,16 +1,15 @@
 import React, { Component } from "react";
 import { StyleSheet, Text, View } from "react-native";
-import { NavigationScreenProp } from "react-navigation";
 
 import { Comments } from "components";
-import { Post as PostInterface } from "interfaces";
+import { NavigationType, Post as PostInterface } from "interfaces";
 
 import { Body } from "./body";
 import { Footer } from "./footer";
 import { Tabs } from "./tabs";
 
 interface Props {
-  navigation: NavigationScreenProp<any, any>;
+  navigation: NavigationType;
   post: PostInterface;
   setDisplay?: string;
 }
@@ -24,7 +23,7 @@ class Post extends Component<Props, State> {
     super(props);
 
     this.state = {
-      display: "body"
+      display: "body",
     };
   }
 
@@ -44,7 +43,7 @@ class Post extends Component<Props, State> {
     const { navigation, post } = this.props;
     return navigation.navigate("Post", {
       post,
-      setDisplay: "comments"
+      setDisplay: "comments",
     });
   };
 
@@ -108,12 +107,12 @@ class Post extends Component<Props, State> {
 
 const styles = StyleSheet.create({
   container: {
-    marginBottom: 20
+    marginBottom: 20,
   },
   fullHeight: {
     alignItems: "stretch",
-    height: "100%"
-  }
+    height: "100%",
+  },
 });
 
 export { Post };

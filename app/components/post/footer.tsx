@@ -29,23 +29,23 @@ const styles = StyleSheet.create({
     overflow: "hidden",
     position: "absolute",
     top: -60,
-    width: 60
+    width: 60,
   },
   avatarContainer: {
     alignItems: "center",
     flex: 1,
-    flexDirection: "column"
+    flexDirection: "column",
   },
   followingContainer: {
     backgroundColor: colours.navyBlueDark,
     borderBottomLeftRadius: layout.borderRadius,
     borderBottomRightRadius: layout.borderRadius,
     flex: 1,
-    padding: layout.spacing * 2
+    padding: layout.spacing * 2,
   },
   footer: {
-    backgroundColor: colours.whiteTransparent
-  }
+    backgroundColor: colours.whiteTransparent,
+  },
 });
 
 export { Footer };

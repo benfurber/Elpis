@@ -10,16 +10,16 @@ describe("Comments<Header>", () => {
       const reply = {
         author: {
           avatarPath: require("assets/images/profile-pic-may.jpg"),
-          name: "Benita F"
+          name: "Benita F",
         },
         body: "Nao.",
         dateCreated: new Date("2019-01-01"),
-        id: "21097"
+        id: "21097",
       };
       const comment = {
         author: {
           avatarPath: require("assets/images/profile-pic-may.jpg"),
-          name: "May F"
+          name: "May F",
         },
         body:
           "Dá certo sim, o meu pai, por exemplo, fugiu quando eu tinha 5 anos e eu não faço ideia da onde ele esteja. Nunca mais voltou, pena que a violência só piorou.",
@@ -27,14 +27,14 @@ describe("Comments<Header>", () => {
         id: "21097",
         title: "Meu pai fez o que ela mandou…",
         totalReplies: 1,
-        replies: [reply]
+        replies: [reply],
       };
 
       const comments = [comment];
       const description = "Article description";
 
       const component = shallow(
-        <Header comments={comments} description={description} />
+        <Header comments={comments} description={description} />,
       );
 
       expect(component).toMatchSnapshot();
@@ -47,7 +47,7 @@ describe("Comments<Header>", () => {
       const description = "A slightly longer article description";
 
       const component = shallow(
-        <Header comments={comments} description={description} />
+        <Header comments={comments} description={description} />,
       );
 
       expect(component).toMatchSnapshot();
@@ -59,16 +59,16 @@ describe("Comments<Header>", () => {
       const reply = {
         author: {
           avatarPath: require("assets/images/profile-pic-may.jpg"),
-          name: "Benita F"
+          name: "Benita F",
         },
         body: "Nao.",
         dateCreated: new Date("2019-01-01"),
-        id: "21097"
+        id: "21097",
       };
       const comment = {
         author: {
           avatarPath: require("assets/images/profile-pic-may.jpg"),
-          name: "May F"
+          name: "May F",
         },
         body:
           "Dá certo sim, o meu pai, por exemplo, fugiu quando eu tinha 5 anos e eu não faço ideia da onde ele esteja. Nunca mais voltou, pena que a violência só piorou.",
@@ -76,13 +76,13 @@ describe("Comments<Header>", () => {
         id: "21097",
         title: "Meu pai fez o que ela mandou…",
         totalReplies: 1,
-        replies: [reply]
+        replies: [reply],
       };
 
       const comments = [comment];
 
       const component = shallow(
-        <Header comments={comments} description={null} />
+        <Header comments={comments} description={null} />,
       );
 
       expect(component).toMatchSnapshot();

@@ -1,10 +1,9 @@
 import React, { Component } from "react";
-import { FlatList, StyleSheet, View, ScrollView } from "react-native";
+import { StyleSheet, View, ScrollView } from "react-native";
 
-import { TextField, Title } from "components";
+import { TextField } from "components";
 import { NavigationType, Post } from "interfaces";
 import { colours, layout } from "styles";
-import { totalComments } from "utils";
 
 import { CommentsLoop } from "./comments-loop";
 import { Header } from "./header";
@@ -18,7 +17,7 @@ const labels = {
   reply: "Resposta",
   topics: "Tópicos",
   noComments: "Nenhum comentário ainda - faça o primeiro!",
-  noReplies: "Nenhuma resposta ainda - faça a primeira!"
+  noReplies: "Nenhuma resposta ainda - faça a primeira!",
 };
 
 interface Props {
@@ -37,13 +36,13 @@ class Comments extends Component<Props, State> {
     super(props);
     this.state = {
       textInput: "",
-      commentId: null
+      commentId: null,
     };
   }
 
-  setDisplay(commentId) {
+  setDisplay(commentId: string | null) {
     this.setState({
-      commentId
+      commentId,
     });
   }
 
@@ -149,25 +148,25 @@ const styles = StyleSheet.create({
     backgroundColor: colours.whiteTransparent,
     borderTopRightRadius: layout.borderRadius,
     flex: 1,
-    width: "100%"
+    width: "100%",
   },
   commentsHeadingContainer: {
     marginVertical: layout.spacingL,
-    marginHorizontal: layout.spacing
+    marginHorizontal: layout.spacing,
   },
   scrollView: {
-    paddingBottom: layout.spacingXL
+    paddingBottom: layout.spacingXL,
   },
   titleContainer: {
     backgroundColor: colours.whiteTransparent,
     borderRadius: layout.borderRadius,
     margin: layout.spacing,
-    padding: layout.spacing
+    padding: layout.spacing,
   },
   noComments: {
     paddingHorizontal: layout.spacing,
-    paddingVertical: layout.spacingL
-  }
+    paddingVertical: layout.spacingL,
+  },
 });
 
 export { Comments };

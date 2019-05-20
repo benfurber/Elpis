@@ -1,6 +1,6 @@
 import { Comment as CommentInterface } from "interfaces";
 
-type Comments = Array<CommentInterface> | [];
+type Comments = CommentInterface[] | [];
 
 const totalComments = (comments: Comments) => {
   let runningTotal = comments.length;

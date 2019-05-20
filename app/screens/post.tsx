@@ -52,8 +52,8 @@ const styles = StyleSheet.create({
   container: {
     backgroundColor: colours.transparentBlue,
     flex: 1,
-    flexDirection: "column"
-  }
+    flexDirection: "column",
+  },
 });
 
 export { PostScreen };
