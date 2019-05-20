@@ -7,7 +7,7 @@ const layout = {
   spacingS: base / 2,
   spacing: base,
   spacingL: base * 2,
-  spacingXL: base * 4
+  spacingXL: base * 4,
 };
 
 export { layout };

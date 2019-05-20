@@ -3,7 +3,7 @@ import { Image, StyleSheet, Text, View } from "react-native";
 
 import { Title } from "components";
 import { Reply as ReplyInterface } from "interfaces";
-import { colours, elements, layout, typography } from "styles";
+import { colours, elements, layout } from "styles";
 import { formatDate } from "utils";
 
 interface Props {
@@ -39,21 +39,21 @@ class Reply extends Component<Props> {
 
 const styles = StyleSheet.create({
   authorDetails: {
-    paddingLeft: layout.spacing
+    paddingLeft: layout.spacing,
   },
   body: {
-    paddingVertical: layout.spacing
+    paddingVertical: layout.spacing,
   },
   commentContainer: {
     borderBottomColor: colours.pureWhite,
     borderBottomWidth: 3,
-    margin: layout.spacing
+    margin: layout.spacing,
   },
   details: {
     alignItems: "center",
     flexDirection: "row",
-    paddingVertical: layout.spacing
-  }
+    paddingVertical: layout.spacing,
+  },
 });
 
 export { Reply };

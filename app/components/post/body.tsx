@@ -35,15 +35,15 @@ const styles = StyleSheet.create({
     backgroundColor: colours.whiteTransparent,
     borderTopRightRadius: layout.borderRadius,
     padding: layout.spacing,
-    width: "100%"
+    width: "100%",
   },
   text: {
-    marginVertical: 10
+    marginVertical: 10,
   },
   image: {
     borderRadius: layout.borderRadius,
-    overflow: "hidden"
-  }
+    overflow: "hidden",
+  },
 });
 
 export { Body };

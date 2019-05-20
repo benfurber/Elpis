@@ -28,14 +28,14 @@ class Header extends Component<Props> {
 const styles = StyleSheet.create({
   commentsHeadingContainer: {
     marginVertical: layout.spacingL,
-    marginHorizontal: layout.spacing
+    marginHorizontal: layout.spacing,
   },
   titleContainer: {
     backgroundColor: colours.whiteTransparent,
     borderRadius: layout.borderRadius,
     margin: layout.spacing,
-    padding: layout.spacing
-  }
+    padding: layout.spacing,
+  },
 });
 
 export { Header };

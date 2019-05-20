@@ -5,7 +5,7 @@ import {
   Text,
   TouchableOpacity,
   View,
-  FlatList
+  FlatList,
 } from "react-native";
 
 import { Title } from "components";
@@ -25,7 +25,7 @@ interface Props {
 
 const labels = {
   backButton: "Voltar aos Comentários",
-  replies: "respostas"
+  replies: "respostas",
 };
 
 class Replies extends Component<Props> {
@@ -114,30 +114,30 @@ const styles = StyleSheet.create({
   featured: {
     backgroundColor: colours.transparentBlue,
     marginBottom: layout.spacingL,
-    padding: layout.spacing
+    padding: layout.spacing,
   },
   featuredAuthorDetails: {
-    paddingLeft: layout.spacing
+    paddingLeft: layout.spacing,
   },
   featuredDetails: {
     alignItems: "center",
     flexDirection: "row",
-    marginBottom: layout.spacing
+    marginBottom: layout.spacing,
   },
   link: {
     fontStyle: "italic",
     marginHorizontal: layout.spacingS,
-    padding: layout.spacing
+    padding: layout.spacing,
   },
   smallTitle: {
-    fontSize: typography.fontSize
+    fontSize: typography.fontSize,
   },
   subHeading: {
     fontStyle: "italic",
     fontWeight: "bold",
     paddingHorizontal: layout.spacing,
-    paddingVertical: layout.spacingS
-  }
+    paddingVertical: layout.spacingS,
+  },
 });
 
 export { Replies };

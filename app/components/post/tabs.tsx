@@ -7,8 +7,8 @@ import { Icon } from "components";
 const iconSize = 30;
 
 interface Props {
-  onPressComments: () => any;
-  onPressPost: () => any;
+  onPressComments: () => void;
+  onPressPost: () => void;
   display: string;
 }
 
@@ -55,32 +55,32 @@ const tabs = {
   flex: 1,
   marginRight: 2,
   paddingHorizontal: 16,
-  paddingVertical: 8
+  paddingVertical: 8,
 };
 
 const styles = StyleSheet.create({
   iconCentre: {
-    alignSelf: "center"
+    alignSelf: "center",
   },
   iconRight: {
-    alignSelf: "flex-end"
+    alignSelf: "flex-end",
   },
   tabs: {
     alignContent: "center",
     alignItems: "center",
     flexDirection: "row",
-    width: "100%"
+    width: "100%",
   },
   tabSelected: {
-    backgroundColor: colours.whiteTransparent
+    backgroundColor: colours.whiteTransparent,
   },
   tabWithBackground: {
     ...tabs,
-    backgroundColor: colours.whiteTransparentHigh
+    backgroundColor: colours.whiteTransparentHigh,
   },
   tabWithoutBackground: {
-    ...tabs
-  }
+    ...tabs,
+  },
 });
 
 export { Tabs };

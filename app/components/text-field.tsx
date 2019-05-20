@@ -5,7 +5,7 @@ import {
   TextInput,
   View,
   KeyboardAvoidingView,
-  Platform
+  Platform,
 } from "react-native";
 import { TouchableOpacity } from "react-native-gesture-handler";
 
@@ -18,8 +18,8 @@ let textInputRef;
 interface Props {
   buttonText: string;
   inputText: string;
-  onChangeText: (string) => any;
-  onSubmit: () => any;
+  onChangeText: (string) => void;
+  onSubmit: () => void;
   value: string;
 }
 
@@ -66,20 +66,20 @@ const styles = StyleSheet.create({
     padding: layout.spacing,
     position: "absolute",
     left: layout.spacingS,
-    zIndex: 1
+    zIndex: 1,
   },
   buttonText: {
     color: colours.pureWhite,
-    fontWeight: "bold"
+    fontWeight: "bold",
   },
   commentsHeadingContainer: {
     marginVertical: layout.spacingL,
-    marginHorizontal: layout.spacing
+    marginHorizontal: layout.spacing,
   },
   textInput: {
     backgroundColor: colours.pureWhite,
     borderRadius: layout.borderRadius,
-    padding: layout.spacingS
+    padding: layout.spacingS,
   },
   textInputContainer: {
     backgroundColor: colours.transparentBlue,
@@ -87,8 +87,8 @@ const styles = StyleSheet.create({
     borderTopRightRadius: layout.borderRadius,
     minHeight: textInputHeight,
     padding: layout.spacing,
-    zIndex: 2
-  }
+    zIndex: 2,
+  },
 });
 
 export { TextField };

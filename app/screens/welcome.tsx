@@ -30,16 +30,16 @@ const styles = StyleSheet.create({
   container: {
     backgroundColor: colours.transparentBlue,
     flex: 1,
-    flexDirection: "column"
+    flexDirection: "column",
   },
   loginForm: {
     flex: 6,
-    alignItems: "center"
+    alignItems: "center",
   },
   logo: {
     flex: 1,
-    alignItems: "stretch"
-  }
+    alignItems: "stretch",
+  },
 });
 
 export { WelcomeScreen };

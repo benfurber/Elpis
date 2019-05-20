@@ -15,7 +15,7 @@ describe("Post<Tabs>", () => {
         onPressComments={onPressComments}
         onPressPost={onPressPost}
         display={display}
-      />
+      />,
     );
 
     expect(component).toMatchSnapshot();
@@ -31,7 +31,7 @@ describe("Post<Tabs>", () => {
         onPressComments={onPressComments}
         onPressPost={onPressPost}
         display={display}
-      />
+      />,
     );
 
     expect(component).toMatchSnapshot();

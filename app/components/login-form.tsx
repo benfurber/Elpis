@@ -4,14 +4,14 @@ import {
   TextInput,
   View,
   Text,
-  TouchableOpacity
+  TouchableOpacity,
 } from "react-native";
 
 import { colours } from "styles";
 
 const CONSTANTS = {
   email: "Email",
-  password: "Password"
+  password: "Password",
 };
 
 interface Props {
@@ -23,11 +23,11 @@ interface State {
 }
 
 class LoginForm extends Component<Props, State> {
-  constructor(props: Props, state: State) {
+  constructor(props) {
     super(props);
     this.state = {
       email: "",
-      password: ""
+      password: "",
     };
   }
 
@@ -73,34 +73,34 @@ const styles = StyleSheet.create({
     borderRadius: 100,
     color: colours.pureWhite,
     paddingHorizontal: 20,
-    paddingVertical: 10
+    paddingVertical: 10,
   },
   buttonText: {
     color: colours.pureWhite,
     fontSize: 16,
-    fontWeight: "bold"
+    fontWeight: "bold",
   },
   container: {
     alignItems: "center",
     flexDirection: "column",
     flex: 1,
-    justifyContent: "center"
+    justifyContent: "center",
   },
   label: {
-    flex: 1
+    flex: 1,
   },
   input: {
     backgroundColor: colours.pureWhite,
     borderRadius: 5,
     flex: 2,
     height: 40,
-    padding: 10
+    padding: 10,
   },
   row: {
     alignItems: "center",
     flexDirection: "row",
-    margin: 10
-  }
+    margin: 10,
+  },
 });
 
 export { LoginForm };

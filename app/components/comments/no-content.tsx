@@ -21,8 +21,8 @@ class NoContent extends Component<Props> {
 const styles = StyleSheet.create({
   container: {
     paddingHorizontal: layout.spacing,
-    paddingVertical: layout.spacingL
-  }
+    paddingVertical: layout.spacingL,
+  },
 });
 
 export { NoContent };

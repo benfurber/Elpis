@@ -3,27 +3,27 @@ import { createStackNavigator, createSwitchNavigator } from "react-navigation";
 import { FeedScreen, PostScreen, WelcomeScreen } from "screens";
 
 enum headerMode {
-  None = "none"
+  None = "none",
 }
 
 const stackConfig = {
-  headerMode: headerMode["None"]
+  headerMode: headerMode["None"],
 };
 
 const FeedStack = createStackNavigator(
   {
     Feed: FeedScreen,
-    Post: PostScreen
+    Post: PostScreen,
   },
   {
     initialRouteName: "Feed",
-    ...stackConfig
-  }
+    ...stackConfig,
+  },
 );
 
 const RootStack = createSwitchNavigator({
   Feed: FeedStack,
-  Welcome: WelcomeScreen
+  Welcome: WelcomeScreen,
 });
 
 export { RootStack };

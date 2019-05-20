@@ -11,14 +11,14 @@ import { Title } from "components";
 
 const labels = {
   comments: "Comentários",
-  topics: "Tópicos"
+  topics: "Tópicos",
 };
 
 interface Props {
   comments: Post["comments"];
   header: object;
   noComments: string;
-  onPress: (number) => any;
+  onPress: (number) => void;
 }
 
 class CommentsLoop extends Component<Props> {
@@ -71,18 +71,18 @@ class CommentsLoop extends Component<Props> {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    width: "100%"
+    width: "100%",
   },
   commentsHeadingContainer: {
     marginVertical: layout.spacingL,
-    marginHorizontal: layout.spacing
+    marginHorizontal: layout.spacing,
   },
   titleContainer: {
     backgroundColor: colours.whiteTransparent,
     borderRadius: layout.borderRadius,
     margin: layout.spacing,
-    padding: layout.spacing
-  }
+    padding: layout.spacing,
+  },
 });
 
 export { CommentsLoop };
