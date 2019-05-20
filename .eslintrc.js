@@ -1,33 +1,37 @@
 module.exports = {
   extends: [
-    "airbnb",
-    "eslint:recommended",
-    "prettier/@typescript-eslint",
     "plugin:@typescript-eslint/recommended",
     "plugin:jest/recommended",
+    "plugin:prettier/recommended",
     "plugin:react/recommended",
-    "plugin:prettier/recommended"
+    "prettier/@typescript-eslint",
   ],
   parser: "@typescript-eslint/parser",
   parserOptions: {
-    ecmaVersion: 2018,
-    sourceType: "module"
+    ecmaVersion: 2017,
+    sourceType: "module",
+    typescript: true,
   },
-  plugins: ["jest", "prettier", "react", "react-native"],
+  plugins: ["jest", "prettier", "react", "react-native", "@typescript-eslint"],
   rules: {
+    "@typescript-eslint/explicit-member-accessibility": "off",
+    "@typescript-eslint/explicit-function-return-type": "off",
+    "@typescript-eslint/no-use-before-define": "off",
     "@typescript-eslint/indent": ["error", 2],
     "import/prefer-default-export": false,
     indent: "off",
-    "no-extraneous-dependencies": false,
     "prettier/prettier": "error",
-    "react/jsx-filename-extension": [0]
+    "react/jsx-filename-extension": [0],
   },
   settings: {
     "import/resolver": {
-      "babel-module": {}
+      node: {
+        extensions: [".ts", ".tsx"],
+      },
+      "babel-module": {},
     },
     react: {
-      version: "detect"
-    }
-  }
+      version: "detect",
+    },
+  },
 };
