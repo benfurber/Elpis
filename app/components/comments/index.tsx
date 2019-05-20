@@ -40,7 +40,7 @@ class Comments extends Component<Props, State> {
     };
   }
 
-  setDisplay(commentId: string) {
+  setDisplay(commentId: string | null) {
     this.setState({
       commentId,
     });
