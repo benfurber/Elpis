@@ -1,9 +1,8 @@
 import React, { Component } from "react";
 import { StyleSheet, View } from "react-native";
 
-import { LoginForm, Logo } from "components";
+import { BackgroundContainer, LoginForm, Logo } from "components";
 import { NavigationType } from "interfaces";
-import { colours } from "styles";
 
 interface Props {
   navigation: NavigationType;
@@ -14,24 +13,19 @@ class WelcomeScreen extends Component<Props> {
     const { navigation } = this.props;
 
     return (
-      <View style={styles.container}>
+      <BackgroundContainer>
         <View style={styles.logo}>
           <Logo />
         </View>
         <View style={styles.loginForm}>
           <LoginForm navigation={navigation} />
         </View>
-      </View>
+      </BackgroundContainer>
     );
   }
 }
 
 const styles = StyleSheet.create({
-  container: {
-    backgroundColor: colours.transparentBlue,
-    flex: 1,
-    flexDirection: "column",
-  },
   loginForm: {
     flex: 6,
     alignItems: "center",

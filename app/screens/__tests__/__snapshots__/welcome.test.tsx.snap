@@ -1,15 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`WelcomeScreen renders correctly 1`] = `
-<View
-  style={
-    Object {
-      "backgroundColor": "rgba(198, 213, 225, 0.75)",
-      "flex": 1,
-      "flexDirection": "column",
-    }
-  }
->
+<BackgroundContainer>
   <View
     style={
       Object {
@@ -30,5 +22,5 @@ exports[`WelcomeScreen renders correctly 1`] = `
   >
     <LoginForm />
   </View>
-</View>
+</BackgroundContainer>
 `;
