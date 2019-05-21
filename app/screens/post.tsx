@@ -1,9 +1,7 @@
 import React, { Component } from "react";
-import { StyleSheet, View } from "react-native";
 
-import { Post } from "components";
+import { BackgroundContainer, Post } from "components";
 import { NavigationType } from "interfaces";
-import { colours } from "styles";
 
 interface Props {
   navigation: NavigationType;
@@ -37,23 +35,15 @@ class PostScreen extends Component<Props> {
 
   render() {
     return (
-      <View style={styles.container}>
+      <BackgroundContainer>
         <Post
           navigation={this.props.navigation}
           post={this.getParam("post")}
           setDisplay={this.getParam("setDisplay")}
         />
-      </View>
+      </BackgroundContainer>
     );
   }
 }
-
-const styles = StyleSheet.create({
-  container: {
-    backgroundColor: colours.transparentBlue,
-    flex: 1,
-    flexDirection: "column",
-  },
-});
 
 export { PostScreen };
