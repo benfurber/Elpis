@@ -1,0 +1,39 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Icon renders correctly 1`] = `
+<ImageBackground
+  source={
+    Object {
+      "testUri": "../../../app/assets/images/background.png",
+    }
+  }
+  style={
+    Object {
+      "backgroundColor": "rgba(198, 213, 225, 0.75)",
+      "height": "100%",
+      "width": "100%",
+    }
+  }
+>
+  <SafeAreaView
+    style={
+      Object {
+        "flex": 1,
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "flex": 1,
+          "flexDirection": "column",
+        }
+      }
+    >
+      <Text>
+        Any child component
+      </Text>
+    </View>
+  </SafeAreaView>
+</ImageBackground>
+`;
