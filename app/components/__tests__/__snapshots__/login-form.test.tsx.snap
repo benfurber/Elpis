@@ -69,40 +69,11 @@ exports[`LoginForm when active renders correctly 1`] = `
       value=""
     />
   </View>
-  <View
-    style={
-      Object {
-        "alignItems": "center",
-        "flexDirection": "row",
-        "margin": 10,
-      }
-    }
-  >
-    <TouchableOpacity
-      activeOpacity={0.2}
-      onPress={[Function]}
-      style={
-        Object {
-          "backgroundColor": "rgba(4, 71, 47, 0.75)",
-          "borderRadius": 100,
-          "paddingHorizontal": 20,
-          "paddingVertical": 10,
-        }
-      }
-    >
-      <Text
-        style={
-          Object {
-            "color": "rgb(255, 255, 255)",
-            "fontSize": 16,
-            "fontWeight": "bold",
-          }
-        }
-      >
-        Entrar
-      </Text>
-    </TouchableOpacity>
-  </View>
+  <ButtonSubmit
+    display="active"
+    label="Entrar"
+    onPress={[Function]}
+  />
 </View>
 `;
 
@@ -175,40 +146,10 @@ exports[`LoginForm when loading renders correctly 1`] = `
       value=""
     />
   </View>
-  <View
-    style={
-      Object {
-        "alignItems": "center",
-        "flexDirection": "row",
-        "margin": 10,
-      }
-    }
-  >
-    <TouchableOpacity
-      activeOpacity={0.2}
-      disabled={true}
-      onPress={[Function]}
-      style={
-        Object {
-          "backgroundColor": "rgba(51,51,51,0.25)",
-          "borderRadius": 100,
-          "paddingHorizontal": 20,
-          "paddingVertical": 10,
-        }
-      }
-    >
-      <Text
-        style={
-          Object {
-            "color": "rgb(255, 255, 255)",
-            "fontSize": 16,
-            "fontWeight": "bold",
-          }
-        }
-      >
-        Entrar
-      </Text>
-    </TouchableOpacity>
-  </View>
+  <ButtonSubmit
+    display="loading"
+    label="Entrar"
+    onPress={[Function]}
+  />
 </View>
 `;

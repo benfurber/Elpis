@@ -7,6 +7,7 @@ import {
   TouchableOpacity,
 } from "react-native";
 
+import { ButtonSubmit } from "components";
 import { colours, elements } from "styles";
 
 const labels = {
@@ -39,33 +40,6 @@ class LoginForm extends Component<Props, State> {
     this.props.navigation.navigate("Feed");
   }
 
-  renderButton() {
-    if (this.state.display == "loading") {
-      return (
-        <View style={styles.row}>
-          <TouchableOpacity
-            style={styles.buttonLoading}
-            onPress={() => this.onPress()}
-            disabled
-          >
-            <Text style={styles.buttonText}>{labels.login}</Text>
-          </TouchableOpacity>
-        </View>
-      );
-    }
-
-    return (
-      <View style={styles.row}>
-        <TouchableOpacity
-          style={styles.buttonActive}
-          onPress={() => this.onPress()}
-        >
-          <Text style={styles.buttonText}>{labels.login}</Text>
-        </TouchableOpacity>
-      </View>
-    );
-  }
-
   render() {
     return (
       <View style={styles.container}>
@@ -89,25 +63,17 @@ class LoginForm extends Component<Props, State> {
             value={this.state.password}
           />
         </View>
-        {this.renderButton()}
+        <ButtonSubmit
+          display={this.state.display}
+          label={labels.login}
+          onPress={() => this.onPress()}
+        />
       </View>
     );
   }
 }
 
 const styles = StyleSheet.create({
-  buttonActive: {
-    ...elements.button,
-  },
-  buttonLoading: {
-    ...elements.button,
-    backgroundColor: colours.lightGrey,
-  },
-  buttonText: {
-    color: colours.pureWhite,
-    fontSize: 16,
-    fontWeight: "bold",
-  },
   container: {
     alignItems: "center",
     flexDirection: "column",
