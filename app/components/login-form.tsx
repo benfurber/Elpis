@@ -41,10 +41,18 @@ class LoginForm extends Component<Props, State> {
   }
 
   render() {
+    const { display } = this.state;
+
+    const isEditable = {
+      active: true,
+      loading: false,
+    };
+
     return (
       <View style={styles.container}>
         <View style={styles.row}>
           <TextInput
+            editable={isEditable[display]}
             keyboardType="email-address"
             onChangeText={email => this.setState({ email })}
             placeholder={labels.email}
@@ -55,6 +63,7 @@ class LoginForm extends Component<Props, State> {
         </View>
         <View style={styles.row}>
           <TextInput
+            editable={isEditable[display]}
             onChangeText={password => this.setState({ password })}
             placeholder={labels.password}
             secureTextEntry
@@ -65,7 +74,7 @@ class LoginForm extends Component<Props, State> {
         </View>
         <View style={styles.row}>
           <ButtonSubmit
-            display={this.state.display}
+            display={display}
             label={labels.login}
             onPress={() => this.onPress()}
           />
