@@ -10,65 +10,43 @@ interface Props {
 }
 
 const ButtonSubmit = (props: Props) => {
-  if (props.display == "loading") {
-    return (
-      <View style={styles.row}>
-        <TouchableOpacity
-          style={styles.buttonLoading}
-          onPress={() => props.onPress()}
-          disabled
-        >
-          <Text style={styles.buttonText}>{props.label}</Text>
-        </TouchableOpacity>
-      </View>
-    );
-  }
+  const { display, label, onPress } = props;
+
+  const isDisabled = {
+    active: false,
+    loading: true,
+  };
 
   return (
-    <View style={styles.row}>
+    <View style={styles.container}>
       <TouchableOpacity
-        style={styles.buttonActive}
-        onPress={() => props.onPress()}
+        style={styles[display]}
+        onPress={() => onPress()}
+        disabled={isDisabled[display]}
       >
-        <Text style={styles.buttonText}>{props.label}</Text>
+        <Text style={styles.text}>{label}</Text>
       </TouchableOpacity>
     </View>
   );
 };
 
 const styles = StyleSheet.create({
-  buttonActive: {
+  active: {
     ...elements.button,
-  },
-  buttonLoading: {
-    ...elements.button,
-    backgroundColor: colours.lightGrey,
-  },
-  buttonText: {
-    color: colours.pureWhite,
-    fontSize: 16,
-    fontWeight: "bold",
   },
   container: {
     alignItems: "center",
-    flexDirection: "column",
-    flex: 1,
-    justifyContent: "center",
-  },
-  label: {
-    flex: 1,
-  },
-  input: {
-    backgroundColor: colours.pureWhite,
-    borderRadius: 5,
-    flex: 2,
-    height: 40,
-    padding: 10,
-  },
-  row: {
-    alignItems: "center",
     flexDirection: "row",
     margin: 10,
+  },
+  loading: {
+    ...elements.button,
+    backgroundColor: colours.lightGrey,
+  },
+  text: {
+    color: colours.pureWhite,
+    fontSize: 16,
+    fontWeight: "bold",
   },
 });
 

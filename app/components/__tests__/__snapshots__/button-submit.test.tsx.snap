@@ -12,6 +12,7 @@ exports[`ButtonSubmit When active renders correctly 1`] = `
 >
   <TouchableOpacity
     activeOpacity={0.2}
+    disabled={false}
     onPress={[Function]}
     style={
       Object {
