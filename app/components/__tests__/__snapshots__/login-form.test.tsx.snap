@@ -69,11 +69,21 @@ exports[`LoginForm when active renders correctly 1`] = `
       value=""
     />
   </View>
-  <ButtonSubmit
-    display="active"
-    label="Entrar"
-    onPress={[Function]}
-  />
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "flexDirection": "row",
+        "margin": 10,
+      }
+    }
+  >
+    <ButtonSubmit
+      display="active"
+      label="Entrar"
+      onPress={[Function]}
+    />
+  </View>
 </View>
 `;
 
@@ -146,10 +156,20 @@ exports[`LoginForm when loading renders correctly 1`] = `
       value=""
     />
   </View>
-  <ButtonSubmit
-    display="loading"
-    label="Entrar"
-    onPress={[Function]}
-  />
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "flexDirection": "row",
+        "margin": 10,
+      }
+    }
+  >
+    <ButtonSubmit
+      display="loading"
+      label="Entrar"
+      onPress={[Function]}
+    />
+  </View>
 </View>
 `;

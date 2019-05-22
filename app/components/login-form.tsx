@@ -63,11 +63,13 @@ class LoginForm extends Component<Props, State> {
             value={this.state.password}
           />
         </View>
-        <ButtonSubmit
-          display={this.state.display}
-          label={labels.login}
-          onPress={() => this.onPress()}
-        />
+        <View style={styles.row}>
+          <ButtonSubmit
+            display={this.state.display}
+            label={labels.login}
+            onPress={() => this.onPress()}
+          />
+        </View>
       </View>
     );
   }

@@ -18,7 +18,7 @@ const ButtonSubmit = (props: Props) => {
   };
 
   return (
-    <View style={styles.container}>
+    <View>
       <TouchableOpacity
         style={styles[display]}
         onPress={() => onPress()}
@@ -33,11 +33,6 @@ const ButtonSubmit = (props: Props) => {
 const styles = StyleSheet.create({
   active: {
     ...elements.button,
-  },
-  container: {
-    alignItems: "center",
-    flexDirection: "row",
-    margin: 10,
   },
   loading: {
     ...elements.button,
