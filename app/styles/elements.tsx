@@ -41,6 +41,13 @@ const elements = StyleSheet.create({
     height: 60,
     width: 60,
   },
+  textInputForm: {
+    backgroundColor: colours.pureWhite,
+    borderRadius: 5,
+    flex: 1,
+    height: 40,
+    padding: 10,
+  },
 });
 
 export { elements };

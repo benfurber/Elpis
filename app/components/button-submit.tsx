@@ -4,7 +4,7 @@ import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
 import { colours, elements } from "styles";
 
 interface Props {
-  display: "active" | "loading";
+  display: "active" | "error" | "loading";
   label: string;
   onPress: () => void;
 }
@@ -14,6 +14,7 @@ const ButtonSubmit = (props: Props) => {
 
   const isDisabled = {
     active: false,
+    error: false,
     loading: true,
   };
 
@@ -32,6 +33,9 @@ const ButtonSubmit = (props: Props) => {
 
 const styles = StyleSheet.create({
   active: {
+    ...elements.button,
+  },
+  error: {
     ...elements.button,
   },
   loading: {
