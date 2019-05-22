@@ -1,15 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`ButtonSubmit When active renders correctly 1`] = `
-<View
-  style={
-    Object {
-      "alignItems": "center",
-      "flexDirection": "row",
-      "margin": 10,
-    }
-  }
->
+<View>
   <TouchableOpacity
     activeOpacity={0.2}
     disabled={false}
@@ -39,15 +31,7 @@ exports[`ButtonSubmit When active renders correctly 1`] = `
 `;
 
 exports[`ButtonSubmit When loading renders correctly 1`] = `
-<View
-  style={
-    Object {
-      "alignItems": "center",
-      "flexDirection": "row",
-      "margin": 10,
-    }
-  }
->
+<View>
   <TouchableOpacity
     activeOpacity={0.2}
     disabled={true}
