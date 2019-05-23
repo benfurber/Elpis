@@ -53,7 +53,6 @@ const mainTabs = createBottomTabNavigator(
 const RootStack = createSwitchNavigator({
   Main: mainTabs,
   Welcome: WelcomeScreen,
-  Feed: FeedStack,
 });
 
 export { RootStack };
