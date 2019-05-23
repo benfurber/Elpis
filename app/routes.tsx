@@ -6,10 +6,11 @@ import {
 } from "react-navigation";
 
 import { Icon } from "components";
-import { FeedScreen, PostScreen, WelcomeScreen } from "screens";
+import { FeedScreen, FeedbackScreen, PostScreen, WelcomeScreen } from "screens";
 
 const routeNameIcon = {
   Feed: "newspaper",
+  Feedback: "wpforms",
 };
 
 enum headerMode {
@@ -34,6 +35,7 @@ const FeedStack = createStackNavigator(
 const mainTabs = createBottomTabNavigator(
   {
     Feed: FeedStack,
+    Feedback: FeedbackScreen,
   },
   {
     defaultNavigationOptions: ({ navigation }) => ({
