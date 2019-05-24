@@ -140,33 +140,6 @@ exports[`Comments<Comment> without replies renders correctly 1`] = `
         }
       }
     >
-      <View
-        style={
-          Object {
-            "alignItems": "center",
-            "backgroundColor": "rgb(45, 82, 113)",
-            "borderRadius": 11,
-            "flexDirection": "column",
-            "height": 22,
-            "justifyContent": "center",
-            "left": 35,
-            "position": "absolute",
-            "width": 22,
-            "zIndex": 1,
-          }
-        }
-      >
-        <Text
-          style={
-            Object {
-              "color": "rgb(255, 255, 255)",
-              "fontSize": 14,
-            }
-          }
-        >
-          0
-        </Text>
-      </View>
       <View>
         <Image
           source={
