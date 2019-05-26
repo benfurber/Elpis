@@ -12,46 +12,59 @@ exports[`OnboardingScreen renders correctly 1`] = `
         "flexDirection": "row",
         "height": "100%",
         "marginTop": 20,
-        "padding": 40,
         "width": "100%",
       }
     }
   >
-    <View
-      style={
-        Object {
-          "paddingBottom": 40,
-        }
-      }
+    <Pages
+      horizontal={true}
+      indicatorColor="rgb(255, 255, 255)"
+      indicatorOpacity={0.3}
+      pagingEnabled={true}
+      rtl={false}
+      scrollEventThrottle={30}
+      scrollsToTop={false}
+      showsHorizontalScrollIndicator={false}
+      showsVerticalScrollIndicator={false}
+      startPage={0}
     >
-      <Title
+      <View
         style={
           Object {
-            "fontSize": 30,
-            "paddingBottom": 20,
-          }
-        }
-        text="Bem vinda à Elpis,  [user.firstName]"
-      />
-      <Text
-        style={
-          Object {
-            "paddingBottom": 20,
+            "flex": 1,
+            "padding": 40,
           }
         }
       >
-        Lots of words here. 
-      </Text>
-      <Title
-        style={
-          Object {
-            "fontWeight": "normal",
-            "paddingBottom": 20,
+        <Title
+          style={
+            Object {
+              "fontSize": 30,
+              "paddingBottom": 20,
+            }
           }
-        }
-        text="May"
-      />
-    </View>
+          text="Bem vinda à Elpis,  [user.firstName]"
+        />
+        <Text
+          style={
+            Object {
+              "paddingBottom": 20,
+            }
+          }
+        >
+          Lots of words here. 
+        </Text>
+        <Title
+          style={
+            Object {
+              "fontWeight": "normal",
+              "paddingBottom": 20,
+            }
+          }
+          text="May"
+        />
+      </View>
+    </Pages>
   </View>
 </BackgroundContainer>
 `;

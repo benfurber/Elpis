@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import { StyleSheet, Text, View } from "react-native";
 
+import { Pages } from "react-native-pages";
+
 import { BackgroundContainer, Title } from "components";
 import { NavigationType } from "interfaces";
 import { colours, layout, typography } from "styles";
@@ -15,20 +17,26 @@ interface Props {
 }
 
 class OnboardingScreen extends Component<Props> {
+  welcomePage() {
+    return (
+      <View style={styles.content}>
+        <Title
+          style={styles.title}
+          text={`${labels.welcomeTitle} [user.firstName]`}
+        />
+        <Text style={styles.text}>{labels.welcomeText}</Text>
+        <Title style={styles.signature} text="May" />
+      </View>
+    );
+  }
+
   render() {
     const { navigation } = this.props;
 
     return (
       <BackgroundContainer>
         <View style={styles.container}>
-          <View style={styles.content}>
-            <Title
-              style={styles.title}
-              text={`${labels.welcomeTitle} [user.firstName]`}
-            />
-            <Text style={styles.text}>{labels.welcomeText}</Text>
-            <Title style={styles.signature} text="May" />
-          </View>
+          <Pages>{this.welcomePage()}</Pages>
         </View>
       </BackgroundContainer>
     );
@@ -45,10 +53,10 @@ const styles = StyleSheet.create({
     width: "100%",
     height: "100%",
     marginTop: layout.spacingL,
-    padding: layout.spacingXL,
   },
   content: {
-    paddingBottom: layout.spacingXL,
+    flex: 1,
+    padding: layout.spacingXL,
   },
   signature: {
     fontWeight: "normal",
