@@ -5,11 +5,9 @@ exports[`OnboardingScreen renders correctly 1`] = `
   <View
     style={
       Object {
-        "alignItems": "center",
         "backgroundColor": "rgba(255, 255, 255, 0.60)",
         "borderTopLeftRadius": 10,
         "borderTopRightRadius": 10,
-        "flexDirection": "row",
         "height": "100%",
         "marginTop": 20,
         "width": "100%",
@@ -17,6 +15,12 @@ exports[`OnboardingScreen renders correctly 1`] = `
     }
   >
     <Pages
+      containerStyle={
+        Object {
+          "alignItems": "center",
+          "flexDirection": "row",
+        }
+      }
       horizontal={true}
       indicatorColor="rgb(255, 255, 255)"
       indicatorOpacity={0.3}
@@ -57,11 +61,60 @@ exports[`OnboardingScreen renders correctly 1`] = `
         <Title
           style={
             Object {
+              "fontStyle": "italic",
               "fontWeight": "normal",
               "paddingBottom": 20,
             }
           }
           text="May"
+        />
+      </View>
+      <View
+        style={
+          Object {
+            "flex": 1,
+            "padding": 40,
+          }
+        }
+      >
+        <Title
+          style={
+            Object {
+              "fontSize": 30,
+              "paddingBottom": 20,
+            }
+          }
+          text="Please complete your profile"
+        />
+      </View>
+      <View
+        style={
+          Object {
+            "flex": 1,
+            "padding": 40,
+          }
+        }
+      >
+        <Title
+          style={
+            Object {
+              "fontSize": 30,
+              "paddingBottom": 20,
+            }
+          }
+          text="Please complete your profile"
+        />
+        <Title
+          style={
+            Object {
+              "fontStyle": "italic",
+              "fontWeight": "normal",
+              "paddingBottom": 20,
+            }
+          }
+          text="Please remember to provide as much feedback as you can.
+
+We won’t be able to build something great unless you tell us what you think."
         />
       </View>
     </Pages>

@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { StyleSheet, Text, View } from "react-native";
+import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
 
 import { Pages } from "react-native-pages";
 
@@ -8,6 +8,12 @@ import { NavigationType } from "interfaces";
 import { colours, layout, typography } from "styles";
 
 const labels = {
+  formTitle: "Please complete your profile",
+  thankYouText:
+    "Please remember to provide as much feedback as you can.\r\r" +
+    "We won’t be able to build something great unless you tell us what you think.",
+  thankYouTitle: "Please complete your profile",
+  welcomeButton: "Next",
   welcomeTitle: "Bem vinda à Elpis, ",
   welcomeText: "Lots of words here. ",
 };
@@ -17,6 +23,25 @@ interface Props {
 }
 
 class OnboardingScreen extends Component<Props> {
+  completeProfilePage() {
+    const { navigation } = this.props;
+
+    return (
+      <View style={styles.content}>
+        <Title style={styles.title} text={labels.formTitle} />
+      </View>
+    );
+  }
+
+  thankYouPage() {
+    return (
+      <View style={styles.content}>
+        <Title style={styles.title} text={labels.thankYouTitle} />
+        <Title style={styles.subtitle} text={labels.thankYouText} />
+      </View>
+    );
+  }
+
   welcomePage() {
     return (
       <View style={styles.content}>
@@ -25,18 +50,20 @@ class OnboardingScreen extends Component<Props> {
           text={`${labels.welcomeTitle} [user.firstName]`}
         />
         <Text style={styles.text}>{labels.welcomeText}</Text>
-        <Title style={styles.signature} text="May" />
+        <Title style={styles.subtitle} text="May" />
       </View>
     );
   }
 
   render() {
-    const { navigation } = this.props;
-
     return (
       <BackgroundContainer>
         <View style={styles.container}>
-          <Pages>{this.welcomePage()}</Pages>
+          <Pages containerStyle={styles.pages}>
+            {this.welcomePage()}
+            {this.completeProfilePage()}
+            {this.thankYouPage()}
+          </Pages>
         </View>
       </BackgroundContainer>
     );
@@ -44,12 +71,14 @@ class OnboardingScreen extends Component<Props> {
 }
 
 const styles = StyleSheet.create({
+  buttonText: {
+    alignSelf: "center",
+    color: colours.pureWhite,
+  },
   container: {
-    alignItems: "center",
     backgroundColor: colours.whiteTransparentHigh,
     borderTopLeftRadius: layout.borderRadiusL,
     borderTopRightRadius: layout.borderRadiusL,
-    flexDirection: "row",
     width: "100%",
     height: "100%",
     marginTop: layout.spacingL,
@@ -58,7 +87,12 @@ const styles = StyleSheet.create({
     flex: 1,
     padding: layout.spacingXL,
   },
-  signature: {
+  pages: {
+    alignItems: "center",
+    flexDirection: "row",
+  },
+  subtitle: {
+    fontStyle: "italic",
     fontWeight: "normal",
     paddingBottom: layout.spacingL,
   },
