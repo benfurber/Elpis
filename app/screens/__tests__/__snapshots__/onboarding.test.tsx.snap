@@ -1,0 +1,57 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`OnboardingScreen renders correctly 1`] = `
+<BackgroundContainer>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "rgba(255, 255, 255, 0.60)",
+        "borderTopLeftRadius": 10,
+        "borderTopRightRadius": 10,
+        "flexDirection": "row",
+        "height": "100%",
+        "marginTop": 20,
+        "padding": 40,
+        "width": "100%",
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "paddingBottom": 40,
+        }
+      }
+    >
+      <Title
+        style={
+          Object {
+            "fontSize": 30,
+            "paddingBottom": 20,
+          }
+        }
+        text="Bem vinda à Elpis,  [user.firstName]"
+      />
+      <Text
+        style={
+          Object {
+            "paddingBottom": 20,
+          }
+        }
+      >
+        Lots of words here. 
+      </Text>
+      <Title
+        style={
+          Object {
+            "fontWeight": "normal",
+            "paddingBottom": 20,
+          }
+        }
+        text="May"
+      />
+    </View>
+  </View>
+</BackgroundContainer>
+`;
