@@ -44,10 +44,11 @@ exports[`OnboardingScreen renders correctly 1`] = `
           Object {
             "alignItems": "center",
             "flexDirection": "column",
+            "marginBottom": 40,
           }
         }
         horizontal={true}
-        indicatorColor="rgb(255, 255, 255)"
+        indicatorColor="rgba(4, 71, 47, 0.75)"
         indicatorOpacity={0.3}
         pagingEnabled={true}
         rtl={false}
@@ -187,7 +188,7 @@ exports[`OnboardingScreen renders correctly 1`] = `
           >
             <ButtonSubmit
               display="active"
-              label="Next"
+              label="Submit"
               onPress={[Function]}
             />
           </View>

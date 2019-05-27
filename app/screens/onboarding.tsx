@@ -79,7 +79,7 @@ class OnboardingScreen extends Component<Props, State> {
         <View style={styles.row}>
           <ButtonSubmit
             display={"active"}
-            label={labels.welcomeButton}
+            label={labels.formButton}
             onPress={() => this.nextPage(2)}
           />
         </View>
@@ -137,7 +137,11 @@ class OnboardingScreen extends Component<Props, State> {
           style={styles.containerHand}
         >
           <View style={styles.container}>
-            <Pages containerStyle={styles.pages} ref={this.updateRef}>
+            <Pages
+              containerStyle={styles.pages}
+              indicatorColor={colours.emeraldGreen}
+              ref={this.updateRef}
+            >
               {this.welcomePage()}
               {this.completeProfilePage()}
               {this.thankYouPage()}
@@ -190,6 +194,7 @@ const styles = StyleSheet.create({
   pages: {
     alignItems: "center",
     flexDirection: "column",
+    marginBottom: layout.spacingXL,
   },
   row: {
     alignItems: "baseline",
