@@ -2,122 +2,244 @@
 
 exports[`OnboardingScreen renders correctly 1`] = `
 <BackgroundContainer>
-  <View
+  <ImageBackground
+    imageStyle={
+      Object {
+        "bottom": 0,
+        "flex": 1,
+        "height": 340,
+        "left": -10,
+        "opacity": 0.2,
+        "width": 360,
+      }
+    }
+    source={
+      Object {
+        "testUri": "../../../app/assets/images/hand.png",
+      }
+    }
     style={
       Object {
-        "backgroundColor": "rgba(255, 255, 255, 0.60)",
-        "borderTopLeftRadius": 10,
-        "borderTopRightRadius": 10,
+        "alignItems": "flex-end",
+        "flexDirection": "column-reverse",
         "height": "100%",
-        "marginTop": 20,
         "width": "100%",
       }
     }
   >
-    <Pages
-      containerStyle={
+    <View
+      style={
         Object {
-          "alignItems": "center",
-          "flexDirection": "row",
+          "backgroundColor": "rgba(255, 255, 255, 0.60)",
+          "borderTopLeftRadius": 10,
+          "borderTopRightRadius": 10,
+          "height": "100%",
+          "marginTop": 20,
+          "width": "100%",
         }
       }
-      horizontal={true}
-      indicatorColor="rgb(255, 255, 255)"
-      indicatorOpacity={0.3}
-      pagingEnabled={true}
-      rtl={false}
-      scrollEventThrottle={30}
-      scrollsToTop={false}
-      showsHorizontalScrollIndicator={false}
-      showsVerticalScrollIndicator={false}
-      startPage={0}
     >
-      <View
-        style={
+      <Pages
+        containerStyle={
           Object {
-            "flex": 1,
-            "padding": 40,
+            "alignItems": "center",
+            "flexDirection": "column",
           }
         }
+        horizontal={true}
+        indicatorColor="rgb(255, 255, 255)"
+        indicatorOpacity={0.3}
+        pagingEnabled={true}
+        rtl={false}
+        scrollEventThrottle={30}
+        scrollsToTop={false}
+        showsHorizontalScrollIndicator={false}
+        showsVerticalScrollIndicator={false}
+        startPage={0}
       >
-        <Title
+        <View
           style={
             Object {
-              "fontSize": 30,
-              "paddingBottom": 20,
-            }
-          }
-          text="Bem vinda à Elpis,  [user.firstName]"
-        />
-        <Text
-          style={
-            Object {
-              "paddingBottom": 20,
+              "flex": 1,
+              "padding": 40,
+              "paddingTop": 80,
             }
           }
         >
-          Lots of words here. 
-        </Text>
-        <Title
+          <Image
+            source={
+              Object {
+                "testUri": "../../../app/assets/images/profile-pic-may.jpg",
+              }
+            }
+            style={
+              Object {
+                "backgroundColor": "rgba(4, 71, 47, 0.75)",
+                "borderColor": "rgb(45, 82, 113)",
+                "borderRadius": 30,
+                "borderWidth": 4,
+                "height": 60,
+                "marginBottom": 20,
+                "overflow": "hidden",
+                "width": 60,
+              }
+            }
+          />
+          <Title
+            style={
+              Object {
+                "fontSize": 30,
+                "paddingBottom": 20,
+              }
+            }
+            text="Bem vinda à Elpis,  [user.firstName]"
+          />
+          <Text
+            style={
+              Object {
+                "paddingBottom": 20,
+              }
+            }
+          >
+            Lots of words here. 
+          </Text>
+          <Title
+            style={
+              Object {
+                "fontStyle": "italic",
+                "fontWeight": "normal",
+                "paddingBottom": 20,
+              }
+            }
+            text="May"
+          />
+          <View
+            style={
+              Object {
+                "alignItems": "baseline",
+                "flexDirection": "row-reverse",
+                "marginBottom": 20,
+              }
+            }
+          >
+            <ButtonSubmit
+              display="active"
+              label="Next"
+              onPress={[Function]}
+            />
+          </View>
+        </View>
+        <View
           style={
             Object {
-              "fontStyle": "italic",
-              "fontWeight": "normal",
-              "paddingBottom": 20,
+              "flex": 1,
+              "padding": 40,
+              "paddingTop": 80,
             }
           }
-          text="May"
-        />
-      </View>
-      <View
-        style={
-          Object {
-            "flex": 1,
-            "padding": 40,
-          }
-        }
-      >
-        <Title
+        >
+          <Title
+            style={
+              Object {
+                "fontSize": 30,
+                "paddingBottom": 20,
+              }
+            }
+            text="Please complete your profile"
+          />
+          <View
+            style={
+              Object {
+                "alignItems": "baseline",
+                "flexDirection": "row-reverse",
+                "marginBottom": 20,
+              }
+            }
+          >
+            <TextInput
+              allowFontScaling={true}
+              onChangeText={[Function]}
+              placeholder="Set password"
+              rejectResponderTermination={true}
+              secureTextEntry={true}
+              style={
+                Object {
+                  "backgroundColor": "rgb(255, 255, 255)",
+                  "borderRadius": 5,
+                  "flex": 1,
+                  "height": 40,
+                  "padding": 10,
+                }
+              }
+              textContentType="password"
+              underlineColorAndroid="transparent"
+              value=""
+            />
+          </View>
+          <View
+            style={
+              Object {
+                "alignItems": "baseline",
+                "flexDirection": "row-reverse",
+                "marginBottom": 20,
+              }
+            }
+          >
+            <ButtonSubmit
+              display="active"
+              label="Next"
+              onPress={[Function]}
+            />
+          </View>
+        </View>
+        <View
           style={
             Object {
-              "fontSize": 30,
-              "paddingBottom": 20,
+              "flex": 1,
+              "padding": 40,
+              "paddingTop": 80,
             }
           }
-          text="Please complete your profile"
-        />
-      </View>
-      <View
-        style={
-          Object {
-            "flex": 1,
-            "padding": 40,
-          }
-        }
-      >
-        <Title
-          style={
-            Object {
-              "fontSize": 30,
-              "paddingBottom": 20,
+        >
+          <Title
+            style={
+              Object {
+                "fontSize": 30,
+                "paddingBottom": 20,
+              }
             }
-          }
-          text="Please complete your profile"
-        />
-        <Title
-          style={
-            Object {
-              "fontStyle": "italic",
-              "fontWeight": "normal",
-              "paddingBottom": 20,
+            text="Please complete your profile"
+          />
+          <Title
+            style={
+              Object {
+                "fontStyle": "italic",
+                "fontWeight": "normal",
+                "paddingBottom": 20,
+              }
             }
-          }
-          text="Please remember to provide as much feedback as you can.
+            text="Please remember to provide as much feedback as you can.
 
 We won’t be able to build something great unless you tell us what you think."
-        />
-      </View>
-    </Pages>
-  </View>
+          />
+          <View
+            style={
+              Object {
+                "alignItems": "baseline",
+                "flexDirection": "row-reverse",
+                "marginBottom": 20,
+              }
+            }
+          >
+            <ButtonSubmit
+              display="active"
+              label="Enter"
+              onPress={[Function]}
+            />
+          </View>
+        </View>
+      </Pages>
+    </View>
+  </ImageBackground>
 </BackgroundContainer>
 `;

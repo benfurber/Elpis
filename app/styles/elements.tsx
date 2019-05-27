@@ -3,6 +3,13 @@ import { StyleSheet } from "react-native";
 import { colours } from "styles";
 
 const standard = StyleSheet.create({
+  basicInputField: {
+    backgroundColor: colours.pureWhite,
+    borderRadius: 5,
+    flex: 1,
+    height: 40,
+    padding: 10,
+  },
   image: {
     backgroundColor: colours.emeraldGreen,
     overflow: "hidden",
@@ -41,12 +48,15 @@ const elements = StyleSheet.create({
     height: 60,
     width: 60,
   },
-  textInputForm: {
-    backgroundColor: colours.pureWhite,
-    borderRadius: 5,
-    flex: 1,
-    height: 40,
-    padding: 10,
+  textInputField: standard.basicInputField,
+  textInputFieldError: {
+    ...standard.basicInputField,
+    borderColor: colours.red,
+    borderWidth: 2,
+  },
+  textInputFieldLoading: {
+    ...standard.basicInputField,
+    backgroundColor: colours.lightGrey,
   },
 });
 

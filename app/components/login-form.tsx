@@ -116,16 +116,13 @@ const styles = StyleSheet.create({
     padding: layout.spacing,
   },
   inputActive: {
-    ...elements.textInputForm,
+    ...elements.textInputField,
   },
   inputError: {
-    ...elements.textInputForm,
-    borderColor: colours.red,
-    borderWidth: 2,
+    ...elements.textInputFieldError,
   },
   inputLoading: {
-    ...elements.textInputForm,
-    backgroundColor: colours.lightGrey,
+    ...elements.textInputFieldLoading,
   },
   row: {
     alignItems: "center",
