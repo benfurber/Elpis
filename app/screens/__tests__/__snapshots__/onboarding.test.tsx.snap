@@ -130,69 +130,9 @@ exports[`OnboardingScreen renders correctly 1`] = `
             />
           </View>
         </View>
-        <View
-          style={
-            Object {
-              "flex": 1,
-              "padding": 40,
-              "paddingTop": 80,
-            }
-          }
-        >
-          <Title
-            style={
-              Object {
-                "fontSize": 30,
-                "paddingBottom": 20,
-              }
-            }
-            text="Please complete your profile"
-          />
-          <View
-            style={
-              Object {
-                "alignItems": "baseline",
-                "flexDirection": "row-reverse",
-                "marginBottom": 20,
-              }
-            }
-          >
-            <TextInput
-              allowFontScaling={true}
-              onChangeText={[Function]}
-              placeholder="Set password"
-              rejectResponderTermination={true}
-              secureTextEntry={true}
-              style={
-                Object {
-                  "backgroundColor": "rgb(255, 255, 255)",
-                  "borderRadius": 5,
-                  "flex": 1,
-                  "height": 40,
-                  "padding": 10,
-                }
-              }
-              textContentType="password"
-              underlineColorAndroid="transparent"
-              value=""
-            />
-          </View>
-          <View
-            style={
-              Object {
-                "alignItems": "baseline",
-                "flexDirection": "row-reverse",
-                "marginBottom": 20,
-              }
-            }
-          >
-            <ButtonSubmit
-              display="active"
-              label="Submit"
-              onPress={[Function]}
-            />
-          </View>
-        </View>
+        <FormCompleteProfile
+          onPress={[Function]}
+        />
         <View
           style={
             Object {

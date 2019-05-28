@@ -1,16 +1,14 @@
 import React, { Component } from "react";
-import {
-  Image,
-  ImageBackground,
-  StyleSheet,
-  Text,
-  TextInput,
-  View,
-} from "react-native";
+import { Image, ImageBackground, StyleSheet, Text, View } from "react-native";
 
 import { Pages } from "react-native-pages";
 
-import { BackgroundContainer, ButtonSubmit, Title } from "components";
+import {
+  BackgroundContainer,
+  ButtonSubmit,
+  FormCompleteProfile,
+  Title,
+} from "components";
 import { NavigationType } from "interfaces";
 import { colours, elements, layout, typography } from "styles";
 
@@ -25,7 +23,6 @@ const labels = {
     "Please remember to provide as much feedback as you can.\r\r" +
     "We won’t be able to build something great unless you tell us what you think.",
   thankYouTitle: "Please complete your profile",
-  password: "Set password",
   welcomeButton: "Next",
   welcomeTitle: "Bem vinda à Elpis, ",
   welcomeText: "Lots of words here. ",
@@ -45,9 +42,6 @@ class OnboardingScreen extends Component<Props, State> {
   constructor(props) {
     super(props);
     this.updateRef = this.updateRef.bind(this);
-    this.state = {
-      password: "",
-    };
   }
 
   updateRef(ref) {
@@ -61,30 +55,7 @@ class OnboardingScreen extends Component<Props, State> {
   }
 
   completeProfilePage() {
-    return (
-      <View style={styles.content}>
-        <Title style={styles.title} text={labels.formTitle} />
-
-        <View style={styles.row}>
-          <TextInput
-            onChangeText={password => this.setState({ password })}
-            placeholder={labels.password}
-            secureTextEntry
-            style={elements.textInputField}
-            textContentType="password"
-            value={this.state.password}
-          />
-        </View>
-
-        <View style={styles.row}>
-          <ButtonSubmit
-            display={"active"}
-            label={labels.formButton}
-            onPress={() => this.nextPage(2)}
-          />
-        </View>
-      </View>
-    );
+    return <FormCompleteProfile onPress={() => this.nextPage(2)} />;
   }
 
   thankYouPage() {
