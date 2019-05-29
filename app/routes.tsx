@@ -1,6 +1,17 @@
-import { createStackNavigator, createSwitchNavigator } from "react-navigation";
+import React from "react";
+import {
+  createBottomTabNavigator,
+  createStackNavigator,
+  createSwitchNavigator,
+} from "react-navigation";
 
-import { FeedScreen, PostScreen, WelcomeScreen } from "screens";
+import { Icon } from "components";
+import { FeedScreen, FeedbackScreen, PostScreen, WelcomeScreen } from "screens";
+
+const routeNameIcon = {
+  Feed: "newspaper",
+  Feedback: "wpforms",
+};
 
 enum headerMode {
   None = "none",
@@ -21,9 +32,27 @@ const FeedStack = createStackNavigator(
   },
 );
 
+const mainTabs = createBottomTabNavigator(
+  {
+    Feed: FeedStack,
+    Feedback: FeedbackScreen,
+  },
+  {
+    defaultNavigationOptions: ({ navigation }) => ({
+      tabBarIcon: (
+        <Icon name={routeNameIcon[navigation.state.routeName]} size={35} />
+      ),
+    }),
+    tabBarOptions: {
+      showLabel: false,
+      style: { borderTopWidth: 0 },
+    },
+  },
+);
+
 const RootStack = createSwitchNavigator({
+  Main: mainTabs,
   Welcome: WelcomeScreen,
-  Feed: FeedStack,
 });
 
 export { RootStack };

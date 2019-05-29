@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FeedbackScreen renders correctly 1`] = `
+<BackgroundContainer>
+  <WebView
+    cacheEnabled={true}
+    originWhitelist={
+      Array [
+        "http://*",
+        "https://*",
+      ]
+    }
+    source={
+      Object {
+        "uri": "https://docs.google.com/forms/d/e/1FAIpQLSezsowKLfZuZ3gZdmzo2azQ1Mx7gyrY8X3CLzfHrQhCVipXUQ/viewform?usp=sf_link",
+      }
+    }
+    useSharedProcessPool={true}
+    useWebKit={true}
+  />
+</BackgroundContainer>
+`;

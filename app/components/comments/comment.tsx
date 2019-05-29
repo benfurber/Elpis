@@ -13,15 +13,24 @@ interface Props {
 }
 
 class Comment extends Component<Props> {
+  renderBadge() {
+    const { totalReplies } = this.props.item;
+    if (totalReplies > 0) {
+      return (
+        <View style={styles.badge}>
+          <Text style={styles.badgeText}>{totalReplies}</Text>
+        </View>
+      );
+    }
+  }
+
   render() {
     const { item } = this.props;
     return (
       <TouchableOpacity onPress={() => this.props.onPress(item.id)}>
         <View style={styles.commentContainer}>
           <View style={styles.avatarContainer}>
-            <View style={styles.badge}>
-              <Text style={styles.badgeText}>{item.totalReplies}</Text>
-            </View>
+            {this.renderBadge()}
             <View>
               <Image
                 source={item.author.avatarPath}
