@@ -21,23 +21,11 @@ exports[`LoginForm when active renders correctly 1`] = `
     }
   >
     <TextInput
-      allowFontScaling={true}
-      editable={true}
+      displayStyle="active"
       keyboardType="email-address"
       onChangeText={[Function]}
       placeholder="Email"
-      rejectResponderTermination={true}
-      style={
-        Object {
-          "backgroundColor": "rgb(255, 255, 255)",
-          "borderRadius": 5,
-          "flex": 1,
-          "height": 40,
-          "padding": 10,
-        }
-      }
       textContentType="emailAddress"
-      underlineColorAndroid="transparent"
       value=""
     />
   </View>
@@ -51,23 +39,11 @@ exports[`LoginForm when active renders correctly 1`] = `
     }
   >
     <TextInput
-      allowFontScaling={true}
-      editable={true}
+      displayStyle="active"
       onChangeText={[Function]}
       placeholder="Senha"
-      rejectResponderTermination={true}
       secureTextEntry={true}
-      style={
-        Object {
-          "backgroundColor": "rgb(255, 255, 255)",
-          "borderRadius": 5,
-          "flex": 1,
-          "height": 40,
-          "padding": 10,
-        }
-      }
       textContentType="password"
-      underlineColorAndroid="transparent"
       value=""
     />
   </View>
@@ -110,23 +86,11 @@ exports[`LoginForm when loading renders correctly 1`] = `
     }
   >
     <TextInput
-      allowFontScaling={true}
-      editable={false}
+      displayStyle="loading"
       keyboardType="email-address"
       onChangeText={[Function]}
       placeholder="Email"
-      rejectResponderTermination={true}
-      style={
-        Object {
-          "backgroundColor": "rgba(51,51,51,0.25)",
-          "borderRadius": 5,
-          "flex": 1,
-          "height": 40,
-          "padding": 10,
-        }
-      }
       textContentType="emailAddress"
-      underlineColorAndroid="transparent"
       value=""
     />
   </View>
@@ -140,23 +104,11 @@ exports[`LoginForm when loading renders correctly 1`] = `
     }
   >
     <TextInput
-      allowFontScaling={true}
-      editable={false}
+      displayStyle="loading"
       onChangeText={[Function]}
       placeholder="Senha"
-      rejectResponderTermination={true}
       secureTextEntry={true}
-      style={
-        Object {
-          "backgroundColor": "rgba(51,51,51,0.25)",
-          "borderRadius": 5,
-          "flex": 1,
-          "height": 40,
-          "padding": 10,
-        }
-      }
       textContentType="password"
-      underlineColorAndroid="transparent"
       value=""
     />
   </View>
@@ -230,25 +182,11 @@ exports[`LoginForm when there's an error renders correctly 1`] = `
     }
   >
     <TextInput
-      allowFontScaling={true}
-      editable={true}
+      displayStyle="error"
       keyboardType="email-address"
       onChangeText={[Function]}
       placeholder="Email"
-      rejectResponderTermination={true}
-      style={
-        Object {
-          "backgroundColor": "rgb(255, 255, 255)",
-          "borderColor": "rgb(208, 2, 27)",
-          "borderRadius": 5,
-          "borderWidth": 2,
-          "flex": 1,
-          "height": 40,
-          "padding": 10,
-        }
-      }
       textContentType="emailAddress"
-      underlineColorAndroid="transparent"
       value=""
     />
   </View>
@@ -262,25 +200,11 @@ exports[`LoginForm when there's an error renders correctly 1`] = `
     }
   >
     <TextInput
-      allowFontScaling={true}
-      editable={true}
+      displayStyle="error"
       onChangeText={[Function]}
       placeholder="Senha"
-      rejectResponderTermination={true}
       secureTextEntry={true}
-      style={
-        Object {
-          "backgroundColor": "rgb(255, 255, 255)",
-          "borderColor": "rgb(208, 2, 27)",
-          "borderRadius": 5,
-          "borderWidth": 2,
-          "flex": 1,
-          "height": 40,
-          "padding": 10,
-        }
-      }
       textContentType="password"
-      underlineColorAndroid="transparent"
       value=""
     />
   </View>

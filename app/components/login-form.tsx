@@ -1,8 +1,8 @@
 import React, { Component } from "react";
-import { StyleSheet, TextInput, View, Text } from "react-native";
+import { StyleSheet, View, Text } from "react-native";
 
-import { ButtonSubmit } from "components";
-import { colours, elements, layout } from "styles";
+import { ButtonSubmit, TextInput } from "components";
+import { colours, layout } from "styles";
 
 const labels = {
   email: "Email",
@@ -53,39 +53,25 @@ class LoginForm extends Component<Props, State> {
   render() {
     const { display } = this.state;
 
-    const isEditable = {
-      active: true,
-      error: true,
-      loading: false,
-    };
-
-    const styleDisplay = {
-      active: styles.inputActive,
-      error: styles.inputError,
-      loading: styles.inputLoading,
-    };
-
     return (
       <View style={styles.container}>
         {this.renderErrorMessage()}
         <View style={styles.row}>
           <TextInput
-            editable={isEditable[display]}
+            displayStyle={display}
             keyboardType="email-address"
             onChangeText={email => this.setState({ email })}
             placeholder={labels.email}
-            style={styleDisplay[display]}
             textContentType="emailAddress"
             value={this.state.email}
           />
         </View>
         <View style={styles.row}>
           <TextInput
-            editable={isEditable[display]}
+            displayStyle={display}
             onChangeText={password => this.setState({ password })}
             placeholder={labels.password}
             secureTextEntry
-            style={styleDisplay[display]}
             textContentType="password"
             value={this.state.password}
           />
@@ -114,15 +100,6 @@ const styles = StyleSheet.create({
     borderRadius: layout.borderRadius,
     flex: 1,
     padding: layout.spacing,
-  },
-  inputActive: {
-    ...elements.textInputField,
-  },
-  inputError: {
-    ...elements.textInputFieldError,
-  },
-  inputLoading: {
-    ...elements.textInputFieldLoading,
   },
   row: {
     alignItems: "center",
