@@ -1,24 +1,22 @@
 import React, { Component } from "react";
-import {
-  StyleSheet,
-  TextInput,
-  View,
-  Text,
-  TouchableOpacity,
-} from "react-native";
+import { StyleSheet, TextInput, View, Text } from "react-native";
 
-import { colours } from "styles";
+import { ButtonSubmit } from "components";
+import { colours, elements, layout } from "styles";
 
-const CONSTANTS = {
+const labels = {
   email: "Email",
-  password: "Password",
+  login: "Entrar",
+  password: "Senha",
 };
 
 interface Props {
   navigation: any;
 }
 interface State {
+  display: "active" | "error" | "loading";
   email: string;
+  errorMessage: null | string;
   password: string;
 }
 
@@ -26,41 +24,78 @@ class LoginForm extends Component<Props, State> {
   constructor(props) {
     super(props);
     this.state = {
+      display: "active",
       email: "",
+      errorMessage: null,
       password: "",
     };
   }
 
+  onPress() {
+    this.setState({ display: "loading" });
+    this.props.navigation.navigate("Feed");
+  }
+
+  renderErrorMessage() {
+    const { display, errorMessage } = this.state;
+
+    if (display === "error" && errorMessage) {
+      return (
+        <View style={styles.row}>
+          <View style={styles.containerErrorMessage}>
+            <Text style={styles.textErrorMessage}>{errorMessage}</Text>
+          </View>
+        </View>
+      );
+    }
+  }
+
   render() {
-    const { navigation } = this.props;
-    const onPress = () => navigation.navigate("Feed");
+    const { display } = this.state;
+
+    const isEditable = {
+      active: true,
+      error: true,
+      loading: false,
+    };
+
+    const styleDisplay = {
+      active: styles.inputActive,
+      error: styles.inputError,
+      loading: styles.inputLoading,
+    };
 
     return (
       <View style={styles.container}>
+        {this.renderErrorMessage()}
         <View style={styles.row}>
           <TextInput
+            editable={isEditable[display]}
             keyboardType="email-address"
             onChangeText={email => this.setState({ email })}
-            placeholder={CONSTANTS.email}
-            style={styles.input}
+            placeholder={labels.email}
+            style={styleDisplay[display]}
             textContentType="emailAddress"
             value={this.state.email}
           />
         </View>
         <View style={styles.row}>
           <TextInput
+            editable={isEditable[display]}
             onChangeText={password => this.setState({ password })}
-            placeholder={CONSTANTS.password}
+            placeholder={labels.password}
             secureTextEntry
-            style={styles.input}
+            style={styleDisplay[display]}
             textContentType="password"
             value={this.state.password}
           />
         </View>
         <View style={styles.row}>
-          <TouchableOpacity style={styles.button} onPress={onPress}>
-            <Text style={styles.buttonText}>Login</Text>
-          </TouchableOpacity>
+          <ButtonSubmit
+            display={display}
+            label={labels.login}
+            onPress={() => this.onPress()}
+          />
         </View>
       </View>
     );
@@ -68,38 +103,38 @@ class LoginForm extends Component<Props, State> {
 }
 
 const styles = StyleSheet.create({
-  button: {
-    backgroundColor: colours.emeraldGreen,
-    borderRadius: 100,
-    color: colours.pureWhite,
-    paddingHorizontal: 20,
-    paddingVertical: 10,
-  },
-  buttonText: {
-    color: colours.pureWhite,
-    fontSize: 16,
-    fontWeight: "bold",
-  },
   container: {
     alignItems: "center",
     flexDirection: "column",
     flex: 1,
     justifyContent: "center",
   },
-  label: {
+  containerErrorMessage: {
+    backgroundColor: colours.redTransparent,
+    borderRadius: layout.borderRadius,
     flex: 1,
+    padding: layout.spacing,
   },
-  input: {
-    backgroundColor: colours.pureWhite,
-    borderRadius: 5,
-    flex: 2,
-    height: 40,
-    padding: 10,
+  inputActive: {
+    ...elements.textInputForm,
+  },
+  inputError: {
+    ...elements.textInputForm,
+    borderColor: colours.red,
+    borderWidth: 2,
+  },
+  inputLoading: {
+    ...elements.textInputForm,
+    backgroundColor: colours.lightGrey,
   },
   row: {
     alignItems: "center",
     flexDirection: "row",
     margin: 10,
+  },
+  textErrorMessage: {
+    alignSelf: "center",
+    color: colours.pureWhite,
   },
 });
 

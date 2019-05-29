@@ -1,0 +1,61 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ButtonSubmit When active renders correctly 1`] = `
+<View>
+  <TouchableOpacity
+    activeOpacity={0.2}
+    disabled={false}
+    onPress={[Function]}
+    style={
+      Object {
+        "backgroundColor": "rgba(4, 71, 47, 0.75)",
+        "borderRadius": 100,
+        "paddingHorizontal": 20,
+        "paddingVertical": 10,
+      }
+    }
+  >
+    <Text
+      style={
+        Object {
+          "color": "rgb(255, 255, 255)",
+          "fontSize": 16,
+          "fontWeight": "bold",
+        }
+      }
+    >
+      Submit
+    </Text>
+  </TouchableOpacity>
+</View>
+`;
+
+exports[`ButtonSubmit When loading renders correctly 1`] = `
+<View>
+  <TouchableOpacity
+    activeOpacity={0.2}
+    disabled={true}
+    onPress={[Function]}
+    style={
+      Object {
+        "backgroundColor": "rgba(51,51,51,0.25)",
+        "borderRadius": 100,
+        "paddingHorizontal": 20,
+        "paddingVertical": 10,
+      }
+    }
+  >
+    <Text
+      style={
+        Object {
+          "color": "rgb(255, 255, 255)",
+          "fontSize": 16,
+          "fontWeight": "bold",
+        }
+      }
+    >
+      Submit
+    </Text>
+  </TouchableOpacity>
+</View>
+`;

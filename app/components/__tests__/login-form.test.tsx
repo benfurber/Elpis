@@ -7,9 +7,34 @@ import { LoginForm } from "components";
 const navigation = { navigate: jest.fn() };
 
 describe("LoginForm", () => {
-  it("renders correctly", () => {
-    const component = shallow(<LoginForm navigation={navigation} />);
+  describe("when active", () => {
+    it("renders correctly", () => {
+      const component = shallow(<LoginForm navigation={navigation} />);
 
-    expect(component).toMatchSnapshot();
+      expect(component).toMatchSnapshot();
+    });
+  });
+
+  describe("when loading", () => {
+    it("renders correctly", () => {
+      const component = shallow(<LoginForm navigation={navigation} />);
+
+      component.setState({ display: "loading" });
+
+      expect(component).toMatchSnapshot();
+    });
+  });
+
+  describe("when there's an error", () => {
+    it("renders correctly", () => {
+      const component = shallow(<LoginForm navigation={navigation} />);
+
+      component.setState({
+        display: "error",
+        errorMessage: "PANIC! There's a problem!",
+      });
+
+      expect(component).toMatchSnapshot();
+    });
   });
 });
