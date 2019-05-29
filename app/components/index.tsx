@@ -6,5 +6,6 @@ export { Icon } from "./icon";
 export { LoginForm } from "./login-form";
 export { Logo } from "./logo";
 export { TextField } from "./text-field";
+export { TextInput } from "./text-input";
 export { Title } from "./title";
 export { Post } from "./post";
