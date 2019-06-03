@@ -2,14 +2,16 @@ import "react-native";
 import React from "react";
 import { shallow } from "enzyme";
 
-import { OnboardingScreen } from "screens";
+import { OnboardingCompleteProfileScreen } from "screens";
 
 let navigation;
 jest.mock(navigation, () => jest.fn());
 
-describe("OnboardingScreen", () => {
+describe("OnboardingCompleteProfileScreen", () => {
   it("renders correctly", () => {
-    const component = shallow(<OnboardingScreen navigation={navigation} />);
+    const component = shallow(
+      <OnboardingCompleteProfileScreen navigation={navigation} />,
+    );
 
     expect(component).toMatchSnapshot();
   });

@@ -28,23 +28,12 @@ exports[`LoginForm when active renders correctly 1`] = `
       }
     }
   >
-    <TextInput
-      allowFontScaling={true}
+    <NewTextInput
+      displayStyle="active"
       onChangeText={[Function]}
       placeholder="Set password"
-      rejectResponderTermination={true}
       secureTextEntry={true}
-      style={
-        Object {
-          "backgroundColor": "rgb(255, 255, 255)",
-          "borderRadius": 5,
-          "flex": 1,
-          "height": 40,
-          "padding": 10,
-        }
-      }
       textContentType="password"
-      underlineColorAndroid="transparent"
       value=""
     />
   </View>
@@ -57,23 +46,12 @@ exports[`LoginForm when active renders correctly 1`] = `
       }
     }
   >
-    <TextInput
-      allowFontScaling={true}
+    <NewTextInput
+      displayStyle="active"
       onChangeText={[Function]}
       placeholder="Repeat password"
-      rejectResponderTermination={true}
       secureTextEntry={true}
-      style={
-        Object {
-          "backgroundColor": "rgb(255, 255, 255)",
-          "borderRadius": 5,
-          "flex": 1,
-          "height": 40,
-          "padding": 10,
-        }
-      }
       textContentType="password"
-      underlineColorAndroid="transparent"
       value=""
     />
   </View>
@@ -123,23 +101,12 @@ exports[`LoginForm when passwords match renders correctly 1`] = `
       }
     }
   >
-    <TextInput
-      allowFontScaling={true}
+    <NewTextInput
+      displayStyle="active"
       onChangeText={[Function]}
       placeholder="Set password"
-      rejectResponderTermination={true}
       secureTextEntry={true}
-      style={
-        Object {
-          "backgroundColor": "rgb(255, 255, 255)",
-          "borderRadius": 5,
-          "flex": 1,
-          "height": 40,
-          "padding": 10,
-        }
-      }
       textContentType="password"
-      underlineColorAndroid="transparent"
       value="s3cure"
     />
   </View>
@@ -152,23 +119,12 @@ exports[`LoginForm when passwords match renders correctly 1`] = `
       }
     }
   >
-    <TextInput
-      allowFontScaling={true}
+    <NewTextInput
+      displayStyle="active"
       onChangeText={[Function]}
       placeholder="Repeat password"
-      rejectResponderTermination={true}
       secureTextEntry={true}
-      style={
-        Object {
-          "backgroundColor": "rgb(255, 255, 255)",
-          "borderRadius": 5,
-          "flex": 1,
-          "height": 40,
-          "padding": 10,
-        }
-      }
       textContentType="password"
-      underlineColorAndroid="transparent"
       value="s3cure"
     />
   </View>
@@ -218,23 +174,12 @@ exports[`LoginForm when there's an error renders correctly 1`] = `
       }
     }
   >
-    <TextInput
-      allowFontScaling={true}
+    <NewTextInput
+      displayStyle="error"
       onChangeText={[Function]}
       placeholder="Set password"
-      rejectResponderTermination={true}
       secureTextEntry={true}
-      style={
-        Object {
-          "backgroundColor": "rgb(255, 255, 255)",
-          "borderRadius": 5,
-          "flex": 1,
-          "height": 40,
-          "padding": 10,
-        }
-      }
       textContentType="password"
-      underlineColorAndroid="transparent"
       value=""
     />
   </View>
@@ -247,23 +192,12 @@ exports[`LoginForm when there's an error renders correctly 1`] = `
       }
     }
   >
-    <TextInput
-      allowFontScaling={true}
+    <NewTextInput
+      displayStyle="error"
       onChangeText={[Function]}
       placeholder="Repeat password"
-      rejectResponderTermination={true}
       secureTextEntry={true}
-      style={
-        Object {
-          "backgroundColor": "rgb(255, 255, 255)",
-          "borderRadius": 5,
-          "flex": 1,
-          "height": 40,
-          "padding": 10,
-        }
-      }
       textContentType="password"
-      underlineColorAndroid="transparent"
       value=""
     />
   </View>

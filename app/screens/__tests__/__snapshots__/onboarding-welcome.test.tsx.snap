@@ -1,0 +1,78 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`OnboardingWelcomeScreen renders correctly 1`] = `
+<BackgroundModal>
+  <View
+    style={
+      Object {
+        "flex": 1,
+        "padding": 40,
+        "paddingTop": 80,
+      }
+    }
+  >
+    <Image
+      source={
+        Object {
+          "testUri": "../../../app/assets/images/profile-pic-may.jpg",
+        }
+      }
+      style={
+        Object {
+          "backgroundColor": "rgba(4, 71, 47, 0.75)",
+          "borderColor": "rgb(45, 82, 113)",
+          "borderRadius": 30,
+          "borderWidth": 4,
+          "height": 60,
+          "marginBottom": 20,
+          "overflow": "hidden",
+          "width": 60,
+        }
+      }
+    />
+    <Title
+      style={
+        Object {
+          "fontSize": 30,
+          "paddingBottom": 20,
+        }
+      }
+      text="Bem vinda à Elpis,  [user.firstName]"
+    />
+    <Text
+      style={
+        Object {
+          "paddingBottom": 20,
+        }
+      }
+    >
+      Lots of words here. 
+    </Text>
+    <Title
+      style={
+        Object {
+          "fontStyle": "italic",
+          "fontWeight": "normal",
+          "paddingBottom": 20,
+        }
+      }
+      text="May"
+    />
+    <View
+      style={
+        Object {
+          "alignItems": "baseline",
+          "flexDirection": "row-reverse",
+          "marginBottom": 20,
+        }
+      }
+    >
+      <ButtonSubmit
+        display="active"
+        label="Next"
+        onPress={[Function]}
+      />
+    </View>
+  </View>
+</BackgroundModal>
+`;

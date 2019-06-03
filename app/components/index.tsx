@@ -1,5 +1,6 @@
 export { Comments } from "./comments";
 export { BackgroundContainer } from "./background-container";
+export { BackgroundModal } from "./background-modal";
 export { ButtonSubmit } from "./button-submit";
 export { FormCompleteProfile } from "./form-complete-profile";
 export { Icon } from "./icon";

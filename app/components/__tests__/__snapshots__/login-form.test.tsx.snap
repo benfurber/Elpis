@@ -20,7 +20,7 @@ exports[`LoginForm when active renders correctly 1`] = `
       }
     }
   >
-    <TextInput
+    <NewTextInput
       displayStyle="active"
       keyboardType="email-address"
       onChangeText={[Function]}
@@ -38,7 +38,7 @@ exports[`LoginForm when active renders correctly 1`] = `
       }
     }
   >
-    <TextInput
+    <NewTextInput
       displayStyle="active"
       onChangeText={[Function]}
       placeholder="Senha"
@@ -85,7 +85,7 @@ exports[`LoginForm when loading renders correctly 1`] = `
       }
     }
   >
-    <TextInput
+    <NewTextInput
       displayStyle="loading"
       keyboardType="email-address"
       onChangeText={[Function]}
@@ -103,7 +103,7 @@ exports[`LoginForm when loading renders correctly 1`] = `
       }
     }
   >
-    <TextInput
+    <NewTextInput
       displayStyle="loading"
       onChangeText={[Function]}
       placeholder="Senha"
@@ -181,7 +181,7 @@ exports[`LoginForm when there's an error renders correctly 1`] = `
       }
     }
   >
-    <TextInput
+    <NewTextInput
       displayStyle="error"
       keyboardType="email-address"
       onChangeText={[Function]}
@@ -199,7 +199,7 @@ exports[`LoginForm when there's an error renders correctly 1`] = `
       }
     }
   >
-    <TextInput
+    <NewTextInput
       displayStyle="error"
       onChangeText={[Function]}
       placeholder="Senha"

@@ -1,5 +1,5 @@
-import React from "react";
-import { StyleSheet, TextInput as NativeTextInput } from "react-native";
+import React, { Component } from "react";
+import { StyleSheet, TextInput, TextInputProps } from "react-native";
 import { elements } from "styles";
 
 interface Props {
@@ -7,27 +7,29 @@ interface Props {
   style?: object;
 }
 
-const TextInput = (props: Props) => {
-  const isEditable = {
-    active: true,
-    error: true,
-    loading: false,
-  };
+class NewTextInput extends Component<TextInputProps & Props> {
+  render() {
+    const isEditable = {
+      active: true,
+      error: true,
+      loading: false,
+    };
 
-  const styleDisplay = {
-    active: styles.inputActive,
-    error: styles.inputError,
-    loading: styles.inputLoading,
-  };
+    const styleDisplay = {
+      active: styles.inputActive,
+      error: styles.inputError,
+      loading: styles.inputLoading,
+    };
 
-  return (
-    <NativeTextInput
-      {...props}
-      editable={isEditable[props.displayStyle]}
-      style={[styleDisplay[props.displayStyle], props.style]}
-    />
-  );
-};
+    return (
+      <TextInput
+        {...this.props}
+        editable={isEditable[this.props.displayStyle]}
+        style={[styleDisplay[this.props.displayStyle], this.props.style]}
+      />
+    );
+  }
+}
 
 const styles = StyleSheet.create({
   inputActive: {
@@ -41,4 +43,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export { TextInput };
+export { NewTextInput as TextInput };

@@ -1,0 +1,52 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`OnboardingThankYouScreen renders correctly 1`] = `
+<BackgroundModal>
+  <View
+    style={
+      Object {
+        "flex": 1,
+        "padding": 40,
+        "paddingTop": 80,
+      }
+    }
+  >
+    <Title
+      style={
+        Object {
+          "fontSize": 30,
+          "paddingBottom": 20,
+        }
+      }
+      text="Please complete your profile"
+    />
+    <Title
+      style={
+        Object {
+          "fontStyle": "italic",
+          "fontWeight": "normal",
+          "paddingBottom": 20,
+        }
+      }
+      text="Please remember to provide as much feedback as you can.
+
+We won’t be able to build something great unless you tell us what you think."
+    />
+    <View
+      style={
+        Object {
+          "alignItems": "baseline",
+          "flexDirection": "row-reverse",
+          "marginBottom": 20,
+        }
+      }
+    >
+      <ButtonSubmit
+        display="active"
+        label="Enter"
+        onPress={[Function]}
+      />
+    </View>
+  </View>
+</BackgroundModal>
+`;
