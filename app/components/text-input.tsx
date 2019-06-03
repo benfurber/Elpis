@@ -4,7 +4,7 @@ import { elements } from "styles";
 
 interface Props {
   displayStyle: "active" | "error" | "loading";
-  style: object;
+  style?: object;
 }
 
 const TextInput = (props: Props) => {
@@ -26,8 +26,8 @@ const TextInput = (props: Props) => {
       editable={isEditable[props.displayStyle]}
       style={[styleDisplay[props.displayStyle], props.style]}
     />
-  )
-}
+  );
+};
 
 const styles = StyleSheet.create({
   inputActive: {
