@@ -9,6 +9,8 @@ const standard = StyleSheet.create({
     flex: 1,
     height: 40,
     padding: 10,
+    borderColor: colours.whiteTransparentHigh,
+    borderWidth: 2,
   },
   image: {
     backgroundColor: colours.emeraldGreen,
@@ -52,7 +54,6 @@ const elements = StyleSheet.create({
   textInputFieldError: {
     ...standard.basicInputField,
     borderColor: colours.red,
-    borderWidth: 2,
   },
   textInputFieldLoading: {
     ...standard.basicInputField,
