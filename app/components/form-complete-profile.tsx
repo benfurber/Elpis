@@ -1,8 +1,8 @@
 import React, { Component } from "react";
-import { StyleSheet, TextInput, View } from "react-native";
+import { StyleSheet, View } from "react-native";
 
-import { ButtonSubmit, Title } from "components";
-import { colours, elements, layout, typography } from "styles";
+import { ButtonSubmit, TextInput, Title } from "components";
+import { layout, typography } from "styles";
 
 const labels = {
   formButton: "Submit",
@@ -59,17 +59,18 @@ class FormCompleteProfile extends Component<Props, State> {
   }
 
   render() {
-    const { password, passwordRepeat } = this.state;
+    const { display, password, passwordRepeat } = this.state;
+
     return (
       <View style={styles.content}>
         <Title style={styles.title} text={labels.formTitle} />
 
         <View style={styles.row}>
           <TextInput
+            displayStyle={display}
             onChangeText={password => this.setState({ password })}
             placeholder={labels.password}
             secureTextEntry
-            style={elements.textInputField}
             textContentType="password"
             value={password}
           />
@@ -77,10 +78,10 @@ class FormCompleteProfile extends Component<Props, State> {
 
         <View style={styles.row}>
           <TextInput
+            displayStyle={display}
             onChangeText={passwordRepeat => this.setState({ passwordRepeat })}
             placeholder={labels.passwordRepeat}
             secureTextEntry
-            style={elements.textInputField}
             textContentType="password"
             value={passwordRepeat}
           />
