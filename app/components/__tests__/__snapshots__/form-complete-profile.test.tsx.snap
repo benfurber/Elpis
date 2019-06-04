@@ -21,6 +21,26 @@ exports[`LoginForm when active renders correctly 1`] = `
   />
   <View
     style={
+      Array [
+        Object {
+          "backgroundColor": "rgba(255, 255, 255, 0.60)",
+          "borderRadius": 5,
+          "borderWidth": 2,
+          "marginVertical": 20,
+          "padding": 20,
+        },
+        Object {
+          "borderColor": "orange",
+        },
+      ]
+    }
+  >
+    <Text>
+      A nice strong password please.
+    </Text>
+  </View>
+  <View
+    style={
       Object {
         "alignItems": "baseline",
         "flexDirection": "row-reverse",
@@ -73,7 +93,7 @@ exports[`LoginForm when active renders correctly 1`] = `
 </View>
 `;
 
-exports[`LoginForm when passwords match renders correctly 1`] = `
+exports[`LoginForm when passwords match and the password is strong renders correctly 1`] = `
 <View
   style={
     Object {
@@ -94,6 +114,26 @@ exports[`LoginForm when passwords match renders correctly 1`] = `
   />
   <View
     style={
+      Array [
+        Object {
+          "backgroundColor": "rgba(255, 255, 255, 0.60)",
+          "borderRadius": 5,
+          "borderWidth": 2,
+          "marginVertical": 20,
+          "padding": 20,
+        },
+        Object {
+          "borderColor": "orange",
+        },
+      ]
+    }
+  >
+    <Text>
+      A nice strong password please.
+    </Text>
+  </View>
+  <View
+    style={
       Object {
         "alignItems": "baseline",
         "flexDirection": "row-reverse",
@@ -107,7 +147,7 @@ exports[`LoginForm when passwords match renders correctly 1`] = `
       placeholder="Set password"
       secureTextEntry={true}
       textContentType="password"
-      value="s3cure"
+      value="s3cuRe!!!"
     />
   </View>
   <View
@@ -125,7 +165,100 @@ exports[`LoginForm when passwords match renders correctly 1`] = `
       placeholder="Repeat password"
       secureTextEntry={true}
       textContentType="password"
-      value="s3cure"
+      value="s3cuRe!!!"
+    />
+  </View>
+  <View
+    style={
+      Object {
+        "alignItems": "baseline",
+        "flexDirection": "row-reverse",
+        "marginBottom": 20,
+      }
+    }
+  >
+    <ButtonSubmit
+      display="active"
+      label="Submit"
+      onPress={[Function]}
+    />
+  </View>
+</View>
+`;
+
+exports[`LoginForm when passwords match and the password is weak renders correctly 1`] = `
+<View
+  style={
+    Object {
+      "flex": 1,
+      "padding": 40,
+      "paddingTop": 80,
+    }
+  }
+>
+  <Title
+    style={
+      Object {
+        "fontSize": 30,
+        "paddingBottom": 20,
+      }
+    }
+    text="Please complete your profile"
+  />
+  <View
+    style={
+      Array [
+        Object {
+          "backgroundColor": "rgba(255, 255, 255, 0.60)",
+          "borderRadius": 5,
+          "borderWidth": 2,
+          "marginVertical": 20,
+          "padding": 20,
+        },
+        Object {
+          "borderColor": "orange",
+        },
+      ]
+    }
+  >
+    <Text>
+      A nice strong password please.
+    </Text>
+  </View>
+  <View
+    style={
+      Object {
+        "alignItems": "baseline",
+        "flexDirection": "row-reverse",
+        "marginBottom": 20,
+      }
+    }
+  >
+    <NewTextInput
+      displayStyle="active"
+      onChangeText={[Function]}
+      placeholder="Set password"
+      secureTextEntry={true}
+      textContentType="password"
+      value="abc"
+    />
+  </View>
+  <View
+    style={
+      Object {
+        "alignItems": "baseline",
+        "flexDirection": "row-reverse",
+        "marginBottom": 20,
+      }
+    }
+  >
+    <NewTextInput
+      displayStyle="active"
+      onChangeText={[Function]}
+      placeholder="Repeat password"
+      secureTextEntry={true}
+      textContentType="password"
+      value="abc"
     />
   </View>
   <View
@@ -167,6 +300,26 @@ exports[`LoginForm when there's an error renders correctly 1`] = `
   />
   <View
     style={
+      Array [
+        Object {
+          "backgroundColor": "rgba(255, 255, 255, 0.60)",
+          "borderRadius": 5,
+          "borderWidth": 2,
+          "marginVertical": 20,
+          "padding": 20,
+        },
+        Object {
+          "borderColor": "rgb(208, 2, 27)",
+        },
+      ]
+    }
+  >
+    <Text>
+      Password field empty
+    </Text>
+  </View>
+  <View
+    style={
       Object {
         "alignItems": "baseline",
         "flexDirection": "row-reverse",
@@ -175,7 +328,7 @@ exports[`LoginForm when there's an error renders correctly 1`] = `
     }
   >
     <NewTextInput
-      displayStyle="error"
+      displayStyle="loading"
       onChangeText={[Function]}
       placeholder="Set password"
       secureTextEntry={true}
@@ -193,7 +346,7 @@ exports[`LoginForm when there's an error renders correctly 1`] = `
     }
   >
     <NewTextInput
-      displayStyle="error"
+      displayStyle="loading"
       onChangeText={[Function]}
       placeholder="Repeat password"
       secureTextEntry={true}
@@ -211,7 +364,7 @@ exports[`LoginForm when there's an error renders correctly 1`] = `
     }
   >
     <ButtonSubmit
-      display="error"
+      display="loading"
       label="Submit"
       onPress={[Function]}
     />

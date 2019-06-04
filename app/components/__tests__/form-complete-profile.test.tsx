@@ -15,13 +15,32 @@ describe("LoginForm", () => {
   });
 
   describe("when passwords match", () => {
-    it("renders correctly", () => {
-      const onPress = () => jest.fn();
-      const component = shallow(<FormCompleteProfile onPress={onPress} />);
+    describe("and the password is strong", () => {
+      it("renders correctly", () => {
+        const onPress = () => jest.fn();
+        const component = shallow(<FormCompleteProfile onPress={onPress} />);
 
-      component.setState({ password: "s3cure", passwordRepeat: "s3cure" });
+        component.setState({
+          password: "s3cuRe!!!",
+          passwordRepeat: "s3cuRe!!!",
+        });
 
-      expect(component).toMatchSnapshot();
+        expect(component).toMatchSnapshot();
+      });
+    });
+
+    describe("and the password is weak", () => {
+      it("renders correctly", () => {
+        const onPress = () => jest.fn();
+        const component = shallow(<FormCompleteProfile onPress={onPress} />);
+
+        component.setState({
+          password: "abc",
+          passwordRepeat: "abc",
+        });
+
+        expect(component).toMatchSnapshot();
+      });
     });
   });
 
@@ -30,10 +49,7 @@ describe("LoginForm", () => {
       const onPress = () => jest.fn();
       const component = shallow(<FormCompleteProfile onPress={onPress} />);
 
-      component.setState({
-        display: "error",
-        errorMessage: "Passwords didn't match",
-      });
+      component.find("ButtonSubmit").simulate("press");
 
       expect(component).toMatchSnapshot();
     });
