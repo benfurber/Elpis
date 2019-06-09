@@ -9,6 +9,7 @@ import {
 } from "components";
 import { NavigationType } from "interfaces";
 import { colours, elements, layout, typography } from "styles";
+import { checkPasswordStrength } from "utils";
 
 const labels = {
   formButton: "Submit",
@@ -82,14 +83,9 @@ class FormCompleteProfile extends Component<Props, State> {
   }
 
   passwordStrength(password) {
-    const strongRegex = new RegExp(
-      "^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.{8,})",
-    );
-    const mediumRegex = new RegExp(
-      "^(((?=.*[a-z])(?=.*[A-Z]))|((?=.*[a-z])(?=.*[0-9]))|((?=.*[A-Z])(?=.*[0-9])))(?=.{6,})",
-    );
+    const passwordStrength = checkPasswordStrength(password);
 
-    if (strongRegex.test(password)) {
+    if (passwordStrength === "strong") {
       this.setState({
         display: "active",
         formMessage: labels.passwordStrong,
@@ -98,7 +94,7 @@ class FormCompleteProfile extends Component<Props, State> {
       return true;
     }
 
-    if (mediumRegex.test(password)) {
+    if (passwordStrength === "medium") {
       this.setState({
         display: "active",
         formMessage: labels.passwordMedium,
