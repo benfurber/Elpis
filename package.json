@@ -17,7 +17,7 @@
     "@types/react-native-vector-icons": "^6.4.0",
     "@types/react-navigation": "^3.0.6",
     "enzyme": "^3.9.0",
-    "enzyme-adapter-react-16": "1.12.1",
+    "enzyme-adapter-react-16": "1.14.0",
     "enzyme-to-json": "^3.3.5",
     "eslint-plugin-prettier": "^3.1.0",
     "react": "16.8.3",
