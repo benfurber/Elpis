@@ -44,6 +44,12 @@ const elements = StyleSheet.create({
     height: 50,
     width: 50,
   },
+  imageRoundFeature: {
+    ...standard.image,
+    borderRadius: 50,
+    height: 100,
+    width: 100,
+  },
   imageRoundLarge: {
     ...standard.image,
     borderRadius: 30,
