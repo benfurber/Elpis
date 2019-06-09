@@ -13,7 +13,9 @@ class MessageBox extends Component<Props> {
     const { messages } = this.props;
 
     if (messages) {
-      return messages.map((message, index) => {
+      const toRender = messages.filter(message => message !== null);
+
+      return toRender.map((message, index) => {
         return <Text key={index}>{message}</Text>;
       });
     }
