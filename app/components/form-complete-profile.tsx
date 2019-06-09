@@ -8,7 +8,7 @@ import {
   Title,
 } from "components";
 import { NavigationType } from "interfaces";
-import { colours, elements, layout, typography } from "styles";
+import { colours, layout, typography } from "styles";
 import { checkPasswordStrength } from "utils";
 
 const labels = {
@@ -181,24 +181,6 @@ const styles = StyleSheet.create({
     flex: 1,
     padding: layout.spacingXL,
     paddingTop: layout.spacingXL * 2,
-  },
-  image: {
-    ...elements.imageRoundFeature,
-  },
-  imageContainer: {
-    borderRadius: elements.imageRoundFeature.borderRadius,
-    borderWidth: 2,
-    borderStyle: "dashed",
-    borderColor: colours.emeraldGreen,
-    margin: layout.spacingS,
-    marginRight: layout.spacing,
-    padding: 2,
-  },
-  imagesRow: {
-    alignItems: "center",
-    flexDirection: "row",
-    justifyContent: "flex-start",
-    marginBottom: layout.spacingL,
   },
   message: {
     backgroundColor: colours.whiteTransparentHigh,

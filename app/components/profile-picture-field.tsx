@@ -78,7 +78,7 @@ class ProfilePictureField extends Component<Props, State> {
 
   render() {
     return (
-      <View style={styles.imagesRow}>
+      <View style={styles.row}>
         {this.renderAvatar()}
         <ButtonSubmit
           display={this.props.display}
@@ -92,11 +92,6 @@ class ProfilePictureField extends Component<Props, State> {
 }
 
 const styles = StyleSheet.create({
-  content: {
-    flex: 1,
-    padding: layout.spacingXL,
-    paddingTop: layout.spacingXL * 2,
-  },
   image: {
     ...elements.imageRoundFeature,
   },
@@ -112,36 +107,11 @@ const styles = StyleSheet.create({
   imageContainerError: {
     borderColor: colours.red,
   },
-  imagesRow: {
+  row: {
     alignItems: "center",
     flexDirection: "row",
     justifyContent: "flex-start",
     marginBottom: layout.spacingL,
-  },
-  message: {
-    backgroundColor: colours.whiteTransparentHigh,
-    borderRadius: layout.borderRadius,
-    borderWidth: 2,
-    marginVertical: layout.spacingL,
-    padding: layout.spacingL,
-  },
-  messageError: {
-    borderColor: colours.red,
-  },
-  messagePassive: {
-    borderColor: colours.navyBlueDark,
-  },
-  messageWarn: {
-    borderColor: "orange",
-  },
-  row: {
-    alignItems: "baseline",
-    flexDirection: "row-reverse",
-    marginBottom: layout.spacingL,
-  },
-  title: {
-    fontSize: typography.fontSizeXL,
-    paddingBottom: layout.spacingL,
   },
 });
 
