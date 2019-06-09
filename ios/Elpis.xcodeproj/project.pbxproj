@@ -47,6 +47,7 @@
 		2DF0FFEE2056DD460020B375 /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DAD3EA31DF850E9000B6D8A /* libReact.a */; };
 		3019C9EE313E4A4FA2A4C56A /* creteround-regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1C3F6DDC2D4F48B38F5890DC /* creteround-regular.ttf */; };
 		342508AE60B34D258B430C42 /* fa-solid-900.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F462902566E44EA2970A3817 /* fa-solid-900.ttf */; };
+		44BE0CE575BF4880BC9E5925 /* libRNCCameraRoll.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ACD3D2C0F22B4022B887E7C2 /* libRNCCameraRoll.a */; };
 		524BCE8E29374A26B8C8431C /* Foundation.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7AFC09E49B894458A7F3E9BE /* Foundation.ttf */; };
 		67598912893B4B97B3F6ADC0 /* libRNCWebView.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B0F3625F26346728ED51030 /* libRNCWebView.a */; };
 		750584A6D4DC4E6782C73041 /* libRNVectorIcons.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 39D5D756743441938973900F /* libRNVectorIcons.a */; };
@@ -180,6 +181,13 @@
 			proxyType = 2;
 			remoteGlobalIDString = B5C32A36220C603B000FFB8D;
 			remoteInfo = "RNGestureHandler-tvOS";
+		};
+		25AA9A0822A6F75F003E8CAF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0F239DD0B8624BB89F8DBF27 /* RNCCameraRoll.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 58B5115D1A9E6B3D00147676;
+			remoteInfo = RNCCameraRoll;
 		};
 		25F1D9E5226DD66300D51624 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -391,6 +399,7 @@
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00E356F21AD99517003FC87E /* ElpisTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ElpisTests.m; sourceTree = "<group>"; };
 		0EE07BFFF8E546D186DFFF95 /* lato-regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "lato-regular.ttf"; path = "../app/assets/fonts/lato-regular.ttf"; sourceTree = "<group>"; };
+		0F239DD0B8624BB89F8DBF27 /* RNCCameraRoll.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = RNCCameraRoll.xcodeproj; path = "../node_modules/@react-native-community/cameraroll/ios/RNCCameraRoll.xcodeproj"; sourceTree = "<group>"; };
 		1251CF924D134886BC964BE6 /* creteround-italic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "creteround-italic.ttf"; path = "../app/assets/fonts/creteround-italic.ttf"; sourceTree = "<group>"; };
 		139105B61AF99BAD00B5F7CC /* RCTSettings.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTSettings.xcodeproj; path = "../node_modules/react-native/Libraries/Settings/RCTSettings.xcodeproj"; sourceTree = "<group>"; };
 		139FDEE61B06529A00C62182 /* RCTWebSocket.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTWebSocket.xcodeproj; path = "../node_modules/react-native/Libraries/WebSocket/RCTWebSocket.xcodeproj"; sourceTree = "<group>"; };
@@ -427,6 +436,7 @@
 		832341B01AAA6A8300B99B32 /* RCTText.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTText.xcodeproj; path = "../node_modules/react-native/Libraries/Text/RCTText.xcodeproj"; sourceTree = "<group>"; };
 		9C9995CD72BE4525884640B0 /* Entypo.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Entypo.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Entypo.ttf"; sourceTree = "<group>"; };
 		9DE8DC109DB8467A9A7EFC17 /* Ionicons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Ionicons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Ionicons.ttf"; sourceTree = "<group>"; };
+		ACD3D2C0F22B4022B887E7C2 /* libRNCCameraRoll.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRNCCameraRoll.a; sourceTree = "<group>"; };
 		ADBDB91F1DFEBF0600ED6528 /* RCTBlob.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTBlob.xcodeproj; path = "../node_modules/react-native/Libraries/Blob/RCTBlob.xcodeproj"; sourceTree = "<group>"; };
 		B31746DC0EEA4637AB0AC222 /* FontAwesome5_Brands.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = FontAwesome5_Brands.ttf; path = "../node_modules/react-native-vector-icons/Fonts/FontAwesome5_Brands.ttf"; sourceTree = "<group>"; };
 		B8961368369841B3BCB66873 /* libRNGestureHandler-tvOS.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = "libRNGestureHandler-tvOS.a"; sourceTree = "<group>"; };
@@ -468,6 +478,7 @@
 				139FDEF61B0652A700C62182 /* libRCTWebSocket.a in Frameworks */,
 				750584A6D4DC4E6782C73041 /* libRNVectorIcons.a in Frameworks */,
 				67598912893B4B97B3F6ADC0 /* libRNCWebView.a in Frameworks */,
+				44BE0CE575BF4880BC9E5925 /* libRNCCameraRoll.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -661,6 +672,14 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		25AA9A0522A6F75F003E8CAF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				25AA9A0922A6F75F003E8CAF /* libRNCCameraRoll.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		25F1D9BB226DD66200D51624 /* Recovered References */ = {
 			isa = PBXGroup;
 			children = (
@@ -668,6 +687,7 @@
 				B8961368369841B3BCB66873 /* libRNGestureHandler-tvOS.a */,
 				1AA3775D3BC94A86BCE95156 /* libRNVectorIcons-tvOS.a */,
 				5B0F3625F26346728ED51030 /* libRNCWebView.a */,
+				ACD3D2C0F22B4022B887E7C2 /* libRNCCameraRoll.a */,
 			);
 			name = "Recovered References";
 			sourceTree = "<group>";
@@ -727,6 +747,7 @@
 				75423C5AB3CA444182AC1110 /* RNGestureHandler.xcodeproj */,
 				1E75A215F0284282B9252186 /* RNVectorIcons.xcodeproj */,
 				7B6AA13E68DC4CB9B41C8793 /* RNCWebView.xcodeproj */,
+				0F239DD0B8624BB89F8DBF27 /* RNCCameraRoll.xcodeproj */,
 			);
 			name = Libraries;
 			sourceTree = "<group>";
@@ -937,6 +958,10 @@
 					ProjectRef = 146833FF1AC3E56700842450 /* React.xcodeproj */;
 				},
 				{
+					ProductGroup = 25AA9A0522A6F75F003E8CAF /* Products */;
+					ProjectRef = 0F239DD0B8624BB89F8DBF27 /* RNCCameraRoll.xcodeproj */;
+				},
+				{
 					ProductGroup = 256B64D722A58D77005CD7D9 /* Products */;
 					ProjectRef = 7B6AA13E68DC4CB9B41C8793 /* RNCWebView.xcodeproj */;
 				},
@@ -1063,6 +1088,13 @@
 			fileType = archive.ar;
 			path = "libRNGestureHandler-tvOS.a";
 			remoteRef = 256D4F822272072200D30009 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		25AA9A0922A6F75F003E8CAF /* libRNCCameraRoll.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libRNCCameraRoll.a;
+			remoteRef = 25AA9A0822A6F75F003E8CAF /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 		25F1D9E6226DD66300D51624 /* libRNVectorIcons.a */ = {
@@ -1419,12 +1451,14 @@
 					"$(SRCROOT)/../node_modules/react-native-gesture-handler/ios/**",
 					"$(SRCROOT)/../node_modules/react-native-vector-icons/RNVectorIconsManager",
 					"$(SRCROOT)/../node_modules/react-native-webview/ios",
+					"$(SRCROOT)/../node_modules/@react-native-community/cameraroll/ios",
 				);
 				INFOPLIST_FILE = ElpisTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
@@ -1450,12 +1484,14 @@
 					"$(SRCROOT)/../node_modules/react-native-gesture-handler/ios/**",
 					"$(SRCROOT)/../node_modules/react-native-vector-icons/RNVectorIconsManager",
 					"$(SRCROOT)/../node_modules/react-native-webview/ios",
+					"$(SRCROOT)/../node_modules/@react-native-community/cameraroll/ios",
 				);
 				INFOPLIST_FILE = ElpisTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
@@ -1482,6 +1518,7 @@
 					"$(SRCROOT)/../node_modules/react-native-gesture-handler/ios/**",
 					"$(SRCROOT)/../node_modules/react-native-vector-icons/RNVectorIconsManager",
 					"$(SRCROOT)/../node_modules/react-native-webview/ios",
+					"$(SRCROOT)/../node_modules/@react-native-community/cameraroll/ios",
 				);
 				INFOPLIST_FILE = Elpis/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -1506,6 +1543,7 @@
 					"$(SRCROOT)/../node_modules/react-native-gesture-handler/ios/**",
 					"$(SRCROOT)/../node_modules/react-native-vector-icons/RNVectorIconsManager",
 					"$(SRCROOT)/../node_modules/react-native-webview/ios",
+					"$(SRCROOT)/../node_modules/@react-native-community/cameraroll/ios",
 				);
 				INFOPLIST_FILE = Elpis/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -1537,11 +1575,13 @@
 					"$(SRCROOT)/../node_modules/react-native-gesture-handler/ios/**",
 					"$(SRCROOT)/../node_modules/react-native-vector-icons/RNVectorIconsManager",
 					"$(SRCROOT)/../node_modules/react-native-webview/ios",
+					"$(SRCROOT)/../node_modules/@react-native-community/cameraroll/ios",
 				);
 				INFOPLIST_FILE = "Elpis-tvOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
@@ -1576,11 +1616,13 @@
 					"$(SRCROOT)/../node_modules/react-native-gesture-handler/ios/**",
 					"$(SRCROOT)/../node_modules/react-native-vector-icons/RNVectorIconsManager",
 					"$(SRCROOT)/../node_modules/react-native-webview/ios",
+					"$(SRCROOT)/../node_modules/@react-native-community/cameraroll/ios",
 				);
 				INFOPLIST_FILE = "Elpis-tvOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
@@ -1614,11 +1656,13 @@
 					"$(SRCROOT)/../node_modules/react-native-gesture-handler/ios/**",
 					"$(SRCROOT)/../node_modules/react-native-vector-icons/RNVectorIconsManager",
 					"$(SRCROOT)/../node_modules/react-native-webview/ios",
+					"$(SRCROOT)/../node_modules/@react-native-community/cameraroll/ios",
 				);
 				INFOPLIST_FILE = "Elpis-tvOSTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
@@ -1652,11 +1696,13 @@
 					"$(SRCROOT)/../node_modules/react-native-gesture-handler/ios/**",
 					"$(SRCROOT)/../node_modules/react-native-vector-icons/RNVectorIconsManager",
 					"$(SRCROOT)/../node_modules/react-native-webview/ios",
+					"$(SRCROOT)/../node_modules/@react-native-community/cameraroll/ios",
 				);
 				INFOPLIST_FILE = "Elpis-tvOSTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
