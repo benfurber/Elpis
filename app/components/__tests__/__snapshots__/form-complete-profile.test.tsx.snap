@@ -75,6 +75,9 @@ exports[`LoginForm when active renders correctly 1`] = `
       value=""
     />
   </View>
+  <ProfilePictureField
+    display="active"
+  />
   <View
     style={
       Object {
@@ -168,6 +171,9 @@ exports[`LoginForm when passwords match and the password is strong renders corre
       value="s3cuRe!!!"
     />
   </View>
+  <ProfilePictureField
+    display="active"
+  />
   <View
     style={
       Object {
@@ -261,6 +267,9 @@ exports[`LoginForm when passwords match and the password is weak renders correct
       value="abc"
     />
   </View>
+  <ProfilePictureField
+    display="active"
+  />
   <View
     style={
       Object {
@@ -354,6 +363,9 @@ exports[`LoginForm when there's an error renders correctly 1`] = `
       value=""
     />
   </View>
+  <ProfilePictureField
+    display="loading"
+  />
   <View
     style={
       Object {

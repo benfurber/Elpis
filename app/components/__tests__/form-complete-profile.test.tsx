@@ -4,11 +4,16 @@ import { shallow } from "enzyme";
 
 import { FormCompleteProfile } from "components";
 
+let navigation;
+jest.mock(navigation, () => jest.fn());
+
 describe("LoginForm", () => {
   describe("when active", () => {
     it("renders correctly", () => {
       const onPress = () => jest.fn();
-      const component = shallow(<FormCompleteProfile onPress={onPress} />);
+      const component = shallow(
+        <FormCompleteProfile navigation={navigation} onPress={onPress} />,
+      );
 
       expect(component).toMatchSnapshot();
     });
@@ -18,7 +23,9 @@ describe("LoginForm", () => {
     describe("and the password is strong", () => {
       it("renders correctly", () => {
         const onPress = () => jest.fn();
-        const component = shallow(<FormCompleteProfile onPress={onPress} />);
+        const component = shallow(
+          <FormCompleteProfile navigation={navigation} onPress={onPress} />,
+        );
 
         component.setState({
           password: "s3cuRe!!!",
@@ -32,7 +39,9 @@ describe("LoginForm", () => {
     describe("and the password is weak", () => {
       it("renders correctly", () => {
         const onPress = () => jest.fn();
-        const component = shallow(<FormCompleteProfile onPress={onPress} />);
+        const component = shallow(
+          <FormCompleteProfile navigation={navigation} onPress={onPress} />,
+        );
 
         component.setState({
           password: "abc",
@@ -47,7 +56,9 @@ describe("LoginForm", () => {
   describe("when there's an error", () => {
     it("renders correctly", () => {
       const onPress = () => jest.fn();
-      const component = shallow(<FormCompleteProfile onPress={onPress} />);
+      const component = shallow(
+        <FormCompleteProfile navigation={navigation} onPress={onPress} />,
+      );
 
       component.find("ButtonSubmit").simulate("press");
 

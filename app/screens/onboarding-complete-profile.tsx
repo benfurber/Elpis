@@ -17,7 +17,10 @@ class OnboardingCompleteProfileScreen extends Component<Props, State> {
 
     return (
       <BackgroundModal>
-        <FormCompleteProfile onPress={() => navigation.navigate("ThankYou")} />
+        <FormCompleteProfile
+          navigation={navigation}
+          onPress={() => navigation.navigate("ThankYou")}
+        />
       </BackgroundModal>
     );
   }

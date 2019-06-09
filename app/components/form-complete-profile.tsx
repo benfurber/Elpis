@@ -1,8 +1,14 @@
 import React, { Component } from "react";
 import { StyleSheet, Text, View } from "react-native";
 
-import { ButtonSubmit, TextInput, Title } from "components";
-import { colours, layout, typography } from "styles";
+import {
+  ButtonSubmit,
+  ProfilePictureField,
+  TextInput,
+  Title,
+} from "components";
+import { NavigationType } from "interfaces";
+import { colours, elements, layout, typography } from "styles";
 
 const labels = {
   formButton: "Submit",
@@ -18,6 +24,7 @@ const labels = {
 };
 
 interface Props {
+  navigation: NavigationType;
   onPress: () => void;
 }
 
@@ -126,6 +133,7 @@ class FormCompleteProfile extends Component<Props, State> {
 
   render() {
     const { display, password, passwordRepeat } = this.state;
+    const { navigation } = this.props;
 
     return (
       <View style={styles.content}>
@@ -158,6 +166,8 @@ class FormCompleteProfile extends Component<Props, State> {
           />
         </View>
 
+        <ProfilePictureField navigation={navigation} display={display} />
+
         <View style={styles.row}>
           <ButtonSubmit
             display={display}
@@ -175,6 +185,24 @@ const styles = StyleSheet.create({
     flex: 1,
     padding: layout.spacingXL,
     paddingTop: layout.spacingXL * 2,
+  },
+  image: {
+    ...elements.imageRoundFeature,
+  },
+  imageContainer: {
+    borderRadius: elements.imageRoundFeature.borderRadius,
+    borderWidth: 2,
+    borderStyle: "dashed",
+    borderColor: colours.emeraldGreen,
+    margin: layout.spacingS,
+    marginRight: layout.spacing,
+    padding: 2,
+  },
+  imagesRow: {
+    alignItems: "center",
+    flexDirection: "row",
+    justifyContent: "flex-start",
+    marginBottom: layout.spacingL,
   },
   message: {
     backgroundColor: colours.whiteTransparentHigh,
