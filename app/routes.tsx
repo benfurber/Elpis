@@ -9,6 +9,7 @@ import { Icon } from "components";
 import {
   FeedScreen,
   FeedbackScreen,
+  ImageBrowserScreen,
   OnboardingCompleteProfileScreen,
   OnboardingThankYouScreen,
   OnboardingWelcomeScreen,
@@ -58,11 +59,21 @@ const mainTabs = createBottomTabNavigator(
   },
 );
 
+const ModalsStack = createStackNavigator(
+  {
+    ImageBrowser: ImageBrowserScreen,
+  },
+  {
+    mode: "modal",
+  },
+);
+
 const OnboardingSwitch = createStackNavigator(
   {
     Welcome: OnboardingWelcomeScreen,
     CompleteProfile: OnboardingCompleteProfileScreen,
     ThankYou: OnboardingThankYouScreen,
+    Modals: ModalsStack,
   },
   {
     ...stackConfig,
