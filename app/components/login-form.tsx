@@ -33,7 +33,7 @@ class LoginForm extends Component<Props, State> {
 
   onPress() {
     this.setState({ display: "loading" });
-    this.props.navigation.navigate("Feed");
+    this.props.navigation.navigate("Onboarding");
   }
 
   renderErrorMessage() {
