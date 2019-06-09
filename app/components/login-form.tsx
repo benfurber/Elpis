@@ -53,6 +53,18 @@ class LoginForm extends Component<Props, State> {
   render() {
     const { display } = this.state;
 
+    const isEditable = {
+      active: true,
+      error: true,
+      loading: false,
+    };
+
+    const styleDisplay = {
+      active: styles.inputActive,
+      error: styles.inputError,
+      loading: styles.inputLoading,
+    };
+
     return (
       <View style={styles.container}>
         {this.renderErrorMessage()}
@@ -100,6 +112,18 @@ const styles = StyleSheet.create({
     borderRadius: layout.borderRadius,
     flex: 1,
     padding: layout.spacing,
+  },
+  inputActive: {
+    ...elements.textInputForm,
+  },
+  inputError: {
+    ...elements.textInputForm,
+    borderColor: colours.red,
+    borderWidth: 2,
+  },
+  inputLoading: {
+    ...elements.textInputForm,
+    backgroundColor: colours.lightGrey,
   },
   row: {
     alignItems: "center",
