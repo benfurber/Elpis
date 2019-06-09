@@ -871,6 +871,11 @@
     "@types/istanbul-reports" "^1.1.1"
     "@types/yargs" "^12.0.9"
 
+"@react-native-community/cameraroll@^1.0.5":
+  version "1.0.5"
+  resolved "https://registry.yarnpkg.com/@react-native-community/cameraroll/-/cameraroll-1.0.5.tgz#c3e3cb6b7b120c5537b6582ceb2dd3516031f11a"
+  integrity sha512-qt9fj6JwNAe1Fe/+oMAmy6qnr8OLkYjmocWx1CvVWOSJSVLdp665z+3jyGbc62nGJL+M9JDjlQg+YldJHCJPMg==
+
 "@react-native-community/cli@^1.2.1":
   version "1.9.2"
   resolved "https://registry.yarnpkg.com/@react-native-community/cli/-/cli-1.9.2.tgz#d033ab141df3a476e628aecd9c99534b5cb0d63e"
@@ -6906,6 +6911,13 @@ react-navigation-drawer@~1.2.1:
   integrity sha512-T2kaBjY2c4/3I6noWFnaf/c18ntNH5DsST38i+pdc2NPxn5Yi5lkK+ZZTeKuHSFD4a7G0jWY9OGf1iRkHWLMAQ==
   dependencies:
     react-native-tab-view "^1.2.0"
+
+react-navigation-props-mapper@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/react-navigation-props-mapper/-/react-navigation-props-mapper-1.0.1.tgz#f2c619911ab45c927d57fb07a57d94c93570d355"
+  integrity sha512-Za76r2YU2FIDJBU5itGYW9tsHd0SXQlvO5GGu2XJldi8ng/qEoTA3J7hm1aaPMMbrcg08hiOYHljWofw6iQiIA==
+  dependencies:
+    hoist-non-react-statics "^3.3.0"
 
 react-navigation-stack@~1.4.0:
   version "1.4.0"

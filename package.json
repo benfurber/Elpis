@@ -6,11 +6,12 @@
     "format": "prettier --write '{*,{__mocks__,__tests__,app}/**/*}.js'",
     "jest": "jest --watch",
     "lint": "./node_modules/.bin/eslint .",
-    "open-android": "open -a /Applications/Android Studio.app ./android",
+    "open-android": "open -a /Applications/Android%20Studio.app ./android",
     "start": "node node_modules/react-native/local-cli/cli.js start --reset-cache",
     "test": "eslint . && jest"
   },
   "dependencies": {
+    "@react-native-community/cameraroll": "^1.0.5",
     "@types/enzyme": "^3.9.1",
     "@types/enzyme-to-json": "^1.5.3",
     "@types/react-native-vector-icons": "^6.4.0",
@@ -28,7 +29,8 @@
     "react-native-keyboard-aware-scroll-view": "^0.8.0",
     "react-native-vector-icons": "^6.4.2",
     "react-native-webview": "^5.10.0",
-    "react-navigation": "3.11.0"
+    "react-navigation": "3.11.0",
+    "react-navigation-props-mapper": "^1.0.1"
   },
   "devDependencies": {
     "@babel/core": "^7.4.3",

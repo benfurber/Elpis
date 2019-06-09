@@ -6,7 +6,16 @@ import {
 } from "react-navigation";
 
 import { Icon } from "components";
-import { FeedScreen, FeedbackScreen, PostScreen, WelcomeScreen } from "screens";
+import {
+  FeedScreen,
+  FeedbackScreen,
+  ImageBrowserScreen,
+  OnboardingCompleteProfileScreen,
+  OnboardingThankYouScreen,
+  OnboardingWelcomeScreen,
+  PostScreen,
+  WelcomeScreen,
+} from "screens";
 
 const routeNameIcon = {
   Feed: "newspaper",
@@ -50,7 +59,29 @@ const mainTabs = createBottomTabNavigator(
   },
 );
 
+const ModalsStack = createStackNavigator(
+  {
+    ImageBrowser: ImageBrowserScreen,
+  },
+  {
+    mode: "modal",
+  },
+);
+
+const OnboardingSwitch = createStackNavigator(
+  {
+    Welcome: OnboardingWelcomeScreen,
+    CompleteProfile: OnboardingCompleteProfileScreen,
+    ThankYou: OnboardingThankYouScreen,
+    Modals: ModalsStack,
+  },
+  {
+    ...stackConfig,
+  },
+);
+
 const RootStack = createSwitchNavigator({
+  Onboarding: OnboardingSwitch,
   Main: mainTabs,
   Welcome: WelcomeScreen,
 });

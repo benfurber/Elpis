@@ -1,0 +1,88 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TextInput when active renders correctly 1`] = `
+<TextInput
+  allowFontScaling={true}
+  displayStyle="active"
+  editable={true}
+  onChangeText={[Function]}
+  placeholder="password"
+  rejectResponderTermination={true}
+  secureTextEntry={true}
+  style={
+    Array [
+      Object {
+        "backgroundColor": "rgb(255, 255, 255)",
+        "borderColor": "rgba(255, 255, 255, 0.60)",
+        "borderRadius": 5,
+        "borderWidth": 2,
+        "flex": 1,
+        "height": 40,
+        "padding": 10,
+      },
+      undefined,
+    ]
+  }
+  textContentType="password"
+  underlineColorAndroid="transparent"
+  value="password"
+/>
+`;
+
+exports[`TextInput when error renders correctly 1`] = `
+<TextInput
+  allowFontScaling={true}
+  displayStyle="error"
+  editable={true}
+  onChangeText={[Function]}
+  placeholder="password"
+  rejectResponderTermination={true}
+  secureTextEntry={true}
+  style={
+    Array [
+      Object {
+        "backgroundColor": "rgb(255, 255, 255)",
+        "borderColor": "rgb(208, 2, 27)",
+        "borderRadius": 5,
+        "borderWidth": 2,
+        "flex": 1,
+        "height": 40,
+        "padding": 10,
+      },
+      undefined,
+    ]
+  }
+  textContentType="password"
+  underlineColorAndroid="transparent"
+  value="password"
+/>
+`;
+
+exports[`TextInput when loading renders correctly 1`] = `
+<TextInput
+  allowFontScaling={true}
+  displayStyle="loading"
+  editable={false}
+  onChangeText={[Function]}
+  placeholder="password"
+  rejectResponderTermination={true}
+  secureTextEntry={true}
+  style={
+    Array [
+      Object {
+        "backgroundColor": "rgba(51,51,51,0.25)",
+        "borderColor": "rgba(255, 255, 255, 0.60)",
+        "borderRadius": 5,
+        "borderWidth": 2,
+        "flex": 1,
+        "height": 40,
+        "padding": 10,
+      },
+      undefined,
+    ]
+  }
+  textContentType="password"
+  underlineColorAndroid="transparent"
+  value="password"
+/>
+`;

@@ -1,0 +1,349 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LoginForm when active renders correctly 1`] = `
+<View
+  style={
+    Object {
+      "flex": 1,
+      "padding": 40,
+      "paddingTop": 80,
+    }
+  }
+>
+  <Title
+    style={
+      Object {
+        "fontSize": 30,
+        "paddingBottom": 20,
+      }
+    }
+    text="Please complete your profile."
+  />
+  <MessageBox
+    display="warn"
+    messages={
+      Array [
+        "A nice strong password please.",
+        null,
+      ]
+    }
+  />
+  <View
+    style={
+      Object {
+        "alignItems": "baseline",
+        "flexDirection": "row-reverse",
+        "marginBottom": 20,
+      }
+    }
+  >
+    <NewTextInput
+      displayStyle="active"
+      onChangeText={[Function]}
+      placeholder="Set password"
+      secureTextEntry={true}
+      textContentType="password"
+      value=""
+    />
+  </View>
+  <View
+    style={
+      Object {
+        "alignItems": "baseline",
+        "flexDirection": "row-reverse",
+        "marginBottom": 20,
+      }
+    }
+  >
+    <NewTextInput
+      displayStyle="active"
+      onChangeText={[Function]}
+      placeholder="Repeat password"
+      secureTextEntry={true}
+      textContentType="password"
+      value=""
+    />
+  </View>
+  <ProfilePictureField
+    display="active"
+    image={null}
+    setImage={[Function]}
+  />
+  <View
+    style={
+      Object {
+        "alignItems": "baseline",
+        "flexDirection": "row-reverse",
+        "marginBottom": 20,
+      }
+    }
+  >
+    <ButtonSubmit
+      display="active"
+      label="Submit"
+      onPress={[Function]}
+    />
+  </View>
+</View>
+`;
+
+exports[`LoginForm when passwords match and the password is strong renders correctly 1`] = `
+<View
+  style={
+    Object {
+      "flex": 1,
+      "padding": 40,
+      "paddingTop": 80,
+    }
+  }
+>
+  <Title
+    style={
+      Object {
+        "fontSize": 30,
+        "paddingBottom": 20,
+      }
+    }
+    text="Please complete your profile."
+  />
+  <MessageBox
+    display="warn"
+    messages={
+      Array [
+        "A nice strong password please.",
+        null,
+      ]
+    }
+  />
+  <View
+    style={
+      Object {
+        "alignItems": "baseline",
+        "flexDirection": "row-reverse",
+        "marginBottom": 20,
+      }
+    }
+  >
+    <NewTextInput
+      displayStyle="active"
+      onChangeText={[Function]}
+      placeholder="Set password"
+      secureTextEntry={true}
+      textContentType="password"
+      value="s3cuRe!!!"
+    />
+  </View>
+  <View
+    style={
+      Object {
+        "alignItems": "baseline",
+        "flexDirection": "row-reverse",
+        "marginBottom": 20,
+      }
+    }
+  >
+    <NewTextInput
+      displayStyle="active"
+      onChangeText={[Function]}
+      placeholder="Repeat password"
+      secureTextEntry={true}
+      textContentType="password"
+      value="s3cuRe!!!"
+    />
+  </View>
+  <ProfilePictureField
+    display="active"
+    image={null}
+    setImage={[Function]}
+  />
+  <View
+    style={
+      Object {
+        "alignItems": "baseline",
+        "flexDirection": "row-reverse",
+        "marginBottom": 20,
+      }
+    }
+  >
+    <ButtonSubmit
+      display="active"
+      label="Submit"
+      onPress={[Function]}
+    />
+  </View>
+</View>
+`;
+
+exports[`LoginForm when passwords match and the password is weak renders correctly 1`] = `
+<View
+  style={
+    Object {
+      "flex": 1,
+      "padding": 40,
+      "paddingTop": 80,
+    }
+  }
+>
+  <Title
+    style={
+      Object {
+        "fontSize": 30,
+        "paddingBottom": 20,
+      }
+    }
+    text="Please complete your profile."
+  />
+  <MessageBox
+    display="warn"
+    messages={
+      Array [
+        "A nice strong password please.",
+        null,
+      ]
+    }
+  />
+  <View
+    style={
+      Object {
+        "alignItems": "baseline",
+        "flexDirection": "row-reverse",
+        "marginBottom": 20,
+      }
+    }
+  >
+    <NewTextInput
+      displayStyle="active"
+      onChangeText={[Function]}
+      placeholder="Set password"
+      secureTextEntry={true}
+      textContentType="password"
+      value="abc"
+    />
+  </View>
+  <View
+    style={
+      Object {
+        "alignItems": "baseline",
+        "flexDirection": "row-reverse",
+        "marginBottom": 20,
+      }
+    }
+  >
+    <NewTextInput
+      displayStyle="active"
+      onChangeText={[Function]}
+      placeholder="Repeat password"
+      secureTextEntry={true}
+      textContentType="password"
+      value="abc"
+    />
+  </View>
+  <ProfilePictureField
+    display="active"
+    image={null}
+    setImage={[Function]}
+  />
+  <View
+    style={
+      Object {
+        "alignItems": "baseline",
+        "flexDirection": "row-reverse",
+        "marginBottom": 20,
+      }
+    }
+  >
+    <ButtonSubmit
+      display="active"
+      label="Submit"
+      onPress={[Function]}
+    />
+  </View>
+</View>
+`;
+
+exports[`LoginForm when there's an error renders correctly 1`] = `
+<View
+  style={
+    Object {
+      "flex": 1,
+      "padding": 40,
+      "paddingTop": 80,
+    }
+  }
+>
+  <Title
+    style={
+      Object {
+        "fontSize": 30,
+        "paddingBottom": 20,
+      }
+    }
+    text="Please complete your profile."
+  />
+  <MessageBox
+    display="error"
+    messages={
+      Array [
+        "Password field empty.",
+        "No profile picture selected.",
+      ]
+    }
+  />
+  <View
+    style={
+      Object {
+        "alignItems": "baseline",
+        "flexDirection": "row-reverse",
+        "marginBottom": 20,
+      }
+    }
+  >
+    <NewTextInput
+      displayStyle="error"
+      onChangeText={[Function]}
+      placeholder="Set password"
+      secureTextEntry={true}
+      textContentType="password"
+      value=""
+    />
+  </View>
+  <View
+    style={
+      Object {
+        "alignItems": "baseline",
+        "flexDirection": "row-reverse",
+        "marginBottom": 20,
+      }
+    }
+  >
+    <NewTextInput
+      displayStyle="error"
+      onChangeText={[Function]}
+      placeholder="Repeat password"
+      secureTextEntry={true}
+      textContentType="password"
+      value=""
+    />
+  </View>
+  <ProfilePictureField
+    display="error"
+    image={null}
+    setImage={[Function]}
+  />
+  <View
+    style={
+      Object {
+        "alignItems": "baseline",
+        "flexDirection": "row-reverse",
+        "marginBottom": 20,
+      }
+    }
+  >
+    <ButtonSubmit
+      display="error"
+      label="Submit"
+      onPress={[Function]}
+    />
+  </View>
+</View>
+`;

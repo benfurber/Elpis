@@ -7,10 +7,11 @@ interface Props {
   display: "active" | "error" | "loading";
   label: string;
   onPress: () => void;
+  small?: boolean;
 }
 
 const ButtonSubmit = (props: Props) => {
-  const { display, label, onPress } = props;
+  const { display, label, onPress, small } = props;
 
   const isDisabled = {
     active: false,
@@ -18,14 +19,17 @@ const ButtonSubmit = (props: Props) => {
     loading: true,
   };
 
+  const textStyle = small ? styles.textSmall : styles.text;
+  const smallPadding = small ? styles.smallPadding : null;
+
   return (
     <View>
       <TouchableOpacity
-        style={styles[display]}
+        style={[styles[display], smallPadding]}
         onPress={() => onPress()}
         disabled={isDisabled[display]}
       >
-        <Text style={styles.text}>{label}</Text>
+        <Text style={textStyle}>{label}</Text>
       </TouchableOpacity>
     </View>
   );
@@ -42,10 +46,18 @@ const styles = StyleSheet.create({
     ...elements.button,
     backgroundColor: colours.lightGrey,
   },
+  smallPadding: {
+    paddingHorizontal: 14,
+    paddingVertical: 8,
+  },
   text: {
     color: colours.pureWhite,
     fontSize: 16,
     fontWeight: "bold",
+  },
+  textSmall: {
+    color: colours.pureWhite,
+    fontSize: 14,
   },
 });
 

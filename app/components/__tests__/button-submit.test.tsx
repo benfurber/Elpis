@@ -32,4 +32,23 @@ describe("ButtonSubmit", () => {
       expect(component).toMatchSnapshot();
     });
   });
+
+  describe("When small", () => {
+    it("renders correctly", () => {
+      const display = "active";
+      const label = "Submit";
+      const onPress = () => jest.fn();
+
+      const component = shallow(
+        <ButtonSubmit
+          display={display}
+          onPress={onPress}
+          label={label}
+          small
+        />,
+      );
+
+      expect(component).toMatchSnapshot();
+    });
+  });
 });
