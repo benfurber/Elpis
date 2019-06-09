@@ -5,22 +5,21 @@ import { shallow } from "enzyme";
 import { TextInput } from "components";
 
 describe("TextInput", () => {
-
   const genericProps = {
     onChangeText: () => null,
     placeholder: "password",
     secureTextEntry: true,
-    textContentType: "password",
     value: "password",
-  }
+  };
 
   describe("when active", () => {
     it("renders correctly", () => {
       const component = shallow(
         <TextInput
           displayStyle="active"
+          textContentType={"password"}
           {...genericProps}
-        />
+        />,
       );
 
       expect(component).toMatchSnapshot();
@@ -32,8 +31,9 @@ describe("TextInput", () => {
       const component = shallow(
         <TextInput
           displayStyle="loading"
+          textContentType={"password"}
           {...genericProps}
-        />
+        />,
       );
 
       expect(component).toMatchSnapshot();
@@ -45,8 +45,9 @@ describe("TextInput", () => {
       const component = shallow(
         <TextInput
           displayStyle="error"
+          textContentType={"password"}
           {...genericProps}
-        />
+        />,
       );
 
       expect(component).toMatchSnapshot();
