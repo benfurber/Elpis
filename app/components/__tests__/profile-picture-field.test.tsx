@@ -11,7 +11,12 @@ describe("ProfilePictureField", () => {
   describe("when in active state", () => {
     it("renders correctly", () => {
       const component = shallow(
-        <ProfilePictureField display={"active"} navigation={navigation} />,
+        <ProfilePictureField
+          display={"active"}
+          image={null}
+          navigation={navigation}
+          setImage={() => jest.fn()}
+        />,
       );
 
       expect(component).toMatchSnapshot();
@@ -21,7 +26,12 @@ describe("ProfilePictureField", () => {
   describe("when in error state", () => {
     it("renders correctly", () => {
       const component = shallow(
-        <ProfilePictureField display={"error"} navigation={navigation} />,
+        <ProfilePictureField
+          display={"error"}
+          image={null}
+          navigation={navigation}
+          setImage={() => jest.fn()}
+        />,
       );
 
       expect(component).toMatchSnapshot();
