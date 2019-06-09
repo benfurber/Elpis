@@ -5,7 +5,7 @@ import { colours, layout } from "styles";
 
 interface Props {
   display: "passive" | "warn" | "error";
-  messages: [string?];
+  messages: (string | null)[];
 }
 
 class MessageBox extends Component<Props> {

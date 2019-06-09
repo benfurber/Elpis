@@ -6,7 +6,7 @@ import CameraRoll, {
 
 import { ButtonSubmit } from "components";
 import { NavigationType } from "interfaces";
-import { colours, elements, layout, typography } from "styles";
+import { colours, elements, layout } from "styles";
 
 const labels = {
   addPhoto: "Add photo",
@@ -15,11 +15,12 @@ const labels = {
 interface Props {
   display: "active" | "error" | "loading";
   navigation: NavigationType;
+  image: null | any;
+  setImage: (PhotoIdentifier) => void;
 }
 
 interface State {
   images: PhotoIdentifier[];
-  selectedImage: null | any;
 }
 
 class ProfilePictureField extends Component<Props, State> {
@@ -27,14 +28,11 @@ class ProfilePictureField extends Component<Props, State> {
     super(props);
     this.state = {
       images: [],
-      selectedImage: null,
     };
   }
 
   selectImage(index) {
-    this.setState({
-      selectedImage: this.state.images[index],
-    });
+    this.props.setImage(this.state.images[index]);
   }
 
   navigateToImageBrowser() {
@@ -59,12 +57,11 @@ class ProfilePictureField extends Component<Props, State> {
   }
 
   renderAvatar() {
-    const { display } = this.props;
-    const { selectedImage } = this.state;
+    const { display, image } = this.props;
     const annonProfilePath = "../assets/images/profile-pic-annon.png";
 
-    const file = selectedImage
-      ? { uri: selectedImage.node.image.uri }
+    const file = image
+      ? { uri: image.node.image.uri }
       : require(annonProfilePath);
 
     const errorStyle = display === "error" ? styles.imageContainerError : null;

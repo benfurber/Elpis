@@ -17,13 +17,14 @@ exports[`LoginForm when active renders correctly 1`] = `
         "paddingBottom": 20,
       }
     }
-    text="Please complete your profile"
+    text="Please complete your profile."
   />
   <MessageBox
     display="warn"
     messages={
       Array [
         "A nice strong password please.",
+        null,
       ]
     }
   />
@@ -65,6 +66,8 @@ exports[`LoginForm when active renders correctly 1`] = `
   </View>
   <ProfilePictureField
     display="active"
+    image={null}
+    setImage={[Function]}
   />
   <View
     style={
@@ -101,13 +104,14 @@ exports[`LoginForm when passwords match and the password is strong renders corre
         "paddingBottom": 20,
       }
     }
-    text="Please complete your profile"
+    text="Please complete your profile."
   />
   <MessageBox
     display="warn"
     messages={
       Array [
         "A nice strong password please.",
+        null,
       ]
     }
   />
@@ -149,6 +153,8 @@ exports[`LoginForm when passwords match and the password is strong renders corre
   </View>
   <ProfilePictureField
     display="active"
+    image={null}
+    setImage={[Function]}
   />
   <View
     style={
@@ -185,13 +191,14 @@ exports[`LoginForm when passwords match and the password is weak renders correct
         "paddingBottom": 20,
       }
     }
-    text="Please complete your profile"
+    text="Please complete your profile."
   />
   <MessageBox
     display="warn"
     messages={
       Array [
         "A nice strong password please.",
+        null,
       ]
     }
   />
@@ -233,6 +240,8 @@ exports[`LoginForm when passwords match and the password is weak renders correct
   </View>
   <ProfilePictureField
     display="active"
+    image={null}
+    setImage={[Function]}
   />
   <View
     style={
@@ -269,13 +278,14 @@ exports[`LoginForm when there's an error renders correctly 1`] = `
         "paddingBottom": 20,
       }
     }
-    text="Please complete your profile"
+    text="Please complete your profile."
   />
   <MessageBox
     display="error"
     messages={
       Array [
-        "Password field empty",
+        "Password field empty.",
+        "No profile picture selected.",
       ]
     }
   />
@@ -289,7 +299,7 @@ exports[`LoginForm when there's an error renders correctly 1`] = `
     }
   >
     <NewTextInput
-      displayStyle="loading"
+      displayStyle="error"
       onChangeText={[Function]}
       placeholder="Set password"
       secureTextEntry={true}
@@ -307,7 +317,7 @@ exports[`LoginForm when there's an error renders correctly 1`] = `
     }
   >
     <NewTextInput
-      displayStyle="loading"
+      displayStyle="error"
       onChangeText={[Function]}
       placeholder="Repeat password"
       secureTextEntry={true}
@@ -316,7 +326,9 @@ exports[`LoginForm when there's an error renders correctly 1`] = `
     />
   </View>
   <ProfilePictureField
-    display="loading"
+    display="error"
+    image={null}
+    setImage={[Function]}
   />
   <View
     style={
@@ -328,7 +340,7 @@ exports[`LoginForm when there's an error renders correctly 1`] = `
     }
   >
     <ButtonSubmit
-      display="loading"
+      display="error"
       label="Submit"
       onPress={[Function]}
     />
