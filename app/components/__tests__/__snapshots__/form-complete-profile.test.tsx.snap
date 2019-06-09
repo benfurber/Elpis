@@ -19,26 +19,14 @@ exports[`LoginForm when active renders correctly 1`] = `
     }
     text="Please complete your profile"
   />
-  <View
-    style={
+  <MessageBox
+    display="warn"
+    messages={
       Array [
-        Object {
-          "backgroundColor": "rgba(255, 255, 255, 0.60)",
-          "borderRadius": 5,
-          "borderWidth": 2,
-          "marginVertical": 20,
-          "padding": 20,
-        },
-        Object {
-          "borderColor": "orange",
-        },
+        "A nice strong password please.",
       ]
     }
-  >
-    <Text>
-      A nice strong password please.
-    </Text>
-  </View>
+  />
   <View
     style={
       Object {
@@ -115,26 +103,14 @@ exports[`LoginForm when passwords match and the password is strong renders corre
     }
     text="Please complete your profile"
   />
-  <View
-    style={
+  <MessageBox
+    display="warn"
+    messages={
       Array [
-        Object {
-          "backgroundColor": "rgba(255, 255, 255, 0.60)",
-          "borderRadius": 5,
-          "borderWidth": 2,
-          "marginVertical": 20,
-          "padding": 20,
-        },
-        Object {
-          "borderColor": "orange",
-        },
+        "A nice strong password please.",
       ]
     }
-  >
-    <Text>
-      A nice strong password please.
-    </Text>
-  </View>
+  />
   <View
     style={
       Object {
@@ -211,26 +187,14 @@ exports[`LoginForm when passwords match and the password is weak renders correct
     }
     text="Please complete your profile"
   />
-  <View
-    style={
+  <MessageBox
+    display="warn"
+    messages={
       Array [
-        Object {
-          "backgroundColor": "rgba(255, 255, 255, 0.60)",
-          "borderRadius": 5,
-          "borderWidth": 2,
-          "marginVertical": 20,
-          "padding": 20,
-        },
-        Object {
-          "borderColor": "orange",
-        },
+        "A nice strong password please.",
       ]
     }
-  >
-    <Text>
-      A nice strong password please.
-    </Text>
-  </View>
+  />
   <View
     style={
       Object {
@@ -307,26 +271,14 @@ exports[`LoginForm when there's an error renders correctly 1`] = `
     }
     text="Please complete your profile"
   />
-  <View
-    style={
+  <MessageBox
+    display="error"
+    messages={
       Array [
-        Object {
-          "backgroundColor": "rgba(255, 255, 255, 0.60)",
-          "borderRadius": 5,
-          "borderWidth": 2,
-          "marginVertical": 20,
-          "padding": 20,
-        },
-        Object {
-          "borderColor": "rgb(208, 2, 27)",
-        },
+        "Password field empty",
       ]
     }
-  >
-    <Text>
-      Password field empty
-    </Text>
-  </View>
+  />
   <View
     style={
       Object {

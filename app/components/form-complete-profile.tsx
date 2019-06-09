@@ -1,8 +1,9 @@
 import React, { Component } from "react";
-import { StyleSheet, Text, View } from "react-native";
+import { StyleSheet, View } from "react-native";
 
 import {
   ButtonSubmit,
+  MessageBox,
   ProfilePictureField,
   TextInput,
   Title,
@@ -31,8 +32,8 @@ interface Props {
 
 interface State {
   display: "active" | "error" | "loading";
-  formMessage: null | string;
-  formMessageState: "passive" | "warn" | "error";
+  displayForm: "passive" | "warn" | "error";
+  formMessages: [string];
   password: string;
   passwordRepeat: string;
 }
@@ -42,8 +43,8 @@ class FormCompleteProfile extends Component<Props, State> {
     super(props);
     this.state = {
       display: "active",
-      formMessage: labels.passwordRequest,
-      formMessageState: "warn",
+      displayForm: "warn",
+      formMessages: [labels.passwordRequest],
       password: "",
       passwordRepeat: "",
     };
@@ -59,8 +60,8 @@ class FormCompleteProfile extends Component<Props, State> {
   passwordError(message) {
     return this.setState({
       display: "error",
-      formMessage: message,
-      formMessageState: "error",
+      displayForm: "error",
+      formMessages: [message],
     });
   }
 
@@ -88,8 +89,8 @@ class FormCompleteProfile extends Component<Props, State> {
     if (passwordStrength === "strong") {
       this.setState({
         display: "active",
-        formMessage: labels.passwordStrong,
-        formMessageState: "passive",
+        displayForm: "passive",
+        formMessages: [labels.passwordStrong],
       });
       return true;
     }
@@ -97,45 +98,35 @@ class FormCompleteProfile extends Component<Props, State> {
     if (passwordStrength === "medium") {
       this.setState({
         display: "active",
-        formMessage: labels.passwordMedium,
-        formMessageState: "warn",
+        displayForm: "warn",
+        formMessages: [labels.passwordMedium],
       });
       return true;
     }
 
     this.setState({
-      formMessage: labels.passwordRequest,
-      formMessageState: "warn",
+      displayForm: "warn",
+      formMessages: [labels.passwordRequest],
     });
 
     return false;
   }
 
-  renderMessage() {
-    const { formMessage, formMessageState } = this.state;
-
-    const style = {
-      error: styles.messageError,
-      passive: styles.messagePassive,
-      warn: styles.messageWarn,
-    };
-
-    return (
-      <View style={[styles.message, style[formMessageState]]}>
-        <Text>{formMessage}</Text>
-      </View>
-    );
-  }
-
   render() {
-    const { display, password, passwordRepeat } = this.state;
+    const {
+      display,
+      displayForm,
+      formMessages,
+      password,
+      passwordRepeat,
+    } = this.state;
     const { navigation } = this.props;
 
     return (
       <View style={styles.content}>
         <Title style={styles.title} text={labels.formTitle} />
 
-        {this.renderMessage()}
+        <MessageBox display={displayForm} messages={formMessages} />
 
         <View style={styles.row}>
           <TextInput
