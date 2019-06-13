@@ -16,6 +16,7 @@
     "@types/enzyme-to-json": "^1.5.3",
     "@types/react-native-vector-icons": "^6.4.1",
     "@types/react-navigation": "^3.0.7",
+    "apollo-boost": "^0.4.2",
     "enzyme": "^3.10.0",
     "enzyme-adapter-react-16": "1.14.0",
     "enzyme-to-json": "^3.3.5",
