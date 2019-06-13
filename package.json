@@ -20,6 +20,7 @@
     "enzyme-adapter-react-16": "1.14.0",
     "enzyme-to-json": "^3.3.5",
     "eslint-plugin-prettier": "^3.1.0",
+    "graphql": "^14.3.1",
     "react": "16.8.3",
     "react-native": "0.59.5",
     "react-native-flex-image": "^1.2.1",
