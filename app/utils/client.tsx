@@ -1,7 +1,11 @@
 import ApolloClient from "apollo-boost";
 
+import { Config } from "utils";
+
+const uri = Config.API_PATH;
+
 const client = new ApolloClient({
-  uri: "https://48p1r2roz4.sse.codesandbox.io",
+  uri,
 });
 
 export { client };
