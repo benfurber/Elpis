@@ -6,6 +6,7 @@ export { ButtonSubmit } from "./button-submit";
 export { FormAddProfilePicture } from "./form-add-profile-picture";
 export { FormAddPassword } from "./form-add-password";
 export { Icon } from "./icon";
+export { Loading } from "./loading";
 export { LoginForm } from "./login-form";
 export { Logo } from "./logo";
 export { MessageBox } from "./message-box";
