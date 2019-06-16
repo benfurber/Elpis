@@ -4,6 +4,7 @@ export { BackgroundModal } from "./background-modal";
 export { ButtonSubmit } from "./button-submit";
 export { FormCompleteProfile } from "./form-complete-profile";
 export { Icon } from "./icon";
+export { Loading } from "./loading";
 export { LoginForm } from "./login-form";
 export { Logo } from "./logo";
 export { MessageBox } from "./message-box";
