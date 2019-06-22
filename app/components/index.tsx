@@ -1,10 +1,12 @@
-export { Comments } from "./comments";
 export { BackgroundContainer } from "./background-container";
 export { BackgroundModal } from "./background-modal";
 export { Badge } from "./badge";
 export { ButtonSubmit } from "./button-submit";
+export { Comments } from "./comments";
+export { ErrorMessage } from "./error-message";
 export { FormAddProfilePicture } from "./form-add-profile-picture";
 export { FormAddPassword } from "./form-add-password";
+export { FormCompleteProfile } from "./form-complete-profile";
 export { Icon } from "./icon";
 export { Loading } from "./loading";
 export { LoginForm } from "./login-form";
