@@ -2,6 +2,7 @@ export { Comments } from "./comments";
 export { BackgroundContainer } from "./background-container";
 export { BackgroundModal } from "./background-modal";
 export { ButtonSubmit } from "./button-submit";
+export { ErrorMessage } from "./error-message";
 export { FormCompleteProfile } from "./form-complete-profile";
 export { Icon } from "./icon";
 export { Loading } from "./loading";
