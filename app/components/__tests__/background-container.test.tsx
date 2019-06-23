@@ -4,7 +4,7 @@ import { shallow } from "enzyme";
 
 import { BackgroundContainer } from "components";
 
-describe("Icon", () => {
+describe("BackgroundContainer", () => {
   it("renders correctly", () => {
     const component = shallow(
       <BackgroundContainer>
