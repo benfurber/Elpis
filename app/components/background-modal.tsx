@@ -44,7 +44,7 @@ const styles = StyleSheet.create({
   imageHand: {
     flex: 1,
     width: 360,
-    height: 340,
+    height: 360,
     bottom: 0,
     left: -10,
     opacity: 0.2,
