@@ -9,12 +9,20 @@ interface Props {
 }
 
 const Footer = (props: Props) => {
+  const renderAvatar = () => {
+    if (props.avatarPath) {
+      return (
+        <View style={styles.avatarContainer}>
+          <Image source={props.avatarPath} style={styles.authorAvatar} />
+        </View>
+      );
+    }
+  };
+
   return (
     <View style={styles.footer}>
       <View style={styles.followingContainer} />
-      <View style={styles.avatarContainer}>
-        <Image source={props.avatarPath} style={styles.authorAvatar} />
-      </View>
+      {renderAvatar()}
     </View>
   );
 };
