@@ -4,12 +4,33 @@ exports[`Comments<NoContent> renders correctly 1`] = `
 <View
   style={
     Object {
+      "paddingBottom": 40,
       "paddingHorizontal": 10,
-      "paddingVertical": 20,
+      "paddingTop": 20,
     }
   }
 >
+  <Image
+    source={
+      Object {
+        "testUri": "../../../app/assets/images/no-comments-box.png",
+      }
+    }
+    style={
+      Object {
+        "alignSelf": "center",
+      }
+    }
+  />
   <Title
+    style={
+      Object {
+        "alignContent": "center",
+        "alignSelf": "center",
+        "fontSize": 30,
+        "textAlign": "center",
+      }
+    }
     text="No content to show!"
   />
 </View>
