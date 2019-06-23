@@ -53,21 +53,21 @@ class Post extends Component<Props, State> {
   };
 
   renderBody() {
-    const { author, date, description, imagePath } = this.props.post;
+    const { author, body, date, imagePath } = this.props.post;
     return (
       <View>
-        <Body date={date} description={description} imagePath={imagePath} />
+        <Body date={date} body={body} imagePath={imagePath} />
         <Footer avatarPath={author.avatarPath} />
       </View>
     );
   }
 
   renderComments() {
-    const { comments, description, id } = this.props.post;
+    const { comments, body, id } = this.props.post;
     return (
       <Comments
         comments={comments}
-        description={description}
+        description={body}
         navigation={this.props.navigation}
         postId={id}
       />

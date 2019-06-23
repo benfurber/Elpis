@@ -20,9 +20,9 @@ export type NavigationType = NavigationScreenProp<any, any>;
 
 export interface Post {
   author: Author;
+  body: string | null;
   comments: Comment[] | [];
-  date: Date;
-  description: string | null;
+  date?: Date;
   id: string;
   imagePath: string;
 }
