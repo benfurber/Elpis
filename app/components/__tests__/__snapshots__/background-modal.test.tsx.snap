@@ -7,7 +7,7 @@ exports[`Icon renders correctly 1`] = `
       Object {
         "bottom": 0,
         "flex": 1,
-        "height": 340,
+        "height": 360,
         "left": -10,
         "opacity": 0.2,
         "width": 360,
