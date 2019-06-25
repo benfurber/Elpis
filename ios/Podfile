@@ -2,6 +2,7 @@
 
 target 'Elpis' do
   use_frameworks!
+  pod 'Mixpanel', '~> 3.3.9'
 
   target 'ElpisTests' do
     inherit! :search_paths
