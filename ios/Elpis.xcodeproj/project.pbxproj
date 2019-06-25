@@ -5,7 +5,6 @@
 	};
 	objectVersion = 46;
 	objects = {
-
 /* Begin PBXBuildFile section */
 		000CF5A040994009983DCD1C /* FontAwesome5_Brands.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B31746DC0EEA4637AB0AC222 /* FontAwesome5_Brands.ttf */; };
 		00C302E51ABCBA2D00DB3ED1 /* libRCTActionSheet.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302AC1ABCB8CE00DB3ED1 /* libRCTActionSheet.a */; };
@@ -73,6 +72,8 @@
 		E7C470F694F5479E83EA19DA /* creteround-italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1251CF924D134886BC964BE6 /* creteround-italic.ttf */; };
 		F30CD1516A5C486E97B90910 /* FontAwesome.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0030020DCF284FCE901A5F07 /* FontAwesome.ttf */; };
 		FDECC9844ABB4532B3FF2526 /* MaterialCommunityIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E91FDD34F9C64F46BC49483C /* MaterialCommunityIcons.ttf */; };
+		8FD002EBB9A94244A6F28C1E /* libRNMixpanel.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A3C0410206945DDA52FA3E4 /* libRNMixpanel.a */; };
+		687821578D0D4BB996B99D4B /* libRNMixpanel-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A1BCF3CDB914F80A9C6EB41 /* libRNMixpanel-tvOS.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -467,6 +468,9 @@
 		F5A9C7DA675C445FB554898C /* libSplashScreen.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libSplashScreen.a; sourceTree = "<group>"; };
 		F91504FB201846F6A5906F76 /* AntDesign.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = AntDesign.ttf; path = "../node_modules/react-native-vector-icons/Fonts/AntDesign.ttf"; sourceTree = "<group>"; };
 		FBF4C1240BDF4FF4987F8AAB /* Feather.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Feather.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Feather.ttf"; sourceTree = "<group>"; };
+		50AF4FECB46644D1BF8100C2 /* RNMixpanel.xcodeproj */ = {isa = PBXFileReference; name = "RNMixpanel.xcodeproj"; path = "../node_modules/react-native-mixpanel/RNMixpanel.xcodeproj"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.pb-project; explicitFileType = undefined; includeInIndex = 0; };
+		0A3C0410206945DDA52FA3E4 /* libRNMixpanel.a */ = {isa = PBXFileReference; name = "libRNMixpanel.a"; path = "libRNMixpanel.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
+		3A1BCF3CDB914F80A9C6EB41 /* libRNMixpanel-tvOS.a */ = {isa = PBXFileReference; name = "libRNMixpanel-tvOS.a"; path = "libRNMixpanel-tvOS.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -500,6 +504,7 @@
 				67598912893B4B97B3F6ADC0 /* libRNCWebView.a in Frameworks */,
 				44BE0CE575BF4880BC9E5925 /* libRNCCameraRoll.a in Frameworks */,
 				3FA22ACFDC8C4166986F4DB6 /* libSplashScreen.a in Frameworks */,
+				8FD002EBB9A94244A6F28C1E /* libRNMixpanel.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -517,6 +522,7 @@
 				2D02E4C81E0B4AEC006451C7 /* libRCTWebSocket-tvOS.a in Frameworks */,
 				140D544031814A258F3222BC /* libRNGestureHandler-tvOS.a in Frameworks */,
 				948ACF16065B40009887FDE2 /* libRNVectorIcons-tvOS.a in Frameworks */,
+				687821578D0D4BB996B99D4B /* libRNMixpanel-tvOS.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -784,6 +790,7 @@
 				7B6AA13E68DC4CB9B41C8793 /* RNCWebView.xcodeproj */,
 				0F239DD0B8624BB89F8DBF27 /* RNCCameraRoll.xcodeproj */,
 				17264CC8E5014BCA8488F888 /* SplashScreen.xcodeproj */,
+				50AF4FECB46644D1BF8100C2 /* RNMixpanel.xcodeproj */,
 			);
 			name = Libraries;
 			sourceTree = "<group>";
@@ -1505,12 +1512,15 @@
 					"$(SRCROOT)/../node_modules/react-native-webview/ios",
 					"$(SRCROOT)/../node_modules/@react-native-community/cameraroll/ios",
 					"$(SRCROOT)/../node_modules/react-native-splash-screen/ios",
+					"$(SRCROOT)/../node_modules/react-native-mixpanel/RNMixpanel",
 				);
 				INFOPLIST_FILE = ElpisTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
@@ -1540,12 +1550,15 @@
 					"$(SRCROOT)/../node_modules/react-native-webview/ios",
 					"$(SRCROOT)/../node_modules/@react-native-community/cameraroll/ios",
 					"$(SRCROOT)/../node_modules/react-native-splash-screen/ios",
+					"$(SRCROOT)/../node_modules/react-native-mixpanel/RNMixpanel",
 				);
 				INFOPLIST_FILE = ElpisTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
@@ -1576,6 +1589,7 @@
 					"$(SRCROOT)/../node_modules/react-native-webview/ios",
 					"$(SRCROOT)/../node_modules/@react-native-community/cameraroll/ios",
 					"$(SRCROOT)/../node_modules/react-native-splash-screen/ios",
+					"$(SRCROOT)/../node_modules/react-native-mixpanel/RNMixpanel",
 				);
 				INFOPLIST_FILE = Elpis/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -1602,6 +1616,7 @@
 					"$(SRCROOT)/../node_modules/react-native-webview/ios",
 					"$(SRCROOT)/../node_modules/@react-native-community/cameraroll/ios",
 					"$(SRCROOT)/../node_modules/react-native-splash-screen/ios",
+					"$(SRCROOT)/../node_modules/react-native-mixpanel/RNMixpanel",
 				);
 				INFOPLIST_FILE = Elpis/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -1635,11 +1650,14 @@
 					"$(SRCROOT)/../node_modules/react-native-webview/ios",
 					"$(SRCROOT)/../node_modules/@react-native-community/cameraroll/ios",
 					"$(SRCROOT)/../node_modules/react-native-splash-screen/ios",
+					"$(SRCROOT)/../node_modules/react-native-mixpanel/RNMixpanel",
 				);
 				INFOPLIST_FILE = "Elpis-tvOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
@@ -1678,11 +1696,14 @@
 					"$(SRCROOT)/../node_modules/react-native-webview/ios",
 					"$(SRCROOT)/../node_modules/@react-native-community/cameraroll/ios",
 					"$(SRCROOT)/../node_modules/react-native-splash-screen/ios",
+					"$(SRCROOT)/../node_modules/react-native-mixpanel/RNMixpanel",
 				);
 				INFOPLIST_FILE = "Elpis-tvOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
@@ -1720,11 +1741,14 @@
 					"$(SRCROOT)/../node_modules/react-native-webview/ios",
 					"$(SRCROOT)/../node_modules/@react-native-community/cameraroll/ios",
 					"$(SRCROOT)/../node_modules/react-native-splash-screen/ios",
+					"$(SRCROOT)/../node_modules/react-native-mixpanel/RNMixpanel",
 				);
 				INFOPLIST_FILE = "Elpis-tvOSTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
@@ -1762,11 +1786,14 @@
 					"$(SRCROOT)/../node_modules/react-native-webview/ios",
 					"$(SRCROOT)/../node_modules/@react-native-community/cameraroll/ios",
 					"$(SRCROOT)/../node_modules/react-native-splash-screen/ios",
+					"$(SRCROOT)/../node_modules/react-native-mixpanel/RNMixpanel",
 				);
 				INFOPLIST_FILE = "Elpis-tvOSTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",

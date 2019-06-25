@@ -3,6 +3,7 @@ package com.elpis;
 import android.app.Application;
 
 import com.facebook.react.ReactApplication;
+import com.kevinejohn.RNMixpanel.RNMixpanel;
 import org.devio.rn.splashscreen.SplashScreenReactPackage;
 import com.reactnativecommunity.cameraroll.CameraRollPackage;
 import com.reactnativecommunity.webview.RNCWebViewPackage;
@@ -28,6 +29,7 @@ public class MainApplication extends Application implements ReactApplication {
     protected List<ReactPackage> getPackages() {
       return Arrays.<ReactPackage>asList(
           new MainReactPackage(),
+            new RNMixpanel(),
             new SplashScreenReactPackage(),
             new CameraRollPackage(),
             new RNCWebViewPackage(),
