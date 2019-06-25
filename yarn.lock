@@ -6659,6 +6659,11 @@ react-native-keyboard-aware-scroll-view@^0.8.0:
     prop-types "^15.6.2"
     react-native-iphone-x-helper "^1.0.3"
 
+react-native-mixpanel@^1.1.4:
+  version "1.1.4"
+  resolved "https://registry.yarnpkg.com/react-native-mixpanel/-/react-native-mixpanel-1.1.4.tgz#874bb7eb012c005f32c94e2f99b6503e327ff970"
+  integrity sha512-RiyGCAL3klaxmaVIi5tv7tBcn/W10HRPnJm+nbec4DA/lV1SJNI+r6kXnhPHeW5Khiwngdz0rK5Ve4LE5/lOOA==
+
 react-native-safe-area-view@^0.14.1:
   version "0.14.4"
   resolved "https://registry.yarnpkg.com/react-native-safe-area-view/-/react-native-safe-area-view-0.14.4.tgz#1647fa74fd452cb8cee4f47bd08de3829451bf5d"
