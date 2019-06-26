@@ -15,7 +15,7 @@
             <rect key="frame" x="0.0" y="0.0" width="480" height="740"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="LaunchScreen1242x2208.png" translatesAutoresizingMaskIntoConstraints="NO" id="Wad-dI-40S">
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="SplashImage" translatesAutoresizingMaskIntoConstraints="NO" id="Wad-dI-40S">
                     <rect key="frame" x="0.0" y="0.0" width="480" height="740"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                 </imageView>
@@ -30,6 +30,6 @@
         </view>
     </objects>
     <resources>
-        <image name="LaunchScreen1242x2208.png" width="1242" height="2208"/>
+        <image name="SplashImage" width="375" height="812"/>
     </resources>
 </document>
