@@ -15,6 +15,10 @@ class Analytics {
       .sharedInstanceWithToken(this.token)
       .then(() => this.mixPanel.track(trackingEvent));
   }
+
+  mockMixPanel(mock) {
+    this.mixPanel = mock;
+  }
 }
 
 const analytics = new Analytics();
