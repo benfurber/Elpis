@@ -62,12 +62,13 @@ class Post extends Component<Props, State> {
   }
 
   renderComments() {
-    const { comments, description } = this.props.post;
+    const { comments, description, id } = this.props.post;
     return (
       <Comments
         comments={comments}
         description={description}
         navigation={this.props.navigation}
+        postId={id}
       />
     );
   }
