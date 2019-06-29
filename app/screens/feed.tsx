@@ -1,9 +1,10 @@
-import React from "react";
+import React, { Component } from "react";
 import { FlatList, ScrollView, StyleSheet, View } from "react-native";
 
 import { BackgroundContainer, Logo, Post } from "components";
 import { NavigationType } from "interfaces";
 import { colours } from "styles";
+import { Analytics } from "utils";
 
 interface Props {
   navigation: NavigationType;
@@ -83,26 +84,32 @@ const posts = [
   },
 ];
 
-const FeedScreen = (props: Props) => {
-  return (
-    <BackgroundContainer>
-      <ScrollView>
-        <View style={styles.logo}>
-          <Logo />
-        </View>
-        <View style={styles.feedBody}>
-          <FlatList
-            data={posts}
-            keyExtractor={({ id }) => id}
-            renderItem={({ item }) => (
-              <Post navigation={props.navigation} post={item} />
-            )}
-          />
-        </View>
-      </ScrollView>
-    </BackgroundContainer>
-  );
-};
+class FeedScreen extends Component<Props> {
+  componentDidMount() {
+    Analytics.track("Feed");
+  }
+
+  render() {
+    return (
+      <BackgroundContainer>
+        <ScrollView>
+          <View style={styles.logo}>
+            <Logo />
+          </View>
+          <View style={styles.feedBody}>
+            <FlatList
+              data={posts}
+              keyExtractor={({ id }) => id}
+              renderItem={({ item }) => (
+                <Post navigation={this.props.navigation} post={item} />
+              )}
+            />
+          </View>
+        </ScrollView>
+      </BackgroundContainer>
+    );
+  }
+}
 
 const styles = StyleSheet.create({
   container: {

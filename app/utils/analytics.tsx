@@ -1,6 +1,7 @@
 import Mixpanel from "react-native-mixpanel";
 import { MIXPANEL_TOKEN } from "react-native-dotenv";
 
+const contentTypes = [];
 class Analytics {
   token: string;
   mixPanel: any;
@@ -11,6 +12,12 @@ class Analytics {
   }
 
   track(trackingEvent: string) {
+    this.mixPanel
+      .sharedInstanceWithToken(this.token)
+      .then(() => this.mixPanel.track(trackingEvent));
+  }
+
+  trackContent(trackingEvent: string) {
     this.mixPanel
       .sharedInstanceWithToken(this.token)
       .then(() => this.mixPanel.track(trackingEvent));
