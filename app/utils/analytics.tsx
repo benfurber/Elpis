@@ -1,7 +1,7 @@
 import Mixpanel from "react-native-mixpanel";
 import { MIXPANEL_TOKEN } from "react-native-dotenv";
 
-type ContentTypes = "Comments";
+type ContentTypes = "Comments" | "Replies";
 
 interface TrackContent {
   contentType: ContentTypes;
