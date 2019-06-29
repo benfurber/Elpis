@@ -3,12 +3,17 @@ import { StyleSheet, View } from "react-native";
 
 import { BackgroundContainer, LoginForm, Logo } from "components";
 import { NavigationType } from "interfaces";
+import { Analytics } from "utils";
 
 interface Props {
   navigation: NavigationType;
 }
 
 class WelcomeScreen extends Component<Props> {
+  componentDidMount() {
+    Analytics.track("Login");
+  }
+
   render() {
     const { navigation } = this.props;
 
