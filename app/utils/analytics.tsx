@@ -1,7 +1,12 @@
 import Mixpanel from "react-native-mixpanel";
 import { MIXPANEL_TOKEN } from "react-native-dotenv";
 
-const contentTypes = [];
+type ContentTypes = "Comments";
+
+interface TrackContent {
+  contentType: ContentTypes;
+  contentId: string;
+}
 class Analytics {
   token: string;
   mixPanel: any;
@@ -17,10 +22,12 @@ class Analytics {
       .then(() => this.mixPanel.track(trackingEvent));
   }
 
-  trackContent(trackingEvent: string) {
-    this.mixPanel
-      .sharedInstanceWithToken(this.token)
-      .then(() => this.mixPanel.track(trackingEvent));
+  trackContent({ contentType, contentId }: TrackContent) {
+    this.mixPanel.sharedInstanceWithToken(this.token).then(() =>
+      this.mixPanel.trackWithProperties(contentType, {
+        contentId,
+      }),
+    );
   }
 
   mockMixPanel(mock) {
