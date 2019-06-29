@@ -5,7 +5,7 @@ import Icon from "react-native-vector-icons/FontAwesome5";
 import { colours } from "styles";
 
 interface Props {
-  colour?: string;
+  colour?: null | string;
   name: string;
   size?: number;
   solid?: boolean;
