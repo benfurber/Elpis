@@ -64,6 +64,9 @@ exports[`Post<Tabs> renders correctly when displaying the body 1`] = `
       activeOpacity={0.2}
       onPress={[MockFunction]}
     >
+      <Badge
+        left={52}
+      />
       <customIcon
         colour="rgba(45, 82, 113, 0.60)"
         name="comments"
@@ -169,6 +172,9 @@ exports[`Post<Tabs> renders correctly when displaying the comments 1`] = `
       activeOpacity={0.2}
       onPress={[MockFunction]}
     >
+      <Badge
+        left={52}
+      />
       <customIcon
         colour="rgba(45, 82, 113, 0.60)"
         name="comments"

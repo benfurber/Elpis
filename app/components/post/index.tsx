@@ -3,6 +3,7 @@ import { StyleSheet, Text, View } from "react-native";
 
 import { Comments } from "components";
 import { NavigationType, Post as PostInterface } from "interfaces";
+import { calculateTotalComments } from "utils";
 
 import { Body } from "./body";
 import { Footer } from "./footer";
@@ -93,12 +94,15 @@ class Post extends Component<Props, State> {
   }
 
   render() {
+    const totalComments = calculateTotalComments(this.props.post.comments);
+
     return (
       <View style={[styles.container, this.fullHeight()]}>
         <Tabs
           onPressComments={this.onPressComments}
           onPressPost={this.onPressPost}
           display={this.state.display}
+          totalComments={totalComments}
         />
         {this.renderContent()}
       </View>

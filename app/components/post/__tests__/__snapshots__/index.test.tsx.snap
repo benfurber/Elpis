@@ -18,6 +18,7 @@ exports[`Post when comments are set to display renders correctly 1`] = `
     display="comments"
     onPressComments={[Function]}
     onPressPost={[Function]}
+    totalComments={1}
   />
   <Comments
     comments={
@@ -59,6 +60,7 @@ exports[`Post when the body is set to display renders correctly 1`] = `
     display="body"
     onPressComments={[Function]}
     onPressPost={[Function]}
+    totalComments={0}
   />
   <View>
     <Body
@@ -96,6 +98,7 @@ exports[`Post when the body is set to display renders correctly if not descripti
     display="body"
     onPressComments={[Function]}
     onPressPost={[Function]}
+    totalComments={0}
   />
   <View>
     <Body
