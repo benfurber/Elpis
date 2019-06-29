@@ -2,9 +2,9 @@ import React, { Component } from "react";
 import { Image, StyleSheet, Text, View } from "react-native";
 import { TouchableOpacity } from "react-native-gesture-handler";
 
-import { Title } from "components";
+import { Badge, Title } from "components";
 import { Comment as CommentInterface } from "interfaces";
-import { colours, elements, layout, typography } from "styles";
+import { elements, layout } from "styles";
 import { formatDate } from "utils";
 
 interface Props {
@@ -13,24 +13,13 @@ interface Props {
 }
 
 class Comment extends Component<Props> {
-  renderBadge() {
-    const { totalReplies } = this.props.item;
-    if (totalReplies > 0) {
-      return (
-        <View style={styles.badge}>
-          <Text style={styles.badgeText}>{totalReplies}</Text>
-        </View>
-      );
-    }
-  }
-
   render() {
     const { item } = this.props;
     return (
       <TouchableOpacity onPress={() => this.props.onPress(item.id)}>
         <View style={styles.commentContainer}>
           <View style={styles.avatarContainer}>
-            {this.renderBadge()}
+            <Badge left={35} number={item.totalReplies} />
             <View>
               <Image
                 source={item.author.avatarPath}
@@ -69,22 +58,6 @@ const styles = StyleSheet.create({
   commentDate: {
     marginBottom: layout.spacing,
     ...elements.textDate,
-  },
-  badge: {
-    alignItems: "center",
-    backgroundColor: colours.navyBlueDark,
-    borderRadius: 11,
-    flexDirection: "column",
-    height: 22,
-    justifyContent: "center",
-    left: 35,
-    position: "absolute",
-    width: 22,
-    zIndex: 1,
-  },
-  badgeText: {
-    color: colours.pureWhite,
-    fontSize: typography.fontSizeS,
   },
   text: {
     flex: 1,

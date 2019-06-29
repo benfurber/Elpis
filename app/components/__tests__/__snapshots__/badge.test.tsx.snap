@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Icon when given a number larger than zero renders correctly 1`] = `
+<View>
+  <Badge
+    left={5}
+    number={3}
+  />
+</View>
+`;
+
+exports[`Icon when given zero renders null 1`] = `
+<View>
+  <Badge
+    left={15}
+    number={0}
+  />
+</View>
+`;

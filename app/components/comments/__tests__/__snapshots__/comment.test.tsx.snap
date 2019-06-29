@@ -28,33 +28,10 @@ exports[`Comments<Comment> with replies renders correctly 1`] = `
         }
       }
     >
-      <View
-        style={
-          Object {
-            "alignItems": "center",
-            "backgroundColor": "rgb(45, 82, 113)",
-            "borderRadius": 11,
-            "flexDirection": "column",
-            "height": 22,
-            "justifyContent": "center",
-            "left": 35,
-            "position": "absolute",
-            "width": 22,
-            "zIndex": 1,
-          }
-        }
-      >
-        <Text
-          style={
-            Object {
-              "color": "rgb(255, 255, 255)",
-              "fontSize": 14,
-            }
-          }
-        >
-          1
-        </Text>
-      </View>
+      <Badge
+        left={35}
+        number={1}
+      />
       <View>
         <Image
           source={
@@ -140,6 +117,10 @@ exports[`Comments<Comment> without replies renders correctly 1`] = `
         }
       }
     >
+      <Badge
+        left={35}
+        number={0}
+      />
       <View>
         <Image
           source={

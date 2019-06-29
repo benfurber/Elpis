@@ -64,6 +64,10 @@ exports[`Post<Tabs> renders correctly when displaying the body 1`] = `
       activeOpacity={0.2}
       onPress={[MockFunction]}
     >
+      <Badge
+        left={52}
+        number={0}
+      />
       <customIcon
         colour="rgba(45, 82, 113, 0.60)"
         name="comments"
@@ -169,6 +173,119 @@ exports[`Post<Tabs> renders correctly when displaying the comments 1`] = `
       activeOpacity={0.2}
       onPress={[MockFunction]}
     >
+      <Badge
+        left={52}
+        number={0}
+      />
+      <customIcon
+        colour="rgba(45, 82, 113, 0.60)"
+        name="comments"
+        size={30}
+        style={
+          Object {
+            "alignSelf": "center",
+          }
+        }
+      />
+    </TouchableOpacity>
+  </View>
+  <View
+    style={
+      Object {
+        "borderTopLeftRadius": 5,
+        "borderTopRightRadius": 5,
+        "flex": 1,
+        "marginRight": 2,
+        "paddingHorizontal": 16,
+        "paddingVertical": 8,
+      }
+    }
+  >
+    <TouchableOpacity
+      activeOpacity={0.2}
+    >
+      <customIcon
+        name="ellipsis-h"
+        size={25}
+        style={
+          Object {
+            "alignSelf": "flex-end",
+          }
+        }
+      />
+    </TouchableOpacity>
+  </View>
+</View>
+`;
+
+exports[`Post<Tabs> renders correctly when there are comments 1`] = `
+<View
+  style={
+    Object {
+      "alignContent": "center",
+      "alignItems": "center",
+      "flexDirection": "row",
+      "width": "100%",
+    }
+  }
+>
+  <View
+    style={
+      Array [
+        Object {
+          "backgroundColor": "rgba(255, 255, 255, 0.60)",
+          "borderTopLeftRadius": 5,
+          "borderTopRightRadius": 5,
+          "flex": 1,
+          "marginRight": 2,
+          "paddingHorizontal": 16,
+          "paddingVertical": 8,
+        },
+        undefined,
+      ]
+    }
+  >
+    <TouchableOpacity
+      activeOpacity={0.2}
+      onPress={[MockFunction]}
+    >
+      <customIcon
+        name="palette"
+        size={30}
+        style={
+          Object {
+            "alignSelf": "center",
+          }
+        }
+      />
+    </TouchableOpacity>
+  </View>
+  <View
+    style={
+      Array [
+        Object {
+          "backgroundColor": "rgba(255, 255, 255, 0.60)",
+          "borderTopLeftRadius": 5,
+          "borderTopRightRadius": 5,
+          "flex": 1,
+          "marginRight": 2,
+          "paddingHorizontal": 16,
+          "paddingVertical": 8,
+        },
+        Object {
+          "backgroundColor": "rgba(255, 255, 255, 0.85)",
+        },
+      ]
+    }
+  >
+    <TouchableOpacity
+      activeOpacity={0.2}
+      onPress={[MockFunction]}
+    >
+      <Badge
+        left={52}
+        number={25}
+      />
       <customIcon
         colour="rgba(45, 82, 113, 0.60)"
         name="comments"

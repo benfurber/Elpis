@@ -3,7 +3,7 @@ import { FlatList, StyleSheet, View, ScrollView } from "react-native";
 
 import { Post } from "interfaces";
 import { colours, layout } from "styles";
-import { totalComments } from "utils";
+import { calculateTotalComments } from "utils";
 
 import { Comment } from "./comment";
 import { NoContent } from "./no-content";
@@ -23,7 +23,7 @@ interface Props {
 
 class CommentsLoop extends Component<Props> {
   noComments() {
-    if (totalComments(this.props.comments) === 0) {
+    if (calculateTotalComments(this.props.comments) === 0) {
       return <NoContent text={this.props.noComments} />;
     }
   }
@@ -31,9 +31,9 @@ class CommentsLoop extends Component<Props> {
   title() {
     const { comments } = this.props;
 
-    const titleText = `${totalComments(comments)} ${labels.comments} - ${
-      comments.length
-    } ${labels.topics}`;
+    const titleText = `${calculateTotalComments(comments)} ${
+      labels.comments
+    } - ${comments.length} ${labels.topics}`;
 
     return (
       <View style={styles.commentsHeadingContainer}>

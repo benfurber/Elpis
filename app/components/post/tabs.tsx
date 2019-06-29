@@ -2,7 +2,7 @@ import React from "react";
 import { StyleSheet, TouchableOpacity, View } from "react-native";
 
 import { colours, layout } from "styles";
-import { Icon } from "components";
+import { Badge, Icon } from "components";
 
 const iconSize = 30;
 
@@ -10,6 +10,7 @@ interface Props {
   onPressComments: () => void;
   onPressPost: () => void;
   display: string;
+  totalComments: number;
 }
 
 const Tabs = (props: Props) => {
@@ -28,6 +29,7 @@ const Tabs = (props: Props) => {
       </View>
       <View style={[styles.tabWithBackground, selectedTab("comments")]}>
         <TouchableOpacity onPress={props.onPressComments}>
+          <Badge left={52} number={props.totalComments} />
           <Icon
             colour={colours.navyBlueDarkTransparentHigh}
             name="comments"
