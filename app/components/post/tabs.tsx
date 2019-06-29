@@ -14,24 +14,29 @@ interface Props {
 }
 
 const Tabs = (props: Props) => {
-  const selectedTab = tab => {
-    if (tab === props.display) {
-      return styles.tabSelected;
-    }
-  };
+  const tabBackground = tab =>
+    tab === props.display ? styles.tabSelected : null;
+
+  const iconColour = tab =>
+    tab !== props.display ? colours.navyBlueDarkTransparentHigh : null;
 
   return (
     <View style={styles.tabs}>
-      <View style={[styles.tabWithBackground, selectedTab("body")]}>
+      <View style={[styles.tabWithBackground, tabBackground("body")]}>
         <TouchableOpacity onPress={props.onPressPost}>
-          <Icon name="palette" size={iconSize} style={styles.iconCentre} />
+          <Icon
+            colour={iconColour("body")}
+            name="palette"
+            size={iconSize}
+            style={styles.iconCentre}
+          />
         </TouchableOpacity>
       </View>
-      <View style={[styles.tabWithBackground, selectedTab("comments")]}>
+      <View style={[styles.tabWithBackground, tabBackground("comments")]}>
         <TouchableOpacity onPress={props.onPressComments}>
           <Badge left={52} number={props.totalComments} />
           <Icon
-            colour={colours.navyBlueDarkTransparentHigh}
+            colour={iconColour("comments")}
             name="comments"
             size={iconSize}
             style={styles.iconCentre}
