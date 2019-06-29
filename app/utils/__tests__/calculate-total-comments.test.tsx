@@ -1,6 +1,6 @@
-import { totalComments } from "utils";
+import { calculateTotalComments } from "utils";
 
-describe("totalComments()", () => {
+describe("calculateTotalComments()", () => {
   it("returns the total number of comments", () => {
     const reply1 = {
       author: {
@@ -39,10 +39,10 @@ describe("totalComments()", () => {
 
     const comments = [comment];
 
-    expect(totalComments(comments)).toBe(3);
+    expect(calculateTotalComments(comments)).toBe(3);
   });
 
   it("returns 0 if there are no comments", () => {
-    expect(totalComments([])).toBe(0);
+    expect(calculateTotalComments([])).toBe(0);
   });
 });

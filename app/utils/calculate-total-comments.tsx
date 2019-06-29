@@ -2,7 +2,7 @@ import { Comment as CommentInterface } from "interfaces";
 
 type Comments = CommentInterface[] | [];
 
-const totalComments = (comments: Comments) => {
+const calculateTotalComments = (comments: Comments) => {
   let runningTotal = comments.length;
 
   comments.forEach(comment => {
@@ -12,4 +12,4 @@ const totalComments = (comments: Comments) => {
   return runningTotal;
 };
 
-export { totalComments };
+export { calculateTotalComments };
