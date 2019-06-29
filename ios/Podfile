@@ -1,0 +1,18 @@
+# frozen_string_literal: true
+
+target 'Elpis' do
+  use_frameworks!
+  pod 'Mixpanel', '~> 3.3.9'
+
+  target 'ElpisTests' do
+    inherit! :search_paths
+  end
+end
+
+target 'Elpis-tvOS' do
+  use_frameworks!
+
+  target 'Elpis-tvOSTests' do
+    inherit! :search_paths
+  end
+end
