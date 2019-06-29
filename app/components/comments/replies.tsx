@@ -11,7 +11,7 @@ import {
 import { Title } from "components";
 import { Comment } from "interfaces";
 import { colours, elements, layout, typography } from "styles";
-import { formatDate } from "utils";
+import { Analytics, formatDate } from "utils";
 
 import { NoContent } from "./no-content";
 import { Reply } from "./reply";
@@ -29,6 +29,13 @@ const labels = {
 };
 
 class Replies extends Component<Props> {
+  componentDidMount() {
+    Analytics.trackContent({
+      contentType: "Replies",
+      contentId: this.props.item.id,
+    });
+  }
+
   repliesLoop() {
     return (
       <FlatList

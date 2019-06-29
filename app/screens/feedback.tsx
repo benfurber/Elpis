@@ -4,12 +4,17 @@ import { WebView } from "react-native-webview";
 
 import { BackgroundContainer } from "components";
 import { NavigationType } from "interfaces";
+import { Analytics } from "utils";
 
 interface Props {
   navigation: NavigationType;
 }
 
 class FeedbackScreen extends Component<Props> {
+  componentDidMount() {
+    Analytics.track("Feedback");
+  }
+
   render() {
     return (
       <BackgroundContainer>

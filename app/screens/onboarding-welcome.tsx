@@ -4,6 +4,7 @@ import { Image, StyleSheet, Text, View } from "react-native";
 import { BackgroundModal, ButtonSubmit, Title } from "components";
 import { NavigationType } from "interfaces";
 import { colours, elements, layout, typography } from "styles";
+import { Analytics } from "utils";
 
 const mayImagePath = "../assets/images/profile-pic-may.jpg";
 
@@ -22,6 +23,13 @@ interface State {
 }
 
 class OnboardingWelcomeScreen extends Component<Props, State> {
+  componentDidMount() {
+    Analytics.trackContent({
+      contentType: "Onboarding",
+      contentId: "onboarding-1",
+    });
+  }
+
   render() {
     const { navigation } = this.props;
 

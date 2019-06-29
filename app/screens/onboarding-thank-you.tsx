@@ -4,6 +4,7 @@ import { StyleSheet, View } from "react-native";
 import { BackgroundModal, ButtonSubmit, Title } from "components";
 import { NavigationType } from "interfaces";
 import { layout, typography } from "styles";
+import { Analytics } from "utils";
 
 const labels = {
   button: "Enter",
@@ -18,6 +19,13 @@ interface Props {
 }
 
 class OnboardingThankYouScreen extends Component<Props> {
+  componentDidMount() {
+    Analytics.trackContent({
+      contentType: "Onboarding",
+      contentId: "onboarding-3",
+    });
+  }
+
   render() {
     const { navigation } = this.props;
 

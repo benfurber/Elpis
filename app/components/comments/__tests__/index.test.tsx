@@ -29,6 +29,7 @@ describe("Comments", () => {
           comments={[comment]}
           description={"A simple string"}
           navigation={navigation}
+          postId={"0"}
         />,
       );
 
@@ -43,6 +44,7 @@ describe("Comments", () => {
           comments={[]}
           description={"A simple string"}
           navigation={navigation}
+          postId={"0"}
         />,
       );
 

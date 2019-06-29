@@ -4,6 +4,7 @@ import { StyleSheet, View, ScrollView } from "react-native";
 import { TextField } from "components";
 import { NavigationType, Post } from "interfaces";
 import { colours, layout } from "styles";
+import { Analytics } from "utils";
 
 import { CommentsLoop } from "./comments-loop";
 import { Header } from "./header";
@@ -24,6 +25,7 @@ interface Props {
   comments: Post["comments"];
   description: Post["description"];
   navigation: NavigationType;
+  postId: Post["id"];
 }
 
 interface State {
@@ -38,6 +40,13 @@ class Comments extends Component<Props, State> {
       textInput: "",
       commentId: null,
     };
+  }
+
+  componentDidMount() {
+    Analytics.trackContent({
+      contentType: "Comments",
+      contentId: this.props.postId,
+    });
   }
 
   setDisplay(commentId: string | null) {
