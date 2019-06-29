@@ -15,6 +15,7 @@ describe("Post<Tabs>", () => {
         onPressComments={onPressComments}
         onPressPost={onPressPost}
         display={display}
+        totalComments={0}
       />,
     );
 
@@ -31,6 +32,24 @@ describe("Post<Tabs>", () => {
         onPressComments={onPressComments}
         onPressPost={onPressPost}
         display={display}
+        totalComments={0}
+      />,
+    );
+
+    expect(component).toMatchSnapshot();
+  });
+
+  it("renders correctly when there are comments", () => {
+    const onPressComments = jest.fn();
+    const onPressPost = jest.fn();
+    const display = "comments";
+
+    const component = shallow(
+      <Tabs
+        onPressComments={onPressComments}
+        onPressPost={onPressPost}
+        display={display}
+        totalComments={25}
       />,
     );
 
