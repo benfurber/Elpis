@@ -17,3 +17,9 @@ Object.assign(NativeModules, {
     forceTouchAvailable: false,
   },
 });
+
+jest.mock("react-native-mixpanel", () => ({
+  sharedInstanceWithToken: jest.fn(() => Promise.resolve()),
+  track: jest.fn(),
+  trackWithProperties: jest.fn(),
+}));
