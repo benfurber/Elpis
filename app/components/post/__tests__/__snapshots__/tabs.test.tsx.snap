@@ -35,7 +35,7 @@ exports[`Post<Tabs> renders correctly when displaying the body 1`] = `
     >
       <customIcon
         colour={null}
-        name="palette"
+        name="image"
         size={30}
         style={
           Object {
@@ -143,7 +143,7 @@ exports[`Post<Tabs> renders correctly when displaying the comments 1`] = `
     >
       <customIcon
         colour="rgba(45, 82, 113, 0.60)"
-        name="palette"
+        name="image"
         size={30}
         style={
           Object {
@@ -253,7 +253,7 @@ exports[`Post<Tabs> renders correctly when there are comments 1`] = `
     >
       <customIcon
         colour="rgba(45, 82, 113, 0.60)"
-        name="palette"
+        name="image"
         size={30}
         style={
           Object {
