@@ -26,7 +26,7 @@ const Tabs = (props: Props) => {
         <TouchableOpacity onPress={props.onPressPost}>
           <Icon
             colour={iconColour("body")}
-            name="palette"
+            name="image"
             size={iconSize}
             style={styles.iconCentre}
           />
