@@ -2,17 +2,13 @@ import React, { Component } from "react";
 import { FlatList, StyleSheet, View, ScrollView } from "react-native";
 
 import { Post } from "interfaces";
+import { labels } from "labels";
 import { colours, layout } from "styles";
 import { calculateTotalComments } from "utils";
 
 import { Comment } from "./comment";
 import { NoContent } from "./no-content";
 import { Title } from "components";
-
-const labels = {
-  comments: "Comentários",
-  topics: "Tópicos",
-};
 
 interface Props {
   comments: Post["comments"];

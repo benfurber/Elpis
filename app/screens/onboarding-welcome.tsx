@@ -3,16 +3,11 @@ import { Image, StyleSheet, Text, View } from "react-native";
 
 import { BackgroundModal, ButtonSubmit, Title } from "components";
 import { NavigationType } from "interfaces";
+import { labels } from "labels";
 import { colours, elements, layout, typography } from "styles";
 import { Analytics } from "utils";
 
 const mayImagePath = "../assets/images/profile-pic-may.jpg";
-
-const labels = {
-  welcomeButton: "Next",
-  welcomeTitle: "Bem vinda à Elpis, ",
-  welcomeText: "Lots of words here. ",
-};
 
 interface Props {
   navigation: NavigationType;

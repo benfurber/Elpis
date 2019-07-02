@@ -2,13 +2,8 @@ import React, { Component } from "react";
 import { StyleSheet, View, Text } from "react-native";
 
 import { ButtonSubmit, TextInput } from "components";
+import { labels } from "labels";
 import { colours, layout } from "styles";
-
-const labels = {
-  email: "Email",
-  login: "Entrar",
-  password: "Senha",
-};
 
 interface Props {
   navigation: any;
