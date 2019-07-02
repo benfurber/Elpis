@@ -10,24 +10,9 @@ import {
   Title,
 } from "components";
 import { NavigationType } from "interfaces";
+import { labels } from "labels";
 import { layout, typography } from "styles";
 import { checkPasswordStrength } from "utils";
-
-const labels = {
-  formButton: "Submit",
-  formTitle: "Please complete your profile.",
-  imageEmpty: "No profile picture selected.",
-  password: "Set password",
-  passwordEmpty: "Password field empty.",
-  passwordMismatch: "The passwords don't match.",
-  passwordMedium: "Password nearly strong enough.",
-  passwordRepeat: "Repeat password",
-  passwordRequest: "A nice strong password please.",
-  passwordStrong: "Great password! Nice one.",
-  passwordWeak:
-    "Password too weak. Must include:\n" +
-    "- 1+ uppercase letter\n- 1+ lowercase letter\n- 1+ number",
-};
 
 interface Props {
   navigation: NavigationType;
@@ -163,7 +148,7 @@ class FormCompleteProfile extends Component<Props, State> {
               this.passwordStrength(password);
               return this.setState({ password });
             }}
-            placeholder={labels.password}
+            placeholder={labels.passwordSet}
             secureTextEntry
             textContentType="password"
             value={password}

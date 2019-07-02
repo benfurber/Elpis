@@ -18,7 +18,7 @@ exports[`OnboardingThankYouScreen renders correctly 1`] = `
           "paddingBottom": 20,
         }
       }
-      text="Please complete your profile"
+      text="Por favor, complete o seu perfil."
     />
     <Title
       style={
@@ -28,9 +28,9 @@ exports[`OnboardingThankYouScreen renders correctly 1`] = `
           "paddingBottom": 20,
         }
       }
-      text="Please remember to provide as much feedback as you can.
+      text="Por favor, lembre-se de dar o máximo de feedback que puder.
 
-We won’t be able to build something great unless you tell us what you think."
+Nós não poderemos construir algo incrível se você não nos disser o que pensa."
     />
     <View
       style={
@@ -43,7 +43,7 @@ We won’t be able to build something great unless you tell us what you think."
     >
       <ButtonSubmit
         display="active"
-        label="Enter"
+        label="Entrar"
         onPress={[Function]}
       />
     </View>

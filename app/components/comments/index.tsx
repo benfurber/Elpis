@@ -3,23 +3,13 @@ import { StyleSheet, View, ScrollView } from "react-native";
 
 import { TextField } from "components";
 import { NavigationType, Post } from "interfaces";
+import { labels } from "labels";
 import { colours, layout } from "styles";
 import { Analytics } from "utils";
 
 import { CommentsLoop } from "./comments-loop";
 import { Header } from "./header";
 import { Replies } from "./replies";
-
-const labels = {
-  addYourComment: "Adicione o seu comentário...",
-  addYourReply: "Adicione o seu resposta...",
-  comment: "Comentar",
-  comments: "Comentários",
-  reply: "Resposta",
-  topics: "Tópicos",
-  noComments: "Nenhum comentário ainda - faça o primeiro!",
-  noReplies: "Nenhuma resposta ainda - faça a primeira!",
-};
 
 interface Props {
   comments: Post["comments"];

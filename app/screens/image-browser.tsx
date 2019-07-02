@@ -11,15 +11,12 @@ import { withMappedNavigationParams } from "react-navigation-props-mapper";
 
 import { BackgroundContainer } from "components";
 import { NavigationType } from "interfaces";
+import { labels } from "labels";
 import { colours } from "styles";
 
 const { width } = Dimensions.get("window");
 const borderWidth = 3;
 const imageWidth = width / 3 - borderWidth * 2;
-
-const labels = {
-  select: "Select",
-};
 
 interface Props {
   navigation: NavigationType;

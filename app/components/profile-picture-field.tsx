@@ -6,11 +6,8 @@ import CameraRoll, {
 
 import { ButtonSubmit } from "components";
 import { NavigationType } from "interfaces";
+import { labels } from "labels";
 import { colours, elements, layout } from "styles";
-
-const labels = {
-  addPhoto: "Add photo",
-};
 
 interface Props {
   display: "active" | "error" | "loading";

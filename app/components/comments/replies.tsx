@@ -10,6 +10,7 @@ import {
 
 import { Title } from "components";
 import { Comment } from "interfaces";
+import { labels } from "labels";
 import { colours, elements, layout, typography } from "styles";
 import { Analytics, formatDate } from "utils";
 
@@ -22,11 +23,6 @@ interface Props {
   noReplies: string;
   onPress: Function;
 }
-
-const labels = {
-  backButton: "Voltar aos Comentários",
-  replies: "respostas",
-};
 
 class Replies extends Component<Props> {
   componentDidMount() {

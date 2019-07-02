@@ -3,16 +3,9 @@ import { StyleSheet, View } from "react-native";
 
 import { BackgroundModal, ButtonSubmit, Title } from "components";
 import { NavigationType } from "interfaces";
+import { labels } from "labels";
 import { layout, typography } from "styles";
 import { Analytics } from "utils";
-
-const labels = {
-  button: "Enter",
-  text:
-    "Please remember to provide as much feedback as you can.\r\r" +
-    "We won’t be able to build something great unless you tell us what you think.",
-  title: "Please complete your profile",
-};
 
 interface Props {
   navigation: NavigationType;
@@ -32,12 +25,12 @@ class OnboardingThankYouScreen extends Component<Props> {
     return (
       <BackgroundModal>
         <View style={styles.content}>
-          <Title style={styles.title} text={labels.title} />
-          <Title style={styles.subtitle} text={labels.text} />
+          <Title style={styles.title} text={labels.thankYouTitle} />
+          <Title style={styles.subtitle} text={labels.thankYouText} />
           <View style={styles.row}>
             <ButtonSubmit
               display={"active"}
-              label={labels.button}
+              label={labels.enter}
               onPress={() => navigation.navigate("Main")}
             />
           </View>
