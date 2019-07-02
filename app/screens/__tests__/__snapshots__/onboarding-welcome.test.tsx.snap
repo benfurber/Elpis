@@ -46,7 +46,7 @@ exports[`OnboardingWelcomeScreen renders correctly 1`] = `
         }
       }
     >
-      Lots of words here. 
+      Muitas palavras aqui. 
     </Text>
     <Title
       style={
@@ -69,7 +69,7 @@ exports[`OnboardingWelcomeScreen renders correctly 1`] = `
     >
       <ButtonSubmit
         display="active"
-        label="Next"
+        label="Próximo"
         onPress={[Function]}
       />
     </View>

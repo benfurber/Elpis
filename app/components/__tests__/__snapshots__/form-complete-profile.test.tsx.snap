@@ -17,13 +17,13 @@ exports[`LoginForm when active renders correctly 1`] = `
         "paddingBottom": 20,
       }
     }
-    text="Please complete your profile."
+    text="Por favor, complete o seu perfil."
   />
   <MessageBox
     display="warn"
     messages={
       Array [
-        "A nice strong password please.",
+        "Uma senha forte, por favor.",
         null,
       ]
     }
@@ -40,7 +40,7 @@ exports[`LoginForm when active renders correctly 1`] = `
     <NewTextInput
       displayStyle="active"
       onChangeText={[Function]}
-      placeholder="Set password"
+      placeholder="Defina uma senha"
       secureTextEntry={true}
       textContentType="password"
       value=""
@@ -58,7 +58,7 @@ exports[`LoginForm when active renders correctly 1`] = `
     <NewTextInput
       displayStyle="active"
       onChangeText={[Function]}
-      placeholder="Repeat password"
+      placeholder="Repita a senha"
       secureTextEntry={true}
       textContentType="password"
       value=""
@@ -80,7 +80,7 @@ exports[`LoginForm when active renders correctly 1`] = `
   >
     <ButtonSubmit
       display="active"
-      label="Submit"
+      label="Enviar"
       onPress={[Function]}
     />
   </View>
@@ -104,13 +104,13 @@ exports[`LoginForm when passwords match and the password is strong renders corre
         "paddingBottom": 20,
       }
     }
-    text="Please complete your profile."
+    text="Por favor, complete o seu perfil."
   />
   <MessageBox
     display="warn"
     messages={
       Array [
-        "A nice strong password please.",
+        "Uma senha forte, por favor.",
         null,
       ]
     }
@@ -127,7 +127,7 @@ exports[`LoginForm when passwords match and the password is strong renders corre
     <NewTextInput
       displayStyle="active"
       onChangeText={[Function]}
-      placeholder="Set password"
+      placeholder="Defina uma senha"
       secureTextEntry={true}
       textContentType="password"
       value="s3cuRe!!!"
@@ -145,7 +145,7 @@ exports[`LoginForm when passwords match and the password is strong renders corre
     <NewTextInput
       displayStyle="active"
       onChangeText={[Function]}
-      placeholder="Repeat password"
+      placeholder="Repita a senha"
       secureTextEntry={true}
       textContentType="password"
       value="s3cuRe!!!"
@@ -167,7 +167,7 @@ exports[`LoginForm when passwords match and the password is strong renders corre
   >
     <ButtonSubmit
       display="active"
-      label="Submit"
+      label="Enviar"
       onPress={[Function]}
     />
   </View>
@@ -191,13 +191,13 @@ exports[`LoginForm when passwords match and the password is weak renders correct
         "paddingBottom": 20,
       }
     }
-    text="Please complete your profile."
+    text="Por favor, complete o seu perfil."
   />
   <MessageBox
     display="warn"
     messages={
       Array [
-        "A nice strong password please.",
+        "Uma senha forte, por favor.",
         null,
       ]
     }
@@ -214,7 +214,7 @@ exports[`LoginForm when passwords match and the password is weak renders correct
     <NewTextInput
       displayStyle="active"
       onChangeText={[Function]}
-      placeholder="Set password"
+      placeholder="Defina uma senha"
       secureTextEntry={true}
       textContentType="password"
       value="abc"
@@ -232,7 +232,7 @@ exports[`LoginForm when passwords match and the password is weak renders correct
     <NewTextInput
       displayStyle="active"
       onChangeText={[Function]}
-      placeholder="Repeat password"
+      placeholder="Repita a senha"
       secureTextEntry={true}
       textContentType="password"
       value="abc"
@@ -254,7 +254,7 @@ exports[`LoginForm when passwords match and the password is weak renders correct
   >
     <ButtonSubmit
       display="active"
-      label="Submit"
+      label="Enviar"
       onPress={[Function]}
     />
   </View>
@@ -278,14 +278,14 @@ exports[`LoginForm when there's an error renders correctly 1`] = `
         "paddingBottom": 20,
       }
     }
-    text="Please complete your profile."
+    text="Por favor, complete o seu perfil."
   />
   <MessageBox
     display="error"
     messages={
       Array [
-        "Password field empty.",
-        "No profile picture selected.",
+        "Campo de senha vazio.",
+        "Nenhuma imagem de perfil.",
       ]
     }
   />
@@ -301,7 +301,7 @@ exports[`LoginForm when there's an error renders correctly 1`] = `
     <NewTextInput
       displayStyle="error"
       onChangeText={[Function]}
-      placeholder="Set password"
+      placeholder="Defina uma senha"
       secureTextEntry={true}
       textContentType="password"
       value=""
@@ -319,7 +319,7 @@ exports[`LoginForm when there's an error renders correctly 1`] = `
     <NewTextInput
       displayStyle="error"
       onChangeText={[Function]}
-      placeholder="Repeat password"
+      placeholder="Repita a senha"
       secureTextEntry={true}
       textContentType="password"
       value=""
@@ -341,7 +341,7 @@ exports[`LoginForm when there's an error renders correctly 1`] = `
   >
     <ButtonSubmit
       display="error"
-      label="Submit"
+      label="Enviar"
       onPress={[Function]}
     />
   </View>

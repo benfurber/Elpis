@@ -46,7 +46,7 @@ exports[`ProfilePictureField when in active state renders correctly 1`] = `
   </View>
   <ButtonSubmit
     display="active"
-    label="Add photo"
+    label="Adicionar foto"
     onPress={[Function]}
     small={true}
   />
@@ -101,7 +101,7 @@ exports[`ProfilePictureField when in error state renders correctly 1`] = `
   </View>
   <ButtonSubmit
     display="error"
-    label="Add photo"
+    label="Adicionar foto"
     onPress={[Function]}
     small={true}
   />
