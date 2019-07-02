@@ -8,6 +8,7 @@ module.exports = {
           assets: "./app/assets",
           components: "./app/components",
           interfaces: "./app/interfaces",
+          labels: "./app/labels",
           routes: "./app/routes",
           screens: "./app/screens",
           styles: "./app/styles",
