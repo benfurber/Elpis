@@ -6,7 +6,6 @@ exports[`LoginForm when active renders correctly 1`] = `
     Object {
       "flex": 1,
       "padding": 40,
-      "paddingTop": 80,
     }
   }
 >
@@ -93,7 +92,6 @@ exports[`LoginForm when passwords match and the password is strong renders corre
     Object {
       "flex": 1,
       "padding": 40,
-      "paddingTop": 80,
     }
   }
 >
@@ -180,7 +178,6 @@ exports[`LoginForm when passwords match and the password is weak renders correct
     Object {
       "flex": 1,
       "padding": 40,
-      "paddingTop": 80,
     }
   }
 >
@@ -267,7 +264,6 @@ exports[`LoginForm when there's an error renders correctly 1`] = `
     Object {
       "flex": 1,
       "padding": 40,
-      "paddingTop": 80,
     }
   }
 >
