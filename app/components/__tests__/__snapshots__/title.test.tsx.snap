@@ -5,8 +5,7 @@ exports[`Title renders correctly 1`] = `
   style={
     Array [
       Object {
-        "fontFamily": "Crete Round",
-        "fontWeight": "bold",
+        "fontFamily": "creteround-regular",
         "marginBottom": 5,
       },
       Object {
@@ -25,8 +24,7 @@ exports[`Title renders correctly at small size 1`] = `
   style={
     Array [
       Object {
-        "fontFamily": "Crete Round",
-        "fontWeight": "bold",
+        "fontFamily": "creteround-regular",
         "marginBottom": 5,
       },
       Object {

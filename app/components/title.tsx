@@ -26,8 +26,7 @@ const Title = (props: Props) => {
 
 const styles = StyleSheet.create({
   title: {
-    fontFamily: "Crete Round",
-    fontWeight: "bold",
+    fontFamily: "creteround-regular",
     marginBottom: layout.spacingS,
   },
 });
