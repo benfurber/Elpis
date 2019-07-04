@@ -36,7 +36,7 @@ class ImageBrowserScreen extends Component<Props> {
 
     return {
       title: "Photos",
-      headerRight: navigation.getParam("index") ? button : null,
+      headerRight: button,
     };
   };
 
