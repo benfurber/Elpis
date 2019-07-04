@@ -10,18 +10,6 @@ exports[`Comments<NoContent> renders correctly 1`] = `
     }
   }
 >
-  <Image
-    source={
-      Object {
-        "testUri": "../../../app/assets/images/no-comments-box.png",
-      }
-    }
-    style={
-      Object {
-        "alignSelf": "center",
-      }
-    }
-  />
   <Title
     style={
       Object {
@@ -32,6 +20,20 @@ exports[`Comments<NoContent> renders correctly 1`] = `
       }
     }
     text="No content to show!"
+  />
+  <Image
+    source={
+      Object {
+        "testUri": "../../../app/assets/images/no-comments-box.png",
+      }
+    }
+    style={
+      Object {
+        "alignSelf": "center",
+        "top": -30,
+        "zIndex": -1,
+      }
+    }
   />
 </View>
 `;

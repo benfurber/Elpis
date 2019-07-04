@@ -14,8 +14,8 @@ class NoContent extends Component<Props> {
   render() {
     return (
       <View style={styles.container}>
-        <Image style={styles.image} source={require(noCommentsBoxPath)} />
         <Title style={styles.title} text={this.props.text} />
+        <Image style={styles.image} source={require(noCommentsBoxPath)} />
       </View>
     );
   }
@@ -29,6 +29,8 @@ const styles = StyleSheet.create({
   },
   image: {
     alignSelf: "center",
+    top: -30,
+    zIndex: -1,
   },
   title: {
     alignContent: "center",
