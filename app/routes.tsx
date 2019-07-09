@@ -53,6 +53,7 @@ const mainTabs = createBottomTabNavigator(
       ),
     }),
     tabBarOptions: {
+      keyboardHidesTabBar: true,
       showLabel: false,
       style: { borderTopWidth: 0 },
     },

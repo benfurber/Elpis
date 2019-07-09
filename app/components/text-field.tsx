@@ -12,7 +12,8 @@ import { TouchableOpacity } from "react-native-gesture-handler";
 import { colours, layout } from "styles";
 
 const textInputHeight = 45;
-const keyboardVerticalOffset = Platform.OS === "ios" ? 45 + textInputHeight : 0;
+const keyboardVerticalOffset = Platform.OS === "ios" ? 93 + textInputHeight : 0;
+const keyboardBehaviour = Platform.OS === "ios" ? "position" : undefined;
 let textInputRef;
 
 interface Props {
@@ -31,7 +32,7 @@ class TextField extends Component<Props> {
   render() {
     return (
       <KeyboardAvoidingView
-        behavior="position"
+        behavior={keyboardBehaviour}
         keyboardVerticalOffset={keyboardVerticalOffset}
       >
         <View style={styles.button}>
