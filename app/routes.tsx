@@ -19,7 +19,7 @@ import {
 
 const routeNameIcon = {
   Feed: "newspaper",
-  Feedback: "wpforms",
+  Feedback: "file-alt",
 };
 
 enum headerMode {
