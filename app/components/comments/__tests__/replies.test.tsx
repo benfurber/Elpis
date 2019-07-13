@@ -4,9 +4,13 @@ import { shallow } from "enzyme";
 
 import { Replies } from "../replies";
 
+import { mockDateNow } from "../../../test-utils";
+
 describe("Comments<Replies>", () => {
   describe("when there are replies", () => {
     it("renders correctly", () => {
+      mockDateNow("2019-01-03T13:00:00");
+
       const reply1 = {
         author: {
           avatarPath: require("assets/images/profile-pic-annon.png"),
@@ -60,6 +64,8 @@ describe("Comments<Replies>", () => {
 
   describe("when there are no replies", () => {
     it("renders correctly", () => {
+      mockDateNow("2019-01-02");
+
       const item = {
         author: {
           avatarPath: require("assets/images/profile-pic-may.jpg"),

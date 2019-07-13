@@ -54,7 +54,7 @@ exports[`Comments<Reply> renders correctly 1`] = `
           }
         }
       >
-        01/02/2019
+        Há poucos segundos
       </Text>
     </View>
   </View>

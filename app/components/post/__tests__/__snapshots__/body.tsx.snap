@@ -46,7 +46,7 @@ exports[`Post<Body> renders correctly 1`] = `
       ]
     }
   >
-    01/01/2000
+    Há um dia
   </Text>
 </View>
 `;
