@@ -1,9 +1,10 @@
 import { formatDate } from "../format-date";
 
+import { mockDateNow } from "../../test-utils";
+
 describe("formatDate", () => {
   it("presents a date from a year ago", () => {
-    const dateToday = new Date("2019-01-01");
-    jest.spyOn(Date, "now").mockImplementation(() => dateToday.getTime());
+    mockDateNow("2019-01-01");
 
     const date = new Date("2018-01-01");
     const response = formatDate(date);
@@ -12,8 +13,7 @@ describe("formatDate", () => {
   });
 
   it("presents a date from two months ago", () => {
-    const dateToday = new Date("2019-03-01");
-    jest.spyOn(Date, "now").mockImplementation(() => dateToday.getTime());
+    mockDateNow("2019-03-01");
 
     const date = new Date("2019-01-01");
     const response = formatDate(date);
@@ -22,8 +22,7 @@ describe("formatDate", () => {
   });
 
   it("presents a date from ten days ago", () => {
-    const dateToday = new Date("2019-01-11");
-    jest.spyOn(Date, "now").mockImplementation(() => dateToday.getTime());
+    mockDateNow("2019-01-11");
 
     const date = new Date("2019-01-01");
     const response = formatDate(date);
@@ -32,8 +31,7 @@ describe("formatDate", () => {
   });
 
   it("presents a date from seven hours ago", () => {
-    const dateToday = new Date("2019-01-01T07:00:01");
-    jest.spyOn(Date, "now").mockImplementation(() => dateToday.getTime());
+    mockDateNow("2019-01-01T07:00:01");
 
     const date = new Date("2019-01-01T00:00:01");
     const response = formatDate(date);
@@ -42,8 +40,7 @@ describe("formatDate", () => {
   });
 
   it("presents a date from 18 minutes ago", () => {
-    const dateToday = new Date("2019-01-01T00:18:01");
-    jest.spyOn(Date, "now").mockImplementation(() => dateToday.getTime());
+    mockDateNow("2019-01-01T00:18:01");
 
     const date = new Date("2019-01-01T00:00:01");
     const response = formatDate(date);
@@ -52,8 +49,7 @@ describe("formatDate", () => {
   });
 
   it("presents a date from 28 seconds ago", () => {
-    const dateToday = new Date("2019-01-01T00:00:29");
-    jest.spyOn(Date, "now").mockImplementation(() => dateToday.getTime());
+    mockDateNow("2019-01-01T00:00:29");
 
     const date = new Date("2019-01-01T00:00:01");
     const response = formatDate(date);
