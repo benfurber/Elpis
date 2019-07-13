@@ -27,7 +27,7 @@ exports[`Icon renders correctly 1`] = `
       }
     }
   >
-    <View
+    <ScrollViewMock
       style={
         Object {
           "backgroundColor": "rgba(255, 255, 255, 0.60)",
@@ -42,7 +42,7 @@ exports[`Icon renders correctly 1`] = `
       <Text>
         Any child component
       </Text>
-    </View>
+    </ScrollViewMock>
   </ImageBackground>
 </BackgroundContainer>
 `;

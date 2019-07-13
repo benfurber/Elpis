@@ -72,7 +72,7 @@ exports[`Comments<Comment> with replies renders correctly 1`] = `
           }
         }
       >
-        01/01/2019
+        Há 20 horas
       </Text>
       <Text
         style={
@@ -161,7 +161,7 @@ exports[`Comments<Comment> without replies renders correctly 1`] = `
           }
         }
       >
-        01/01/2019
+        Há 9 minutos
       </Text>
       <Text
         style={

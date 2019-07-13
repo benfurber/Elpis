@@ -4,7 +4,7 @@ exports[`TextField renders correctly 1`] = `
 <KeyboardAvoidingView
   behavior="position"
   enabled={true}
-  keyboardVerticalOffset={90}
+  keyboardVerticalOffset={138}
 >
   <View
     style={

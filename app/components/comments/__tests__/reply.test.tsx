@@ -4,8 +4,12 @@ import { shallow } from "enzyme";
 
 import { Reply } from "../reply";
 
+import { mockDateNow } from "../../../test-utils";
+
 describe("Comments<Reply>", () => {
   it("renders correctly", () => {
+    mockDateNow("2019-01-02");
+
     const item = {
       author: {
         avatarPath: require("assets/images/profile-pic-annon.png"),

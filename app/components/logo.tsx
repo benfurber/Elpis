@@ -31,7 +31,7 @@ const styles = StyleSheet.create({
   text: {
     alignSelf: "flex-end",
     color: colours.darkGrey,
-    fontFamily: "Crete Round",
+    fontFamily: "creteround-regular",
     fontSize: 32,
     marginLeft: layout.spacing,
     textAlign: "center",

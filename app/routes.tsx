@@ -19,7 +19,7 @@ import {
 
 const routeNameIcon = {
   Feed: "newspaper",
-  Feedback: "wpforms",
+  Feedback: "file-alt",
 };
 
 enum headerMode {
@@ -53,6 +53,7 @@ const mainTabs = createBottomTabNavigator(
       ),
     }),
     tabBarOptions: {
+      keyboardHidesTabBar: true,
       showLabel: false,
       style: { borderTopWidth: 0 },
     },

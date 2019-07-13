@@ -20,7 +20,7 @@ const standard = StyleSheet.create({
 
 const elements = StyleSheet.create({
   standardText: {
-    fontFamily: "Lato",
+    fontFamily: "lato-regular",
   },
   button: {
     backgroundColor: colours.emeraldGreen,

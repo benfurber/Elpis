@@ -76,7 +76,7 @@ exports[`Comments<Replies> when there are no replies renders correctly 1`] = `
             }
           }
         >
-          01/01/2019
+          Há um dia
         </Text>
       </View>
     </View>
@@ -172,7 +172,7 @@ exports[`Comments<Replies> when there are replies renders correctly 1`] = `
             }
           }
         >
-          01/01/2019
+          Há 3 dias
         </Text>
       </View>
     </View>

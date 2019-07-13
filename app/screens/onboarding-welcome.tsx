@@ -57,7 +57,6 @@ const styles = StyleSheet.create({
   content: {
     flex: 1,
     padding: layout.spacingXL,
-    paddingTop: layout.spacingXL * 2,
   },
   image: {
     ...elements.imageRoundLarge,

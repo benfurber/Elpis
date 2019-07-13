@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { ImageBackground, StyleSheet, View } from "react-native";
+import { ImageBackground, ScrollView, StyleSheet } from "react-native";
 
 import { BackgroundContainer } from "components";
 import { colours, layout } from "styles";
@@ -19,7 +19,9 @@ class BackgroundModal extends Component<Props> {
           source={require(handImagePath)}
           style={styles.containerHand}
         >
-          <View style={styles.container}>{this.props.children}</View>
+          <ScrollView style={styles.container}>
+            {this.props.children}
+          </ScrollView>
         </ImageBackground>
       </BackgroundContainer>
     );

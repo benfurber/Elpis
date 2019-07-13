@@ -43,7 +43,7 @@ exports[`Logo renders correctly 1`] = `
         Object {
           "alignSelf": "flex-end",
           "color": "rgb(51, 51, 51)",
-          "fontFamily": "Crete Round",
+          "fontFamily": "creteround-regular",
           "fontSize": 32,
           "marginLeft": 10,
           "textAlign": "center",

@@ -1,5 +1,11 @@
 import React, { Component } from "react";
-import { Image, StyleSheet, View } from "react-native";
+import {
+  Image,
+  PermissionsAndroid,
+  Platform,
+  StyleSheet,
+  View,
+} from "react-native";
 import CameraRoll, {
   PhotoIdentifier,
 } from "@react-native-community/cameraroll";
@@ -37,6 +43,33 @@ class ProfilePictureField extends Component<Props, State> {
       images: this.state.images,
       selectImage: index => this.selectImage(index),
     });
+  }
+
+  async androidPermissionWrapper() {
+    try {
+      const granted = await PermissionsAndroid.request(
+        PermissionsAndroid.PERMISSIONS.READ_EXTERNAL_STORAGE,
+        {
+          title: labels.permissionRequestPhotoLibraryBody,
+          message: labels.permissionRequestPhotoLibraryBody,
+          buttonNeutral: labels.askMeLater,
+          buttonNegative: labels.cancel,
+          buttonPositive: labels.ok,
+        },
+      );
+      if (granted === PermissionsAndroid.RESULTS.GRANTED) {
+        return this.handleButtonPress();
+      }
+    } catch (err) {
+      console.warn(err);
+    }
+  }
+
+  onPress() {
+    if (Platform.OS === "android") {
+      this.androidPermissionWrapper();
+    }
+    return this.handleButtonPress();
   }
 
   handleButtonPress() {
@@ -77,7 +110,7 @@ class ProfilePictureField extends Component<Props, State> {
         <ButtonSubmit
           display={this.props.display}
           label={labels.addPhoto}
-          onPress={() => this.handleButtonPress()}
+          onPress={() => this.onPress()}
           small
         />
       </View>
