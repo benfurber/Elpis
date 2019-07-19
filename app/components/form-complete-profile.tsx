@@ -12,7 +12,7 @@ import {
 import { NavigationType } from "interfaces";
 import { labels } from "labels";
 import { layout, typography } from "styles";
-import { checkPasswordStrength } from "utils";
+import { checkPasswordStrength, sendImage } from "utils";
 
 interface Props {
   navigation: NavigationType;
@@ -41,6 +41,12 @@ class FormCompleteProfile extends Component<Props, State> {
       password: "",
       passwordRepeat: "",
     };
+  }
+
+  componentDidUpdate() {
+    if (this.state.image !== null) {
+      console.log(sendImage(this.state.image));
+    }
   }
 
   onPress() {
