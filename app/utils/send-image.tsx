@@ -15,7 +15,7 @@ const options = {
 };
 
 interface Props {
-  selectedImage: PhotoIdentifier;
+  selectedImage: null | PhotoIdentifier;
   setError: (string) => void;
   setProgress: (number) => void;
   setState: (string) => void;
