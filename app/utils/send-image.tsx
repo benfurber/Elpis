@@ -19,14 +19,11 @@ interface Props {
   setError: (string) => void;
   setProgress: (number) => void;
   setState: (string) => void;
+  userId: string;
 }
 
-const sendImage = ({
-  selectedImage,
-  setError,
-  setProgress,
-  setState,
-}: Props) => {
+const sendImage = (props: Props) => {
+  const { selectedImage, setError, setProgress, setState, userId } = props;
   if (selectedImage === null) {
     return setError(labels.noImageSelected);
   }
@@ -34,7 +31,7 @@ const sendImage = ({
   const { filename, uri } = selectedImage.node.image;
   const file = {
     uri,
-    name: filename,
+    name: `${userId}-${filename}`,
     type: "image/jpg",
   };
 

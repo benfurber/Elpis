@@ -14,7 +14,6 @@ jest.mock("react-native-s3-upload", () => {
 const mockPhotoIdentifier = {
   node: {
     type: "string",
-    // eslint-disable-next-line @typescript-eslint/camelcase
     group_name: "string",
     image: {
       filename: "string",
@@ -36,6 +35,7 @@ describe("sendImage()", () => {
 
     const args = {
       selectedImage,
+      userId: "213sfg4225",
       setError: jest.fn(),
       setProgress: jest.fn(),
       setState: jest.fn(),
@@ -54,6 +54,7 @@ describe("sendImage()", () => {
 
     const args = {
       selectedImage,
+      userId: "213sfg4225",
       setError: jest.fn(),
       setProgress: jest.fn(),
       setState: jest.fn(),

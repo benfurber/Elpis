@@ -79,6 +79,7 @@ class FormAddProfilePicture extends Component<Props, State> {
       setProgress,
       setState,
       setError,
+      userId: "gfht-23433-5436",
     });
   };
 
