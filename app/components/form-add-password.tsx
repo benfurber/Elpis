@@ -22,52 +22,28 @@ interface Props {
 interface State {
   display: "active" | "error" | "loading";
   displayMessage: "passive" | "warn" | "error";
-  image: null | PhotoIdentifier;
-  messageImage: null | string;
   messagePassword: null | string;
   password: string;
   passwordRepeat: string;
 }
 
-class FormCompleteProfile extends Component<Props, State> {
+class FormAddPassword extends Component<Props, State> {
   constructor(props) {
     super(props);
     this.state = {
       display: "active",
       displayMessage: "warn",
-      messageImage: null,
       messagePassword: labels.passwordRequest,
-      image: null,
       password: "",
       passwordRepeat: "",
     };
   }
 
-  componentDidUpdate() {
-    if (this.state.image !== null) {
-      console.log(sendImage(this.state.image));
-    }
-  }
-
   onPress() {
-    if (this.passwordChecks() && this.imageCheck()) {
+    if (this.passwordChecks()) {
       this.setState({ display: "loading" });
       return this.props.onPress();
     }
-  }
-
-  imageCheck() {
-    if (this.state.image) {
-      return true;
-    }
-
-    this.setState({
-      display: "error",
-      displayMessage: "error",
-      messageImage: labels.imageEmpty,
-    });
-
-    return false;
   }
 
   passwordError(message) {
@@ -130,22 +106,14 @@ class FormCompleteProfile extends Component<Props, State> {
     const {
       display,
       displayMessage,
-      messageImage,
       messagePassword,
-      image,
       password,
       passwordRepeat,
     } = this.state;
-    const { navigation } = this.props;
 
     return (
-      <View style={styles.content}>
-        <Title style={styles.title} text={labels.formTitle} />
-
-        <MessageBox
-          display={displayMessage}
-          messages={[messagePassword, messageImage]}
-        />
+      <View>
+        <MessageBox display={displayMessage} messages={[messagePassword]} />
 
         <View style={styles.row}>
           <TextInput
@@ -172,15 +140,6 @@ class FormCompleteProfile extends Component<Props, State> {
           />
         </View>
 
-        <ProfilePictureField
-          display={display}
-          image={image}
-          navigation={navigation}
-          setImage={image => {
-            this.setState({ image });
-          }}
-        />
-
         <View style={styles.row}>
           <ButtonSubmit
             display={display}
@@ -194,19 +153,11 @@ class FormCompleteProfile extends Component<Props, State> {
 }
 
 const styles = StyleSheet.create({
-  content: {
-    flex: 1,
-    padding: layout.spacingXL,
-  },
   row: {
     alignItems: "baseline",
     flexDirection: "row-reverse",
     marginBottom: layout.spacingL,
   },
-  title: {
-    fontSize: typography.fontSizeXL,
-    paddingBottom: layout.spacingL,
-  },
 });
 
-export { FormCompleteProfile };
+export { FormAddPassword };

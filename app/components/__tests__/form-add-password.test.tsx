@@ -2,17 +2,17 @@ import "react-native";
 import React from "react";
 import { shallow } from "enzyme";
 
-import { FormCompleteProfile } from "components";
+import { FormAddPassword } from "components";
 
 let navigation;
 jest.mock(navigation, () => jest.fn());
 
-describe("LoginForm", () => {
+describe("FormAddPassword", () => {
   describe("when active", () => {
     it("renders correctly", () => {
       const onPress = () => jest.fn();
       const component = shallow(
-        <FormCompleteProfile navigation={navigation} onPress={onPress} />,
+        <FormAddPassword navigation={navigation} onPress={onPress} />,
       );
 
       expect(component).toMatchSnapshot();
@@ -24,7 +24,7 @@ describe("LoginForm", () => {
       it("renders correctly", () => {
         const onPress = () => jest.fn();
         const component = shallow(
-          <FormCompleteProfile navigation={navigation} onPress={onPress} />,
+          <FormAddPassword navigation={navigation} onPress={onPress} />,
         );
 
         component.setState({
@@ -40,7 +40,7 @@ describe("LoginForm", () => {
       it("renders correctly", () => {
         const onPress = () => jest.fn();
         const component = shallow(
-          <FormCompleteProfile navigation={navigation} onPress={onPress} />,
+          <FormAddPassword navigation={navigation} onPress={onPress} />,
         );
 
         component.setState({
@@ -57,7 +57,7 @@ describe("LoginForm", () => {
     it("renders correctly", () => {
       const onPress = () => jest.fn();
       const component = shallow(
-        <FormCompleteProfile navigation={navigation} onPress={onPress} />,
+        <FormAddPassword navigation={navigation} onPress={onPress} />,
       );
 
       component.find("ButtonSubmit").simulate("press");

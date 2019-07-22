@@ -1,7 +1,7 @@
 export { FeedScreen } from "./feed";
 export { FeedbackScreen } from "./feedback";
 export { ImageBrowserScreen } from "./image-browser";
-export { OnboardingCompleteProfileScreen } from "./onboarding-complete-profile";
+export { OnboardingAddPasswordScreen } from "./onboarding-add-password";
 export {
   OnboardingAddProfilePictureScreen,
 } from "./onboarding-add-profile-picture";

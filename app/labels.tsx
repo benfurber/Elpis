@@ -1,4 +1,5 @@
 const labels = {
+  addPasswordTitle: "Por favor, ADD PASSWORD",
   addPhoto: "Adicionar foto",
   addProfilePictureTitle: "Por favor, ADD PROFILE PIC",
   addYourComment: "Adicione o seu comentário...",
@@ -11,7 +12,6 @@ const labels = {
   email: "Email",
   enter: "Entrar",
   formButton: "Enviar",
-  formTitle: "Por favor, complete o seu perfil.",
   imageEmpty: "Nenhuma imagem de perfil.",
   login: "Entrar",
   noComments: "Nenhum comentário ainda - faça o primeiro!",
