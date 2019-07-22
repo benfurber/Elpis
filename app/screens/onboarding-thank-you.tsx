@@ -15,7 +15,7 @@ class OnboardingThankYouScreen extends Component<Props> {
   componentDidMount() {
     Analytics.trackContent({
       contentType: "Onboarding",
-      contentId: "onboarding-3",
+      contentId: "onboarding-thank-you",
     });
   }
 
@@ -25,6 +25,7 @@ class OnboardingThankYouScreen extends Component<Props> {
     return (
       <BackgroundModal>
         <View style={styles.content}>
+          <Title text="4/4" small />
           <Title style={styles.title} text={labels.thankYouTitle} />
           <Title style={styles.subtitle} text={labels.thankYouText} />
           <View style={styles.row}>

@@ -1,17 +1,10 @@
 import React, { Component } from "react";
 import { StyleSheet, View } from "react-native";
-import { PhotoIdentifier } from "@react-native-community/cameraroll";
 
-import {
-  ButtonSubmit,
-  MessageBox,
-  ProfilePictureField,
-  TextInput,
-  Title,
-} from "components";
+import { ButtonSubmit, MessageBox, TextInput } from "components";
 import { NavigationType } from "interfaces";
 import { labels } from "labels";
-import { layout, typography } from "styles";
+import { layout } from "styles";
 import { checkPasswordStrength } from "utils";
 
 interface Props {
@@ -22,53 +15,35 @@ interface Props {
 interface State {
   display: "active" | "error" | "loading";
   displayMessage: "passive" | "warn" | "error";
-  image: null | PhotoIdentifier;
-  messageImage: null | string;
-  messagePassword: null | string;
+  message: null | string;
   password: string;
   passwordRepeat: string;
 }
 
-class FormCompleteProfile extends Component<Props, State> {
+class FormAddPassword extends Component<Props, State> {
   constructor(props) {
     super(props);
     this.state = {
       display: "active",
       displayMessage: "warn",
-      messageImage: null,
-      messagePassword: labels.passwordRequest,
-      image: null,
+      message: labels.passwordRequest,
       password: "",
       passwordRepeat: "",
     };
   }
 
   onPress() {
-    if (this.passwordChecks() && this.imageCheck()) {
+    if (this.passwordChecks()) {
       this.setState({ display: "loading" });
       return this.props.onPress();
     }
-  }
-
-  imageCheck() {
-    if (this.state.image) {
-      return true;
-    }
-
-    this.setState({
-      display: "error",
-      displayMessage: "error",
-      messageImage: labels.imageEmpty,
-    });
-
-    return false;
   }
 
   passwordError(message) {
     return this.setState({
       display: "error",
       displayMessage: "error",
-      messagePassword: message,
+      message: message,
     });
   }
 
@@ -84,7 +59,7 @@ class FormCompleteProfile extends Component<Props, State> {
     }
 
     if (password === passwordRepeat) {
-      this.setState({ messagePassword: null });
+      this.setState({ message: null });
       return true;
     } else {
       return this.passwordError(labels.passwordMismatch);
@@ -98,7 +73,7 @@ class FormCompleteProfile extends Component<Props, State> {
       this.setState({
         display: "active",
         displayMessage: "passive",
-        messagePassword: labels.passwordStrong,
+        message: labels.passwordStrong,
       });
       return true;
     }
@@ -107,14 +82,14 @@ class FormCompleteProfile extends Component<Props, State> {
       this.setState({
         display: "active",
         displayMessage: "warn",
-        messagePassword: labels.passwordMedium,
+        message: labels.passwordMedium,
       });
       return true;
     }
 
     this.setState({
       displayMessage: "warn",
-      messagePassword: labels.passwordRequest,
+      message: labels.passwordRequest,
     });
 
     return false;
@@ -124,22 +99,14 @@ class FormCompleteProfile extends Component<Props, State> {
     const {
       display,
       displayMessage,
-      messageImage,
-      messagePassword,
-      image,
+      message,
       password,
       passwordRepeat,
     } = this.state;
-    const { navigation } = this.props;
 
     return (
-      <View style={styles.content}>
-        <Title style={styles.title} text={labels.formTitle} />
-
-        <MessageBox
-          display={displayMessage}
-          messages={[messagePassword, messageImage]}
-        />
+      <View>
+        <MessageBox display={displayMessage} message={message} />
 
         <View style={styles.row}>
           <TextInput
@@ -166,15 +133,6 @@ class FormCompleteProfile extends Component<Props, State> {
           />
         </View>
 
-        <ProfilePictureField
-          display={display}
-          image={image}
-          navigation={navigation}
-          setImage={image => {
-            this.setState({ image });
-          }}
-        />
-
         <View style={styles.row}>
           <ButtonSubmit
             display={display}
@@ -188,19 +146,11 @@ class FormCompleteProfile extends Component<Props, State> {
 }
 
 const styles = StyleSheet.create({
-  content: {
-    flex: 1,
-    padding: layout.spacingXL,
-  },
   row: {
     alignItems: "baseline",
     flexDirection: "row-reverse",
     marginBottom: layout.spacingL,
   },
-  title: {
-    fontSize: typography.fontSizeXL,
-    paddingBottom: layout.spacingL,
-  },
 });
 
-export { FormCompleteProfile };
+export { FormAddPassword };

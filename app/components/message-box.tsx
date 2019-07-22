@@ -5,24 +5,12 @@ import { colours, layout } from "styles";
 
 interface Props {
   display: "passive" | "warn" | "error";
-  messages: (string | null)[];
+  message: null | string;
 }
 
 class MessageBox extends Component<Props> {
-  renderMessages() {
-    const { messages } = this.props;
-
-    if (messages) {
-      const toRender = messages.filter(message => message !== null);
-
-      return toRender.map((message, index) => {
-        return <Text key={index}>{message}</Text>;
-      });
-    }
-  }
-
   render() {
-    const { messages, display } = this.props;
+    const { message, display } = this.props;
 
     const style = {
       error: styles.messagesError,
@@ -30,13 +18,15 @@ class MessageBox extends Component<Props> {
       warn: styles.messagesWarn,
     };
 
-    if (messages) {
+    if (message) {
       return (
         <View style={[styles.messages, style[display]]}>
-          {this.renderMessages()}
+          <Text>{message}</Text>
         </View>
       );
     }
+
+    return null;
   }
 }
 

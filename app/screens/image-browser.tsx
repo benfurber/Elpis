@@ -22,13 +22,17 @@ interface Props {
   navigation: NavigationType;
   images: any;
   selectImage: (number) => any;
+  sendImage: () => void;
 }
 
 class ImageBrowserScreen extends Component<Props> {
-  static navigationOptions = ({ navigation }) => {
+  static navigationOptions = ({ navigation, sendImage }) => {
     const button = (
       <Button
-        onPress={() => navigation.pop()}
+        onPress={() => {
+          navigation.pop();
+          return sendImage();
+        }}
         title={labels.select}
         color={colours.darkGrey}
       />
