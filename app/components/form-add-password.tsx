@@ -1,18 +1,11 @@
 import React, { Component } from "react";
 import { StyleSheet, View } from "react-native";
-import { PhotoIdentifier } from "@react-native-community/cameraroll";
 
-import {
-  ButtonSubmit,
-  MessageBox,
-  ProfilePictureField,
-  TextInput,
-  Title,
-} from "components";
+import { ButtonSubmit, MessageBox, TextInput } from "components";
 import { NavigationType } from "interfaces";
 import { labels } from "labels";
-import { layout, typography } from "styles";
-import { checkPasswordStrength, sendImage } from "utils";
+import { layout } from "styles";
+import { checkPasswordStrength } from "utils";
 
 interface Props {
   navigation: NavigationType;
@@ -22,7 +15,7 @@ interface Props {
 interface State {
   display: "active" | "error" | "loading";
   displayMessage: "passive" | "warn" | "error";
-  messagePassword: null | string;
+  message: null | string;
   password: string;
   passwordRepeat: string;
 }
@@ -33,7 +26,7 @@ class FormAddPassword extends Component<Props, State> {
     this.state = {
       display: "active",
       displayMessage: "warn",
-      messagePassword: labels.passwordRequest,
+      message: labels.passwordRequest,
       password: "",
       passwordRepeat: "",
     };
@@ -50,7 +43,7 @@ class FormAddPassword extends Component<Props, State> {
     return this.setState({
       display: "error",
       displayMessage: "error",
-      messagePassword: message,
+      message: message,
     });
   }
 
@@ -66,7 +59,7 @@ class FormAddPassword extends Component<Props, State> {
     }
 
     if (password === passwordRepeat) {
-      this.setState({ messagePassword: null });
+      this.setState({ message: null });
       return true;
     } else {
       return this.passwordError(labels.passwordMismatch);
@@ -80,7 +73,7 @@ class FormAddPassword extends Component<Props, State> {
       this.setState({
         display: "active",
         displayMessage: "passive",
-        messagePassword: labels.passwordStrong,
+        message: labels.passwordStrong,
       });
       return true;
     }
@@ -89,14 +82,14 @@ class FormAddPassword extends Component<Props, State> {
       this.setState({
         display: "active",
         displayMessage: "warn",
-        messagePassword: labels.passwordMedium,
+        message: labels.passwordMedium,
       });
       return true;
     }
 
     this.setState({
       displayMessage: "warn",
-      messagePassword: labels.passwordRequest,
+      message: labels.passwordRequest,
     });
 
     return false;
@@ -106,14 +99,14 @@ class FormAddPassword extends Component<Props, State> {
     const {
       display,
       displayMessage,
-      messagePassword,
+      message,
       password,
       passwordRepeat,
     } = this.state;
 
     return (
       <View>
-        <MessageBox display={displayMessage} message={messagePassword} />
+        <MessageBox display={displayMessage} message={message} />
 
         <View style={styles.row}>
           <TextInput
