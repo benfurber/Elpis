@@ -24,7 +24,7 @@ export interface Post {
   date: Date;
   description: string | null;
   id: string;
-  imagePath: NodeRequire;
+  imagePath: string;
 }
 
 export interface Reply {
