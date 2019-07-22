@@ -11,12 +11,28 @@ jest.mock("react-native-s3-upload", () => {
   };
 });
 
+const mockPhotoIdentifier = {
+  node: {
+    type: "string",
+    // eslint-disable-next-line @typescript-eslint/camelcase
+    group_name: "string",
+    image: {
+      filename: "string",
+      uri: "string",
+      height: 200,
+      width: 300,
+      playableDuration: 0,
+    },
+    timestamp: 86571234234,
+  },
+};
+
 describe("sendImage()", () => {
   it("returns a promise", () => {
     progress = jest.fn(() => {
       return Promise.resolve();
     });
-    const selectedImage = { node: { image: {} } };
+    const selectedImage = mockPhotoIdentifier;
 
     const args = {
       selectedImage,
@@ -34,7 +50,7 @@ describe("sendImage()", () => {
       return Promise.reject("Problem");
     });
 
-    const selectedImage = { node: { image: {} } };
+    const selectedImage = mockPhotoIdentifier;
 
     const args = {
       selectedImage,

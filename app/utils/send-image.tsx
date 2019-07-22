@@ -1,4 +1,5 @@
 import { RNS3 } from "react-native-s3-upload";
+import { PhotoIdentifier } from "@react-native-community/cameraroll";
 
 import { labels } from "labels";
 import { S3_USER_ACCESS, S3_USER_SECRET } from "react-native-dotenv";
@@ -13,7 +14,19 @@ const options = {
   successActionStatus: 201,
 };
 
-const sendImage = ({ selectedImage, setError, setProgress, setState }) => {
+interface Props {
+  selectedImage: PhotoIdentifier;
+  setError: (string) => void;
+  setProgress: (number) => void;
+  setState: (string) => void;
+}
+
+const sendImage = ({
+  selectedImage,
+  setError,
+  setProgress,
+  setState,
+}: Props) => {
   if (selectedImage === null) {
     return setError(labels.noImageSelected);
   }
