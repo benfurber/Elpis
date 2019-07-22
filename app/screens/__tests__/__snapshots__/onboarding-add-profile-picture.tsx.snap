@@ -21,7 +21,7 @@ exports[`OnboardingAddProfilePictureScreen renders correctly 1`] = `
           "paddingBottom": 20,
         }
       }
-      text="Por favor, ADD PROFILE PIC"
+      text="Adicione uma imagem de perfil"
     />
     <FormAddProfilePicture
       onPress={[Function]}

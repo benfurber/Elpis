@@ -4,7 +4,7 @@ exports[`FormAddProfilePicture when active renders correctly 1`] = `
 <View>
   <MessageBox
     display="passive"
-    message="PLEASE LET US SEE YOUR FACE."
+    message="Por favor, deixe-nos ver o seu rosto."
   />
   <ProfilePictureField
     clearUploadCondition={[Function]}
