@@ -16,9 +16,11 @@ import { labels } from "labels";
 import { colours, elements, layout } from "styles";
 
 interface Props {
+  clearUploadCondition: () => void;
   display: "active" | "error" | "loading";
   navigation: NavigationType;
-  image: null | any;
+  image: null | PhotoIdentifier;
+  sendImage: () => void;
   setImage: (PhotoIdentifier) => void;
 }
 
@@ -42,6 +44,7 @@ class ProfilePictureField extends Component<Props, State> {
     return this.props.navigation.navigate("ImageBrowser", {
       images: this.state.images,
       selectImage: index => this.selectImage(index),
+      sendImage: this.props.sendImage,
     });
   }
 
@@ -69,6 +72,7 @@ class ProfilePictureField extends Component<Props, State> {
     if (Platform.OS === "android") {
       this.androidPermissionWrapper();
     }
+    this.props.clearUploadCondition();
     return this.handleButtonPress();
   }
 
@@ -93,7 +97,6 @@ class ProfilePictureField extends Component<Props, State> {
     const file = image
       ? { uri: image.node.image.uri }
       : require(annonProfilePath);
-
     const errorStyle = display === "error" ? styles.imageContainerError : null;
 
     return (

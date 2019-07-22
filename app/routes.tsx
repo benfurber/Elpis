@@ -11,6 +11,7 @@ import {
   FeedbackScreen,
   ImageBrowserScreen,
   OnboardingCompleteProfileScreen,
+  OnboardingAddProfilePictureScreen,
   OnboardingThankYouScreen,
   OnboardingWelcomeScreen,
   PostScreen,
@@ -73,6 +74,7 @@ const OnboardingSwitch = createStackNavigator(
   {
     Welcome: OnboardingWelcomeScreen,
     CompleteProfile: OnboardingCompleteProfileScreen,
+    AddPassword: OnboardingAddPasswordScreen,
     ThankYou: OnboardingThankYouScreen,
     Modals: ModalsStack,
   },

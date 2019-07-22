@@ -12,9 +12,11 @@ describe("ProfilePictureField", () => {
     it("renders correctly", () => {
       const component = shallow(
         <ProfilePictureField
+          clearUploadCondition={() => jest.fn()}
           display={"active"}
           image={null}
           navigation={navigation}
+          sendImage={() => jest.fn()}
           setImage={() => jest.fn()}
         />,
       );
@@ -27,9 +29,11 @@ describe("ProfilePictureField", () => {
     it("renders correctly", () => {
       const component = shallow(
         <ProfilePictureField
+          clearUploadCondition={() => jest.fn()}
           display={"error"}
           image={null}
           navigation={navigation}
+          sendImage={() => jest.fn()}
           setImage={() => jest.fn()}
         />,
       );

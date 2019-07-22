@@ -1,5 +1,6 @@
 const labels = {
   addPhoto: "Adicionar foto",
+  addProfilePictureTitle: "Por favor, ADD PROFILE PIC",
   addYourComment: "Adicione o seu comentário...",
   addYourReply: "Adicione o seu resposta...",
   askMeLater: "Pergunte-me depois",
@@ -31,6 +32,7 @@ const labels = {
   permissionRequestPhotoLibraryBody:
     "Elpis requer acesso ao seu álbum de fotos para atualizar sua imagem de perfil.",
   permissionRequestPhotoLibraryTitle: "Acesso ao álbum de fotos",
+  profilePictureRequest: "PLEASE LET US SEE YOUR FACE.",
   reply: "Resposta",
   replies: "Respostas",
   select: "Selecionar",
@@ -39,6 +41,7 @@ const labels = {
     "Nós não poderemos construir algo incrível se você não nos disser o que pensa.",
   thankYouTitle: "Por favor, complete o seu perfil.",
   topics: "Tópicos",
+  uploadingImage: "Uploading image",
   welcomeButton: "Próximo",
   welcomeTitle: "Bem vinda à Elpis, ",
   welcomeText: "Muitas palavras aqui. ",
