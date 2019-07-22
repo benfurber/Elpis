@@ -16,6 +16,7 @@ const labels = {
   noComments: "Nenhum comentário ainda - faça o primeiro!",
   noReplies: "Nenhuma resposta ainda - faça a primeira!",
   ok: "OK",
+  noImageSelected: "NO IMAGE SELECTED, select one and try again.",
   password: "Senha",
   passwordSet: "Defina uma senha",
   passwordEmpty: "Campo de senha vazio.",

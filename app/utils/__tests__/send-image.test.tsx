@@ -1,16 +1,52 @@
 import { sendImage } from "utils";
 
+let progress;
+jest.mock("react-native-s3-upload", () => {
+  return {
+    RNS3: {
+      put: jest.fn(() => ({
+        progress,
+      })),
+    },
+  };
+});
+
 describe("sendImage()", () => {
-  it("returns the uri of an image", () => {
-    const uri = "ph://0873425/2130-DGF-0382457/982";
-    const image = {
-      node: {
-        image: {
-          uri,
-        },
-      },
+  it("returns a promise", () => {
+    progress = jest.fn(() => {
+      return Promise.resolve();
+    });
+    const selectedImage = { node: { image: {} } };
+
+    const args = {
+      selectedImage,
+      setError: jest.fn(),
+      setProgress: jest.fn(),
+      setState: jest.fn(),
+    };
+    sendImage(args);
+
+    expect(progress).toHaveBeenCalled();
+  });
+
+  it("returns an error when there's a problem", () => {
+    progress = jest.fn(() => {
+      return Promise.reject("Problem");
+    });
+
+    const selectedImage = { node: { image: {} } };
+
+    const args = {
+      selectedImage,
+      setError: jest.fn(),
+      setProgress: jest.fn(),
+      setState: jest.fn(),
     };
 
-    expect(sendImage(image)).toEqual(uri);
+    try {
+      sendImage(args);
+    } catch (error) {
+      expect(error).toBe("Problem");
+    }
   });
 });
