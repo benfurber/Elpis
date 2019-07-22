@@ -17,9 +17,7 @@ exports[`MessageBox and in error renders correctly 1`] = `
     ]
   }
 >
-  <Text
-    key="0"
-  >
+  <Text>
     PANIC!
   </Text>
 </View>
@@ -42,9 +40,7 @@ exports[`MessageBox when passive renders correctly 1`] = `
     ]
   }
 >
-  <Text
-    key="0"
-  >
+  <Text>
     Everything OK
   </Text>
 </View>
@@ -67,9 +63,7 @@ exports[`MessageBox when warning renders correctly 1`] = `
     ]
   }
 >
-  <Text
-    key="0"
-  >
+  <Text>
     Are you sure?
   </Text>
 </View>

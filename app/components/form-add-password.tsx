@@ -113,7 +113,7 @@ class FormAddPassword extends Component<Props, State> {
 
     return (
       <View>
-        <MessageBox display={displayMessage} messages={[messagePassword]} />
+        <MessageBox display={displayMessage} message={messagePassword} />
 
         <View style={styles.row}>
           <TextInput

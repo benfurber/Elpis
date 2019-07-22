@@ -127,7 +127,7 @@ class FormAddProfilePicture extends Component<Props, State> {
 
     return (
       <View>
-        <MessageBox display={displayMessage} messages={[message]} />
+        <MessageBox display={displayMessage} message={message} />
 
         <ProfilePictureField
           clearUploadCondition={() => this.clearUploadCondition}

@@ -8,7 +8,7 @@ describe("MessageBox", () => {
   describe("when passive", () => {
     it("renders correctly", () => {
       const component = shallow(
-        <MessageBox display={"passive"} messages={["Everything OK"]} />,
+        <MessageBox display={"passive"} message={"Everything OK"} />,
       );
 
       expect(component).toMatchSnapshot();
@@ -18,7 +18,7 @@ describe("MessageBox", () => {
   describe("when warning", () => {
     it("renders correctly", () => {
       const component = shallow(
-        <MessageBox display={"warn"} messages={["Are you sure?"]} />,
+        <MessageBox display={"warn"} message={"Are you sure?"} />,
       );
 
       expect(component).toMatchSnapshot();
@@ -28,7 +28,7 @@ describe("MessageBox", () => {
   describe("and in error", () => {
     it("renders correctly", () => {
       const component = shallow(
-        <MessageBox display={"error"} messages={["PANIC!"]} />,
+        <MessageBox display={"error"} message={"PANIC!"} />,
       );
 
       expect(component).toMatchSnapshot();
