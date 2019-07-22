@@ -53,6 +53,8 @@ class FormAddProfilePicture extends Component<Props, State> {
     const setState = remoteImagePath =>
       this.setState({
         messageImage: null,
+        display: "active",
+        displayMessage: "passive",
         remoteImagePath,
         uploadCondition: "uploaded",
       });
