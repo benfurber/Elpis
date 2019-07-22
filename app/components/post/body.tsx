@@ -21,7 +21,7 @@ const Body = (props: Props) => {
 
   return (
     <View style={styles.body}>
-      <FlexImage source={props.imagePath} style={styles.image} />
+      <FlexImage source={{ uri: props.imagePath }} style={styles.image} />
       {renderBodyText()}
       <Text style={[elements.textDate, styles.text]}>
         {formatDate(props.date)}

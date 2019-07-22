@@ -14,7 +14,9 @@ exports[`Post<Body> renders correctly 1`] = `
   <FlexImage
     source={
       Object {
-        "testUri": "../../../app/assets/images/image_post_1.jpg",
+        "uri": Object {
+          "testUri": "../../../app/assets/images/image_post_1.jpg",
+        },
       }
     }
     style={
