@@ -22,7 +22,7 @@ interface State {
   display: "active" | "error" | "loading";
   displayMessage: "passive" | "error";
   selectedImage: null | PhotoIdentifier;
-  messageImage: null | string;
+  message: null | string;
   progressPercentage: number;
   remoteImagePath?: void | string;
   uploadCondition: null | "uploading" | "uploaded";
@@ -34,7 +34,7 @@ class FormAddProfilePicture extends Component<Props, State> {
     this.state = {
       display: "active",
       displayMessage: "passive",
-      messageImage: labels.profilePictureRequest,
+      message: labels.profilePictureRequest,
       progressPercentage: 0,
       selectedImage: null,
       uploadCondition: null,
@@ -52,9 +52,9 @@ class FormAddProfilePicture extends Component<Props, State> {
 
     const setState = remoteImagePath =>
       this.setState({
-        messageImage: null,
         display: "active",
         displayMessage: "passive",
+        message: null,
         remoteImagePath,
         uploadCondition: "uploaded",
       });
@@ -68,7 +68,7 @@ class FormAddProfilePicture extends Component<Props, State> {
       this.setState({
         display: "error",
         displayMessage: "error",
-        messageImage: error,
+        message: error,
         selectedImage: null,
         uploadCondition: null,
       });
@@ -97,7 +97,7 @@ class FormAddProfilePicture extends Component<Props, State> {
     this.setState({
       display: "error",
       displayMessage: "error",
-      messageImage: labels.imageEmpty,
+      message: labels.imageEmpty,
     });
 
     return false;
@@ -108,7 +108,7 @@ class FormAddProfilePicture extends Component<Props, State> {
       display,
       displayMessage,
       uploadCondition,
-      messageImage,
+      message,
       selectedImage,
     } = this.state;
     const { navigation } = this.props;
@@ -127,7 +127,7 @@ class FormAddProfilePicture extends Component<Props, State> {
 
     return (
       <View>
-        <MessageBox display={displayMessage} messages={[messageImage]} />
+        <MessageBox display={displayMessage} messages={[message]} />
 
         <ProfilePictureField
           clearUploadCondition={() => this.clearUploadCondition}
