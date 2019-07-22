@@ -29,6 +29,7 @@ class OnboardingAddPasswordScreen extends Component<Props, State> {
     return (
       <BackgroundModal>
         <View style={styles.content}>
+          <Title text="3/4" small />
           <Title style={styles.title} text={labels.addPasswordTitle} />
 
           <FormAddPassword

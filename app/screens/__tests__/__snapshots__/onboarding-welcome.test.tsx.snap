@@ -30,6 +30,10 @@ exports[`OnboardingWelcomeScreen renders correctly 1`] = `
       }
     />
     <Title
+      small={true}
+      text="1/4"
+    />
+    <Title
       style={
         Object {
           "fontSize": 30,

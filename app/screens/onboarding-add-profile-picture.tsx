@@ -29,6 +29,7 @@ class OnboardingAddProfilePictureScreen extends Component<Props, State> {
     return (
       <BackgroundModal>
         <View style={styles.content}>
+          <Title text="2/4" small />
           <Title style={styles.title} text={labels.addProfilePictureTitle} />
 
           <FormAddProfilePicture

@@ -21,7 +21,7 @@ class OnboardingWelcomeScreen extends Component<Props, State> {
   componentDidMount() {
     Analytics.trackContent({
       contentType: "Onboarding",
-      contentId: "onboarding-1",
+      contentId: "onboarding-welcome",
     });
   }
 
@@ -32,7 +32,7 @@ class OnboardingWelcomeScreen extends Component<Props, State> {
       <BackgroundModal>
         <View style={styles.content}>
           <Image source={require(mayImagePath)} style={styles.image} />
-
+          <Title text={"1/4"} small />
           <Title
             style={styles.title}
             text={`${labels.welcomeTitle} [user.firstName]`}
@@ -44,7 +44,7 @@ class OnboardingWelcomeScreen extends Component<Props, State> {
             <ButtonSubmit
               display={"active"}
               label={labels.welcomeButton}
-              onPress={() => navigation.navigate("CompleteProfile")}
+              onPress={() => navigation.navigate("AddProfilePicture")}
             />
           </View>
         </View>
