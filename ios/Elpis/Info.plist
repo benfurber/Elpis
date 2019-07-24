@@ -38,7 +38,7 @@
 		</dict>
 	</dict>
 	<key>NSLocationWhenInUseUsageDescription</key>
-	<string></string>
+	<string/>
 	<key>NSPhotoLibraryUsageDescription</key>
 	<string>So that you can select photos for us to use on the platform.</string>
 	<key>UIAppFonts</key>
@@ -65,6 +65,7 @@
 		<string>lato-bolditalic.ttf</string>
 		<string>lato-italic.ttf</string>
 		<string>lato-regular.ttf</string>
+		<string>Fontisto.ttf</string>
 	</array>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
