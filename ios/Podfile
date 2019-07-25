@@ -4,8 +4,6 @@ target 'Elpis' do
   use_frameworks!
   pod 'Mixpanel', '~> 3.3.9'
 
-  pod 'RNCAsyncStorage', :path => '../node_modules/@react-native-community/async-storage'
-
   target 'ElpisTests' do
     inherit! :search_paths
   end
