@@ -1,8 +1,11 @@
+import AsyncStorage from "@react-native-community/async-storage";
+
 import { ApolloClient } from "apollo-client";
 import { InMemoryCache } from "apollo-cache-inmemory";
-import { HttpLink } from "apollo-link-http";
-import { onError } from "apollo-link-error";
 import { ApolloLink } from "apollo-link";
+import { setContext } from "apollo-link-context";
+import { onError } from "apollo-link-error";
+import { HttpLink } from "apollo-link-http";
 import fetch from "node-fetch";
 
 import { API_PATH } from "react-native-dotenv";
@@ -22,11 +25,21 @@ const htmlLink = new HttpLink({
   fetch: fetch,
 });
 
-const link = ApolloLink.from([error, htmlLink]);
+const authLink = setContext((_, { headers }) => {
+  const token = AsyncStorage.getItem("token");
+  return {
+    headers: {
+      ...headers,
+      authorization: token ? `Bearer ${token}` : "",
+    },
+  };
+});
+
+const link = authLink.concat(ApolloLink.from([error, htmlLink]));
 const cache = new InMemoryCache();
 
 const client = new ApolloClient({
-  cache: new InMemoryCache(),
+  cache,
   link,
 });
 
