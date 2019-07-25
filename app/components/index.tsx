@@ -6,7 +6,6 @@ export { Comments } from "./comments";
 export { ErrorMessage } from "./error-message";
 export { FormAddProfilePicture } from "./form-add-profile-picture";
 export { FormAddPassword } from "./form-add-password";
-export { FormCompleteProfile } from "./form-complete-profile";
 export { Icon } from "./icon";
 export { Loading } from "./loading";
 export { LoginForm } from "./login-form";
