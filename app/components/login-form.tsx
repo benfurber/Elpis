@@ -1,9 +1,21 @@
 import React, { Component } from "react";
 import { StyleSheet, View, Text } from "react-native";
+import AsyncStorage from "@react-native-community/async-storage";
 
 import { ButtonSubmit, TextInput } from "components";
 import { labels } from "labels";
 import { colours, layout } from "styles";
+
+import gql from "graphql-tag";
+import { Mutation } from "react-apollo";
+
+const LOGIN_USER = gql`
+  mutation Login($email: String!, $password: String!) {
+    login(email: $email, password: $password) {
+      token
+    }
+  }
+`;
 
 interface Props {
   navigation: any;
@@ -26,9 +38,23 @@ class LoginForm extends Component<Props, State> {
     };
   }
 
-  onPress() {
+  storeToken = async token => {
+    try {
+      await AsyncStorage.setItem("token", token);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  onPress(login) {
+    const { email, password } = this.state;
     this.setState({ display: "loading" });
-    this.props.navigation.navigate("Onboarding");
+    login({
+      variables: { email, password },
+    }).then(result => {
+      const token = result.data.login.token;
+      this.storeToken(token);
+    });
   }
 
   renderErrorMessage() {
@@ -72,11 +98,15 @@ class LoginForm extends Component<Props, State> {
           />
         </View>
         <View style={styles.row}>
-          <ButtonSubmit
-            display={display}
-            label={labels.login}
-            onPress={() => this.onPress()}
-          />
+          <Mutation mutation={LOGIN_USER}>
+            {(login, {}) => (
+              <ButtonSubmit
+                display={display}
+                label={labels.login}
+                onPress={() => this.onPress(login)}
+              />
+            )}
+          </Mutation>
         </View>
       </View>
     );
