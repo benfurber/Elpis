@@ -1,15 +1,26 @@
 import gql from "graphql-tag";
 
-export const allPosts = gql`
-  {
-    findAllPosts {
-      body
+export const feed = gql`
+  query {
+    feed {
       id
-      imagePath
-      title
       author {
         id
-        name
+      }
+      title
+      createdAt
+      content
+      imagePath
+      comments {
+        id
+        content
+        createdAt
+        replies {
+          id
+          content
+          createdAt
+        }
+        totalReplies
       }
     }
   }

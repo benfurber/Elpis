@@ -3,7 +3,7 @@ import { FlatList, ScrollView, StyleSheet, View } from "react-native";
 
 import { BackgroundContainer, Logo, Post, Query } from "components";
 import { NavigationType } from "interfaces";
-import { allPosts } from "../queries";
+import { feed } from "../queries";
 import { colours } from "styles";
 import { Analytics } from "utils";
 
@@ -18,7 +18,7 @@ class FeedScreen extends Component<Props> {
   postsLoop = data => {
     return (
       <FlatList
-        data={data.findAllPosts}
+        data={data.feed}
         keyExtractor={({ id }) => id}
         renderItem={({ item }) => (
           <Post navigation={this.props.navigation} post={item} />
@@ -35,7 +35,7 @@ class FeedScreen extends Component<Props> {
             <Logo />
           </View>
           <View style={styles.feedBody}>
-            <Query query={allPosts}>{this.postsLoop}</Query>
+            <Query query={feed}>{this.postsLoop}</Query>
           </View>
         </ScrollView>
       </BackgroundContainer>
