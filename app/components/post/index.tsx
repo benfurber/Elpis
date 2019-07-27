@@ -5,7 +5,7 @@ import { Comments } from "components";
 import { NavigationType, Post as PostInterface } from "interfaces";
 import { calculateTotalComments } from "utils";
 
-import { Body } from "./body";
+import { Content } from "./content";
 import { Footer } from "./footer";
 import { Tabs } from "./tabs";
 
@@ -53,21 +53,21 @@ class Post extends Component<Props, State> {
   };
 
   renderBody() {
-    const { author, body, date, imagePath } = this.props.post;
+    const { author, content, date, imagePath } = this.props.post;
     return (
       <View>
-        <Body date={date} body={body} imagePath={imagePath} />
+        <Content date={date} content={content} imagePath={imagePath} />
         <Footer avatarPath={author.avatarPath} />
       </View>
     );
   }
 
   renderComments() {
-    const { comments, body, id } = this.props.post;
+    const { comments, content, id } = this.props.post;
     return (
       <Comments
         comments={comments}
-        description={body}
+        description={content}
         navigation={this.props.navigation}
         postId={id}
       />

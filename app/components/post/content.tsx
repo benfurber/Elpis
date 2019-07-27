@@ -7,15 +7,15 @@ import { colours, elements, layout } from "styles";
 import { formatDate, validURL } from "utils";
 
 interface Props {
-  body: Post["body"];
+  content: Post["content"];
   date?: Post["date"];
   imagePath: Post["imagePath"];
 }
 
-const Body = (props: Props) => {
-  const renderBodyText = () => {
-    if (props.body) {
-      return <Text style={styles.text}>{props.body}</Text>;
+const Content = (props: Props) => {
+  const renderText = () => {
+    if (props.content) {
+      return <Text style={styles.text}>{props.content}</Text>;
     }
   };
 
@@ -40,7 +40,7 @@ const Body = (props: Props) => {
   return (
     <View style={styles.body}>
       {renderImage()}
-      {renderBodyText()}
+      {renderText()}
       {renderDate()}
     </View>
   );
@@ -62,4 +62,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export { Body };
+export { Content };

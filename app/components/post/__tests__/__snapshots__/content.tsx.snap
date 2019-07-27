@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Post<Body> renders correctly 1`] = `
+exports[`Post<Content> renders correctly 1`] = `
 <View
   style={
     Object {
