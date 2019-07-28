@@ -7,6 +7,7 @@ import { ErrorMessage, Loading } from "components";
 interface Props {
   children: (object) => ReactNode;
   query: any;
+  variables?: object;
 }
 
 class NewQuery extends Component<Props> {
@@ -28,7 +29,7 @@ class NewQuery extends Component<Props> {
 
   render() {
     return (
-      <Query query={this.props.query}>
+      <Query query={this.props.query} variables={this.props.variables}>
         {({ loading, error, data }) => {
           if (loading) {
             return this.renderLoading();

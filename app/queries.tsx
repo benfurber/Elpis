@@ -25,3 +25,20 @@ export const feed = gql`
     }
   }
 `;
+
+export const comments = gql`
+  query Post($id: ID!) {
+    post(id: $id) {
+      comments {
+        id
+        author {
+          name
+          avatarPath
+        }
+        createdAt
+        content
+        totalReplies
+      }
+    }
+  }
+`;

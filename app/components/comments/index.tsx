@@ -1,11 +1,12 @@
 import React, { Component } from "react";
 import { StyleSheet, View, ScrollView } from "react-native";
 
-import { TextField } from "components";
+import { Query, TextField } from "components";
 import { NavigationType, Post } from "interfaces";
 import { labels } from "labels";
 import { colours, layout } from "styles";
 import { Analytics } from "utils";
+import { comments } from "../../queries";
 
 import { CommentsLoop } from "./comments-loop";
 import { Header } from "./header";
@@ -13,7 +14,7 @@ import { Replies } from "./replies";
 
 interface Props {
   comments: Post["comments"];
-  description: Post["description"];
+  description: Post["content"];
   navigation: NavigationType;
   postId: Post["id"];
 }
@@ -73,16 +74,16 @@ class Comments extends Component<Props, State> {
     })[0];
   }
 
-  renderAllComments() {
+  renderAllComments = data => {
     return (
       <CommentsLoop
-        comments={this.props.comments}
+        comments={data.post.comments}
         header={this.header()}
         noComments={labels.noComments}
         onPress={commentId => this.setDisplay(commentId)}
       />
     );
-  }
+  };
 
   renderAddResponse() {
     const { commentId } = this.state;
@@ -112,12 +113,19 @@ class Comments extends Component<Props, State> {
 
   renderDisplay() {
     const { commentId } = this.state;
+    const { postId } = this.props;
 
     if (commentId !== null) {
       return <ScrollView>{this.renderReplies()}</ScrollView>;
     }
 
-    return <ScrollView>{this.renderAllComments()}</ScrollView>;
+    return (
+      <ScrollView>
+        <Query query={comments} variables={{ id: postId }}>
+          {this.renderAllComments}
+        </Query>
+      </ScrollView>
+    );
   }
 
   renderReplies() {
