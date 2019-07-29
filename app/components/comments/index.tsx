@@ -6,7 +6,7 @@ import { NavigationType, Post } from "interfaces";
 import { labels } from "labels";
 import { colours, layout } from "styles";
 import { Analytics } from "utils";
-import { comments } from "../../queries";
+import { comments, commentWithReplies } from "../../queries";
 
 import { CommentsLoop } from "./comments-loop";
 import { Header } from "./header";
@@ -116,7 +116,13 @@ class Comments extends Component<Props, State> {
     const { postId } = this.props;
 
     if (commentId !== null) {
-      return <ScrollView>{this.renderReplies()}</ScrollView>;
+      return (
+        <ScrollView>
+          <Query query={commentWithReplies} variables={{ id: commentId }}>
+            {this.renderReplies}
+          </Query>
+        </ScrollView>
+      );
     }
 
     return (
@@ -128,17 +134,16 @@ class Comments extends Component<Props, State> {
     );
   }
 
-  renderReplies() {
-    const item = this.selectComment();
+  renderReplies = data => {
     return (
       <Replies
         header={this.header()}
-        item={item}
+        item={data.comment}
         noReplies={labels.noReplies}
         onPress={() => this.setDisplay(null)}
       />
     );
-  }
+  };
 
   render() {
     return (

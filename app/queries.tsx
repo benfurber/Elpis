@@ -42,3 +42,27 @@ export const comments = gql`
     }
   }
 `;
+
+export const commentWithReplies = gql`
+  query Comment($id: ID!) {
+    comment(id: $id) {
+      id
+      author {
+        id
+        avatarPath
+      }
+      createdAt
+      content
+      replies {
+        id
+        author {
+          name
+          avatarPath
+        }
+        createdAt
+        content
+      }
+      totalReplies
+    }
+  }
+`;

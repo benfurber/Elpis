@@ -29,7 +29,7 @@ export interface Post {
 
 export interface Reply {
   author: Author;
-  body: string;
-  dateCreated: Date;
+  content: string;
+  createdAt: Date;
   id: string;
 }

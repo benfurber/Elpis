@@ -70,15 +70,13 @@ class Replies extends Component<Props> {
 
           <View style={styles.featuredAuthorDetails}>
             <Title text={item.author.name} />
-            <Text style={elements.textDate}>
-              {formatDate(item.dateCreated)}
-            </Text>
+            <Text style={elements.textDate}>{formatDate(item.createdAt)}</Text>
           </View>
         </View>
 
         <View>
           <Title text={item.title} small />
-          <Text>{item.body}</Text>
+          <Text>{item.content}</Text>
         </View>
       </View>
     );

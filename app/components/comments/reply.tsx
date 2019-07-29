@@ -24,13 +24,11 @@ class Reply extends Component<Props> {
 
           <View style={styles.authorDetails}>
             <Title text={item.author.name} small />
-            <Text style={elements.textDate}>
-              {formatDate(item.dateCreated)}
-            </Text>
+            <Text style={elements.textDate}>{formatDate(item.createdAt)}</Text>
           </View>
         </View>
         <View>
-          <Text style={styles.body}>{item.body}</Text>
+          <Text style={styles.body}>{item.content}</Text>
         </View>
       </View>
     );
