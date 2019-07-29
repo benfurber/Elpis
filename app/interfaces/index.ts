@@ -7,8 +7,8 @@ export interface Author {
 
 export interface Comment {
   author: Author;
-  body: string;
-  dateCreated: Date;
+  content: string;
+  createdAt: Date;
   id: string;
   replies: Reply[] | [];
   title: string;

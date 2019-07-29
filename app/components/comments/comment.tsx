@@ -29,10 +29,8 @@ class Comment extends Component<Props> {
           </View>
           <View style={styles.commentBodyContainer}>
             <Title text={item.title} />
-            <Text style={styles.commentDate}>
-              {formatDate(item.dateCreated)}
-            </Text>
-            <Text style={styles.text}>{item.body}</Text>
+            <Text style={styles.commentDate}>{formatDate(item.createdAt)}</Text>
+            <Text style={styles.text}>{item.content}</Text>
           </View>
         </View>
       </TouchableOpacity>
