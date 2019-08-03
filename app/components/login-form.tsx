@@ -5,12 +5,13 @@ import { Mutation } from "react-apollo";
 import AsyncStorage from "@react-native-community/async-storage";
 
 import { ButtonSubmit, TextInput } from "components";
+import { NavigationType } from "interfaces";
 import { labels } from "labels";
 import { colours, layout } from "styles";
 import { loginUser } from "mutations";
 
 interface Props {
-  navigation: any;
+  navigation: NavigationType;
 }
 interface State {
   display: "active" | "error" | "loading";
