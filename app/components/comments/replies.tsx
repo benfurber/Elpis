@@ -12,7 +12,7 @@ import { Title } from "components";
 import { Comment } from "interfaces";
 import { labels } from "labels";
 import { colours, elements, layout, typography } from "styles";
-import { Analytics, formatDate } from "utils";
+import { Analytics, dropFirstSentence, firstSentence, formatDate } from "utils";
 
 import { NoContent } from "./no-content";
 import { Reply } from "./reply";
@@ -60,6 +60,9 @@ class Replies extends Component<Props> {
   renderComment() {
     const { item } = this.props;
 
+    const title = firstSentence(item.content);
+    const body = dropFirstSentence(item.content);
+
     return (
       <View style={styles.featured}>
         <View style={styles.featuredDetails}>
@@ -75,8 +78,8 @@ class Replies extends Component<Props> {
         </View>
 
         <View>
-          <Title text={item.title} small />
-          <Text>{item.content}</Text>
+          <Title text={title} small />
+          {body && <Text>{body}</Text>}
         </View>
       </View>
     );
