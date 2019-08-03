@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { FlatList, ScrollView, StyleSheet, View } from "react-native";
+import { FlatList, StyleSheet, View } from "react-native";
 
 import { BackgroundContainer, Logo, Post, Query } from "components";
 import { NavigationType } from "interfaces";
@@ -30,14 +30,12 @@ class FeedScreen extends Component<Props> {
   render() {
     return (
       <BackgroundContainer>
-        <ScrollView>
-          <View style={styles.logo}>
-            <Logo />
-          </View>
-          <View style={styles.feedBody}>
-            <Query query={feed}>{this.postsLoop}</Query>
-          </View>
-        </ScrollView>
+        <View style={styles.logo}>
+          <Logo />
+        </View>
+        <View style={styles.feedBody}>
+          <Query query={feed}>{this.postsLoop}</Query>
+        </View>
       </BackgroundContainer>
     );
   }
@@ -49,7 +47,7 @@ const styles = StyleSheet.create({
     flex: 1,
     flexDirection: "column",
   },
-  feedBody: { flex: 6 },
+  feedBody: { flex: 13 },
   logo: {
     flex: 1,
     alignItems: "stretch",

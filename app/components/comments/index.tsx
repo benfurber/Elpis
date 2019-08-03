@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { StyleSheet, View, ScrollView } from "react-native";
+import { StyleSheet, View } from "react-native";
 
 import { Mutation } from "react-apollo";
 
@@ -62,8 +62,15 @@ class Comments extends Component<Props, State> {
     this.setState({ textInput: string });
   };
 
-  onSubmit() {
-    console.log(this.state.textInput);
+  onSubmit(createComment) {
+    createComment({
+      variables: {
+        content: this.state.textInput,
+        id: this.props.postId,
+      },
+    }).then(() => {
+      this.setState({ textInput: "" });
+    });
   }
 
   selectComment() {
@@ -124,20 +131,26 @@ class Comments extends Component<Props, State> {
 
     if (commentId !== null) {
       return (
-        <ScrollView>
-          <Query query={commentWithReplies} variables={{ id: commentId }}>
-            {this.renderReplies}
-          </Query>
-        </ScrollView>
+        <Query
+          query={commentWithReplies}
+          variables={{ id: commentId }}
+          pollInterval={2000}
+          blueMode
+        >
+          {this.renderReplies}
+        </Query>
       );
     }
 
     return (
-      <ScrollView>
-        <Query query={comments} variables={{ id: postId }}>
-          {this.renderAllComments}
-        </Query>
-      </ScrollView>
+      <Query
+        query={comments}
+        variables={{ id: postId }}
+        pollInterval={2000}
+        blueMode
+      >
+        {this.renderAllComments}
+      </Query>
     );
   }
 
