@@ -25,8 +25,8 @@ const htmlLink = new HttpLink({
   fetch: fetch,
 });
 
-const authLink = setContext((_, { headers }) => {
-  const token = AsyncStorage.getItem("token");
+const authLink = setContext(async (_, { headers }) => {
+  const token = await AsyncStorage.getItem("token");
   return {
     headers: {
       ...headers,
