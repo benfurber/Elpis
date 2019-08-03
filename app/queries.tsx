@@ -32,6 +32,7 @@ export const comments = gql`
       comments {
         id
         author {
+          id
           name
           avatarPath
         }
@@ -56,6 +57,7 @@ export const commentWithReplies = gql`
       replies {
         id
         author {
+          id
           name
           avatarPath
         }
