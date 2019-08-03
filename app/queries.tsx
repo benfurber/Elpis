@@ -50,6 +50,7 @@ export const commentWithReplies = gql`
       id
       author {
         id
+        name
         avatarPath
       }
       createdAt
