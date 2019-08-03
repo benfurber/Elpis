@@ -23,16 +23,18 @@ interface Props {
 }
 
 interface State {
-  textInput: string;
   commentId: null | string;
+  textInput: string;
+  textInputEditable: boolean;
 }
 
 class Comments extends Component<Props, State> {
   constructor(props) {
     super(props);
     this.state = {
-      textInput: "",
       commentId: null,
+      textInputEditable: true,
+      textInput: "",
     };
   }
 
@@ -63,13 +65,15 @@ class Comments extends Component<Props, State> {
   };
 
   onSubmit(createComment) {
+    this.setState({ textInputEditable: false });
+
     createComment({
       variables: {
         content: this.state.textInput,
         id: this.props.postId,
       },
     }).then(() => {
-      this.setState({ textInput: "" });
+      this.setState({ textInput: "", textInputEditable: true });
     });
   }
 
@@ -96,12 +100,13 @@ class Comments extends Component<Props, State> {
   };
 
   renderAddResponse() {
-    const { commentId } = this.state;
+    const { commentId, textInputEditable } = this.state;
 
     if (commentId !== null) {
       return (
         <TextField
           buttonText={labels.reply}
+          editable={textInputEditable}
           inputText={labels.addYourReply}
           onChangeText={string => this.onChangeText(string)}
           onSubmit={() => this.onSubmit()}
@@ -115,6 +120,7 @@ class Comments extends Component<Props, State> {
         {(createComment, {}) => (
           <TextField
             buttonText={labels.comment}
+            editable={textInputEditable}
             inputText={labels.addYourComment}
             onChangeText={string => this.onChangeText(string)}
             onSubmit={() => this.onSubmit(createComment)}
