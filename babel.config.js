@@ -10,6 +10,7 @@ module.exports = {
           interfaces: "./app/interfaces",
           labels: "./app/labels",
           mutations: "./app/mutations",
+          queries: "./app/queries",
           routes: "./app/routes",
           screens: "./app/screens",
           styles: "./app/styles",

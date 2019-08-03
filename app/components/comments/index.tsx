@@ -8,7 +8,7 @@ import { NavigationType, Post } from "interfaces";
 import { labels } from "labels";
 import { colours, layout } from "styles";
 import { Analytics } from "utils";
-import { comments, commentWithReplies } from "../../queries";
+import { comments, commentWithReplies } from "queries";
 import { addComment } from "mutations";
 
 import { CommentsLoop } from "./comments-loop";

@@ -3,7 +3,7 @@ import { FlatList, ScrollView, StyleSheet, View } from "react-native";
 
 import { BackgroundContainer, Logo, Post, Query } from "components";
 import { NavigationType } from "interfaces";
-import { feed } from "../queries";
+import { feed } from "queries";
 import { colours } from "styles";
 import { Analytics } from "utils";
 
