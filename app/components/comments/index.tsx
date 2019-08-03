@@ -9,7 +9,7 @@ import { labels } from "labels";
 import { colours, layout } from "styles";
 import { Analytics } from "utils";
 import { comments, commentWithReplies } from "queries";
-import { addComment } from "mutations";
+import { addComment, addReply } from "mutations";
 
 import { CommentsLoop } from "./comments-loop";
 import { Header } from "./header";
@@ -45,6 +45,12 @@ class Comments extends Component<Props, State> {
     });
   }
 
+  componentDidUpdate(_, prevState) {
+    if (prevState.commentId !== this.state.commentId) {
+      this.setState({ textInput: "" });
+    }
+  }
+
   setDisplay(commentId: string | null) {
     this.setState({
       commentId,
@@ -64,13 +70,13 @@ class Comments extends Component<Props, State> {
     this.setState({ textInput: string });
   };
 
-  onSubmit(createComment) {
+  onSubmit(query, id) {
     this.setState({ textInputEditable: false });
 
-    createComment({
+    query({
       variables: {
         content: this.state.textInput,
-        id: this.props.postId,
+        id,
       },
     }).then(() => {
       this.setState({ textInput: "", textInputEditable: true });
@@ -104,14 +110,18 @@ class Comments extends Component<Props, State> {
 
     if (commentId !== null) {
       return (
-        <TextField
-          buttonText={labels.reply}
-          editable={textInputEditable}
-          inputText={labels.addYourReply}
-          onChangeText={string => this.onChangeText(string)}
-          onSubmit={() => this.onSubmit()}
-          value={this.state.textInput}
-        />
+        <Mutation mutation={addReply}>
+          {(createReply, {}) => (
+            <TextField
+              buttonText={labels.reply}
+              editable={textInputEditable}
+              inputText={labels.addYourReply}
+              onChangeText={string => this.onChangeText(string)}
+              onSubmit={() => this.onSubmit(createReply, commentId)}
+              value={this.state.textInput}
+            />
+          )}
+        </Mutation>
       );
     }
 
@@ -123,7 +133,7 @@ class Comments extends Component<Props, State> {
             editable={textInputEditable}
             inputText={labels.addYourComment}
             onChangeText={string => this.onChangeText(string)}
-            onSubmit={() => this.onSubmit(createComment)}
+            onSubmit={() => this.onSubmit(createComment, this.props.postId)}
             value={this.state.textInput}
           />
         )}
