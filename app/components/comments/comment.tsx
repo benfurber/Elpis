@@ -5,7 +5,7 @@ import { TouchableOpacity } from "react-native-gesture-handler";
 import { Badge, Title } from "components";
 import { Comment as CommentInterface } from "interfaces";
 import { elements, layout } from "styles";
-import { formatDate } from "utils";
+import { dropFirstSentence, firstSentence, formatDate } from "utils";
 
 interface Props {
   item: CommentInterface;
@@ -13,8 +13,17 @@ interface Props {
 }
 
 class Comment extends Component<Props> {
+  renderBody() {
+    const { item } = this.props;
+
+    if (dropFirstSentence(item.content)) {
+      return <Text style={styles.text}>{dropFirstSentence(item.content)}</Text>;
+    }
+  }
+
   render() {
     const { item } = this.props;
+
     return (
       <TouchableOpacity onPress={() => this.props.onPress(item.id)}>
         <View style={styles.commentContainer}>
@@ -28,9 +37,9 @@ class Comment extends Component<Props> {
             </View>
           </View>
           <View style={styles.commentBodyContainer}>
-            <Title text={item.title} />
+            <Title text={firstSentence(item.content)} />
+            {this.renderBody()}
             <Text style={styles.commentDate}>{formatDate(item.createdAt)}</Text>
-            <Text style={styles.text}>{item.content}</Text>
           </View>
         </View>
       </TouchableOpacity>
@@ -60,6 +69,7 @@ const styles = StyleSheet.create({
   text: {
     flex: 1,
     flexWrap: "nowrap",
+    marginBottom: layout.spacing,
   },
 });
 
