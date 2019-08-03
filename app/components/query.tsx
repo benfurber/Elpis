@@ -5,6 +5,7 @@ import { Query } from "react-apollo";
 import { ErrorMessage, Loading } from "components";
 
 interface Props {
+  blueMode?: boolean;
   children: (object) => ReactNode;
   query: any;
   variables?: object;
@@ -22,7 +23,7 @@ class NewQuery extends Component<Props> {
   renderLoading() {
     return (
       <View style={styles.container}>
-        <Loading />
+        <Loading blueMode={this.props.blueMode} />
       </View>
     );
   }
