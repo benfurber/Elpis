@@ -1,5 +1,5 @@
 import React, { Component, ReactNode } from "react";
-import { StyleSheet, View } from "react-native";
+import { RefreshControl, ScrollView, StyleSheet, View } from "react-native";
 import { Query } from "react-apollo";
 
 import { ErrorMessage, Loading } from "components";
@@ -7,11 +7,20 @@ import { ErrorMessage, Loading } from "components";
 interface Props {
   blueMode?: boolean;
   children: (object) => ReactNode;
+  pollInterval?: number;
   query: any;
   variables?: object;
 }
 
-class NewQuery extends Component<Props> {
+interface State {
+  refreshing: boolean;
+}
+
+class NewQuery extends Component<Props, State> {
+  state = {
+    refreshing: false,
+  };
+
   renderError(error) {
     return (
       <View style={styles.container}>
@@ -28,18 +37,42 @@ class NewQuery extends Component<Props> {
     );
   }
 
+  empty(object) {
+    return Object.keys(object).length === 0 || object === undefined;
+  }
+
+  renderContent(data) {
+    if (this.empty(data)) {
+      return this.renderLoading();
+    }
+    return this.props.children(data);
+  }
+
   render() {
     return (
-      <Query query={this.props.query} variables={this.props.variables}>
-        {({ loading, error, data }) => {
-          if (loading) {
-            return this.renderLoading();
-          }
+      <Query
+        query={this.props.query}
+        variables={this.props.variables}
+        pollInterval={this.props.pollInterval || undefined}
+        notifyOnNetworkStatusChange
+      >
+        {({ error, data, refetch, networkStatus }) => {
           if (error) {
             return this.renderError(error);
           }
 
-          return this.props.children(data);
+          return (
+            <ScrollView
+              refreshControl={
+                <RefreshControl
+                  refreshing={networkStatus === 4}
+                  onRefresh={() => refetch()}
+                />
+              }
+            >
+              {this.renderContent(data)}
+            </ScrollView>
+          );
         }}
       </Query>
     );
