@@ -9,6 +9,7 @@ module.exports = {
           components: "./app/components",
           interfaces: "./app/interfaces",
           labels: "./app/labels",
+          mutations: "./app/mutations",
           routes: "./app/routes",
           screens: "./app/screens",
           styles: "./app/styles",

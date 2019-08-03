@@ -1,21 +1,13 @@
 import React, { Component } from "react";
 import { StyleSheet, View, Text } from "react-native";
+
+import { Mutation } from "react-apollo";
 import AsyncStorage from "@react-native-community/async-storage";
 
 import { ButtonSubmit, TextInput } from "components";
 import { labels } from "labels";
 import { colours, layout } from "styles";
-
-import gql from "graphql-tag";
-import { Mutation } from "react-apollo";
-
-const LOGIN_USER = gql`
-  mutation Login($email: String!, $password: String!) {
-    login(email: $email, password: $password) {
-      token
-    }
-  }
-`;
+import { loginUser } from "mutations";
 
 interface Props {
   navigation: any;
@@ -99,7 +91,7 @@ class LoginForm extends Component<Props, State> {
           />
         </View>
         <View style={styles.row}>
-          <Mutation mutation={LOGIN_USER}>
+          <Mutation mutation={loginUser}>
             {(login, {}) => (
               <ButtonSubmit
                 display={display}

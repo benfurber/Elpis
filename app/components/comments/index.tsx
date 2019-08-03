@@ -1,12 +1,15 @@
 import React, { Component } from "react";
 import { StyleSheet, View, ScrollView } from "react-native";
 
+import { Mutation } from "react-apollo";
+
 import { Query, TextField } from "components";
 import { NavigationType, Post } from "interfaces";
 import { labels } from "labels";
 import { colours, layout } from "styles";
 import { Analytics } from "utils";
 import { comments, commentWithReplies } from "../../queries";
+import { addComment } from "mutations";
 
 import { CommentsLoop } from "./comments-loop";
 import { Header } from "./header";
@@ -101,13 +104,17 @@ class Comments extends Component<Props, State> {
     }
 
     return (
-      <TextField
-        buttonText={labels.comment}
-        inputText={labels.addYourComment}
-        onChangeText={string => this.onChangeText(string)}
-        onSubmit={() => this.onSubmit()}
-        value={this.state.textInput}
-      />
+      <Mutation mutation={addComment}>
+        {(createComment, {}) => (
+          <TextField
+            buttonText={labels.comment}
+            inputText={labels.addYourComment}
+            onChangeText={string => this.onChangeText(string)}
+            onSubmit={() => this.onSubmit(createComment)}
+            value={this.state.textInput}
+          />
+        )}
+      </Mutation>
     );
   }
 
