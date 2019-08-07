@@ -17,8 +17,8 @@ export const addReply = gql`
 `;
 
 export const addUserProfilePicture = gql`
-  mutation linkUserPicturePicture($avatarPath: URL!) {
-    linkUserPicturePicture(avatarPath: $avatarPath) {
+  mutation linkUserProfilePicture($avatarPath: URL!) {
+    linkUserProfilePicture(avatarPath: $avatarPath) {
       avatarPath
     }
   }
