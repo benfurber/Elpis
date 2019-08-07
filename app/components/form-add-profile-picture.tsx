@@ -92,6 +92,7 @@ class FormAddProfilePicture extends Component<Props, State> {
           avatarPath: this.state.remoteImagePath,
         },
       }).then(() => {
+        this.setState({ display: "active" });
         return this.props.onPress();
       });
     }
