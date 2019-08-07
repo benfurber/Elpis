@@ -24,6 +24,14 @@ export const addUserProfilePicture = gql`
   }
 `;
 
+export const completeUserOnboarding = gql`
+  mutation completeUserOnboarding {
+    completeUserOnboarding {
+      id
+    }
+  }
+`;
+
 export const loginUser = gql`
   mutation Login($email: String!, $password: String!) {
     login(email: $email, password: $password) {
