@@ -150,11 +150,11 @@ class FormAddProfilePicture extends Component<Props, State> {
 
         <View style={styles.row}>
           <Mutation mutation={addUserProfilePicture}>
-            {(linkUserPicturePicture, {}) => (
+            {(linkUserProfilePicture, {}) => (
               <ButtonSubmit
                 display={display}
                 label={labels.formButton}
-                onPress={() => this.onPress(linkUserPicturePicture)}
+                onPress={() => this.onPress(linkUserProfilePicture)}
               />
             )}
           </Mutation>
