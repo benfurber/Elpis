@@ -1,9 +1,11 @@
 import React, { Component } from "react";
 import { StyleSheet, View } from "react-native";
+import { Mutation } from "react-apollo";
 
 import { ButtonSubmit, MessageBox, TextInput } from "components";
 import { NavigationType } from "interfaces";
 import { labels } from "labels";
+import { updateUserPassword } from "mutations";
 import { layout } from "styles";
 import { checkPasswordStrength } from "utils";
 
@@ -32,10 +34,17 @@ class FormAddPassword extends Component<Props, State> {
     };
   }
 
-  onPress() {
+  onPress(mutation) {
     if (this.passwordChecks()) {
       this.setState({ display: "loading" });
-      return this.props.onPress();
+      mutation({
+        variables: {
+          password: this.state.password,
+        },
+      }).then(() => {
+        this.setState({ display: "active" });
+        return this.props.onPress();
+      });
     }
   }
 
@@ -134,11 +143,15 @@ class FormAddPassword extends Component<Props, State> {
         </View>
 
         <View style={styles.row}>
-          <ButtonSubmit
-            display={display}
-            label={labels.formButton}
-            onPress={() => this.onPress()}
-          />
+          <Mutation mutation={updateUserPassword}>
+            {(updatePassword, {}) => (
+              <ButtonSubmit
+                display={display}
+                label={labels.formButton}
+                onPress={() => this.onPress(updatePassword)}
+              />
+            )}
+          </Mutation>
         </View>
       </View>
     );

@@ -31,3 +31,11 @@ export const loginUser = gql`
     }
   }
 `;
+
+export const updateUserPassword = gql`
+  mutation updatePassword($password: String!) {
+    updatePassword(password: $password) {
+      id
+    }
+  }
+`;
