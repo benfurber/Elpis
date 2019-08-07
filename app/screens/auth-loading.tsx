@@ -17,7 +17,7 @@ class AuthLoadingScreen extends Component<Props> {
     const { navigation } = this.props;
     const token = await AsyncStorage.getItem("token");
 
-    navigation.navigate(token ? "Main" : "Welcome");
+    navigation.navigate(token ? "Onboarding" : "Welcome");
   };
 
   render() {

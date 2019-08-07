@@ -16,6 +16,14 @@ export const addReply = gql`
   }
 `;
 
+export const addUserProfilePicture = gql`
+  mutation linkUserPicturePicture($avatarPath: URL!) {
+    linkUserPicturePicture(avatarPath: $avatarPath) {
+      avatarPath
+    }
+  }
+`;
+
 export const loginUser = gql`
   mutation Login($email: String!, $password: String!) {
     login(email: $email, password: $password) {

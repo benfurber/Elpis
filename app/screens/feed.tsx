@@ -15,6 +15,7 @@ class FeedScreen extends Component<Props> {
   componentDidMount() {
     Analytics.track("Feed");
   }
+
   postsLoop = data => {
     return (
       <FlatList
