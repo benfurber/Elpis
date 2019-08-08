@@ -69,3 +69,15 @@ export const commentWithReplies = gql`
     }
   }
 `;
+
+export const userDetails = gql`
+  query user {
+    me {
+      id
+      name
+      email
+      avatarPath
+      onboarded
+    }
+  }
+`;
