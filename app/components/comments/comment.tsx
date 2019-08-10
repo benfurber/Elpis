@@ -1,8 +1,8 @@
 import React, { Component } from "react";
-import { Image, StyleSheet, Text, View } from "react-native";
+import { StyleSheet, Text, View } from "react-native";
 import { TouchableOpacity } from "react-native-gesture-handler";
 
-import { Badge, Title } from "components";
+import { Avatar, Badge, Title } from "components";
 import { Comment as CommentInterface } from "interfaces";
 import { elements, layout } from "styles";
 import { dropFirstSentence, firstSentence, formatDate } from "utils";
@@ -30,10 +30,7 @@ class Comment extends Component<Props> {
           <View style={styles.avatarContainer}>
             <Badge left={35} number={item.totalReplies} />
             <View>
-              <Image
-                source={item.author.avatarPath}
-                style={elements.imageRound}
-              />
+              <Avatar avatarPath={item.author.avatarPath} />
             </View>
           </View>
           <View style={styles.commentBodyContainer}>
