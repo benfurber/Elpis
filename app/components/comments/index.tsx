@@ -17,7 +17,7 @@ import { Replies } from "./replies";
 
 interface Props {
   comments: Post["comments"];
-  description: Post["content"];
+  content: Post["content"];
   navigation: NavigationType;
   postId: Post["id"];
 }
@@ -59,10 +59,7 @@ class Comments extends Component<Props, State> {
 
   header() {
     return (
-      <Header
-        comments={this.props.comments}
-        description={this.props.description}
-      />
+      <Header comments={this.props.comments} content={this.props.content} />
     );
   }
 

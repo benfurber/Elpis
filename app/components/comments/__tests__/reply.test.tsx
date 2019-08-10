@@ -15,9 +15,9 @@ describe("Comments<Reply>", () => {
         avatarPath: require("assets/images/profile-pic-annon.png"),
         name: "Kelli S",
       },
-      body:
+      content:
         "Meu pai também fez o mesmo. Logo depois que minha mãe pediu o divórcio porque sofria violência dentro de casa, ele pegou as malas, se mudou e sumiu no mundo. Nem faço mais questão de saber pra onde ele foi.",
-      dateCreated: new Date("2019-01-02"),
+      createdAt: new Date("2019-01-02"),
       id: "21098",
     };
 

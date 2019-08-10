@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import {
-  Image,
   StyleSheet,
   Text,
   TouchableOpacity,
@@ -8,7 +7,7 @@ import {
   FlatList,
 } from "react-native";
 
-import { Title } from "components";
+import { Avatar, Title } from "components";
 import { Comment } from "interfaces";
 import { labels } from "labels";
 import { colours, elements, layout, typography } from "styles";
@@ -66,10 +65,7 @@ class Replies extends Component<Props> {
     return (
       <View style={styles.featured}>
         <View style={styles.featuredDetails}>
-          <Image
-            source={item.author.avatarPath}
-            style={elements.imageRoundLarge}
-          />
+          <Avatar avatarPath={item.author.avatarPath} size={"large"} />
 
           <View style={styles.featuredAuthorDetails}>
             <Title text={item.author.name} />

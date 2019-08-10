@@ -26,7 +26,6 @@ describe("Comments<Header>", () => {
         createdAt: new Date("2019-01-01"),
         id: "21097",
         totalReplies: 1,
-        title: "Title",
         replies: [reply],
       };
 
@@ -74,7 +73,6 @@ describe("Comments<Header>", () => {
           "Dá certo sim, o meu pai, por exemplo, fugiu quando eu tinha 5 anos e eu não faço ideia da onde ele esteja. Nunca mais voltou, pena que a violência só piorou.",
         createdAt: new Date("2019-01-01"),
         id: "21097",
-        title: "Meu pai fez o que ela mandou…",
         totalReplies: 1,
         replies: [reply],
       };
