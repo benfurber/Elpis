@@ -28,23 +28,19 @@ exports[`Post<Footer> renders correctly 1`] = `
       }
     }
   >
-    <Image
-      source={
+    <Avatar
+      avatarPath={
         Object {
           "testUri": "../../../app/assets/images/empower_two_women_logo.png",
         }
       }
-      style={
+      size="large"
+      styles={
         Object {
-          "backgroundColor": "rgb(45, 82, 113)",
           "borderColor": "rgb(45, 82, 113)",
-          "borderRadius": 30,
-          "borderWidth": 5,
-          "height": 60,
-          "overflow": "hidden",
+          "borderWidth": 4,
           "position": "absolute",
-          "top": -60,
-          "width": 60,
+          "top": -50,
         }
       }
     />
