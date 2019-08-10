@@ -1,7 +1,7 @@
 import { NavigationScreenProp } from "react-navigation";
 
 export interface Author {
-  avatarPath: NodeRequire;
+  avatarPath: string;
   name: string;
 }
 
@@ -11,7 +11,6 @@ export interface Comment {
   createdAt: Date;
   id: string;
   replies: Reply[] | [];
-  title: string;
   totalReplies: number;
 }
 
