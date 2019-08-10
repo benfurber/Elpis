@@ -1,3 +1,4 @@
+export { Avatar } from "./avatar";
 export { BackgroundContainer } from "./background-container";
 export { BackgroundModal } from "./background-modal";
 export { Badge } from "./badge";
