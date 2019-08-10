@@ -45,6 +45,10 @@ const labels = {
   welcomeButton: "Próximo",
   welcomeTitle: "Bem vinda à Elpis, ",
   welcomeText: "Muitas palavras aqui. ",
+  notification: {
+    reply: "left a reply",
+    post: "published a new post",
+  },
 };
 
 export { labels };

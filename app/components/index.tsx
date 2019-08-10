@@ -11,6 +11,7 @@ export { Loading } from "./loading";
 export { LoginForm } from "./login-form";
 export { Logo } from "./logo";
 export { MessageBox } from "./message-box";
+export { NotificationRowUnread } from "./notification-row-unread";
 export { Post } from "./post";
 export { ProfilePictureField } from "./profile-picture-field";
 export { Query } from "./query";
