@@ -27,21 +27,8 @@ exports[`ProfilePictureField when in active state renders correctly 1`] = `
       ]
     }
   >
-    <Image
-      source={
-        Object {
-          "testUri": "../../../app/assets/images/profile-pic-annon.png",
-        }
-      }
-      style={
-        Object {
-          "backgroundColor": "rgba(4, 71, 47, 0.75)",
-          "borderRadius": 50,
-          "height": 100,
-          "overflow": "hidden",
-          "width": 100,
-        }
-      }
+    <Avatar
+      size="feature"
     />
   </View>
   <ButtonSubmit
@@ -82,21 +69,8 @@ exports[`ProfilePictureField when in error state renders correctly 1`] = `
       ]
     }
   >
-    <Image
-      source={
-        Object {
-          "testUri": "../../../app/assets/images/profile-pic-annon.png",
-        }
-      }
-      style={
-        Object {
-          "backgroundColor": "rgba(4, 71, 47, 0.75)",
-          "borderRadius": 50,
-          "height": 100,
-          "overflow": "hidden",
-          "width": 100,
-        }
-      }
+    <Avatar
+      size="feature"
     />
   </View>
   <ButtonSubmit
