@@ -6,8 +6,8 @@ export const feed = gql`
       id
       author {
         id
+        avatarPath
       }
-      title
       createdAt
       content
       imagePath
