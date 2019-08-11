@@ -67,7 +67,7 @@ class Post extends Component<Props, State> {
     return (
       <Comments
         comments={comments}
-        description={content}
+        content={content}
         navigation={this.props.navigation}
         postId={id}
       />
