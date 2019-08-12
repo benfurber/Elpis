@@ -7,7 +7,7 @@ import { NavigationType } from "interfaces";
 import { USER_DETAILS } from "queries";
 
 interface Props {
-  client: WithApolloClient<void>;
+  client: WithApolloClient<any>;
   navigation: NavigationType;
 }
 
