@@ -4,7 +4,8 @@ import { shallow } from "enzyme";
 
 import { LoginForm } from "components";
 
-const navigation = { navigate: jest.fn() };
+let navigation;
+jest.mock(navigation, () => jest.fn());
 
 describe("LoginForm", () => {
   describe("when active", () => {
