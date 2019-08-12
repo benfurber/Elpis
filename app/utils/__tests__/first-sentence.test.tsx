@@ -27,11 +27,11 @@ describe("firstSentence", () => {
 
   it("returns only the first 70 characters (minus the last word)", () => {
     const theString =
-      "This is too long a sentence, really far too long, so returns only this and the rest is dropped";
+      "This is too long of a sentence, really far too long, so returns this and the rest is dropped";
 
     const response = firstSentence(theString);
     const expected =
-      "This is too long a sentence, really far too long, so returns only this...";
+      "This is too long of a sentence, really far too long, so returns this...";
 
     expect(response).toEqual(expected);
   });
