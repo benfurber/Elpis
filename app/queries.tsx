@@ -1,6 +1,6 @@
 import gql from "graphql-tag";
 
-export const feed = gql`
+export const FEED = gql`
   query {
     feed {
       id
@@ -26,7 +26,7 @@ export const feed = gql`
   }
 `;
 
-export const comments = gql`
+export const COMMENTS = gql`
   query Post($id: ID!) {
     post(id: $id) {
       comments {
@@ -44,7 +44,7 @@ export const comments = gql`
   }
 `;
 
-export const commentWithReplies = gql`
+export const COMMENT_WITH_REPLIES = gql`
   query Comment($id: ID!) {
     comment(id: $id) {
       id
@@ -70,7 +70,7 @@ export const commentWithReplies = gql`
   }
 `;
 
-export const userDetails = gql`
+export const USER_DETAILS = gql`
   query user {
     me {
       id

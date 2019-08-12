@@ -8,7 +8,7 @@ import { NavigationType, Post } from "interfaces";
 import { labels } from "labels";
 import { colours, layout } from "styles";
 import { Analytics } from "utils";
-import { comments, commentWithReplies } from "queries";
+import { COMMENTS, COMMENT_WITH_REPLIES } from "queries";
 import { addComment, addReply } from "mutations";
 
 import { CommentsLoop } from "./comments-loop";
@@ -145,7 +145,7 @@ class Comments extends Component<Props, State> {
     if (commentId !== null) {
       return (
         <Query
-          query={commentWithReplies}
+          query={COMMENT_WITH_REPLIES}
           variables={{ id: commentId }}
           pollInterval={2000}
           blueMode
@@ -157,7 +157,7 @@ class Comments extends Component<Props, State> {
 
     return (
       <Query
-        query={comments}
+        query={COMMENTS}
         variables={{ id: postId }}
         pollInterval={2000}
         blueMode

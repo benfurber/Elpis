@@ -3,7 +3,7 @@ import { FlatList, StyleSheet, View } from "react-native";
 
 import { BackgroundContainer, Logo, Post, Query } from "components";
 import { NavigationType } from "interfaces";
-import { feed } from "queries";
+import { FEED } from "queries";
 import { colours } from "styles";
 import { Analytics } from "utils";
 
@@ -35,7 +35,7 @@ class FeedScreen extends Component<Props> {
           <Logo />
         </View>
         <View style={styles.feedBody}>
-          <Query query={feed}>{this.postsLoop}</Query>
+          <Query query={FEED}>{this.postsLoop}</Query>
         </View>
       </BackgroundContainer>
     );

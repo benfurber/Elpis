@@ -4,7 +4,7 @@ import { withApollo, WithApolloClient } from "react-apollo";
 
 import { BackgroundContainer, Loading } from "components";
 import { NavigationType } from "interfaces";
-import { userDetails } from "queries";
+import { USER_DETAILS } from "queries";
 
 interface Props {
   client: WithApolloClient<void>;
