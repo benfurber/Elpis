@@ -5,7 +5,7 @@ import { Mutation } from "react-apollo";
 import { ButtonSubmit, MessageBox, TextInput } from "components";
 import { NavigationType } from "interfaces";
 import { labels } from "labels";
-import { updateUserPassword } from "mutations";
+import { UPDATE_USER_PASSWORD } from "mutations";
 import { layout } from "styles";
 import { checkPasswordStrength } from "utils";
 
@@ -143,7 +143,7 @@ class FormAddPassword extends Component<Props, State> {
         </View>
 
         <View style={styles.row}>
-          <Mutation mutation={updateUserPassword}>
+          <Mutation mutation={UPDATE_USER_PASSWORD}>
             {(updatePassword, {}) => (
               <ButtonSubmit
                 display={display}

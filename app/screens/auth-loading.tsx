@@ -24,7 +24,7 @@ class AuthLoadingScreen extends Component<Props> {
       navigation.navigate("Welcome");
     }
 
-    const result = await client.query({ query: userDetails });
+    const result = await client.query({ query: USER_DETAILS });
     const { onboarded } = result.data.me;
 
     navigation.navigate(onboarded ? "Main" : "Onboarding");

@@ -11,7 +11,7 @@ import {
 } from "components";
 import { NavigationType } from "interfaces";
 import { labels } from "labels";
-import { addUserProfilePicture } from "mutations";
+import { ADD_USER_PROFILE_PICTURE } from "mutations";
 import { layout } from "styles";
 import { sendImage } from "utils";
 
@@ -150,7 +150,7 @@ class FormAddProfilePicture extends Component<Props, State> {
         />
 
         <View style={styles.row}>
-          <Mutation mutation={addUserProfilePicture}>
+          <Mutation mutation={ADD_USER_PROFILE_PICTURE}>
             {(linkUserProfilePicture, {}) => (
               <ButtonSubmit
                 display={display}

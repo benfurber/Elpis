@@ -9,7 +9,7 @@ import { labels } from "labels";
 import { colours, layout } from "styles";
 import { Analytics } from "utils";
 import { COMMENTS, COMMENT_WITH_REPLIES } from "queries";
-import { addComment, addReply } from "mutations";
+import { ADD_COMMENT, ADD_REPLY } from "mutations";
 
 import { CommentsLoop } from "./comments-loop";
 import { Header } from "./header";
@@ -107,7 +107,7 @@ class Comments extends Component<Props, State> {
 
     if (commentId !== null) {
       return (
-        <Mutation mutation={addReply}>
+        <Mutation mutation={ADD_REPLY}>
           {(createReply, {}) => (
             <TextField
               buttonText={labels.reply}
@@ -123,7 +123,7 @@ class Comments extends Component<Props, State> {
     }
 
     return (
-      <Mutation mutation={addComment}>
+      <Mutation mutation={ADD_COMMENT}>
         {(createComment, {}) => (
           <TextField
             buttonText={labels.comment}

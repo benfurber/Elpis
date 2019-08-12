@@ -5,7 +5,7 @@ import { Mutation } from "react-apollo";
 import { BackgroundModal, ButtonSubmit, Title } from "components";
 import { NavigationType } from "interfaces";
 import { labels } from "labels";
-import { completeUserOnboarding } from "mutations";
+import { COMPLETE_USER_ONBOARDING } from "mutations";
 import { layout, typography } from "styles";
 import { Analytics } from "utils";
 
@@ -49,7 +49,7 @@ class OnboardingThankYouScreen extends Component<Props, State> {
           <Title style={styles.title} text={labels.thankYouTitle} />
           <Title style={styles.subtitle} text={labels.thankYouText} />
           <View style={styles.row}>
-            <Mutation mutation={completeUserOnboarding}>
+            <Mutation mutation={COMPLETE_USER_ONBOARDING}>
               {(completeUserOnboarding, {}) => (
                 <ButtonSubmit
                   display={this.state.display}

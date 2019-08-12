@@ -8,7 +8,7 @@ import { ButtonSubmit, TextInput } from "components";
 import { NavigationType } from "interfaces";
 import { labels } from "labels";
 import { colours, layout } from "styles";
-import { loginUser } from "mutations";
+import { LOGIN_USER } from "mutations";
 
 interface Props {
   navigation: NavigationType;
@@ -92,7 +92,7 @@ class LoginForm extends Component<Props, State> {
           />
         </View>
         <View style={styles.row}>
-          <Mutation mutation={loginUser}>
+          <Mutation mutation={LOGIN_USER}>
             {(login, {}) => (
               <ButtonSubmit
                 display={display}
