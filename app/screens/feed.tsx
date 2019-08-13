@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { FlatList, StyleSheet, View } from "react-native";
 
 import { BackgroundContainer, Logo, Post, Query } from "components";
-import { NavigationType } from "interfaces";
+import { Feed, NavigationType } from "interfaces";
 import { FEED } from "queries";
 import { colours } from "styles";
 import { Analytics } from "utils";
@@ -16,7 +16,7 @@ class FeedScreen extends Component<Props> {
     Analytics.track("Feed");
   }
 
-  postsLoop = data => {
+  postsLoop = (data: Feed) => {
     return (
       <FlatList
         data={data.feed}

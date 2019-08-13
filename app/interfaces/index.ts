@@ -14,6 +14,10 @@ export interface Comment {
   totalReplies: number;
 }
 
+export interface Feed {
+  feed: [Post];
+}
+
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 export type NavigationType = NavigationScreenProp<any, any>;
 
