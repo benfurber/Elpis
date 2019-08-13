@@ -6,7 +6,7 @@ import { shallow } from "enzyme";
 import { TextField } from "components";
 
 describe("TextField", () => {
-  it("renders correctly", () => {
+  it("renders correctly when editable", () => {
     const buttonText = "The button";
     const inputText = "Add your text";
     const value = "Value";
@@ -14,6 +14,7 @@ describe("TextField", () => {
     const component = shallow(
       <TextField
         buttonText={buttonText}
+        editable={true}
         inputText={inputText}
         onChangeText={() => jest.fn()}
         onSubmit={() => jest.fn()}
@@ -24,7 +25,7 @@ describe("TextField", () => {
     expect(component).toMatchSnapshot();
   });
 
-  it("renders the labels correctly", () => {
+  it("renders correctly when uneditable", () => {
     const buttonText = "The button";
     const inputText = "Add your text";
     const value = "Value";
@@ -32,6 +33,7 @@ describe("TextField", () => {
     const component = shallow(
       <TextField
         buttonText={buttonText}
+        editable={false}
         inputText={inputText}
         onChangeText={() => jest.fn()}
         onSubmit={() => jest.fn()}
@@ -39,8 +41,6 @@ describe("TextField", () => {
       />,
     );
 
-    const renderedChild = component.find(Text).shallow();
-
-    expect(renderedChild.text()).toContain("The button");
+    expect(component).toMatchSnapshot();
   });
 });

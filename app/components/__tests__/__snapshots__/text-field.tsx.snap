@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`TextField renders correctly 1`] = `
+exports[`TextField renders correctly when editable 1`] = `
 <KeyboardAvoidingView
   behavior="position"
   enabled={true}
@@ -56,6 +56,85 @@ exports[`TextField renders correctly 1`] = `
   >
     <TextInput
       allowFontScaling={true}
+      editable={true}
+      multiline={true}
+      onChangeText={[Function]}
+      onSubmitEditing={[Function]}
+      placeholder="Add your text"
+      placeholderTextColor="rgb(51, 51, 51)"
+      rejectResponderTermination={true}
+      returnKeyType="send"
+      style={
+        Object {
+          "backgroundColor": "rgb(255, 255, 255)",
+          "borderRadius": 5,
+          "padding": 5,
+        }
+      }
+      underlineColorAndroid="transparent"
+      value="Value"
+    />
+  </View>
+</KeyboardAvoidingView>
+`;
+
+exports[`TextField renders correctly when uneditable 1`] = `
+<KeyboardAvoidingView
+  behavior="position"
+  enabled={true}
+  keyboardVerticalOffset={138}
+>
+  <View
+    style={
+      Object {
+        "backgroundColor": "rgb(45, 82, 113)",
+        "borderRadius": 10,
+        "bottom": 50,
+        "left": 5,
+        "margin": 10,
+        "padding": 10,
+        "position": "absolute",
+        "zIndex": 1,
+      }
+    }
+  >
+    <TouchableOpacity
+      activeOpacity={0.2}
+      delayLongPress={600}
+      extraButtonProps={
+        Object {
+          "rippleColor": "transparent",
+        }
+      }
+      onPress={[Function]}
+    >
+      <Text
+        style={
+          Object {
+            "color": "rgb(255, 255, 255)",
+            "fontWeight": "bold",
+          }
+        }
+      >
+        The button
+      </Text>
+    </TouchableOpacity>
+  </View>
+  <View
+    style={
+      Object {
+        "backgroundColor": "rgba(198, 213, 225, 0.75)",
+        "borderTopLeftRadius": 5,
+        "borderTopRightRadius": 5,
+        "minHeight": 45,
+        "padding": 10,
+        "zIndex": 2,
+      }
+    }
+  >
+    <TextInput
+      allowFontScaling={true}
+      editable={false}
       multiline={true}
       onChangeText={[Function]}
       onSubmitEditing={[Function]}
