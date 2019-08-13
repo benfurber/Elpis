@@ -21,7 +21,7 @@ class AuthLoadingScreen extends Component<Props> {
     const token = await AsyncStorage.getItem("token");
 
     if (!token) {
-      navigation.navigate("Welcome");
+      return navigation.navigate("Welcome");
     }
 
     const result = await client.query({ query: USER_DETAILS });
