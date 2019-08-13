@@ -4,7 +4,7 @@ import { StyleSheet, View, Text } from "react-native";
 import { Mutation } from "react-apollo";
 import AsyncStorage from "@react-native-community/async-storage";
 
-import { ButtonSubmit, TextInput } from "components";
+import { ButtonSubmit, ErrorMessage, TextInput } from "components";
 import { NavigationType } from "interfaces";
 import { labels } from "labels";
 import { colours, layout } from "styles";
@@ -16,7 +16,7 @@ interface Props {
 interface State {
   display: "active" | "error" | "loading";
   email: string;
-  errorMessage: null | string;
+  errorMessage: null | { message: string };
   password: string;
 }
 
@@ -40,15 +40,32 @@ class LoginForm extends Component<Props, State> {
     }
   };
 
+  setError(error) {
+    if (error) {
+      return this.setState({
+        display: "error",
+        errorMessage: error,
+        password: "",
+      });
+    }
+  }
+
   onPress(login) {
     const { email, password } = this.state;
     this.setState({ display: "loading" });
+
     login({
       variables: { email, password },
-    }).then(result => {
-      const token = result.data.login.token;
-      this.storeToken(token);
-    });
+    })
+      .then(result => {
+        if (!result.errors) {
+          const token = result.data.login.token;
+          this.storeToken(token);
+        } else {
+          this.setError(result.errors);
+        }
+      })
+      .catch(error => this.setError(error));
   }
 
   renderErrorMessage() {
@@ -57,9 +74,7 @@ class LoginForm extends Component<Props, State> {
     if (display === "error" && errorMessage) {
       return (
         <View style={styles.row}>
-          <View style={styles.containerErrorMessage}>
-            <Text style={styles.textErrorMessage}>{errorMessage}</Text>
-          </View>
+          <ErrorMessage error={errorMessage} />
         </View>
       );
     }
@@ -73,6 +88,7 @@ class LoginForm extends Component<Props, State> {
         {this.renderErrorMessage()}
         <View style={styles.row}>
           <TextInput
+            autoCapitalize="none"
             displayStyle={display}
             keyboardType="email-address"
             onChangeText={email => this.setState({ email })}
@@ -86,6 +102,7 @@ class LoginForm extends Component<Props, State> {
             displayStyle={display}
             onChangeText={password => this.setState({ password })}
             placeholder={labels.password}
+            returnKeyType={"send"}
             secureTextEntry
             textContentType="password"
             value={this.state.password}
@@ -93,7 +110,7 @@ class LoginForm extends Component<Props, State> {
         </View>
         <View style={styles.row}>
           <Mutation mutation={LOGIN_USER}>
-            {(login, {}) => (
+            {login => (
               <ButtonSubmit
                 display={display}
                 label={labels.login}
