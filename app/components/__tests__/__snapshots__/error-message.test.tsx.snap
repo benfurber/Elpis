@@ -24,10 +24,7 @@ exports[`ErrorMessage renders correctly 1`] = `
   <Text
     style={
       Object {
-        "alignContent": "center",
-        "alignSelf": "center",
         "color": "rgb(255, 255, 255)",
-        "flex": 1,
       }
     }
   >

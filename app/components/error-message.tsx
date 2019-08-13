@@ -47,10 +47,7 @@ const styles = StyleSheet.create({
     padding: layout.spacingL,
   },
   text: {
-    alignSelf: "center",
-    alignContent: "center",
     color: colours.pureWhite,
-    flex: 1,
   },
   title: {
     color: colours.pureWhite,
