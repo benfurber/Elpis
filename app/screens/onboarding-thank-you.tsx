@@ -37,7 +37,7 @@ class OnboardingThankYouScreen extends Component<Props, State> {
 
     mutation().then(() => {
       this.setState({ display: "active" });
-      return this.props.navigation.navigate("AuthLoading");
+      return this.props.navigation.navigate("Feed");
     });
   }
 
