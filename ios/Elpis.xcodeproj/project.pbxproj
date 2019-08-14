@@ -129,6 +129,27 @@
 			remoteGlobalIDString = 83CBBA2E1A601D0E00E9B192;
 			remoteInfo = React;
 		};
+		201C5AC22304A02000381F94 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 201C5ABC2304A02000381F94 /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 1C230361F74CF7214D3D9A1CB61B5FF9;
+			remoteInfo = Mixpanel;
+		};
+		201C5AC42304A02000381F94 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 201C5ABC2304A02000381F94 /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8B785AE4F9D5FE7D57B90AC09A9CEDD3;
+			remoteInfo = "Pods-Elpis";
+		};
+		201C5AC62304A02000381F94 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 201C5ABC2304A02000381F94 /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 20568C986098B57FDECAAA7E6311EADC;
+			remoteInfo = "Pods-ElpisTests";
+		};
 		250468FE22C4A9E300EFEE6B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 50AF4FECB46644D1BF8100C2 /* RNMixpanel.xcodeproj */;
@@ -444,6 +465,7 @@
 		1C3F6DDC2D4F48B38F5890DC /* creteround-regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "creteround-regular.ttf"; path = "../app/assets/fonts/creteround-regular.ttf"; sourceTree = "<group>"; };
 		1E75A215F0284282B9252186 /* RNVectorIcons.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = RNVectorIcons.xcodeproj; path = "../node_modules/react-native-vector-icons/RNVectorIcons.xcodeproj"; sourceTree = "<group>"; };
 		1F99A02690C4452DB51E0D62 /* FontAwesome5_Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = FontAwesome5_Regular.ttf; path = "../node_modules/react-native-vector-icons/Fonts/FontAwesome5_Regular.ttf"; sourceTree = "<group>"; };
+		201C5ABC2304A02000381F94 /* Pods.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Pods.xcodeproj; path = Pods/Pods.xcodeproj; sourceTree = "<group>"; };
 		2093DAB212B64303ABCCA561 /* SimpleLineIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = SimpleLineIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/SimpleLineIcons.ttf"; sourceTree = "<group>"; };
 		24314C1C4646482CA5BA7CF8 /* EvilIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = EvilIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/EvilIcons.ttf"; sourceTree = "<group>"; };
 		2566613922C3E1DD00A967F8 /* launch_screen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = launch_screen.png; path = "../app/assets/images/launch-screen/launch_screen.png"; sourceTree = "<group>"; };
@@ -688,6 +710,16 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		201C5ABD2304A02000381F94 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				201C5AC32304A02000381F94 /* Mixpanel.framework */,
+				201C5AC52304A02000381F94 /* Pods_Elpis.framework */,
+				201C5AC72304A02000381F94 /* Pods_ElpisTests.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		250468FA22C4A9E300EFEE6B /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -765,6 +797,7 @@
 		2D16E6871FA4F8E400B85C8A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				201C5ABC2304A02000381F94 /* Pods.xcodeproj */,
 				259715422276E34000C71775 /* JavaScriptCore.framework */,
 				25F1D9AD226DD44600D51624 /* libRNGestureHandler.a */,
 				2D16E6891FA4F8E400B85C8A /* libReact.a */,
@@ -955,6 +988,10 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
+					ProductGroup = 201C5ABD2304A02000381F94 /* Products */;
+					ProjectRef = 201C5ABC2304A02000381F94 /* Pods.xcodeproj */;
+				},
+				{
 					ProductGroup = 00C302A81ABCB8CE00DB3ED1 /* Products */;
 					ProjectRef = 00C302A71ABCB8CE00DB3ED1 /* RCTActionSheet.xcodeproj */;
 				},
@@ -1094,6 +1131,27 @@
 			fileType = archive.ar;
 			path = libReact.a;
 			remoteRef = 146834031AC3E56700842450 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		201C5AC32304A02000381F94 /* Mixpanel.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Mixpanel.framework;
+			remoteRef = 201C5AC22304A02000381F94 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		201C5AC52304A02000381F94 /* Pods_Elpis.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Pods_Elpis.framework;
+			remoteRef = 201C5AC42304A02000381F94 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		201C5AC72304A02000381F94 /* Pods_ElpisTests.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Pods_ElpisTests.framework;
+			remoteRef = 201C5AC62304A02000381F94 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 		250468FF22C4A9E300EFEE6B /* libRNMixpanel.a */ = {
