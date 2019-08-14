@@ -129,7 +129,6 @@ const styles = StyleSheet.create({
     alignItems: "center",
     flexDirection: "column",
     flex: 1,
-    justifyContent: "center",
   },
   containerErrorMessage: {
     backgroundColor: colours.redTransparent,

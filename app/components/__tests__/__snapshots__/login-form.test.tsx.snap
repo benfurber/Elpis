@@ -7,7 +7,6 @@ exports[`LoginForm when active renders correctly 1`] = `
       "alignItems": "center",
       "flex": 1,
       "flexDirection": "column",
-      "justifyContent": "center",
     }
   }
 >
@@ -199,7 +198,6 @@ exports[`LoginForm when loading renders correctly 1`] = `
       "alignItems": "center",
       "flex": 1,
       "flexDirection": "column",
-      "justifyContent": "center",
     }
   }
 >
@@ -391,7 +389,6 @@ exports[`LoginForm when there's an error renders correctly 1`] = `
       "alignItems": "center",
       "flex": 1,
       "flexDirection": "column",
-      "justifyContent": "center",
     }
   }
 >
