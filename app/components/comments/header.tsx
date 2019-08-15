@@ -8,15 +8,15 @@ import { firstSentence } from "utils";
 
 interface Props {
   comments: Post["comments"];
-  description: Post["description"];
+  content: Post["content"];
 }
 
 class Header extends Component<Props> {
   render() {
-    if (this.props.description) {
+    if (this.props.content) {
       return (
         <View style={styles.titleContainer}>
-          <Title text={firstSentence(this.props.description)} />
+          <Title text={firstSentence(this.props.content)} />
         </View>
       );
     }

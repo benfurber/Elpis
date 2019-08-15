@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import {
-  Image,
   StyleSheet,
   Text,
   TouchableOpacity,
@@ -8,11 +7,11 @@ import {
   FlatList,
 } from "react-native";
 
-import { Title } from "components";
+import { Avatar, Title } from "components";
 import { Comment } from "interfaces";
 import { labels } from "labels";
 import { colours, elements, layout, typography } from "styles";
-import { Analytics, formatDate } from "utils";
+import { Analytics, dropFirstSentence, firstSentence, formatDate } from "utils";
 
 import { NoContent } from "./no-content";
 import { Reply } from "./reply";
@@ -60,25 +59,23 @@ class Replies extends Component<Props> {
   renderComment() {
     const { item } = this.props;
 
+    const title = firstSentence(item.content);
+    const body = dropFirstSentence(item.content);
+
     return (
       <View style={styles.featured}>
         <View style={styles.featuredDetails}>
-          <Image
-            source={item.author.avatarPath}
-            style={elements.imageRoundLarge}
-          />
+          <Avatar avatarPath={item.author.avatarPath} size={"large"} />
 
           <View style={styles.featuredAuthorDetails}>
             <Title text={item.author.name} />
-            <Text style={elements.textDate}>
-              {formatDate(item.dateCreated)}
-            </Text>
+            <Text style={elements.textDate}>{formatDate(item.createdAt)}</Text>
           </View>
         </View>
 
         <View>
-          <Title text={item.title} small />
-          <Text>{item.body}</Text>
+          <Title text={title} small />
+          {body && <Text>{body}</Text>}
         </View>
       </View>
     );

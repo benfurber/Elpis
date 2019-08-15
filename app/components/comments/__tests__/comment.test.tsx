@@ -16,8 +16,8 @@ describe("Comments<Comment>", () => {
           avatarPath: require("assets/images/profile-pic-may.jpg"),
           name: "Benita F",
         },
-        body: "Nao.",
-        dateCreated: new Date("2019-01-01"),
+        content: "Nao.",
+        createdAt: new Date("2019-01-01"),
         id: "21097",
       };
       const comment = {
@@ -25,11 +25,10 @@ describe("Comments<Comment>", () => {
           avatarPath: require("assets/images/profile-pic-may.jpg"),
           name: "May F",
         },
-        body:
+        content:
           "Dá certo sim, o meu pai, por exemplo, fugiu quando eu tinha 5 anos e eu não faço ideia da onde ele esteja. Nunca mais voltou, pena que a violência só piorou.",
-        dateCreated: new Date("2019-01-01"),
+        createdAt: new Date("2019-01-01"),
         id: "21097",
-        title: "Meu pai fez o que ela mandou…",
         totalReplies: 1,
         replies: [reply],
       };
@@ -50,11 +49,10 @@ describe("Comments<Comment>", () => {
           avatarPath: require("assets/images/profile-pic-may.jpg"),
           name: "May F",
         },
-        body:
+        content:
           "Dá certo sim, o meu pai, por exemplo, fugiu quando eu tinha 5 anos e eu não faço ideia da onde ele esteja. Nunca mais voltou, pena que a violência só piorou.",
-        dateCreated: new Date("2019-01-01"),
+        createdAt: new Date("2019-01-01"),
         id: "21097",
-        title: "Meu pai fez o que ela mandou…",
         totalReplies: 0,
         replies: [],
       };

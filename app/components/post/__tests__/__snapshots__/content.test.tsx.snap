@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Post<Body> renders correctly 1`] = `
+exports[`Post<Content> renders correctly 1`] = `
 <View
   style={
     Object {
@@ -11,21 +11,6 @@ exports[`Post<Body> renders correctly 1`] = `
     }
   }
 >
-  <FlexImage
-    source={
-      Object {
-        "uri": Object {
-          "testUri": "../../../app/assets/images/image_post_1.jpg",
-        },
-      }
-    }
-    style={
-      Object {
-        "borderRadius": 5,
-        "overflow": "hidden",
-      }
-    }
-  />
   <Text
     style={
       Object {

@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-import { Image, StyleSheet, Text, View } from "react-native";
+import { StyleSheet, Text, View } from "react-native";
 
-import { Title } from "components";
+import { Avatar, Title } from "components";
 import { Reply as ReplyInterface } from "interfaces";
 import { colours, elements, layout } from "styles";
 import { formatDate } from "utils";
@@ -17,20 +17,15 @@ class Reply extends Component<Props> {
     return (
       <View style={styles.commentContainer}>
         <View style={styles.details}>
-          <Image
-            source={item.author.avatarPath}
-            style={elements.imageRoundSmall}
-          />
+          <Avatar avatarPath={item.author.avatarPath} size={"small"} />
 
           <View style={styles.authorDetails}>
             <Title text={item.author.name} small />
-            <Text style={elements.textDate}>
-              {formatDate(item.dateCreated)}
-            </Text>
+            <Text style={elements.textDate}>{formatDate(item.createdAt)}</Text>
           </View>
         </View>
         <View>
-          <Text style={styles.body}>{item.body}</Text>
+          <Text style={styles.body}>{item.content}</Text>
         </View>
       </View>
     );

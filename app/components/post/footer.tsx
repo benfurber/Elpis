@@ -1,6 +1,7 @@
 import React from "react";
-import { Image, StyleSheet, View } from "react-native";
+import { StyleSheet, View } from "react-native";
 
+import { Avatar } from "components";
 import { Author } from "interfaces";
 import { colours, layout } from "styles";
 
@@ -13,7 +14,11 @@ const Footer = (props: Props) => {
     <View style={styles.footer}>
       <View style={styles.followingContainer} />
       <View style={styles.avatarContainer}>
-        <Image source={props.avatarPath} style={styles.authorAvatar} />
+        <Avatar
+          avatarPath={props.avatarPath}
+          size={"large"}
+          styles={styles.authorAvatar}
+        />
       </View>
     </View>
   );
@@ -21,15 +26,10 @@ const Footer = (props: Props) => {
 
 const styles = StyleSheet.create({
   authorAvatar: {
-    backgroundColor: colours.navyBlueDark,
     borderColor: colours.navyBlueDark,
-    borderRadius: 30,
-    borderWidth: 5,
-    height: 60,
-    overflow: "hidden",
+    borderWidth: 4,
     position: "absolute",
-    top: -60,
-    width: 60,
+    top: -50,
   },
   avatarContainer: {
     alignItems: "center",
@@ -41,7 +41,7 @@ const styles = StyleSheet.create({
     borderBottomLeftRadius: layout.borderRadius,
     borderBottomRightRadius: layout.borderRadius,
     flex: 1,
-    padding: layout.spacing * 2,
+    padding: layout.spacingL,
   },
   footer: {
     backgroundColor: colours.whiteTransparent,

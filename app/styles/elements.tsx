@@ -56,6 +56,12 @@ const elements = StyleSheet.create({
     height: 60,
     width: 60,
   },
+  imageRoundXL: {
+    ...standard.image,
+    borderRadius: 35,
+    height: 70,
+    width: 70,
+  },
   textInputField: standard.basicInputField,
   textInputFieldError: {
     ...standard.basicInputField,

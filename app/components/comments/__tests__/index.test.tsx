@@ -15,19 +15,18 @@ describe("Comments", () => {
           avatarPath: require("assets/images/profile-pic-may.jpg"),
           name: "May F",
         },
-        body:
+        content:
           "Dá certo sim, o meu pai, por exemplo, fugiu quando eu tinha 5 anos e eu não faço ideia da onde ele esteja. Nunca mais voltou, pena que a violência só piorou.",
-        dateCreated: new Date("2019-01-01"),
+        createdAt: new Date("2019-01-01"),
         id: "21097",
         replies: [],
-        title: "Meu pai fez o que ela mandou…",
         totalReplies: 0,
       };
 
       const component = shallow(
         <Comments
           comments={[comment]}
-          description={"A simple string"}
+          content={"A simple string"}
           navigation={navigation}
           postId={"0"}
         />,
@@ -42,7 +41,7 @@ describe("Comments", () => {
       const component = shallow(
         <Comments
           comments={[]}
-          description={"A simple string"}
+          content={"A simple string"}
           navigation={navigation}
           postId={"0"}
         />,

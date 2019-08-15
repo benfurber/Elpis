@@ -1,0 +1,34 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ErrorMessage renders correctly 1`] = `
+<View
+  style={
+    Object {
+      "alignContent": "center",
+      "backgroundColor": "rgba(208, 2, 27, 0.75)",
+      "borderRadius": 10,
+      "flexDirection": "column",
+      "margin": 20,
+      "padding": 20,
+    }
+  }
+>
+  <Title
+    style={
+      Object {
+        "color": "rgb(255, 255, 255)",
+      }
+    }
+    text="erro"
+  />
+  <Text
+    style={
+      Object {
+        "color": "rgb(255, 255, 255)",
+      }
+    }
+  >
+    ERROR PANIC!
+  </Text>
+</View>
+`;

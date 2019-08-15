@@ -17,7 +17,7 @@ describe("Post", () => {
         },
         comments: [],
         date: new Date("2000-01-01"),
-        description: "A string",
+        content: null,
         id: "10387-314fs-12asdbj",
         imagePath: require("assets/images/image_post_1.jpg"),
       };
@@ -29,7 +29,7 @@ describe("Post", () => {
       expect(component).toMatchSnapshot();
     });
 
-    it("renders correctly if not description is provided", () => {
+    it("renders correctly if no content is provided", () => {
       const post = {
         author: {
           avatarPath: require("assets/images/empower_two_women_logo.png"),
@@ -37,7 +37,7 @@ describe("Post", () => {
         },
         comments: [],
         date: new Date("2000-01-01"),
-        description: null,
+        content: null,
         id: "10387-314fs-12asdbj",
         imagePath: require("assets/images/image_post_1.jpg"),
       };
@@ -60,17 +60,16 @@ describe("Post", () => {
               avatarPath: require("assets/images/profile-pic-may.jpg"),
               name: "May F",
             },
-            body:
+            content:
               "Dá certo sim, o meu pai, por exemplo, fugiu quando eu tinha 5 anos e eu não faço ideia da onde ele esteja. Nunca mais voltou, pena que a violência só piorou.",
-            dateCreated: new Date("2019-01-01"),
+            createdAt: new Date("2019-01-01"),
             id: "21097",
             replies: [],
-            title: "Meu pai fez o que ela mandou…",
             totalReplies: 0,
           },
         ],
+        content: null,
         date: new Date("2000-01-01"),
-        description: "A string",
         id: "10387-314fs-12asdbj",
         imagePath: require("assets/images/image_post_1.jpg"),
       };

@@ -9,32 +9,31 @@ describe("Comments<Header>", () => {
     it("renders correctly", () => {
       const reply = {
         author: {
-          avatarPath: require("assets/images/profile-pic-may.jpg"),
+          avatarPath: "",
           name: "Benita F",
         },
-        body: "Nao.",
-        dateCreated: new Date("2019-01-01"),
+        content: "Nao.",
+        createdAt: new Date("2019-01-01"),
         id: "21097",
       };
       const comment = {
         author: {
-          avatarPath: require("assets/images/profile-pic-may.jpg"),
+          avatarPath: "",
           name: "May F",
         },
-        body:
+        content:
           "Dá certo sim, o meu pai, por exemplo, fugiu quando eu tinha 5 anos e eu não faço ideia da onde ele esteja. Nunca mais voltou, pena que a violência só piorou.",
-        dateCreated: new Date("2019-01-01"),
+        createdAt: new Date("2019-01-01"),
         id: "21097",
-        title: "Meu pai fez o que ela mandou…",
         totalReplies: 1,
         replies: [reply],
       };
 
       const comments = [comment];
-      const description = "Article description";
+      const content = "Article description";
 
       const component = shallow(
-        <Header comments={comments} description={description} />,
+        <Header comments={comments} content={content} />,
       );
 
       expect(component).toMatchSnapshot();
@@ -44,10 +43,10 @@ describe("Comments<Header>", () => {
   describe("without comments", () => {
     it("renders correctly", () => {
       const comments = [];
-      const description = "A slightly longer article description";
+      const content = "A slightly longer article description";
 
       const component = shallow(
-        <Header comments={comments} description={description} />,
+        <Header comments={comments} content={content} />,
       );
 
       expect(component).toMatchSnapshot();
@@ -61,8 +60,8 @@ describe("Comments<Header>", () => {
           avatarPath: require("assets/images/profile-pic-may.jpg"),
           name: "Benita F",
         },
-        body: "Nao.",
-        dateCreated: new Date("2019-01-01"),
+        content: "Nao.",
+        createdAt: new Date("2019-01-01"),
         id: "21097",
       };
       const comment = {
@@ -70,20 +69,17 @@ describe("Comments<Header>", () => {
           avatarPath: require("assets/images/profile-pic-may.jpg"),
           name: "May F",
         },
-        body:
+        content:
           "Dá certo sim, o meu pai, por exemplo, fugiu quando eu tinha 5 anos e eu não faço ideia da onde ele esteja. Nunca mais voltou, pena que a violência só piorou.",
-        dateCreated: new Date("2019-01-01"),
+        createdAt: new Date("2019-01-01"),
         id: "21097",
-        title: "Meu pai fez o que ela mandou…",
         totalReplies: 1,
         replies: [reply],
       };
 
       const comments = [comment];
 
-      const component = shallow(
-        <Header comments={comments} description={null} />,
-      );
+      const component = shallow(<Header comments={comments} content={null} />);
 
       expect(component).toMatchSnapshot();
     });

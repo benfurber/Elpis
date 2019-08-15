@@ -1,11 +1,15 @@
 import React, { Component } from "react";
-import { StyleSheet, View, ScrollView } from "react-native";
+import { StyleSheet, View } from "react-native";
 
-import { TextField } from "components";
+import { Mutation } from "react-apollo";
+
+import { Query, TextField } from "components";
 import { NavigationType, Post } from "interfaces";
 import { labels } from "labels";
 import { colours, layout } from "styles";
 import { Analytics } from "utils";
+import { COMMENTS, COMMENT_WITH_REPLIES } from "queries";
+import { ADD_COMMENT, ADD_REPLY } from "mutations";
 
 import { CommentsLoop } from "./comments-loop";
 import { Header } from "./header";
@@ -13,22 +17,24 @@ import { Replies } from "./replies";
 
 interface Props {
   comments: Post["comments"];
-  description: Post["description"];
+  content: Post["content"];
   navigation: NavigationType;
   postId: Post["id"];
 }
 
 interface State {
-  textInput: string;
   commentId: null | string;
+  textInput: string;
+  textInputEditable: boolean;
 }
 
 class Comments extends Component<Props, State> {
   constructor(props) {
     super(props);
     this.state = {
-      textInput: "",
       commentId: null,
+      textInputEditable: true,
+      textInput: "",
     };
   }
 
@@ -39,6 +45,12 @@ class Comments extends Component<Props, State> {
     });
   }
 
+  componentDidUpdate(_, prevState) {
+    if (prevState.commentId !== this.state.commentId) {
+      this.setState({ textInput: "" });
+    }
+  }
+
   setDisplay(commentId: string | null) {
     this.setState({
       commentId,
@@ -47,10 +59,7 @@ class Comments extends Component<Props, State> {
 
   header() {
     return (
-      <Header
-        comments={this.props.comments}
-        description={this.props.description}
-      />
+      <Header comments={this.props.comments} content={this.props.content} />
     );
   }
 
@@ -58,8 +67,17 @@ class Comments extends Component<Props, State> {
     this.setState({ textInput: string });
   };
 
-  onSubmit() {
-    console.log(this.state.textInput);
+  onSubmit(query, id) {
+    this.setState({ textInputEditable: false });
+
+    query({
+      variables: {
+        content: this.state.textInput,
+        id,
+      },
+    }).then(() => {
+      this.setState({ textInput: "", textInputEditable: true });
+    });
   }
 
   selectComment() {
@@ -73,64 +91,92 @@ class Comments extends Component<Props, State> {
     })[0];
   }
 
-  renderAllComments() {
+  renderAllComments = data => {
     return (
       <CommentsLoop
-        comments={this.props.comments}
+        comments={data.post.comments}
         header={this.header()}
         noComments={labels.noComments}
         onPress={commentId => this.setDisplay(commentId)}
       />
     );
-  }
+  };
 
   renderAddResponse() {
-    const { commentId } = this.state;
+    const { commentId, textInputEditable } = this.state;
 
     if (commentId !== null) {
       return (
-        <TextField
-          buttonText={labels.reply}
-          inputText={labels.addYourReply}
-          onChangeText={string => this.onChangeText(string)}
-          onSubmit={() => this.onSubmit()}
-          value={this.state.textInput}
-        />
+        <Mutation mutation={ADD_REPLY}>
+          {(createReply, {}) => (
+            <TextField
+              buttonText={labels.reply}
+              editable={textInputEditable}
+              inputText={labels.addYourReply}
+              onChangeText={string => this.onChangeText(string)}
+              onSubmit={() => this.onSubmit(createReply, commentId)}
+              value={this.state.textInput}
+            />
+          )}
+        </Mutation>
       );
     }
 
     return (
-      <TextField
-        buttonText={labels.comment}
-        inputText={labels.addYourComment}
-        onChangeText={string => this.onChangeText(string)}
-        onSubmit={() => this.onSubmit()}
-        value={this.state.textInput}
-      />
+      <Mutation mutation={ADD_COMMENT}>
+        {(createComment, {}) => (
+          <TextField
+            buttonText={labels.comment}
+            editable={textInputEditable}
+            inputText={labels.addYourComment}
+            onChangeText={string => this.onChangeText(string)}
+            onSubmit={() => this.onSubmit(createComment, this.props.postId)}
+            value={this.state.textInput}
+          />
+        )}
+      </Mutation>
     );
   }
 
   renderDisplay() {
     const { commentId } = this.state;
+    const { postId } = this.props;
 
     if (commentId !== null) {
-      return <ScrollView>{this.renderReplies()}</ScrollView>;
+      return (
+        <Query
+          query={COMMENT_WITH_REPLIES}
+          variables={{ id: commentId }}
+          pollInterval={2000}
+          blueMode
+        >
+          {this.renderReplies}
+        </Query>
+      );
     }
 
-    return <ScrollView>{this.renderAllComments()}</ScrollView>;
+    return (
+      <Query
+        query={COMMENTS}
+        variables={{ id: postId }}
+        pollInterval={2000}
+        blueMode
+      >
+        {this.renderAllComments}
+      </Query>
+    );
   }
 
-  renderReplies() {
-    const item = this.selectComment();
+  renderReplies = data => {
     return (
       <Replies
         header={this.header()}
-        item={item}
+        item={data.comment}
         noReplies={labels.noReplies}
         onPress={() => this.setDisplay(null)}
       />
     );
-  }
+  };
 
   render() {
     return (

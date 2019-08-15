@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { StyleSheet, View } from "react-native";
 import { PhotoIdentifier } from "@react-native-community/cameraroll";
+import { Mutation } from "react-apollo";
 
 import {
   ButtonSubmit,
@@ -10,6 +11,7 @@ import {
 } from "components";
 import { NavigationType } from "interfaces";
 import { labels } from "labels";
+import { ADD_USER_PROFILE_PICTURE } from "mutations";
 import { layout } from "styles";
 import { sendImage } from "utils";
 
@@ -79,14 +81,20 @@ class FormAddProfilePicture extends Component<Props, State> {
       setProgress,
       setState,
       setError,
-      userId: "gfht-23433-5436",
     });
   };
 
-  onPress() {
+  onPress(mutation) {
     if (this.imageCheck()) {
       this.setState({ display: "loading" });
-      return this.props.onPress();
+      mutation({
+        variables: {
+          avatarPath: this.state.remoteImagePath,
+        },
+      }).then(() => {
+        this.setState({ display: "active" });
+        return this.props.onPress();
+      });
     }
   }
 
@@ -142,11 +150,15 @@ class FormAddProfilePicture extends Component<Props, State> {
         />
 
         <View style={styles.row}>
-          <ButtonSubmit
-            display={display}
-            label={labels.formButton}
-            onPress={() => this.onPress()}
-          />
+          <Mutation mutation={ADD_USER_PROFILE_PICTURE}>
+            {(linkUserProfilePicture, {}) => (
+              <ButtonSubmit
+                display={display}
+                label={labels.formButton}
+                onPress={() => this.onPress(linkUserProfilePicture)}
+              />
+            )}
+          </Mutation>
         </View>
       </View>
     );

@@ -1,16 +1,10 @@
 import React, { Component } from "react";
-import {
-  Image,
-  PermissionsAndroid,
-  Platform,
-  StyleSheet,
-  View,
-} from "react-native";
+import { PermissionsAndroid, Platform, StyleSheet, View } from "react-native";
 import CameraRoll, {
   PhotoIdentifier,
 } from "@react-native-community/cameraroll";
 
-import { ButtonSubmit } from "components";
+import { Avatar, ButtonSubmit } from "components";
 import { NavigationType } from "interfaces";
 import { labels } from "labels";
 import { colours, elements, layout } from "styles";
@@ -92,16 +86,14 @@ class ProfilePictureField extends Component<Props, State> {
 
   renderAvatar() {
     const { display, image } = this.props;
-    const annonProfilePath = "../assets/images/profile-pic-annon.png";
-
-    const file = image
-      ? { uri: image.node.image.uri }
-      : require(annonProfilePath);
     const errorStyle = display === "error" ? styles.imageContainerError : null;
+
+    let path;
+    if (image) path = image.node.image.uri;
 
     return (
       <View style={[styles.imageContainer, errorStyle]}>
-        <Image style={styles.image} source={file} />
+        <Avatar avatarPath={path} size="feature" />
       </View>
     );
   }

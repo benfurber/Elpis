@@ -60,7 +60,11 @@ describe("FormAddPassword", () => {
         <FormAddPassword navigation={navigation} onPress={onPress} />,
       );
 
-      component.find("ButtonSubmit").simulate("press");
+      component.setState({
+        display: "error",
+        displayMessage: "error",
+        message: "Something went wrong",
+      });
 
       expect(component).toMatchSnapshot();
     });

@@ -1,9 +1,11 @@
 import React, { Component } from "react";
 import { StyleSheet, View } from "react-native";
+import { Mutation } from "react-apollo";
 
 import { BackgroundModal, ButtonSubmit, Title } from "components";
 import { NavigationType } from "interfaces";
 import { labels } from "labels";
+import { COMPLETE_USER_ONBOARDING } from "mutations";
 import { layout, typography } from "styles";
 import { Analytics } from "utils";
 
@@ -11,7 +13,18 @@ interface Props {
   navigation: NavigationType;
 }
 
-class OnboardingThankYouScreen extends Component<Props> {
+interface State {
+  display: "active" | "loading";
+}
+
+class OnboardingThankYouScreen extends Component<Props, State> {
+  constructor(props) {
+    super(props);
+    this.state = {
+      display: "active",
+    };
+  }
+
   componentDidMount() {
     Analytics.trackContent({
       contentType: "Onboarding",
@@ -19,9 +32,16 @@ class OnboardingThankYouScreen extends Component<Props> {
     });
   }
 
-  render() {
-    const { navigation } = this.props;
+  onPress(mutation) {
+    this.setState({ display: "loading" });
 
+    mutation().then(() => {
+      this.setState({ display: "active" });
+      return this.props.navigation.navigate("Feed");
+    });
+  }
+
+  render() {
     return (
       <BackgroundModal>
         <View style={styles.content}>
@@ -29,11 +49,15 @@ class OnboardingThankYouScreen extends Component<Props> {
           <Title style={styles.title} text={labels.thankYouTitle} />
           <Title style={styles.subtitle} text={labels.thankYouText} />
           <View style={styles.row}>
-            <ButtonSubmit
-              display={"active"}
-              label={labels.enter}
-              onPress={() => navigation.navigate("Main")}
-            />
+            <Mutation mutation={COMPLETE_USER_ONBOARDING}>
+              {(completeUserOnboarding, {}) => (
+                <ButtonSubmit
+                  display={this.state.display}
+                  label={labels.enter}
+                  onPress={() => this.onPress(completeUserOnboarding)}
+                />
+              )}
+            </Mutation>
           </View>
         </View>
       </BackgroundModal>

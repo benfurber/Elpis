@@ -7,6 +7,7 @@ import {
 
 import { Icon } from "components";
 import {
+  AuthLoadingScreen,
   FeedScreen,
   FeedbackScreen,
   ImageBrowserScreen,
@@ -84,9 +85,10 @@ const OnboardingSwitch = createStackNavigator(
 );
 
 const RootStack = createSwitchNavigator({
+  AuthLoading: AuthLoadingScreen,
+  Welcome: WelcomeScreen,
   Onboarding: OnboardingSwitch,
   Main: mainTabs,
-  Welcome: WelcomeScreen,
 });
 
 export { RootStack };

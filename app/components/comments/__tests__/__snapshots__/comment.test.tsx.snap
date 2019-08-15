@@ -33,19 +33,10 @@ exports[`Comments<Comment> with replies renders correctly 1`] = `
         number={1}
       />
       <View>
-        <Image
-          source={
+        <Avatar
+          avatarPath={
             Object {
               "testUri": "../../../app/assets/images/profile-pic-may.jpg",
-            }
-          }
-          style={
-            Object {
-              "backgroundColor": "rgba(4, 71, 47, 0.75)",
-              "borderRadius": 25,
-              "height": 50,
-              "overflow": "hidden",
-              "width": 50,
             }
           }
         />
@@ -61,8 +52,19 @@ exports[`Comments<Comment> with replies renders correctly 1`] = `
       }
     >
       <Title
-        text="Meu pai fez o que ela mandou…"
+        text="Dá certo sim, o meu pai, por exemplo, fugiu quando eu tinha 5 anos e..."
       />
+      <Text
+        style={
+          Object {
+            "flex": 1,
+            "flexWrap": "nowrap",
+            "marginBottom": 10,
+          }
+        }
+      >
+        Dá certo sim, o meu pai, por exemplo, fugiu quando eu tinha 5 anos e eu não faço ideia da onde ele esteja. Nunca mais voltou, pena que a violência só piorou.
+      </Text>
       <Text
         style={
           Object {
@@ -73,16 +75,6 @@ exports[`Comments<Comment> with replies renders correctly 1`] = `
         }
       >
         Há 20 horas
-      </Text>
-      <Text
-        style={
-          Object {
-            "flex": 1,
-            "flexWrap": "nowrap",
-          }
-        }
-      >
-        Dá certo sim, o meu pai, por exemplo, fugiu quando eu tinha 5 anos e eu não faço ideia da onde ele esteja. Nunca mais voltou, pena que a violência só piorou.
       </Text>
     </View>
   </View>
@@ -122,19 +114,10 @@ exports[`Comments<Comment> without replies renders correctly 1`] = `
         number={0}
       />
       <View>
-        <Image
-          source={
+        <Avatar
+          avatarPath={
             Object {
               "testUri": "../../../app/assets/images/profile-pic-may.jpg",
-            }
-          }
-          style={
-            Object {
-              "backgroundColor": "rgba(4, 71, 47, 0.75)",
-              "borderRadius": 25,
-              "height": 50,
-              "overflow": "hidden",
-              "width": 50,
             }
           }
         />
@@ -150,8 +133,19 @@ exports[`Comments<Comment> without replies renders correctly 1`] = `
       }
     >
       <Title
-        text="Meu pai fez o que ela mandou…"
+        text="Dá certo sim, o meu pai, por exemplo, fugiu quando eu tinha 5 anos e..."
       />
+      <Text
+        style={
+          Object {
+            "flex": 1,
+            "flexWrap": "nowrap",
+            "marginBottom": 10,
+          }
+        }
+      >
+        Dá certo sim, o meu pai, por exemplo, fugiu quando eu tinha 5 anos e eu não faço ideia da onde ele esteja. Nunca mais voltou, pena que a violência só piorou.
+      </Text>
       <Text
         style={
           Object {
@@ -162,16 +156,6 @@ exports[`Comments<Comment> without replies renders correctly 1`] = `
         }
       >
         Há 9 minutos
-      </Text>
-      <Text
-        style={
-          Object {
-            "flex": 1,
-            "flexWrap": "nowrap",
-          }
-        }
-      >
-        Dá certo sim, o meu pai, por exemplo, fugiu quando eu tinha 5 anos e eu não faço ideia da onde ele esteja. Nunca mais voltou, pena que a violência só piorou.
       </Text>
     </View>
   </View>

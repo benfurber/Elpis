@@ -18,6 +18,7 @@ let textInputRef;
 
 interface Props {
   buttonText: string;
+  editable: boolean;
   inputText: string;
   onChangeText: (string) => void;
   onSubmit: () => void;
@@ -51,6 +52,7 @@ class TextField extends Component<Props> {
             returnKeyType={"send"}
             style={styles.textInput}
             value={this.props.value}
+            editable={this.props.editable}
           />
         </View>
       </KeyboardAvoidingView>

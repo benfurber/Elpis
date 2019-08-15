@@ -19,21 +19,13 @@ exports[`Comments<Reply> renders correctly 1`] = `
       }
     }
   >
-    <Image
-      source={
+    <Avatar
+      avatarPath={
         Object {
           "testUri": "../../../app/assets/images/profile-pic-annon.png",
         }
       }
-      style={
-        Object {
-          "backgroundColor": "rgba(4, 71, 47, 0.75)",
-          "borderRadius": 23,
-          "height": 45,
-          "overflow": "hidden",
-          "width": 45,
-        }
-      }
+      size="small"
     />
     <View
       style={
