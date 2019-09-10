@@ -12,7 +12,6 @@ export { LoginForm } from "./login-form";
 export { Logo } from "./logo";
 export { MessageBox } from "./message-box";
 export { Post } from "./post";
-export { ProfilePictureField } from "./profile-picture-field";
 export { Query } from "./query";
 export { TextField } from "./text-field";
 export { TextInput } from "./text-input";
