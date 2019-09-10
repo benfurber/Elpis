@@ -10,7 +10,6 @@ import {
   AuthLoadingScreen,
   FeedScreen,
   FeedbackScreen,
-  ImageBrowserScreen,
   OnboardingAddPasswordScreen,
   OnboardingThankYouScreen,
   OnboardingWelcomeScreen,
@@ -61,21 +60,11 @@ const mainTabs = createBottomTabNavigator(
   },
 );
 
-const ModalsStack = createStackNavigator(
-  {
-    ImageBrowser: ImageBrowserScreen,
-  },
-  {
-    mode: "modal",
-  },
-);
-
 const OnboardingSwitch = createStackNavigator(
   {
     Welcome: OnboardingWelcomeScreen,
     AddPassword: OnboardingAddPasswordScreen,
     ThankYou: OnboardingThankYouScreen,
-    Modals: ModalsStack,
   },
   {
     ...stackConfig,
