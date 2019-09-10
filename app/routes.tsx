@@ -12,7 +12,6 @@ import {
   FeedbackScreen,
   ImageBrowserScreen,
   OnboardingAddPasswordScreen,
-  OnboardingAddProfilePictureScreen,
   OnboardingThankYouScreen,
   OnboardingWelcomeScreen,
   PostScreen,
@@ -74,7 +73,6 @@ const ModalsStack = createStackNavigator(
 const OnboardingSwitch = createStackNavigator(
   {
     Welcome: OnboardingWelcomeScreen,
-    AddProfilePicture: OnboardingAddProfilePictureScreen,
     AddPassword: OnboardingAddPasswordScreen,
     ThankYou: OnboardingThankYouScreen,
     Modals: ModalsStack,

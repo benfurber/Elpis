@@ -1,7 +1,6 @@
 const labels = {
   addPasswordTitle: "Crie uma senha",
   addPhoto: "Adicionar foto",
-  addProfilePictureTitle: "Adicione uma imagem de perfil",
   addYourComment: "Adicione o seu comentário...",
   addYourReply: "Adicione o seu resposta...",
   askMeLater: "Pergunte-me depois",
