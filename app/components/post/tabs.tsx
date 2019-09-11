@@ -44,13 +44,6 @@ const Tabs = (props: Props) => {
         </TouchableOpacity>
       </View>
       <View style={styles.tabWithoutBackground}>
-        <TouchableOpacity>
-          <Icon
-            name="ellipsis-h"
-            size={iconSize - 5}
-            style={styles.iconRight}
-          />
-        </TouchableOpacity>
       </View>
     </View>
   );
