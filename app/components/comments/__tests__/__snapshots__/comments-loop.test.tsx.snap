@@ -22,7 +22,7 @@ exports[`Comments<CommentsLoop> when there are comments renders correctly 1`] = 
       }
     >
       <Title
-        text="1 Comentários - 1 Tópicos"
+        text="1 Tópicos"
       />
     </View>
     <FlatList
@@ -87,7 +87,7 @@ exports[`Comments<CommentsLoop> when there are no comments renders correctly 1`]
       }
     >
       <Title
-        text="0 Comentários - 0 Tópicos"
+        text="0 Tópicos"
       />
     </View>
     <NoContent
