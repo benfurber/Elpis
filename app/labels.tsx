@@ -1,8 +1,10 @@
 const labels = {
+  addNewTopic: "Adicione um novo tópico na discussão",
   addPasswordTitle: "Crie uma senha",
   addPhoto: "Adicionar foto",
-  addYourComment: "Adicione o seu comentário...",
-  addYourReply: "Adicione o seu resposta...",
+  addPlaceholder: "We love hearing from you, thank you for contributing",
+  addYourComment: "Adicione o seu comentário",
+  addYourReply: "Adicione o seu resposta",
   askMeLater: "Pergunte-me depois",
   backButton: "Voltar aos Comentários",
   cancel: "Cancelar",
@@ -35,6 +37,7 @@ const labels = {
   reply: "Resposta",
   replies: "Respostas",
   select: "Selecionar",
+  submit: "Submit",
   thankYouText:
     "Por favor, lembre-se de dar o máximo de feedback que puder.\r\r" +
     "Nós não poderemos construir algo incrível se você não nos disser o que pensa.",

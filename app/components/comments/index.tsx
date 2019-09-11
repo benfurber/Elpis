@@ -113,9 +113,17 @@ class Comments extends Component<Props, State> {
   };
 
   render() {
+    const { navigation, postId } = this.props;
+    const { commentId } = this.state;
+
     return (
       <View style={styles.container}>
         {this.renderDisplay()}
+        <ButtonAddReply
+          commentId={commentId}
+          navigation={navigation}
+          postId={postId} 
+        />
       </View>
     );
   }
