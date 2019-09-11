@@ -1,7 +1,8 @@
 import React, { Component } from "react";
-import { 
+import {
   ScrollView,
   StyleSheet,
+  Text,
   TextInput,
   TouchableOpacity,
   View
@@ -15,7 +16,7 @@ import { Comment, NavigationType, Post } from "interfaces";
 import { labels } from "labels";
 import { ADD_COMMENT, ADD_REPLY } from "mutations";
 import { layout, typography, colours } from "styles";
-import { Analytics } from "utils";
+import { Analytics, firstSentence } from "utils";
 
 interface Props {
   commentId: null | Comment["id"]
@@ -24,9 +25,10 @@ interface Props {
 }
 
 interface State {
-  title: string;
   textInput: string;
+  textInputExtra: string;
   textInputEditable: boolean;
+  title: string;
 }
 
 class AddReplyScreen extends Component<Props, State> {
@@ -35,9 +37,11 @@ class AddReplyScreen extends Component<Props, State> {
     this.state = {
       textInputEditable: true,
       textInput: "",
+      textInputExtra: "",
       title: "",
     }
   }
+  secondTextInput = null;
 
   componentDidMount() {
     Analytics.trackContent({
@@ -46,12 +50,24 @@ class AddReplyScreen extends Component<Props, State> {
     });
   }
 
+  componentDidUpdate(_props, state) {
+    const textInput = firstSentence(state.textInput);
+
+    if (textInput !== state.textInput) {
+      this.setState({ textInput });
+      return this.secondTextInput.focus()
+    }
+  }
+
   onSubmitEditing(query, id) {
+    const { textInput, textInputExtra } = this.state;
     this.setState({ textInputEditable: false });
+
+    const content = textInput + " " + textInputExtra
 
     query({
       variables: {
-        content: this.state.textInput,
+        content,
         id,
       },
     }).then(() => {
@@ -67,7 +83,7 @@ class AddReplyScreen extends Component<Props, State> {
       autoFocus: true,
       editable: textInputEditable,
       multiline: true,
-      placeholder: labels.addPlaceholder,
+      placeholder: labels.addPlaceholderTitle,
       onChangeText: textInput => this.setState({ textInput }),
       value: this.state.textInput,
       returnKeyLabel: labels.submit,
@@ -75,13 +91,29 @@ class AddReplyScreen extends Component<Props, State> {
 
     if (mutation === ADD_COMMENT) {
       return (createComment, {}) => (
-        <TextInput
-          onSubmitEditing={
-            () => this.onSubmitEditing(createComment, this.props.postId)
-          }
-          style={styles.title}
-          { ...args }
-        />
+        <View style={styles.textInputContainer}>
+          <Text style={styles.label}>{labels.title}</Text>
+          <TextInput
+            onSubmitEditing={
+              () => this.onSubmitEditing(createComment, this.props.postId)
+            }
+            style={styles.title}
+            { ...args }
+          />
+          <Text style={styles.label}>{labels.body}</Text>
+          <TextInput
+            { ...args }
+            autoFocus={false}
+            ref={(input) => { this.secondTextInput = input; }}
+            onSubmitEditing={
+              () => this.onSubmitEditing(createComment, this.props.postId)
+            }
+            onChangeText={textInputExtra => this.setState({ textInputExtra })}
+            value={this.state.textInputExtra}
+            style={styles.text}
+            placeholder={labels.addPlaceholderBody}
+          />
+        </View>
       )
     }
 
@@ -161,15 +193,20 @@ const styles = StyleSheet.create({
     alignItems: "baseline",
     flexDirection: "row",
   },
+  textInputContainer: {
+    width: "100%",
+    flexDirection: "column",
+  },
   title: {
     padding: layout.spacingL,
     fontFamily: "creteround-regular",
     fontSize: typography.fontSizeXL,
-    width: "100%",
+    flexWrap: "wrap"
   },
   text: {
-    padding: layout.spacingL,
+    fontFamily: "creteround-regular",
     fontSize: typography.fontSizeL,
+    padding: layout.spacingL,
     width: "100%",
   }
 });
