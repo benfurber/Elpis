@@ -219,7 +219,7 @@ exports[`AddReplyScreen renders correctly when for adding a reply 1`] = `
           "paddingHorizontal": 10,
         }
       }
-      text="Adicione o seu resposta:"
+      text="Adicione a sua resposta:"
     />
   </View>
   <View
