@@ -73,7 +73,7 @@ class OnboardingFeaturesScreen extends Component<Props, State> {
           <View style={styles.row}>
             <ButtonSubmit
               display={"active"}
-              label={labels.welcomeButton}
+              label={labels.next}
               onPress={() => navigation.navigate("AddPassword")}
             />
           </View>

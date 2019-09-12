@@ -27,6 +27,7 @@ class OnboardingWelcomeScreen extends Component<Props, State> {
 
   render() {
     const { navigation } = this.props;
+    const { welcome } = labels.onboarding;
 
     return (
       <BackgroundModal>
@@ -35,15 +36,15 @@ class OnboardingWelcomeScreen extends Component<Props, State> {
           <Title text={"1/4"} small />
           <Title
             style={styles.title}
-            text={`${labels.welcomeTitle} [user.firstName]`}
+            text={`${welcome.title} [user.firstName]`}
           />
-          <Text style={styles.text}>{labels.welcomeText}</Text>
+          <Text style={styles.text}>{welcome.text}</Text>
           <Title style={styles.subtitle} text="May" />
 
           <View style={styles.row}>
             <ButtonSubmit
               display={"active"}
-              label={labels.welcomeButton}
+              label={labels.next}
               onPress={() => navigation.navigate("Features")}
             />
           </View>

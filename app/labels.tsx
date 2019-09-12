@@ -1,6 +1,5 @@
 const labels = {
   addNewTopic: "Adicione um novo tópico na discussão",
-  addPasswordTitle: "Crie uma senha",
   addPhoto: "Adicionar foto",
   addPlaceholderBody: "(Tudo o que você quiser dizer.)",
   addPlaceholderTitle: "Nós adoraríamos ouvir mais de você.",
@@ -21,6 +20,10 @@ const labels = {
   noReplies: "Nenhuma resposta ainda - faça a primeira!",
   ok: "OK",
   onboarding: {
+    welcome: {
+      title: "Bem vinda à Elpis, ",
+      text: "Muitas palavras aqui. ",    
+    },
     features: {
       title: "What to expect",
       theFeedTitle: "The Feed",
@@ -32,7 +35,17 @@ const labels = {
       giveFeedbackTitle: "Give your feedback",
       giveFeedbackBody: "Unless you tell us what you think, we can’t build a great space for women to debate and feel safe. ...Bit more here.",
     },
+    password: {
+      title: "Crie uma senha",
+    },
+    thankYou: {
+      text: 
+        "Por favor, lembre-se de dar o máximo de feedback que puder.\r\r" +
+        "Nós não poderemos construir algo incrível se você não nos disser o que pensa.",
+      title: "Por favor, complete o seu perfil.",
+    },
   },
+  next: "Próximo",
   noImageSelected: "Nenhuma imagem selecionada. Escolha uma e tente novamente.",
   password: "Senha",
   passwordSet: "Defina uma senha",
@@ -53,16 +66,9 @@ const labels = {
   replies: "Respostas",
   select: "Selecionar",
   submit: "Submit",
-  thankYouText:
-    "Por favor, lembre-se de dar o máximo de feedback que puder.\r\r" +
-    "Nós não poderemos construir algo incrível se você não nos disser o que pensa.",
-  thankYouTitle: "Por favor, complete o seu perfil.",
   title: "Title",
   topics: "Tópicos",
   uploadingImage: "Carregando imagem",
-  welcomeButton: "Próximo",
-  welcomeTitle: "Bem vinda à Elpis, ",
-  welcomeText: "Muitas palavras aqui. ",
 };
 
 export { labels };
