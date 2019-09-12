@@ -70,7 +70,7 @@ class OnboardingFeaturesScreen extends Component<Props, State> {
           </View>
           <Text style={styles.text}>{features.giveFeedbackBody}</Text>
 
-          <View style={styles.row}>
+          <View style={[styles.row, styles.rowButton]}>
             <ButtonSubmit
               display={"active"}
               label={labels.next}
@@ -99,6 +99,10 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     marginTop: layout.spacing,
     marginBottom: layout.spacingL,
+  },
+  rowButton: {
+    alignItems: "baseline",
+    flexDirection: "row-reverse",
   },
   subtitle: {
     fontStyle: "italic",
