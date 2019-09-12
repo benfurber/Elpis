@@ -2,9 +2,9 @@ import React, { Component } from "react";
 import { StyleSheet, Text, View } from "react-native";
 import { TouchableOpacity } from "react-native-gesture-handler";
 
-import { Avatar, Badge, Title } from "components";
+import { Avatar, Badge, Icon, Title } from "components";
 import { Comment as CommentInterface } from "interfaces";
-import { elements, layout } from "styles";
+import { colours, elements, layout } from "styles";
 import { dropFirstSentence, firstSentence, formatDate } from "utils";
 
 interface Props {
@@ -38,6 +38,12 @@ class Comment extends Component<Props> {
             {this.renderBody()}
             <Text style={styles.commentDate}>{formatDate(item.createdAt)}</Text>
           </View>
+          <View style={styles.iconContainer}>
+            <Icon
+              colour={colours.navyBlueDarkTransparentHigh}
+              name="angle-double-right"
+            />
+          </View>
         </View>
       </TouchableOpacity>
     );
@@ -62,6 +68,12 @@ const styles = StyleSheet.create({
   commentDate: {
     marginBottom: layout.spacing,
     ...elements.textDate,
+  },
+  iconContainer: {
+    flexDirection: "row",
+    alignItems: "center",
+    marginBottom: layout.spacing,
+    marginRight: layout.spacingXS,
   },
   text: {
     flex: 1,

@@ -77,6 +77,21 @@ exports[`Comments<Comment> with replies renders correctly 1`] = `
         Há 20 horas
       </Text>
     </View>
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "flexDirection": "row",
+          "marginBottom": 10,
+          "marginRight": 3.3333333333333335,
+        }
+      }
+    >
+      <customIcon
+        colour="rgba(45, 82, 113, 0.60)"
+        name="angle-double-right"
+      />
+    </View>
   </View>
 </TouchableOpacity>
 `;
@@ -157,6 +172,21 @@ exports[`Comments<Comment> without replies renders correctly 1`] = `
       >
         Há 9 minutos
       </Text>
+    </View>
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "flexDirection": "row",
+          "marginBottom": 10,
+          "marginRight": 3.3333333333333335,
+        }
+      }
+    >
+      <customIcon
+        colour="rgba(45, 82, 113, 0.60)"
+        name="angle-double-right"
+      />
     </View>
   </View>
 </TouchableOpacity>

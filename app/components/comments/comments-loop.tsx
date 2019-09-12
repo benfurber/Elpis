@@ -27,9 +27,7 @@ class CommentsLoop extends Component<Props> {
   title() {
     const { comments } = this.props;
 
-    const titleText = `${calculateTotalComments(comments)} ${
-      labels.comments
-    } - ${comments.length} ${labels.topics}`;
+    const titleText = `${comments.length} ${labels.topics}`;
 
     return (
       <View style={styles.commentsHeadingContainer}>

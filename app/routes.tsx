@@ -7,6 +7,7 @@ import {
 
 import { Icon } from "components";
 import {
+  AddReplyScreen,
   AuthLoadingScreen,
   FeedScreen,
   FeedbackScreen,
@@ -30,10 +31,21 @@ const stackConfig = {
   headerMode: headerMode["None"],
 };
 
+const AddContentScreen = createStackNavigator(
+  {
+    AddReply: AddReplyScreen,
+  },
+  {
+    mode: "modal",
+    headerMode: "none",
+  },
+);
+
 const FeedStack = createStackNavigator(
   {
     Feed: FeedScreen,
     Post: PostScreen,
+    AddContent: AddContentScreen,
   },
   {
     initialRouteName: "Feed",

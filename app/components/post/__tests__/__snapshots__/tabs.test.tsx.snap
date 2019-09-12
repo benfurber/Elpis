@@ -92,21 +92,7 @@ exports[`Post<Tabs> renders correctly when displaying the body 1`] = `
         "paddingVertical": 8,
       }
     }
-  >
-    <TouchableOpacity
-      activeOpacity={0.2}
-    >
-      <customIcon
-        name="ellipsis-h"
-        size={25}
-        style={
-          Object {
-            "alignSelf": "flex-end",
-          }
-        }
-      />
-    </TouchableOpacity>
-  </View>
+  />
 </View>
 `;
 
@@ -202,21 +188,7 @@ exports[`Post<Tabs> renders correctly when displaying the comments 1`] = `
         "paddingVertical": 8,
       }
     }
-  >
-    <TouchableOpacity
-      activeOpacity={0.2}
-    >
-      <customIcon
-        name="ellipsis-h"
-        size={25}
-        style={
-          Object {
-            "alignSelf": "flex-end",
-          }
-        }
-      />
-    </TouchableOpacity>
-  </View>
+  />
 </View>
 `;
 
@@ -312,20 +284,6 @@ exports[`Post<Tabs> renders correctly when there are comments 1`] = `
         "paddingVertical": 8,
       }
     }
-  >
-    <TouchableOpacity
-      activeOpacity={0.2}
-    >
-      <customIcon
-        name="ellipsis-h"
-        size={25}
-        style={
-          Object {
-            "alignSelf": "flex-end",
-          }
-        }
-      />
-    </TouchableOpacity>
-  </View>
+  />
 </View>
 `;

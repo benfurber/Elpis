@@ -1,15 +1,12 @@
 import React, { Component } from "react";
-import { StyleSheet, View } from "react-native";
+import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
 
-import { Mutation } from "react-apollo";
-
-import { Query, TextField } from "components";
+import { ButtonAddReply, Query } from "components";
 import { NavigationType, Post } from "interfaces";
 import { labels } from "labels";
-import { colours, layout } from "styles";
+import { colours, layout, typography } from "styles";
 import { Analytics } from "utils";
 import { COMMENTS, COMMENT_WITH_REPLIES } from "queries";
-import { ADD_COMMENT, ADD_REPLY } from "mutations";
 
 import { CommentsLoop } from "./comments-loop";
 import { Header } from "./header";
@@ -24,8 +21,6 @@ interface Props {
 
 interface State {
   commentId: null | string;
-  textInput: string;
-  textInputEditable: boolean;
 }
 
 class Comments extends Component<Props, State> {
@@ -33,8 +28,6 @@ class Comments extends Component<Props, State> {
     super(props);
     this.state = {
       commentId: null,
-      textInputEditable: true,
-      textInput: "",
     };
   }
 
@@ -43,12 +36,6 @@ class Comments extends Component<Props, State> {
       contentType: "Comments",
       contentId: this.props.postId,
     });
-  }
-
-  componentDidUpdate(_, prevState) {
-    if (prevState.commentId !== this.state.commentId) {
-      this.setState({ textInput: "" });
-    }
   }
 
   setDisplay(commentId: string | null) {
@@ -61,23 +48,6 @@ class Comments extends Component<Props, State> {
     return (
       <Header comments={this.props.comments} content={this.props.content} />
     );
-  }
-
-  onChangeText = string => {
-    this.setState({ textInput: string });
-  };
-
-  onSubmit(query, id) {
-    this.setState({ textInputEditable: false });
-
-    query({
-      variables: {
-        content: this.state.textInput,
-        id,
-      },
-    }).then(() => {
-      this.setState({ textInput: "", textInputEditable: true });
-    });
   }
 
   selectComment() {
@@ -101,42 +71,6 @@ class Comments extends Component<Props, State> {
       />
     );
   };
-
-  renderAddResponse() {
-    const { commentId, textInputEditable } = this.state;
-
-    if (commentId !== null) {
-      return (
-        <Mutation mutation={ADD_REPLY}>
-          {(createReply, {}) => (
-            <TextField
-              buttonText={labels.reply}
-              editable={textInputEditable}
-              inputText={labels.addYourReply}
-              onChangeText={string => this.onChangeText(string)}
-              onSubmit={() => this.onSubmit(createReply, commentId)}
-              value={this.state.textInput}
-            />
-          )}
-        </Mutation>
-      );
-    }
-
-    return (
-      <Mutation mutation={ADD_COMMENT}>
-        {(createComment, {}) => (
-          <TextField
-            buttonText={labels.comment}
-            editable={textInputEditable}
-            inputText={labels.addYourComment}
-            onChangeText={string => this.onChangeText(string)}
-            onSubmit={() => this.onSubmit(createComment, this.props.postId)}
-            value={this.state.textInput}
-          />
-        )}
-      </Mutation>
-    );
-  }
 
   renderDisplay() {
     const { commentId } = this.state;
@@ -179,10 +113,17 @@ class Comments extends Component<Props, State> {
   };
 
   render() {
+    const { navigation, postId } = this.props;
+    const { commentId } = this.state;
+
     return (
       <View style={styles.container}>
         {this.renderDisplay()}
-        {this.renderAddResponse()}
+        <ButtonAddReply
+          commentId={commentId}
+          navigation={navigation}
+          postId={postId} 
+        />
       </View>
     );
   }
@@ -194,19 +135,6 @@ const styles = StyleSheet.create({
     borderTopRightRadius: layout.borderRadius,
     flex: 1,
     width: "100%",
-  },
-  commentsHeadingContainer: {
-    marginVertical: layout.spacingL,
-    marginHorizontal: layout.spacing,
-  },
-  scrollView: {
-    paddingBottom: layout.spacingXL,
-  },
-  titleContainer: {
-    backgroundColor: colours.whiteTransparent,
-    borderRadius: layout.borderRadius,
-    margin: layout.spacing,
-    padding: layout.spacing,
   },
   noComments: {
     paddingHorizontal: layout.spacing,
