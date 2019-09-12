@@ -41,7 +41,7 @@ class AddReplyScreen extends Component<Props, State> {
       title: "",
     }
   }
-  secondTextInput = null;
+  secondTextInput = TextInput as any;
 
   componentDidMount() {
     Analytics.trackContent({
@@ -55,7 +55,9 @@ class AddReplyScreen extends Component<Props, State> {
 
     if (textInput !== state.textInput) {
       this.setState({ textInput });
-      return this.secondTextInput.focus()
+      if (this.secondTextInput) {
+        return this.secondTextInput.focus()
+      }
     }
   }
 
@@ -104,7 +106,7 @@ class AddReplyScreen extends Component<Props, State> {
           <TextInput
             { ...args }
             autoFocus={false}
-            ref={(input) => { this.secondTextInput = input; }}
+            ref={input => this.secondTextInput = input }
             onSubmitEditing={
               () => this.onSubmitEditing(createComment, this.props.postId)
             }
