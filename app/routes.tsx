@@ -12,6 +12,7 @@ import {
   FeedScreen,
   FeedbackScreen,
   OnboardingAddPasswordScreen,
+  OnboardingFeaturesScreen,
   OnboardingThankYouScreen,
   OnboardingWelcomeScreen,
   PostScreen,
@@ -75,6 +76,7 @@ const mainTabs = createBottomTabNavigator(
 const OnboardingSwitch = createStackNavigator(
   {
     Welcome: OnboardingWelcomeScreen,
+    Features: OnboardingFeaturesScreen,
     AddPassword: OnboardingAddPasswordScreen,
     ThankYou: OnboardingThankYouScreen,
   },
