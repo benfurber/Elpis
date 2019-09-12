@@ -32,7 +32,7 @@ class OnboardingWelcomeScreen extends Component<Props, State> {
       <BackgroundModal>
         <View style={styles.content}>
           <Image source={require(mayImagePath)} style={styles.image} />
-          <Title text={"1/3"} small />
+          <Title text={"1/4"} small />
           <Title
             style={styles.title}
             text={`${labels.welcomeTitle} [user.firstName]`}

@@ -45,7 +45,7 @@ class OnboardingThankYouScreen extends Component<Props, State> {
     return (
       <BackgroundModal>
         <View style={styles.content}>
-          <Title text="3/3" small />
+          <Title text="4/4" small />
           <Title style={styles.title} text={labels.thankYouTitle} />
           <Title style={styles.subtitle} text={labels.thankYouText} />
           <View style={styles.row}>
