@@ -11,6 +11,7 @@ import {
   AuthLoadingScreen,
   FeedScreen,
   FeedbackScreen,
+  NotificationsScreen,
   OnboardingAddPasswordScreen,
   OnboardingFeaturesScreen,
   OnboardingThankYouScreen,
@@ -22,6 +23,7 @@ import {
 const routeNameIcon = {
   Feed: "newspaper",
   Feedback: "file-alt",
+  Notifications: "bell",
 };
 
 enum headerMode {
@@ -57,6 +59,7 @@ const FeedStack = createStackNavigator(
 const mainTabs = createBottomTabNavigator(
   {
     Feed: FeedStack,
+    Notifications: NotificationsScreen,
     Feedback: FeedbackScreen,
   },
   {
