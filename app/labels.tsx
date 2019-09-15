@@ -44,15 +44,6 @@ const labels = {
         "Nós não poderemos construir algo incrível se você não nos disser o que pensa.",
       title: "Por favor, complete o seu perfil.",
     },
-    password: {
-      title: "Crie uma senha",
-    },
-    thankYou: {
-      text: 
-        "Por favor, lembre-se de dar o máximo de feedback que puder.\r\r" +
-        "Nós não poderemos construir algo incrível se você não nos disser o que pensa.",
-      title: "Por favor, complete o seu perfil.",
-    },
   },
   next: "Próximo",
   noImageSelected: "Nenhuma imagem selecionada. Escolha uma e tente novamente.",
