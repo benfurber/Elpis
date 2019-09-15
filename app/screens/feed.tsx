@@ -48,9 +48,9 @@ const styles = StyleSheet.create({
     flex: 1,
     flexDirection: "column",
   },
-  feedBody: { flex: 13 },
+  feedBody: { flex: 1 },
   logo: {
-    flex: 1,
+    minHeight: 50,
     alignItems: "stretch",
   },
 });

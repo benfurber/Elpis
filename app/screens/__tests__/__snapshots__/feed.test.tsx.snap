@@ -6,7 +6,7 @@ exports[`FeedScreen renders correctly 1`] = `
     style={
       Object {
         "alignItems": "stretch",
-        "flex": 1,
+        "minHeight": 50,
       }
     }
   >
@@ -15,7 +15,7 @@ exports[`FeedScreen renders correctly 1`] = `
   <View
     style={
       Object {
-        "flex": 13,
+        "flex": 1,
       }
     }
   >
