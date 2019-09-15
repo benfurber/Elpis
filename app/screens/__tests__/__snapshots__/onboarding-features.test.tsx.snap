@@ -1,0 +1,203 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`OnboardingFeaturesScreen renders correctly 1`] = `
+<BackgroundModal>
+  <View
+    style={
+      Object {
+        "flex": 1,
+        "padding": 40,
+      }
+    }
+  >
+    <Title
+      small={true}
+      text="2/4"
+    />
+    <Title
+      style={
+        Object {
+          "fontSize": 30,
+          "paddingBottom": 20,
+        }
+      }
+      text="O que esperar"
+    />
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "flexDirection": "row",
+          "marginBottom": 20,
+          "marginTop": 10,
+        }
+      }
+    >
+      <customIcon
+        colour="rgb(45, 82, 113)"
+        name="newspaper"
+        size={30}
+      />
+      <Title
+        style={
+          Object {
+            "fontStyle": "italic",
+            "fontWeight": "normal",
+            "marginBottom": 0,
+            "paddingLeft": 10,
+          }
+        }
+        text="O Feed"
+      />
+    </View>
+    <Text
+      style={
+        Object {
+          "paddingBottom": 20,
+        }
+      }
+    >
+      Neste momento, temos apenas um feed muito simples com posts feitos por mim falando sobre assuntos relacionados ao feminismo.
+    </Text>
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "flexDirection": "row",
+          "marginBottom": 20,
+          "marginTop": 10,
+        }
+      }
+    >
+      <customIcon
+        colour="rgb(45, 82, 113)"
+        name="comments"
+        size={30}
+      />
+      <Title
+        style={
+          Object {
+            "fontStyle": "italic",
+            "fontWeight": "normal",
+            "marginBottom": 0,
+            "paddingLeft": 10,
+          }
+        }
+        text="Entre no debate"
+      />
+    </View>
+    <Text
+      style={
+        Object {
+          "paddingBottom": 20,
+        }
+      }
+    >
+      Você pode entrar no debate e participar da discussão de cada post no feed de duas maneiras diferentes.
+    </Text>
+    <Text
+      style={
+        Object {
+          "paddingBottom": 20,
+        }
+      }
+    >
+      <Text
+        style={
+          Object {
+            "fontWeight": "bold",
+          }
+        }
+      >
+        Tópicos
+      </Text>
+       - 
+       
+      Você pode adicionar um novo tópico com um 'título' e uma 'mensagem'. Como tópicos em um fórum. Assim, você pode iniciar um novo debate onde qualquer usuária pode comentar.
+    </Text>
+    <Text
+      style={
+        Object {
+          "paddingBottom": 20,
+        }
+      }
+    >
+      <Text
+        style={
+          Object {
+            "fontWeight": "bold",
+          }
+        }
+      >
+        Respostas
+      </Text>
+       - 
+       
+      Cada tópico pode ter várias respostas. Assim como comentários em redes sociais. Assim, você pode adicionar respostas dentro de um tópico específico.
+    </Text>
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "flexDirection": "row",
+          "marginBottom": 20,
+          "marginTop": 10,
+        }
+      }
+    >
+      <customIcon
+        colour="rgb(45, 82, 113)"
+        name="file-alt"
+        size={30}
+        style={
+          Object {
+            "paddingLeft": 10,
+          }
+        }
+      />
+      <Title
+        style={
+          Object {
+            "fontStyle": "italic",
+            "fontWeight": "normal",
+            "marginBottom": 0,
+            "paddingLeft": 10,
+          }
+        }
+        text="Dê o seu feedback"
+      />
+    </View>
+    <Text
+      style={
+        Object {
+          "paddingBottom": 20,
+        }
+      }
+    >
+      A menos que você nos diga o que pensa, não poderemos criar um ótimo espaço para mulheres debaterem e se sentirem seguras, para que assim possamos melhorar a qualidade das nossas discussões.
+    </Text>
+    <View
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "flexDirection": "row",
+            "marginBottom": 20,
+            "marginTop": 10,
+          },
+          Object {
+            "alignItems": "baseline",
+            "flexDirection": "row-reverse",
+          },
+        ]
+      }
+    >
+      <ButtonSubmit
+        display="active"
+        label="Próximo"
+        onPress={[Function]}
+      />
+    </View>
+  </View>
+</BackgroundModal>
+`;

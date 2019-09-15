@@ -3,6 +3,7 @@ export { AuthLoadingScreen } from "./auth-loading";
 export { FeedScreen } from "./feed";
 export { FeedbackScreen } from "./feedback";
 export { OnboardingAddPasswordScreen } from "./onboarding-add-password";
+export { OnboardingFeaturesScreen } from "./onboarding-features";
 export { OnboardingThankYouScreen } from "./onboarding-thank-you";
 export { OnboardingWelcomeScreen } from "./onboarding-welcome";
 export { PostScreen } from "./post";

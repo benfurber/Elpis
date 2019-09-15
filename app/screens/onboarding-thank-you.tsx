@@ -42,12 +42,14 @@ class OnboardingThankYouScreen extends Component<Props, State> {
   }
 
   render() {
+    const { thankYou } = labels.onboarding;
+
     return (
       <BackgroundModal>
         <View style={styles.content}>
-          <Title text="3/3" small />
-          <Title style={styles.title} text={labels.thankYouTitle} />
-          <Title style={styles.subtitle} text={labels.thankYouText} />
+          <Title text="4/4" small />
+          <Title style={styles.title} text={thankYou.title} />
+          <Title style={styles.subtitle} text={thankYou.text} />
           <View style={styles.row}>
             <Mutation mutation={COMPLETE_USER_ONBOARDING}>
               {(completeUserOnboarding, {}) => (
