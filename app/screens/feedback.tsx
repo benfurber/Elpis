@@ -10,6 +10,9 @@ interface Props {
   navigation: NavigationType;
 }
 
+const uri =
+  "https://docs.google.com/forms/d/e/1FAIpQLSezsowKLfZuZ3gZdmzo2azQ1Mx7gyrY8X3CLzfHrQhCVipXUQ/viewform?usp=sf_link";
+
 class FeedbackScreen extends Component<Props> {
   componentDidMount() {
     Analytics.track("Feedback");
@@ -18,12 +21,7 @@ class FeedbackScreen extends Component<Props> {
   render() {
     return (
       <BackgroundContainer>
-        <WebView
-          source={{
-            uri:
-              "https://docs.google.com/forms/d/e/1FAIpQLSezsowKLfZuZ3gZdmzo2azQ1Mx7gyrY8X3CLzfHrQhCVipXUQ/viewform?usp=sf_link",
-          }}
-        />
+        <WebView javaScriptEnabled={true} source={{uri}} />
       </BackgroundContainer>
     );
   }
