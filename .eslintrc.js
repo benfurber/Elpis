@@ -1,16 +1,17 @@
 module.exports = {
   extends: [
+    "@react-native-community",
     "plugin:@typescript-eslint/recommended",
     "plugin:jest/recommended",
     "plugin:prettier/recommended",
     "plugin:react/recommended",
-    "prettier/@typescript-eslint",
+    "prettier/@typescript-eslint"
   ],
   parser: "@typescript-eslint/parser",
   parserOptions: {
     ecmaVersion: 2017,
     sourceType: "module",
-    typescript: true,
+    typescript: true
   },
   plugins: ["jest", "prettier", "react", "react-native", "@typescript-eslint"],
   rules: {
@@ -21,17 +22,18 @@ module.exports = {
     "import/prefer-default-export": false,
     indent: "off",
     "prettier/prettier": "error",
-    "react/jsx-filename-extension": [0],
+    "react/jsx-filename-extension": [0]
   },
   settings: {
     "import/resolver": {
       node: {
-        extensions: [".ts", ".tsx"],
+        extensions: [".ts", ".tsx"]
       },
-      "babel-module": {},
+      "babel-module": {}
     },
     react: {
-      version: "detect",
-    },
+      version: "detect"
+    }
   },
+  root: true
 };
