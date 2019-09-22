@@ -19,7 +19,7 @@ module.exports = {
     "@typescript-eslint/explicit-function-return-type": "off",
     "@typescript-eslint/no-use-before-define": "off",
     "@typescript-eslint/indent": ["error", 2],
-    "import/prefer-default-export": false,
+    "import/prefer-default-export": 0,
     indent: "off",
     "prettier/prettier": "error",
     "react/jsx-filename-extension": [0]
