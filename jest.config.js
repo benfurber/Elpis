@@ -1,8 +1,8 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
 
-const {pathsToModuleNameMapper} = require("ts-jest/utils");
-const {compilerOptions} = require("./tsconfig");
-const {defaults: tsjPreset} = require("ts-jest/presets");
+const { pathsToModuleNameMapper } = require("ts-jest/utils");
+const { compilerOptions } = require("./tsconfig");
+const { defaults: tsjPreset } = require("ts-jest/presets");
 
 module.exports = {
   cacheDirectory: ".jest/cache",
