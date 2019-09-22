@@ -19,7 +19,8 @@ export interface Feed {
 }
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
-export type NavigationType = NavigationScreenProp<any, any>;
+// Bug: pop missing from type
+export type NavigationType = NavigationScreenProp<{}> & {pop: any};
 
 export interface Post {
   author: Author;
