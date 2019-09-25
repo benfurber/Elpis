@@ -3,12 +3,18 @@ import { StyleSheet, Text, View } from "react-native";
 
 import { Avatar, Icon, Title } from "components";
 import { labels } from "labels";
+import { Notification as NotificationType } from "interfaces";
 import { colours, layout } from "styles";
+import { formatDate } from "utils";
 
-class Notification extends Component {
+interface Props {
+  item: NotificationType;
+}
+
+class Notification extends Component<Props> {
   render() {
-    const notificationTitle =
-      "May left a response to your comment on POST TITLE";
+    const { author, content, date } = this.props.item;
+    const notificationTitle = `${author.name} left a response to your comment on POST TITLE`;
 
     return (
       <View style={styles.item}>
@@ -25,7 +31,7 @@ class Notification extends Component {
               style={styles.notificationTitle}
               small
             />
-            <Text style={styles.date}>15 minutes ago</Text>
+            <Text style={styles.date}>{formatDate(date)}</Text>
           </View>
         </View>
         <View style={[styles.row, styles.content]}>
@@ -33,11 +39,7 @@ class Notification extends Component {
             <Icon name="quote-left" size={20} style={styles.quote} />
             <Icon name="quote-right" size={20} style={styles.quote} />
           </View>
-          <Text style={styles.text}>
-            Lucas ipsum dolor sit amet organa c-3p0 hutt anakin ponda biggs yoda
-            moff jinn solo. Mara fisto yoda ben jade. Mace ben wedge jinn leia
-            luke. Moff solo obi-wan antilles grievous lando mandalore.
-          </Text>
+          <Text style={styles.text}>{content}</Text>
         </View>
       </View>
     );

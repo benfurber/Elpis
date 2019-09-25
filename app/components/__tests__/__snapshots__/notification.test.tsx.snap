@@ -82,7 +82,7 @@ exports[`Logo renders correctly 1`] = `
           }
         }
       >
-        15 minutes ago
+        Há 16 dias
       </Text>
     </View>
   </View>
