@@ -22,24 +22,29 @@ const labels = {
   onboarding: {
     welcome: {
       title: "Bem vinda à Elpis, ",
-      text: "Muitas palavras aqui. ",    
+      text: "Muitas palavras aqui. ",
     },
     features: {
       title: "O que esperar",
       theFeedTitle: "O Feed",
-      theFeedBody: "Neste momento, temos apenas um feed muito simples com posts feitos por mim falando sobre assuntos relacionados ao feminismo.",
+      theFeedBody:
+        "Neste momento, temos apenas um feed muito simples com posts feitos por mim falando sobre assuntos relacionados ao feminismo.",
       joinDiscussionTitle: "Entre no debate",
-      joinDiscussionBody: "Você pode entrar no debate e participar da discussão de cada post no feed de duas maneiras diferentes.",
-      topicsBody: "Você pode adicionar um novo tópico com um 'título' e uma 'mensagem'. Como tópicos em um fórum. Assim, você pode iniciar um novo debate onde qualquer usuária pode comentar.",
-      repliesBody: "Cada tópico pode ter várias respostas. Assim como comentários em redes sociais. Assim, você pode adicionar respostas dentro de um tópico específico.",
+      joinDiscussionBody:
+        "Você pode entrar no debate e participar da discussão de cada post no feed de duas maneiras diferentes.",
+      topicsBody:
+        "Você pode adicionar um novo tópico com um 'título' e uma 'mensagem'. Como tópicos em um fórum. Assim, você pode iniciar um novo debate onde qualquer usuária pode comentar.",
+      repliesBody:
+        "Cada tópico pode ter várias respostas. Assim como comentários em redes sociais. Assim, você pode adicionar respostas dentro de um tópico específico.",
       giveFeedbackTitle: "Dê o seu feedback",
-      giveFeedbackBody: "A menos que você nos diga o que pensa, não poderemos criar um ótimo espaço para mulheres debaterem e se sentirem seguras, para que assim possamos melhorar a qualidade das nossas discussões.",
+      giveFeedbackBody:
+        "A menos que você nos diga o que pensa, não poderemos criar um ótimo espaço para mulheres debaterem e se sentirem seguras, para que assim possamos melhorar a qualidade das nossas discussões.",
     },
     password: {
       title: "Crie uma senha",
     },
     thankYou: {
-      text: 
+      text:
         "Por favor, lembre-se de dar o máximo de feedback que puder.\r\r" +
         "Nós não poderemos construir algo incrível se você não nos disser o que pensa.",
       title: "Por favor, complete o seu perfil.",
