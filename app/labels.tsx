@@ -51,6 +51,10 @@ const labels = {
     },
   },
   next: "Próximo",
+  notifications: {
+    new: "New",
+    title: "Notifications",
+  },
   noImageSelected: "Nenhuma imagem selecionada. Escolha uma e tente novamente.",
   password: "Senha",
   passwordSet: "Defina uma senha",
