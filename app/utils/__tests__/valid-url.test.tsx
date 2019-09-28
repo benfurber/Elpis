@@ -16,4 +16,10 @@ describe("validURL", () => {
 
     expect(response).toEqual(false);
   });
+
+  it("returns false when not given a string", () => {
+    const response = validURL(undefined);
+
+    expect(response).toEqual(false);
+  });
 });
