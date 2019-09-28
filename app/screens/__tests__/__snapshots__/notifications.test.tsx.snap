@@ -43,11 +43,12 @@ exports[`NotificationsScreen renders correctly 1`] = `
       Object {
         "author": Object {
           "avatarPath": "",
-          "name": "May",
+          "name": "E2M",
         },
-        "content": "Lucas ipsum dolor sit amet organa c-3p0 hutt anakin ponda biggs yoda moff jinn solo. Mara fisto yoda ben jade. Mace ben wedge jinn leia luke. Moff solo obi-wan antilles grievous lando mandalore.",
+        "content": "Mara fisto yoda ben jade. Mace ben wedge jinn leia luke. Moff solo obi-wan antilles grievous lando mandalore.",
         "date": 2019-09-23T00:00:00.000Z,
-        "type": "comment",
+        "imagePath": "",
+        "type": "post",
       }
     }
   />

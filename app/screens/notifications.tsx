@@ -7,7 +7,7 @@ import { labels } from "labels";
 import { Analytics } from "utils";
 import { colours, layout, typography } from "styles";
 
-const notification = {
+const commentNotification = {
   author: {
     name: "May",
     avatarPath: "",
@@ -16,6 +16,18 @@ const notification = {
     "Lucas ipsum dolor sit amet organa c-3p0 hutt anakin ponda biggs yoda moff jinn solo. Mara fisto yoda ben jade. Mace ben wedge jinn leia luke. Moff solo obi-wan antilles grievous lando mandalore.",
   date: new Date("2019-09-23"),
   type: "comment",
+};
+
+const postNotification = {
+  author: {
+    name: "E2M",
+    avatarPath: "",
+  },
+  content:
+    "Mara fisto yoda ben jade. Mace ben wedge jinn leia luke. Moff solo obi-wan antilles grievous lando mandalore.",
+  imagePath: "",
+  date: new Date("2019-09-23"),
+  type: "post",
 };
 
 interface Props {
@@ -34,8 +46,8 @@ class NotificationsScreen extends Component<Props> {
         <View style={styles.heading}>
           <Title text={labels.notifications.new} />
         </View>
-        <Notification item={notification} />
-        <Notification item={notification} />
+        <Notification item={commentNotification} />
+        <Notification item={postNotification} />
       </BackgroundContainer>
     );
   }
