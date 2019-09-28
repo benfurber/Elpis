@@ -1,44 +1,85 @@
 import React, { Component } from "react";
 import { StyleSheet, Text, View } from "react-native";
+import FlexImage from "react-native-flex-image";
 
 import { Avatar, Icon, Title } from "components";
 import { labels } from "labels";
 import { Notification as NotificationType } from "interfaces";
 import { colours, layout } from "styles";
-import { formatDate } from "utils";
+import { formatDate, validURL } from "utils";
+
+const fallbackThumbnail = "../assets/images/image_post_1.jpg";
 
 interface Props {
   item: NotificationType;
 }
 
 class Notification extends Component<Props> {
+  avatarDisplay() {
+    const { type } = this.props.item;
+    const name = type === "comment" ? "comments" : "image";
+
+    return (
+      <View style={styles.row}>
+        <Avatar avatarPath={null} size="xl" styles={styles.avatar} />
+        <View style={styles.icon}>
+          <Icon colour={colours.pureWhite} name={name} size={30} />
+        </View>
+      </View>
+    );
+  }
+
+  contentPrefix() {
+    const { imagePath, type } = this.props.item;
+
+    const source = validURL(imagePath) ? imagePath : require(fallbackThumbnail);
+
+    if (type === "comment") {
+      return (
+        <View style={styles.quotes}>
+          <Icon name="quote-left" size={20} style={styles.quote} />
+          <Icon name="quote-right" size={20} style={styles.quote} />
+        </View>
+      );
+    }
+
+    return (
+      <View style={styles.imageContainer}>
+        <FlexImage source={source} style={styles.image} />
+      </View>
+    );
+  }
+
+  titleDisplay() {
+    const { author, date, type } = this.props.item;
+    const { leftAComment, published } = labels.notifications;
+
+    const titleType = type === "comment" ? leftAComment : published;
+    const notificationTitle = `${author.name} ${titleType}`;
+
+    return (
+      <View style={styles.notificationHeadings}>
+        <Title
+          text={notificationTitle}
+          style={styles.notificationTitle}
+          small
+        />
+        <Text style={styles.date}>{formatDate(date)}</Text>
+      </View>
+    );
+  }
+
   render() {
-    const { author, content, date } = this.props.item;
-    const notificationTitle = `${author.name} left a response to your comment on POST TITLE`;
+    const { content } = this.props.item;
 
     return (
       <View style={styles.item}>
         <View style={styles.row}>
-          <View style={styles.row}>
-            <Avatar avatarPath={null} size="xl" styles={styles.avatar} />
-            <View style={styles.icon}>
-              <Icon colour={colours.pureWhite} name="comments" size={30} />
-            </View>
-          </View>
-          <View style={styles.notificationHeadings}>
-            <Title
-              text={notificationTitle}
-              style={styles.notificationTitle}
-              small
-            />
-            <Text style={styles.date}>{formatDate(date)}</Text>
-          </View>
+          {this.avatarDisplay()}
+          {this.titleDisplay()}
         </View>
         <View style={[styles.row, styles.content]}>
-          <View style={styles.quotes}>
-            <Icon name="quote-left" size={20} style={styles.quote} />
-            <Icon name="quote-right" size={20} style={styles.quote} />
-          </View>
+          {this.contentPrefix()}
           <Text style={styles.text}>{content}</Text>
         </View>
       </View>
@@ -66,6 +107,13 @@ const styles = StyleSheet.create({
     paddingHorizontal: 10,
     paddingVertical: 12,
     zIndex: -1,
+  },
+  image: {
+    borderRadius: 5,
+    overflow: "hidden",
+  },
+  imageContainer: {
+    flex: 1,
   },
   item: {
     backgroundColor: colours.whiteTransparent,

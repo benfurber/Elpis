@@ -25,6 +25,7 @@ export interface Notification {
   author: Author;
   content: Post["content"];
   date: Date;
+  imagePath?: string;
   type: string;
 }
 

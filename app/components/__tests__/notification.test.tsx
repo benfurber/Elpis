@@ -6,11 +6,11 @@ import { mockDateNow } from "../../test-utils";
 
 import { Notification } from "components";
 
-describe("Logo", () => {
-  it("renders correctly", () => {
+describe("Notification", () => {
+  it("for comment type it renders correctly", () => {
     mockDateNow("2019-10-09");
 
-    const notification = {
+    const commentNotification = {
       author: {
         name: "May",
         avatarPath: "",
@@ -21,7 +21,26 @@ describe("Logo", () => {
       type: "comment",
     };
 
-    const component = shallow(<Notification item={notification} />);
+    const component = shallow(<Notification item={commentNotification} />);
+
+    expect(component).toMatchSnapshot();
+  });
+  it("for post type it renders correctly", () => {
+    mockDateNow("2019-10-09");
+
+    const postNotification = {
+      author: {
+        name: "E2M",
+        avatarPath: "",
+      },
+      content:
+        "Mara fisto yoda ben jade. Mace ben wedge jinn leia luke. Lando mandalore.",
+      imagePath: "",
+      date: new Date("2019-09-23"),
+      type: "post",
+    };
+
+    const component = shallow(<Notification item={postNotification} />);
 
     expect(component).toMatchSnapshot();
   });

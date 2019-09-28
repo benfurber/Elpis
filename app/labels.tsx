@@ -52,7 +52,9 @@ const labels = {
   },
   next: "Próximo",
   notifications: {
+    leftAComment: "left a response to your comment",
     new: "New",
+    published: "published a new post",
     title: "Notifications",
   },
   noImageSelected: "Nenhuma imagem selecionada. Escolha uma e tente novamente.",
