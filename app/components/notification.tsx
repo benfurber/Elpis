@@ -16,15 +16,16 @@ interface Props {
 
 class Notification extends Component<Props> {
   avatarDisplay() {
-    const { type } = this.props.item;
-    const name = type === "comment" ? "comments" : "image";
+    const { newNotification } = this.props.item;
 
     return (
       <View style={styles.row}>
-        <Avatar avatarPath={null} size="xl" styles={styles.avatar} />
-        <View style={styles.icon}>
-          <Icon colour={colours.pureWhite} name={name} size={30} />
-        </View>
+        <Avatar
+          avatarPath={null}
+          size="xl"
+          styles={newNotification ? styles.avatar : {}}
+        />
+        {newNotification ? this.typeIcon() : null}
       </View>
     );
   }
@@ -50,6 +51,21 @@ class Notification extends Component<Props> {
     );
   }
 
+  detailsDisplay() {
+    const { content, newNotification } = this.props.item;
+
+    if (newNotification) {
+      return (
+        <View style={[styles.row, styles.content]}>
+          {this.contentPrefix()}
+          <Text style={styles.text}>{content}</Text>
+        </View>
+      );
+    }
+
+    return null;
+  }
+
   titleDisplay() {
     const { author, date, type } = this.props.item;
     const { leftAComment, published } = labels.notifications;
@@ -69,19 +85,25 @@ class Notification extends Component<Props> {
     );
   }
 
-  render() {
-    const { content } = this.props.item;
+  typeIcon() {
+    const { type } = this.props.item;
+    const name = type === "comment" ? "comments" : "image";
 
+    return (
+      <View style={styles.icon}>
+        <Icon colour={colours.pureWhite} name={name} size={30} />
+      </View>
+    );
+  }
+
+  render() {
     return (
       <View style={styles.item}>
         <View style={styles.row}>
           {this.avatarDisplay()}
           {this.titleDisplay()}
         </View>
-        <View style={[styles.row, styles.content]}>
-          {this.contentPrefix()}
-          <Text style={styles.text}>{content}</Text>
-        </View>
+        {this.detailsDisplay()}
       </View>
     );
   }

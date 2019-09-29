@@ -26,6 +26,7 @@ export interface Notification {
   content: Post["content"];
   date: Date;
   imagePath?: string;
+  newNotification: boolean;
   type: string;
 }
 

@@ -54,6 +54,7 @@ const labels = {
   notifications: {
     leftAComment: "left a response to your comment",
     new: "New",
+    old: "Old",
     published: "published a new post",
     title: "Notifications",
   },

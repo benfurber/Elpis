@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Notification for comment type it renders correctly 1`] = `
+exports[`Notification new for comment type it renders correctly 1`] = `
 <View
   style={
     Object {
@@ -141,7 +141,7 @@ exports[`Notification for comment type it renders correctly 1`] = `
 </View>
 `;
 
-exports[`Notification for post type it renders correctly 1`] = `
+exports[`Notification new for post type it renders correctly 1`] = `
 <View
   style={
     Object {
@@ -272,6 +272,134 @@ exports[`Notification for post type it renders correctly 1`] = `
     >
       Mara fisto yoda ben jade. Mace ben wedge jinn leia luke. Lando mandalore.
     </Text>
+  </View>
+</View>
+`;
+
+exports[`Notification old for comment type it renders correctly 1`] = `
+<View
+  style={
+    Object {
+      "backgroundColor": "rgba(255, 255, 255, 0.85)",
+      "marginBottom": 10,
+      "padding": 10,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "flexDirection": "row",
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "flexDirection": "row",
+        }
+      }
+    >
+      <Avatar
+        avatarPath={null}
+        size="xl"
+        styles={Object {}}
+      />
+    </View>
+    <View
+      style={
+        Object {
+          "flex": 1,
+          "paddingHorizontal": 10,
+        }
+      }
+    >
+      <Title
+        small={true}
+        style={
+          Object {
+            "color": "rgb(51, 51, 51)",
+            "fontWeight": "normal",
+          }
+        }
+        text="May left a response to your comment"
+      />
+      <Text
+        style={
+          Object {
+            "color": "rgba(51,51,51,0.80)",
+          }
+        }
+      >
+        Há 16 dias
+      </Text>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`Notification old for post type it renders correctly 1`] = `
+<View
+  style={
+    Object {
+      "backgroundColor": "rgba(255, 255, 255, 0.85)",
+      "marginBottom": 10,
+      "padding": 10,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "flexDirection": "row",
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "flexDirection": "row",
+        }
+      }
+    >
+      <Avatar
+        avatarPath={null}
+        size="xl"
+        styles={Object {}}
+      />
+    </View>
+    <View
+      style={
+        Object {
+          "flex": 1,
+          "paddingHorizontal": 10,
+        }
+      }
+    >
+      <Title
+        small={true}
+        style={
+          Object {
+            "color": "rgb(51, 51, 51)",
+            "fontWeight": "normal",
+          }
+        }
+        text="E2M published a new post"
+      />
+      <Text
+        style={
+          Object {
+            "color": "rgba(51,51,51,0.80)",
+          }
+        }
+      >
+        Há 16 dias
+      </Text>
+    </View>
   </View>
 </View>
 `;
