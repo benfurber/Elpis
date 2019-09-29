@@ -1,3 +1,4 @@
+/* eslint-disable react/display-name */
 import React from "react";
 import {
   createBottomTabNavigator,
@@ -19,6 +20,7 @@ import {
   PostScreen,
   WelcomeScreen,
 } from "screens";
+import { colours } from "styles";
 
 const routeNameIcon = {
   Feed: "newspaper",
@@ -64,9 +66,16 @@ const mainTabs = createBottomTabNavigator(
   },
   {
     defaultNavigationOptions: ({ navigation }) => ({
-      tabBarIcon: (
-        <Icon name={routeNameIcon[navigation.state.routeName]} size={35} />
-      ),
+      tabBarIcon: ({ focused }: { focused: boolean }) => {
+        return (
+          <Icon
+            colour={focused ? colours.darkGrey : colours.mediumGrey}
+            name={routeNameIcon[navigation.state.routeName]}
+            size={35}
+            solid={focused}
+          />
+        );
+      },
     }),
     tabBarOptions: {
       keyboardHidesTabBar: true,

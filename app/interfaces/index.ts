@@ -21,6 +21,15 @@ export interface Feed {
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 export type NavigationType = NavigationScreenProp<any, any>;
 
+export interface Notification {
+  author: Author;
+  content: Post["content"];
+  date: Date;
+  imagePath?: string;
+  newNotification: boolean;
+  type: string;
+}
+
 export interface Post {
   author: Author;
   comments: Comment[] | [];

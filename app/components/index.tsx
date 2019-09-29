@@ -12,6 +12,7 @@ export { Loading } from "./loading";
 export { LoginForm } from "./login-form";
 export { Logo } from "./logo";
 export { MessageBox } from "./message-box";
+export { Notification } from "./notification";
 export { Post } from "./post";
 export { Query } from "./query";
 export { TextInput } from "./text-input";

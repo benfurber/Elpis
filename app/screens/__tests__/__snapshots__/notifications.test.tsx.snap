@@ -1,0 +1,105 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NotificationsScreen renders correctly 1`] = `
+<BackgroundModal>
+  <ScrollViewMock>
+    <Title
+      style={
+        Object {
+          "fontSize": 30,
+          "margin": 20,
+        }
+      }
+      text="Notificações"
+    />
+    <View
+      style={
+        Object {
+          "marginVertical": 10,
+          "paddingHorizontal": 20,
+          "paddingTop": 5,
+        }
+      }
+    >
+      <Title
+        text="Novas"
+      />
+      <Badge
+        left={65}
+        number={2}
+      />
+    </View>
+    <Notification
+      item={
+        Object {
+          "author": Object {
+            "avatarPath": "",
+            "name": "May",
+          },
+          "content": "Lucas ipsum dolor sit amet organa c-3p0 hutt anakin ponda biggs yoda moff jinn solo. Mara fisto yoda ben jade. Mace ben wedge jinn leia luke. Moff solo obi-wan antilles grievous lando mandalore.",
+          "date": 2019-09-23T00:00:00.000Z,
+          "newNotification": true,
+          "type": "comment",
+        }
+      }
+    />
+    <Notification
+      item={
+        Object {
+          "author": Object {
+            "avatarPath": "",
+            "name": "E2M",
+          },
+          "content": "Mara fisto yoda ben jade. Mace ben wedge jinn leia luke. Moff solo obi-wan antilles grievous lando mandalore.",
+          "date": 2019-09-23T00:00:00.000Z,
+          "imagePath": "",
+          "newNotification": true,
+          "type": "post",
+        }
+      }
+    />
+    <View
+      style={
+        Object {
+          "marginVertical": 10,
+          "paddingHorizontal": 20,
+          "paddingTop": 5,
+        }
+      }
+    >
+      <Title
+        text="Antigas"
+      />
+    </View>
+    <Notification
+      item={
+        Object {
+          "author": Object {
+            "avatarPath": "",
+            "name": "May",
+          },
+          "content": "Lucas ipsum dolor sit amet organa c-3p0 hutt anakin ponda biggs yoda moff jinn solo. Mara fisto yoda ben jade. Mace ben wedge jinn leia luke. Moff solo obi-wan antilles grievous lando mandalore.",
+          "date": 2019-09-23T00:00:00.000Z,
+          "newNotification": false,
+          "type": "comment",
+        }
+      }
+    />
+    <Notification
+      item={
+        Object {
+          "author": Object {
+            "avatarPath": "",
+            "name": "E2M",
+          },
+          "content": "Mara fisto yoda ben jade. Mace ben wedge jinn leia luke. Moff solo obi-wan antilles grievous lando mandalore.",
+          "date": 2019-09-23T00:00:00.000Z,
+          "imagePath": "",
+          "newNotification": false,
+          "type": "post",
+        }
+      }
+    />
+  </ScrollViewMock>
+</BackgroundModal>
+`;

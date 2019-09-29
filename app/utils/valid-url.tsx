@@ -1,4 +1,8 @@
-const validURL = (string: string) => {
+const validURL = url => {
+  if (typeof url !== "string") {
+    return false;
+  }
+
   var pattern = new RegExp(
     "^(https?:\\/\\/)?" + // protocol
     "((([a-z\\d]([a-z\\d-]*[a-z\\d])*)\\.)+[a-z]{2,}|" + // domain name
@@ -9,7 +13,7 @@ const validURL = (string: string) => {
     "i",
   ); // fragment locator
 
-  return !!pattern.test(string);
+  return !!pattern.test(url);
 };
 
 export { validURL };
