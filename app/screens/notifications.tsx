@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { ScrollView, StyleSheet, View } from "react-native";
 
-import { BackgroundContainer, Notification, Title } from "components";
+import { BackgroundModal, Badge, Notification, Title } from "components";
 import { NavigationType } from "interfaces";
 import { labels } from "labels";
 import { Analytics } from "utils";
@@ -68,11 +68,12 @@ class NotificationsScreen extends Component<Props> {
 
   render() {
     return (
-      <BackgroundContainer>
+      <BackgroundModal>
         <ScrollView>
           <Title style={styles.title} text={labels.notifications.title} />
           <View style={styles.heading}>
             <Title text={labels.notifications.new} />
+            <Badge left={50} number={2} />
           </View>
           <Notification item={commentNotificationNew} />
           <Notification item={postNotificationNew} />
@@ -83,14 +84,13 @@ class NotificationsScreen extends Component<Props> {
           <Notification item={commentNotification} />
           <Notification item={postNotification} />
         </ScrollView>
-      </BackgroundContainer>
+      </BackgroundModal>
     );
   }
 }
 
 const styles = StyleSheet.create({
   heading: {
-    backgroundColor: colours.transparentBlue,
     marginVertical: layout.spacing,
     paddingHorizontal: layout.spacingL,
     paddingTop: layout.spacingS,

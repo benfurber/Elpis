@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`NotificationsScreen renders correctly 1`] = `
-<BackgroundContainer>
+<BackgroundModal>
   <ScrollViewMock>
     <Title
       style={
@@ -15,7 +15,6 @@ exports[`NotificationsScreen renders correctly 1`] = `
     <View
       style={
         Object {
-          "backgroundColor": "rgba(198, 213, 225, 0.75)",
           "marginVertical": 10,
           "paddingHorizontal": 20,
           "paddingTop": 5,
@@ -24,6 +23,10 @@ exports[`NotificationsScreen renders correctly 1`] = `
     >
       <Title
         text="New"
+      />
+      <Badge
+        left={50}
+        number={2}
       />
     </View>
     <Notification
@@ -58,7 +61,6 @@ exports[`NotificationsScreen renders correctly 1`] = `
     <View
       style={
         Object {
-          "backgroundColor": "rgba(198, 213, 225, 0.75)",
           "marginVertical": 10,
           "paddingHorizontal": 20,
           "paddingTop": 5,
@@ -99,5 +101,5 @@ exports[`NotificationsScreen renders correctly 1`] = `
       }
     />
   </ScrollViewMock>
-</BackgroundContainer>
+</BackgroundModal>
 `;
