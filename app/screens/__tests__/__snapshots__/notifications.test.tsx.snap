@@ -10,7 +10,7 @@ exports[`NotificationsScreen renders correctly 1`] = `
           "margin": 20,
         }
       }
-      text="Notifications"
+      text="Notificações"
     />
     <View
       style={
@@ -22,10 +22,10 @@ exports[`NotificationsScreen renders correctly 1`] = `
       }
     >
       <Title
-        text="New"
+        text="Novas"
       />
       <Badge
-        left={50}
+        left={65}
         number={2}
       />
     </View>
@@ -68,7 +68,7 @@ exports[`NotificationsScreen renders correctly 1`] = `
       }
     >
       <Title
-        text="Old"
+        text="Antigas"
       />
     </View>
     <Notification

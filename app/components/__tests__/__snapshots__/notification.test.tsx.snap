@@ -73,7 +73,7 @@ exports[`Notification new for comment type it renders correctly 1`] = `
             "fontWeight": "normal",
           }
         }
-        text="May left a response to your comment"
+        text="May respondeu ao seu comentário"
       />
       <Text
         style={
@@ -214,7 +214,7 @@ exports[`Notification new for post type it renders correctly 1`] = `
             "fontWeight": "normal",
           }
         }
-        text="E2M published a new post"
+        text="E2M publicou um novo post"
       />
       <Text
         style={
@@ -324,7 +324,7 @@ exports[`Notification old for comment type it renders correctly 1`] = `
             "fontWeight": "normal",
           }
         }
-        text="May left a response to your comment"
+        text="May respondeu ao seu comentário"
       />
       <Text
         style={
@@ -388,7 +388,7 @@ exports[`Notification old for post type it renders correctly 1`] = `
             "fontWeight": "normal",
           }
         }
-        text="E2M published a new post"
+        text="E2M publicou um novo post"
       />
       <Text
         style={

@@ -72,14 +72,14 @@ class NotificationsScreen extends Component<Props> {
         <ScrollView>
           <Title style={styles.title} text={labels.notifications.title} />
           <View style={styles.heading}>
-            <Title text={labels.notifications.new} />
-            <Badge left={50} number={2} />
+            <Title text={labels.notifications.newMultiple} />
+            <Badge left={65} number={2} />
           </View>
           <Notification item={commentNotificationNew} />
           <Notification item={postNotificationNew} />
 
           <View style={styles.heading}>
-            <Title text={labels.notifications.old} />
+            <Title text={labels.notifications.oldMultiple} />
           </View>
           <Notification item={commentNotification} />
           <Notification item={postNotification} />
