@@ -23,7 +23,7 @@ const customIcon = (props: Props) => {
         color={colour || colours.darkGrey}
         name={name}
         size={size || 20}
-        solid={solid || true}
+        solid={solid === undefined ? true : solid}
       />
     </View>
   );
