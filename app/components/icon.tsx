@@ -6,6 +6,7 @@ import { colours } from "styles";
 
 interface Props {
   colour?: null | string;
+  containerStyle?: object;
   name: string;
   size?: number;
   solid?: boolean;
@@ -13,10 +14,10 @@ interface Props {
 }
 
 const customIcon = (props: Props) => {
-  const { colour, name, size, solid, style } = props;
+  const { colour, containerStyle, name, size, solid, style } = props;
 
   return (
-    <View>
+    <View style={containerStyle || null}>
       <Icon
         style={style || null}
         color={colour || colours.darkGrey}
