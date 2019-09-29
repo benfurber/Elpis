@@ -17,14 +17,12 @@ interface Props {
 class Notification extends Component<Props> {
   avatarDisplay() {
     const { newNotification } = this.props.item;
+    const size = newNotification ? "xl" : "medium";
+    const style = newNotification ? styles.avatar : {};
 
     return (
       <View style={styles.row}>
-        <Avatar
-          avatarPath={null}
-          size="xl"
-          styles={newNotification ? styles.avatar : {}}
-        />
+        <Avatar avatarPath={null} size={size} styles={style} />
         {newNotification ? this.typeIcon() : null}
       </View>
     );
