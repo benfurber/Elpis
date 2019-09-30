@@ -47,7 +47,7 @@ class ButtonAddReply extends Component<Props, State> {
 
   onPress() {
     const { commentId, postId } = this.props;
-    this.props.navigation.navigate("AddReply", { postId, commentId })
+    this.props.navigation.navigate("AddReply", { postId, commentId });
   }
 
   render() {
@@ -57,11 +57,8 @@ class ButtonAddReply extends Component<Props, State> {
     const text = commentId ? labels.addYourReply : labels.addNewTopic;
 
     return (
-      <Animated.View style={{opacity: fade}}>
-        <TouchableOpacity
-          style={styles.button}
-          onPress={() => this.onPress()}
-        >
+      <Animated.View style={{ opacity: fade }}>
+        <TouchableOpacity style={styles.button} onPress={() => this.onPress()}>
           <Icon style={styles.icon} name="comment-medical" />
           <Title text={text} style={styles.buttonText} small />
         </TouchableOpacity>
