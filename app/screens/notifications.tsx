@@ -5,54 +5,66 @@ import { BackgroundModal, Badge, Notification, Title } from "components";
 import { NavigationType } from "interfaces";
 import { labels } from "labels";
 import { Analytics } from "utils";
-import { colours, layout, typography } from "styles";
+import { layout, typography } from "styles";
 
 const commentNotificationNew = {
-  author: {
-    name: "May",
-    avatarPath: "",
+  content: {
+    author: {
+      name: "May",
+      avatarPath: "",
+    },
+    content:
+      "Lucas ipsum dolor sit amet organa c-3p0 hutt anakin ponda biggs yoda moff jinn solo. Mara fisto yoda ben jade. Mace ben wedge jinn leia luke. Moff solo obi-wan antilles grievous lando mandalore.",
+    createdAt: new Date("2019-09-23"),
+    id: "286daniousad",
   },
-  content:
-    "Lucas ipsum dolor sit amet organa c-3p0 hutt anakin ponda biggs yoda moff jinn solo. Mara fisto yoda ben jade. Mace ben wedge jinn leia luke. Moff solo obi-wan antilles grievous lando mandalore.",
-  date: new Date("2019-09-23"),
   newNotification: true,
   type: "comment",
 };
 
 const postNotificationNew = {
-  author: {
-    name: "E2M",
-    avatarPath: "",
+  content: {
+    author: {
+      name: "E2M",
+      avatarPath: "",
+    },
+    content:
+      "Mara fisto yoda ben jade. Mace ben wedge jinn leia luke. Moff solo obi-wan antilles grievous lando mandalore.",
+    createdAt: new Date("2019-09-23"),
+    imagePath: "",
+    id: "286daniousad",
   },
-  content:
-    "Mara fisto yoda ben jade. Mace ben wedge jinn leia luke. Moff solo obi-wan antilles grievous lando mandalore.",
-  date: new Date("2019-09-23"),
-  imagePath: "",
   newNotification: true,
   type: "post",
 };
 
 const commentNotification = {
-  author: {
-    name: "May",
-    avatarPath: "",
+  content: {
+    author: {
+      name: "May",
+      avatarPath: "",
+    },
+    content:
+      "Lucas ipsum dolor sit amet organa c-3p0 hutt anakin ponda biggs yoda moff jinn solo. Mara fisto yoda ben jade. Mace ben wedge jinn leia luke. Moff solo obi-wan antilles grievous lando mandalore.",
+    createdAt: new Date("2019-09-23"),
+    id: "286daniousad",
   },
-  content:
-    "Lucas ipsum dolor sit amet organa c-3p0 hutt anakin ponda biggs yoda moff jinn solo. Mara fisto yoda ben jade. Mace ben wedge jinn leia luke. Moff solo obi-wan antilles grievous lando mandalore.",
-  date: new Date("2019-09-23"),
   newNotification: false,
   type: "comment",
 };
 
 const postNotification = {
-  author: {
-    name: "E2M",
-    avatarPath: "",
+  content: {
+    author: {
+      name: "E2M",
+      avatarPath: "",
+    },
+    content:
+      "Mara fisto yoda ben jade. Mace ben wedge jinn leia luke. Moff solo obi-wan antilles grievous lando mandalore.",
+    createdAt: new Date("2019-09-23"),
+    id: "286daniousad",
+    imagePath: "",
   },
-  content:
-    "Mara fisto yoda ben jade. Mace ben wedge jinn leia luke. Moff solo obi-wan antilles grievous lando mandalore.",
-  date: new Date("2019-09-23"),
-  imagePath: "",
   newNotification: false,
   type: "post",
 };
@@ -67,6 +79,8 @@ class NotificationsScreen extends Component<Props> {
   }
 
   render() {
+    const { navigation } = this.props;
+
     return (
       <BackgroundModal>
         <ScrollView>
@@ -75,14 +89,14 @@ class NotificationsScreen extends Component<Props> {
             <Title text={labels.notifications.newMultiple} />
             <Badge left={65} number={2} />
           </View>
-          <Notification item={commentNotificationNew} />
-          <Notification item={postNotificationNew} />
+          <Notification item={commentNotificationNew} navigation={navigation} />
+          <Notification item={postNotificationNew} navigation={navigation} />
 
           <View style={styles.heading}>
             <Title text={labels.notifications.oldMultiple} />
           </View>
-          <Notification item={commentNotification} />
-          <Notification item={postNotification} />
+          <Notification item={commentNotification} navigation={navigation} />
+          <Notification item={postNotification} navigation={navigation} />
         </ScrollView>
       </BackgroundModal>
     );

@@ -5,15 +5,6 @@ export interface Author {
   name: string;
 }
 
-export interface Comment {
-  author: Author;
-  content: string;
-  createdAt: Date;
-  id: string;
-  replies: Reply[] | [];
-  totalReplies: number;
-}
-
 export interface Feed {
   feed: [Post];
 }
@@ -21,27 +12,29 @@ export interface Feed {
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 export type NavigationType = NavigationScreenProp<any, any>;
 
-export interface Notification {
+interface ContentBase {
   author: Author;
-  content: Post["content"];
-  date: Date;
-  imagePath?: string;
-  newNotification: boolean;
-  type: string;
-}
-
-export interface Post {
-  author: Author;
-  comments: Comment[] | [];
   content: string | null;
-  date?: Date;
-  id: string;
-  imagePath: string;
-}
-
-export interface Reply {
-  author: Author;
-  content: string;
   createdAt: Date;
   id: string;
+  imagePath?: string;
+}
+
+export interface Comment extends ContentBase {
+  replies: Reply[] | [];
+  totalReplies: number;
+}
+
+export interface Post extends ContentBase {
+  comments: Comment[] | [];
+  createdAt: Date;
+}
+
+// eslint-disable-next-line @typescript-eslint/no-empty-interface
+export interface Reply extends ContentBase {}
+
+export interface Notification {
+  content: ContentBase;
+  newNotification: boolean;
+  type: string; // should be `"comment" | "post"` but there's a bug;
 }

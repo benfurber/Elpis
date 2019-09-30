@@ -15,24 +15,31 @@ interface Props {
 
 class Details extends Component<Props> {
   contentPrefix() {
-    const { imagePath, type } = this.props.item;
+    const { content, type } = this.props.item;
 
-    const source = validURL(imagePath) ? imagePath : require(fallbackThumbnail);
+    switch (type) {
+      case "comment":
+        return (
+          <View style={styles.quotes}>
+            <Icon name="quote-left" size={20} style={styles.quote} />
+            <Icon name="quote-right" size={20} style={styles.quote} />
+          </View>
+        );
+      case "post":
+        const { imagePath } = content;
+        const source = validURL(imagePath)
+          ? imagePath
+          : require(fallbackThumbnail);
 
-    if (type === "comment") {
-      return (
-        <View style={styles.quotes}>
-          <Icon name="quote-left" size={20} style={styles.quote} />
-          <Icon name="quote-right" size={20} style={styles.quote} />
-        </View>
-      );
+        return (
+          <View style={styles.imageContainer}>
+            <FlexImage source={source} style={styles.image} />
+          </View>
+        );
+
+      default:
+        return null;
     }
-
-    return (
-      <View style={styles.imageContainer}>
-        <FlexImage source={source} style={styles.image} />
-      </View>
-    );
   }
 
   render() {
@@ -42,7 +49,7 @@ class Details extends Component<Props> {
       return (
         <View style={[styles.row, styles.content]}>
           {this.contentPrefix()}
-          <Text style={styles.text}>{content}</Text>
+          <Text style={styles.text}>{content.content}</Text>
         </View>
       );
     }

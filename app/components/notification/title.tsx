@@ -13,7 +13,8 @@ interface Props {
 
 class NotificationTitle extends Component<Props> {
   render() {
-    const { author, date, type } = this.props.item;
+    const { content, type } = this.props.item;
+    const { author, createdAt } = content;
     const { leftAComment, published } = labels.notifications;
 
     const titleType = type === "comment" ? leftAComment : published;
@@ -22,7 +23,7 @@ class NotificationTitle extends Component<Props> {
     return (
       <View style={styles.headings}>
         <Title text={notificationTitle} style={styles.title} small />
-        <Text style={styles.date}>{formatDate(date)}</Text>
+        <Text style={styles.date}>{formatDate(createdAt)}</Text>
       </View>
     );
   }

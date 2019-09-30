@@ -6,24 +6,32 @@ import { mockDateNow } from "../../../test-utils";
 
 import { Notification } from "components";
 
+let navigation;
+jest.mock(navigation, () => jest.fn());
+
 describe("Notification", () => {
   describe("new", () => {
     it("for comment type it renders correctly", () => {
       mockDateNow("2019-10-09");
 
       const commentNotification = {
-        author: {
-          name: "May",
-          avatarPath: "",
+        content: {
+          author: {
+            name: "May",
+            avatarPath: "",
+          },
+          content:
+            "Lucas ipsum dolor sit amet organa c-3p0 hutt anakin ponda biggs yoda moff jinn solo. Mara fisto yoda ben jade. Mace ben wedge jinn leia luke. Moff solo obi-wan antilles grievous lando mandalore.",
+          createdAt: new Date("2019-09-23T03:24:00"),
+          id: "93716",
         },
-        content:
-          "Lucas ipsum dolor sit amet organa c-3p0 hutt anakin ponda biggs yoda moff jinn solo. Mara fisto yoda ben jade. Mace ben wedge jinn leia luke. Moff solo obi-wan antilles grievous lando mandalore.",
-        date: new Date("2019-09-23T03:24:00"),
         newNotification: true,
         type: "comment",
       };
 
-      const component = shallow(<Notification item={commentNotification} />);
+      const component = shallow(
+        <Notification item={commentNotification} navigation={navigation} />,
+      );
 
       expect(component).toMatchSnapshot();
     });
@@ -32,19 +40,24 @@ describe("Notification", () => {
       mockDateNow("2019-10-09");
 
       const postNotification = {
-        author: {
-          name: "E2M",
-          avatarPath: "",
+        content: {
+          author: {
+            name: "E2M",
+            avatarPath: "",
+          },
+          content:
+            "Mara fisto yoda ben jade. Mace ben wedge jinn leia luke. Lando mandalore.",
+          createdAt: new Date("2019-09-23"),
+          id: "986sasdfd",
+          imagePath: "",
         },
-        content:
-          "Mara fisto yoda ben jade. Mace ben wedge jinn leia luke. Lando mandalore.",
-        date: new Date("2019-09-23"),
-        imagePath: "",
         newNotification: true,
         type: "post",
       };
 
-      const component = shallow(<Notification item={postNotification} />);
+      const component = shallow(
+        <Notification item={postNotification} navigation={navigation} />,
+      );
 
       expect(component).toMatchSnapshot();
     });
@@ -55,18 +68,23 @@ describe("Notification", () => {
       mockDateNow("2019-10-09");
 
       const commentNotification = {
-        author: {
-          name: "May",
-          avatarPath: "",
+        content: {
+          author: {
+            name: "May",
+            avatarPath: "",
+          },
+          content:
+            "Lucas ipsum dolor sit amet organa c-3p0 hutt anakin ponda biggs yoda moff jinn solo. Mara fisto yoda ben jade. Mace ben wedge jinn leia luke. Moff solo obi-wan antilles grievous lando mandalore.",
+          createdAt: new Date("2019-09-23T03:24:00"),
+          id: "315928bjaf",
         },
-        content:
-          "Lucas ipsum dolor sit amet organa c-3p0 hutt anakin ponda biggs yoda moff jinn solo. Mara fisto yoda ben jade. Mace ben wedge jinn leia luke. Moff solo obi-wan antilles grievous lando mandalore.",
-        date: new Date("2019-09-23T03:24:00"),
         newNotification: false,
         type: "comment",
       };
 
-      const component = shallow(<Notification item={commentNotification} />);
+      const component = shallow(
+        <Notification item={commentNotification} navigation={navigation} />,
+      );
 
       expect(component).toMatchSnapshot();
     });
@@ -75,19 +93,24 @@ describe("Notification", () => {
       mockDateNow("2019-10-09");
 
       const postNotification = {
-        author: {
-          name: "E2M",
-          avatarPath: "",
+        content: {
+          author: {
+            name: "E2M",
+            avatarPath: "",
+          },
+          content:
+            "Mara fisto yoda ben jade. Mace ben wedge jinn leia luke. Lando mandalore.",
+          createdAt: new Date("2019-09-23"),
+          id: "078vw213",
+          imagePath: "",
         },
-        content:
-          "Mara fisto yoda ben jade. Mace ben wedge jinn leia luke. Lando mandalore.",
-        date: new Date("2019-09-23"),
-        imagePath: "",
         newNotification: false,
         type: "post",
       };
 
-      const component = shallow(<Notification item={postNotification} />);
+      const component = shallow(
+        <Notification item={postNotification} navigation={navigation} />,
+      );
 
       expect(component).toMatchSnapshot();
     });
