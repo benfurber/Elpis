@@ -3,7 +3,7 @@ import { StyleSheet, View } from "react-native";
 
 import { Avatar, Icon } from "components";
 import { Notification as NotificationType } from "interfaces";
-import { colours, layout } from "styles";
+import { colours } from "styles";
 
 interface Props {
   item: NotificationType;
