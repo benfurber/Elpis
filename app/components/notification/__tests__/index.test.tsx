@@ -2,7 +2,7 @@ import "react-native";
 import React from "react";
 import { shallow } from "enzyme";
 
-import { mockDateNow } from "../../test-utils";
+import { mockDateNow } from "../../../test-utils";
 
 import { Notification } from "components";
 
