@@ -8,7 +8,7 @@ import { formatDate, validURL } from "utils";
 
 interface Props {
   content: Post["content"];
-  date?: Post["date"];
+  createdAt?: Post["createdAt"];
   imagePath: Post["imagePath"];
 }
 
@@ -20,10 +20,10 @@ const Content = (props: Props) => {
   };
 
   const renderDate = () => {
-    if (props.date) {
+    if (props.createdAt) {
       return (
         <Text style={[elements.textDate, styles.text]}>
-          {formatDate(props.date)}
+          {formatDate(props.createdAt)}
         </Text>
       );
     }

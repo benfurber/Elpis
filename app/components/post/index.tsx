@@ -53,10 +53,14 @@ class Post extends Component<Props, State> {
   };
 
   renderBody() {
-    const { author, content, date, imagePath } = this.props.post;
+    const { author, content, createdAt, imagePath } = this.props.post;
     return (
       <View>
-        <Content date={date} content={content} imagePath={imagePath} />
+        <Content
+          createdAt={createdAt}
+          content={content}
+          imagePath={imagePath}
+        />
         <Footer avatarPath={author.avatarPath} />
       </View>
     );
