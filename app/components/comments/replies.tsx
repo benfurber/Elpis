@@ -58,9 +58,10 @@ class Replies extends Component<Props> {
 
   renderComment() {
     const { item } = this.props;
+    const { content } = item;
 
-    const title = firstSentence(item.content);
-    const body = dropFirstSentence(item.content);
+    const title = content && firstSentence(content);
+    const body = content && dropFirstSentence(content);
 
     return (
       <View style={styles.featured}>
@@ -74,7 +75,7 @@ class Replies extends Component<Props> {
         </View>
 
         <View>
-          <Title text={title} small />
+          {title && <Title text={title} small />}
           {body && <Text>{body}</Text>}
         </View>
       </View>
