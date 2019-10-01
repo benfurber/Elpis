@@ -15,7 +15,21 @@ interface Props {
 
 class Notification extends Component<Props> {
   onPress = () => {
-    this.props.navigation.navigate("Post", {});
+    const { content, type, postId } = this.props.item;
+    const { id } = content;
+
+    const postParams = {
+      id,
+      setDisplay: "body",
+    };
+    const replyParams = {
+      id: postId,
+      commentId: id,
+      setDisplay: "comments",
+    };
+
+    const params = type === "comment" ? replyParams : postParams;
+    return this.props.navigation.navigate("Post", params);
   };
 
   render() {

@@ -16,10 +16,11 @@ const commentNotificationNew = {
     content:
       "Lucas ipsum dolor sit amet organa c-3p0 hutt anakin ponda biggs yoda moff jinn solo. Mara fisto yoda ben jade. Mace ben wedge jinn leia luke. Moff solo obi-wan antilles grievous lando mandalore.",
     createdAt: new Date("2019-09-23"),
-    id: "286daniousad",
+    id: "ck0o4wspk00540917wutatfi5",
   },
   newNotification: true,
   type: "comment",
+  postId: "ck0o4wsph00530917sningx0z",
 };
 
 const postNotificationNew = {
@@ -32,7 +33,7 @@ const postNotificationNew = {
       "Mara fisto yoda ben jade. Mace ben wedge jinn leia luke. Moff solo obi-wan antilles grievous lando mandalore.",
     createdAt: new Date("2019-09-23"),
     imagePath: "",
-    id: "286daniousad",
+    id: "ck0o4wsph00530917sningx0z",
   },
   newNotification: true,
   type: "post",
@@ -47,10 +48,11 @@ const commentNotification = {
     content:
       "Lucas ipsum dolor sit amet organa c-3p0 hutt anakin ponda biggs yoda moff jinn solo. Mara fisto yoda ben jade. Mace ben wedge jinn leia luke. Moff solo obi-wan antilles grievous lando mandalore.",
     createdAt: new Date("2019-09-23"),
-    id: "286daniousad",
+    id: "ck0o4wspk00540917wutatfi5",
   },
   newNotification: false,
   type: "comment",
+  postId: "ck0o4wsmd004q0917s30ywm4r",
 };
 
 const postNotification = {
@@ -62,7 +64,7 @@ const postNotification = {
     content:
       "Mara fisto yoda ben jade. Mace ben wedge jinn leia luke. Moff solo obi-wan antilles grievous lando mandalore.",
     createdAt: new Date("2019-09-23"),
-    id: "286daniousad",
+    id: "ck0o4wsmd004q0917s30ywm4r",
     imagePath: "",
   },
   newNotification: false,

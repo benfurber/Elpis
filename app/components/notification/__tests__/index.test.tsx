@@ -27,6 +27,7 @@ describe("Notification", () => {
         },
         newNotification: true,
         type: "comment",
+        postId: "b845q3",
       };
 
       const component = shallow(
@@ -80,6 +81,7 @@ describe("Notification", () => {
         },
         newNotification: false,
         type: "comment",
+        postId: "35245gt1",
       };
 
       const component = shallow(

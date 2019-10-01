@@ -37,4 +37,5 @@ export interface Notification {
   content: ContentBase;
   newNotification: boolean;
   type: string; // should be `"comment" | "post"` but there's a bug;
+  postId?: string;
 }

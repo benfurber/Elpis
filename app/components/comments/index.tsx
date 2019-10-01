@@ -1,10 +1,10 @@
 import React, { Component } from "react";
-import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
+import { StyleSheet, View } from "react-native";
 
 import { ButtonAddReply, Query } from "components";
-import { NavigationType, Post } from "interfaces";
+import { Comment, NavigationType, Post } from "interfaces";
 import { labels } from "labels";
-import { colours, layout, typography } from "styles";
+import { colours, layout } from "styles";
 import { Analytics } from "utils";
 import { COMMENTS, COMMENT_WITH_REPLIES } from "queries";
 
@@ -17,6 +17,7 @@ interface Props {
   content: Post["content"];
   navigation: NavigationType;
   postId: Post["id"];
+  commentId?: Comment["id"];
 }
 
 interface State {
@@ -27,7 +28,7 @@ class Comments extends Component<Props, State> {
   constructor(props) {
     super(props);
     this.state = {
-      commentId: null,
+      commentId: this.props.commentId || null,
     };
   }
 
@@ -122,7 +123,7 @@ class Comments extends Component<Props, State> {
         <ButtonAddReply
           commentId={commentId}
           navigation={navigation}
-          postId={postId} 
+          postId={postId}
         />
       </View>
     );

@@ -39,9 +39,10 @@ exports[`NotificationsScreen renders correctly 1`] = `
             },
             "content": "Lucas ipsum dolor sit amet organa c-3p0 hutt anakin ponda biggs yoda moff jinn solo. Mara fisto yoda ben jade. Mace ben wedge jinn leia luke. Moff solo obi-wan antilles grievous lando mandalore.",
             "createdAt": 2019-09-23T00:00:00.000Z,
-            "id": "286daniousad",
+            "id": "ck0o4wspk00540917wutatfi5",
           },
           "newNotification": true,
+          "postId": "ck0o4wsph00530917sningx0z",
           "type": "comment",
         }
       }
@@ -56,7 +57,7 @@ exports[`NotificationsScreen renders correctly 1`] = `
             },
             "content": "Mara fisto yoda ben jade. Mace ben wedge jinn leia luke. Moff solo obi-wan antilles grievous lando mandalore.",
             "createdAt": 2019-09-23T00:00:00.000Z,
-            "id": "286daniousad",
+            "id": "ck0o4wsph00530917sningx0z",
             "imagePath": "",
           },
           "newNotification": true,
@@ -87,9 +88,10 @@ exports[`NotificationsScreen renders correctly 1`] = `
             },
             "content": "Lucas ipsum dolor sit amet organa c-3p0 hutt anakin ponda biggs yoda moff jinn solo. Mara fisto yoda ben jade. Mace ben wedge jinn leia luke. Moff solo obi-wan antilles grievous lando mandalore.",
             "createdAt": 2019-09-23T00:00:00.000Z,
-            "id": "286daniousad",
+            "id": "ck0o4wspk00540917wutatfi5",
           },
           "newNotification": false,
+          "postId": "ck0o4wsmd004q0917s30ywm4r",
           "type": "comment",
         }
       }
@@ -104,7 +106,7 @@ exports[`NotificationsScreen renders correctly 1`] = `
             },
             "content": "Mara fisto yoda ben jade. Mace ben wedge jinn leia luke. Moff solo obi-wan antilles grievous lando mandalore.",
             "createdAt": 2019-09-23T00:00:00.000Z,
-            "id": "286daniousad",
+            "id": "ck0o4wsmd004q0917s30ywm4r",
             "imagePath": "",
           },
           "newNotification": false,

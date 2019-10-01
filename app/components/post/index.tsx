@@ -13,6 +13,7 @@ interface Props {
   navigation: NavigationType;
   post: PostInterface;
   setDisplay?: string;
+  commentId?: string;
 }
 
 interface State {
@@ -67,13 +68,16 @@ class Post extends Component<Props, State> {
   }
 
   renderComments() {
-    const { comments, content, id } = this.props.post;
+    const { commentId, post } = this.props;
+    const { comments, content, id } = post;
+
     return (
       <Comments
         comments={comments}
         content={content}
         navigation={this.props.navigation}
         postId={id}
+        commentId={commentId}
       />
     );
   }
@@ -85,16 +89,8 @@ class Post extends Component<Props, State> {
       case "comments":
         return this.renderComments();
       default:
-        return this.renderLoading();
+        return this.renderBody();
     }
-  }
-
-  renderLoading() {
-    return (
-      <View style={styles.container}>
-        <Text>Loading</Text>
-      </View>
-    );
   }
 
   render() {
