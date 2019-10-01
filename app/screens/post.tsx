@@ -1,49 +1,57 @@
 import React, { Component } from "react";
 
-import { BackgroundContainer, Post } from "components";
-import { NavigationType } from "interfaces";
+import { withMappedNavigationParams } from "react-navigation-props-mapper";
+
+import { BackgroundContainer, Post, Query } from "components";
+import { NavigationType, Post as PostInterface } from "interfaces";
+import { POST } from "queries";
 
 interface Props {
   navigation: NavigationType;
+  id?: string;
+  commentId?: string;
+  post?: PostInterface;
+  setDisplay?: string;
 }
 
 class PostScreen extends Component<Props> {
-  getPost() {
-    const { navigation } = this.props;
-    return navigation.getParam("post", null);
-  }
+  post = (data: { post: PostInterface }) => {
+    const { commentId, setDisplay } = this.props;
 
-  getSetDisplay() {
-    const { navigation } = this.props;
-
-    let setDisplay;
-    if (navigation) {
-      setDisplay = navigation.getParam("setDisplay", "body");
-    }
-    return setDisplay;
-  }
-
-  getParam(param: string) {
-    const { navigation } = this.props;
-
-    let theParam;
-    if (navigation) {
-      theParam = navigation.getParam(param);
-    }
-    return theParam;
-  }
+    return (
+      <Post
+        navigation={this.props.navigation}
+        post={data.post}
+        setDisplay={setDisplay}
+        commentId={commentId}
+      />
+    );
+  };
 
   render() {
+    const { navigation, id, post, setDisplay } = this.props;
+
+    if (!post) {
+      return (
+        <BackgroundContainer>
+          <Query query={POST} variables={{ id }}>
+            {this.post}
+          </Query>
+        </BackgroundContainer>
+      );
+    }
+
     return (
       <BackgroundContainer>
         <Post
-          navigation={this.props.navigation}
-          post={this.getParam("post")}
-          setDisplay={this.getParam("setDisplay")}
+          navigation={navigation}
+          post={post}
+          setDisplay={setDisplay ? setDisplay : "post"}
         />
       </BackgroundContainer>
     );
   }
 }
 
-export { PostScreen };
+const wrappedPostScreen = withMappedNavigationParams()(PostScreen);
+export { wrappedPostScreen as PostScreen, PostScreen as UnwrappedPostScreen };

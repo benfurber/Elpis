@@ -1,2 +1,2 @@
-/* eslint-disable import/no-unresolved */
+/* ignore import/no-unresolved */
 import "./app/index";

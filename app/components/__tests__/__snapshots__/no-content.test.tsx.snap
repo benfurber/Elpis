@@ -1,0 +1,36 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NoContent renders correctly 1`] = `
+<BackgroundContainer>
+  <TouchableOpacity
+    activeOpacity={0.2}
+    onPress={[Function]}
+    style={
+      Object {
+        "flexDirection": "row",
+        "paddingHorizontal": 20,
+        "paddingTop": 20,
+      }
+    }
+  >
+    <customIcon
+      name="angle-double-left"
+      style={
+        Object {
+          "paddingRight": 5,
+        }
+      }
+    />
+    <Text>
+      Voltar
+    </Text>
+  </TouchableOpacity>
+  <ErrorMessage
+    error={
+      Object {
+        "message": "Conteúdo não encontrado",
+      }
+    }
+  />
+</BackgroundContainer>
+`;

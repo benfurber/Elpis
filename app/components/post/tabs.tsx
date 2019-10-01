@@ -43,8 +43,7 @@ const Tabs = (props: Props) => {
           />
         </TouchableOpacity>
       </View>
-      <View style={styles.tabWithoutBackground}>
-      </View>
+      <View style={styles.tabWithoutBackground}></View>
     </View>
   );
 };

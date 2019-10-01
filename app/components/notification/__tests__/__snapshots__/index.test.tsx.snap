@@ -1,0 +1,313 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Notification new for comment type it renders correctly 1`] = `
+<TouchableOpacity
+  activeOpacity={0.2}
+  onPress={[Function]}
+  style={
+    Object {
+      "backgroundColor": "rgba(255, 255, 255, 0.85)",
+      "marginBottom": 10,
+      "padding": 10,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "flexDirection": "row",
+      }
+    }
+  >
+    <NotificationAvatar
+      item={
+        Object {
+          "content": Object {
+            "author": Object {
+              "avatarPath": "",
+              "name": "May",
+            },
+            "content": "Lucas ipsum dolor sit amet organa c-3p0 hutt anakin ponda biggs yoda moff jinn solo. Mara fisto yoda ben jade. Mace ben wedge jinn leia luke. Moff solo obi-wan antilles grievous lando mandalore.",
+            "createdAt": 2019-09-23T00:00:00.000Z,
+            "id": "93716",
+          },
+          "newNotification": true,
+          "postId": "b845q3",
+          "type": "comment",
+        }
+      }
+    />
+    <NotificationTitle
+      item={
+        Object {
+          "content": Object {
+            "author": Object {
+              "avatarPath": "",
+              "name": "May",
+            },
+            "content": "Lucas ipsum dolor sit amet organa c-3p0 hutt anakin ponda biggs yoda moff jinn solo. Mara fisto yoda ben jade. Mace ben wedge jinn leia luke. Moff solo obi-wan antilles grievous lando mandalore.",
+            "createdAt": 2019-09-23T00:00:00.000Z,
+            "id": "93716",
+          },
+          "newNotification": true,
+          "postId": "b845q3",
+          "type": "comment",
+        }
+      }
+    />
+  </View>
+  <Details
+    item={
+      Object {
+        "content": Object {
+          "author": Object {
+            "avatarPath": "",
+            "name": "May",
+          },
+          "content": "Lucas ipsum dolor sit amet organa c-3p0 hutt anakin ponda biggs yoda moff jinn solo. Mara fisto yoda ben jade. Mace ben wedge jinn leia luke. Moff solo obi-wan antilles grievous lando mandalore.",
+          "createdAt": 2019-09-23T00:00:00.000Z,
+          "id": "93716",
+        },
+        "newNotification": true,
+        "postId": "b845q3",
+        "type": "comment",
+      }
+    }
+  />
+</TouchableOpacity>
+`;
+
+exports[`Notification new for post type it renders correctly 1`] = `
+<TouchableOpacity
+  activeOpacity={0.2}
+  onPress={[Function]}
+  style={
+    Object {
+      "backgroundColor": "rgba(255, 255, 255, 0.85)",
+      "marginBottom": 10,
+      "padding": 10,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "flexDirection": "row",
+      }
+    }
+  >
+    <NotificationAvatar
+      item={
+        Object {
+          "content": Object {
+            "author": Object {
+              "avatarPath": "",
+              "name": "E2M",
+            },
+            "content": "Mara fisto yoda ben jade. Mace ben wedge jinn leia luke. Lando mandalore.",
+            "createdAt": 2019-09-23T00:00:00.000Z,
+            "id": "986sasdfd",
+            "imagePath": "",
+          },
+          "newNotification": true,
+          "type": "post",
+        }
+      }
+    />
+    <NotificationTitle
+      item={
+        Object {
+          "content": Object {
+            "author": Object {
+              "avatarPath": "",
+              "name": "E2M",
+            },
+            "content": "Mara fisto yoda ben jade. Mace ben wedge jinn leia luke. Lando mandalore.",
+            "createdAt": 2019-09-23T00:00:00.000Z,
+            "id": "986sasdfd",
+            "imagePath": "",
+          },
+          "newNotification": true,
+          "type": "post",
+        }
+      }
+    />
+  </View>
+  <Details
+    item={
+      Object {
+        "content": Object {
+          "author": Object {
+            "avatarPath": "",
+            "name": "E2M",
+          },
+          "content": "Mara fisto yoda ben jade. Mace ben wedge jinn leia luke. Lando mandalore.",
+          "createdAt": 2019-09-23T00:00:00.000Z,
+          "id": "986sasdfd",
+          "imagePath": "",
+        },
+        "newNotification": true,
+        "type": "post",
+      }
+    }
+  />
+</TouchableOpacity>
+`;
+
+exports[`Notification old for comment type it renders correctly 1`] = `
+<TouchableOpacity
+  activeOpacity={0.2}
+  onPress={[Function]}
+  style={
+    Object {
+      "backgroundColor": "rgba(255, 255, 255, 0.85)",
+      "marginBottom": 10,
+      "padding": 10,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "flexDirection": "row",
+      }
+    }
+  >
+    <NotificationAvatar
+      item={
+        Object {
+          "content": Object {
+            "author": Object {
+              "avatarPath": "",
+              "name": "May",
+            },
+            "content": "Lucas ipsum dolor sit amet organa c-3p0 hutt anakin ponda biggs yoda moff jinn solo. Mara fisto yoda ben jade. Mace ben wedge jinn leia luke. Moff solo obi-wan antilles grievous lando mandalore.",
+            "createdAt": 2019-09-23T00:00:00.000Z,
+            "id": "315928bjaf",
+          },
+          "newNotification": false,
+          "postId": "35245gt1",
+          "type": "comment",
+        }
+      }
+    />
+    <NotificationTitle
+      item={
+        Object {
+          "content": Object {
+            "author": Object {
+              "avatarPath": "",
+              "name": "May",
+            },
+            "content": "Lucas ipsum dolor sit amet organa c-3p0 hutt anakin ponda biggs yoda moff jinn solo. Mara fisto yoda ben jade. Mace ben wedge jinn leia luke. Moff solo obi-wan antilles grievous lando mandalore.",
+            "createdAt": 2019-09-23T00:00:00.000Z,
+            "id": "315928bjaf",
+          },
+          "newNotification": false,
+          "postId": "35245gt1",
+          "type": "comment",
+        }
+      }
+    />
+  </View>
+  <Details
+    item={
+      Object {
+        "content": Object {
+          "author": Object {
+            "avatarPath": "",
+            "name": "May",
+          },
+          "content": "Lucas ipsum dolor sit amet organa c-3p0 hutt anakin ponda biggs yoda moff jinn solo. Mara fisto yoda ben jade. Mace ben wedge jinn leia luke. Moff solo obi-wan antilles grievous lando mandalore.",
+          "createdAt": 2019-09-23T00:00:00.000Z,
+          "id": "315928bjaf",
+        },
+        "newNotification": false,
+        "postId": "35245gt1",
+        "type": "comment",
+      }
+    }
+  />
+</TouchableOpacity>
+`;
+
+exports[`Notification old for post type it renders correctly 1`] = `
+<TouchableOpacity
+  activeOpacity={0.2}
+  onPress={[Function]}
+  style={
+    Object {
+      "backgroundColor": "rgba(255, 255, 255, 0.85)",
+      "marginBottom": 10,
+      "padding": 10,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "flexDirection": "row",
+      }
+    }
+  >
+    <NotificationAvatar
+      item={
+        Object {
+          "content": Object {
+            "author": Object {
+              "avatarPath": "",
+              "name": "E2M",
+            },
+            "content": "Mara fisto yoda ben jade. Mace ben wedge jinn leia luke. Lando mandalore.",
+            "createdAt": 2019-09-23T00:00:00.000Z,
+            "id": "078vw213",
+            "imagePath": "",
+          },
+          "newNotification": false,
+          "type": "post",
+        }
+      }
+    />
+    <NotificationTitle
+      item={
+        Object {
+          "content": Object {
+            "author": Object {
+              "avatarPath": "",
+              "name": "E2M",
+            },
+            "content": "Mara fisto yoda ben jade. Mace ben wedge jinn leia luke. Lando mandalore.",
+            "createdAt": 2019-09-23T00:00:00.000Z,
+            "id": "078vw213",
+            "imagePath": "",
+          },
+          "newNotification": false,
+          "type": "post",
+        }
+      }
+    />
+  </View>
+  <Details
+    item={
+      Object {
+        "content": Object {
+          "author": Object {
+            "avatarPath": "",
+            "name": "E2M",
+          },
+          "content": "Mara fisto yoda ben jade. Mace ben wedge jinn leia luke. Lando mandalore.",
+          "createdAt": 2019-09-23T00:00:00.000Z,
+          "id": "078vw213",
+          "imagePath": "",
+        },
+        "newNotification": false,
+        "type": "post",
+      }
+    }
+  />
+</TouchableOpacity>
+`;

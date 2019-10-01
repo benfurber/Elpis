@@ -5,11 +5,11 @@ import {
   Text,
   TextInput,
   TouchableOpacity,
-  View
+  View,
 } from "react-native";
 
 import { Mutation } from "react-apollo";
-import { withMappedNavigationParams } from 'react-navigation-props-mapper'
+import { withMappedNavigationParams } from "react-navigation-props-mapper";
 
 import { BackgroundContainer, Icon, Title } from "components";
 import { Comment, NavigationType, Post } from "interfaces";
@@ -19,9 +19,9 @@ import { layout, typography, colours } from "styles";
 import { Analytics, firstSentence } from "utils";
 
 interface Props {
-  commentId: null | Comment["id"]
+  commentId: null | Comment["id"];
   navigation: NavigationType;
-  postId: Post["id"]
+  postId: Post["id"];
 }
 
 interface State {
@@ -39,7 +39,7 @@ class AddReplyScreen extends Component<Props, State> {
       textInput: "",
       textInputExtra: "",
       title: "",
-    }
+    };
   }
   secondTextInput = TextInput as any;
 
@@ -56,7 +56,7 @@ class AddReplyScreen extends Component<Props, State> {
     if (textInput !== state.textInput) {
       this.setState({ textInput });
       if (this.secondTextInput) {
-        return this.secondTextInput.focus()
+        return this.secondTextInput.focus();
       }
     }
   }
@@ -65,7 +65,7 @@ class AddReplyScreen extends Component<Props, State> {
     const { textInput, textInputExtra } = this.state;
     this.setState({ textInputEditable: false });
 
-    const content = textInput + " " + textInputExtra
+    const content = textInput + " " + textInputExtra;
 
     query({
       variables: {
@@ -89,26 +89,26 @@ class AddReplyScreen extends Component<Props, State> {
       onChangeText: textInput => this.setState({ textInput }),
       value: this.state.textInput,
       returnKeyLabel: labels.submit,
-    }
+    };
 
     if (mutation === ADD_COMMENT) {
       return (createComment, {}) => (
         <View style={styles.textInputContainer}>
           <Text style={styles.label}>{labels.title}</Text>
           <TextInput
-            onSubmitEditing={
-              () => this.onSubmitEditing(createComment, this.props.postId)
+            onSubmitEditing={() =>
+              this.onSubmitEditing(createComment, this.props.postId)
             }
             style={styles.title}
-            { ...args }
+            {...args}
           />
           <Text style={styles.label}>{labels.body}</Text>
           <TextInput
-            { ...args }
+            {...args}
             autoFocus={false}
-            ref={input => this.secondTextInput = input }
-            onSubmitEditing={
-              () => this.onSubmitEditing(createComment, this.props.postId)
+            ref={input => (this.secondTextInput = input)}
+            onSubmitEditing={() =>
+              this.onSubmitEditing(createComment, this.props.postId)
             }
             onChangeText={textInputExtra => this.setState({ textInputExtra })}
             value={this.state.textInputExtra}
@@ -116,26 +116,22 @@ class AddReplyScreen extends Component<Props, State> {
             placeholder={labels.addPlaceholderBody}
           />
         </View>
-      )
+      );
     }
 
     return (createReply, {}) => (
       <TextInput
-        onSubmitEditing={
-          () => this.onSubmitEditing(createReply, this.props.commentId)
+        onSubmitEditing={() =>
+          this.onSubmitEditing(createReply, this.props.commentId)
         }
         style={styles.text}
-        { ...args }
+        {...args}
       />
-    )
+    );
   }
 
   renderAddResponse(mutation) {
-    return (
-      <Mutation mutation={mutation}>
-        {this.input(mutation)}
-      </Mutation>
-    );
+    return <Mutation mutation={mutation}>{this.input(mutation)}</Mutation>;
   }
 
   render() {
@@ -149,19 +145,14 @@ class AddReplyScreen extends Component<Props, State> {
         <View style={styles.header}>
           <View style={styles.closeContainer}>
             <TouchableOpacity onPress={() => this.props.navigation.pop()}>
-              <Icon
-                name="times-circle"
-                size={30}
-              />
+              <Icon name="times-circle" size={30} />
             </TouchableOpacity>
           </View>
           <Title style={styles.ctaText} text={text + ":"} small />
         </View>
         <View style={styles.body}>
           <ScrollView>
-            <View style={styles.row}>
-              {this.renderAddResponse(mutation)}
-            </View>
+            <View style={styles.row}>{this.renderAddResponse(mutation)}</View>
           </ScrollView>
         </View>
       </BackgroundContainer>
@@ -203,18 +194,18 @@ const styles = StyleSheet.create({
     padding: layout.spacingL,
     fontFamily: "creteround-regular",
     fontSize: typography.fontSizeXL,
-    flexWrap: "wrap"
+    flexWrap: "wrap",
   },
   text: {
     fontFamily: "creteround-regular",
     fontSize: typography.fontSizeL,
     padding: layout.spacingL,
     width: "100%",
-  }
+  },
 });
 
-const wrappedAddReplyScreen = withMappedNavigationParams()(AddReplyScreen)
-export { 
+const wrappedAddReplyScreen = withMappedNavigationParams()(AddReplyScreen);
+export {
   wrappedAddReplyScreen as AddReplyScreen,
   AddReplyScreen as UnwrappedAddReplyScreen,
 };
