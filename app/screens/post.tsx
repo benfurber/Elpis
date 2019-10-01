@@ -1,49 +1,35 @@
 import React, { Component } from "react";
 
-import { BackgroundContainer, Post } from "components";
-import { NavigationType } from "interfaces";
+import { withMappedNavigationParams } from "react-navigation-props-mapper";
+
+import { BackgroundContainer, NoContent, Post } from "components";
+import { NavigationType, Post as PostInterface } from "interfaces";
 
 interface Props {
   navigation: NavigationType;
+  post?: PostInterface;
+  setDisplay?: string;
 }
 
 class PostScreen extends Component<Props> {
-  getPost() {
-    const { navigation } = this.props;
-    return navigation.getParam("post", null);
-  }
-
-  getSetDisplay() {
-    const { navigation } = this.props;
-
-    let setDisplay;
-    if (navigation) {
-      setDisplay = navigation.getParam("setDisplay", "body");
-    }
-    return setDisplay;
-  }
-
-  getParam(param: string) {
-    const { navigation } = this.props;
-
-    let theParam;
-    if (navigation) {
-      theParam = navigation.getParam(param);
-    }
-    return theParam;
-  }
-
   render() {
+    const { navigation, post, setDisplay } = this.props;
+
+    if (!post) {
+      return <NoContent navigation={navigation} />;
+    }
+
     return (
       <BackgroundContainer>
         <Post
-          navigation={this.props.navigation}
-          post={this.getParam("post")}
-          setDisplay={this.getParam("setDisplay")}
+          navigation={navigation}
+          post={post}
+          setDisplay={setDisplay ? setDisplay : "post"}
         />
       </BackgroundContainer>
     );
   }
 }
 
-export { PostScreen };
+const wrappedPostScreen = withMappedNavigationParams()(PostScreen);
+export { wrappedPostScreen as PostScreen, PostScreen as UnwrappedPostScreen };

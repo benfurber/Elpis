@@ -1,7 +1,28 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`PostScreen renders correctly 1`] = `
+exports[`PostScreen when no post provided renders correctly 1`] = `<NoContent />`;
+
+exports[`PostScreen when post provided renders correctly 1`] = `
 <BackgroundContainer>
-  <Post />
+  <Post
+    post={
+      Object {
+        "author": Object {
+          "avatarPath": Object {
+            "testUri": "../../../app/assets/images/empower_two_women_logo.png",
+          },
+          "name": "Empodere Duas Mulheres",
+        },
+        "comments": Array [],
+        "content": null,
+        "createdAt": 2000-01-01T00:00:00.000Z,
+        "id": "10387-314fs-12asdbj",
+        "imagePath": Object {
+          "testUri": "../../../app/assets/images/image_post_1.jpg",
+        },
+      }
+    }
+    setDisplay="post"
+  />
 </BackgroundContainer>
 `;
