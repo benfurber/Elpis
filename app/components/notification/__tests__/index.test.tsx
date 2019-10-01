@@ -12,7 +12,7 @@ jest.mock(navigation, () => jest.fn());
 describe("Notification", () => {
   describe("new", () => {
     it("for comment type it renders correctly", () => {
-      mockDateNow("2019-10-09");
+      mockDateNow("2019-10-09T05:00:00");
 
       const commentNotification = {
         content: {
@@ -22,7 +22,7 @@ describe("Notification", () => {
           },
           content:
             "Lucas ipsum dolor sit amet organa c-3p0 hutt anakin ponda biggs yoda moff jinn solo. Mara fisto yoda ben jade. Mace ben wedge jinn leia luke. Moff solo obi-wan antilles grievous lando mandalore.",
-          createdAt: new Date("2019-09-23T03:24:00"),
+          createdAt: new Date("2019-09-23T02:24:00"),
           id: "93716",
         },
         newNotification: true,
@@ -38,7 +38,7 @@ describe("Notification", () => {
     });
 
     it("for post type it renders correctly", () => {
-      mockDateNow("2019-10-09");
+      mockDateNow("2019-10-10T05:00:00");
 
       const postNotification = {
         content: {
@@ -48,7 +48,7 @@ describe("Notification", () => {
           },
           content:
             "Mara fisto yoda ben jade. Mace ben wedge jinn leia luke. Lando mandalore.",
-          createdAt: new Date("2019-09-23"),
+          createdAt: new Date("2019-09-23T02:24:00"),
           id: "986sasdfd",
           imagePath: "",
         },
@@ -66,7 +66,7 @@ describe("Notification", () => {
 
   describe("old", () => {
     it("for comment type it renders correctly", () => {
-      mockDateNow("2019-10-09");
+      mockDateNow("2019-10-09T05:00:00");
 
       const commentNotification = {
         content: {
@@ -76,7 +76,7 @@ describe("Notification", () => {
           },
           content:
             "Lucas ipsum dolor sit amet organa c-3p0 hutt anakin ponda biggs yoda moff jinn solo. Mara fisto yoda ben jade. Mace ben wedge jinn leia luke. Moff solo obi-wan antilles grievous lando mandalore.",
-          createdAt: new Date("2019-09-23T03:24:00"),
+          createdAt: new Date("2019-09-23T02:24:00"),
           id: "315928bjaf",
         },
         newNotification: false,
@@ -92,7 +92,7 @@ describe("Notification", () => {
     });
 
     it("for post type it renders correctly", () => {
-      mockDateNow("2019-10-09");
+      mockDateNow("2019-10-09T05:00:00");
 
       const postNotification = {
         content: {
@@ -102,7 +102,7 @@ describe("Notification", () => {
           },
           content:
             "Mara fisto yoda ben jade. Mace ben wedge jinn leia luke. Lando mandalore.",
-          createdAt: new Date("2019-09-23"),
+          createdAt: new Date("2019-09-23T02:24:00"),
           id: "078vw213",
           imagePath: "",
         },
