@@ -12,14 +12,24 @@ export const FEED = gql`
       content
       imagePath
       comments {
+        totalReplies
+      }
+    }
+  }
+`;
+
+export const POST = gql`
+  query Post($id: ID!) {
+    post(id: $id) {
+      id
+      author {
         id
-        content
-        createdAt
-        replies {
-          id
-          content
-          createdAt
-        }
+        avatarPath
+      }
+      createdAt
+      content
+      imagePath
+      comments {
         totalReplies
       }
     }
