@@ -46,11 +46,15 @@ const AddContentScreen = createStackNavigator(
   },
 );
 
+const IndividualContentRoutes = {
+  Post: PostScreen,
+  AddContent: AddContentScreen,
+};
+
 const FeedStack = createStackNavigator(
   {
     Feed: FeedScreen,
-    Post: PostScreen,
-    AddContent: AddContentScreen,
+    ...IndividualContentRoutes,
   },
   {
     initialRouteName: "Feed",
@@ -58,10 +62,21 @@ const FeedStack = createStackNavigator(
   },
 );
 
+const NotificationsStack = createStackNavigator(
+  {
+    Notifications: NotificationsScreen,
+    ...IndividualContentRoutes,
+  },
+  {
+    initialRouteName: "Notifications",
+    ...stackConfig,
+  },
+);
+
 const mainTabs = createBottomTabNavigator(
   {
     Feed: FeedStack,
-    Notifications: NotificationsScreen,
+    Notifications: NotificationsStack,
     Feedback: FeedbackScreen,
   },
   {
