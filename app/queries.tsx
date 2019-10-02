@@ -98,3 +98,24 @@ export const USER_DETAILS = gql`
     }
   }
 `;
+
+export const NOTIFICATIONS = gql`
+  query user {
+    me {
+      notifications {
+        id
+        createdAt
+        post {
+          ...postAttributes
+        }
+        reply {
+          ...replyAttributes
+        }
+        newNotification
+        type
+      }
+    }
+  }
+  ${POST_ATTRIBUTES}
+  ${REPLY_ATTRIBUTES}
+`;
