@@ -1,41 +1,51 @@
 import gql from "graphql-tag";
 
+const POST_ATTRIBUTES = gql`
+  fragment postAttributes on Post {
+    id
+    author {
+      id
+      avatarPath
+    }
+    createdAt
+    content
+    imagePath
+    comments {
+      id
+      totalReplies
+    }
+  }
+`;
+
+const REPLY_ATTRIBUTES = gql`
+  fragment replyAttributes on Reply {
+    id
+    author {
+      id
+      name
+      avatarPath
+    }
+    createdAt
+    content
+  }
+`;
+
 export const FEED = gql`
   query {
     feed {
-      id
-      author {
-        id
-        avatarPath
-      }
-      createdAt
-      content
-      imagePath
-      comments {
-        id
-        totalReplies
-      }
+      ...postAttributes
     }
   }
+  ${POST_ATTRIBUTES}
 `;
 
 export const POST = gql`
   query Post($id: ID!) {
     post(id: $id) {
-      id
-      author {
-        id
-        avatarPath
-      }
-      createdAt
-      content
-      imagePath
-      comments {
-        id
-        totalReplies
-      }
+      ...postAttributes
     }
   }
+  ${POST_ATTRIBUTES}
 `;
 
 export const COMMENTS = gql`
@@ -69,18 +79,12 @@ export const COMMENT_WITH_REPLIES = gql`
       createdAt
       content
       replies {
-        id
-        author {
-          id
-          name
-          avatarPath
-        }
-        createdAt
-        content
+        ...replyAttributes
       }
       totalReplies
     }
   }
+  ${REPLY_ATTRIBUTES}
 `;
 
 export const USER_DETAILS = gql`
