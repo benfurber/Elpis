@@ -4,30 +4,50 @@ import { shallow } from "enzyme";
 
 import { mockDateNow } from "../../../test-utils";
 
-import { Notification } from "components";
+import { Notification } from "../notification";
 
 let navigation;
 jest.mock(navigation, () => jest.fn());
 
 describe("Notification", () => {
+  const basePost = {
+    author: {
+      id: "1352fe",
+      name: "E2M",
+      avatarPath: "",
+    },
+    content:
+      "Mara fisto yoda ben jade. Mace ben wedge jinn leia luke. Lando mandalore.",
+    createdAt: new Date("2019-09-23"),
+    id: "986sasdfd",
+    imagePath: "",
+  };
+
+  const baseReply = {
+    author: {
+      id: "135fad2fe",
+      name: "May",
+      avatarPath: "",
+    },
+    content:
+      "Mara fisto yoda ben jade. Mace ben wedge jinn leia luke. Lando mandalore.",
+    createdAt: new Date("2019-09-23"),
+    id: "986sasdfd",
+  };
+
   describe("new", () => {
     it("for comment type it renders correctly", () => {
       mockDateNow("2019-10-09");
 
       const commentNotification = {
         content: {
-          author: {
-            name: "May",
-            avatarPath: "",
-          },
-          content:
-            "Lucas ipsum dolor sit amet organa c-3p0 hutt anakin ponda biggs yoda moff jinn solo. Mara fisto yoda ben jade. Mace ben wedge jinn leia luke. Moff solo obi-wan antilles grievous lando mandalore.",
-          createdAt: new Date("2019-09-23"),
-          id: "93716",
+          post: basePost,
+          reply: baseReply,
+          type: "comment",
         },
+        createdAt: new Date("2019-09-23"),
+        id: "93716ewrs",
         newNotification: true,
-        type: "comment",
-        postId: "b845q3",
       };
 
       const component = shallow(
@@ -42,18 +62,13 @@ describe("Notification", () => {
 
       const postNotification = {
         content: {
-          author: {
-            name: "E2M",
-            avatarPath: "",
-          },
-          content:
-            "Mara fisto yoda ben jade. Mace ben wedge jinn leia luke. Lando mandalore.",
-          createdAt: new Date("2019-09-23"),
-          id: "986sasdfd",
-          imagePath: "",
+          post: basePost,
+          reply: null,
+          type: "post",
         },
+        createdAt: new Date("2019-09-23"),
+        id: "93716ewrs",
         newNotification: true,
-        type: "post",
       };
 
       const component = shallow(
@@ -70,18 +85,13 @@ describe("Notification", () => {
 
       const commentNotification = {
         content: {
-          author: {
-            name: "May",
-            avatarPath: "",
-          },
-          content:
-            "Lucas ipsum dolor sit amet organa c-3p0 hutt anakin ponda biggs yoda moff jinn solo. Mara fisto yoda ben jade. Mace ben wedge jinn leia luke. Moff solo obi-wan antilles grievous lando mandalore.",
-          createdAt: new Date("2019-09-23"),
-          id: "315928bjaf",
+          post: basePost,
+          reply: baseReply,
+          type: "comment",
         },
+        createdAt: new Date("2019-09-23"),
+        id: "93716ewrs",
         newNotification: false,
-        type: "comment",
-        postId: "35245gt1",
       };
 
       const component = shallow(
@@ -96,18 +106,13 @@ describe("Notification", () => {
 
       const postNotification = {
         content: {
-          author: {
-            name: "E2M",
-            avatarPath: "",
-          },
-          content:
-            "Mara fisto yoda ben jade. Mace ben wedge jinn leia luke. Lando mandalore.",
-          createdAt: new Date("2019-09-23"),
-          id: "078vw213",
-          imagePath: "",
+          post: basePost,
+          reply: null,
+          type: "post",
         },
-        newNotification: false,
-        type: "post",
+        createdAt: new Date("2019-09-23"),
+        id: "93716ewrs",
+        newNotification: true,
       };
 
       const component = shallow(

@@ -1,11 +1,18 @@
 import gql from "graphql-tag";
 
+const AUTHOR_ATTRIBUTES = gql`
+  fragment authorAttributes on User {
+    id
+    avatarPath
+    name
+  }
+`;
+
 const POST_ATTRIBUTES = gql`
   fragment postAttributes on Post {
     id
     author {
-      id
-      avatarPath
+      ...authorAttributes
     }
     createdAt
     content
@@ -15,19 +22,19 @@ const POST_ATTRIBUTES = gql`
       totalReplies
     }
   }
+  ${AUTHOR_ATTRIBUTES}
 `;
 
 const REPLY_ATTRIBUTES = gql`
   fragment replyAttributes on Reply {
     id
     author {
-      id
-      name
-      avatarPath
+      ...authorAttributes
     }
     createdAt
     content
   }
+  ${AUTHOR_ATTRIBUTES}
 `;
 
 export const FEED = gql`
@@ -102,17 +109,20 @@ export const USER_DETAILS = gql`
 export const NOTIFICATIONS = gql`
   query user {
     me {
+      id
       notifications {
         id
         createdAt
-        post {
-          ...postAttributes
-        }
-        reply {
-          ...replyAttributes
+        content {
+          post {
+            ...postAttributes
+          }
+          reply {
+            ...replyAttributes
+          }
+          type
         }
         newNotification
-        type
       }
     }
   }

@@ -15,9 +15,9 @@ interface Props {
 
 class Details extends Component<Props> {
   contentPrefix() {
-    const { content, type } = this.props.item;
+    const { content } = this.props.item;
 
-    switch (type) {
+    switch (content.type) {
       case "comment":
         return (
           <View style={styles.quotes}>
@@ -26,7 +26,7 @@ class Details extends Component<Props> {
           </View>
         );
       case "post":
-        const { imagePath } = content;
+        const { imagePath } = content.post;
         const source = validURL(imagePath)
           ? imagePath
           : require(fallbackThumbnail);
@@ -44,12 +44,15 @@ class Details extends Component<Props> {
 
   render() {
     const { content, newNotification } = this.props.item;
+    const { post, reply } = content;
+
+    const text = reply ? reply.content : post.content;
 
     if (newNotification) {
       return (
         <View style={[styles.row, styles.content]}>
           {this.contentPrefix()}
-          <Text style={styles.text}>{content.content}</Text>
+          <Text style={styles.text}>{text}</Text>
         </View>
       );
     }

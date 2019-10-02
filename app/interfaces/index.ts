@@ -1,6 +1,7 @@
 import { NavigationScreenProp } from "react-navigation";
 
 export interface Author {
+  id: string;
   avatarPath: string;
   name: string;
 }
@@ -34,8 +35,12 @@ export interface Post extends ContentBase {
 export interface Reply extends ContentBase {}
 
 export interface Notification {
-  content: ContentBase;
+  id: string;
+  createdAt: Date;
+  content: {
+    post: ContentBase;
+    reply: null | ContentBase;
+    type: string; // should be `"comment" | "post"` but there's a bug;
+  };
   newNotification: boolean;
-  type: string; // should be `"comment" | "post"` but there's a bug;
-  postId?: string;
 }

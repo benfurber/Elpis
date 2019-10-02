@@ -13,12 +13,21 @@ interface Props {
 
 class NotificationTitle extends Component<Props> {
   render() {
-    const { content, type } = this.props.item;
-    const { author, createdAt } = content;
-    const { leftAComment, published } = labels.notifications;
+    const { content, createdAt } = this.props.item;
+    const { post, reply, type } = content;
 
-    const titleType = type === "comment" ? leftAComment : published;
-    const notificationTitle = `${author.name} ${titleType}`;
+    const details = {
+      comment: {
+        title: labels.notifications.leftAComment,
+        author: reply && reply.author.name,
+      },
+      post: {
+        title: labels.notifications.published,
+        author: post.author.name,
+      },
+    };
+
+    const notificationTitle = `${details[type].author} ${details[type].title}`;
 
     return (
       <View style={styles.headings}>

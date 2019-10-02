@@ -1,60 +1,75 @@
 import React, { Component } from "react";
-import { StyleSheet, TouchableOpacity, View } from "react-native";
+import { FlatList, StyleSheet, View } from "react-native";
 
+import { Badge, Query, Title } from "components";
 import { NavigationType, Notification as NotificationType } from "interfaces";
-import { colours, layout } from "styles";
+import { labels } from "labels";
+import { NOTIFICATIONS } from "queries";
+import { layout, typography } from "styles";
 
-import { Avatar } from "./avatar";
-import { Details } from "./details";
-import { Title } from "./title";
+import { Notification } from "./notification";
 
 interface Props {
-  item: NotificationType;
   navigation: NavigationType;
 }
 
-class Notification extends Component<Props> {
-  onPress = () => {
-    const { content, type, postId } = this.props.item;
-    const { id } = content;
+class Notifications extends Component<Props> {
+  filterNotifications(data, boolean) {
+    const { notifications } = data.me;
+    return notifications.filter(
+      notification => notification.newNotification === boolean,
+    );
+  }
 
-    const postParams = {
-      id,
-      setDisplay: "body",
-    };
-    const replyParams = {
-      id: postId,
-      commentId: id,
-      setDisplay: "comments",
-    };
+  loop = data => {
+    const newNotifications = this.filterNotifications(data, true);
+    const oldNotifications = this.filterNotifications(data, false);
 
-    const params = type === "comment" ? replyParams : postParams;
-    return this.props.navigation.navigate("Post", params);
+    return (
+      <View style={{ height: "100%" }}>
+        <View style={styles.heading}>
+          <Title text={labels.notifications.newMultiple} />
+          <Badge left={65} number={newNotifications.length} />
+        </View>
+
+        <FlatList
+          data={newNotifications}
+          keyExtractor={({ id }) => id}
+          renderItem={({ item }: { item: NotificationType }) => (
+            <Notification navigation={this.props.navigation} item={item} />
+          )}
+        />
+
+        <View style={styles.heading}>
+          <Title text={labels.notifications.oldMultiple} />
+        </View>
+
+        <FlatList
+          data={oldNotifications}
+          keyExtractor={({ id }) => id}
+          renderItem={({ item }: { item: NotificationType }) => (
+            <Notification navigation={this.props.navigation} item={item} />
+          )}
+        />
+      </View>
+    );
   };
 
   render() {
-    return (
-      <TouchableOpacity style={styles.item} onPress={this.onPress}>
-        <View style={styles.row}>
-          <Avatar item={this.props.item} />
-          <Title item={this.props.item} />
-        </View>
-        <Details item={this.props.item} />
-      </TouchableOpacity>
-    );
+    return <Query query={NOTIFICATIONS}>{this.loop}</Query>;
   }
 }
 
 const styles = StyleSheet.create({
-  item: {
-    backgroundColor: colours.whiteTransparent,
-    marginBottom: layout.spacing,
-    padding: layout.spacing,
+  heading: {
+    marginVertical: layout.spacing,
+    paddingHorizontal: layout.spacingL,
+    paddingTop: layout.spacingS,
   },
-  row: {
-    alignItems: "center",
-    flexDirection: "row",
+  title: {
+    fontSize: typography.fontSizeXL,
+    margin: layout.spacingL,
   },
 });
 
-export { Notification };
+export { Notifications };
