@@ -33,6 +33,9 @@ const REPLY_ATTRIBUTES = gql`
     }
     createdAt
     content
+    comment {
+      id
+    }
   }
   ${AUTHOR_ATTRIBUTES}
 `;

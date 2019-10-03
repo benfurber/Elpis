@@ -20,7 +20,7 @@ class Notification extends Component<Props> {
 
     const params = {
       id: post.id,
-      commentId: reply && reply.id,
+      commentId: reply && reply.comment.id,
       setDisplay: reply ? "comments" : "body",
     };
 

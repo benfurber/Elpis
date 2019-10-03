@@ -32,14 +32,16 @@ export interface Post extends ContentBase {
 }
 
 // eslint-disable-next-line @typescript-eslint/no-empty-interface
-export interface Reply extends ContentBase {}
+export interface Reply extends ContentBase {
+  comment: Comment;
+}
 
 export interface Notification {
   id: string;
   createdAt: Date;
   content: {
     post: ContentBase;
-    reply: null | ContentBase;
+    reply: null | Reply;
     type: string; // should be `"comment" | "post"` but there's a bug;
   };
   newNotification: boolean;
