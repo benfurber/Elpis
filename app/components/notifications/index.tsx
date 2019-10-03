@@ -21,6 +21,18 @@ class Notifications extends Component<Props> {
     );
   }
 
+  list(data) {
+    return (
+      <FlatList
+        data={data}
+        keyExtractor={({ id }) => id}
+        renderItem={({ item }: { item: NotificationType }) => (
+          <Notification navigation={this.props.navigation} item={item} />
+        )}
+      />
+    );
+  }
+
   loop = data => {
     const newNotifications = this.filterNotifications(data, true);
     const oldNotifications = this.filterNotifications(data, false);
@@ -32,25 +44,13 @@ class Notifications extends Component<Props> {
           <Badge left={65} number={newNotifications.length} />
         </View>
 
-        <FlatList
-          data={newNotifications}
-          keyExtractor={({ id }) => id}
-          renderItem={({ item }: { item: NotificationType }) => (
-            <Notification navigation={this.props.navigation} item={item} />
-          )}
-        />
+        {this.list(newNotifications)}
 
         <View style={styles.heading}>
           <Title text={labels.notifications.oldMultiple} />
         </View>
 
-        <FlatList
-          data={oldNotifications}
-          keyExtractor={({ id }) => id}
-          renderItem={({ item }: { item: NotificationType }) => (
-            <Notification navigation={this.props.navigation} item={item} />
-          )}
-        />
+        {this.list(oldNotifications)}
       </View>
     );
   };

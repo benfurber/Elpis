@@ -13,7 +13,7 @@ export { LoginForm } from "./login-form";
 export { Logo } from "./logo";
 export { MessageBox } from "./message-box";
 export { NoContent } from "./no-content";
-export { Notifications } from "./notification";
+export { Notifications } from "./notifications";
 export { Post } from "./post";
 export { Query } from "./query";
 export { TextInput } from "./text-input";
