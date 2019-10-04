@@ -1,7 +1,9 @@
 import "react-native";
 import React from "react";
 import { shallow } from "enzyme";
+import { MockedProvider } from "@apollo/react-testing";
 
+import { comment } from "../../../factories";
 import { mockDateNow } from "../../../test-utils";
 
 import { Notification } from "../notification";
@@ -29,6 +31,7 @@ describe("Notification", () => {
       name: "May",
       avatarPath: "",
     },
+    comment,
     content:
       "Mara fisto yoda ben jade. Mace ben wedge jinn leia luke. Lando mandalore.",
     createdAt: new Date("2019-09-23"),
@@ -51,7 +54,9 @@ describe("Notification", () => {
       };
 
       const component = shallow(
-        <Notification item={commentNotification} navigation={navigation} />,
+        <MockedProvider>
+          <Notification item={commentNotification} navigation={navigation} />
+        </MockedProvider>,
       );
 
       expect(component).toMatchSnapshot();
@@ -72,7 +77,9 @@ describe("Notification", () => {
       };
 
       const component = shallow(
-        <Notification item={postNotification} navigation={navigation} />,
+        <MockedProvider>
+          <Notification item={postNotification} navigation={navigation} />
+        </MockedProvider>,
       );
 
       expect(component).toMatchSnapshot();
@@ -95,7 +102,9 @@ describe("Notification", () => {
       };
 
       const component = shallow(
-        <Notification item={commentNotification} navigation={navigation} />,
+        <MockedProvider>
+          <Notification item={commentNotification} navigation={navigation} />
+        </MockedProvider>,
       );
 
       expect(component).toMatchSnapshot();
@@ -116,7 +125,9 @@ describe("Notification", () => {
       };
 
       const component = shallow(
-        <Notification item={postNotification} navigation={navigation} />,
+        <MockedProvider>
+          <Notification item={postNotification} navigation={navigation} />
+        </MockedProvider>,
       );
 
       expect(component).toMatchSnapshot();
