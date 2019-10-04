@@ -1,42 +1,46 @@
-import React, { Component } from "react";
+import React from "react";
+import { StyleSheet, Text, View } from "react-native";
 import AsyncStorage from "@react-native-community/async-storage";
-import { withApollo, WithApolloClient } from "react-apollo";
+import { useQuery } from "@apollo/react-hooks";
 
 import { BackgroundContainer, Loading } from "components";
 import { NavigationType } from "interfaces";
 import { USER_DETAILS } from "queries";
 
 interface Props {
-  client: WithApolloClient<any>;
   navigation: NavigationType;
 }
 
-class AuthLoadingScreen extends Component<Props> {
-  componentDidMount() {
-    this.loginUser();
-  }
+function AuthLoadingScreen(props: Props) {
+  const { navigation } = props;
+  const { error, data } = useQuery(USER_DETAILS);
 
-  loginUser = async () => {
-    const { client, navigation } = this.props;
-    const token = await AsyncStorage.getItem("token");
+  if (error) return <Text>Error! ${error.message}</Text>;
+
+  if (data && data.me) {
+    const token = AsyncStorage.getItem("token");
 
     if (!token) {
       return navigation.navigate("Welcome");
     }
-
-    const result = await client.query({ query: USER_DETAILS });
-    const { onboarded } = result.data.me;
-
-    navigation.navigate(onboarded ? "Main" : "Onboarding");
-  };
-
-  render() {
-    return (
-      <BackgroundContainer>
-        <Loading />
-      </BackgroundContainer>
-    );
+    return navigation.navigate(data.me.onboarded ? "Main" : "Onboarding");
   }
+
+  return (
+    <BackgroundContainer>
+      <View style={styles.container}>
+        <Loading />
+      </View>
+    </BackgroundContainer>
+  );
 }
-const Connected = withApollo(AuthLoadingScreen);
-export { Connected as AuthLoadingScreen };
+
+const styles = StyleSheet.create({
+  container: {
+    alignItems: "center",
+    alignSelf: "stretch",
+    justifyContent: "center",
+  },
+});
+
+export { AuthLoadingScreen };
