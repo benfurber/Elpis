@@ -13,6 +13,7 @@ interface Props {
   navigation: NavigationType;
   post: PostInterface;
   setDisplay?: string;
+  styles?: object;
   commentId?: string;
 }
 
@@ -97,7 +98,7 @@ class Post extends Component<Props, State> {
     const totalComments = calculateTotalComments(this.props.post.comments);
 
     return (
-      <View style={[styles.container, this.fullHeight()]}>
+      <View style={[styles.container, this.fullHeight(), this.props.styles]}>
         <Tabs
           onPressComments={this.onPressComments}
           onPressPost={this.onPressPost}

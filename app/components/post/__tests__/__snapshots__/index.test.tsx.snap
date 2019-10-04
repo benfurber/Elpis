@@ -11,6 +11,7 @@ exports[`Post when comments are set to display renders correctly 1`] = `
         "alignItems": "stretch",
         "height": "100%",
       },
+      undefined,
     ]
   }
 >
@@ -53,6 +54,7 @@ exports[`Post when the body is set to display renders correctly 1`] = `
         "marginBottom": 20,
       },
       undefined,
+      undefined,
     ]
   }
 >
@@ -90,6 +92,7 @@ exports[`Post when the body is set to display renders correctly if no content is
       Object {
         "marginBottom": 20,
       },
+      undefined,
       undefined,
     ]
   }
