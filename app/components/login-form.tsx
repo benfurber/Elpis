@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { StyleSheet, View, Text } from "react-native";
+import { StyleSheet, View } from "react-native";
 
 import { Mutation } from "react-apollo";
 import AsyncStorage from "@react-native-community/async-storage";
