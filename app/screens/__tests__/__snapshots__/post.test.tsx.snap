@@ -300,6 +300,12 @@ exports[`PostScreen when post provided renders correctly 1`] = `
       }
     }
     setDisplay="post"
+    styles={
+      Object {
+        "alignItems": "stretch",
+        "height": "100%",
+      }
+    }
   />
 </BackgroundContainer>
 `;

@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-
+import { StyleSheet } from "react-native";
 import { withMappedNavigationParams } from "react-navigation-props-mapper";
 
 import { BackgroundContainer, Post, Query } from "components";
@@ -47,11 +47,19 @@ class PostScreen extends Component<Props> {
           navigation={navigation}
           post={post}
           setDisplay={setDisplay ? setDisplay : "post"}
+          styles={styles.fullHeight}
         />
       </BackgroundContainer>
     );
   }
 }
+
+const styles = StyleSheet.create({
+  fullHeight: {
+    alignItems: "stretch",
+    height: "100%",
+  },
+});
 
 const wrappedPostScreen = withMappedNavigationParams()(PostScreen);
 export { wrappedPostScreen as PostScreen, PostScreen as UnwrappedPostScreen };
