@@ -1,7 +1,11 @@
 import React, { Component } from "react";
 import { StyleSheet, TouchableOpacity, View } from "react-native";
 
+import { withApollo } from "react-apollo";
+import { ApolloClient } from "apollo-client";
+
 import { NavigationType, Notification as NotificationType } from "interfaces";
+import { AGE_NOTIFICATION } from "mutations";
 import { colours, layout } from "styles";
 
 import { Avatar } from "./avatar";
@@ -10,12 +14,14 @@ import { Title } from "./title";
 
 interface Props {
   item: NotificationType;
+  client: ApolloClient<{}>;
   navigation: NavigationType;
 }
 
 class Notification extends Component<Props> {
   onPress = () => {
-    const { content } = this.props.item;
+    const { item, client } = this.props;
+    const { content, id } = item;
     const { post, reply } = content;
 
     const params = {
@@ -24,6 +30,7 @@ class Notification extends Component<Props> {
       setDisplay: reply ? "comments" : "body",
     };
 
+    client.mutate({ mutation: AGE_NOTIFICATION, variables: { id } });
     return this.props.navigation.navigate("Post", params);
   };
 
@@ -53,4 +60,5 @@ const styles = StyleSheet.create({
   },
 });
 
-export { Notification };
+const withMutation = withApollo(Notification);
+export { withMutation as Notification };
