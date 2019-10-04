@@ -2,7 +2,7 @@ import React from "react";
 import { Text } from "react-native";
 import { shallow } from "enzyme";
 
-import { author } from "../../../factories";
+import { author, comment } from "../../../factories";
 import { mockDateNow } from "../../../test-utils";
 
 import { Replies } from "../replies";
@@ -18,6 +18,7 @@ describe("Comments<Replies>", () => {
           "Meu pai também fez o mesmo. Logo depois que minha mãe pediu o divórcio porque sofria violência dentro de casa, ele pegou as malas, se mudou e sumiu no mundo. Nem faço mais questão de saber pra onde ele foi.",
         createdAt: new Date("2019-01-02"),
         id: "21098",
+        comment,
       };
 
       const reply2 = {
@@ -25,6 +26,7 @@ describe("Comments<Replies>", () => {
         content: "Nem faço mais questão de saber pra onde ele foi.",
         createdAt: new Date("2019-01-03"),
         id: "21099",
+        comment,
       };
 
       const item = {
