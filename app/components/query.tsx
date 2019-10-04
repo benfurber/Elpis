@@ -37,12 +37,8 @@ class NewQuery extends Component<Props, State> {
     );
   }
 
-  empty(object) {
-    return Object.keys(object).length === 0 || object === undefined;
-  }
-
   renderContent(data) {
-    if (this.empty(data)) {
+    if (!data || data === undefined) {
       return this.renderLoading();
     }
     return this.props.children(data);
