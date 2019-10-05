@@ -42,7 +42,7 @@ const AddContentScreen = createStackNavigator(
   },
   {
     mode: "modal",
-    headerMode: "none",
+    ...stackConfig,
   },
 );
 
