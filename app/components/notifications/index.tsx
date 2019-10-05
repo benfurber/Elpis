@@ -33,23 +33,40 @@ class Notifications extends Component<Props> {
     );
   }
 
+  header(notifications, type) {
+    const {
+      newMultiple,
+      newSingular,
+      oldMultiple,
+      oldSingular,
+    } = labels.notifications;
+    const length = notifications.length;
+
+    const badge = <Badge left={65} number={notifications.length} />;
+
+    if (length > 0) {
+      const multiple = type === "new" ? newMultiple : oldMultiple;
+      const single = type === "new" ? newSingular : oldSingular;
+
+      return (
+        <View style={styles.heading}>
+          <Title text={length > 1 ? multiple : single} />
+          {type === "new" && badge}
+        </View>
+      );
+    }
+  }
+
   loop = data => {
     const newNotifications = this.filterNotifications(data, true);
     const oldNotifications = this.filterNotifications(data, false);
 
     return (
       <View style={{ height: "100%" }}>
-        <View style={styles.heading}>
-          <Title text={labels.notifications.newMultiple} />
-          <Badge left={65} number={newNotifications.length} />
-        </View>
-
+        {this.header(newNotifications, "new")}
         {this.list(newNotifications)}
 
-        <View style={styles.heading}>
-          <Title text={labels.notifications.oldMultiple} />
-        </View>
-
+        {this.header(oldNotifications, "old")}
         {this.list(oldNotifications)}
       </View>
     );
