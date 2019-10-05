@@ -105,6 +105,7 @@ export const USER_DETAILS = gql`
       email
       avatarPath
       onboarded
+      unreadNotifications
     }
   }
 `;
@@ -113,6 +114,7 @@ export const NOTIFICATIONS = gql`
   query user {
     me {
       id
+      unreadNotifications
       notifications {
         id
         createdAt
@@ -131,4 +133,13 @@ export const NOTIFICATIONS = gql`
   }
   ${POST_ATTRIBUTES}
   ${REPLY_ATTRIBUTES}
+`;
+
+export const NOTIFICATIONS_UNREAD = gql`
+  query user {
+    me {
+      id
+      unreadNotifications
+    }
+  }
 `;

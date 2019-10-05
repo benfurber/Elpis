@@ -16,5 +16,6 @@ export { NoContent } from "./no-content";
 export { Notifications } from "./notifications";
 export { Post } from "./post";
 export { Query } from "./query";
+export { TabBarIcon } from "./tab-bar-icon";
 export { TextInput } from "./text-input";
 export { Title } from "./title";
