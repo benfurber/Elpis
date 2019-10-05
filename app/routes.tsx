@@ -6,7 +6,7 @@ import {
   createSwitchNavigator,
 } from "react-navigation";
 
-import { Icon } from "components";
+import { TabBarIcon } from "components";
 import {
   AddReplyScreen,
   AuthLoadingScreen,
@@ -20,13 +20,6 @@ import {
   PostScreen,
   WelcomeScreen,
 } from "screens";
-import { colours } from "styles";
-
-const routeNameIcon = {
-  Feed: "newspaper",
-  Feedback: "file-alt",
-  Notifications: "bell",
-};
 
 enum headerMode {
   None = "none",
@@ -83,11 +76,9 @@ const mainTabs = createBottomTabNavigator(
     defaultNavigationOptions: ({ navigation }) => ({
       tabBarIcon: ({ focused }: { focused: boolean }) => {
         return (
-          <Icon
-            colour={focused ? colours.darkGrey : colours.mediumGrey}
-            name={routeNameIcon[navigation.state.routeName]}
-            size={35}
-            solid={focused}
+          <TabBarIcon
+            routeName={navigation.state.routeName}
+            focused={focused}
           />
         );
       },
