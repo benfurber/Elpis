@@ -7,8 +7,6 @@ import { Notification } from "interfaces";
 import { colours, layout } from "styles";
 import { validURL } from "utils";
 
-const fallbackThumbnail = "../../assets/images/image_post_1.jpg";
-
 interface Props {
   item: Notification;
 }
@@ -27,15 +25,14 @@ class Details extends Component<Props> {
         );
       case "post":
         const { imagePath } = content.post;
-        const source = validURL(imagePath)
-          ? imagePath
-          : require(fallbackThumbnail);
 
-        return (
-          <View style={styles.imageContainer}>
-            <FlexImage source={source} style={styles.image} />
-          </View>
-        );
+        if (imagePath && validURL(imagePath)) {
+          return (
+            <View style={styles.imageContainer}>
+              <FlexImage source={{ uri: imagePath }} style={styles.image} />
+            </View>
+          );
+        }
 
       default:
         return null;
