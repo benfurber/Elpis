@@ -2,6 +2,29 @@
 
 exports[`PostScreen when no post provided renders correctly 1`] = `
 <BackgroundContainer>
+  <TouchableOpacity
+    activeOpacity={0.2}
+    onPress={[Function]}
+    style={
+      Object {
+        "flexDirection": "row",
+        "paddingBottom": 10,
+        "paddingHorizontal": 20,
+      }
+    }
+  >
+    <customIcon
+      name="angle-double-left"
+      style={
+        Object {
+          "paddingRight": 5,
+        }
+      }
+    />
+    <Text>
+      Voltar
+    </Text>
+  </TouchableOpacity>
   <NewQuery
     query={
       Object {
@@ -280,6 +303,29 @@ exports[`PostScreen when no post provided renders correctly 1`] = `
 
 exports[`PostScreen when post provided renders correctly 1`] = `
 <BackgroundContainer>
+  <TouchableOpacity
+    activeOpacity={0.2}
+    onPress={[Function]}
+    style={
+      Object {
+        "flexDirection": "row",
+        "paddingBottom": 10,
+        "paddingHorizontal": 20,
+      }
+    }
+  >
+    <customIcon
+      name="angle-double-left"
+      style={
+        Object {
+          "paddingRight": 5,
+        }
+      }
+    />
+    <Text>
+      Voltar
+    </Text>
+  </TouchableOpacity>
   <Post
     post={
       Object {
@@ -302,8 +348,7 @@ exports[`PostScreen when post provided renders correctly 1`] = `
     setDisplay="post"
     styles={
       Object {
-        "alignItems": "stretch",
-        "height": "100%",
+        "flex": 1,
       }
     }
   />

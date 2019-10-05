@@ -52,7 +52,7 @@ class ButtonAddReply extends Component<Props, State> {
 
   render() {
     const { commentId } = this.props;
-    let { fade } = this.state;
+    const { fade } = this.state;
 
     const text = commentId ? labels.addYourReply : labels.addNewTopic;
 
@@ -70,7 +70,7 @@ const styles = StyleSheet.create({
   button: {
     backgroundColor: colours.navyBlueDark,
     borderRadius: layout.borderRadiusL,
-    bottom: layout.spacingS,
+    bottom: layout.spacing,
     flexDirection: "row",
     margin: layout.spacing,
     paddingVertical: layout.spacing,

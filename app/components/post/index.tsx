@@ -1,8 +1,9 @@
 import React, { Component } from "react";
-import { StyleSheet, Text, View } from "react-native";
+import { StyleSheet, View } from "react-native";
 
 import { Comments } from "components";
 import { NavigationType, Post as PostInterface } from "interfaces";
+import { layout } from "styles";
 import { calculateTotalComments } from "utils";
 
 import { Content } from "./content";
@@ -12,6 +13,7 @@ import { Tabs } from "./tabs";
 interface Props {
   navigation: NavigationType;
   post: PostInterface;
+  feed?: true;
   setDisplay?: string;
   styles?: object;
   commentId?: string;
@@ -42,22 +44,31 @@ class Post extends Component<Props, State> {
     }
   }
 
-  onPressComments = () => {
-    const { navigation, post } = this.props;
+  onPressComments() {
+    return () => this.navigate("comments");
+  }
+
+  onPressPost() {
+    return () => this.navigate("body");
+  }
+
+  navigate(setDisplay: string) {
+    const { navigation, feed, post } = this.props;
+
+    if (!feed) {
+      this.setState({ display: setDisplay });
+    }
+
     return navigation.navigate("Post", {
       post,
-      setDisplay: "comments",
+      setDisplay,
     });
-  };
-
-  onPressPost = () => {
-    return this.props.navigation.pop();
-  };
+  }
 
   renderBody() {
     const { author, content, createdAt, imagePath } = this.props.post;
     return (
-      <View>
+      <View style={styles.container}>
         <Content
           createdAt={createdAt}
           content={content}
@@ -98,10 +109,10 @@ class Post extends Component<Props, State> {
     const totalComments = calculateTotalComments(this.props.post.comments);
 
     return (
-      <View style={[styles.container, this.fullHeight(), this.props.styles]}>
+      <View style={[this.fullHeight(), this.props.styles]}>
         <Tabs
-          onPressComments={this.onPressComments}
-          onPressPost={this.onPressPost}
+          onPressComments={this.onPressComments()}
+          onPressPost={this.onPressPost()}
           display={this.state.display}
           totalComments={totalComments}
         />
@@ -113,7 +124,7 @@ class Post extends Component<Props, State> {
 
 const styles = StyleSheet.create({
   container: {
-    marginBottom: 20,
+    marginBottom: layout.spacingL,
   },
   fullHeight: {
     alignItems: "stretch",

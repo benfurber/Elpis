@@ -1,10 +1,12 @@
 import React, { Component } from "react";
-import { StyleSheet } from "react-native";
+import { StyleSheet, Text, TouchableOpacity } from "react-native";
 import { withMappedNavigationParams } from "react-navigation-props-mapper";
 
-import { BackgroundContainer, Post, Query } from "components";
+import { BackgroundContainer, Icon, Post, Query } from "components";
 import { NavigationType, Post as PostInterface } from "interfaces";
+import { labels } from "labels";
 import { POST } from "queries";
+import { layout } from "styles";
 
 interface Props {
   navigation: NavigationType;
@@ -15,12 +17,12 @@ interface Props {
 }
 
 class PostScreen extends Component<Props> {
-  post = (data: { post: PostInterface }) => {
-    const { commentId, setDisplay } = this.props;
+  postWithData = (data: { post: PostInterface }) => {
+    const { commentId, navigation, setDisplay } = this.props;
 
     return (
       <Post
-        navigation={this.props.navigation}
+        navigation={navigation}
         post={data.post}
         setDisplay={setDisplay}
         commentId={commentId}
@@ -28,36 +30,57 @@ class PostScreen extends Component<Props> {
     );
   };
 
-  render() {
-    const { navigation, id, post, setDisplay } = this.props;
-
-    if (!post) {
-      return (
-        <BackgroundContainer>
-          <Query query={POST} variables={{ id }}>
-            {this.post}
-          </Query>
-        </BackgroundContainer>
-      );
-    }
+  fetchPost() {
+    const { id } = this.props;
 
     return (
-      <BackgroundContainer>
+      <Query query={POST} variables={{ id }}>
+        {this.postWithData}
+      </Query>
+    );
+  }
+
+  post() {
+    const { navigation, post, setDisplay } = this.props;
+    if (post) {
+      return (
         <Post
           navigation={navigation}
           post={post}
           setDisplay={setDisplay ? setDisplay : "post"}
           styles={styles.fullHeight}
         />
+      );
+    }
+  }
+
+  render() {
+    const { navigation, post } = this.props;
+
+    return (
+      <BackgroundContainer>
+        <TouchableOpacity style={styles.back} onPress={() => navigation.pop()}>
+          <Icon name="angle-double-left" style={styles.icon} />
+          <Text>{labels.back}</Text>
+        </TouchableOpacity>
+
+        {post ? this.post() : this.fetchPost()}
       </BackgroundContainer>
     );
   }
 }
 
 const styles = StyleSheet.create({
+  back: {
+    paddingBottom: layout.spacing,
+    paddingHorizontal: layout.spacingL,
+    flexDirection: "row",
+  },
   fullHeight: {
-    alignItems: "stretch",
-    height: "100%",
+    flex: 1,
+  },
+  icon: {
+    paddingRight: layout.spacingS,
   },
 });
 

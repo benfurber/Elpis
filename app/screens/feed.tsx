@@ -22,7 +22,7 @@ class FeedScreen extends Component<Props> {
         data={data.feed}
         keyExtractor={({ id }) => id}
         renderItem={({ item }) => (
-          <Post navigation={this.props.navigation} post={item} />
+          <Post navigation={this.props.navigation} post={item} feed />
         )}
       />
     );
