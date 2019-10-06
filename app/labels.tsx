@@ -25,8 +25,8 @@ const labels = {
   ok: "OK",
   onboarding: {
     welcome: {
-      title: "Bem vinda à Elpis, ",
-      text: "Muitas palavras aqui. ",
+      title: "Bem vinda à Elpis",
+      text: "Muitas palavras aqui.",
     },
     features: {
       title: "O que esperar",

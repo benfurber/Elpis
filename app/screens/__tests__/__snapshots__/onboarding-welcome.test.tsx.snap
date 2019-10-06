@@ -1,81 +1,224 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`OnboardingWelcomeScreen renders correctly 1`] = `
-<BackgroundModal>
-  <View
-    style={
-      Object {
-        "flex": 1,
-        "padding": 40,
-      }
+<ApolloProvider
+  client={
+    ApolloClient {
+      "cache": InMemoryCache {
+        "addTypename": true,
+        "cacheKeyRoot": KeyTrie {
+          "weakness": true,
+        },
+        "config": Object {
+          "addTypename": true,
+          "dataIdFromObject": [Function],
+          "fragmentMatcher": HeuristicFragmentMatcher {},
+          "freezeResults": false,
+          "resultCaching": true,
+        },
+        "data": DepTrackingCache {
+          "data": Object {},
+          "depend": [Function],
+        },
+        "maybeBroadcastWatch": [Function],
+        "optimisticData": DepTrackingCache {
+          "data": Object {},
+          "depend": [Function],
+        },
+        "silenceBroadcast": false,
+        "storeReader": StoreReader {
+          "executeSelectionSet": [Function],
+          "executeStoreQuery": [Function],
+          "executeSubSelectedArray": [Function],
+          "freezeResults": false,
+        },
+        "storeWriter": StoreWriter {},
+        "typenameDocumentCache": Map {},
+        "watches": Set {},
+      },
+      "clearStoreCallbacks": Array [],
+      "defaultOptions": Object {},
+      "disableNetworkFetches": false,
+      "link": MockLink {
+        "addTypename": true,
+        "mockedResponsesByKey": Object {},
+      },
+      "localState": LocalState {
+        "cache": InMemoryCache {
+          "addTypename": true,
+          "cacheKeyRoot": KeyTrie {
+            "weakness": true,
+          },
+          "config": Object {
+            "addTypename": true,
+            "dataIdFromObject": [Function],
+            "fragmentMatcher": HeuristicFragmentMatcher {},
+            "freezeResults": false,
+            "resultCaching": true,
+          },
+          "data": DepTrackingCache {
+            "data": Object {},
+            "depend": [Function],
+          },
+          "maybeBroadcastWatch": [Function],
+          "optimisticData": DepTrackingCache {
+            "data": Object {},
+            "depend": [Function],
+          },
+          "silenceBroadcast": false,
+          "storeReader": StoreReader {
+            "executeSelectionSet": [Function],
+            "executeStoreQuery": [Function],
+            "executeSubSelectedArray": [Function],
+            "freezeResults": false,
+          },
+          "storeWriter": StoreWriter {},
+          "typenameDocumentCache": Map {},
+          "watches": Set {},
+        },
+        "client": [Circular],
+      },
+      "mutate": [Function],
+      "query": [Function],
+      "queryDeduplication": true,
+      "queryManager": QueryManager {
+        "assumeImmutableResults": false,
+        "clientAwareness": Object {
+          "name": undefined,
+          "version": undefined,
+        },
+        "dataStore": DataStore {
+          "cache": InMemoryCache {
+            "addTypename": true,
+            "cacheKeyRoot": KeyTrie {
+              "weakness": true,
+            },
+            "config": Object {
+              "addTypename": true,
+              "dataIdFromObject": [Function],
+              "fragmentMatcher": HeuristicFragmentMatcher {},
+              "freezeResults": false,
+              "resultCaching": true,
+            },
+            "data": DepTrackingCache {
+              "data": Object {},
+              "depend": [Function],
+            },
+            "maybeBroadcastWatch": [Function],
+            "optimisticData": DepTrackingCache {
+              "data": Object {},
+              "depend": [Function],
+            },
+            "silenceBroadcast": false,
+            "storeReader": StoreReader {
+              "executeSelectionSet": [Function],
+              "executeStoreQuery": [Function],
+              "executeSubSelectedArray": [Function],
+              "freezeResults": false,
+            },
+            "storeWriter": StoreWriter {},
+            "typenameDocumentCache": Map {},
+            "watches": Set {},
+          },
+        },
+        "fetchQueryRejectFns": Map {},
+        "idCounter": 1,
+        "inFlightLinkObservables": Map {},
+        "link": MockLink {
+          "addTypename": true,
+          "mockedResponsesByKey": Object {},
+        },
+        "localState": LocalState {
+          "cache": InMemoryCache {
+            "addTypename": true,
+            "cacheKeyRoot": KeyTrie {
+              "weakness": true,
+            },
+            "config": Object {
+              "addTypename": true,
+              "dataIdFromObject": [Function],
+              "fragmentMatcher": HeuristicFragmentMatcher {},
+              "freezeResults": false,
+              "resultCaching": true,
+            },
+            "data": DepTrackingCache {
+              "data": Object {},
+              "depend": [Function],
+            },
+            "maybeBroadcastWatch": [Function],
+            "optimisticData": DepTrackingCache {
+              "data": Object {},
+              "depend": [Function],
+            },
+            "silenceBroadcast": false,
+            "storeReader": StoreReader {
+              "executeSelectionSet": [Function],
+              "executeStoreQuery": [Function],
+              "executeSubSelectedArray": [Function],
+              "freezeResults": false,
+            },
+            "storeWriter": StoreWriter {},
+            "typenameDocumentCache": Map {},
+            "watches": Set {},
+          },
+          "client": [Circular],
+        },
+        "mutationStore": MutationStore {
+          "store": Object {},
+        },
+        "onBroadcast": [Function],
+        "pollingInfoByQueryId": Map {},
+        "queries": Map {},
+        "queryDeduplication": true,
+        "queryStore": QueryStore {
+          "store": Object {},
+        },
+        "ssrMode": false,
+        "transformCache": WeakMap {},
+      },
+      "reFetchObservableQueries": [Function],
+      "resetStore": [Function],
+      "resetStoreCallbacks": Array [],
+      "store": DataStore {
+        "cache": InMemoryCache {
+          "addTypename": true,
+          "cacheKeyRoot": KeyTrie {
+            "weakness": true,
+          },
+          "config": Object {
+            "addTypename": true,
+            "dataIdFromObject": [Function],
+            "fragmentMatcher": HeuristicFragmentMatcher {},
+            "freezeResults": false,
+            "resultCaching": true,
+          },
+          "data": DepTrackingCache {
+            "data": Object {},
+            "depend": [Function],
+          },
+          "maybeBroadcastWatch": [Function],
+          "optimisticData": DepTrackingCache {
+            "data": Object {},
+            "depend": [Function],
+          },
+          "silenceBroadcast": false,
+          "storeReader": StoreReader {
+            "executeSelectionSet": [Function],
+            "executeStoreQuery": [Function],
+            "executeSubSelectedArray": [Function],
+            "freezeResults": false,
+          },
+          "storeWriter": StoreWriter {},
+          "typenameDocumentCache": Map {},
+          "watches": Set {},
+        },
+      },
+      "typeDefs": undefined,
+      "version": "2.6.3",
+      "watchQuery": [Function],
     }
-  >
-    <Image
-      source={
-        Object {
-          "testUri": "../../../app/assets/images/profile-pic-may.jpg",
-        }
-      }
-      style={
-        Object {
-          "backgroundColor": "rgba(4, 71, 47, 0.75)",
-          "borderColor": "rgb(45, 82, 113)",
-          "borderRadius": 30,
-          "borderWidth": 4,
-          "height": 60,
-          "marginBottom": 20,
-          "overflow": "hidden",
-          "width": 60,
-        }
-      }
-    />
-    <Title
-      small={true}
-      text="1/4"
-    />
-    <Title
-      style={
-        Object {
-          "fontSize": 30,
-          "paddingBottom": 20,
-        }
-      }
-      text="Bem vinda à Elpis,  [user.firstName]"
-    />
-    <Text
-      style={
-        Object {
-          "paddingBottom": 20,
-        }
-      }
-    >
-      Muitas palavras aqui. 
-    </Text>
-    <Title
-      style={
-        Object {
-          "fontStyle": "italic",
-          "fontWeight": "normal",
-          "paddingBottom": 20,
-        }
-      }
-      text="May"
-    />
-    <View
-      style={
-        Object {
-          "alignItems": "baseline",
-          "flexDirection": "row-reverse",
-          "marginBottom": 20,
-        }
-      }
-    >
-      <ButtonSubmit
-        display="active"
-        label="Próximo"
-        onPress={[Function]}
-      />
-    </View>
-  </View>
-</BackgroundModal>
+  }
+>
+  <OnboardingWelcomeScreen />
+</ApolloProvider>
 `;
