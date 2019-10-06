@@ -82,7 +82,7 @@ class Comments extends Component<Props, State> {
         <Query
           query={COMMENT_WITH_REPLIES}
           variables={{ id: commentId }}
-          pollInterval={2000}
+          pollInterval={5000}
           blueMode
         >
           {this.renderReplies}
@@ -94,7 +94,7 @@ class Comments extends Component<Props, State> {
       <Query
         query={COMMENTS}
         variables={{ id: postId }}
-        pollInterval={2000}
+        pollInterval={5000}
         blueMode
       >
         {this.renderAllComments}
