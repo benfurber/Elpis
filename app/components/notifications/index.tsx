@@ -73,7 +73,11 @@ class Notifications extends Component<Props> {
   };
 
   render() {
-    return <Query query={NOTIFICATIONS}>{this.loop}</Query>;
+    return (
+      <Query query={NOTIFICATIONS} pollInterval={5000}>
+        {this.loop}
+      </Query>
+    );
   }
 }
 
