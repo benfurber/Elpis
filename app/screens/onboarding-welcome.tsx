@@ -1,9 +1,11 @@
-import React, { Component } from "react";
+import React from "react";
 import { Image, StyleSheet, Text, View } from "react-native";
+import { useQuery } from "@apollo/react-hooks";
 
 import { BackgroundModal, ButtonSubmit, Title } from "components";
 import { NavigationType } from "interfaces";
 import { labels } from "labels";
+import { USER_DETAILS } from "queries";
 import { colours, elements, layout, typography } from "styles";
 import { Analytics } from "utils";
 
@@ -13,45 +15,38 @@ interface Props {
   navigation: NavigationType;
 }
 
-interface State {
-  password: string;
-}
+function OnboardingWelcomeScreen(props: Props) {
+  const { data } = useQuery(USER_DETAILS);
+  Analytics.trackContent({
+    contentType: "Onboarding",
+    contentId: "onboarding-welcome",
+  });
 
-class OnboardingWelcomeScreen extends Component<Props, State> {
-  componentDidMount() {
-    Analytics.trackContent({
-      contentType: "Onboarding",
-      contentId: "onboarding-welcome",
-    });
-  }
+  const { navigation } = props;
+  const { welcome } = labels.onboarding;
 
-  render() {
-    const { navigation } = this.props;
-    const { welcome } = labels.onboarding;
+  return (
+    <BackgroundModal>
+      <View style={styles.content}>
+        <Image source={require(mayImagePath)} style={styles.image} />
+        <Title text={"1/4"} small />
+        <Title
+          style={styles.title}
+          text={`${welcome.title} \n${data.me.name || ""}`}
+        />
+        <Text style={styles.text}>{welcome.text}</Text>
+        <Title style={styles.subtitle} text="May" />
 
-    return (
-      <BackgroundModal>
-        <View style={styles.content}>
-          <Image source={require(mayImagePath)} style={styles.image} />
-          <Title text={"1/4"} small />
-          <Title
-            style={styles.title}
-            text={`${welcome.title} [user.firstName]`}
+        <View style={styles.row}>
+          <ButtonSubmit
+            display={"active"}
+            label={labels.next}
+            onPress={() => navigation.navigate("Features")}
           />
-          <Text style={styles.text}>{welcome.text}</Text>
-          <Title style={styles.subtitle} text="May" />
-
-          <View style={styles.row}>
-            <ButtonSubmit
-              display={"active"}
-              label={labels.next}
-              onPress={() => navigation.navigate("Features")}
-            />
-          </View>
         </View>
-      </BackgroundModal>
-    );
-  }
+      </View>
+    </BackgroundModal>
+  );
 }
 
 const styles = StyleSheet.create({

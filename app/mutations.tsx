@@ -24,6 +24,14 @@ export const ADD_USER_PROFILE_PICTURE = gql`
   }
 `;
 
+export const AGE_NOTIFICATION = gql`
+  mutation ageNotification($id: String!) {
+    ageNotification(id: $id) {
+      id
+    }
+  }
+`;
+
 export const COMPLETE_USER_ONBOARDING = gql`
   mutation completeUserOnboarding {
     completeUserOnboarding {

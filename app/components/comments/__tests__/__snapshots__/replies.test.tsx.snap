@@ -45,7 +45,7 @@ exports[`Comments<Replies> when there are no replies renders correctly 1`] = `
       <Avatar
         avatarPath={
           Object {
-            "testUri": "../../../app/assets/images/profile-pic-may.jpg",
+            "testUri": "../../../app/assets/images/empower_two_women_logo.png",
           }
         }
         size="large"
@@ -58,7 +58,7 @@ exports[`Comments<Replies> when there are no replies renders correctly 1`] = `
         }
       >
         <Title
-          text="Maynara F"
+          text="Empodere Duas Mulheres"
         />
         <Text
           style={
@@ -133,7 +133,7 @@ exports[`Comments<Replies> when there are replies renders correctly 1`] = `
       <Avatar
         avatarPath={
           Object {
-            "testUri": "../../../app/assets/images/profile-pic-may.jpg",
+            "testUri": "../../../app/assets/images/empower_two_women_logo.png",
           }
         }
         size="large"
@@ -146,7 +146,7 @@ exports[`Comments<Replies> when there are replies renders correctly 1`] = `
         }
       >
         <Title
-          text="Maynara F"
+          text="Empodere Duas Mulheres"
         />
         <Text
           style={
@@ -196,9 +196,51 @@ exports[`Comments<Replies> when there are replies renders correctly 1`] = `
           Object {
             "author": Object {
               "avatarPath": Object {
-                "testUri": "../../../app/assets/images/profile-pic-annon.png",
+                "testUri": "../../../app/assets/images/empower_two_women_logo.png",
               },
-              "name": "Kelli S",
+              "id": "1235we",
+              "name": "Empodere Duas Mulheres",
+            },
+            "comment": Object {
+              "author": Object {
+                "avatarPath": Object {
+                  "testUri": "../../../app/assets/images/empower_two_women_logo.png",
+                },
+                "id": "1235we",
+                "name": "Empodere Duas Mulheres",
+              },
+              "content": "Dá certo sim, o meu pai, por exemplo, fugiu quando eu tinha 5 anos e eu não faço ideia da onde ele esteja. Nunca mais voltou, pena que a violência só piorou.",
+              "createdAt": 2019-01-01T00:00:00.000Z,
+              "id": "21097",
+              "replies": Array [
+                Object {
+                  "author": Object {
+                    "avatarPath": Object {
+                      "testUri": "../../../app/assets/images/empower_two_women_logo.png",
+                    },
+                    "id": "1235we",
+                    "name": "Empodere Duas Mulheres",
+                  },
+                  "comment": Object {
+                    "author": Object {
+                      "avatarPath": Object {
+                        "testUri": "../../../app/assets/images/empower_two_women_logo.png",
+                      },
+                      "id": "1235we",
+                      "name": "Empodere Duas Mulheres",
+                    },
+                    "content": "Dá certo sim, o meu pai, por exemplo, fugiu quando eu tinha 5 anos e eu não faço ideia da onde ele esteja. Nunca mais voltou, pena que a violência só piorou.",
+                    "createdAt": 2019-01-01T00:00:00.000Z,
+                    "id": "21097",
+                    "replies": Array [],
+                    "totalReplies": 0,
+                  },
+                  "content": "Nao.",
+                  "createdAt": 2019-01-01T00:00:00.000Z,
+                  "id": "21097",
+                },
+              ],
+              "totalReplies": 1,
             },
             "content": "Meu pai também fez o mesmo. Logo depois que minha mãe pediu o divórcio porque sofria violência dentro de casa, ele pegou as malas, se mudou e sumiu no mundo. Nem faço mais questão de saber pra onde ele foi.",
             "createdAt": 2019-01-02T00:00:00.000Z,
@@ -207,9 +249,51 @@ exports[`Comments<Replies> when there are replies renders correctly 1`] = `
           Object {
             "author": Object {
               "avatarPath": Object {
-                "testUri": "../../../app/assets/images/profile-pic-annon.png",
+                "testUri": "../../../app/assets/images/empower_two_women_logo.png",
               },
-              "name": "Kelli S",
+              "id": "1235we",
+              "name": "Empodere Duas Mulheres",
+            },
+            "comment": Object {
+              "author": Object {
+                "avatarPath": Object {
+                  "testUri": "../../../app/assets/images/empower_two_women_logo.png",
+                },
+                "id": "1235we",
+                "name": "Empodere Duas Mulheres",
+              },
+              "content": "Dá certo sim, o meu pai, por exemplo, fugiu quando eu tinha 5 anos e eu não faço ideia da onde ele esteja. Nunca mais voltou, pena que a violência só piorou.",
+              "createdAt": 2019-01-01T00:00:00.000Z,
+              "id": "21097",
+              "replies": Array [
+                Object {
+                  "author": Object {
+                    "avatarPath": Object {
+                      "testUri": "../../../app/assets/images/empower_two_women_logo.png",
+                    },
+                    "id": "1235we",
+                    "name": "Empodere Duas Mulheres",
+                  },
+                  "comment": Object {
+                    "author": Object {
+                      "avatarPath": Object {
+                        "testUri": "../../../app/assets/images/empower_two_women_logo.png",
+                      },
+                      "id": "1235we",
+                      "name": "Empodere Duas Mulheres",
+                    },
+                    "content": "Dá certo sim, o meu pai, por exemplo, fugiu quando eu tinha 5 anos e eu não faço ideia da onde ele esteja. Nunca mais voltou, pena que a violência só piorou.",
+                    "createdAt": 2019-01-01T00:00:00.000Z,
+                    "id": "21097",
+                    "replies": Array [],
+                    "totalReplies": 0,
+                  },
+                  "content": "Nao.",
+                  "createdAt": 2019-01-01T00:00:00.000Z,
+                  "id": "21097",
+                },
+              ],
+              "totalReplies": 1,
             },
             "content": "Nem faço mais questão de saber pra onde ele foi.",
             "createdAt": 2019-01-03T00:00:00.000Z,

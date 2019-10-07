@@ -36,7 +36,7 @@ exports[`Comments<Comment> with replies renders correctly 1`] = `
         <Avatar
           avatarPath={
             Object {
-              "testUri": "../../../app/assets/images/profile-pic-may.jpg",
+              "testUri": "../../../app/assets/images/empower_two_women_logo.png",
             }
           }
         />
@@ -132,7 +132,7 @@ exports[`Comments<Comment> without replies renders correctly 1`] = `
         <Avatar
           avatarPath={
             Object {
-              "testUri": "../../../app/assets/images/profile-pic-may.jpg",
+              "testUri": "../../../app/assets/images/empower_two_women_logo.png",
             }
           }
         />

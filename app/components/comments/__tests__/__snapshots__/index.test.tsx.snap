@@ -13,7 +13,7 @@ exports[`Comments when there are comments renders correctly 1`] = `
 >
   <NewQuery
     blueMode={true}
-    pollInterval={2000}
+    pollInterval={5000}
     query={
       Object {
         "definitions": Array [
@@ -239,7 +239,7 @@ exports[`Comments when there are no comments renders correctly 1`] = `
 >
   <NewQuery
     blueMode={true}
-    pollInterval={2000}
+    pollInterval={5000}
     query={
       Object {
         "definitions": Array [

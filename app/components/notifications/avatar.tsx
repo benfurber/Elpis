@@ -11,7 +11,7 @@ interface Props {
 
 class NotificationAvatar extends Component<Props> {
   typeIcon() {
-    const { type } = this.props.item;
+    const { type } = this.props.item.content;
     const name = type === "comment" ? "comments" : "image";
 
     return (
@@ -22,13 +22,17 @@ class NotificationAvatar extends Component<Props> {
   }
 
   render() {
-    const { newNotification } = this.props.item;
+    const { newNotification, content } = this.props.item;
     const size = newNotification ? "xl" : "medium";
     const style = newNotification ? styles.avatar : {};
 
+    const avatarPath = content.reply
+      ? content.reply.author.avatarPath
+      : content.post.author.avatarPath;
+
     return (
       <View style={styles.row}>
-        <Avatar avatarPath={null} size={size} styles={style} />
+        <Avatar avatarPath={avatarPath} size={size} styles={style} />
         {newNotification ? this.typeIcon() : null}
       </View>
     );

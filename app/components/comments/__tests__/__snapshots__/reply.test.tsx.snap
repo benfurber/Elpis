@@ -22,7 +22,7 @@ exports[`Comments<Reply> renders correctly 1`] = `
     <Avatar
       avatarPath={
         Object {
-          "testUri": "../../../app/assets/images/profile-pic-annon.png",
+          "testUri": "../../../app/assets/images/empower_two_women_logo.png",
         }
       }
       size="small"
@@ -36,7 +36,7 @@ exports[`Comments<Reply> renders correctly 1`] = `
     >
       <Title
         small={true}
-        text="Kelli S"
+        text="Empodere Duas Mulheres"
       />
       <Text
         style={

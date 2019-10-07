@@ -37,14 +37,22 @@ class NewQuery extends Component<Props, State> {
     );
   }
 
-  empty(object) {
-    return Object.keys(object).length === 0 || object === undefined;
+  renderData(args, data) {
+    return (
+      <ScrollView
+        refreshControl={
+          <RefreshControl
+            refreshing={args.networkStatus === 4}
+            onRefresh={() => args.refetch()}
+          />
+        }
+      >
+        {this.renderContent(data)}
+      </ScrollView>
+    );
   }
 
   renderContent(data) {
-    if (this.empty(data)) {
-      return this.renderLoading();
-    }
     return this.props.children(data);
   }
 
@@ -56,23 +64,16 @@ class NewQuery extends Component<Props, State> {
         pollInterval={this.props.pollInterval || undefined}
         notifyOnNetworkStatusChange
       >
-        {({ error, data, refetch, networkStatus }) => {
-          if (error) {
-            return this.renderError(error);
+        {args => {
+          if (args.networkStatus === 1) {
+            return this.renderLoading();
           }
 
-          return (
-            <ScrollView
-              refreshControl={
-                <RefreshControl
-                  refreshing={networkStatus === 4}
-                  onRefresh={() => refetch()}
-                />
-              }
-            >
-              {this.renderContent(data)}
-            </ScrollView>
-          );
+          if (args.error) {
+            return this.renderError(args.error);
+          }
+
+          return this.renderData(args, args.data);
         }}
       </Query>
     );

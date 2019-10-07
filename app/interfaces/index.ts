@@ -1,6 +1,7 @@
 import { NavigationScreenProp } from "react-navigation";
 
 export interface Author {
+  id: string;
   avatarPath: string;
   name: string;
 }
@@ -31,11 +32,17 @@ export interface Post extends ContentBase {
 }
 
 // eslint-disable-next-line @typescript-eslint/no-empty-interface
-export interface Reply extends ContentBase {}
+export interface Reply extends ContentBase {
+  comment: Comment;
+}
 
 export interface Notification {
-  content: ContentBase;
+  id: string;
+  createdAt: Date;
+  content: {
+    post: ContentBase;
+    reply: null | Reply;
+    type: string; // should be `"comment" | "post"` but there's a bug;
+  };
   newNotification: boolean;
-  type: string; // should be `"comment" | "post"` but there's a bug;
-  postId?: string;
 }
