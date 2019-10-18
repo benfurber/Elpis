@@ -13,18 +13,26 @@ interface Props {
 
 function AuthLoadingScreen(props: Props) {
   const { navigation } = props;
-  const { error, data } = useQuery(USER_DETAILS);
+  const { loading, error, data } = useQuery(USER_DETAILS);
 
-  if (error) return <Text>Error! ${error.message}</Text>;
+  if (loading) return <Loading />;
+  if (error) return navigation.navigate("Welcome");
 
-  if (data && data.me) {
-    const token = AsyncStorage.getItem("token");
+  const getToken = async () => {
+    console.log("hello?");
 
-    if (!token) {
-      return navigation.navigate("Welcome");
+    if (data && data.me) {
+      const token = await AsyncStorage.getItem("token");
+
+      if (!token) {
+        return navigation.navigate("Welcome");
+      }
+      return navigation.navigate(data.me.onboarded ? "Main" : "Onboarding");
     }
-    return navigation.navigate(data.me.onboarded ? "Main" : "Onboarding");
-  }
+    return <Loading />;
+  };
+
+  getToken();
 
   return (
     <BackgroundContainer>
