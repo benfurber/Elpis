@@ -15,21 +15,22 @@ function AuthLoadingScreen(props: Props) {
   const { navigation } = props;
   const { loading, error, data } = useQuery(USER_DETAILS);
 
-  if (loading) return <Loading />;
-  if (error) return navigation.navigate("Welcome");
-
   const getToken = async () => {
-    console.log("hello?");
+    const token = await AsyncStorage.getItem("token");
 
-    if (data && data.me) {
-      const token = await AsyncStorage.getItem("token");
+    const loginRoute = () => navigation.navigate("Welcome");
+    const feedRoute = data =>
+      navigation.navigate(data.me.onboarded ? "Main" : "Onboarding");
 
-      if (!token) {
-        return navigation.navigate("Welcome");
+    if (token) {
+      if (loading) return <Loading />;
+      if (error) return loginRoute;
+      if (data && data.me) {
+        return feedRoute(data);
       }
-      return navigation.navigate(data.me.onboarded ? "Main" : "Onboarding");
     }
-    return <Loading />;
+
+    return loginRoute;
   };
 
   getToken();
