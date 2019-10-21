@@ -30,6 +30,8 @@ build/
 .gradle
 local.properties
 *.iml
+android/.project
+android/.settings/
 
 # node.js
 #
@@ -41,6 +43,7 @@ yarn-error.log
 buck-out/
 \.buckd/
 *.keystore
+!debug.keystore
 
 # fastlane
 #
@@ -61,3 +64,9 @@ buck-out/
 
 .env*
 !.env.sample
+
+# CocoaPods
+/ios/Pods/
+
+# Visual Code
+.history
