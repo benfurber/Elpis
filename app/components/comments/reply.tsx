@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { StyleSheet, Text, View } from "react-native";
 
-import { Avatar, Title } from "components";
+import { Avatar, LinkPreview, Title } from "components";
 import { Reply as ReplyInterface } from "interfaces";
 import { colours, elements, layout } from "styles";
 import { formatDate } from "utils";
@@ -12,7 +12,7 @@ interface Props {
 
 class Reply extends Component<Props> {
   render() {
-    const { author, content, publishedAt } = this.props.item;
+    const { author, content, link, publishedAt } = this.props.item;
 
     return (
       <View style={styles.commentContainer}>
@@ -25,6 +25,7 @@ class Reply extends Component<Props> {
           </View>
         </View>
         <View style={styles.textContainer}>
+          {link && <LinkPreview url={link} />}
           <Text style={styles.body}>{content}</Text>
         </View>
       </View>
