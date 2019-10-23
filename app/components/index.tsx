@@ -10,6 +10,7 @@ export { ErrorMessage } from "./error-message";
 export { FormAddPassword } from "./form-add-password";
 export { IconTabBar } from "./icon-tab-bar";
 export { Icon } from "./icon";
+export { LinkPreview } from "./link-preview";
 export { Loading } from "./loading";
 export { LoginForm } from "./login-form";
 export { Logo } from "./logo";
