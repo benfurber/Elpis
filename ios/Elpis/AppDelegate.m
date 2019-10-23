@@ -39,4 +39,11 @@
 #endif
 }
 
+/** Patch: https://github.com/karanjthakkar/ReactNativeDevLoadingViewIssue/commit/e1a637cd82bf45e6af6814746d863b131b76ac62 */
+#if RCT_DEV
+- (BOOL)bridge:(RCTBridge *)bridge didNotFindModule:(NSString *)moduleName {
+  return YES;
+}
+#endif
+
 @end
