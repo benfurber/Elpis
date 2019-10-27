@@ -27,6 +27,8 @@
 		140ED2AC1D01E1AD002B40FF /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 146834041AC3E56700842450 /* libReact.a */; };
 		146834051AC3E58100842450 /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 146834041AC3E56700842450 /* libReact.a */; };
 		174C6FA943F84EF8BEFE1723 /* Ionicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9DE8DC109DB8467A9A7EFC17 /* Ionicons.ttf */; };
+		251825232366D0BE00985E61 /* Mixpanel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25EFFDBB2365F6A10071F887 /* Mixpanel.framework */; };
+		251825242366D0BE00985E61 /* Mixpanel.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 25EFFDBB2365F6A10071F887 /* Mixpanel.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		2566613E22C3E1DE00A967F8 /* launch_screen.png in Resources */ = {isa = PBXBuildFile; fileRef = 2566613922C3E1DD00A967F8 /* launch_screen.png */; };
 		2566613F22C3E1DE00A967F8 /* LaunchScreen1125x2436.png in Resources */ = {isa = PBXBuildFile; fileRef = 2566613A22C3E1DD00A967F8 /* LaunchScreen1125x2436.png */; };
 		2566614022C3E1DE00A967F8 /* LaunchScreen750x1334.png in Resources */ = {isa = PBXBuildFile; fileRef = 2566613B22C3E1DD00A967F8 /* LaunchScreen750x1334.png */; };
@@ -34,6 +36,7 @@
 		2566614222C3E1DE00A967F8 /* LaunchScreen640x960.png in Resources */ = {isa = PBXBuildFile; fileRef = 2566613D22C3E1DD00A967F8 /* LaunchScreen640x960.png */; };
 		2575963D22E9FEFF00475311 /* libRNCAsyncStorage.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2575963C22E9FEE600475311 /* libRNCAsyncStorage.a */; };
 		259715432276E34100C71775 /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 259715422276E34000C71775 /* JavaScriptCore.framework */; };
+		25EFFDED2365F6A10071F887 /* Mixpanel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25EFFDBB2365F6A10071F887 /* Mixpanel.framework */; };
 		25F1D9AE226DD44600D51624 /* libRNGestureHandler.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 25F1D9AD226DD44600D51624 /* libRNGestureHandler.a */; };
 		28F366660B6B4524A734E163 /* Zocial.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CDB5A315DE68435F93AE08F7 /* Zocial.ttf */; };
 		29093141C69144D38A97E7F2 /* SimpleLineIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2093DAB212B64303ABCCA561 /* SimpleLineIcons.ttf */; };
@@ -432,6 +435,20 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		251825252366D0BE00985E61 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				251825242366D0BE00985E61 /* Mixpanel.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		0030020DCF284FCE901A5F07 /* FontAwesome.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = FontAwesome.ttf; path = "../node_modules/react-native-vector-icons/Fonts/FontAwesome.ttf"; sourceTree = "<group>"; };
 		008F07F21AC5B25A0029DE68 /* main.jsbundle */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = main.jsbundle; sourceTree = "<group>"; };
@@ -477,6 +494,7 @@
 		259715422276E34000C71775 /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		25B6CD0923032F5F00EE66C6 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
 		25B6CD0A23032F6E00EE66C6 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = "pt-BR"; path = "pt-BR.lproj/LaunchScreen.xib"; sourceTree = "<group>"; };
+		25EFFDBB2365F6A10071F887 /* Mixpanel.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Mixpanel.framework; path = Carthage/Build/iOS/Mixpanel.framework; sourceTree = "<group>"; };
 		25F1D9AD226DD44600D51624 /* libRNGestureHandler.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libRNGestureHandler.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D16E6891FA4F8E400B85C8A /* libReact.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libReact.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		34E3A43DA5C64041AC41D14A /* lato-bolditalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "lato-bolditalic.ttf"; path = "../app/assets/fonts/lato-bolditalic.ttf"; sourceTree = "<group>"; };
@@ -545,6 +563,7 @@
 				00C302E91ABCBA2D00DB3ED1 /* libRCTNetwork.a in Frameworks */,
 				139105C61AF99C1200B5F7CC /* libRCTSettings.a in Frameworks */,
 				832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */,
+				251825232366D0BE00985E61 /* Mixpanel.framework in Frameworks */,
 				00C302EA1ABCBA2D00DB3ED1 /* libRCTVibration.a in Frameworks */,
 				139FDEF61B0652A700C62182 /* libRCTWebSocket.a in Frameworks */,
 				750584A6D4DC4E6782C73041 /* libRNVectorIcons.a in Frameworks */,
@@ -553,6 +572,7 @@
 				3FA22ACFDC8C4166986F4DB6 /* libSplashScreen.a in Frameworks */,
 				8FD002EBB9A94244A6F28C1E /* libRNMixpanel.a in Frameworks */,
 				81FA060EE34284D10F37A08A /* Pods_Elpis.framework in Frameworks */,
+				25EFFDED2365F6A10071F887 /* Mixpanel.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -797,6 +817,7 @@
 		2D16E6871FA4F8E400B85C8A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				25EFFDBB2365F6A10071F887 /* Mixpanel.framework */,
 				201C5ABC2304A02000381F94 /* Pods.xcodeproj */,
 				259715422276E34000C71775 /* JavaScriptCore.framework */,
 				25F1D9AD226DD44600D51624 /* libRNGestureHandler.a */,
@@ -944,6 +965,7 @@
 				13B07F8E1A680F5B00A75B9A /* Resources */,
 				00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */,
 				F5B4C8F574E7AED8E557F290 /* [CP] Embed Pods Frameworks */,
+				251825252366D0BE00985E61 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -1693,6 +1715,10 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = NO;
 				DEVELOPMENT_TEAM = JC32AN7BL2;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-gesture-handler/ios/**",
@@ -1722,6 +1748,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = JC32AN7BL2;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-gesture-handler/ios/**",
