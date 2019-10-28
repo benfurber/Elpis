@@ -64,3 +64,4 @@ buck-out/
 
 # Carthage
 /ios/Carthage/Build/
+/ios/Carthage/Checkouts/
