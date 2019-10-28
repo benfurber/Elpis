@@ -36,7 +36,6 @@
 		2566614222C3E1DE00A967F8 /* LaunchScreen640x960.png in Resources */ = {isa = PBXBuildFile; fileRef = 2566613D22C3E1DD00A967F8 /* LaunchScreen640x960.png */; };
 		2575963D22E9FEFF00475311 /* libRNCAsyncStorage.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2575963C22E9FEE600475311 /* libRNCAsyncStorage.a */; };
 		259715432276E34100C71775 /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 259715422276E34000C71775 /* JavaScriptCore.framework */; };
-		25EFFDED2365F6A10071F887 /* Mixpanel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25EFFDBB2365F6A10071F887 /* Mixpanel.framework */; };
 		25F1D9AE226DD44600D51624 /* libRNGestureHandler.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 25F1D9AD226DD44600D51624 /* libRNGestureHandler.a */; };
 		28F366660B6B4524A734E163 /* Zocial.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CDB5A315DE68435F93AE08F7 /* Zocial.ttf */; };
 		29093141C69144D38A97E7F2 /* SimpleLineIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2093DAB212B64303ABCCA561 /* SimpleLineIcons.ttf */; };
@@ -49,7 +48,6 @@
 		67598912893B4B97B3F6ADC0 /* libRNCWebView.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B0F3625F26346728ED51030 /* libRNCWebView.a */; };
 		750584A6D4DC4E6782C73041 /* libRNVectorIcons.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 39D5D756743441938973900F /* libRNVectorIcons.a */; };
 		76D44E0D5FCD4AE7ADA19111 /* AntDesign.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F91504FB201846F6A5906F76 /* AntDesign.ttf */; };
-		81FA060EE34284D10F37A08A /* Pods_Elpis.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE6DC1C65506EAF573D14B68 /* Pods_Elpis.framework */; };
 		832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 832341B51AAA6A8300B99B32 /* libRCTText.a */; };
 		89B1F7249A6740428FA573C8 /* Octicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4B8E61DB55494A64AD94FBE0 /* Octicons.ttf */; };
 		8FD002EBB9A94244A6F28C1E /* libRNMixpanel.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A3C0410206945DDA52FA3E4 /* libRNMixpanel.a */; };
@@ -63,7 +61,6 @@
 		D9AFB14FD0FD4C3095277DF3 /* MaterialIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 13FEF659FC75467881706913 /* MaterialIcons.ttf */; };
 		DECDFFE8ABB24C89962847B5 /* lato-bolditalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 34E3A43DA5C64041AC41D14A /* lato-bolditalic.ttf */; };
 		E7C470F694F5479E83EA19DA /* creteround-italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1251CF924D134886BC964BE6 /* creteround-italic.ttf */; };
-		F2D1628DBFD40BF4AFC35809 /* Pods_ElpisTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E62A1922A2F35480A77A820 /* Pods_ElpisTests.framework */; };
 		F30CD1516A5C486E97B90910 /* FontAwesome.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0030020DCF284FCE901A5F07 /* FontAwesome.ttf */; };
 		FDECC9844ABB4532B3FF2526 /* MaterialCommunityIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E91FDD34F9C64F46BC49483C /* MaterialCommunityIcons.ttf */; };
 /* End PBXBuildFile section */
@@ -461,7 +458,6 @@
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00E356F21AD99517003FC87E /* ElpisTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ElpisTests.m; sourceTree = "<group>"; };
 		0A3C0410206945DDA52FA3E4 /* libRNMixpanel.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRNMixpanel.a; sourceTree = "<group>"; };
-		0B3F342C1FED96BF843DF046 /* Pods-Elpis.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Elpis.release.xcconfig"; path = "Target Support Files/Pods-Elpis/Pods-Elpis.release.xcconfig"; sourceTree = "<group>"; };
 		0EE07BFFF8E546D186DFFF95 /* lato-regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "lato-regular.ttf"; path = "../app/assets/fonts/lato-regular.ttf"; sourceTree = "<group>"; };
 		0F239DD0B8624BB89F8DBF27 /* RNCCameraRoll.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = RNCCameraRoll.xcodeproj; path = "../node_modules/@react-native-community/cameraroll/ios/RNCCameraRoll.xcodeproj"; sourceTree = "<group>"; };
 		1251CF924D134886BC964BE6 /* creteround-italic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "creteround-italic.ttf"; path = "../app/assets/fonts/creteround-italic.ttf"; sourceTree = "<group>"; };
@@ -477,7 +473,6 @@
 		146833FF1AC3E56700842450 /* React.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = React.xcodeproj; path = "../node_modules/react-native/React/React.xcodeproj"; sourceTree = "<group>"; };
 		17264CC8E5014BCA8488F888 /* SplashScreen.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = SplashScreen.xcodeproj; path = "../node_modules/react-native-splash-screen/ios/SplashScreen.xcodeproj"; sourceTree = "<group>"; };
 		1760C097C16C4202B95D3484 /* lato-bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "lato-bold.ttf"; path = "../app/assets/fonts/lato-bold.ttf"; sourceTree = "<group>"; };
-		17F1E0FC4FCFE7A18C594C40 /* Pods-Elpis.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Elpis.debug.xcconfig"; path = "Target Support Files/Pods-Elpis/Pods-Elpis.debug.xcconfig"; sourceTree = "<group>"; };
 		1AA3775D3BC94A86BCE95156 /* libRNVectorIcons-tvOS.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = "libRNVectorIcons-tvOS.a"; sourceTree = "<group>"; };
 		1C3F6DDC2D4F48B38F5890DC /* creteround-regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "creteround-regular.ttf"; path = "../app/assets/fonts/creteround-regular.ttf"; sourceTree = "<group>"; };
 		1E75A215F0284282B9252186 /* RNVectorIcons.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = RNVectorIcons.xcodeproj; path = "../node_modules/react-native-vector-icons/RNVectorIcons.xcodeproj"; sourceTree = "<group>"; };
@@ -501,14 +496,10 @@
 		39D5D756743441938973900F /* libRNVectorIcons.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRNVectorIcons.a; sourceTree = "<group>"; };
 		3A1BCF3CDB914F80A9C6EB41 /* libRNMixpanel-tvOS.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = "libRNMixpanel-tvOS.a"; sourceTree = "<group>"; };
 		4B8E61DB55494A64AD94FBE0 /* Octicons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Octicons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Octicons.ttf"; sourceTree = "<group>"; };
-		4C0B5EDABEE0BAB05C72059C /* Pods-Elpis-tvOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Elpis-tvOSTests.debug.xcconfig"; path = "Target Support Files/Pods-Elpis-tvOSTests/Pods-Elpis-tvOSTests.debug.xcconfig"; sourceTree = "<group>"; };
-		4D9A5BF765344CB3865A4C49 /* Pods-Elpis-tvOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Elpis-tvOSTests.release.xcconfig"; path = "Target Support Files/Pods-Elpis-tvOSTests/Pods-Elpis-tvOSTests.release.xcconfig"; sourceTree = "<group>"; };
-		4EF937E118DF3ED79960A834 /* Pods-Elpis-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Elpis-tvOS.debug.xcconfig"; path = "Target Support Files/Pods-Elpis-tvOS/Pods-Elpis-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
 		50AF4FECB46644D1BF8100C2 /* RNMixpanel.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = RNMixpanel.xcodeproj; path = "../node_modules/react-native-mixpanel/RNMixpanel.xcodeproj"; sourceTree = "<group>"; };
 		5B0F3625F26346728ED51030 /* libRNCWebView.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRNCWebView.a; sourceTree = "<group>"; };
 		5CD3F2FE560A436B981AF03D /* Fontisto.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Fontisto.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Fontisto.ttf"; sourceTree = "<group>"; };
 		5E91572D1DD0AC6500FF2AA8 /* RCTAnimation.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTAnimation.xcodeproj; path = "../node_modules/react-native/Libraries/NativeAnimation/RCTAnimation.xcodeproj"; sourceTree = "<group>"; };
-		658D80D20BAEF10038926316 /* Pods-Elpis-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Elpis-tvOS.release.xcconfig"; path = "Target Support Files/Pods-Elpis-tvOS/Pods-Elpis-tvOS.release.xcconfig"; sourceTree = "<group>"; };
 		75423C5AB3CA444182AC1110 /* RNGestureHandler.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = RNGestureHandler.xcodeproj; path = "../node_modules/react-native-gesture-handler/ios/RNGestureHandler.xcodeproj"; sourceTree = "<group>"; };
 		78C398B01ACF4ADC00677621 /* RCTLinking.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTLinking.xcodeproj; path = "../node_modules/react-native/Libraries/LinkingIOS/RCTLinking.xcodeproj"; sourceTree = "<group>"; };
 		7AFC09E49B894458A7F3E9BE /* Foundation.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Foundation.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Foundation.ttf"; sourceTree = "<group>"; };
@@ -516,13 +507,11 @@
 		7E62A1922A2F35480A77A820 /* Pods_ElpisTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ElpisTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		832341B01AAA6A8300B99B32 /* RCTText.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTText.xcodeproj; path = "../node_modules/react-native/Libraries/Text/RCTText.xcodeproj"; sourceTree = "<group>"; };
 		894E67632826351FB43C1F80 /* Pods_Elpis_tvOSTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Elpis_tvOSTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		94551D2304A27A9EA8EB6CD4 /* Pods-ElpisTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ElpisTests.debug.xcconfig"; path = "Target Support Files/Pods-ElpisTests/Pods-ElpisTests.debug.xcconfig"; sourceTree = "<group>"; };
 		9C9995CD72BE4525884640B0 /* Entypo.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Entypo.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Entypo.ttf"; sourceTree = "<group>"; };
 		9DE8DC109DB8467A9A7EFC17 /* Ionicons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Ionicons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Ionicons.ttf"; sourceTree = "<group>"; };
 		ACD3D2C0F22B4022B887E7C2 /* libRNCCameraRoll.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRNCCameraRoll.a; sourceTree = "<group>"; };
 		ADBDB91F1DFEBF0600ED6528 /* RCTBlob.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTBlob.xcodeproj; path = "../node_modules/react-native/Libraries/Blob/RCTBlob.xcodeproj"; sourceTree = "<group>"; };
 		B31746DC0EEA4637AB0AC222 /* FontAwesome5_Brands.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = FontAwesome5_Brands.ttf; path = "../node_modules/react-native-vector-icons/Fonts/FontAwesome5_Brands.ttf"; sourceTree = "<group>"; };
-		B5692053353B5DC802109E64 /* Pods-ElpisTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ElpisTests.release.xcconfig"; path = "Target Support Files/Pods-ElpisTests/Pods-ElpisTests.release.xcconfig"; sourceTree = "<group>"; };
 		B8961368369841B3BCB66873 /* libRNGestureHandler-tvOS.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = "libRNGestureHandler-tvOS.a"; sourceTree = "<group>"; };
 		BF8C168BBFA04FF1A78FD5D2 /* lato-italic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "lato-italic.ttf"; path = "../app/assets/fonts/lato-italic.ttf"; sourceTree = "<group>"; };
 		CDB5A315DE68435F93AE08F7 /* Zocial.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Zocial.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Zocial.ttf"; sourceTree = "<group>"; };
@@ -571,8 +560,6 @@
 				44BE0CE575BF4880BC9E5925 /* libRNCCameraRoll.a in Frameworks */,
 				3FA22ACFDC8C4166986F4DB6 /* libSplashScreen.a in Frameworks */,
 				8FD002EBB9A94244A6F28C1E /* libRNMixpanel.a in Frameworks */,
-				81FA060EE34284D10F37A08A /* Pods_Elpis.framework in Frameworks */,
-				25EFFDED2365F6A10071F887 /* Mixpanel.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -893,7 +880,6 @@
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				10F4C994A2E64A3EA0962C31 /* Resources */,
 				25F1D9BB226DD66200D51624 /* Recovered References */,
-				D61467B971A5206426D1F60D /* Pods */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -918,21 +904,6 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		D61467B971A5206426D1F60D /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				17F1E0FC4FCFE7A18C594C40 /* Pods-Elpis.debug.xcconfig */,
-				0B3F342C1FED96BF843DF046 /* Pods-Elpis.release.xcconfig */,
-				4EF937E118DF3ED79960A834 /* Pods-Elpis-tvOS.debug.xcconfig */,
-				658D80D20BAEF10038926316 /* Pods-Elpis-tvOS.release.xcconfig */,
-				4C0B5EDABEE0BAB05C72059C /* Pods-Elpis-tvOSTests.debug.xcconfig */,
-				4D9A5BF765344CB3865A4C49 /* Pods-Elpis-tvOSTests.release.xcconfig */,
-				94551D2304A27A9EA8EB6CD4 /* Pods-ElpisTests.debug.xcconfig */,
-				B5692053353B5DC802109E64 /* Pods-ElpisTests.release.xcconfig */,
-			);
-			path = Pods;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -940,10 +911,8 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "ElpisTests" */;
 			buildPhases = (
-				7E57670F6D7D26DF82B882E8 /* [CP] Check Pods Manifest.lock */,
 				00E356EA1AD99517003FC87E /* Sources */,
 				00E356EB1AD99517003FC87E /* Frameworks */,
-				00E356EC1AD99517003FC87E /* Resources */,
 			);
 			buildRules = (
 			);
@@ -959,12 +928,10 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "Elpis" */;
 			buildPhases = (
-				7244606E881A70207F5B2E53 /* [CP] Check Pods Manifest.lock */,
 				13B07F871A680F5B00A75B9A /* Sources */,
 				13B07F8C1A680F5B00A75B9A /* Frameworks */,
 				13B07F8E1A680F5B00A75B9A /* Resources */,
 				00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */,
-				F5B4C8F574E7AED8E557F290 /* [CP] Embed Pods Frameworks */,
 				251825252366D0BE00985E61 /* Embed Frameworks */,
 			);
 			buildRules = (
@@ -1452,13 +1419,6 @@
 /* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
-		00E356EC1AD99517003FC87E /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		13B07F8E1A680F5B00A75B9A /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -1513,68 +1473,6 @@
 			shellPath = /bin/sh;
 			shellScript = "export NODE_BINARY=node\n../node_modules/react-native/scripts/react-native-xcode.sh\n";
 		};
-		7244606E881A70207F5B2E53 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Elpis-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		7E57670F6D7D26DF82B882E8 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-ElpisTests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		F5B4C8F574E7AED8E557F290 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Elpis/Pods-Elpis-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Mixpanel/Mixpanel.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Mixpanel.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Elpis/Pods-Elpis-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -1626,7 +1524,6 @@
 /* Begin XCBuildConfiguration section */
 		00E356F61AD99517003FC87E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 94551D2304A27A9EA8EB6CD4 /* Pods-ElpisTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				DEVELOPMENT_TEAM = JC32AN7BL2;
@@ -1669,7 +1566,6 @@
 		};
 		00E356F71AD99517003FC87E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B5692053353B5DC802109E64 /* Pods-ElpisTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
@@ -1709,7 +1605,6 @@
 		};
 		13B07F941A680F5B00A75B9A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 17F1E0FC4FCFE7A18C594C40 /* Pods-Elpis.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CURRENT_PROJECT_VERSION = 1;
@@ -1743,7 +1638,6 @@
 		};
 		13B07F951A680F5B00A75B9A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0B3F342C1FED96BF843DF046 /* Pods-Elpis.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CURRENT_PROJECT_VERSION = 1;
