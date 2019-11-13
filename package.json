@@ -83,10 +83,5 @@
     "react-test-renderer": "16.8.6",
     "ts-jest": "24.1.0",
     "typescript": "3.6.3"
-  },
-  "rnpm": {
-    "assets": [
-      "./app/assets/fonts/"
-    ]
   }
 }
