@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2015-present, Facebook, Inc. and its affiliates.
+ * Copyright (c) Facebook, Inc. and its affiliates.
  *
  * This source code is licensed under the MIT license found in the
  * LICENSE file in the root directory of this source tree.
@@ -38,12 +38,5 @@
   return [[NSBundle mainBundle] URLForResource:@"main" withExtension:@"jsbundle"];
 #endif
 }
-
-/** Patch: https://github.com/karanjthakkar/ReactNativeDevLoadingViewIssue/commit/e1a637cd82bf45e6af6814746d863b131b76ac62 */
-#if RCT_DEV
-- (BOOL)bridge:(RCTBridge *)bridge didNotFindModule:(NSString *)moduleName {
-  return YES;
-}
-#endif
 
 @end
