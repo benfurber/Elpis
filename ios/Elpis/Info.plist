@@ -37,8 +37,6 @@
 			</dict>
 		</dict>
 	</dict>
-	<key>NSLocationWhenInUseUsageDescription</key>
-	<string/>
 	<key>NSPhotoLibraryUsageDescription</key>
 	<string>So that you can select photos for us to use on the platform.</string>
 	<key>UIAppFonts</key>
