@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { StyleSheet, View } from "react-native";
 import { Mutation } from "react-apollo";
+import OneSignal from "react-native-onesignal";
 
 import { BackgroundModal, ButtonSubmit, Title } from "components";
 import { NavigationType } from "interfaces";
@@ -34,6 +35,8 @@ class OnboardingThankYouScreen extends Component<Props, State> {
 
   onPress(mutation) {
     this.setState({ display: "loading" });
+
+    OneSignal.registerForPushNotifications();
 
     mutation().then(() => {
       this.setState({ display: "active" });

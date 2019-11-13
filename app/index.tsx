@@ -19,7 +19,7 @@ setCustomText({ style: { ...elements.standardText } });
 class App extends Component {
   constructor(properties) {
     super(properties);
-    OneSignal.init(ONE_SIGNAL_ID);
+    OneSignal.init(ONE_SIGNAL_ID, { kOSSettingsKeyAutoPrompt: false });
 
     OneSignal.addEventListener("received", this.onReceived);
     OneSignal.addEventListener("opened", this.onOpened);
