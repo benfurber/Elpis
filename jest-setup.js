@@ -27,3 +27,21 @@ jest.mock("react-native-mixpanel", () => ({
 
 const mockImpl = new MockAsyncStorage();
 jest.mock("@react-native-community/async-storage", () => mockImpl);
+
+// RN 0.61 bug: https://github.com/facebook/react-native/issues/26710
+jest.mock(
+  "react-native/Libraries/Utilities/NativePlatformConstantsIOS",
+  () => ({
+    ...require.requireActual(
+      "react-native/Libraries/Utilities/NativePlatformConstantsIOS",
+    ),
+    getConstants: () => ({
+      forceTouchAvailable: false,
+      interfaceIdiom: "en",
+      isTesting: false,
+      osVersion: "ios",
+      reactNativeVersion: { major: 60, minor: 1, patch: 0 },
+      systemName: "ios",
+    }),
+  }),
+);
