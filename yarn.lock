@@ -7066,6 +7066,13 @@ react-native-mixpanel@^1.1.4:
   resolved "https://registry.yarnpkg.com/react-native-mixpanel/-/react-native-mixpanel-1.1.4.tgz#874bb7eb012c005f32c94e2f99b6503e327ff970"
   integrity sha512-RiyGCAL3klaxmaVIi5tv7tBcn/W10HRPnJm+nbec4DA/lV1SJNI+r6kXnhPHeW5Khiwngdz0rK5Ve4LE5/lOOA==
 
+react-native-onesignal@^3.5.0:
+  version "3.5.0"
+  resolved "https://registry.yarnpkg.com/react-native-onesignal/-/react-native-onesignal-3.5.0.tgz#7f4ab2fae32c52fc1a5f34efdba6bbb53d04e6bb"
+  integrity sha512-Ww2d1na7SOpZ0DEVb+8BGpTt5Ty0Nuak/YqjY3YCauHFBdNOdI7Cz5CtSWLJMjKiyniJmWWHkvLu6HDE9zGZng==
+  dependencies:
+    invariant "^2.2.2"
+
 react-native-s3-upload@^0.0.12:
   version "0.0.12"
   resolved "https://registry.yarnpkg.com/react-native-s3-upload/-/react-native-s3-upload-0.0.12.tgz#df19c7d305c3c31cc964d6b59073672c9337cf69"
