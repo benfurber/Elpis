@@ -23,8 +23,13 @@ DerivedData
 project.xcworkspace
 ios/Pods*
 
+# Visual Studio Code
+#
+.history/
+
 # Android/IntelliJ
 #
+android/
 build/
 .idea
 .gradle
