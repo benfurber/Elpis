@@ -10,4 +10,5 @@ export { OnboardingFeaturesScreen } from "./onboarding-features";
 export { OnboardingThankYouScreen } from "./onboarding-thank-you";
 export { OnboardingWelcomeScreen } from "./onboarding-welcome";
 export { PostScreen } from "./post";
+export { SettingsScreen } from "./settings";
 export { WelcomeScreen } from "./welcome";
