@@ -17,6 +17,7 @@ import {
   OnboardingThankYouScreen,
   OnboardingWelcomeScreen,
   PostScreen,
+  SettingsScreen,
   WelcomeScreen,
 } from "screens";
 
@@ -77,6 +78,7 @@ const mainTabs = createBottomTabNavigator(
       path: "notification",
     },
     Feedback: FeedbackScreen,
+    Settings: SettingsScreen,
   },
   {
     defaultNavigationOptions: ({ navigation }) => ({
