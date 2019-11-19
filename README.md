@@ -7,6 +7,7 @@
 - [Download React Native debugger](https://github.com/jhen0409/react-native-debugger#installation)
 - [Setup yarn](https://yarnpkg.com/en/docs/install#mac-stable)
 - Run `yarn`
+- `cd ios && pod install`
 
 ## Running locally
 
