@@ -19,6 +19,7 @@ import {
   OnboardingWelcomeScreen,
   PostScreen,
   WelcomeScreen,
+  AddPostScreen,
 } from "screens";
 
 enum headerMode {
@@ -71,6 +72,7 @@ const mainTabs = createBottomTabNavigator(
     Feed: FeedStack,
     Notifications: NotificationsStack,
     Feedback: FeedbackScreen,
+    AddPost: AddPostScreen,
   },
   {
     defaultNavigationOptions: ({ navigation }) => ({

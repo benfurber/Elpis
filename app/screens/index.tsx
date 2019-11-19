@@ -1,3 +1,4 @@
+export { AddPostScreen } from "./add-post";
 export { AddReplyScreen } from "./add-reply";
 export { AuthLoadingScreen } from "./auth-loading";
 export { FeedScreen } from "./feed";
