@@ -38,7 +38,10 @@ const AddContentScreen = createStackNavigator(
 );
 
 const IndividualContentRoutes = {
-  Post: PostScreen,
+  Post: {
+    screen: PostScreen,
+    path: "post/:id",
+  },
   AddContent: AddContentScreen,
 };
 
@@ -67,7 +70,10 @@ const NotificationsStack = createStackNavigator(
 const mainTabs = createBottomTabNavigator(
   {
     Feed: FeedStack,
-    Notifications: NotificationsStack,
+    Notifications: {
+      screen: NotificationsStack,
+      path: "notification",
+    },
     Feedback: FeedbackScreen,
   },
   {
@@ -105,7 +111,10 @@ const RootStack = createSwitchNavigator({
   AuthLoading: AuthLoadingScreen,
   Welcome: WelcomeScreen,
   Onboarding: OnboardingSwitch,
-  Main: mainTabs,
+  Main: {
+    screen: mainTabs,
+    path: "",
+  },
 });
 
 export { RootStack };

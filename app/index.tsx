@@ -16,6 +16,8 @@ const AppContainer = createAppContainer(RootStack);
 
 setCustomText({ style: { ...elements.standardText } });
 
+const URI_PREFIX = "elpis://";
+
 class App extends Component {
   constructor(properties) {
     super(properties);
@@ -54,7 +56,7 @@ class App extends Component {
   render() {
     return (
       <ApolloProvider client={client}>
-        <AppContainer />
+        <AppContainer uriPrefix={URI_PREFIX} />
       </ApolloProvider>
     );
   }
