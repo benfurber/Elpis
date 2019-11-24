@@ -1,10 +1,8 @@
 /* eslint-disable react/display-name */
 import React from "react";
-import {
-  createBottomTabNavigator,
-  createStackNavigator,
-  createSwitchNavigator,
-} from "react-navigation";
+import { createSwitchNavigator } from "react-navigation";
+import { createStackNavigator } from "react-navigation-stack";
+import { createBottomTabNavigator } from "react-navigation-tabs";
 
 import { TabBarIcon } from "components";
 import {
