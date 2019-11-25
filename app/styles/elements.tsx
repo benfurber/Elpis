@@ -11,6 +11,7 @@ const standard = StyleSheet.create({
     padding: 10,
     borderColor: colours.whiteTransparentHigh,
     borderWidth: 2,
+    color: colours.darkGrey,
   },
   image: {
     backgroundColor: colours.emeraldGreen,

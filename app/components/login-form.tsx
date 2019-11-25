@@ -81,7 +81,7 @@ class LoginForm extends Component<Props, State> {
   }
 
   render() {
-    const { display } = this.state;
+    const { email, display, password } = this.state;
 
     return (
       <View style={styles.container}>
@@ -94,7 +94,7 @@ class LoginForm extends Component<Props, State> {
             onChangeText={email => this.setState({ email })}
             placeholder={labels.email}
             textContentType="emailAddress"
-            value={this.state.email}
+            value={email}
           />
         </View>
         <View style={styles.row}>
@@ -102,10 +102,9 @@ class LoginForm extends Component<Props, State> {
             displayStyle={display}
             onChangeText={password => this.setState({ password })}
             placeholder={labels.password}
-            returnKeyType={"send"}
             secureTextEntry
             textContentType="password"
-            value={this.state.password}
+            value={password}
           />
         </View>
         <View style={styles.row}>
@@ -140,10 +139,6 @@ const styles = StyleSheet.create({
     alignItems: "center",
     flexDirection: "row",
     margin: 10,
-  },
-  textErrorMessage: {
-    alignSelf: "center",
-    color: colours.pureWhite,
   },
 });
 
