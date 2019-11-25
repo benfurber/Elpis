@@ -5,25 +5,26 @@
 	};
 	objectVersion = 46;
 	objects = {
+
 /* Begin PBXBuildFile section */
 		00E356F31AD99517003FC87E /* ElpisTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* ElpisTests.m */; };
 		13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB11A68108700A75B9A /* LaunchScreen.xib */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
+		1DD63E5C1A96416B8561D641 /* lato-bolditalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FC922C9E387A443EA23379DD /* lato-bolditalic.ttf */; };
+		20BE7BA72C324D1BB9D6701E /* creteround-italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9AF282CCAEA24A0A80785647 /* creteround-italic.ttf */; };
 		2D02E4BC1E0B4A80006451C7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		2D02E4BD1E0B4A84006451C7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		2D02E4BF1E0B4AB3006451C7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		2DCD954D1E0B4F2C00145EB5 /* ElpisTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* ElpisTests.m */; };
 		36F7E4A746C1DC686960AC96 /* libPods-Elpis.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6FBC4AD00C9D7ED13B1FBA3D /* libPods-Elpis.a */; };
 		3BC5892633BFFCDB204B91BE /* libPods-ElpisTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B43EDCBD51AA9CE405CCC8D7 /* libPods-ElpisTests.a */; };
-		20BE7BA72C324D1BB9D6701E /* creteround-italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9AF282CCAEA24A0A80785647 /* creteround-italic.ttf */; };
+		3C3B0BC73F5345B7A6C13DCF /* lato-italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EEC2EAA599C745ADBF47B622 /* lato-italic.ttf */; };
+		3DD59D4DAF704AB3BF69A9F3 /* lato-bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C587B699423A4587831B8699 /* lato-bold.ttf */; };
+		75A5D9FF27F54630840A215B /* lato-regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E148856CAB7B495888E4F8FE /* lato-regular.ttf */; };
 		D12F49B163B94D95ADA32EF8 /* creteround-regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A24F7C6C7448424BA8F0C120 /* creteround-regular.ttf */; };
 		F10EBFDF7BC049179B01AE03 /* fa-solid-900.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F72D6AC4A5CE41509394CFF7 /* fa-solid-900.ttf */; };
-		3DD59D4DAF704AB3BF69A9F3 /* lato-bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C587B699423A4587831B8699 /* lato-bold.ttf */; };
-		1DD63E5C1A96416B8561D641 /* lato-bolditalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FC922C9E387A443EA23379DD /* lato-bolditalic.ttf */; };
-		3C3B0BC73F5345B7A6C13DCF /* lato-italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EEC2EAA599C745ADBF47B622 /* lato-italic.ttf */; };
-		75A5D9FF27F54630840A215B /* lato-regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E148856CAB7B495888E4F8FE /* lato-regular.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,17 +62,17 @@
 		38C038AAF159EC9E1AFA1C48 /* Pods-ElpisTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ElpisTests.release.xcconfig"; path = "Target Support Files/Pods-ElpisTests/Pods-ElpisTests.release.xcconfig"; sourceTree = "<group>"; };
 		6FBC4AD00C9D7ED13B1FBA3D /* libPods-Elpis.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Elpis.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		77955C91C896A71A5513CDC0 /* Pods-Elpis.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Elpis.debug.xcconfig"; path = "Target Support Files/Pods-Elpis/Pods-Elpis.debug.xcconfig"; sourceTree = "<group>"; };
+		9AF282CCAEA24A0A80785647 /* creteround-italic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "creteround-italic.ttf"; path = "../app/assets/fonts/creteround-italic.ttf"; sourceTree = "<group>"; };
+		A24F7C6C7448424BA8F0C120 /* creteround-regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "creteround-regular.ttf"; path = "../app/assets/fonts/creteround-regular.ttf"; sourceTree = "<group>"; };
 		B43EDCBD51AA9CE405CCC8D7 /* libPods-ElpisTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ElpisTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C587B699423A4587831B8699 /* lato-bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "lato-bold.ttf"; path = "../app/assets/fonts/lato-bold.ttf"; sourceTree = "<group>"; };
+		E148856CAB7B495888E4F8FE /* lato-regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "lato-regular.ttf"; path = "../app/assets/fonts/lato-regular.ttf"; sourceTree = "<group>"; };
 		E911FFD32A21B544292C02B7 /* Pods-Elpis.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Elpis.release.xcconfig"; path = "Target Support Files/Pods-Elpis/Pods-Elpis.release.xcconfig"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		ED2971642150620600B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS12.0.sdk/System/Library/Frameworks/JavaScriptCore.framework; sourceTree = DEVELOPER_DIR; };
-		9AF282CCAEA24A0A80785647 /* creteround-italic.ttf */ = {isa = PBXFileReference; name = "creteround-italic.ttf"; path = "../app/assets/fonts/creteround-italic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		A24F7C6C7448424BA8F0C120 /* creteround-regular.ttf */ = {isa = PBXFileReference; name = "creteround-regular.ttf"; path = "../app/assets/fonts/creteround-regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		F72D6AC4A5CE41509394CFF7 /* fa-solid-900.ttf */ = {isa = PBXFileReference; name = "fa-solid-900.ttf"; path = "../app/assets/fonts/fa-solid-900.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		C587B699423A4587831B8699 /* lato-bold.ttf */ = {isa = PBXFileReference; name = "lato-bold.ttf"; path = "../app/assets/fonts/lato-bold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		FC922C9E387A443EA23379DD /* lato-bolditalic.ttf */ = {isa = PBXFileReference; name = "lato-bolditalic.ttf"; path = "../app/assets/fonts/lato-bolditalic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		EEC2EAA599C745ADBF47B622 /* lato-italic.ttf */ = {isa = PBXFileReference; name = "lato-italic.ttf"; path = "../app/assets/fonts/lato-italic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		E148856CAB7B495888E4F8FE /* lato-regular.ttf */ = {isa = PBXFileReference; name = "lato-regular.ttf"; path = "../app/assets/fonts/lato-regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		EEC2EAA599C745ADBF47B622 /* lato-italic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "lato-italic.ttf"; path = "../app/assets/fonts/lato-italic.ttf"; sourceTree = "<group>"; };
+		F72D6AC4A5CE41509394CFF7 /* fa-solid-900.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "fa-solid-900.ttf"; path = "../app/assets/fonts/fa-solid-900.ttf"; sourceTree = "<group>"; };
+		FC922C9E387A443EA23379DD /* lato-bolditalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "lato-bolditalic.ttf"; path = "../app/assets/fonts/lato-bolditalic.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -158,7 +159,6 @@
 				16F7A2E7676360A7F6125342 /* Pods-ElpisTests.debug.xcconfig */,
 				38C038AAF159EC9E1AFA1C48 /* Pods-ElpisTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -197,7 +197,7 @@
 			sourceTree = "<group>";
 		};
 		D5E06D8465724064B19D9223 /* Resources */ = {
-			isa = "PBXGroup";
+			isa = PBXGroup;
 			children = (
 				9AF282CCAEA24A0A80785647 /* creteround-italic.ttf */,
 				A24F7C6C7448424BA8F0C120 /* creteround-regular.ttf */,
@@ -209,7 +209,6 @@
 			);
 			name = Resources;
 			sourceTree = "<group>";
-			path = "";
 		};
 /* End PBXGroup section */
 
@@ -320,6 +319,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
