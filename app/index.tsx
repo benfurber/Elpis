@@ -8,17 +8,11 @@ import { RootStack } from "routes";
 import { elements } from "styles";
 import { client } from "utils";
 
-import SplashScreen from "react-native-splash-screen";
-
 const AppContainer = createAppContainer(RootStack);
 
 setCustomText({ style: { ...elements.standardText } });
 
 class App extends Component {
-  componentDidMount() {
-    SplashScreen.hide();
-  }
-
   render() {
     return (
       <ApolloProvider client={client}>
