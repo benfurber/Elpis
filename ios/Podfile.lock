@@ -192,8 +192,6 @@ PODS:
   - react-native-onesignal (3.5.0):
     - OneSignal (= 2.11.2)
     - React (< 1.0.0, >= 0.13.0)
-  - react-native-splash-screen (3.2.0):
-    - React
   - react-native-webview (5.12.1):
     - React
   - React-RCTActionSheet (0.61.4):
@@ -265,7 +263,6 @@ DEPENDENCIES:
   - "react-native-cameraroll (from `../node_modules/@react-native-community/cameraroll`)"
   - react-native-mixpanel (from `../node_modules/react-native-mixpanel`)
   - react-native-onesignal (from `../node_modules/react-native-onesignal`)
-  - react-native-splash-screen (from `../node_modules/react-native-splash-screen`)
   - react-native-webview (from `../node_modules/react-native-webview`)
   - React-RCTActionSheet (from `../node_modules/react-native/Libraries/ActionSheetIOS`)
   - React-RCTAnimation (from `../node_modules/react-native/Libraries/NativeAnimation`)
@@ -326,8 +323,6 @@ EXTERNAL SOURCES:
     :path: "../node_modules/react-native-mixpanel"
   react-native-onesignal:
     :path: "../node_modules/react-native-onesignal"
-  react-native-splash-screen:
-    :path: "../node_modules/react-native-splash-screen"
   react-native-webview:
     :path: "../node_modules/react-native-webview"
   React-RCTActionSheet:
@@ -384,7 +379,6 @@ SPEC CHECKSUMS:
   react-native-cameraroll: 976d4c5c72f3d06f0725a6e2e956b183744ea00e
   react-native-mixpanel: f7ca1a4a436f1d3c19d9ca5d57aa47b848e97292
   react-native-onesignal: 663944f5290d758d138b65ab6e60cf7d9c8e8f8f
-  react-native-splash-screen: 200d11d188e2e78cea3ad319964f6142b6384865
   react-native-webview: 5036ed4a973ad1deeeff118262d2df7b60b3419d
   React-RCTActionSheet: 7369b7c85f99b6299491333affd9f01f5a130c22
   React-RCTAnimation: d07be15b2bd1d06d89417eb0343f98ffd2b099a7
