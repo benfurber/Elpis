@@ -1,3 +1,4 @@
+/* eslint-disable sort-keys-fix/sort-keys-fix */
 /* eslint-disable react/display-name */
 import React from "react";
 import { createSwitchNavigator } from "react-navigation";
@@ -11,6 +12,7 @@ import {
   AuthLoadingScreen,
   FeedScreen,
   FeedbackScreen,
+  LogoutScreen,
   NotificationsScreen,
   OnboardingAddPasswordScreen,
   OnboardingFeaturesScreen,
@@ -111,6 +113,10 @@ const OnboardingSwitch = createStackNavigator(
   },
 );
 
+const SettingsSwitch = createStackNavigator({
+  Logout: LogoutScreen,
+});
+
 const RootStack = createSwitchNavigator({
   AuthLoading: AuthLoadingScreen,
   Welcome: WelcomeScreen,
@@ -119,6 +125,7 @@ const RootStack = createSwitchNavigator({
     screen: mainTabs,
     path: "",
   },
+  Settings: SettingsSwitch,
 });
 
 export { RootStack };

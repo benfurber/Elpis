@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import { StyleSheet, View, TouchableOpacity, Text } from "react-native";
 
+import AsyncStorage from "@react-native-community/async-storage";
+
 import { BackgroundContainer, Title, Icon } from "components";
 import { NavigationType } from "interfaces";
 import { labels } from "labels";
@@ -16,6 +18,15 @@ class SettingsScreen extends Component<Props> {
     Analytics.track("Settings");
   }
 
+  onPress = async () => {
+    try {
+      await AsyncStorage.removeItem("token");
+      this.props.navigation.navigate("Logout");
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
   render() {
     return (
       <BackgroundContainer>
@@ -23,7 +34,7 @@ class SettingsScreen extends Component<Props> {
         <View>
           <TouchableOpacity
             style={styles.item}
-            onPress={() => null}
+            onPress={() => this.onPress()}
           >
             <View style={styles.row}>
               <Icon name={"sign-out-alt"} />
