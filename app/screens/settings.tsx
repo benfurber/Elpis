@@ -38,7 +38,7 @@ class SettingsScreen extends Component<Props> {
           >
             <View style={styles.row}>
               <Icon name={"sign-out-alt"} />
-              <Text>Settings</Text>
+              <Text style={styles.text}>Logout</Text>
             </View>
           </TouchableOpacity>
         </View>
@@ -60,6 +60,10 @@ const styles = StyleSheet.create({
   row: {
     alignItems: "center",
     flexDirection: "row",
+  },
+  text: {
+    paddingLeft: 10,
+    fontSize: typography.fontSizeS
   },
 });
 
