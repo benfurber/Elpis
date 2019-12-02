@@ -34,10 +34,10 @@ class OnboardingThankYouScreen extends Component<Props, State> {
     });
   }
 
-  onPress(mutation) {
+  async onPress(mutation) {
     this.setState({ display: "loading" });
 
-    OneSignal.promptForPushNotificationsWithUserResponse(
+    await OneSignal.promptForPushNotificationsWithUserResponse(
       this.notificationCallback,
     );
 
@@ -58,7 +58,7 @@ class OnboardingThankYouScreen extends Component<Props, State> {
 
     if (permission) {
       OneSignal.setSubscription(true);
-      OneSignal.setExternalUserId(id);
+      return OneSignal.setExternalUserId(id);
     }
   }
 
