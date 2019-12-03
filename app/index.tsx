@@ -10,10 +10,9 @@ import { elements } from "styles";
 import { client, pushNotifications } from "utils";
 
 const AppContainer = createAppContainer(RootStack);
+const URI_PREFIX = "elpis://";
 
 setCustomText({ style: { ...elements.standardText } });
-
-const URI_PREFIX = "elpis://";
 
 class App extends Component {
   constructor(properties) {
