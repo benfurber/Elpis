@@ -1,10 +1,8 @@
 /* eslint-disable react/display-name */
 import React from "react";
-import {
-  createBottomTabNavigator,
-  createStackNavigator,
-  createSwitchNavigator,
-} from "react-navigation";
+import { createSwitchNavigator } from "react-navigation";
+import { createStackNavigator } from "react-navigation-stack";
+import { createBottomTabNavigator } from "react-navigation-tabs";
 
 import { TabBarIcon } from "components";
 import {
@@ -40,7 +38,10 @@ const AddContentScreen = createStackNavigator(
 );
 
 const IndividualContentRoutes = {
-  Post: PostScreen,
+  Post: {
+    screen: PostScreen,
+    path: "post/:id",
+  },
   AddContent: AddContentScreen,
 };
 
@@ -69,7 +70,10 @@ const NotificationsStack = createStackNavigator(
 const mainTabs = createBottomTabNavigator(
   {
     Feed: FeedStack,
-    Notifications: NotificationsStack,
+    Notifications: {
+      screen: NotificationsStack,
+      path: "notification",
+    },
     Feedback: FeedbackScreen,
   },
   {
@@ -107,7 +111,10 @@ const RootStack = createSwitchNavigator({
   AuthLoading: AuthLoadingScreen,
   Welcome: WelcomeScreen,
   Onboarding: OnboardingSwitch,
-  Main: mainTabs,
+  Main: {
+    screen: mainTabs,
+    path: "",
+  },
 });
 
 export { RootStack };

@@ -1,13 +1,15 @@
 import React, { Component } from "react";
 import { StyleSheet, View } from "react-native";
 import { Mutation } from "react-apollo";
+import OneSignal from "react-native-onesignal";
 
 import { BackgroundModal, ButtonSubmit, Title } from "components";
 import { NavigationType } from "interfaces";
 import { labels } from "labels";
+import { USER_DETAILS } from "queries";
 import { COMPLETE_USER_ONBOARDING } from "mutations";
 import { layout, typography } from "styles";
-import { Analytics } from "utils";
+import { Analytics, client } from "utils";
 
 interface Props {
   navigation: NavigationType;
@@ -32,13 +34,32 @@ class OnboardingThankYouScreen extends Component<Props, State> {
     });
   }
 
-  onPress(mutation) {
+  async onPress(mutation) {
     this.setState({ display: "loading" });
+
+    await OneSignal.promptForPushNotificationsWithUserResponse(
+      this.notificationCallback,
+    );
 
     mutation().then(() => {
       this.setState({ display: "active" });
       return this.props.navigation.navigate("Feed");
     });
+  }
+
+  async notificationCallback(permission) {
+    const getId = async () => {
+      const query = USER_DETAILS;
+      const result = await client.query({ query });
+      return result.data.me.id;
+    };
+
+    const id = await getId();
+
+    if (permission) {
+      OneSignal.setSubscription(true);
+      return OneSignal.setExternalUserId(id);
+    }
   }
 
   render() {

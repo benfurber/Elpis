@@ -7,13 +7,19 @@ import RNBootSplash from "react-native-bootsplash";
 
 import { RootStack } from "routes";
 import { elements } from "styles";
-import { client } from "utils";
+import { client, pushNotifications } from "utils";
 
 const AppContainer = createAppContainer(RootStack);
+const URI_PREFIX = "elpis://";
 
 setCustomText({ style: { ...elements.standardText } });
 
 class App extends Component {
+  constructor(properties) {
+    super(properties);
+    pushNotifications.initialise();
+  }
+
   componentDidMount() {
     RNBootSplash.hide({ duration: 250 });
   }
@@ -21,7 +27,7 @@ class App extends Component {
   render() {
     return (
       <ApolloProvider client={client}>
-        <AppContainer />
+        <AppContainer uriPrefix={URI_PREFIX} />
       </ApolloProvider>
     );
   }
