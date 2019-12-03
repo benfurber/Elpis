@@ -5,4 +5,5 @@ export { client } from "./client";
 export { dropFirstSentence } from "./drop-first-sentence";
 export { firstSentence } from "./first-sentence";
 export { formatDate } from "./format-date";
+export { pushNotifications } from "./push-notifications";
 export { validURL } from "./valid-url";
