@@ -20,7 +20,6 @@ interface State {
   editable: boolean;
   textInput: string;
   textInputExtra: string;
-  title: string;
 }
 
 class AddTopicScreen extends Component<Props, State> {
@@ -30,7 +29,6 @@ class AddTopicScreen extends Component<Props, State> {
       editable: true,
       textInput: "",
       textInputExtra: "",
-      title: "",
     };
   }
   secondTextInput = TextInput as any;

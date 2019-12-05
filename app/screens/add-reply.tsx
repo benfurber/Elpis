@@ -20,7 +20,6 @@ interface Props {
 interface State {
   textInput: string;
   textInputEditable: boolean;
-  title: string;
 }
 
 class AddReplyScreen extends Component<Props, State> {
@@ -29,7 +28,6 @@ class AddReplyScreen extends Component<Props, State> {
     this.state = {
       textInputEditable: true,
       textInput: "",
-      title: "",
     };
   }
 
@@ -103,12 +101,6 @@ const styles = StyleSheet.create({
   textInputContainer: {
     width: "100%",
     flexDirection: "column",
-  },
-  title: {
-    padding: layout.spacingL,
-    fontFamily: "creteround-regular",
-    fontSize: typography.fontSizeXL,
-    flexWrap: "wrap",
   },
   text: {
     fontFamily: "creteround-regular",
