@@ -1,4 +1,4 @@
-export { Analytics } from "./analytics";
+export { Analytics, AnalyticsContentTypes } from "./analytics";
 export { calculateTotalComments } from "./calculate-total-comments";
 export { checkPasswordStrength } from "./check-password-strength";
 export { client } from "./client";

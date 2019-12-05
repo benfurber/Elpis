@@ -42,4 +42,4 @@ class Analytics {
 
 const analytics = new Analytics();
 
-export { analytics as Analytics };
+export { analytics as Analytics, ContentTypes as AnalyticsContentTypes };

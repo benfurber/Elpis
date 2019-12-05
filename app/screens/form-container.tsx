@@ -4,13 +4,27 @@ import { ScrollView, StyleSheet, TouchableOpacity, View } from "react-native";
 import { BackgroundContainer, Icon, Title } from "components";
 import { NavigationType } from "interfaces";
 import { layout, colours } from "styles";
+import { Analytics, AnalyticsContentTypes } from "utils";
 
 interface Props {
+  analyticsContent: {
+    contentType: AnalyticsContentTypes;
+    contentId: string;
+  };
   navigation: NavigationType;
   title: string;
 }
 
 class FormContainerScreen extends Component<Props> {
+  componentDidMount() {
+    const { contentType, contentId } = this.props.analyticsContent;
+
+    Analytics.trackContent({
+      contentType,
+      contentId,
+    });
+  }
+
   render() {
     return (
       <BackgroundContainer>

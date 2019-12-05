@@ -10,7 +10,11 @@ jest.mock(navigation, () => jest.fn());
 describe("AddReplyScreen", () => {
   it("renders correctly", () => {
     const component = shallow(
-      <FormContainerScreen navigation={navigation} title={"Important Form"}>
+      <FormContainerScreen
+        analyticsContent={{ contentType: "AddReply", contentId: "324234" }}
+        navigation={navigation}
+        title={"Important Form"}
+      >
         <Text>Important Form contents</Text>
       </FormContainerScreen>,
     );
