@@ -26,18 +26,20 @@ class FormContainerScreen extends Component<Props> {
   }
 
   render() {
+    const { children, navigation, title } = this.props;
+
     return (
       <BackgroundContainer>
         <View>
           <View style={styles.closeContainer}>
-            <TouchableOpacity onPress={() => this.props.navigation.dismiss()}>
+            <TouchableOpacity onPress={() => navigation.dismiss()}>
               <Icon name="times-circle" size={30} />
             </TouchableOpacity>
           </View>
-          <Title style={styles.ctaText} text={this.props.title} small />
+          <Title style={styles.ctaText} text={title} small />
         </View>
         <View style={styles.body}>
-          <ScrollView>{this.props.children}</ScrollView>
+          <ScrollView>{children}</ScrollView>
         </View>
       </BackgroundContainer>
     );
