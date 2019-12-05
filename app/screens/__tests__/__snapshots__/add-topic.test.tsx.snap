@@ -30,7 +30,7 @@ exports[`AddReplyScreen renders correctly 1`] = `
           "paddingHorizontal": 10,
         }
       }
-      text="Adicione a sua resposta:"
+      text="Adicione um novo tópico na discussão:"
     />
   </View>
   <View
@@ -62,7 +62,7 @@ exports[`AddReplyScreen renders correctly 1`] = `
                   "kind": "OperationDefinition",
                   "name": Object {
                     "kind": "Name",
-                    "value": "createReply",
+                    "value": "createComment",
                   },
                   "operation": "mutation",
                   "selectionSet": Object {
@@ -104,7 +104,7 @@ exports[`AddReplyScreen renders correctly 1`] = `
                         "kind": "Field",
                         "name": Object {
                           "kind": "Name",
-                          "value": "createReply",
+                          "value": "createComment",
                         },
                         "selectionSet": Object {
                           "kind": "SelectionSet",
@@ -175,7 +175,7 @@ exports[`AddReplyScreen renders correctly 1`] = `
               ],
               "kind": "Document",
               "loc": Object {
-                "end": 120,
+                "end": 124,
                 "start": 0,
               },
             }

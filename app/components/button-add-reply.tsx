@@ -47,7 +47,9 @@ class ButtonAddReply extends Component<Props, State> {
 
   onPress() {
     const { commentId, postId } = this.props;
-    this.props.navigation.navigate("AddReply", { postId, commentId });
+    const screen = commentId ? "AddReply" : "AddTopic";
+
+    return this.props.navigation.navigate(screen, { postId, commentId });
   }
 
   render() {

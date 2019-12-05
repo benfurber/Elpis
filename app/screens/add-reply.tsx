@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import {
   ScrollView,
   StyleSheet,
-  Text,
   TextInput,
   TouchableOpacity,
   View,
@@ -14,19 +13,18 @@ import { withMappedNavigationParams } from "react-navigation-props-mapper";
 import { BackgroundContainer, Icon, Title } from "components";
 import { Comment, NavigationType, Post } from "interfaces";
 import { labels } from "labels";
-import { ADD_COMMENT, ADD_REPLY } from "mutations";
+import { ADD_REPLY } from "mutations";
 import { layout, typography, colours } from "styles";
-import { Analytics, firstSentence } from "utils";
+import { Analytics } from "utils";
 
 interface Props {
-  commentId: null | Comment["id"];
+  commentId: Comment["id"];
   navigation: NavigationType;
   postId: Post["id"];
 }
 
 interface State {
   textInput: string;
-  textInputExtra: string;
   textInputEditable: boolean;
   title: string;
 }
@@ -37,114 +35,63 @@ class AddReplyScreen extends Component<Props, State> {
     this.state = {
       textInputEditable: true,
       textInput: "",
-      textInputExtra: "",
       title: "",
     };
   }
-  secondTextInput = TextInput as any;
 
   componentDidMount() {
     Analytics.trackContent({
       contentType: "AddReply",
-      contentId: this.props.postId,
+      contentId: this.props.commentId,
     });
   }
 
-  componentDidUpdate(_props, state) {
-    const textInput = firstSentence(state.textInput);
+  onSubmitEditing(query) {
+    const { textInput } = this.state;
+    const { commentId, navigation } = this.props;
 
-    if (textInput !== state.textInput) {
-      this.setState({ textInput });
-      if (this.secondTextInput) {
-        return this.secondTextInput.focus();
-      }
-    }
-  }
-
-  onSubmitEditing(query, id) {
-    const { textInput, textInputExtra } = this.state;
     this.setState({ textInputEditable: false });
-
-    const content = textInput + " " + textInputExtra;
 
     query({
       variables: {
-        content,
-        id,
+        content: textInput,
+        id: commentId,
       },
     }).then(() => {
       this.setState({ textInput: "", textInputEditable: true });
-      this.props.navigation.pop();
+      navigation.pop();
     });
   }
 
-  input(mutation) {
-    const { textInputEditable } = this.state;
-
-    const args = {
-      autoFocus: true,
-      editable: textInputEditable,
-      multiline: true,
-      placeholder: labels.addPlaceholderTitle,
-      onChangeText: textInput => this.setState({ textInput }),
-      value: this.state.textInput,
-      returnKeyLabel: labels.submit,
-    };
-
-    if (mutation === ADD_COMMENT) {
-      return (createComment, {}) => (
-        <View style={styles.textInputContainer}>
-          <Text style={styles.label}>{labels.title}</Text>
+  renderAddResponse(mutation) {
+    return (
+      <Mutation mutation={mutation}>
+        {(createReply, {}) => (
           <TextInput
-            onSubmitEditing={() =>
-              this.onSubmitEditing(createComment, this.props.postId)
-            }
-            style={styles.title}
-            {...args}
-          />
-          <Text style={styles.label}>{labels.body}</Text>
-          <TextInput
-            {...args}
-            autoFocus={false}
-            ref={input => (this.secondTextInput = input)}
-            onSubmitEditing={() =>
-              this.onSubmitEditing(createComment, this.props.postId)
-            }
-            onChangeText={textInputExtra => this.setState({ textInputExtra })}
-            value={this.state.textInputExtra}
+            onSubmitEditing={() => this.onSubmitEditing(createReply)}
             style={styles.text}
-            placeholder={labels.addPlaceholderBody}
+            autoFocus={true}
+            editable={this.state.textInputEditable}
+            multiline={true}
+            placeholder={labels.addPlaceholderTitle}
+            onChangeText={textInput => this.setState({ textInput })}
+            value={this.state.textInput}
+            returnKeyLabel={labels.submit}
           />
-        </View>
-      );
-    }
-
-    return (createReply, {}) => (
-      <TextInput
-        onSubmitEditing={() =>
-          this.onSubmitEditing(createReply, this.props.commentId)
-        }
-        style={styles.text}
-        {...args}
-      />
+        )}
+      </Mutation>
     );
   }
 
-  renderAddResponse(mutation) {
-    return <Mutation mutation={mutation}>{this.input(mutation)}</Mutation>;
-  }
-
   render() {
-    const { commentId } = this.props;
-
-    const text = commentId ? labels.addYourReply : labels.addNewTopic;
-    const mutation = commentId ? ADD_REPLY : ADD_COMMENT;
+    const text = labels.addYourReply;
+    const mutation = ADD_REPLY;
 
     return (
       <BackgroundContainer>
         <View style={styles.header}>
           <View style={styles.closeContainer}>
-            <TouchableOpacity onPress={() => this.props.navigation.pop()}>
+            <TouchableOpacity onPress={() => this.props.navigation.dismiss()}>
               <Icon name="times-circle" size={30} />
             </TouchableOpacity>
           </View>
