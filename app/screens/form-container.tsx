@@ -39,7 +39,9 @@ class FormContainerScreen extends Component<Props> {
           <Title style={styles.ctaText} text={title} small />
         </View>
         <View style={styles.body}>
-          <ScrollView>{children}</ScrollView>
+          <ScrollView>
+            <View style={styles.row}>{children}</View>
+          </ScrollView>
         </View>
       </BackgroundContainer>
     );
@@ -60,6 +62,10 @@ const styles = StyleSheet.create({
   },
   ctaText: {
     paddingHorizontal: layout.spacing,
+  },
+  row: {
+    alignItems: "baseline",
+    flexDirection: "row",
   },
 });
 

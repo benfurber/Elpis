@@ -112,7 +112,7 @@ class AddTopicScreen extends Component<Props, State> {
         navigation={this.props.navigation}
         title={labels.addNewTopic}
       >
-        <View style={styles.row}>{this.renderAddResponse(ADD_COMMENT)}</View>
+        {this.renderAddResponse(ADD_COMMENT)}
       </FormContainerScreen>
     );
   }
@@ -124,10 +124,6 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
     paddingTop: layout.spacingXL,
     paddingHorizontal: layout.spacingL,
-  },
-  row: {
-    alignItems: "baseline",
-    flexDirection: "row",
   },
   textInputContainer: {
     width: "100%",

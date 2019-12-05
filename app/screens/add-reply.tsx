@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { StyleSheet, TextInput, View } from "react-native";
+import { StyleSheet, TextInput } from "react-native";
 
 import { Mutation } from "react-apollo";
 import { withMappedNavigationParams } from "react-navigation-props-mapper";
@@ -75,7 +75,7 @@ class AddReplyScreen extends Component<Props, State> {
         navigation={navigation}
         title={labels.addYourReply}
       >
-        <View style={styles.row}>{this.renderAddResponse(ADD_REPLY)}</View>
+        {this.renderAddResponse(ADD_REPLY)}
       </FormContainerScreen>
     );
   }
@@ -87,10 +87,6 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
     paddingTop: layout.spacingXL,
     paddingHorizontal: layout.spacingL,
-  },
-  row: {
-    alignItems: "baseline",
-    flexDirection: "row",
   },
   textInputContainer: {
     width: "100%",

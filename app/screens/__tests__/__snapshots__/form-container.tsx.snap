@@ -43,9 +43,18 @@ exports[`AddReplyScreen renders correctly 1`] = `
     }
   >
     <ScrollViewMock>
-      <Text>
-        Important Form contents
-      </Text>
+      <View
+        style={
+          Object {
+            "alignItems": "baseline",
+            "flexDirection": "row",
+          }
+        }
+      >
+        <Text>
+          Important Form contents
+        </Text>
+      </View>
     </ScrollViewMock>
   </View>
 </BackgroundContainer>
