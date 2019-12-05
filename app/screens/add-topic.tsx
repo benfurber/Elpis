@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { StyleSheet, Text, TextInput, View } from "react-native";
+import { Text, TextInput, View } from "react-native";
 
 import { Mutation } from "react-apollo";
 import { withMappedNavigationParams } from "react-navigation-props-mapper";
@@ -8,7 +8,7 @@ import { NavigationType, Post } from "interfaces";
 import { labels } from "labels";
 import { ADD_COMMENT } from "mutations";
 import { FormContainerScreen } from "screens";
-import { layout, typography, colours } from "styles";
+import { form } from "styles";
 import { firstSentence } from "utils";
 
 interface Props {
@@ -69,18 +69,18 @@ class AddTopicScreen extends Component<Props, State> {
     };
 
     return (createComment, {}) => (
-      <View style={styles.textInputContainer}>
-        <Text style={styles.label}>{labels.title}</Text>
+      <View style={form.fieldContainer}>
+        <Text style={form.label}>{labels.title}</Text>
         <TextInput
           onSubmitEditing={() => this.secondTextInput.focus()}
-          style={styles.title}
+          style={form.title}
           autoFocus={true}
           placeholder={labels.addPlaceholderTitle}
           value={textInput}
           returnKeyLabel={"Next"}
           {...args}
         />
-        <Text style={styles.label}>{labels.body}</Text>
+        <Text style={form.label}>{labels.body}</Text>
         <TextInput
           {...args}
           autoFocus={false}
@@ -90,7 +90,7 @@ class AddTopicScreen extends Component<Props, State> {
             this.onSubmitEditing(createComment, this.props.postId)
           }
           value={textInputExtra}
-          style={styles.text}
+          style={form.text}
           placeholder={labels.addPlaceholderBody}
           returnKeyLabel={labels.submit}
         />
@@ -117,31 +117,6 @@ class AddTopicScreen extends Component<Props, State> {
     );
   }
 }
-
-const styles = StyleSheet.create({
-  label: {
-    color: colours.mediumGrey,
-    fontWeight: "bold",
-    paddingTop: layout.spacingXL,
-    paddingHorizontal: layout.spacingL,
-  },
-  textInputContainer: {
-    width: "100%",
-    flexDirection: "column",
-  },
-  title: {
-    padding: layout.spacingL,
-    fontFamily: "creteround-regular",
-    fontSize: typography.fontSizeXL,
-    flexWrap: "wrap",
-  },
-  text: {
-    fontFamily: "creteround-regular",
-    fontSize: typography.fontSizeL,
-    padding: layout.spacingL,
-    width: "100%",
-  },
-});
 
 const wrappedAddTopicScreen = withMappedNavigationParams()(AddTopicScreen);
 export {
