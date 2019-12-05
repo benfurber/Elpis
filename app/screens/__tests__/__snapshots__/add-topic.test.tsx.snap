@@ -2,6 +2,12 @@
 
 exports[`AddReplyScreen renders correctly 1`] = `
 <FormContainerScreen
+  analyticsContent={
+    Object {
+      "contentId": "2332r",
+      "contentType": "AddTopic",
+    }
+  }
   title="Adicione um novo tópico na discussão"
 >
   <View

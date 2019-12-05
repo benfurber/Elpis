@@ -9,7 +9,7 @@ import { labels } from "labels";
 import { ADD_COMMENT } from "mutations";
 import { FormContainerScreen } from "screens";
 import { layout, typography, colours } from "styles";
-import { Analytics, firstSentence } from "utils";
+import { firstSentence } from "utils";
 
 interface Props {
   navigation: NavigationType;
@@ -32,13 +32,6 @@ class AddTopicScreen extends Component<Props, State> {
     };
   }
   secondTextInput = TextInput as any;
-
-  componentDidMount() {
-    Analytics.trackContent({
-      contentType: "AddTopic",
-      contentId: this.props.postId,
-    });
-  }
 
   componentDidUpdate(_props, state) {
     const textInput = firstSentence(state.textInput);
@@ -112,6 +105,10 @@ class AddTopicScreen extends Component<Props, State> {
   render() {
     return (
       <FormContainerScreen
+        analyticsContent={{
+          contentType: "AddTopic",
+          contentId: this.props.postId,
+        }}
         navigation={this.props.navigation}
         title={labels.addNewTopic}
       >

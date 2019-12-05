@@ -9,7 +9,6 @@ import { labels } from "labels";
 import { ADD_REPLY } from "mutations";
 import { FormContainerScreen } from "screens";
 import { layout, typography, colours } from "styles";
-import { Analytics } from "utils";
 
 interface Props {
   commentId: Comment["id"];
@@ -28,13 +27,6 @@ class AddReplyScreen extends Component<Props, State> {
       textInputEditable: true,
       textInput: "",
     };
-  }
-
-  componentDidMount() {
-    Analytics.trackContent({
-      contentType: "AddReply",
-      contentId: this.props.commentId,
-    });
   }
 
   onSubmitEditing(query) {
@@ -75,9 +67,12 @@ class AddReplyScreen extends Component<Props, State> {
   }
 
   render() {
+    const { commentId, navigation } = this.props;
+
     return (
       <FormContainerScreen
-        navigation={this.props.navigation}
+        analyticsContent={{ contentType: "AddReply", contentId: commentId }}
+        navigation={navigation}
         title={labels.addYourReply}
       >
         <View style={styles.row}>{this.renderAddResponse(ADD_REPLY)}</View>

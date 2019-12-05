@@ -2,6 +2,12 @@
 
 exports[`AddReplyScreen renders correctly 1`] = `
 <FormContainerScreen
+  analyticsContent={
+    Object {
+      "contentId": "7sdfbu",
+      "contentType": "AddReply",
+    }
+  }
   title="Adicione a sua resposta"
 >
   <View
