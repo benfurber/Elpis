@@ -4,7 +4,7 @@ import { StyleSheet, TextInput, View } from "react-native";
 import { Mutation } from "react-apollo";
 import { withMappedNavigationParams } from "react-navigation-props-mapper";
 
-import { Comment, NavigationType, Post } from "interfaces";
+import { Comment, NavigationType } from "interfaces";
 import { labels } from "labels";
 import { ADD_REPLY } from "mutations";
 import { FormContainerScreen } from "screens";
@@ -14,7 +14,6 @@ import { Analytics } from "utils";
 interface Props {
   commentId: Comment["id"];
   navigation: NavigationType;
-  postId: Post["id"];
 }
 
 interface State {
