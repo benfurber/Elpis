@@ -1,190 +1,147 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`AddReplyScreen renders correctly 1`] = `
-<BackgroundContainer>
-  <View
-    style={Object {}}
-  >
-    <View
-      style={
-        Object {
-          "flexDirection": "row-reverse",
-          "padding": 10,
-        }
-      }
-    >
-      <TouchableOpacity
-        activeOpacity={0.2}
-        onPress={[Function]}
-      >
-        <customIcon
-          name="times-circle"
-          size={30}
-        />
-      </TouchableOpacity>
-    </View>
-    <Title
-      small={true}
-      style={
-        Object {
-          "paddingHorizontal": 10,
-        }
-      }
-      text="Adicione um novo tópico na discussão:"
-    />
-  </View>
+<FormContainerScreen
+  title="Adicione um novo tópico na discussão"
+>
   <View
     style={
       Object {
-        "backgroundColor": "rgba(255, 255, 255, 0.85)",
-        "borderTopLeftRadius": 10,
-        "borderTopRightRadius": 10,
-        "flex": 1,
-        "paddingTop": 10,
+        "alignItems": "baseline",
+        "flexDirection": "row",
       }
     }
   >
-    <ScrollViewMock>
-      <View
-        style={
-          Object {
-            "alignItems": "baseline",
-            "flexDirection": "row",
-          }
-        }
-      >
-        <Mutation
-          mutation={
+    <Mutation
+      mutation={
+        Object {
+          "definitions": Array [
             Object {
-              "definitions": Array [
-                Object {
-                  "directives": Array [],
-                  "kind": "OperationDefinition",
-                  "name": Object {
-                    "kind": "Name",
-                    "value": "createComment",
-                  },
-                  "operation": "mutation",
-                  "selectionSet": Object {
-                    "kind": "SelectionSet",
-                    "selections": Array [
+              "directives": Array [],
+              "kind": "OperationDefinition",
+              "name": Object {
+                "kind": "Name",
+                "value": "createComment",
+              },
+              "operation": "mutation",
+              "selectionSet": Object {
+                "kind": "SelectionSet",
+                "selections": Array [
+                  Object {
+                    "alias": undefined,
+                    "arguments": Array [
                       Object {
-                        "alias": undefined,
-                        "arguments": Array [
-                          Object {
-                            "kind": "Argument",
-                            "name": Object {
-                              "kind": "Name",
-                              "value": "content",
-                            },
-                            "value": Object {
-                              "kind": "Variable",
-                              "name": Object {
-                                "kind": "Name",
-                                "value": "content",
-                              },
-                            },
-                          },
-                          Object {
-                            "kind": "Argument",
-                            "name": Object {
-                              "kind": "Name",
-                              "value": "id",
-                            },
-                            "value": Object {
-                              "kind": "Variable",
-                              "name": Object {
-                                "kind": "Name",
-                                "value": "id",
-                              },
-                            },
-                          },
-                        ],
-                        "directives": Array [],
-                        "kind": "Field",
-                        "name": Object {
-                          "kind": "Name",
-                          "value": "createComment",
-                        },
-                        "selectionSet": Object {
-                          "kind": "SelectionSet",
-                          "selections": Array [
-                            Object {
-                              "alias": undefined,
-                              "arguments": Array [],
-                              "directives": Array [],
-                              "kind": "Field",
-                              "name": Object {
-                                "kind": "Name",
-                                "value": "id",
-                              },
-                              "selectionSet": undefined,
-                            },
-                          ],
-                        },
-                      },
-                    ],
-                  },
-                  "variableDefinitions": Array [
-                    Object {
-                      "defaultValue": undefined,
-                      "directives": Array [],
-                      "kind": "VariableDefinition",
-                      "type": Object {
-                        "kind": "NonNullType",
-                        "type": Object {
-                          "kind": "NamedType",
-                          "name": Object {
-                            "kind": "Name",
-                            "value": "String",
-                          },
-                        },
-                      },
-                      "variable": Object {
-                        "kind": "Variable",
+                        "kind": "Argument",
                         "name": Object {
                           "kind": "Name",
                           "value": "content",
                         },
-                      },
-                    },
-                    Object {
-                      "defaultValue": undefined,
-                      "directives": Array [],
-                      "kind": "VariableDefinition",
-                      "type": Object {
-                        "kind": "NonNullType",
-                        "type": Object {
-                          "kind": "NamedType",
+                        "value": Object {
+                          "kind": "Variable",
                           "name": Object {
                             "kind": "Name",
-                            "value": "ID",
+                            "value": "content",
                           },
                         },
                       },
-                      "variable": Object {
-                        "kind": "Variable",
+                      Object {
+                        "kind": "Argument",
                         "name": Object {
                           "kind": "Name",
                           "value": "id",
                         },
+                        "value": Object {
+                          "kind": "Variable",
+                          "name": Object {
+                            "kind": "Name",
+                            "value": "id",
+                          },
+                        },
+                      },
+                    ],
+                    "directives": Array [],
+                    "kind": "Field",
+                    "name": Object {
+                      "kind": "Name",
+                      "value": "createComment",
+                    },
+                    "selectionSet": Object {
+                      "kind": "SelectionSet",
+                      "selections": Array [
+                        Object {
+                          "alias": undefined,
+                          "arguments": Array [],
+                          "directives": Array [],
+                          "kind": "Field",
+                          "name": Object {
+                            "kind": "Name",
+                            "value": "id",
+                          },
+                          "selectionSet": undefined,
+                        },
+                      ],
+                    },
+                  },
+                ],
+              },
+              "variableDefinitions": Array [
+                Object {
+                  "defaultValue": undefined,
+                  "directives": Array [],
+                  "kind": "VariableDefinition",
+                  "type": Object {
+                    "kind": "NonNullType",
+                    "type": Object {
+                      "kind": "NamedType",
+                      "name": Object {
+                        "kind": "Name",
+                        "value": "String",
                       },
                     },
-                  ],
+                  },
+                  "variable": Object {
+                    "kind": "Variable",
+                    "name": Object {
+                      "kind": "Name",
+                      "value": "content",
+                    },
+                  },
+                },
+                Object {
+                  "defaultValue": undefined,
+                  "directives": Array [],
+                  "kind": "VariableDefinition",
+                  "type": Object {
+                    "kind": "NonNullType",
+                    "type": Object {
+                      "kind": "NamedType",
+                      "name": Object {
+                        "kind": "Name",
+                        "value": "ID",
+                      },
+                    },
+                  },
+                  "variable": Object {
+                    "kind": "Variable",
+                    "name": Object {
+                      "kind": "Name",
+                      "value": "id",
+                    },
+                  },
                 },
               ],
-              "kind": "Document",
-              "loc": Object {
-                "end": 124,
-                "start": 0,
-              },
-            }
-          }
-        >
-          <Component />
-        </Mutation>
-      </View>
-    </ScrollViewMock>
+            },
+          ],
+          "kind": "Document",
+          "loc": Object {
+            "end": 124,
+            "start": 0,
+          },
+        }
+      }
+    >
+      <Component />
+    </Mutation>
   </View>
-</BackgroundContainer>
+</FormContainerScreen>
 `;

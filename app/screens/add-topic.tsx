@@ -1,20 +1,13 @@
 import React, { Component } from "react";
-import {
-  ScrollView,
-  StyleSheet,
-  Text,
-  TextInput,
-  TouchableOpacity,
-  View,
-} from "react-native";
+import { StyleSheet, Text, TextInput, View } from "react-native";
 
 import { Mutation } from "react-apollo";
 import { withMappedNavigationParams } from "react-navigation-props-mapper";
 
-import { BackgroundContainer, Icon, Title } from "components";
 import { NavigationType, Post } from "interfaces";
 import { labels } from "labels";
-import { ADD_COMMENT, ADD_REPLY } from "mutations";
+import { ADD_COMMENT } from "mutations";
+import { FormContainerScreen } from "screens";
 import { layout, typography, colours } from "styles";
 import { Analytics, firstSentence } from "utils";
 
@@ -71,7 +64,7 @@ class AddTopicScreen extends Component<Props, State> {
       },
     }).then(() => {
       this.setState({ textInput: "", editable: true });
-      this.props.navigation.pop();
+      this.props.navigation.dismiss();
     });
   }
 
@@ -119,45 +112,18 @@ class AddTopicScreen extends Component<Props, State> {
   }
 
   render() {
-    const text = labels.addNewTopic;
-    const mutation = ADD_COMMENT;
-
     return (
-      <BackgroundContainer>
-        <View style={styles.header}>
-          <View style={styles.closeContainer}>
-            <TouchableOpacity onPress={() => this.props.navigation.dismiss()}>
-              <Icon name="times-circle" size={30} />
-            </TouchableOpacity>
-          </View>
-          <Title style={styles.ctaText} text={text + ":"} small />
-        </View>
-        <View style={styles.body}>
-          <ScrollView>
-            <View style={styles.row}>{this.renderAddResponse(mutation)}</View>
-          </ScrollView>
-        </View>
-      </BackgroundContainer>
+      <FormContainerScreen
+        navigation={this.props.navigation}
+        title={labels.addNewTopic}
+      >
+        <View style={styles.row}>{this.renderAddResponse(ADD_COMMENT)}</View>
+      </FormContainerScreen>
     );
   }
 }
 
 const styles = StyleSheet.create({
-  body: {
-    backgroundColor: colours.whiteTransparent,
-    borderTopLeftRadius: layout.borderRadiusL,
-    borderTopRightRadius: layout.borderRadiusL,
-    flex: 1,
-    paddingTop: layout.spacing,
-  },
-  closeContainer: {
-    flexDirection: "row-reverse",
-    padding: layout.spacing,
-  },
-  ctaText: {
-    paddingHorizontal: layout.spacing,
-  },
-  header: {},
   label: {
     color: colours.mediumGrey,
     fontWeight: "bold",
