@@ -1,6 +1,8 @@
 import { StyleSheet } from "react-native";
 
-import { layout, typography, colours } from "styles";
+import { layout } from "./layout";
+import { typography } from "./typography";
+import { colours } from "./colours";
 
 const form = StyleSheet.create({
   label: {
