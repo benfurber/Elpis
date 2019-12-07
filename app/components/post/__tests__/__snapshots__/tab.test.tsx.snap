@@ -1,0 +1,245 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Post<Tabs> a remaining tab renders correctly when not selected 1`] = `
+<View
+  style={
+    Object {
+      "flex": 1,
+      "flexDirection": "row",
+      "left": -5,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "backgroundColor": "transparent",
+        "borderLeftColor": "transparent",
+        "borderLeftWidth": 10,
+        "borderStyle": "solid",
+        "borderTopColor": "rgba(255, 255, 255, 0.60)",
+        "borderTopWidth": 46,
+      }
+    }
+  />
+  <View
+    style={
+      Object {
+        "backgroundColor": "rgba(255, 255, 255, 0.60)",
+        "flex": 1,
+        "paddingHorizontal": 16,
+        "paddingVertical": 8,
+      }
+    }
+  >
+    <TouchableOpacity
+      activeOpacity={0.2}
+      onPress={[Function]}
+    >
+      <Badge
+        left={52}
+        number={23}
+      />
+      <customIcon
+        colour={null}
+        name="comments"
+        size={30}
+        style={
+          Object {
+            "alignSelf": "center",
+          }
+        }
+      />
+    </TouchableOpacity>
+  </View>
+  <View
+    style={
+      Object {
+        "backgroundColor": "transparent",
+        "borderBottomColor": "rgba(255, 255, 255, 0.60)",
+        "borderBottomWidth": 46,
+        "borderRightColor": "transparent",
+        "borderRightWidth": 10,
+        "borderStyle": "solid",
+      }
+    }
+  />
+</View>
+`;
+
+exports[`Post<Tabs> a remaining tab renders correctly when selected 1`] = `
+<View
+  style={
+    Object {
+      "flex": 1,
+      "flexDirection": "row",
+      "left": -5,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "backgroundColor": "transparent",
+        "borderLeftColor": "transparent",
+        "borderLeftWidth": 10,
+        "borderStyle": "solid",
+        "borderTopColor": "rgba(255, 255, 255, 0.85)",
+        "borderTopWidth": 46,
+      }
+    }
+  />
+  <View
+    style={
+      Object {
+        "backgroundColor": "rgba(255, 255, 255, 0.85)",
+        "flex": 1,
+        "paddingHorizontal": 16,
+        "paddingVertical": 8,
+      }
+    }
+  >
+    <TouchableOpacity
+      activeOpacity={0.2}
+      onPress={[Function]}
+    >
+      <Badge
+        left={52}
+        number={23}
+      />
+      <customIcon
+        colour="rgba(45, 82, 113, 0.60)"
+        name="comments"
+        size={30}
+        style={
+          Object {
+            "alignSelf": "center",
+          }
+        }
+      />
+    </TouchableOpacity>
+  </View>
+  <View
+    style={
+      Object {
+        "backgroundColor": "transparent",
+        "borderBottomColor": "rgba(255, 255, 255, 0.85)",
+        "borderBottomWidth": 46,
+        "borderRightColor": "transparent",
+        "borderRightWidth": 10,
+        "borderStyle": "solid",
+      }
+    }
+  />
+</View>
+`;
+
+exports[`Post<Tabs> first tab renders correctly when not selected 1`] = `
+<View
+  style={
+    Object {
+      "flex": 1,
+      "flexDirection": "row",
+      "left": 0,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "backgroundColor": "rgba(255, 255, 255, 0.60)",
+        "flex": 1,
+        "paddingHorizontal": 16,
+        "paddingVertical": 8,
+      }
+    }
+  >
+    <TouchableOpacity
+      activeOpacity={0.2}
+      onPress={[Function]}
+    >
+      <Badge
+        left={52}
+        number={null}
+      />
+      <customIcon
+        colour={null}
+        name="image"
+        size={30}
+        style={
+          Object {
+            "alignSelf": "center",
+          }
+        }
+      />
+    </TouchableOpacity>
+  </View>
+  <View
+    style={
+      Object {
+        "backgroundColor": "transparent",
+        "borderBottomColor": "rgba(255, 255, 255, 0.60)",
+        "borderBottomWidth": 46,
+        "borderRightColor": "transparent",
+        "borderRightWidth": 10,
+        "borderStyle": "solid",
+      }
+    }
+  />
+</View>
+`;
+
+exports[`Post<Tabs> first tab renders correctly when selected 1`] = `
+<View
+  style={
+    Object {
+      "flex": 1,
+      "flexDirection": "row",
+      "left": 0,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "backgroundColor": "rgba(255, 255, 255, 0.85)",
+        "flex": 1,
+        "paddingHorizontal": 16,
+        "paddingVertical": 8,
+      }
+    }
+  >
+    <TouchableOpacity
+      activeOpacity={0.2}
+      onPress={[Function]}
+    >
+      <Badge
+        left={52}
+        number={null}
+      />
+      <customIcon
+        colour="rgba(45, 82, 113, 0.60)"
+        name="image"
+        size={30}
+        style={
+          Object {
+            "alignSelf": "center",
+          }
+        }
+      />
+    </TouchableOpacity>
+  </View>
+  <View
+    style={
+      Object {
+        "backgroundColor": "transparent",
+        "borderBottomColor": "rgba(255, 255, 255, 0.85)",
+        "borderBottomWidth": 46,
+        "borderRightColor": "transparent",
+        "borderRightWidth": 10,
+        "borderStyle": "solid",
+      }
+    }
+  />
+</View>
+`;

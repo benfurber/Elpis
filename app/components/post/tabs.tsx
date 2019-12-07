@@ -4,6 +4,8 @@ import { StyleSheet, TouchableOpacity, View } from "react-native";
 import { colours, layout } from "styles";
 import { Badge, Icon } from "components";
 
+import { Tab } from "./tab";
+
 const iconSize = 30;
 
 interface Props {
@@ -14,45 +16,35 @@ interface Props {
 }
 
 const Tabs = (props: Props) => {
-  const tabBackground = tab =>
-    tab === props.display ? styles.tabSelected : null;
+  const { display } = props;
+
+  const tabBackground = tab => (tab === display ? styles.tabSelected : null);
 
   const iconColour = tab =>
-    tab !== props.display ? colours.navyBlueDarkTransparentHigh : null;
+    tab !== display ? colours.navyBlueDarkTransparentHigh : null;
 
   return (
     <View style={styles.tabs}>
-      <View style={[styles.tabWithBackground, tabBackground("body")]}>
-        <TouchableOpacity onPress={props.onPressPost}>
-          <Icon
-            colour={iconColour("body")}
-            name="image"
-            size={iconSize}
-            style={styles.iconCentre}
-          />
-        </TouchableOpacity>
-      </View>
-      <View style={[styles.tabWithBackground, tabBackground("comments")]}>
-        <TouchableOpacity onPress={props.onPressComments}>
-          <Badge left={52} number={props.totalComments} />
-          <Icon
-            colour={iconColour("comments")}
-            name="comments"
-            size={iconSize}
-            style={styles.iconCentre}
-          />
-        </TouchableOpacity>
-      </View>
+      <Tab
+        name="image"
+        onPress={props.onPressPost}
+        selected={"body" === display}
+        number={null}
+        first
+      />
+      <Tab
+        name="comments"
+        onPress={props.onPressComments}
+        selected={"comments" === display}
+        number={props.totalComments}
+      />
       <View style={styles.tabWithoutBackground}></View>
     </View>
   );
 };
 
 const tabs = {
-  borderTopLeftRadius: layout.borderRadius,
-  borderTopRightRadius: layout.borderRadius,
   flex: 1,
-  marginRight: 2,
   paddingHorizontal: 16,
   paddingVertical: 8,
 };
@@ -79,6 +71,19 @@ const styles = StyleSheet.create({
   },
   tabWithoutBackground: {
     ...tabs,
+  },
+  borderRight: {
+    backgroundColor: "transparent",
+    borderStyle: "solid",
+    borderRightWidth: 10,
+    borderBottomWidth: 46,
+    borderRightColor: "transparent",
+    borderBottomColor: colours.whiteTransparent,
+  },
+  shiftContainer: {
+    left: -5,
+    flexDirection: "row",
+    flex: 1,
   },
 });
 

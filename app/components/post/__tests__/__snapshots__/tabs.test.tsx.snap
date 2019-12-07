@@ -11,83 +11,23 @@ exports[`Post<Tabs> renders correctly when displaying the body 1`] = `
     }
   }
 >
-  <View
-    style={
-      Array [
-        Object {
-          "backgroundColor": "rgba(255, 255, 255, 0.60)",
-          "borderTopLeftRadius": 5,
-          "borderTopRightRadius": 5,
-          "flex": 1,
-          "marginRight": 2,
-          "paddingHorizontal": 16,
-          "paddingVertical": 8,
-        },
-        Object {
-          "backgroundColor": "rgba(255, 255, 255, 0.85)",
-        },
-      ]
-    }
-  >
-    <TouchableOpacity
-      activeOpacity={0.2}
-      onPress={[MockFunction]}
-    >
-      <customIcon
-        colour={null}
-        name="image"
-        size={30}
-        style={
-          Object {
-            "alignSelf": "center",
-          }
-        }
-      />
-    </TouchableOpacity>
-  </View>
-  <View
-    style={
-      Array [
-        Object {
-          "backgroundColor": "rgba(255, 255, 255, 0.60)",
-          "borderTopLeftRadius": 5,
-          "borderTopRightRadius": 5,
-          "flex": 1,
-          "marginRight": 2,
-          "paddingHorizontal": 16,
-          "paddingVertical": 8,
-        },
-        null,
-      ]
-    }
-  >
-    <TouchableOpacity
-      activeOpacity={0.2}
-      onPress={[MockFunction]}
-    >
-      <Badge
-        left={52}
-        number={0}
-      />
-      <customIcon
-        colour="rgba(45, 82, 113, 0.60)"
-        name="comments"
-        size={30}
-        style={
-          Object {
-            "alignSelf": "center",
-          }
-        }
-      />
-    </TouchableOpacity>
-  </View>
+  <Tab
+    first={true}
+    name="image"
+    number={null}
+    onPress={[MockFunction]}
+    selected={true}
+  />
+  <Tab
+    name="comments"
+    number={0}
+    onPress={[MockFunction]}
+    selected={false}
+  />
   <View
     style={
       Object {
-        "borderTopLeftRadius": 5,
-        "borderTopRightRadius": 5,
         "flex": 1,
-        "marginRight": 2,
         "paddingHorizontal": 16,
         "paddingVertical": 8,
       }
@@ -107,83 +47,23 @@ exports[`Post<Tabs> renders correctly when displaying the comments 1`] = `
     }
   }
 >
-  <View
-    style={
-      Array [
-        Object {
-          "backgroundColor": "rgba(255, 255, 255, 0.60)",
-          "borderTopLeftRadius": 5,
-          "borderTopRightRadius": 5,
-          "flex": 1,
-          "marginRight": 2,
-          "paddingHorizontal": 16,
-          "paddingVertical": 8,
-        },
-        null,
-      ]
-    }
-  >
-    <TouchableOpacity
-      activeOpacity={0.2}
-      onPress={[MockFunction]}
-    >
-      <customIcon
-        colour="rgba(45, 82, 113, 0.60)"
-        name="image"
-        size={30}
-        style={
-          Object {
-            "alignSelf": "center",
-          }
-        }
-      />
-    </TouchableOpacity>
-  </View>
-  <View
-    style={
-      Array [
-        Object {
-          "backgroundColor": "rgba(255, 255, 255, 0.60)",
-          "borderTopLeftRadius": 5,
-          "borderTopRightRadius": 5,
-          "flex": 1,
-          "marginRight": 2,
-          "paddingHorizontal": 16,
-          "paddingVertical": 8,
-        },
-        Object {
-          "backgroundColor": "rgba(255, 255, 255, 0.85)",
-        },
-      ]
-    }
-  >
-    <TouchableOpacity
-      activeOpacity={0.2}
-      onPress={[MockFunction]}
-    >
-      <Badge
-        left={52}
-        number={0}
-      />
-      <customIcon
-        colour={null}
-        name="comments"
-        size={30}
-        style={
-          Object {
-            "alignSelf": "center",
-          }
-        }
-      />
-    </TouchableOpacity>
-  </View>
+  <Tab
+    first={true}
+    name="image"
+    number={null}
+    onPress={[MockFunction]}
+    selected={false}
+  />
+  <Tab
+    name="comments"
+    number={0}
+    onPress={[MockFunction]}
+    selected={true}
+  />
   <View
     style={
       Object {
-        "borderTopLeftRadius": 5,
-        "borderTopRightRadius": 5,
         "flex": 1,
-        "marginRight": 2,
         "paddingHorizontal": 16,
         "paddingVertical": 8,
       }
@@ -203,83 +83,23 @@ exports[`Post<Tabs> renders correctly when there are comments 1`] = `
     }
   }
 >
-  <View
-    style={
-      Array [
-        Object {
-          "backgroundColor": "rgba(255, 255, 255, 0.60)",
-          "borderTopLeftRadius": 5,
-          "borderTopRightRadius": 5,
-          "flex": 1,
-          "marginRight": 2,
-          "paddingHorizontal": 16,
-          "paddingVertical": 8,
-        },
-        null,
-      ]
-    }
-  >
-    <TouchableOpacity
-      activeOpacity={0.2}
-      onPress={[MockFunction]}
-    >
-      <customIcon
-        colour="rgba(45, 82, 113, 0.60)"
-        name="image"
-        size={30}
-        style={
-          Object {
-            "alignSelf": "center",
-          }
-        }
-      />
-    </TouchableOpacity>
-  </View>
-  <View
-    style={
-      Array [
-        Object {
-          "backgroundColor": "rgba(255, 255, 255, 0.60)",
-          "borderTopLeftRadius": 5,
-          "borderTopRightRadius": 5,
-          "flex": 1,
-          "marginRight": 2,
-          "paddingHorizontal": 16,
-          "paddingVertical": 8,
-        },
-        Object {
-          "backgroundColor": "rgba(255, 255, 255, 0.85)",
-        },
-      ]
-    }
-  >
-    <TouchableOpacity
-      activeOpacity={0.2}
-      onPress={[MockFunction]}
-    >
-      <Badge
-        left={52}
-        number={25}
-      />
-      <customIcon
-        colour={null}
-        name="comments"
-        size={30}
-        style={
-          Object {
-            "alignSelf": "center",
-          }
-        }
-      />
-    </TouchableOpacity>
-  </View>
+  <Tab
+    first={true}
+    name="image"
+    number={null}
+    onPress={[MockFunction]}
+    selected={false}
+  />
+  <Tab
+    name="comments"
+    number={25}
+    onPress={[MockFunction]}
+    selected={true}
+  />
   <View
     style={
       Object {
-        "borderTopLeftRadius": 5,
-        "borderTopRightRadius": 5,
         "flex": 1,
-        "marginRight": 2,
         "paddingHorizontal": 16,
         "paddingVertical": 8,
       }
