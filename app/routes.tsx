@@ -7,6 +7,7 @@ import { createBottomTabNavigator } from "react-navigation-tabs";
 import { TabBarIcon } from "components";
 import {
   AddReplyScreen,
+  AddTopicScreen,
   AuthLoadingScreen,
   FeedScreen,
   FeedbackScreen,
@@ -30,6 +31,7 @@ const stackConfig = {
 const AddContentScreen = createStackNavigator(
   {
     AddReply: AddReplyScreen,
+    AddTopic: AddTopicScreen,
   },
   {
     mode: "modal",

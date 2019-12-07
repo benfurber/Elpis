@@ -1,7 +1,9 @@
 export { AddReplyScreen } from "./add-reply";
+export { AddTopicScreen } from "./add-topic";
 export { AuthLoadingScreen } from "./auth-loading";
 export { FeedScreen } from "./feed";
 export { FeedbackScreen } from "./feedback";
+export { FormContainerScreen } from "./form-container";
 export { NotificationsScreen } from "./notifications";
 export { OnboardingAddPasswordScreen } from "./onboarding-add-password";
 export { OnboardingFeaturesScreen } from "./onboarding-features";
