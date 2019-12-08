@@ -52,7 +52,7 @@ exports[`Comments<Comment> with replies renders correctly 1`] = `
       }
     >
       <Title
-        text="Dá certo sim, o meu pai, por exemplo, fugiu quando eu tinha 5 anos e..."
+        text="Meu pai fez o que ela mandou"
       />
       <Text
         style={
@@ -63,7 +63,7 @@ exports[`Comments<Comment> with replies renders correctly 1`] = `
           }
         }
       >
-        Dá certo sim, o meu pai, por exemplo, fugiu quando eu tinha 5 anos e eu não faço ideia da onde ele esteja. Nunca mais voltou, pena que a violência só piorou.
+        Dá certo sim, o meu pai, por exemplo, fugiu quando eu tinha 5 anos e...
       </Text>
       <Text
         style={
@@ -147,9 +147,6 @@ exports[`Comments<Comment> without replies renders correctly 1`] = `
         }
       }
     >
-      <Title
-        text="Dá certo sim, o meu pai, por exemplo, fugiu quando eu tinha 5 anos e..."
-      />
       <Text
         style={
           Object {
@@ -159,7 +156,7 @@ exports[`Comments<Comment> without replies renders correctly 1`] = `
           }
         }
       >
-        Dá certo sim, o meu pai, por exemplo, fugiu quando eu tinha 5 anos e eu não faço ideia da onde ele esteja. Nunca mais voltou, pena que a violência só piorou.
+        Dá certo sim, o meu pai, por exemplo, fugiu quando eu tinha 5 anos e...
       </Text>
       <Text
         style={

@@ -71,6 +71,7 @@ export const COMMENTS = gql`
         }
         createdAt
         content
+        title
         totalReplies
       }
     }
@@ -88,6 +89,7 @@ export const COMMENT_WITH_REPLIES = gql`
       }
       createdAt
       content
+      title
       replies {
         ...replyAttributes
       }

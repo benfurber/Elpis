@@ -18,8 +18,8 @@ interface Props {
 
 interface State {
   editable: boolean;
-  textInput: string;
-  textInputExtra: string;
+  titleInput: string;
+  contentInput: string;
 }
 
 class AddTopicScreen extends Component<Props, State> {
@@ -27,56 +27,57 @@ class AddTopicScreen extends Component<Props, State> {
     super(props);
     this.state = {
       editable: true,
-      textInput: "",
-      textInputExtra: "",
+      titleInput: "",
+      contentInput: "",
     };
   }
-  secondTextInput = TextInput as any;
+  secondtitleInput = TextInput as any;
 
   componentDidUpdate(_props, state) {
-    const textInput = firstSentence(state.textInput);
+    const titleInput = firstSentence(state.titleInput);
 
-    if (textInput !== state.textInput) {
-      this.setState({ textInput });
-      return this.secondTextInput.focus();
+    if (titleInput !== state.titleInput) {
+      this.setState({ titleInput });
+      return this.secondtitleInput.focus();
     }
   }
 
   onSubmitEditing(query, id) {
-    const { textInput, textInputExtra } = this.state;
+    const { titleInput, contentInput } = this.state;
     this.setState({ editable: false });
 
-    const content = textInput + " " + textInputExtra;
+    const title = titleInput.length > 0 ? titleInput : null;
 
     query({
       variables: {
-        content,
+        title,
+        content: contentInput,
         id,
       },
     }).then(() => {
-      this.setState({ textInput: "", editable: true });
+      this.setState({ titleInput: "", editable: true });
       this.props.navigation.dismiss();
     });
   }
 
   form() {
-    const { textInput, editable, textInputExtra } = this.state;
+    const { titleInput, editable, contentInput } = this.state;
 
     const args = {
       editable,
       multiline: true,
-      onChangeText: textInput => this.setState({ textInput }),
+      onChangeText: titleInput => this.setState({ titleInput }),
     };
 
     return (createComment, {}) => (
       <View style={form.fieldContainer}>
         <Text style={form.label}>{labels.title}</Text>
         <TextInput
-          onSubmitEditing={() => this.secondTextInput.focus()}
+          onSubmitEditing={() => this.secondtitleInput.focus()}
           style={form.title}
           autoFocus={true}
           placeholder={labels.addPlaceholderTitle}
-          value={textInput}
+          value={titleInput}
           returnKeyLabel={"Next"}
           {...args}
         />
@@ -84,12 +85,12 @@ class AddTopicScreen extends Component<Props, State> {
         <TextInput
           {...args}
           autoFocus={false}
-          ref={input => (this.secondTextInput = input)}
-          onChangeText={textInputExtra => this.setState({ textInputExtra })}
+          ref={input => (this.secondtitleInput = input)}
+          onChangeText={contentInput => this.setState({ contentInput })}
           onSubmitEditing={() =>
             this.onSubmitEditing(createComment, this.props.postId)
           }
-          value={textInputExtra}
+          value={contentInput}
           style={form.text}
           placeholder={labels.addPlaceholderBody}
           returnKeyLabel={labels.submit}

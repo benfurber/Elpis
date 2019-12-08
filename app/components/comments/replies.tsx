@@ -11,7 +11,7 @@ import { Avatar, Title } from "components";
 import { Comment } from "interfaces";
 import { labels } from "labels";
 import { colours, elements, layout, typography } from "styles";
-import { Analytics, dropFirstSentence, firstSentence, formatDate } from "utils";
+import { Analytics, formatDate } from "utils";
 
 import { NoContent } from "./no-content";
 import { Reply } from "./reply";
@@ -58,10 +58,7 @@ class Replies extends Component<Props> {
 
   renderComment() {
     const { item } = this.props;
-    const { content } = item;
-
-    const title = content && firstSentence(content);
-    const body = content && dropFirstSentence(content);
+    const { content, title } = item;
 
     return (
       <View style={styles.featured}>
@@ -76,7 +73,7 @@ class Replies extends Component<Props> {
 
         <View>
           {title && <Title text={title} small />}
-          {body && <Text>{body}</Text>}
+          {content && <Text>{content}</Text>}
         </View>
       </View>
     );

@@ -13,17 +13,9 @@ interface Props {
 }
 
 class Comment extends Component<Props> {
-  renderBody() {
-    const { content } = this.props.item;
-
-    if (content && dropFirstSentence(content)) {
-      return <Text style={styles.text}>{dropFirstSentence(content)}</Text>;
-    }
-  }
-
   render() {
     const { item } = this.props;
-    const { content } = item;
+    const { title, content } = item;
 
     return (
       <TouchableOpacity onPress={() => this.props.onPress(item.id)}>
@@ -35,8 +27,10 @@ class Comment extends Component<Props> {
             </View>
           </View>
           <View style={styles.commentBodyContainer}>
-            {content && <Title text={firstSentence(content)} />}
-            {this.renderBody()}
+            {title && <Title text={title} />}
+            {content && (
+              <Text style={styles.text}>{firstSentence(content)}</Text>
+            )}
             <Text style={styles.commentDate}>{formatDate(item.createdAt)}</Text>
           </View>
           <View style={styles.iconContainer}>
