@@ -39,4 +39,5 @@ export const comment = {
   id: "21097",
   totalReplies: 1,
   replies: [reply],
+  title: "Meu pai fez o que ela mandou",
 };

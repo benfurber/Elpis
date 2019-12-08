@@ -56,6 +56,20 @@ exports[`AddReplyScreen renders correctly 1`] = `
                         },
                       },
                     },
+                    Object {
+                      "kind": "Argument",
+                      "name": Object {
+                        "kind": "Name",
+                        "value": "title",
+                      },
+                      "value": Object {
+                        "kind": "Variable",
+                        "name": Object {
+                          "kind": "Name",
+                          "value": "title",
+                        },
+                      },
+                    },
                   ],
                   "directives": Array [],
                   "kind": "Field",
@@ -127,12 +141,31 @@ exports[`AddReplyScreen renders correctly 1`] = `
                   },
                 },
               },
+              Object {
+                "defaultValue": undefined,
+                "directives": Array [],
+                "kind": "VariableDefinition",
+                "type": Object {
+                  "kind": "NamedType",
+                  "name": Object {
+                    "kind": "Name",
+                    "value": "String",
+                  },
+                },
+                "variable": Object {
+                  "kind": "Variable",
+                  "name": Object {
+                    "kind": "Name",
+                    "value": "title",
+                  },
+                },
+              },
             ],
           },
         ],
         "kind": "Document",
         "loc": Object {
-          "end": 124,
+          "end": 155,
           "start": 0,
         },
       }

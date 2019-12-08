@@ -1,8 +1,8 @@
 import gql from "graphql-tag";
 
 export const ADD_COMMENT = gql`
-  mutation createComment($content: String!, $id: ID!) {
-    createComment(content: $content, id: $id) {
+  mutation createComment($content: String!, $id: ID!, $title: String) {
+    createComment(content: $content, id: $id, title: $title) {
       id
     }
   }
