@@ -1,0 +1,61 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AddReplyScreen renders correctly 1`] = `
+<BackgroundContainer>
+  <View>
+    <View
+      style={
+        Object {
+          "flexDirection": "row-reverse",
+          "padding": 10,
+        }
+      }
+    >
+      <TouchableOpacity
+        activeOpacity={0.2}
+        onPress={[Function]}
+      >
+        <customIcon
+          name="times-circle"
+          size={30}
+        />
+      </TouchableOpacity>
+    </View>
+    <Title
+      small={true}
+      style={
+        Object {
+          "paddingHorizontal": 10,
+        }
+      }
+      text="Important Form"
+    />
+  </View>
+  <View
+    style={
+      Object {
+        "backgroundColor": "rgba(255, 255, 255, 0.85)",
+        "borderTopLeftRadius": 10,
+        "borderTopRightRadius": 10,
+        "flex": 1,
+        "paddingTop": 10,
+      }
+    }
+  >
+    <ScrollViewMock>
+      <View
+        style={
+          Object {
+            "alignItems": "baseline",
+            "flexDirection": "row",
+          }
+        }
+      >
+        <Text>
+          Important Form contents
+        </Text>
+      </View>
+    </ScrollViewMock>
+  </View>
+</BackgroundContainer>
+`;

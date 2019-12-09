@@ -2,7 +2,7 @@ import "react-native";
 import React from "react";
 import { shallow } from "enzyme";
 
-import { UnwrappedAddReplyScreen } from "../add-reply";
+import { UnwrappedAddTopicScreen } from "../add-topic";
 
 let navigation;
 jest.mock(navigation, () => jest.fn());
@@ -10,7 +10,7 @@ jest.mock(navigation, () => jest.fn());
 describe("AddReplyScreen", () => {
   it("renders correctly", () => {
     const component = shallow(
-      <UnwrappedAddReplyScreen navigation={navigation} commentId={"7sdfbu"} />,
+      <UnwrappedAddTopicScreen navigation={navigation} postId={"2332r"} />,
     );
 
     expect(component).toMatchSnapshot();

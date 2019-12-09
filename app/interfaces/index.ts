@@ -1,4 +1,4 @@
-import { NavigationScreenProp } from "react-navigation";
+import { NavigationStackProp } from "react-navigation-stack";
 
 export interface Author {
   id: string;
@@ -11,7 +11,7 @@ export interface Feed {
 }
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
-export type NavigationType = NavigationScreenProp<any, any>;
+export type NavigationType = NavigationStackProp<any, any>;
 
 interface ContentBase {
   author: Author;

@@ -23,7 +23,7 @@ function AuthLoadingScreen(props: Props) {
 
     if (token) {
       if (loading) return <Loading />;
-      if (error) return () => navigate("Welcome");
+      if (error) return navigate("Welcome");
       if (data && data.me) {
         return feedRoute(data);
       }
