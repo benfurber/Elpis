@@ -12,7 +12,6 @@ import {
   AuthLoadingScreen,
   FeedScreen,
   FeedbackScreen,
-  LogoutScreen,
   NotificationsScreen,
   OnboardingAddPasswordScreen,
   OnboardingFeaturesScreen,
