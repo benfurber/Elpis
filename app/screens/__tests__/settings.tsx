@@ -24,11 +24,5 @@ describe("SettingsScreen", () => {
       expect(logoutIcon.props().name).toEqual("sign-out-alt")
       expect(component.find(TouchableOpacity)).toHaveLength(1)
     })
-    // still need to get this test working!!
-    // it("should navigate to welcome page onPress", () => {
-    //   logoutIcon.simulate('press')
-    //   expect(navigation.navigate).toHaveBeenCalled()
-    //   expect(navigation.navigate).toHaveBeenCalledWith("Welcome")
-    // })
   });
 });
