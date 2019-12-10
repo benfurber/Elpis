@@ -21,7 +21,7 @@ class SettingsScreen extends Component<Props> {
   onPress = async () => {
     try {
       await AsyncStorage.removeItem("token");
-      this.props.navigation.navigate("Logout");
+      this.props.navigation.navigate("Welcome");
     } catch (error) {
       console.log(error);
     }
