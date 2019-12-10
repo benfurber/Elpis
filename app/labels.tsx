@@ -85,6 +85,7 @@ const labels = {
   select: "Selecionar",
   settings: {
     title: "Configurações",
+    logout: "Log Out",
   },
   submit: "Postar",
   title: "Título",

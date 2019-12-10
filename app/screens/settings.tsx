@@ -37,7 +37,7 @@ class SettingsScreen extends Component<Props> {
           >
             <View style={styles.row}>
               <Icon name={"sign-out-alt"} />
-              <Text style={styles.text}>Logout</Text>
+              <Text style={styles.text}>labels.setting.logout</Text>
             </View>
           </TouchableOpacity>
         </View>
