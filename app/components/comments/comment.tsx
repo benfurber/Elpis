@@ -5,7 +5,7 @@ import { TouchableOpacity } from "react-native-gesture-handler";
 import { Avatar, Badge, Icon, Title } from "components";
 import { Comment as CommentInterface } from "interfaces";
 import { colours, elements, layout } from "styles";
-import { dropFirstSentence, firstSentence, formatDate } from "utils";
+import { firstSentence, formatDate } from "utils";
 
 interface Props {
   item: CommentInterface;
