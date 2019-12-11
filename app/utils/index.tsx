@@ -6,3 +6,7 @@ export { firstSentence } from "./first-sentence";
 export { formatDate } from "./format-date";
 export { pushNotifications } from "./push-notifications";
 export { validURL } from "./valid-url";
+export {
+  FormValidator,
+  RequiredValidator
+} from "./form-validation";
