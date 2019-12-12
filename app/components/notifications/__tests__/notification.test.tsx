@@ -35,6 +35,7 @@ describe("Notification", () => {
     content:
       "Mara fisto yoda ben jade. Mace ben wedge jinn leia luke. Lando mandalore.",
     id: "986sasdfd",
+    link: null,
     publishedAt: new Date("2019-09-23"),
   };
 

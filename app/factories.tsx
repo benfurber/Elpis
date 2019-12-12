@@ -28,6 +28,7 @@ export const reply = {
   comment: preComment,
   content: "Nao.",
   id: "21097",
+  link: null,
   publishedAt: new Date("2019-01-01"),
 };
 

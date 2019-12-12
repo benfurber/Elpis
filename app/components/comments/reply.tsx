@@ -2,17 +2,19 @@ import React, { Component } from "react";
 import { StyleSheet, Text, View } from "react-native";
 
 import { Avatar, LinkPreview, Title } from "components";
-import { Reply as ReplyInterface } from "interfaces";
+import { NavigationType, Reply as ReplyInterface } from "interfaces";
 import { colours, elements, layout } from "styles";
 import { formatDate } from "utils";
 
 interface Props {
   item: ReplyInterface;
+  navigation: NavigationType;
 }
 
 class Reply extends Component<Props> {
   render() {
-    const { author, content, link, publishedAt } = this.props.item;
+    const { item, navigation } = this.props;
+    const { author, content, link, publishedAt } = item;
 
     return (
       <View style={styles.commentContainer}>
@@ -25,7 +27,7 @@ class Reply extends Component<Props> {
           </View>
         </View>
         <View style={styles.textContainer}>
-          {link && <LinkPreview url={link} />}
+          {link && <LinkPreview navigation={navigation} url={link} />}
           <Text style={styles.body}>{content}</Text>
         </View>
       </View>

@@ -1,6 +1,79 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Comments<Reply> renders correctly 1`] = `
+exports[`Comments<Reply> renders correctly with a link 1`] = `
+<View
+  style={
+    Object {
+      "borderBottomColor": "rgb(255, 255, 255)",
+      "borderBottomWidth": 3,
+      "margin": 10,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "flexDirection": "row",
+        "paddingVertical": 10,
+      }
+    }
+  >
+    <Avatar
+      avatarPath={
+        Object {
+          "testUri": "../../../app/assets/images/empower_two_women_logo.png",
+        }
+      }
+      size="small"
+    />
+    <View
+      style={
+        Object {
+          "paddingLeft": 10,
+        }
+      }
+    >
+      <Title
+        small={true}
+        text="Empodere Duas Mulheres"
+      />
+      <Text
+        style={
+          Object {
+            "color": "rgb(51, 51, 51)",
+            "fontStyle": "italic",
+          }
+        }
+      >
+        Há poucos segundos
+      </Text>
+    </View>
+  </View>
+  <View
+    style={
+      Object {
+        "paddingBottom": 20,
+      }
+    }
+  >
+    <LinkPreview
+      url="https://www.bbc.co.uk/news/business-50656178"
+    />
+    <Text
+      style={
+        Object {
+          "paddingVertical": 10,
+        }
+      }
+    >
+      Meu pai também fez o mesmo. Logo depois que minha mãe pediu o divórcio porque sofria violência dentro de casa, ele pegou as malas, se mudou e sumiu no mundo. Nem faço mais questão de saber pra onde ele foi.
+    </Text>
+  </View>
+</View>
+`;
+
+exports[`Comments<Reply> renders correctly without a link 1`] = `
 <View
   style={
     Object {

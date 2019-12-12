@@ -103,10 +103,13 @@ class Comments extends Component<Props, State> {
   }
 
   renderReplies = data => {
+    const { navigation } = this.props;
+
     return (
       <Replies
         header={this.header()}
         item={data.comment}
+        navigation={navigation}
         noReplies={labels.noReplies}
         onPress={() => this.setDisplay(null)}
       />
