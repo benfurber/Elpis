@@ -4,6 +4,7 @@ exports[`FeedbackScreen renders correctly 1`] = `
 <BackgroundContainer>
   <WebView
     cacheEnabled={true}
+    javaScriptEnabled={true}
     originWhitelist={
       Array [
         "http://*",
@@ -16,7 +17,6 @@ exports[`FeedbackScreen renders correctly 1`] = `
       }
     }
     useSharedProcessPool={true}
-    useWebKit={true}
   />
 </BackgroundContainer>
 `;
