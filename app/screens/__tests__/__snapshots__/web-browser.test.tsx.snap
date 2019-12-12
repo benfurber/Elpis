@@ -2,21 +2,49 @@
 
 exports[`WebBrowser renders correctly 1`] = `
 <BackgroundContainer>
-  <WebView
-    cacheEnabled={true}
-    javaScriptEnabled={true}
-    originWhitelist={
-      Array [
-        "http://*",
-        "https://*",
-      ]
-    }
-    source={
-      Object {
-        "uri": "https://www.bbc.co.uk/news",
+  <View>
+    <View
+      style={
+        Object {
+          "flexDirection": "row-reverse",
+          "padding": 10,
+        }
       }
-    }
-    useSharedProcessPool={true}
-  />
+    >
+      <TouchableOpacity
+        activeOpacity={0.2}
+        onPress={[Function]}
+      >
+        <customIcon
+          name="times-circle"
+          size={30}
+        />
+      </TouchableOpacity>
+    </View>
+  </View>
+  <View>
+    <WebView
+      cacheEnabled={true}
+      containerStyle={
+        Object {
+          "flex": 0,
+          "height": "100%",
+        }
+      }
+      javaScriptEnabled={true}
+      originWhitelist={
+        Array [
+          "http://*",
+          "https://*",
+        ]
+      }
+      source={
+        Object {
+          "uri": "https://www.bbc.co.uk/news",
+        }
+      }
+      useSharedProcessPool={true}
+    />
+  </View>
 </BackgroundContainer>
 `;
