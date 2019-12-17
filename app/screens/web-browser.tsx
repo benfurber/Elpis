@@ -1,9 +1,8 @@
 import React, { Component } from "react";
 import { StyleSheet, TouchableOpacity, View } from "react-native";
-import { WebView } from "react-native-webview";
 import { withMappedNavigationParams } from "react-navigation-props-mapper";
 
-import { BackgroundContainer, Icon } from "components";
+import { BackgroundContainer, Icon, WebView } from "components";
 import { NavigationType } from "interfaces";
 import { layout, colours } from "styles";
 import { Analytics } from "utils";
@@ -34,10 +33,7 @@ class WebBrowserScreen extends Component<Props> {
           </View>
         </View>
         <View>
-          <WebView
-            source={{ uri }}
-            containerStyle={{ flex: 0, height: "100%" }}
-          />
+          <WebView uri={uri} />
         </View>
       </BackgroundContainer>
     );
