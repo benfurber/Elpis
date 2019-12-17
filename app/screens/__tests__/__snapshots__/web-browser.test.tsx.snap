@@ -22,28 +22,18 @@ exports[`WebBrowser renders correctly 1`] = `
       </TouchableOpacity>
     </View>
   </View>
-  <View>
+  <View
+    style={
+      Object {
+        "backgroundColor": "rgba(255, 255, 255, 0.85)",
+        "borderTopLeftRadius": 10,
+        "borderTopRightRadius": 10,
+        "flex": 1,
+      }
+    }
+  >
     <WebView
-      cacheEnabled={true}
-      containerStyle={
-        Object {
-          "flex": 0,
-          "height": "100%",
-        }
-      }
-      javaScriptEnabled={true}
-      originWhitelist={
-        Array [
-          "http://*",
-          "https://*",
-        ]
-      }
-      source={
-        Object {
-          "uri": "https://www.bbc.co.uk/news",
-        }
-      }
-      useSharedProcessPool={true}
+      uri="https://www.bbc.co.uk/news"
     />
   </View>
 </BackgroundContainer>
