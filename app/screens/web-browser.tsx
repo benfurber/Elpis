@@ -32,7 +32,7 @@ class WebBrowserScreen extends Component<Props> {
             </TouchableOpacity>
           </View>
         </View>
-        <View>
+        <View style={styles.body}>
           <WebView uri={uri} />
         </View>
       </BackgroundContainer>
@@ -46,7 +46,6 @@ const styles = StyleSheet.create({
     borderTopLeftRadius: layout.borderRadiusL,
     borderTopRightRadius: layout.borderRadiusL,
     flex: 1,
-    paddingTop: layout.spacing,
   },
   closeContainer: {
     flexDirection: "row-reverse",
