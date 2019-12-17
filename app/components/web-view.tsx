@@ -1,9 +1,9 @@
 import React, { Component } from "react";
-import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
+import { StyleSheet, Text, View } from "react-native";
 
 import { WebView as WebViewPackage } from "react-native-webview";
 
-import { Icon } from "components";
+import { IconNav } from "components";
 import { layout, colours } from "styles";
 
 interface Props {
@@ -37,21 +37,6 @@ class WebView extends Component<Props, State> {
     this.setState({ navState });
   };
 
-  navIcon(name, active, action) {
-    const activeColour = colours.pureWhite;
-    const inactiveColour = colours.whiteTransparentHigh;
-
-    return (
-      <TouchableOpacity onPress={action}>
-        <Icon
-          style={styles.icon}
-          name={`chevron-${name}`}
-          colour={active ? activeColour : inactiveColour}
-        />
-      </TouchableOpacity>
-    );
-  }
-
   render() {
     const { uri } = this.props;
     const { canGoBack, canGoForward, url } = this.state.navState;
@@ -59,8 +44,16 @@ class WebView extends Component<Props, State> {
     return (
       <View>
         <View style={styles.header}>
-          {this.navIcon("left", canGoBack, () => this.webview.goBack())}
-          {this.navIcon("right", canGoForward, () => this.webview.goForward())}
+          <IconNav
+            action={() => this.webview.goBack()}
+            isActive={canGoBack}
+            name="chevron-left"
+          />
+          <IconNav
+            action={() => this.webview.goForward()}
+            isActive={canGoForward}
+            name="chevron-right"
+          />
           <View style={styles.textContainer}>
             <Text style={styles.text}>{url}</Text>
           </View>
