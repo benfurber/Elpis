@@ -21,3 +21,4 @@ export { Post } from "./post";
 export { Query } from "./query";
 export { TextInput } from "./text-input";
 export { Title } from "./title";
+export { WebView } from "./web-view";
