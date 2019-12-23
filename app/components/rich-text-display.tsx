@@ -1,9 +1,10 @@
 import React, { Component } from "react";
-import { StyleSheet, Text, View } from "react-native";
+import { StyleSheet, View } from "react-native";
+import Autolink from "react-native-autolink";
 
 import { LinkPreview } from "components";
 import { NavigationType, Reply as ReplyInterface } from "interfaces";
-import { layout } from "styles";
+import { colours, layout, typography } from "styles";
 
 interface Props {
   item: ReplyInterface;
@@ -11,14 +12,36 @@ interface Props {
 }
 
 class RichTextDisplay extends Component<Props> {
+  onPress() {
+    const { item, navigation } = this.props;
+    const { link } = item;
+
+    return navigation.navigate("Browser", { uri: link });
+  }
+
+  renderContent() {
+    const { content } = this.props.item;
+
+    if (!content) return null;
+
+    return (
+      <Autolink
+        onPress={() => this.onPress()}
+        text={content}
+        style={styles.body}
+        linkStyle={styles.link}
+      />
+    );
+  }
+
   render() {
     const { item, navigation } = this.props;
-    const { content, link } = item;
+    const { link } = item;
 
     return (
       <View>
         {link && <LinkPreview navigation={navigation} url={link} />}
-        <Text style={styles.body}>{content}</Text>
+        {this.renderContent()}
       </View>
     );
   }
@@ -26,7 +49,12 @@ class RichTextDisplay extends Component<Props> {
 
 const styles = StyleSheet.create({
   body: {
+    fontSize: typography.fontSize,
     paddingVertical: layout.spacing,
+  },
+  link: {
+    color: colours.darkGrey,
+    textDecorationLine: "underline",
   },
 });
 

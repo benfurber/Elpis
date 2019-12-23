@@ -5,28 +5,70 @@ exports[`RichTextDisplay renders correctly with a link 1`] = `
   <LinkPreview
     url="https://www.bbc.co.uk/news/business-50656178"
   />
-  <Text
+  <Autolink
+    email={true}
+    hashtag={false}
+    latlng={false}
+    linkStyle={
+      Object {
+        "color": "rgb(51, 51, 51)",
+        "textDecorationLine": "underline",
+      }
+    }
+    mention={false}
+    onPress={[Function]}
+    phone={true}
+    showAlert={false}
+    stripPrefix={true}
+    stripTrailingSlash={true}
     style={
       Object {
+        "fontSize": 16,
         "paddingVertical": 10,
       }
     }
-  >
-    Meu pai também fez o mesmo. Logo depois que minha mãe pediu o divórcio porque sofria violência dentro de casa, ele pegou as malas, se mudou e sumiu no mundo. Nem faço mais questão de saber pra onde ele foi.
-  </Text>
+    text="Meu pai também fez o mesmo. Logo depois que minha mãe pediu o divórcio porque sofria violência dentro de casa, ele pegou as malas, se mudou e sumiu no mundo. Nem faço mais questão de saber pra onde ele foi."
+    truncate={32}
+    truncateChars=".."
+    truncateLocation="smart"
+    twitter={false}
+    url={true}
+    webFallback={false}
+  />
 </View>
 `;
 
 exports[`RichTextDisplay renders correctly without a link 1`] = `
 <View>
-  <Text
+  <Autolink
+    email={true}
+    hashtag={false}
+    latlng={false}
+    linkStyle={
+      Object {
+        "color": "rgb(51, 51, 51)",
+        "textDecorationLine": "underline",
+      }
+    }
+    mention={false}
+    onPress={[Function]}
+    phone={true}
+    showAlert={false}
+    stripPrefix={true}
+    stripTrailingSlash={true}
     style={
       Object {
+        "fontSize": 16,
         "paddingVertical": 10,
       }
     }
-  >
-    Meu pai também fez o mesmo. Logo depois que minha mãe pediu o divórcio porque sofria violência dentro de casa, ele pegou as malas, se mudou e sumiu no mundo. Nem faço mais questão de saber pra onde ele foi.
-  </Text>
+    text="Meu pai também fez o mesmo. Logo depois que minha mãe pediu o divórcio porque sofria violência dentro de casa, ele pegou as malas, se mudou e sumiu no mundo. Nem faço mais questão de saber pra onde ele foi."
+    truncate={32}
+    truncateChars=".."
+    truncateLocation="smart"
+    twitter={false}
+    url={true}
+    webFallback={false}
+  />
 </View>
 `;
