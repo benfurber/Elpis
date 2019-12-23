@@ -7,6 +7,7 @@ module.exports = {
           app: "./app",
           assets: "./app/assets",
           components: "./app/components",
+          factories: "./app/factories",
           interfaces: "./app/interfaces",
           labels: "./app/labels",
           mutations: "./app/mutations",

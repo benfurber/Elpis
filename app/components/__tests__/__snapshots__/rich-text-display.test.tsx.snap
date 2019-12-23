@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`RichTextDisplay renders correctly with a link 1`] = `
+<View>
+  <LinkPreview
+    url="https://www.bbc.co.uk/news/business-50656178"
+  />
+  <Text
+    style={
+      Object {
+        "paddingVertical": 10,
+      }
+    }
+  >
+    Meu pai também fez o mesmo. Logo depois que minha mãe pediu o divórcio porque sofria violência dentro de casa, ele pegou as malas, se mudou e sumiu no mundo. Nem faço mais questão de saber pra onde ele foi.
+  </Text>
+</View>
+`;
+
+exports[`RichTextDisplay renders correctly without a link 1`] = `
+<View>
+  <Text
+    style={
+      Object {
+        "paddingVertical": 10,
+      }
+    }
+  >
+    Meu pai também fez o mesmo. Logo depois que minha mãe pediu o divórcio porque sofria violência dentro de casa, ele pegou as malas, se mudou e sumiu no mundo. Nem faço mais questão de saber pra onde ele foi.
+  </Text>
+</View>
+`;

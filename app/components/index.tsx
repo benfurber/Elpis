@@ -20,6 +20,7 @@ export { NoContent } from "./no-content";
 export { Notifications } from "./notifications";
 export { Post } from "./post";
 export { Query } from "./query";
+export { RichTextDisplay } from "./rich-text-display";
 export { TextInput } from "./text-input";
 export { Title } from "./title";
 export { WebView } from "./web-view";
