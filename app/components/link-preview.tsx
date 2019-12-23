@@ -28,7 +28,6 @@ function LinkPreview(props: Props) {
           <Image source={{ uri: image }} style={styles.image} />
           <View style={styles.containerText}>
             <Title style={styles.title} text={title} small />
-            <Text style={styles.url}>{url}</Text>
             <Text style={styles.description}>{description}</Text>
           </View>
         </View>
