@@ -12,7 +12,14 @@ module.exports = {
     sourceType: "module",
     typescript: true,
   },
-  plugins: ["jest", "prettier", "react", "react-native", "@typescript-eslint"],
+  plugins: [
+    "jest",
+    "prettier",
+    "react",
+    "react-native",
+    "sort-keys-fix",
+    "@typescript-eslint",
+  ],
   rules: {
     "@typescript-eslint/explicit-member-accessibility": "off",
     "@typescript-eslint/explicit-function-return-type": "off",
@@ -22,6 +29,7 @@ module.exports = {
     indent: "off",
     "prettier/prettier": "error",
     "react/jsx-filename-extension": [0],
+    "sort-keys-fix/sort-keys-fix": "warn",
   },
   settings: {
     "import/resolver": {
