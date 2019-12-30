@@ -21,11 +21,13 @@ class NewTextInput extends Component<TextInputProps & Props> {
       loading: styles.inputLoading,
     };
 
+    const propStyles = { ...this.props.style };
+
     return (
       <TextInput
         {...this.props}
         editable={isEditable[this.props.displayStyle]}
-        style={[styleDisplay[this.props.displayStyle], this.props.style]}
+        style={[styleDisplay[this.props.displayStyle], propStyles]}
       />
     );
   }

@@ -21,7 +21,7 @@ exports[`TextInput when active renders correctly 1`] = `
         "height": 40,
         "padding": 10,
       },
-      undefined,
+      Object {},
     ]
   }
   textContentType="password"
@@ -51,7 +51,7 @@ exports[`TextInput when error renders correctly 1`] = `
         "height": 40,
         "padding": 10,
       },
-      undefined,
+      Object {},
     ]
   }
   textContentType="password"
@@ -81,7 +81,7 @@ exports[`TextInput when loading renders correctly 1`] = `
         "height": 40,
         "padding": 10,
       },
-      undefined,
+      Object {},
     ]
   }
   textContentType="password"
