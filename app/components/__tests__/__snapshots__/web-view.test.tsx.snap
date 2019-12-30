@@ -60,11 +60,13 @@ exports[`WebView renders correctly 1`] = `
         "https://*",
       ]
     }
+    renderLoading={[Function]}
     source={
       Object {
         "uri": "http://bbc.co.uk/",
       }
     }
+    startInLoadingState={true}
     useSharedProcessPool={true}
   />
 </View>

@@ -3,7 +3,7 @@ import { StyleSheet, Text, View } from "react-native";
 
 import { WebView as WebViewPackage } from "react-native-webview";
 
-import { IconNav } from "components";
+import { IconNav, Loading } from "components";
 import { layout, colours } from "styles";
 
 interface Props {
@@ -62,7 +62,13 @@ class WebView extends Component<Props, State> {
           containerStyle={styles.containerStyle}
           onNavigationStateChange={this.onNavigationStateChange}
           ref={ref => (this.webview = ref)}
+          renderLoading={() => (
+            <View style={styles.containerLoading}>
+              <Loading blueMode />
+            </View>
+          )}
           source={{ uri }}
+          startInLoadingState={true}
         />
       </View>
     );
@@ -70,6 +76,12 @@ class WebView extends Component<Props, State> {
 }
 
 const styles = StyleSheet.create({
+  containerLoading: {
+    alignItems: "center",
+    flex: 0,
+    height: "100%",
+    padding: layout.spacingL,
+  },
   containerStyle: {
     flex: 0,
     height: "100%",
