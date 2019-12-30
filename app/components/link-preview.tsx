@@ -12,23 +12,39 @@ interface Props {
   url: string;
 }
 
+function Author({ author }: { author: string | null }) {
+  if (author) return <Text style={styles.text}>{author}</Text>;
+  return null;
+}
+
+function Description({ description }: { description: string | null }) {
+  if (description) return <Text style={styles.text}>{description}</Text>;
+  return null;
+}
+
+function ImagePreview({ image }: { image: string | null }) {
+  if (image) return <Image source={{ uri: image }} style={styles.image} />;
+  return null;
+}
+
 function LinkPreview(props: Props) {
   const { navigation, url } = props;
   const variables = { url };
   const { data } = useQuery(LINK, { variables });
 
   if (data) {
-    const { description, image, title } = data.link;
+    const { author, description, image, title } = data.link;
 
     return (
       <TouchableOpacity
         onPress={() => navigation.navigate("Browser", { uri: url })}
       >
         <View style={styles.container}>
-          <Image source={{ uri: image }} style={styles.image} />
+          <ImagePreview image={image} />
           <View style={styles.containerText}>
             <Title style={styles.title} text={title} small />
-            <Text style={styles.description}>{description}</Text>
+            <Author author={author} />
+            <Description description={description} />
           </View>
         </View>
       </TouchableOpacity>
@@ -48,12 +64,12 @@ const styles = StyleSheet.create({
     flex: 1,
     paddingHorizontal: layout.spacingS,
   },
-  description: {
-    color: colours.pureWhite,
-  },
   image: {
     borderRadius: layout.borderRadius,
     width: 80,
+  },
+  text: {
+    color: colours.pureWhite,
   },
   title: {
     color: colours.pureWhite,

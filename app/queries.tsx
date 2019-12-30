@@ -104,6 +104,7 @@ export const LINK = gql`
   query Link($url: URL!) {
     link(url: $url) {
       id
+      author
       description
       image
       title
