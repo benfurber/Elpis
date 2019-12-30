@@ -78,7 +78,7 @@
     "eslint-plugin-react-native": "3.8.1",
     "eslint-plugin-sort-keys-fix": "^1.1.0",
     "jest": "^24.8.0",
-    "metro-react-native-babel-preset": "^0.54.1",
+    "metro-react-native-babel-preset": "0.57.0",
     "mock-async-storage": "^2.2.0",
     "prettier": "^1.18.2",
     "react-addons-test-utils": "^15.6.2",
