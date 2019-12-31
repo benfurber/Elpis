@@ -25,6 +25,12 @@ class Analytics {
     this.mixPanel = Mixpanel;
   }
 
+  identifyUser(userId: UserId) {
+    this.mixPanel
+      .sharedInstanceWithToken(this.token)
+      .then(() => this.mixPanel.identify(userId));
+  }
+
   registerUser(userId: UserId) {
     this.mixPanel
       .sharedInstanceWithToken(this.token)

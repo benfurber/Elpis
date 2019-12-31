@@ -3,11 +3,20 @@ import { Analytics } from "utils";
 describe("Analytics", () => {
   const mixpanelMock = {
     createAlias: jest.fn(),
+    identify: jest.fn(),
     sharedInstanceWithToken: jest.fn(() => Promise.resolve()),
     track: jest.fn(),
     trackWithProperties: jest.fn(),
   };
   Analytics.mockMixPanel(mixpanelMock);
+
+  describe("identifyUser", () => {
+    it("sends the correct data to mixpanel", async () => {
+      const userId = "bdf4weskwms12";
+      await Analytics.identifyUser(userId);
+      expect(mixpanelMock.identify).toHaveBeenCalledWith(userId);
+    });
+  });
 
   describe("registerUser", () => {
     it("sends the correct data to mixpanel", async () => {
