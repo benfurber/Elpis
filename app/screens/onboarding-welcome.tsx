@@ -16,24 +16,23 @@ interface Props {
 }
 
 function OnboardingWelcomeScreen(props: Props) {
-  const { data } = useQuery(USER_DETAILS);
-  Analytics.trackContent({
-    contentType: "Onboarding",
-    contentId: "onboarding-welcome",
-  });
-
+  const { id, name } = useQuery(USER_DETAILS).data.me;
   const { navigation } = props;
   const { welcome } = labels.onboarding;
+
+  Analytics.registerUser(id);
+
+  Analytics.trackContent({
+    contentId: "onboarding-welcome",
+    contentType: "Onboarding",
+  });
 
   return (
     <BackgroundModal>
       <View style={styles.content}>
         <Image source={require(mayImagePath)} style={styles.image} />
         <Title text={"1/4"} small />
-        <Title
-          style={styles.title}
-          text={`${welcome.title} \n${data.me.name || ""}`}
-        />
+        <Title style={styles.title} text={`${welcome.title} \n${name || ""}`} />
         <Text style={styles.text}>{welcome.text}</Text>
         <Title style={styles.subtitle} text="May" />
 
