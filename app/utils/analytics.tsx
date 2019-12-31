@@ -25,26 +25,24 @@ class Analytics {
     this.mixPanel = Mixpanel;
   }
 
+  callMixpanel(callback: () => void) {
+    this.mixPanel.sharedInstanceWithToken(this.token).then(callback);
+  }
+
   identifyUser(userId: UserId) {
-    this.mixPanel
-      .sharedInstanceWithToken(this.token)
-      .then(() => this.mixPanel.identify(userId));
+    this.callMixpanel(() => this.mixPanel.identify(userId));
   }
 
   registerUser(userId: UserId) {
-    this.mixPanel
-      .sharedInstanceWithToken(this.token)
-      .then(() => this.mixPanel.createAlias(userId));
+    this.callMixpanel(() => this.mixPanel.createAlias(userId));
   }
 
   track(trackingEvent: string) {
-    this.mixPanel
-      .sharedInstanceWithToken(this.token)
-      .then(() => this.mixPanel.track(trackingEvent));
+    this.callMixpanel(() => this.mixPanel.track(trackingEvent));
   }
 
   trackContent({ contentType, contentId }: TrackContent) {
-    this.mixPanel.sharedInstanceWithToken(this.token).then(() =>
+    this.callMixpanel(() =>
       this.mixPanel.trackWithProperties(contentType, {
         contentId,
       }),

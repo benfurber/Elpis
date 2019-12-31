@@ -10,6 +10,14 @@ describe("Analytics", () => {
   };
   Analytics.mockMixPanel(mixpanelMock);
 
+  describe("callMixpanel", () => {
+    it("provides the token ", async () => {
+      const callback = jest.fn();
+      await Analytics.callMixpanel(() => callback);
+      expect(mixpanelMock.sharedInstanceWithToken).toHaveBeenCalled();
+    });
+  });
+
   describe("identifyUser", () => {
     it("sends the correct data to mixpanel", async () => {
       const userId = "bdf4weskwms12";
