@@ -7240,10 +7240,10 @@ react-native-keyboard-aware-scroll-view@^0.8.0:
     prop-types "^15.6.2"
     react-native-iphone-x-helper "^1.0.3"
 
-react-native-mixpanel@^1.1.4:
-  version "1.1.4"
-  resolved "https://registry.yarnpkg.com/react-native-mixpanel/-/react-native-mixpanel-1.1.4.tgz#874bb7eb012c005f32c94e2f99b6503e327ff970"
-  integrity sha512-RiyGCAL3klaxmaVIi5tv7tBcn/W10HRPnJm+nbec4DA/lV1SJNI+r6kXnhPHeW5Khiwngdz0rK5Ve4LE5/lOOA==
+react-native-mixpanel@^1.1.14:
+  version "1.1.14"
+  resolved "https://registry.yarnpkg.com/react-native-mixpanel/-/react-native-mixpanel-1.1.14.tgz#fff26455eeb88ae93c474432130a119de06111d7"
+  integrity sha512-rmAe5GoZIZfxhK0EcAlQun+o1J6fIJsbgzE61LaC8CCKOfkV2sP/TmEpHQJfb2lL25VGDFHtqeed9JFVbAYc6A==
 
 react-native-onesignal@^3.5.0:
   version "3.5.0"
