@@ -10,6 +10,8 @@ import { FeedbackScreen, SettingsScreen } from "screens";
 import { Feed } from "./feed";
 import { Notification } from "./notification";
 
+const path = "";
+
 const options = {
   defaultNavigationOptions: ({ navigation }) => ({
     tabBarIcon: ({ focused }: { focused: boolean }) => {
@@ -25,19 +27,18 @@ const options = {
   },
 };
 
-const screen = createBottomTabNavigator(
-  {
-    Feed,
-    Feedback: FeedbackScreen,
-    Notification,
-    Settings: SettingsScreen,
-  },
-  options,
-);
+const screen = {
+  Feed,
+  Notification,
+  Feedback: FeedbackScreen,
+  Settings: SettingsScreen,
+};
+
+const MainScreen = createBottomTabNavigator(screen, options);
 
 const Main = {
-  path: "",
-  screen,
+  path,
+  screen: MainScreen,
 };
 
 export { Main };

@@ -5,15 +5,16 @@ import { FeedScreen } from "screens";
 import { stackConfig } from "./config";
 import { Content } from "./content";
 
-const Feed = createStackNavigator(
-  {
-    Feed: FeedScreen,
-    ...Content,
-  },
-  {
-    initialRouteName: "Feed",
-    ...stackConfig,
-  },
-);
+const options = {
+  initialRouteName: "Feed",
+  ...stackConfig,
+};
+
+const screen = {
+  Feed: FeedScreen,
+  ...Content,
+};
+
+const Feed = createStackNavigator(screen, options);
 
 export { Feed };
