@@ -7,7 +7,7 @@ import { Content } from "./content";
 
 const path = "notification";
 
-const screen = {
+const screens = {
   Notification: NotificationScreen,
   ...Content,
 };
@@ -17,11 +17,11 @@ const options = {
   ...stackConfig,
 };
 
-const notificationScreen = createStackNavigator(screen, options);
+const screen = createStackNavigator(screens, options);
 
 const Notification = {
   path,
-  screen: notificationScreen,
+  screen,
 };
 
 export { Notification };

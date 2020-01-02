@@ -27,18 +27,18 @@ const options = {
   },
 };
 
-const screen = {
+const screens = {
   Feed,
   Notification,
   Feedback: FeedbackScreen,
   Settings: SettingsScreen,
 };
 
-const MainScreen = createBottomTabNavigator(screen, options);
+const screen = createBottomTabNavigator(screens, options);
 
 const Main = {
   path,
-  screen: MainScreen,
+  screen,
 };
 
 export { Main };

@@ -10,11 +10,11 @@ const options = {
   ...stackConfig,
 };
 
-const screen = {
+const screens = {
   Feed: FeedScreen,
   ...Content,
 };
 
-const Feed = createStackNavigator(screen, options);
+const Feed = createStackNavigator(screens, options);
 
 export { Feed };

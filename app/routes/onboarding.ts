@@ -9,7 +9,7 @@ import {
 
 import { stackConfig } from "./config";
 
-const screen = {
+const screens = {
   AddPassword: OnboardingAddPasswordScreen,
   Features: OnboardingFeaturesScreen,
   ThankYou: OnboardingThankYouScreen,
@@ -21,6 +21,6 @@ const options = {
   ...stackConfig,
 };
 
-const Onboarding = createStackNavigator(screen, options);
+const Onboarding = createStackNavigator(screens, options);
 
 export { Onboarding };

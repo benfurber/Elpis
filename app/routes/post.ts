@@ -1,8 +1,11 @@
 import { PostScreen } from "screens";
 
+const path = "post/:id";
+const screen = PostScreen;
+
 const Post = {
-  path: "post/:id",
-  screen: PostScreen,
+  path,
+  screen,
 };
 
 export { Post };
