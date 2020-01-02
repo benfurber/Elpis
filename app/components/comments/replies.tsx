@@ -26,8 +26,8 @@ interface Props {
 class Replies extends Component<Props> {
   componentDidMount() {
     Analytics.trackContent({
-      contentType: "Replies",
       contentId: this.props.item.id,
+      contentType: "Replies",
     });
   }
 
@@ -50,7 +50,7 @@ class Replies extends Component<Props> {
     return (
       <View>
         <TouchableOpacity onPress={() => this.props.onPress()}>
-          <Text style={styles.link}>&#60; {labels.backButton}</Text>
+          <Text style={styles.link}>&#60; {labels.backToTopics}</Text>
         </TouchableOpacity>
       </View>
     );
