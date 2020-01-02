@@ -8,11 +8,16 @@ import {
 import { Onboarding } from "./onboarding";
 import { Main } from "./main";
 
-const Root = createSwitchNavigator({
-  AuthLoading,
-  Main,
-  Onboarding,
-  Welcome,
-});
+const Root = createSwitchNavigator(
+  {
+    AuthLoading,
+    Main,
+    Onboarding,
+    Welcome,
+  },
+  {
+    initialRouteName: "AuthLoading",
+  },
+);
 
 export { Root };
