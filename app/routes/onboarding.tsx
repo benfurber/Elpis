@@ -7,7 +7,7 @@ import {
   OnboardingWelcomeScreen,
 } from "screens";
 
-import { stackConfig } from "./utils";
+import { stackConfig } from "./config";
 
 const Onboarding = createStackNavigator(
   {

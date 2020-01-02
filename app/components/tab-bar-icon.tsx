@@ -14,7 +14,7 @@ interface Props {
 const routeNameIcon = {
   Feed: "newspaper",
   Feedback: "file-alt",
-  Notifications: "bell",
+  Notification: "bell",
   Settings: "cog",
 };
 
