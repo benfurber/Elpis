@@ -4,7 +4,7 @@ export { AuthLoadingScreen } from "./auth-loading";
 export { FeedScreen } from "./feed";
 export { FeedbackScreen } from "./feedback";
 export { FormContainerScreen } from "./form-container";
-export { NotificationsScreen } from "./notifications";
+export { NotificationScreen } from "./notification";
 export { OnboardingAddPasswordScreen } from "./onboarding-add-password";
 export { OnboardingFeaturesScreen } from "./onboarding-features";
 export { OnboardingThankYouScreen } from "./onboarding-thank-you";
