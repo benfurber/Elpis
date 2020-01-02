@@ -6,16 +6,16 @@ import MockAsyncStorage from "mock-async-storage";
 Enzyme.configure({ adapter: new Adapter() });
 
 Object.assign(NativeModules, {
+  PlatformConstants: {
+    forceTouchAvailable: false,
+  },
   RNGestureHandlerModule: {
+    Directions: {},
+    State: {},
     attachGestureHandler: jest.fn(),
     createGestureHandler: jest.fn(),
     dropGestureHandler: jest.fn(),
     updateGestureHandler: jest.fn(),
-    State: {},
-    Directions: {},
-  },
-  PlatformConstants: {
-    forceTouchAvailable: false,
   },
 });
 

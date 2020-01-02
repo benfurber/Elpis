@@ -11,9 +11,9 @@ module.exports = {
   coveragePathIgnorePatterns: ["/node_modules/"],
   moduleFileExtensions: ["js", "json", "jsx", "node", "ts", "tsx"],
   moduleNameMapper: pathsToModuleNameMapper(compilerOptions.paths, {
-    prefix: "<rootDir>/",
     "^@App/(.*)$": "<rootDir>/src/$1",
     "^lib/(.*)$": "<rootDir>/common/$1",
+    prefix: "<rootDir>/",
   }),
   preset: "react-native",
   setupFiles: ["./jest-setup.js"],
@@ -22,13 +22,13 @@ module.exports = {
   testMatch: null,
   testPathIgnorePatterns: ["\\.snap$", "<rootDir>/node_modules/"],
   testRegex: "(/__tests__/.*|\\.(test|spec))\\.(ts|tsx|js)$",
+  transform: {
+    ...tsjPreset.transform,
+    "\\.(ts|tsx)$": "ts-jest",
+    "^.+\\.(js)$": "<rootDir>/node_modules/babel-jest",
+    "^.+\\.js$": "<rootDir>/node_modules/react-native/jest/preprocessor.js",
+  },
   transformIgnorePatterns: [
     "/node_modules/(?!(jest-)?react-native|native-base-shoutem-theme)/",
   ],
-  transform: {
-    ...tsjPreset.transform,
-    "^.+\\.js$": "<rootDir>/node_modules/react-native/jest/preprocessor.js",
-    "^.+\\.(js)$": "<rootDir>/node_modules/babel-jest",
-    "\\.(ts|tsx)$": "ts-jest",
-  },
 };
