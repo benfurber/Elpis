@@ -3,12 +3,12 @@ import { createStackNavigator } from "react-navigation-stack";
 import { FeedScreen } from "screens";
 
 import { stackConfig } from "./config";
-import { IndividualContentRoutes } from "./content";
+import { Content } from "./content";
 
-const FeedStack = createStackNavigator(
+const Feed = createStackNavigator(
   {
     Feed: FeedScreen,
-    ...IndividualContentRoutes,
+    ...Content,
   },
   {
     initialRouteName: "Feed",
@@ -16,4 +16,4 @@ const FeedStack = createStackNavigator(
   },
 );
 
-export { FeedStack };
+export { Feed };

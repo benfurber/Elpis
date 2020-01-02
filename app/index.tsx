@@ -5,11 +5,11 @@ import { setCustomText } from "react-native-global-props";
 import { ApolloProvider } from "@apollo/react-hooks";
 import RNBootSplash from "react-native-bootsplash";
 
-import { RootStack } from "routes";
+import { Root } from "routes";
 import { elements } from "styles";
 import { client, ignoreWarnings, pushNotifications } from "utils";
 
-const AppContainer = createAppContainer(RootStack);
+const AppContainer = createAppContainer(Root);
 const URI_PREFIX = "elpis://";
 
 setCustomText({ style: { ...elements.standardText } });

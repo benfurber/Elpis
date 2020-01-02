@@ -4,7 +4,7 @@ import { AddReplyScreen, AddTopicScreen, PostScreen } from "screens";
 
 import { stackConfig } from "./config";
 
-const AddContentScreen = createStackNavigator(
+const AddContent = createStackNavigator(
   {
     AddReply: AddReplyScreen,
     AddTopic: AddTopicScreen,
@@ -15,12 +15,12 @@ const AddContentScreen = createStackNavigator(
   },
 );
 
-const IndividualContentRoutes = {
-  AddContent: AddContentScreen,
+const Content = {
+  AddContent,
   Post: {
     path: "post/:id",
     screen: PostScreen,
   },
 };
 
-export { IndividualContentRoutes };
+export { Content };

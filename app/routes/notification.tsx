@@ -3,12 +3,12 @@ import { createStackNavigator } from "react-navigation-stack";
 import { NotificationsScreen } from "screens";
 
 import { stackConfig } from "./config";
-import { IndividualContentRoutes } from "./content";
+import { Content } from "./content";
 
 const NotificationStack = createStackNavigator(
   {
     Notifications: NotificationsScreen,
-    ...IndividualContentRoutes,
+    ...Content,
   },
   {
     initialRouteName: "Notifications",

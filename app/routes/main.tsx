@@ -7,10 +7,10 @@ import { createBottomTabNavigator } from "react-navigation-tabs";
 import { TabBarIcon } from "components";
 import { FeedbackScreen, SettingsScreen } from "screens";
 
-import { FeedStack as Feed } from "./feed";
+import { Feed } from "./feed";
 import { Notification } from "./notification";
 
-const mainTabOptions = {
+const options = {
   defaultNavigationOptions: ({ navigation }) => ({
     tabBarIcon: ({ focused }: { focused: boolean }) => {
       return (
@@ -25,19 +25,19 @@ const mainTabOptions = {
   },
 };
 
-const mainTabs = createBottomTabNavigator(
+const screen = createBottomTabNavigator(
   {
     Feed,
     Feedback: FeedbackScreen,
     Notification,
     Settings: SettingsScreen,
   },
-  mainTabOptions,
+  options,
 );
 
 const Main = {
   path: "",
-  screen: mainTabs,
+  screen,
 };
 
 export { Main };

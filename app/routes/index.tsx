@@ -8,11 +8,11 @@ import {
 import { Onboarding } from "./onboarding";
 import { Main } from "./main";
 
-const RootStack = createSwitchNavigator({
+const Root = createSwitchNavigator({
   AuthLoading,
   Main,
   Onboarding,
   Welcome,
 });
 
-export { RootStack };
+export { Root };
