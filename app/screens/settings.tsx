@@ -22,7 +22,7 @@ class SettingsScreen extends Component<Props> {
       await AsyncStorage.removeItem("token");
       this.props.navigation.navigate("Welcome");
     } catch (error) {
-      console.log(error);
+      console.error(error);
     }
   };
 
