@@ -4,11 +4,14 @@ import { elements } from "styles";
 
 interface Props {
   displayStyle: "active" | "error" | "loading";
+  forwardedRef?: any;
   style?: object;
 }
 
 class NewTextInput extends Component<TextInputProps & Props> {
   render() {
+    const { displayStyle, forwardedRef } = this.props;
+
     const isEditable = {
       active: true,
       error: true,
@@ -26,8 +29,9 @@ class NewTextInput extends Component<TextInputProps & Props> {
     return (
       <TextInput
         {...this.props}
-        editable={isEditable[this.props.displayStyle]}
-        style={[styleDisplay[this.props.displayStyle], propStyles]}
+        ref={forwardedRef}
+        editable={isEditable[displayStyle]}
+        style={[styleDisplay[displayStyle], propStyles]}
       />
     );
   }
