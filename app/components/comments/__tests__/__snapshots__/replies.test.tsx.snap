@@ -20,7 +20,7 @@ exports[`Comments<Replies> when there are no replies renders correctly 1`] = `
         }
       >
         &lt; 
-        Voltar aos Comentários
+        Voltar aos Tópicos
       </Text>
     </TouchableOpacity>
   </View>
@@ -104,7 +104,7 @@ exports[`Comments<Replies> when there are replies renders correctly 1`] = `
         }
       >
         &lt; 
-        Voltar aos Comentários
+        Voltar aos Tópicos
       </Text>
     </TouchableOpacity>
   </View>
