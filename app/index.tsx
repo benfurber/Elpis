@@ -7,12 +7,13 @@ import RNBootSplash from "react-native-bootsplash";
 
 import { RootStack } from "routes";
 import { elements } from "styles";
-import { client, pushNotifications } from "utils";
+import { client, ignoreWarnings, pushNotifications } from "utils";
 
 const AppContainer = createAppContainer(RootStack);
 const URI_PREFIX = "elpis://";
 
 setCustomText({ style: { ...elements.standardText } });
+ignoreWarnings();
 
 class App extends Component {
   constructor(properties) {
