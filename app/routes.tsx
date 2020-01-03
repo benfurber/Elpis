@@ -1,3 +1,4 @@
+/* eslint-disable sort-keys-fix/sort-keys-fix */
 /* eslint-disable react/display-name */
 import React from "react";
 import { createSwitchNavigator } from "react-navigation";
@@ -17,6 +18,7 @@ import {
   OnboardingThankYouScreen,
   OnboardingWelcomeScreen,
   PostScreen,
+  SettingsScreen,
   WelcomeScreen,
 } from "screens";
 
@@ -77,6 +79,7 @@ const mainTabs = createBottomTabNavigator(
       path: "notification",
     },
     Feedback: FeedbackScreen,
+    Settings: SettingsScreen,
   },
   {
     defaultNavigationOptions: ({ navigation }) => ({
@@ -117,6 +120,7 @@ const RootStack = createSwitchNavigator({
     screen: mainTabs,
     path: "",
   },
+  Settings: SettingsScreen,
 });
 
 export { RootStack };

@@ -83,6 +83,10 @@ const labels = {
   replies: "Respostas",
   reply: "Resposta",
   select: "Selecionar",
+  settings: {
+    logout: "Sair",
+    title: "Configurações",
+  },
   submit: "Postar",
   title: "Título",
   topics: "Tópicos",

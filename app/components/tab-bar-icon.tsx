@@ -15,6 +15,7 @@ const routeNameIcon = {
   Feed: "newspaper",
   Feedback: "file-alt",
   Notifications: "bell",
+  Settings: "cog",
 };
 
 function TabBarIcon(props: Props) {
