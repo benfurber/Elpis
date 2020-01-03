@@ -25,7 +25,7 @@ function TabBarIcon(props: Props) {
   const name = routeNameIcon[routeName];
 
   const badge = number =>
-    routeName === "Notifications" && <Badge left={20} number={number} />;
+    routeName === "Notification" && <Badge left={20} number={number} />;
 
   return (
     <View>
