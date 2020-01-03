@@ -27,14 +27,16 @@ class SettingsScreen extends Component<Props> {
   };
 
   render() {
+    const { logout, title } = labels.settings;
+
     return (
       <BackgroundContainer>
-        <Title style={styles.title} text={labels.settings.title} />
+        <Title style={styles.title} text={title} />
         <View>
           <TouchableOpacity style={styles.item} onPress={() => this.onPress()}>
             <View style={styles.row}>
               <Icon name={"sign-out-alt"} />
-              <Text style={styles.text}>{labels.settings.logout}</Text>
+              <Text style={styles.text}>{logout}</Text>
             </View>
           </TouchableOpacity>
         </View>
