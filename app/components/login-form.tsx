@@ -133,8 +133,7 @@ class LoginForm extends Component<Props, State> {
 
 const styles = StyleSheet.create({
   container: {
-    alignItems: "center",
-    flex: 1,
+    alignItems: "flex-end",
     flexDirection: "column",
     padding: layout.spacingXL,
   },
@@ -145,8 +144,7 @@ const styles = StyleSheet.create({
     padding: layout.spacing,
   },
   row: {
-    alignItems: "baseline",
-    flexDirection: "row-reverse",
+    flexDirection: "row",
     marginBottom: layout.spacingL,
   },
 });
