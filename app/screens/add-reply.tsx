@@ -24,8 +24,8 @@ class AddReplyScreen extends Component<Props, State> {
   constructor(props) {
     super(props);
     this.state = {
-      textInputEditable: true,
       textInput: "",
+      textInputEditable: true,
     };
   }
 
@@ -60,6 +60,7 @@ class AddReplyScreen extends Component<Props, State> {
             onChangeText={textInput => this.setState({ textInput })}
             value={this.state.textInput}
             returnKeyLabel={labels.submit}
+            returnKeyType="send"
           />
         )}
       </Mutation>
@@ -71,7 +72,7 @@ class AddReplyScreen extends Component<Props, State> {
 
     return (
       <FormContainerScreen
-        analyticsContent={{ contentType: "AddReply", contentId: commentId }}
+        analyticsContent={{ contentId: commentId, contentType: "AddReply" }}
         navigation={navigation}
         title={labels.addYourReply}
       >
