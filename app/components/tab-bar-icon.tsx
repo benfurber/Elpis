@@ -18,14 +18,17 @@ const routeNameIcon = {
   Settings: "cog",
 };
 
-function TabBarIcon(props: Props) {
-  const { focused, routeName } = props;
+function NotificationBadge() {
   const { data } = useQuery(NOTIFICATIONS_UNREAD);
 
-  const name = routeNameIcon[routeName];
+  if (data) return <Badge left={20} number={data.me.unreadNotifications} />;
+  return null;
+}
 
-  const badge = number =>
-    routeName === "Notification" && <Badge left={20} number={number} />;
+function TabBarIcon(props: Props) {
+  const { focused, routeName } = props;
+
+  const name = routeNameIcon[routeName];
 
   return (
     <View>
@@ -35,7 +38,7 @@ function TabBarIcon(props: Props) {
         size={35}
         solid={focused}
       />
-      {data && badge(data.me.unreadNotifications)}
+      {routeName === "Notification" && <NotificationBadge />}
     </View>
   );
 }
