@@ -31,6 +31,8 @@ class LoginForm extends Component<Props, State> {
     };
   }
 
+  secondInput = TextInput as any;
+
   storeToken = async token => {
     try {
       await AsyncStorage.setItem("token", token);
@@ -93,9 +95,11 @@ class LoginForm extends Component<Props, State> {
               <View style={styles.row}>
                 <TextInput
                   autoCapitalize="none"
+                  autoFocus={true}
                   displayStyle={display}
                   keyboardType="email-address"
                   onChangeText={email => this.setState({ email })}
+                  onSubmitEditing={() => this.secondInput.focus()}
                   placeholder={labels.email}
                   returnKeyLabel={labels.next}
                   returnKeyType="next"
@@ -110,6 +114,7 @@ class LoginForm extends Component<Props, State> {
                   onSubmitEditing={() => this.onPress(login)}
                   placeholder={labels.password}
                   secureTextEntry
+                  forwardedRef={input => (this.secondInput = input)}
                   returnKeyLabel={labels.login}
                   returnKeyType="send"
                   textContentType="password"

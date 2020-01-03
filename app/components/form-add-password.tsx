@@ -34,6 +34,8 @@ class FormAddPassword extends Component<Props, State> {
     };
   }
 
+  secondInput = TextInput as any;
+
   onPress(mutation) {
     if (this.passwordChecks()) {
       this.setState({ display: "loading" });
@@ -121,11 +123,13 @@ class FormAddPassword extends Component<Props, State> {
 
             <View style={styles.row}>
               <TextInput
+                autoFocus={true}
                 displayStyle={display}
                 onChangeText={password => {
                   this.passwordStrength(password);
                   return this.setState({ password });
                 }}
+                onSubmitEditing={() => this.secondInput.focus()}
                 placeholder={labels.passwordSet}
                 returnKeyLabel={labels.next}
                 returnKeyType="next"
@@ -138,12 +142,13 @@ class FormAddPassword extends Component<Props, State> {
             <View style={styles.row}>
               <TextInput
                 displayStyle={display}
+                forwardedRef={input => (this.secondInput = input)}
                 onChangeText={passwordRepeat =>
                   this.setState({ passwordRepeat })
                 }
+                onSubmitEditing={() => this.onPress(updatePassword)}
                 placeholder={labels.passwordRepeat}
                 returnKeyLabel={labels.submit}
-                onSubmitEditing={() => this.onPress(updatePassword)}
                 returnKeyType="send"
                 secureTextEntry
                 textContentType="password"
