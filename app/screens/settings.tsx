@@ -31,13 +31,10 @@ class SettingsScreen extends Component<Props> {
       <BackgroundContainer>
         <Title style={styles.title} text={labels.settings.title} />
         <View>
-          <TouchableOpacity
-            style={styles.item}
-            onPress={() => this.onPress()}
-          >
+          <TouchableOpacity style={styles.item} onPress={() => this.onPress()}>
             <View style={styles.row}>
               <Icon name={"sign-out-alt"} />
-              <Text style={styles.text}>labels.setting.logout</Text>
+              <Text style={styles.text}>{labels.settings.logout}</Text>
             </View>
           </TouchableOpacity>
         </View>
@@ -47,10 +44,6 @@ class SettingsScreen extends Component<Props> {
 }
 
 const styles = StyleSheet.create({
-  title: {
-    fontSize: typography.fontSizeXL,
-    margin: layout.spacingL,
-  },
   item: {
     backgroundColor: colours.whiteTransparent,
     marginBottom: layout.spacing,
@@ -61,8 +54,12 @@ const styles = StyleSheet.create({
     flexDirection: "row",
   },
   text: {
+    fontSize: typography.fontSizeS,
     paddingLeft: 10,
-    fontSize: typography.fontSizeS
+  },
+  title: {
+    fontSize: typography.fontSizeXL,
+    margin: layout.spacingL,
   },
 });
 

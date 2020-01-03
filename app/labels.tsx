@@ -84,8 +84,8 @@ const labels = {
   reply: "Resposta",
   select: "Selecionar",
   settings: {
+    logout: "Sair",
     title: "Configurações",
-    logout: "Log Out",
   },
   submit: "Postar",
   title: "Título",

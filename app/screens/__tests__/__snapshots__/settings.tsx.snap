@@ -42,7 +42,7 @@ exports[`SettingsScreen renders correctly 1`] = `
             }
           }
         >
-          Logout
+          Sair
         </Text>
       </View>
     </TouchableOpacity>
