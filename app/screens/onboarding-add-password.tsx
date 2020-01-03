@@ -18,8 +18,8 @@ interface State {
 class OnboardingAddPasswordScreen extends Component<Props, State> {
   componentDidMount() {
     Analytics.trackContent({
-      contentType: "Onboarding",
       contentId: "onboarding-password",
+      contentType: "Onboarding",
     });
   }
 
@@ -30,10 +30,7 @@ class OnboardingAddPasswordScreen extends Component<Props, State> {
       <BackgroundModal>
         <View style={styles.content}>
           <Title text="3/4" small />
-          <Title 
-            style={styles.title}
-            text={labels.onboarding.password.title}
-          />
+          <Title style={styles.title} text={labels.onboarding.password.title} />
 
           <FormAddPassword
             navigation={navigation}

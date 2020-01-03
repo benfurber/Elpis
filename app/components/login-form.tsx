@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component, Fragment } from "react";
 import { StyleSheet, View } from "react-native";
 
 import { Mutation } from "react-apollo";
@@ -86,38 +86,46 @@ class LoginForm extends Component<Props, State> {
     return (
       <View style={styles.container}>
         {this.renderErrorMessage()}
-        <View style={styles.row}>
-          <TextInput
-            autoCapitalize="none"
-            displayStyle={display}
-            keyboardType="email-address"
-            onChangeText={email => this.setState({ email })}
-            placeholder={labels.email}
-            textContentType="emailAddress"
-            value={email}
-          />
-        </View>
-        <View style={styles.row}>
-          <TextInput
-            displayStyle={display}
-            onChangeText={password => this.setState({ password })}
-            placeholder={labels.password}
-            secureTextEntry
-            textContentType="password"
-            value={password}
-          />
-        </View>
-        <View style={styles.row}>
-          <Mutation mutation={LOGIN_USER}>
-            {login => (
-              <ButtonSubmit
-                display={display}
-                label={labels.login}
-                onPress={() => this.onPress(login)}
-              />
-            )}
-          </Mutation>
-        </View>
+
+        <Mutation mutation={LOGIN_USER}>
+          {login => (
+            <Fragment>
+              <View style={styles.row}>
+                <TextInput
+                  autoCapitalize="none"
+                  displayStyle={display}
+                  keyboardType="email-address"
+                  onChangeText={email => this.setState({ email })}
+                  placeholder={labels.email}
+                  returnKeyLabel={labels.next}
+                  returnKeyType="next"
+                  textContentType="emailAddress"
+                  value={email}
+                />
+              </View>
+              <View style={styles.row}>
+                <TextInput
+                  displayStyle={display}
+                  onChangeText={password => this.setState({ password })}
+                  onSubmitEditing={() => this.onPress(login)}
+                  placeholder={labels.password}
+                  secureTextEntry
+                  returnKeyLabel={labels.login}
+                  returnKeyType="send"
+                  textContentType="password"
+                  value={password}
+                />
+              </View>
+              <View style={styles.row}>
+                <ButtonSubmit
+                  display={display}
+                  label={labels.login}
+                  onPress={() => this.onPress(login)}
+                />
+              </View>
+            </Fragment>
+          )}
+        </Mutation>
       </View>
     );
   }
@@ -125,9 +133,9 @@ class LoginForm extends Component<Props, State> {
 
 const styles = StyleSheet.create({
   container: {
-    alignItems: "center",
+    alignItems: "flex-end",
     flexDirection: "column",
-    flex: 1,
+    padding: layout.spacingXL,
   },
   containerErrorMessage: {
     backgroundColor: colours.redTransparent,
@@ -136,9 +144,8 @@ const styles = StyleSheet.create({
     padding: layout.spacing,
   },
   row: {
-    alignItems: "center",
     flexDirection: "row",
-    margin: 10,
+    marginBottom: layout.spacingL,
   },
 });
 

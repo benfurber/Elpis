@@ -26,9 +26,9 @@ class AddTopicScreen extends Component<Props, State> {
   constructor(props) {
     super(props);
     this.state = {
+      contentInput: "",
       editable: true,
       titleInput: "",
-      contentInput: "",
     };
   }
   secondtitleInput = TextInput as any;
@@ -50,12 +50,12 @@ class AddTopicScreen extends Component<Props, State> {
 
     query({
       variables: {
-        title,
         content: contentInput,
         id,
+        title,
       },
     }).then(() => {
-      this.setState({ titleInput: "", editable: true });
+      this.setState({ editable: true, titleInput: "" });
       this.props.navigation.dismiss();
     });
   }
@@ -78,7 +78,8 @@ class AddTopicScreen extends Component<Props, State> {
           autoFocus={true}
           placeholder={labels.addPlaceholderTitle}
           value={titleInput}
-          returnKeyLabel={"Next"}
+          returnKeyLabel={labels.next}
+          returnKeyType="next"
           {...args}
         />
         <Text style={form.label}>{labels.body}</Text>
@@ -94,6 +95,7 @@ class AddTopicScreen extends Component<Props, State> {
           style={form.text}
           placeholder={labels.addPlaceholderBody}
           returnKeyLabel={labels.submit}
+          returnKeyType="send"
         />
       </View>
     );
@@ -107,8 +109,8 @@ class AddTopicScreen extends Component<Props, State> {
     return (
       <FormContainerScreen
         analyticsContent={{
-          contentType: "AddTopic",
           contentId: this.props.postId,
+          contentType: "AddTopic",
         }}
         navigation={this.props.navigation}
         title={labels.addNewTopic}

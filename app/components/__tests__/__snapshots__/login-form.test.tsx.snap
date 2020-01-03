@@ -4,189 +4,142 @@ exports[`LoginForm when active renders correctly 1`] = `
 <View
   style={
     Object {
-      "alignItems": "center",
-      "flex": 1,
+      "alignItems": "flex-end",
       "flexDirection": "column",
+      "padding": 40,
     }
   }
 >
-  <View
-    style={
+  <Mutation
+    mutation={
       Object {
-        "alignItems": "center",
-        "flexDirection": "row",
-        "margin": 10,
-      }
-    }
-  >
-    <NewTextInput
-      autoCapitalize="none"
-      displayStyle="active"
-      keyboardType="email-address"
-      onChangeText={[Function]}
-      placeholder="Email"
-      textContentType="emailAddress"
-      value=""
-    />
-  </View>
-  <View
-    style={
-      Object {
-        "alignItems": "center",
-        "flexDirection": "row",
-        "margin": 10,
-      }
-    }
-  >
-    <NewTextInput
-      displayStyle="active"
-      onChangeText={[Function]}
-      placeholder="Senha"
-      secureTextEntry={true}
-      textContentType="password"
-      value=""
-    />
-  </View>
-  <View
-    style={
-      Object {
-        "alignItems": "center",
-        "flexDirection": "row",
-        "margin": 10,
-      }
-    }
-  >
-    <Mutation
-      mutation={
-        Object {
-          "definitions": Array [
-            Object {
-              "directives": Array [],
-              "kind": "OperationDefinition",
-              "name": Object {
-                "kind": "Name",
-                "value": "Login",
-              },
-              "operation": "mutation",
-              "selectionSet": Object {
-                "kind": "SelectionSet",
-                "selections": Array [
-                  Object {
-                    "alias": undefined,
-                    "arguments": Array [
-                      Object {
-                        "kind": "Argument",
+        "definitions": Array [
+          Object {
+            "directives": Array [],
+            "kind": "OperationDefinition",
+            "name": Object {
+              "kind": "Name",
+              "value": "Login",
+            },
+            "operation": "mutation",
+            "selectionSet": Object {
+              "kind": "SelectionSet",
+              "selections": Array [
+                Object {
+                  "alias": undefined,
+                  "arguments": Array [
+                    Object {
+                      "kind": "Argument",
+                      "name": Object {
+                        "kind": "Name",
+                        "value": "email",
+                      },
+                      "value": Object {
+                        "kind": "Variable",
                         "name": Object {
                           "kind": "Name",
                           "value": "email",
                         },
-                        "value": Object {
-                          "kind": "Variable",
-                          "name": Object {
-                            "kind": "Name",
-                            "value": "email",
-                          },
-                        },
                       },
-                      Object {
-                        "kind": "Argument",
+                    },
+                    Object {
+                      "kind": "Argument",
+                      "name": Object {
+                        "kind": "Name",
+                        "value": "password",
+                      },
+                      "value": Object {
+                        "kind": "Variable",
                         "name": Object {
                           "kind": "Name",
                           "value": "password",
                         },
-                        "value": Object {
-                          "kind": "Variable",
-                          "name": Object {
-                            "kind": "Name",
-                            "value": "password",
-                          },
+                      },
+                    },
+                  ],
+                  "directives": Array [],
+                  "kind": "Field",
+                  "name": Object {
+                    "kind": "Name",
+                    "value": "login",
+                  },
+                  "selectionSet": Object {
+                    "kind": "SelectionSet",
+                    "selections": Array [
+                      Object {
+                        "alias": undefined,
+                        "arguments": Array [],
+                        "directives": Array [],
+                        "kind": "Field",
+                        "name": Object {
+                          "kind": "Name",
+                          "value": "token",
                         },
+                        "selectionSet": undefined,
                       },
                     ],
-                    "directives": Array [],
-                    "kind": "Field",
-                    "name": Object {
-                      "kind": "Name",
-                      "value": "login",
-                    },
-                    "selectionSet": Object {
-                      "kind": "SelectionSet",
-                      "selections": Array [
-                        Object {
-                          "alias": undefined,
-                          "arguments": Array [],
-                          "directives": Array [],
-                          "kind": "Field",
-                          "name": Object {
-                            "kind": "Name",
-                            "value": "token",
-                          },
-                          "selectionSet": undefined,
-                        },
-                      ],
-                    },
-                  },
-                ],
-              },
-              "variableDefinitions": Array [
-                Object {
-                  "defaultValue": undefined,
-                  "directives": Array [],
-                  "kind": "VariableDefinition",
-                  "type": Object {
-                    "kind": "NonNullType",
-                    "type": Object {
-                      "kind": "NamedType",
-                      "name": Object {
-                        "kind": "Name",
-                        "value": "String",
-                      },
-                    },
-                  },
-                  "variable": Object {
-                    "kind": "Variable",
-                    "name": Object {
-                      "kind": "Name",
-                      "value": "email",
-                    },
-                  },
-                },
-                Object {
-                  "defaultValue": undefined,
-                  "directives": Array [],
-                  "kind": "VariableDefinition",
-                  "type": Object {
-                    "kind": "NonNullType",
-                    "type": Object {
-                      "kind": "NamedType",
-                      "name": Object {
-                        "kind": "Name",
-                        "value": "String",
-                      },
-                    },
-                  },
-                  "variable": Object {
-                    "kind": "Variable",
-                    "name": Object {
-                      "kind": "Name",
-                      "value": "password",
-                    },
                   },
                 },
               ],
             },
-          ],
-          "kind": "Document",
-          "loc": Object {
-            "end": 127,
-            "start": 0,
+            "variableDefinitions": Array [
+              Object {
+                "defaultValue": undefined,
+                "directives": Array [],
+                "kind": "VariableDefinition",
+                "type": Object {
+                  "kind": "NonNullType",
+                  "type": Object {
+                    "kind": "NamedType",
+                    "name": Object {
+                      "kind": "Name",
+                      "value": "String",
+                    },
+                  },
+                },
+                "variable": Object {
+                  "kind": "Variable",
+                  "name": Object {
+                    "kind": "Name",
+                    "value": "email",
+                  },
+                },
+              },
+              Object {
+                "defaultValue": undefined,
+                "directives": Array [],
+                "kind": "VariableDefinition",
+                "type": Object {
+                  "kind": "NonNullType",
+                  "type": Object {
+                    "kind": "NamedType",
+                    "name": Object {
+                      "kind": "Name",
+                      "value": "String",
+                    },
+                  },
+                },
+                "variable": Object {
+                  "kind": "Variable",
+                  "name": Object {
+                    "kind": "Name",
+                    "value": "password",
+                  },
+                },
+              },
+            ],
           },
-        }
+        ],
+        "kind": "Document",
+        "loc": Object {
+          "end": 127,
+          "start": 0,
+        },
       }
-    >
-      <Component />
-    </Mutation>
-  </View>
+    }
+  >
+    <Component />
+  </Mutation>
 </View>
 `;
 
@@ -194,189 +147,142 @@ exports[`LoginForm when loading renders correctly 1`] = `
 <View
   style={
     Object {
-      "alignItems": "center",
-      "flex": 1,
+      "alignItems": "flex-end",
       "flexDirection": "column",
+      "padding": 40,
     }
   }
 >
-  <View
-    style={
+  <Mutation
+    mutation={
       Object {
-        "alignItems": "center",
-        "flexDirection": "row",
-        "margin": 10,
-      }
-    }
-  >
-    <NewTextInput
-      autoCapitalize="none"
-      displayStyle="loading"
-      keyboardType="email-address"
-      onChangeText={[Function]}
-      placeholder="Email"
-      textContentType="emailAddress"
-      value=""
-    />
-  </View>
-  <View
-    style={
-      Object {
-        "alignItems": "center",
-        "flexDirection": "row",
-        "margin": 10,
-      }
-    }
-  >
-    <NewTextInput
-      displayStyle="loading"
-      onChangeText={[Function]}
-      placeholder="Senha"
-      secureTextEntry={true}
-      textContentType="password"
-      value=""
-    />
-  </View>
-  <View
-    style={
-      Object {
-        "alignItems": "center",
-        "flexDirection": "row",
-        "margin": 10,
-      }
-    }
-  >
-    <Mutation
-      mutation={
-        Object {
-          "definitions": Array [
-            Object {
-              "directives": Array [],
-              "kind": "OperationDefinition",
-              "name": Object {
-                "kind": "Name",
-                "value": "Login",
-              },
-              "operation": "mutation",
-              "selectionSet": Object {
-                "kind": "SelectionSet",
-                "selections": Array [
-                  Object {
-                    "alias": undefined,
-                    "arguments": Array [
-                      Object {
-                        "kind": "Argument",
+        "definitions": Array [
+          Object {
+            "directives": Array [],
+            "kind": "OperationDefinition",
+            "name": Object {
+              "kind": "Name",
+              "value": "Login",
+            },
+            "operation": "mutation",
+            "selectionSet": Object {
+              "kind": "SelectionSet",
+              "selections": Array [
+                Object {
+                  "alias": undefined,
+                  "arguments": Array [
+                    Object {
+                      "kind": "Argument",
+                      "name": Object {
+                        "kind": "Name",
+                        "value": "email",
+                      },
+                      "value": Object {
+                        "kind": "Variable",
                         "name": Object {
                           "kind": "Name",
                           "value": "email",
                         },
-                        "value": Object {
-                          "kind": "Variable",
-                          "name": Object {
-                            "kind": "Name",
-                            "value": "email",
-                          },
-                        },
                       },
-                      Object {
-                        "kind": "Argument",
+                    },
+                    Object {
+                      "kind": "Argument",
+                      "name": Object {
+                        "kind": "Name",
+                        "value": "password",
+                      },
+                      "value": Object {
+                        "kind": "Variable",
                         "name": Object {
                           "kind": "Name",
                           "value": "password",
                         },
-                        "value": Object {
-                          "kind": "Variable",
-                          "name": Object {
-                            "kind": "Name",
-                            "value": "password",
-                          },
+                      },
+                    },
+                  ],
+                  "directives": Array [],
+                  "kind": "Field",
+                  "name": Object {
+                    "kind": "Name",
+                    "value": "login",
+                  },
+                  "selectionSet": Object {
+                    "kind": "SelectionSet",
+                    "selections": Array [
+                      Object {
+                        "alias": undefined,
+                        "arguments": Array [],
+                        "directives": Array [],
+                        "kind": "Field",
+                        "name": Object {
+                          "kind": "Name",
+                          "value": "token",
                         },
+                        "selectionSet": undefined,
                       },
                     ],
-                    "directives": Array [],
-                    "kind": "Field",
-                    "name": Object {
-                      "kind": "Name",
-                      "value": "login",
-                    },
-                    "selectionSet": Object {
-                      "kind": "SelectionSet",
-                      "selections": Array [
-                        Object {
-                          "alias": undefined,
-                          "arguments": Array [],
-                          "directives": Array [],
-                          "kind": "Field",
-                          "name": Object {
-                            "kind": "Name",
-                            "value": "token",
-                          },
-                          "selectionSet": undefined,
-                        },
-                      ],
-                    },
-                  },
-                ],
-              },
-              "variableDefinitions": Array [
-                Object {
-                  "defaultValue": undefined,
-                  "directives": Array [],
-                  "kind": "VariableDefinition",
-                  "type": Object {
-                    "kind": "NonNullType",
-                    "type": Object {
-                      "kind": "NamedType",
-                      "name": Object {
-                        "kind": "Name",
-                        "value": "String",
-                      },
-                    },
-                  },
-                  "variable": Object {
-                    "kind": "Variable",
-                    "name": Object {
-                      "kind": "Name",
-                      "value": "email",
-                    },
-                  },
-                },
-                Object {
-                  "defaultValue": undefined,
-                  "directives": Array [],
-                  "kind": "VariableDefinition",
-                  "type": Object {
-                    "kind": "NonNullType",
-                    "type": Object {
-                      "kind": "NamedType",
-                      "name": Object {
-                        "kind": "Name",
-                        "value": "String",
-                      },
-                    },
-                  },
-                  "variable": Object {
-                    "kind": "Variable",
-                    "name": Object {
-                      "kind": "Name",
-                      "value": "password",
-                    },
                   },
                 },
               ],
             },
-          ],
-          "kind": "Document",
-          "loc": Object {
-            "end": 127,
-            "start": 0,
+            "variableDefinitions": Array [
+              Object {
+                "defaultValue": undefined,
+                "directives": Array [],
+                "kind": "VariableDefinition",
+                "type": Object {
+                  "kind": "NonNullType",
+                  "type": Object {
+                    "kind": "NamedType",
+                    "name": Object {
+                      "kind": "Name",
+                      "value": "String",
+                    },
+                  },
+                },
+                "variable": Object {
+                  "kind": "Variable",
+                  "name": Object {
+                    "kind": "Name",
+                    "value": "email",
+                  },
+                },
+              },
+              Object {
+                "defaultValue": undefined,
+                "directives": Array [],
+                "kind": "VariableDefinition",
+                "type": Object {
+                  "kind": "NonNullType",
+                  "type": Object {
+                    "kind": "NamedType",
+                    "name": Object {
+                      "kind": "Name",
+                      "value": "String",
+                    },
+                  },
+                },
+                "variable": Object {
+                  "kind": "Variable",
+                  "name": Object {
+                    "kind": "Name",
+                    "value": "password",
+                  },
+                },
+              },
+            ],
           },
-        }
+        ],
+        "kind": "Document",
+        "loc": Object {
+          "end": 127,
+          "start": 0,
+        },
       }
-    >
-      <Component />
-    </Mutation>
-  </View>
+    }
+  >
+    <Component />
+  </Mutation>
 </View>
 `;
 
@@ -384,18 +290,17 @@ exports[`LoginForm when there's an error renders correctly 1`] = `
 <View
   style={
     Object {
-      "alignItems": "center",
-      "flex": 1,
+      "alignItems": "flex-end",
       "flexDirection": "column",
+      "padding": 40,
     }
   }
 >
   <View
     style={
       Object {
-        "alignItems": "center",
         "flexDirection": "row",
-        "margin": 10,
+        "marginBottom": 20,
       }
     }
   >
@@ -403,182 +308,135 @@ exports[`LoginForm when there's an error renders correctly 1`] = `
       error="PANIC! There's a problem!"
     />
   </View>
-  <View
-    style={
+  <Mutation
+    mutation={
       Object {
-        "alignItems": "center",
-        "flexDirection": "row",
-        "margin": 10,
-      }
-    }
-  >
-    <NewTextInput
-      autoCapitalize="none"
-      displayStyle="error"
-      keyboardType="email-address"
-      onChangeText={[Function]}
-      placeholder="Email"
-      textContentType="emailAddress"
-      value=""
-    />
-  </View>
-  <View
-    style={
-      Object {
-        "alignItems": "center",
-        "flexDirection": "row",
-        "margin": 10,
-      }
-    }
-  >
-    <NewTextInput
-      displayStyle="error"
-      onChangeText={[Function]}
-      placeholder="Senha"
-      secureTextEntry={true}
-      textContentType="password"
-      value=""
-    />
-  </View>
-  <View
-    style={
-      Object {
-        "alignItems": "center",
-        "flexDirection": "row",
-        "margin": 10,
-      }
-    }
-  >
-    <Mutation
-      mutation={
-        Object {
-          "definitions": Array [
-            Object {
-              "directives": Array [],
-              "kind": "OperationDefinition",
-              "name": Object {
-                "kind": "Name",
-                "value": "Login",
-              },
-              "operation": "mutation",
-              "selectionSet": Object {
-                "kind": "SelectionSet",
-                "selections": Array [
-                  Object {
-                    "alias": undefined,
-                    "arguments": Array [
-                      Object {
-                        "kind": "Argument",
+        "definitions": Array [
+          Object {
+            "directives": Array [],
+            "kind": "OperationDefinition",
+            "name": Object {
+              "kind": "Name",
+              "value": "Login",
+            },
+            "operation": "mutation",
+            "selectionSet": Object {
+              "kind": "SelectionSet",
+              "selections": Array [
+                Object {
+                  "alias": undefined,
+                  "arguments": Array [
+                    Object {
+                      "kind": "Argument",
+                      "name": Object {
+                        "kind": "Name",
+                        "value": "email",
+                      },
+                      "value": Object {
+                        "kind": "Variable",
                         "name": Object {
                           "kind": "Name",
                           "value": "email",
                         },
-                        "value": Object {
-                          "kind": "Variable",
-                          "name": Object {
-                            "kind": "Name",
-                            "value": "email",
-                          },
-                        },
                       },
-                      Object {
-                        "kind": "Argument",
+                    },
+                    Object {
+                      "kind": "Argument",
+                      "name": Object {
+                        "kind": "Name",
+                        "value": "password",
+                      },
+                      "value": Object {
+                        "kind": "Variable",
                         "name": Object {
                           "kind": "Name",
                           "value": "password",
                         },
-                        "value": Object {
-                          "kind": "Variable",
-                          "name": Object {
-                            "kind": "Name",
-                            "value": "password",
-                          },
+                      },
+                    },
+                  ],
+                  "directives": Array [],
+                  "kind": "Field",
+                  "name": Object {
+                    "kind": "Name",
+                    "value": "login",
+                  },
+                  "selectionSet": Object {
+                    "kind": "SelectionSet",
+                    "selections": Array [
+                      Object {
+                        "alias": undefined,
+                        "arguments": Array [],
+                        "directives": Array [],
+                        "kind": "Field",
+                        "name": Object {
+                          "kind": "Name",
+                          "value": "token",
                         },
+                        "selectionSet": undefined,
                       },
                     ],
-                    "directives": Array [],
-                    "kind": "Field",
-                    "name": Object {
-                      "kind": "Name",
-                      "value": "login",
-                    },
-                    "selectionSet": Object {
-                      "kind": "SelectionSet",
-                      "selections": Array [
-                        Object {
-                          "alias": undefined,
-                          "arguments": Array [],
-                          "directives": Array [],
-                          "kind": "Field",
-                          "name": Object {
-                            "kind": "Name",
-                            "value": "token",
-                          },
-                          "selectionSet": undefined,
-                        },
-                      ],
-                    },
-                  },
-                ],
-              },
-              "variableDefinitions": Array [
-                Object {
-                  "defaultValue": undefined,
-                  "directives": Array [],
-                  "kind": "VariableDefinition",
-                  "type": Object {
-                    "kind": "NonNullType",
-                    "type": Object {
-                      "kind": "NamedType",
-                      "name": Object {
-                        "kind": "Name",
-                        "value": "String",
-                      },
-                    },
-                  },
-                  "variable": Object {
-                    "kind": "Variable",
-                    "name": Object {
-                      "kind": "Name",
-                      "value": "email",
-                    },
-                  },
-                },
-                Object {
-                  "defaultValue": undefined,
-                  "directives": Array [],
-                  "kind": "VariableDefinition",
-                  "type": Object {
-                    "kind": "NonNullType",
-                    "type": Object {
-                      "kind": "NamedType",
-                      "name": Object {
-                        "kind": "Name",
-                        "value": "String",
-                      },
-                    },
-                  },
-                  "variable": Object {
-                    "kind": "Variable",
-                    "name": Object {
-                      "kind": "Name",
-                      "value": "password",
-                    },
                   },
                 },
               ],
             },
-          ],
-          "kind": "Document",
-          "loc": Object {
-            "end": 127,
-            "start": 0,
+            "variableDefinitions": Array [
+              Object {
+                "defaultValue": undefined,
+                "directives": Array [],
+                "kind": "VariableDefinition",
+                "type": Object {
+                  "kind": "NonNullType",
+                  "type": Object {
+                    "kind": "NamedType",
+                    "name": Object {
+                      "kind": "Name",
+                      "value": "String",
+                    },
+                  },
+                },
+                "variable": Object {
+                  "kind": "Variable",
+                  "name": Object {
+                    "kind": "Name",
+                    "value": "email",
+                  },
+                },
+              },
+              Object {
+                "defaultValue": undefined,
+                "directives": Array [],
+                "kind": "VariableDefinition",
+                "type": Object {
+                  "kind": "NonNullType",
+                  "type": Object {
+                    "kind": "NamedType",
+                    "name": Object {
+                      "kind": "Name",
+                      "value": "String",
+                    },
+                  },
+                },
+                "variable": Object {
+                  "kind": "Variable",
+                  "name": Object {
+                    "kind": "Name",
+                    "value": "password",
+                  },
+                },
+              },
+            ],
           },
-        }
+        ],
+        "kind": "Document",
+        "loc": Object {
+          "end": 127,
+          "start": 0,
+        },
       }
-    >
-      <Component />
-    </Mutation>
-  </View>
+    }
+  >
+    <Component />
+  </Mutation>
 </View>
 `;
