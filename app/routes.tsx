@@ -112,10 +112,6 @@ const OnboardingSwitch = createStackNavigator(
   },
 );
 
-const SettingsSwitch = createStackNavigator({
-  Logout: LogoutScreen,
-});
-
 const RootStack = createSwitchNavigator({
   AuthLoading: AuthLoadingScreen,
   Welcome: WelcomeScreen,
@@ -124,7 +120,7 @@ const RootStack = createSwitchNavigator({
     screen: mainTabs,
     path: "",
   },
-  Settings: SettingsSwitch,
+  Settings: SettingsScreen,
 });
 
 export { RootStack };
