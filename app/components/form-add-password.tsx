@@ -114,46 +114,53 @@ class FormAddPassword extends Component<Props, State> {
     } = this.state;
 
     return (
-      <View>
-        <MessageBox display={displayMessage} message={message} />
+      <Mutation mutation={UPDATE_USER_PASSWORD}>
+        {(updatePassword, {}) => (
+          <View>
+            <MessageBox display={displayMessage} message={message} />
 
-        <View style={styles.row}>
-          <TextInput
-            displayStyle={display}
-            onChangeText={password => {
-              this.passwordStrength(password);
-              return this.setState({ password });
-            }}
-            placeholder={labels.passwordSet}
-            secureTextEntry
-            textContentType="password"
-            value={password}
-          />
-        </View>
+            <View style={styles.row}>
+              <TextInput
+                displayStyle={display}
+                onChangeText={password => {
+                  this.passwordStrength(password);
+                  return this.setState({ password });
+                }}
+                placeholder={labels.passwordSet}
+                returnKeyLabel={labels.next}
+                returnKeyType="next"
+                secureTextEntry
+                textContentType="password"
+                value={password}
+              />
+            </View>
 
-        <View style={styles.row}>
-          <TextInput
-            displayStyle={display}
-            onChangeText={passwordRepeat => this.setState({ passwordRepeat })}
-            placeholder={labels.passwordRepeat}
-            secureTextEntry
-            textContentType="password"
-            value={passwordRepeat}
-          />
-        </View>
+            <View style={styles.row}>
+              <TextInput
+                displayStyle={display}
+                onChangeText={passwordRepeat =>
+                  this.setState({ passwordRepeat })
+                }
+                placeholder={labels.passwordRepeat}
+                returnKeyLabel={labels.submit}
+                onSubmitEditing={() => this.onPress(updatePassword)}
+                returnKeyType="send"
+                secureTextEntry
+                textContentType="password"
+                value={passwordRepeat}
+              />
+            </View>
 
-        <View style={styles.row}>
-          <Mutation mutation={UPDATE_USER_PASSWORD}>
-            {(updatePassword, {}) => (
+            <View style={styles.row}>
               <ButtonSubmit
                 display={display}
                 label={labels.formButton}
                 onPress={() => this.onPress(updatePassword)}
               />
-            )}
-          </Mutation>
-        </View>
-      </View>
+            </View>
+          </View>
+        )}
+      </Mutation>
     );
   }
 }
