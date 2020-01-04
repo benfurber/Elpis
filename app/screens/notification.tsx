@@ -11,7 +11,7 @@ interface Props {
   navigation: NavigationType;
 }
 
-class NotificationsScreen extends Component<Props> {
+class NotificationScreen extends Component<Props> {
   componentDidMount() {
     Analytics.track("Notifications");
   }
@@ -33,4 +33,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export { NotificationsScreen };
+export { NotificationScreen };
