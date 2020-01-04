@@ -4,7 +4,7 @@
 import React from "react";
 import { createBottomTabNavigator } from "react-navigation-tabs";
 
-import { TabBarIcon } from "components";
+import { IconTabBar } from "components";
 import {
   FeedbackScreen as Feedback,
   SettingsScreen as Settings,
@@ -19,7 +19,7 @@ const options = {
   defaultNavigationOptions: ({ navigation }) => ({
     tabBarIcon: ({ focused }: { focused: boolean }) => {
       return (
-        <TabBarIcon routeName={navigation.state.routeName} focused={focused} />
+        <IconTabBar routeName={navigation.state.routeName} focused={focused} />
       );
     },
   }),

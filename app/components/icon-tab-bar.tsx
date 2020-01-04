@@ -25,7 +25,7 @@ function NotificationBadge() {
   return null;
 }
 
-function TabBarIcon(props: Props) {
+function IconTabBar(props: Props) {
   const { focused, routeName } = props;
 
   const name = routeNameIcon[routeName];
@@ -43,4 +43,4 @@ function TabBarIcon(props: Props) {
   );
 }
 
-export { TabBarIcon };
+export { IconTabBar };
