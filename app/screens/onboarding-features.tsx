@@ -18,8 +18,8 @@ interface State {
 class OnboardingFeaturesScreen extends Component<Props, State> {
   componentDidMount() {
     Analytics.trackContent({
-      contentType: "Onboarding",
       contentId: "onboarding-welcome",
+      contentType: "Onboarding",
     });
   }
 
@@ -34,20 +34,20 @@ class OnboardingFeaturesScreen extends Component<Props, State> {
       <BackgroundModal>
         <View style={styles.content}>
           <Title text={"2/4"} small />
-          <Title
-            style={styles.title}
-            text={features.title}
-          />
+          <Title style={styles.title} text={features.title} />
 
           <View style={styles.row}>
-            <Icon colour={iconColour} name="newspaper" size={iconSize} />
+            <Icon colour={iconColour} name="home" size={iconSize} />
             <Title style={styles.subtitle} text={features.theFeedTitle} />
           </View>
           <Text style={styles.text}>{features.theFeedBody}</Text>
 
           <View style={styles.row}>
             <Icon colour={iconColour} name="comments" size={iconSize} />
-            <Title style={styles.subtitle} text={features.joinDiscussionTitle} />
+            <Title
+              style={styles.subtitle}
+              text={features.joinDiscussionTitle}
+            />
           </View>
           <Text style={styles.text}>{features.joinDiscussionBody}</Text>
           <Text style={styles.text}>
@@ -60,9 +60,9 @@ class OnboardingFeaturesScreen extends Component<Props, State> {
           </Text>
 
           <View style={styles.row}>
-            <Icon 
+            <Icon
               colour={iconColour}
-              name="file-alt"
+              name="file-signature"
               size={iconSize}
               style={styles.feedbackIcon}
             />
@@ -97,8 +97,8 @@ const styles = StyleSheet.create({
   row: {
     alignItems: "center",
     flexDirection: "row",
-    marginTop: layout.spacing,
     marginBottom: layout.spacingL,
+    marginTop: layout.spacing,
   },
   rowButton: {
     alignItems: "baseline",
@@ -107,8 +107,8 @@ const styles = StyleSheet.create({
   subtitle: {
     fontStyle: "italic",
     fontWeight: "normal",
-    paddingLeft: layout.spacing,
     marginBottom: 0,
+    paddingLeft: layout.spacing,
   },
   text: {
     paddingBottom: layout.spacingL,

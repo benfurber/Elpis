@@ -35,7 +35,7 @@ exports[`OnboardingFeaturesScreen renders correctly 1`] = `
     >
       <customIcon
         colour="rgb(45, 82, 113)"
-        name="newspaper"
+        name="home"
         size={30}
       />
       <Title
@@ -147,7 +147,7 @@ exports[`OnboardingFeaturesScreen renders correctly 1`] = `
     >
       <customIcon
         colour="rgb(45, 82, 113)"
-        name="file-alt"
+        name="file-signature"
         size={30}
         style={
           Object {
