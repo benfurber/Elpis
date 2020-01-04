@@ -28,6 +28,7 @@ describe("Comments", () => {
           content={"A simple string"}
           navigation={navigation}
           postId={"0"}
+          setCommentId={() => jest.fn()}
         />,
       );
 
@@ -43,6 +44,7 @@ describe("Comments", () => {
           content={"A simple string"}
           navigation={navigation}
           postId={"0"}
+          setCommentId={() => jest.fn()}
         />,
       );
 

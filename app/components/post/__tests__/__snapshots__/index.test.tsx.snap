@@ -39,6 +39,7 @@ exports[`Post when comments are set to display renders correctly 1`] = `
     }
     content={null}
     postId="10387-314fs-12asdbj"
+    setCommentId={[Function]}
   />
 </View>
 `;

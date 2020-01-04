@@ -13,11 +13,12 @@ import { Header } from "./header";
 import { Replies } from "./replies";
 
 interface Props {
+  commentId?: Comment["id"];
   comments: Post["comments"];
   content: Post["content"];
   navigation: NavigationType;
   postId: Post["id"];
-  commentId?: Comment["id"];
+  setCommentId: (string) => void;
 }
 
 interface State {
@@ -34,15 +35,14 @@ class Comments extends Component<Props, State> {
 
   componentDidMount() {
     Analytics.trackContent({
-      contentType: "Comments",
       contentId: this.props.postId,
+      contentType: "Comments",
     });
   }
 
   setDisplay(commentId: string | null) {
-    this.setState({
-      commentId,
-    });
+    this.setState({ commentId });
+    this.props.setCommentId(commentId);
   }
 
   header() {

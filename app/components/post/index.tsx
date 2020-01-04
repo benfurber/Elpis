@@ -21,6 +21,7 @@ interface Props {
 }
 
 interface State {
+  commentId: string | undefined;
   display: string;
 }
 
@@ -29,6 +30,7 @@ class Post extends Component<Props, State> {
     super(props);
 
     this.state = {
+      commentId: props.commentId || undefined,
       display: "body",
     };
   }
@@ -82,8 +84,10 @@ class Post extends Component<Props, State> {
   }
 
   renderComments() {
-    const { commentId, post } = this.props;
+    const { post } = this.props;
     const { comments, content, id } = post;
+
+    const { commentId } = this.state;
 
     return (
       <Comments
@@ -92,6 +96,7 @@ class Post extends Component<Props, State> {
         navigation={this.props.navigation}
         postId={id}
         commentId={commentId}
+        setCommentId={commentId => this.setState({ commentId })}
       />
     );
   }
