@@ -13,7 +13,7 @@ interface Props {
 
 const routeNameIcon = {
   Feed: "home",
-  Feedback: "file-alt",
+  Feedback: "file-signature",
   Notification: "bell",
   Settings: "cog",
 };
