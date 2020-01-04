@@ -1,0 +1,91 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`IconTabBar Feed renders correctly when focused 1`] = `
+<View>
+  <customIcon
+    colour="rgb(51, 51, 51)"
+    name="home"
+    size={30}
+    solid={true}
+  />
+</View>
+`;
+
+exports[`IconTabBar Feed renders correctly when not focused 1`] = `
+<View>
+  <customIcon
+    colour="rgba(51,51,51,0.80)"
+    name="home"
+    size={30}
+    solid={true}
+  />
+</View>
+`;
+
+exports[`IconTabBar Feedback renders correctly when focused 1`] = `
+<View>
+  <customIcon
+    colour="rgb(51, 51, 51)"
+    name="file-signature"
+    size={30}
+    solid={true}
+  />
+</View>
+`;
+
+exports[`IconTabBar Feedback renders correctly when not focused 1`] = `
+<View>
+  <customIcon
+    colour="rgba(51,51,51,0.80)"
+    name="file-signature"
+    size={30}
+    solid={true}
+  />
+</View>
+`;
+
+exports[`IconTabBar Notification renders correctly when focused 1`] = `
+<View>
+  <customIcon
+    colour="rgb(51, 51, 51)"
+    name="bell"
+    size={30}
+    solid={true}
+  />
+  <NotificationBadge />
+</View>
+`;
+
+exports[`IconTabBar Notification renders correctly when not focused 1`] = `
+<View>
+  <customIcon
+    colour="rgba(51,51,51,0.80)"
+    name="bell"
+    size={30}
+    solid={true}
+  />
+  <NotificationBadge />
+</View>
+`;
+
+exports[`IconTabBar Settings renders correctly when focused 1`] = `
+<View>
+  <customIcon
+    colour="rgb(51, 51, 51)"
+    name="cog"
+    size={30}
+    solid={true}
+  />
+</View>
+`;
+
+exports[`IconTabBar Settings renders correctly when not focused 1`] = `
+<View>
+  <customIcon
+    colour="rgba(51,51,51,0.80)"
+    name="cog"
+    size={30}
+    solid={true}
+  />
+</View>
+`;

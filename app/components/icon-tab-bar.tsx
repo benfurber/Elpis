@@ -12,8 +12,8 @@ interface Props {
 }
 
 const routeNameIcon = {
-  Feed: "newspaper",
-  Feedback: "file-alt",
+  Feed: "home",
+  Feedback: "file-signature",
   Notification: "bell",
   Settings: "cog",
 };
@@ -25,7 +25,7 @@ function NotificationBadge() {
   return null;
 }
 
-function TabBarIcon(props: Props) {
+function IconTabBar(props: Props) {
   const { focused, routeName } = props;
 
   const name = routeNameIcon[routeName];
@@ -35,12 +35,12 @@ function TabBarIcon(props: Props) {
       <Icon
         colour={focused ? colours.darkGrey : colours.mediumGrey}
         name={name}
-        size={35}
-        solid={focused}
+        size={30}
+        solid={true}
       />
       {routeName === "Notification" && <NotificationBadge />}
     </View>
   );
 }
 
-export { TabBarIcon };
+export { IconTabBar };
