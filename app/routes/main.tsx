@@ -32,9 +32,9 @@ const options = {
 
 const screens = {
   Feed,
-  Notification,
   Feedback,
   Settings,
+  Notification,
 };
 
 const screen = createBottomTabNavigator(screens, options);
