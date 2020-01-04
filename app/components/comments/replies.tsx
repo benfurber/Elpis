@@ -50,7 +50,7 @@ class Replies extends Component<Props> {
     return (
       <View>
         <TouchableOpacity onPress={() => this.props.onPress()}>
-          <Text style={styles.link}>&#60; {labels.backToTopics}</Text>
+          <Text style={styles.link}>&#60; {labels.back.toTopics}</Text>
         </TouchableOpacity>
       </View>
     );

@@ -22,7 +22,7 @@ exports[`PostScreen when no post provided renders correctly 1`] = `
       }
     />
     <Text>
-      Voltar
+      Voltar às notificações
     </Text>
   </TouchableOpacity>
   <NewQuery
@@ -323,7 +323,7 @@ exports[`PostScreen when post provided renders correctly 1`] = `
       }
     />
     <Text>
-      Voltar
+      Voltar ao feed
     </Text>
   </TouchableOpacity>
   <Post

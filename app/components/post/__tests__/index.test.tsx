@@ -15,8 +15,8 @@ describe("Post", () => {
       const post = {
         author,
         comments: [],
-        createdAt: new Date("2000-01-01"),
         content: null,
+        createdAt: new Date("2000-01-01"),
         id: "10387-314fs-12asdbj",
         imagePath: require("assets/images/image_post_1.jpg"),
       };
@@ -32,8 +32,8 @@ describe("Post", () => {
       const post = {
         author,
         comments: [],
-        createdAt: new Date("2000-01-01"),
         content: null,
+        createdAt: new Date("2000-01-01"),
         id: "10387-314fs-12asdbj",
         imagePath: require("assets/images/image_post_1.jpg"),
       };

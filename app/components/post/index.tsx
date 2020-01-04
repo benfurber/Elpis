@@ -3,6 +3,7 @@ import { StyleSheet, View } from "react-native";
 
 import { Comments } from "components";
 import { NavigationType, Post as PostInterface } from "interfaces";
+import { labels } from "labels";
 import { layout } from "styles";
 import { calculateTotalComments } from "utils";
 
@@ -60,6 +61,7 @@ class Post extends Component<Props, State> {
     }
 
     return navigation.navigate("Post", {
+      backToText: labels.back.toFeed,
       post,
       setDisplay,
     });

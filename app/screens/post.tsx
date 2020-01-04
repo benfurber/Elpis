@@ -9,6 +9,7 @@ import { POST } from "queries";
 import { layout } from "styles";
 
 interface Props {
+  backToText?: string;
   navigation: NavigationType;
   id?: string;
   commentId?: string;
@@ -55,13 +56,15 @@ class PostScreen extends Component<Props> {
   }
 
   render() {
-    const { navigation, post } = this.props;
+    const { backToText, navigation, post } = this.props;
+
+    const backText = backToText ? backToText : labels.back.back;
 
     return (
       <BackgroundContainer>
         <TouchableOpacity style={styles.back} onPress={() => navigation.pop()}>
           <Icon name="angle-double-left" style={styles.icon} />
-          <Text>{labels.back}</Text>
+          <Text>{backText}</Text>
         </TouchableOpacity>
 
         {post ? this.post() : this.fetchPost()}
@@ -72,9 +75,9 @@ class PostScreen extends Component<Props> {
 
 const styles = StyleSheet.create({
   back: {
+    flexDirection: "row",
     paddingBottom: layout.spacing,
     paddingHorizontal: layout.spacingL,
-    flexDirection: "row",
   },
   fullHeight: {
     flex: 1,

@@ -3,6 +3,7 @@ import { StyleSheet, TouchableOpacity, View } from "react-native";
 import { useMutation } from "@apollo/react-hooks";
 
 import { NavigationType, Notification as NotificationType } from "interfaces";
+import { labels } from "labels";
 import { AGE_NOTIFICATION } from "mutations";
 import { colours, layout } from "styles";
 
@@ -21,8 +22,9 @@ function Notification(props: Props) {
     const { post, reply } = content;
 
     const params = {
-      id: post.id,
+      backToText: labels.back.toNotifications,
       commentId: reply && reply.comment.id,
+      id: post.id,
       setDisplay: reply ? "comments" : "body",
     };
 

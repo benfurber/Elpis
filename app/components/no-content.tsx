@@ -21,7 +21,7 @@ class NoContent extends Component<Props> {
       <BackgroundContainer>
         <TouchableOpacity style={styles.back} onPress={() => goBack()}>
           <Icon name="angle-double-left" style={styles.icon} />
-          <Text>{labels.back}</Text>
+          <Text>{labels.back.back}</Text>
         </TouchableOpacity>
 
         <ErrorMessage error={{ message }} />
@@ -32,9 +32,9 @@ class NoContent extends Component<Props> {
 
 const styles = StyleSheet.create({
   back: {
-    paddingTop: layout.spacingL,
-    paddingHorizontal: layout.spacingL,
     flexDirection: "row",
+    paddingHorizontal: layout.spacingL,
+    paddingTop: layout.spacingL,
   },
   icon: {
     paddingRight: layout.spacingS,
