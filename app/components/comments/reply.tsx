@@ -24,7 +24,7 @@ class Reply extends Component<Props> {
             <Text style={elements.textDate}>{formatDate(item.createdAt)}</Text>
           </View>
         </View>
-        <View>
+        <View style={styles.textContainer}>
           <Text style={styles.body}>{item.content}</Text>
         </View>
       </View>
@@ -48,6 +48,9 @@ const styles = StyleSheet.create({
     alignItems: "center",
     flexDirection: "row",
     paddingVertical: layout.spacing,
+  },
+  textContainer: {
+    paddingBottom: layout.spacingL,
   },
 });
 

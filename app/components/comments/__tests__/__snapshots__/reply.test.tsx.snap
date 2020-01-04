@@ -50,7 +50,13 @@ exports[`Comments<Reply> renders correctly 1`] = `
       </Text>
     </View>
   </View>
-  <View>
+  <View
+    style={
+      Object {
+        "paddingBottom": 20,
+      }
+    }
+  >
     <Text
       style={
         Object {

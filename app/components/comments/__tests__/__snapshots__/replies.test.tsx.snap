@@ -29,7 +29,8 @@ exports[`Comments<Replies> when there are no replies renders correctly 1`] = `
       Object {
         "backgroundColor": "rgba(198, 213, 225, 0.75)",
         "marginBottom": 20,
-        "padding": 10,
+        "paddingHorizontal": 10,
+        "paddingVertical": 20,
       }
     }
   >
@@ -113,7 +114,8 @@ exports[`Comments<Replies> when there are replies renders correctly 1`] = `
       Object {
         "backgroundColor": "rgba(198, 213, 225, 0.75)",
         "marginBottom": 20,
-        "padding": 10,
+        "paddingHorizontal": 10,
+        "paddingVertical": 20,
       }
     }
   >

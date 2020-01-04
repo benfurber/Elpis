@@ -112,7 +112,8 @@ const styles = StyleSheet.create({
   featured: {
     backgroundColor: colours.transparentBlue,
     marginBottom: layout.spacingL,
-    padding: layout.spacing,
+    paddingHorizontal: layout.spacing,
+    paddingVertical: layout.spacingL,
   },
   featuredAuthorDetails: {
     paddingLeft: layout.spacing,

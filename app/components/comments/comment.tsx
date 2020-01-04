@@ -49,24 +49,24 @@ const styles = StyleSheet.create({
   avatarContainer: {
     width: 60,
   },
+  commentBodyContainer: {
+    flex: 1,
+    marginBottom: layout.spacing,
+    marginLeft: layout.spacing,
+  },
   commentContainer: {
     alignItems: "stretch",
     flex: 1,
     flexDirection: "row",
     margin: layout.spacing,
   },
-  commentBodyContainer: {
-    flex: 1,
-    marginLeft: layout.spacing,
-    marginBottom: layout.spacing,
-  },
   commentDate: {
     marginBottom: layout.spacing,
     ...elements.textDate,
   },
   iconContainer: {
-    flexDirection: "row",
     alignItems: "center",
+    flexDirection: "row",
     marginBottom: layout.spacing,
     marginRight: layout.spacingXS,
   },
