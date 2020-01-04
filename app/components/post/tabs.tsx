@@ -1,12 +1,9 @@
 import React from "react";
-import { StyleSheet, TouchableOpacity, View } from "react-native";
+import { StyleSheet, View } from "react-native";
 
-import { colours, layout } from "styles";
-import { Badge, Icon } from "components";
+import { colours } from "styles";
 
 import { Tab } from "./tab";
-
-const iconSize = 30;
 
 interface Props {
   onPressComments: () => void;
@@ -18,15 +15,10 @@ interface Props {
 const Tabs = (props: Props) => {
   const { display } = props;
 
-  const tabBackground = tab => (tab === display ? styles.tabSelected : null);
-
-  const iconColour = tab =>
-    tab !== display ? colours.navyBlueDarkTransparentHigh : null;
-
   return (
     <View style={styles.tabs}>
       <Tab
-        name="image"
+        name="elementor"
         onPress={props.onPressPost}
         selected={"body" === display}
         number={null}
@@ -50,17 +42,24 @@ const tabs = {
 };
 
 const styles = StyleSheet.create({
+  borderRight: {
+    backgroundColor: "transparent",
+    borderBottomColor: colours.whiteTransparent,
+    borderBottomWidth: 46,
+    borderRightColor: "transparent",
+    borderRightWidth: 10,
+    borderStyle: "solid",
+  },
   iconCentre: {
     alignSelf: "center",
   },
   iconRight: {
     alignSelf: "flex-end",
   },
-  tabs: {
-    alignContent: "center",
-    alignItems: "center",
+  shiftContainer: {
+    flex: 1,
     flexDirection: "row",
-    width: "100%",
+    left: -5,
   },
   tabSelected: {
     backgroundColor: colours.whiteTransparent,
@@ -72,18 +71,11 @@ const styles = StyleSheet.create({
   tabWithoutBackground: {
     ...tabs,
   },
-  borderRight: {
-    backgroundColor: "transparent",
-    borderStyle: "solid",
-    borderRightWidth: 10,
-    borderBottomWidth: 46,
-    borderRightColor: "transparent",
-    borderBottomColor: colours.whiteTransparent,
-  },
-  shiftContainer: {
-    left: -5,
+  tabs: {
+    alignContent: "center",
+    alignItems: "center",
     flexDirection: "row",
-    flex: 1,
+    width: "100%",
   },
 });
 

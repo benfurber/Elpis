@@ -13,7 +13,7 @@ exports[`Post<Tabs> renders correctly when displaying the body 1`] = `
 >
   <Tab
     first={true}
-    name="image"
+    name="elementor"
     number={null}
     onPress={[MockFunction]}
     selected={true}
@@ -49,7 +49,7 @@ exports[`Post<Tabs> renders correctly when displaying the comments 1`] = `
 >
   <Tab
     first={true}
-    name="image"
+    name="elementor"
     number={null}
     onPress={[MockFunction]}
     selected={false}
@@ -85,7 +85,7 @@ exports[`Post<Tabs> renders correctly when there are comments 1`] = `
 >
   <Tab
     first={true}
-    name="image"
+    name="elementor"
     number={null}
     onPress={[MockFunction]}
     selected={false}

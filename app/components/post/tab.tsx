@@ -32,29 +32,29 @@ const Tab = (props: Props) => {
       ...tabs,
       backgroundColor,
     },
-    borderRight: {
-      backgroundColor: "transparent",
-      borderStyle: "solid",
-      borderRightWidth: 10,
-      borderBottomWidth: 46,
-      borderRightColor: "transparent",
-      borderBottomColor: backgroundColor,
-    },
     borderLeft: {
       backgroundColor: "transparent",
-      borderStyle: "solid",
-      borderLeftWidth: 10,
-      borderTopWidth: 46,
       borderLeftColor: "transparent",
+      borderLeftWidth: 10,
+      borderStyle: "solid",
       borderTopColor: backgroundColor,
+      borderTopWidth: 46,
+    },
+    borderRight: {
+      backgroundColor: "transparent",
+      borderBottomColor: backgroundColor,
+      borderBottomWidth: 46,
+      borderRightColor: "transparent",
+      borderRightWidth: 10,
+      borderStyle: "solid",
     },
     iconCentre: {
       alignSelf: "center",
     },
     shiftContainer: {
-      left: first ? 0 : -5,
-      flexDirection: "row",
       flex: 1,
+      flexDirection: "row",
+      left: first ? 0 : -5,
     },
   });
 
