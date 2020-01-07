@@ -11,15 +11,68 @@ exports[`Post<Content> renders correctly 1`] = `
     }
   }
 >
-  <Text
+  <View
     style={
       Object {
         "marginVertical": 10,
       }
     }
   >
-    A string
+    <DisplayContent
+      content="A string"
+    />
+  </View>
+  <Text
+    style={
+      Array [
+        Object {
+          "color": "rgb(51, 51, 51)",
+          "fontStyle": "italic",
+        },
+        Object {
+          "marginVertical": 10,
+        },
+      ]
+    }
+  >
+    Há um dia
   </Text>
+</View>
+`;
+
+exports[`Post<Content> with markdown renders correctly 1`] = `
+<View
+  style={
+    Object {
+      "backgroundColor": "rgba(255, 255, 255, 0.85)",
+      "borderTopRightRadius": 5,
+      "padding": 10,
+      "width": "100%",
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "marginVertical": 10,
+      }
+    }
+  >
+    <DisplayContent
+      content="# h1 Heading 8-
+
+      | Option | Description |
+
+      | ------ | ----------- |
+
+      | data   | path to data files to supply the data that will be passed into templates. |
+
+      | engine | engine to be used for processing templates. Handlebars is the default. |
+
+      | ext    | extension to be used for dest files. |
+"
+    />
+  </View>
   <Text
     style={
       Array [

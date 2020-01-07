@@ -2,6 +2,7 @@ import React from "react";
 import { StyleSheet, Text, View } from "react-native";
 import FlexImage from "react-native-flex-image";
 
+import { DisplayContent } from "components";
 import { Post } from "interfaces";
 import { colours, elements, layout } from "styles";
 import { formatDate, validURL } from "utils";
@@ -15,7 +16,11 @@ interface Props {
 const Content = (props: Props) => {
   const renderText = () => {
     if (props.content) {
-      return <Text style={styles.text}>{props.content}</Text>;
+      return (
+        <View style={styles.text}>
+          <DisplayContent content={props.content} />
+        </View>
+      );
     }
   };
 
@@ -53,12 +58,12 @@ const styles = StyleSheet.create({
     padding: layout.spacing,
     width: "100%",
   },
-  text: {
-    marginVertical: 10,
-  },
   image: {
     borderRadius: layout.borderRadius,
     overflow: "hidden",
+  },
+  text: {
+    marginVertical: 10,
   },
 });
 
