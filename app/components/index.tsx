@@ -5,6 +5,7 @@ export { Badge } from "./badge";
 export { ButtonAddReply } from "./button-add-reply";
 export { ButtonSubmit } from "./button-submit";
 export { Comments } from "./comments";
+export { DisplayContent } from "./display-content";
 export { ErrorMessage } from "./error-message";
 export { FormAddPassword } from "./form-add-password";
 export { IconTabBar } from "./icon-tab-bar";
