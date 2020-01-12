@@ -16,9 +16,9 @@ export type NavigationType = NavigationStackProp<any, any>;
 interface ContentBase {
   author: Author;
   content: string | null;
-  createdAt: Date;
   id: string;
   imagePath?: string;
+  publishedAt: Date;
   title?: string;
 }
 
@@ -29,7 +29,6 @@ export interface Comment extends ContentBase {
 
 export interface Post extends ContentBase {
   comments: Comment[] | [];
-  createdAt: Date;
 }
 
 // eslint-disable-next-line @typescript-eslint/no-empty-interface
