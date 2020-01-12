@@ -14,7 +14,7 @@ const POST_ATTRIBUTES = gql`
     author {
       ...authorAttributes
     }
-    createdAt
+    publishedAt
     content
     imagePath
     comments {
@@ -31,7 +31,7 @@ const REPLY_ATTRIBUTES = gql`
     author {
       ...authorAttributes
     }
-    createdAt
+    publishedAt
     content
     comment {
       id
@@ -69,7 +69,7 @@ export const COMMENTS = gql`
           name
           avatarPath
         }
-        createdAt
+        publishedAt
         content
         title
         totalReplies
@@ -87,7 +87,7 @@ export const COMMENT_WITH_REPLIES = gql`
         name
         avatarPath
       }
-      createdAt
+      publishedAt
       content
       title
       replies {
