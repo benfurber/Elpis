@@ -18,12 +18,12 @@ class NotificationTitle extends Component<Props> {
 
     const details = {
       comment: {
-        title: labels.notifications.leftAComment,
         author: reply && reply.author.name,
+        title: labels.notifications.leftAComment,
       },
       post: {
-        title: labels.notifications.published,
         author: post.author.name,
+        title: labels.notifications.published,
       },
     };
 

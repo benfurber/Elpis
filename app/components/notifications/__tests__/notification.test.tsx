@@ -14,28 +14,28 @@ jest.mock(navigation, () => jest.fn());
 describe("Notification", () => {
   const basePost = {
     author: {
+      avatarPath: "",
       id: "1352fe",
       name: "E2M",
-      avatarPath: "",
     },
     content:
       "Mara fisto yoda ben jade. Mace ben wedge jinn leia luke. Lando mandalore.",
-    createdAt: new Date("2019-09-23"),
     id: "986sasdfd",
     imagePath: "",
+    publishedAt: new Date("2019-09-23"),
   };
 
   const baseReply = {
     author: {
+      avatarPath: "",
       id: "135fad2fe",
       name: "May",
-      avatarPath: "",
     },
     comment,
     content:
       "Mara fisto yoda ben jade. Mace ben wedge jinn leia luke. Lando mandalore.",
-    createdAt: new Date("2019-09-23"),
     id: "986sasdfd",
+    publishedAt: new Date("2019-09-23"),
   };
 
   describe("new", () => {

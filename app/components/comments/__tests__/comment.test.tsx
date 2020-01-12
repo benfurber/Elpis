@@ -28,10 +28,10 @@ describe("Comments<Comment>", () => {
         author,
         content:
           "Dá certo sim, o meu pai, por exemplo, fugiu quando eu tinha 5 anos e eu não faço ideia da onde ele esteja. Nunca mais voltou, pena que a violência só piorou.",
-        createdAt: new Date("2019-01-01"),
         id: "21097",
-        totalReplies: 0,
+        publishedAt: new Date("2019-01-01"),
         replies: [],
+        totalReplies: 0,
       };
       const onPress = () => jest.fn();
 
