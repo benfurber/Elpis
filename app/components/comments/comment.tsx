@@ -15,15 +15,15 @@ interface Props {
 class Comment extends Component<Props> {
   render() {
     const { item } = this.props;
-    const { title, content } = item;
+    const { author, content, id, publishedAt, title, totalReplies } = item;
 
     return (
-      <TouchableOpacity onPress={() => this.props.onPress(item.id)}>
+      <TouchableOpacity onPress={() => this.props.onPress(id)}>
         <View style={styles.commentContainer}>
           <View style={styles.avatarContainer}>
-            <Badge left={35} number={item.totalReplies} />
+            <Badge left={35} number={totalReplies} />
             <View>
-              <Avatar avatarPath={item.author.avatarPath} />
+              <Avatar avatarPath={author.avatarPath} />
             </View>
           </View>
           <View style={styles.commentBodyContainer}>
@@ -31,7 +31,7 @@ class Comment extends Component<Props> {
             {content && (
               <Text style={styles.text}>{firstSentence(content)}</Text>
             )}
-            <Text style={styles.commentDate}>{formatDate(item.createdAt)}</Text>
+            <Text style={styles.commentDate}>{formatDate(publishedAt)}</Text>
           </View>
           <View style={styles.iconContainer}>
             <Icon

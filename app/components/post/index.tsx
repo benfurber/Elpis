@@ -70,14 +70,10 @@ class Post extends Component<Props, State> {
   }
 
   renderBody() {
-    const { author, content, createdAt, imagePath } = this.props.post;
+    const { author, content, publishedAt, imagePath } = this.props.post;
     return (
       <View style={styles.container}>
-        <Content
-          createdAt={createdAt}
-          content={content}
-          imagePath={imagePath}
-        />
+        <Content date={publishedAt} content={content} imagePath={imagePath} />
         <Footer avatarPath={author.avatarPath} />
       </View>
     );

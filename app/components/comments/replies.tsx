@@ -58,16 +58,16 @@ class Replies extends Component<Props> {
 
   renderComment() {
     const { item } = this.props;
-    const { content, title } = item;
+    const { author, content, publishedAt, title } = item;
 
     return (
       <View style={styles.featured}>
         <View style={styles.featuredDetails}>
-          <Avatar avatarPath={item.author.avatarPath} size={"large"} />
+          <Avatar avatarPath={author.avatarPath} size={"large"} />
 
           <View style={styles.featuredAuthorDetails}>
-            <Title text={item.author.name} />
-            <Text style={elements.textDate}>{formatDate(item.createdAt)}</Text>
+            <Title text={author.name} />
+            <Text style={elements.textDate}>{formatDate(publishedAt)}</Text>
           </View>
         </View>
 

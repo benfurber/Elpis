@@ -12,20 +12,20 @@ interface Props {
 
 class Reply extends Component<Props> {
   render() {
-    const { item } = this.props;
+    const { author, content, publishedAt } = this.props.item;
 
     return (
       <View style={styles.commentContainer}>
         <View style={styles.details}>
-          <Avatar avatarPath={item.author.avatarPath} size={"small"} />
+          <Avatar avatarPath={author.avatarPath} size={"small"} />
 
           <View style={styles.authorDetails}>
-            <Title text={item.author.name} small />
-            <Text style={elements.textDate}>{formatDate(item.createdAt)}</Text>
+            <Title text={author.name} small />
+            <Text style={elements.textDate}>{formatDate(publishedAt)}</Text>
           </View>
         </View>
         <View style={styles.textContainer}>
-          <Text style={styles.body}>{item.content}</Text>
+          <Text style={styles.body}>{content}</Text>
         </View>
       </View>
     );
