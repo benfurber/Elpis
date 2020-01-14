@@ -11,7 +11,7 @@ interface Props {
 
 const Footer = (props: Props) => {
   return (
-    <View style={styles.footer}>
+    <View>
       <View style={styles.followingContainer} />
       <View style={styles.avatarContainer}>
         <Avatar
@@ -42,9 +42,6 @@ const styles = StyleSheet.create({
     borderBottomRightRadius: layout.borderRadius,
     flex: 1,
     padding: layout.spacingL,
-  },
-  footer: {
-    backgroundColor: colours.whiteTransparent,
   },
 });
 
