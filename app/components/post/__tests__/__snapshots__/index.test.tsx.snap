@@ -59,12 +59,8 @@ exports[`Post when the body is set to display renders correctly 1`] = `
     onPressPost={[Function]}
     totalComments={0}
   />
-  <View
-    style={
-      Object {
-        "marginBottom": 20,
-      }
-    }
+  <ScrollViewMock
+    bounces={false}
   >
     <Content
       content={null}
@@ -82,7 +78,7 @@ exports[`Post when the body is set to display renders correctly 1`] = `
         }
       }
     />
-  </View>
+  </ScrollViewMock>
 </View>
 `;
 
@@ -101,12 +97,8 @@ exports[`Post when the body is set to display renders correctly if no content is
     onPressPost={[Function]}
     totalComments={0}
   />
-  <View
-    style={
-      Object {
-        "marginBottom": 20,
-      }
-    }
+  <ScrollViewMock
+    bounces={false}
   >
     <Content
       content={null}
@@ -124,6 +116,6 @@ exports[`Post when the body is set to display renders correctly if no content is
         }
       }
     />
-  </View>
+  </ScrollViewMock>
 </View>
 `;

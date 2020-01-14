@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { StyleSheet, View } from "react-native";
+import { ScrollView, StyleSheet, View } from "react-native";
 
 import { Comments } from "components";
 import { NavigationType, Post as PostInterface } from "interfaces";
@@ -70,12 +70,28 @@ class Post extends Component<Props, State> {
   }
 
   renderBody() {
-    const { author, content, publishedAt, imagePath } = this.props.post;
+    const { feed, post } = this.props;
+    const { author, content, publishedAt, imagePath } = post;
+
+    const bodyContent = (
+      <Content date={publishedAt} content={content} imagePath={imagePath} />
+    );
+    const bodyFooter = <Footer avatarPath={author.avatarPath} />;
+
+    if (feed) {
+      return (
+        <View style={styles.container}>
+          {bodyContent}
+          {bodyFooter}
+        </View>
+      );
+    }
+
     return (
-      <View style={styles.container}>
-        <Content date={publishedAt} content={content} imagePath={imagePath} />
-        <Footer avatarPath={author.avatarPath} />
-      </View>
+      <ScrollView bounces={false}>
+        {bodyContent}
+        {bodyFooter}
+      </ScrollView>
     );
   }
 
