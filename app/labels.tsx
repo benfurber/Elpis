@@ -27,7 +27,7 @@ const labels = {
   next: "Próximo",
   noComments: "Nenhum comentário ainda - faça o primeiro!",
   noImageSelected: "Nenhuma imagem selecionada. Escolha uma e tente novamente.",
-  noReplies: "Nenhuma resposta ainda - faça a primeira!",
+  noReplies: "Nenhuma resposta ainda - deixe a primeira!",
   notifications: {
     leftAComment: "respondeu ao seu comentário",
     newMultiple: "Novas",
