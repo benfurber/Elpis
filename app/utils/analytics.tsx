@@ -14,23 +14,35 @@ interface TrackContent {
   contentId: string;
 }
 
+type UserId = string;
+
 class Analytics {
-  token: string;
   mixPanel: any;
+  token: string;
 
   constructor() {
     this.token = MIXPANEL_TOKEN;
     this.mixPanel = Mixpanel;
   }
 
+  callMixpanel(callback: () => void) {
+    this.mixPanel.sharedInstanceWithToken(this.token).then(callback);
+  }
+
+  identifyUser(userId: UserId) {
+    this.callMixpanel(() => this.mixPanel.identify(userId));
+  }
+
+  registerUser(userId: UserId) {
+    this.callMixpanel(() => this.mixPanel.createAlias(userId));
+  }
+
   track(trackingEvent: string) {
-    this.mixPanel
-      .sharedInstanceWithToken(this.token)
-      .then(() => this.mixPanel.track(trackingEvent));
+    this.callMixpanel(() => this.mixPanel.track(trackingEvent));
   }
 
   trackContent({ contentType, contentId }: TrackContent) {
-    this.mixPanel.sharedInstanceWithToken(this.token).then(() =>
+    this.callMixpanel(() =>
       this.mixPanel.trackWithProperties(contentType, {
         contentId,
       }),

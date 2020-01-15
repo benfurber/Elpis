@@ -1,11 +1,12 @@
 import React from "react";
-import { StyleSheet, Text, View } from "react-native";
+import { StyleSheet, View } from "react-native";
 import AsyncStorage from "@react-native-community/async-storage";
 import { useQuery } from "@apollo/react-hooks";
 
 import { BackgroundContainer, Loading } from "components";
 import { NavigationType } from "interfaces";
 import { USER_DETAILS } from "queries";
+import { Analytics } from "utils";
 
 interface Props {
   navigation: NavigationType;
@@ -18,8 +19,10 @@ function AuthLoadingScreen(props: Props) {
   const getToken = async () => {
     const token = await AsyncStorage.getItem("token");
 
-    const feedRoute = data =>
-      navigate(data.me.onboarded ? "Main" : "Onboarding");
+    const feedRoute = ({ me }) => {
+      Analytics.identifyUser(me.id);
+      navigate(me.onboarded ? "Main" : "Onboarding");
+    };
 
     if (token) {
       if (loading) return <Loading />;
