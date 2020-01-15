@@ -1,18 +1,20 @@
 import React, { Component } from "react";
 import { StyleSheet, Text, View } from "react-native";
 
-import { Avatar, Title } from "components";
-import { Reply as ReplyInterface } from "interfaces";
+import { Avatar, RichTextDisplay, Title } from "components";
+import { NavigationType, Reply as ReplyInterface } from "interfaces";
 import { colours, elements, layout } from "styles";
 import { formatDate } from "utils";
 
 interface Props {
   item: ReplyInterface;
+  navigation: NavigationType;
 }
 
 class Reply extends Component<Props> {
   render() {
-    const { author, content, publishedAt } = this.props.item;
+    const { item, navigation } = this.props;
+    const { author, publishedAt } = item;
 
     return (
       <View style={styles.commentContainer}>
@@ -25,7 +27,7 @@ class Reply extends Component<Props> {
           </View>
         </View>
         <View style={styles.textContainer}>
-          <Text style={styles.body}>{content}</Text>
+          <RichTextDisplay item={item} navigation={navigation} />
         </View>
       </View>
     );

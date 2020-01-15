@@ -6,12 +6,14 @@ type ContentTypes =
   | "AddTopic"
   | "Comments"
   | "Onboarding"
-  | "Replies";
+  | "Replies"
+  | "WebBrowser";
 
 interface TrackContent {
   contentType: ContentTypes;
   contentId: string;
 }
+
 class Analytics {
   token: string;
   mixPanel: any;

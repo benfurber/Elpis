@@ -7,6 +7,9 @@ import { mockDateNow } from "../../../test-utils";
 
 import { Replies } from "../replies";
 
+let navigation;
+jest.mock(navigation, () => jest.fn());
+
 describe("Comments<Replies>", () => {
   describe("when there are replies", () => {
     it("renders correctly", () => {
@@ -18,6 +21,7 @@ describe("Comments<Replies>", () => {
         content:
           "Meu pai também fez o mesmo. Logo depois que minha mãe pediu o divórcio porque sofria violência dentro de casa, ele pegou as malas, se mudou e sumiu no mundo. Nem faço mais questão de saber pra onde ele foi.",
         id: "21098",
+        link: null,
         publishedAt: new Date("2019-01-02"),
       };
 
@@ -26,6 +30,7 @@ describe("Comments<Replies>", () => {
         comment,
         content: "Nem faço mais questão de saber pra onde ele foi.",
         id: "21099",
+        link: "https://www.bbc.co.uk/news/business-50656178",
         publishedAt: new Date("2019-01-03"),
       };
 
@@ -44,8 +49,9 @@ describe("Comments<Replies>", () => {
 
       const component = shallow(
         <Replies
-          item={item}
           header={header}
+          item={item}
+          navigation={navigation}
           noReplies={noReplies}
           onPress={onPress}
         />,
@@ -74,8 +80,9 @@ describe("Comments<Replies>", () => {
 
       const component = shallow(
         <Replies
-          item={item}
           header={header}
+          item={item}
+          navigation={navigation}
           noReplies={noReplies}
           onPress={onPress}
         />,

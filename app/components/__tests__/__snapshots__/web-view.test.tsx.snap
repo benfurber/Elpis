@@ -1,0 +1,73 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`WebView renders correctly 1`] = `
+<View>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "rgb(45, 82, 113)",
+        "borderTopLeftRadius": 10,
+        "borderTopRightRadius": 10,
+        "flexDirection": "row",
+      }
+    }
+  >
+    <IconNav
+      action={[Function]}
+      isActive={false}
+      name="chevron-left"
+    />
+    <IconNav
+      action={[Function]}
+      isActive={false}
+      name="chevron-right"
+    />
+    <View
+      style={
+        Object {
+          "alignItems": "flex-start",
+          "alignSelf": "center",
+          "flex": 1,
+          "overflow": "hidden",
+        }
+      }
+    >
+      <Text
+        style={
+          Object {
+            "alignSelf": "flex-start",
+            "color": "rgba(255, 255, 255, 0.85)",
+            "width": "1000%",
+          }
+        }
+      />
+    </View>
+  </View>
+  <WebView
+    cacheEnabled={true}
+    containerStyle={
+      Object {
+        "flex": 0,
+        "height": "100%",
+      }
+    }
+    javaScriptEnabled={true}
+    onNavigationStateChange={[Function]}
+    originWhitelist={
+      Array [
+        "http://*",
+        "https://*",
+      ]
+    }
+    renderLoading={[Function]}
+    source={
+      Object {
+        "uri": "http://bbc.co.uk/",
+      }
+    }
+    startInLoadingState={true}
+    useSharedProcessPool={true}
+  />
+</View>
+`;

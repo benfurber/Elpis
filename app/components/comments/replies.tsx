@@ -8,7 +8,7 @@ import {
 } from "react-native";
 
 import { Avatar, Title } from "components";
-import { Comment } from "interfaces";
+import { Comment, NavigationType } from "interfaces";
 import { labels } from "labels";
 import { colours, elements, layout, typography } from "styles";
 import { Analytics, formatDate } from "utils";
@@ -19,6 +19,7 @@ import { Reply } from "./reply";
 interface Props {
   item: Comment;
   header: object;
+  navigation: NavigationType;
   noReplies: string;
   onPress: Function;
 }
@@ -32,12 +33,14 @@ class Replies extends Component<Props> {
   }
 
   repliesLoop() {
+    const { navigation } = this.props;
+
     return (
       <FlatList
         contentContainerStyle={{ paddingBottom: layout.spacingXL }}
         data={this.props.item.replies}
         keyExtractor={({ id }) => id}
-        renderItem={({ item }) => <Reply item={item} />}
+        renderItem={({ item }) => <Reply navigation={navigation} item={item} />}
       />
     );
   }

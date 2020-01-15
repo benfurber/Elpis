@@ -46,7 +46,7 @@ exports[`Comments<Reply> renders correctly 1`] = `
           }
         }
       >
-        Há poucos segundos
+        Há um ano
       </Text>
     </View>
   </View>
@@ -57,15 +57,37 @@ exports[`Comments<Reply> renders correctly 1`] = `
       }
     }
   >
-    <Text
-      style={
+    <RichTextDisplay
+      item={
         Object {
-          "paddingVertical": 10,
+          "author": Object {
+            "avatarPath": Object {
+              "testUri": "../../../app/assets/images/empower_two_women_logo.png",
+            },
+            "id": "1235we",
+            "name": "Empodere Duas Mulheres",
+          },
+          "comment": Object {
+            "author": Object {
+              "avatarPath": Object {
+                "testUri": "../../../app/assets/images/empower_two_women_logo.png",
+              },
+              "id": "1235we",
+              "name": "Empodere Duas Mulheres",
+            },
+            "content": "Dá certo sim, o meu pai, por exemplo, fugiu quando eu tinha 5 anos e eu não faço ideia da onde ele esteja. Nunca mais voltou, pena que a violência só piorou.",
+            "id": "21097",
+            "publishedAt": 2019-01-01T00:00:00.000Z,
+            "replies": Array [],
+            "totalReplies": 0,
+          },
+          "content": "Nao.",
+          "id": "21097",
+          "link": null,
+          "publishedAt": 2019-01-01T00:00:00.000Z,
         }
       }
-    >
-      Meu pai também fez o mesmo. Logo depois que minha mãe pediu o divórcio porque sofria violência dentro de casa, ele pegou as malas, se mudou e sumiu no mundo. Nem faço mais questão de saber pra onde ele foi.
-    </Text>
+    />
   </View>
 </View>
 `;

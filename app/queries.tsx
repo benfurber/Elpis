@@ -36,6 +36,7 @@ const REPLY_ATTRIBUTES = gql`
     comment {
       id
     }
+    link
   }
   ${AUTHOR_ATTRIBUTES}
 `;
@@ -97,6 +98,18 @@ export const COMMENT_WITH_REPLIES = gql`
     }
   }
   ${REPLY_ATTRIBUTES}
+`;
+
+export const LINK = gql`
+  query Link($url: URL!) {
+    link(url: $url) {
+      id
+      author
+      description
+      image
+      title
+    }
+  }
 `;
 
 export const USER_DETAILS = gql`

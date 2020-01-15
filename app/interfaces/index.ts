@@ -34,6 +34,7 @@ export interface Post extends ContentBase {
 // eslint-disable-next-line @typescript-eslint/no-empty-interface
 export interface Reply extends ContentBase {
   comment: Comment;
+  link: string | null;
 }
 
 export interface Notification {
@@ -45,4 +46,15 @@ export interface Notification {
     type: string; // should be `"comment" | "post"` but there's a bug;
   };
   newNotification: boolean;
+}
+
+interface Link {
+  id: string;
+  author: string;
+  date: Date;
+  description: string;
+  image: string;
+  publisher: string;
+  title: string;
+  url: string;
 }

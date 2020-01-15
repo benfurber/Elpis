@@ -1,0 +1,35 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`IconNav renders correctly when active 1`] = `
+<TouchableOpacity
+  activeOpacity={0.2}
+  onPress={[Function]}
+>
+  <customIcon
+    colour="rgb(255, 255, 255)"
+    name="chevron-right"
+    style={
+      Object {
+        "padding": 10,
+      }
+    }
+  />
+</TouchableOpacity>
+`;
+
+exports[`IconNav renders correctly when inactive 1`] = `
+<TouchableOpacity
+  activeOpacity={0.2}
+  onPress={[Function]}
+>
+  <customIcon
+    colour="rgba(255, 255, 255, 0.60)"
+    name="chevron-left"
+    style={
+      Object {
+        "padding": 10,
+      }
+    }
+  />
+</TouchableOpacity>
+`;
