@@ -41,7 +41,7 @@
     "react-native-gesture-handler": "1.5.3",
     "react-native-git-upgrade": "^0.2.7",
     "react-native-global-props": "^1.1.5",
-    "react-native-keyboard-aware-scroll-view": "^0.8.0",
+    "react-native-keyboard-aware-scroll-view": "^0.9.1",
     "react-native-markdown-display": "^5.1.0",
     "react-native-mixpanel": "^1.1.14",
     "react-native-onesignal": "^3.6.1",
