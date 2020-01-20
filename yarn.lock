@@ -7665,10 +7665,10 @@ react-lifecycles-compat@^3.0.4:
   resolved "https://registry.yarnpkg.com/react-lifecycles-compat/-/react-lifecycles-compat-3.0.4.tgz#4f1a273afdfc8f3488a8c516bfda78f872352362"
   integrity sha512-fBASbA6LnOU9dOU2eW7aQ8xmYBSXUIWr+UmF9b1efZBazGNO+rcXT/icdKnYm2pTwcRylVUYwW7H1PHfLekVzA==
 
-react-native-autolink@^1.9.1:
-  version "1.9.1"
-  resolved "https://registry.yarnpkg.com/react-native-autolink/-/react-native-autolink-1.9.1.tgz#829adc009f976adf2b73dffba78e636e60bcf7e7"
-  integrity sha512-AoRXswIYqbZRCLiNtWOBGZYYWbLD6sJ3GsR+4O210IUQO7n2/cCr4ql4v/qq0h7EbdoV8XS/4/Zlm5AtIL6htw==
+react-native-autolink@^1.9.2:
+  version "1.9.2"
+  resolved "https://registry.yarnpkg.com/react-native-autolink/-/react-native-autolink-1.9.2.tgz#93f4e4871677ff3554c02eb0bdffd3d3032fdf08"
+  integrity sha512-AeUl2TDpqHdvUpfIwZG64YZC/8kPQHSABG3Up5gSOrYiLXsL9wrAn8a4iPxQLwcDqCsvuJdP6lh+igXZqvWh+g==
   dependencies:
     autolinker "^3.11.1"
     prop-types "^15.7.2"
