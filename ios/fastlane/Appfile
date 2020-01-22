@@ -1,0 +1,8 @@
+app_identifier("app.elpis.main") # The bundle identifier of your app
+apple_id("elpis.platform@googlemail.com") # Your Apple email address
+
+itc_team_id("120595791") # App Store Connect Team ID
+team_id("JC32AN7BL2") # Developer Portal Team ID
+
+# For more information about the Appfile, see:
+#     https://docs.fastlane.tools/advanced/#appfile
