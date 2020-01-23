@@ -26,7 +26,7 @@ class Analytics {
   }
 
   callMixpanel(callback: () => void) {
-    this.mixPanel.sharedInstanceWithToken(this.token).then(callback);
+    this.mixPanel.sharedInstanceWithToken(this.token, false).then(callback);
   }
 
   identifyUser(userId: UserId) {
