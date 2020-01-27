@@ -76,7 +76,7 @@ const labels = {
   passwordRepeat: "Repita a senha",
   passwordRequest: "Uma senha forte, por favor.",
   passwordSet: "Defina uma senha",
-  passwordStrong: "Ótima senha!.",
+  passwordStrong: "Ótima senha!",
   passwordWeak:
     "Senha muito fraca. Deve incluir:\n" +
     "- 1+ letra maiúscula\n- 1+ letra minúscula\n- 1+ número",
