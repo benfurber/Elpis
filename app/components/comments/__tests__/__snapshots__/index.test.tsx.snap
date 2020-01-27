@@ -224,7 +224,7 @@ exports[`Comments when there are comments renders correctly 1`] = `
     }
     variables={
       Object {
-        "id": "0",
+        "id": "10387-314fs-12asdbj",
       }
     }
   >
@@ -232,7 +232,7 @@ exports[`Comments when there are comments renders correctly 1`] = `
   </NewQuery>
   <ButtonAddReply
     commentId={null}
-    postId="0"
+    postId="10387-314fs-12asdbj"
   />
 </View>
 `;
@@ -461,7 +461,7 @@ exports[`Comments when there are no comments renders correctly 1`] = `
     }
     variables={
       Object {
-        "id": "0",
+        "id": "10387-314fs-12asdbj",
       }
     }
   >
@@ -469,7 +469,7 @@ exports[`Comments when there are no comments renders correctly 1`] = `
   </NewQuery>
   <ButtonAddReply
     commentId={null}
-    postId="0"
+    postId="10387-314fs-12asdbj"
   />
 </View>
 `;

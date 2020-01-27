@@ -97,16 +97,12 @@ class Post extends Component<Props, State> {
 
   renderComments() {
     const { post } = this.props;
-    const { comments, content, id } = post;
-
     const { commentId } = this.state;
 
     return (
       <Comments
-        comments={comments}
-        content={content}
+        post={post}
         navigation={this.props.navigation}
-        postId={id}
         commentId={commentId}
         setCommentId={commentId => this.setState({ commentId })}
       />

@@ -2,7 +2,7 @@ import "react-native";
 import React from "react";
 import { shallow } from "enzyme";
 
-import { author } from "../../../factories";
+import { author, post } from "../../../factories";
 
 import { Comments } from "..";
 
@@ -22,12 +22,15 @@ describe("Comments", () => {
         totalReplies: 0,
       };
 
+      const postForTest = {
+        ...post,
+        comments: [comment],
+      };
+
       const component = shallow(
         <Comments
-          comments={[comment]}
-          content={"A simple string"}
+          post={postForTest}
           navigation={navigation}
-          postId={"0"}
           setCommentId={() => jest.fn()}
         />,
       );
@@ -40,10 +43,8 @@ describe("Comments", () => {
     it("renders correctly", () => {
       const component = shallow(
         <Comments
-          comments={[]}
-          content={"A simple string"}
+          post={post}
           navigation={navigation}
-          postId={"0"}
           setCommentId={() => jest.fn()}
         />,
       );

@@ -7,16 +7,26 @@ import { colours, layout } from "styles";
 import { firstSentence } from "utils";
 
 interface Props {
-  comments: Post["comments"];
-  content: Post["content"];
+  content?: Post["content"];
+  title?: Post["title"];
 }
 
 class Header extends Component<Props> {
   render() {
-    if (this.props.content) {
+    const { content, title } = this.props;
+
+    if (title) {
       return (
         <View style={styles.titleContainer}>
-          <Title text={firstSentence(this.props.content)} />
+          <Title text={title} />
+        </View>
+      );
+    }
+
+    if (content) {
+      return (
+        <View style={styles.titleContainer}>
+          <Title text={firstSentence(content)} />
         </View>
       );
     }
@@ -27,8 +37,8 @@ class Header extends Component<Props> {
 
 const styles = StyleSheet.create({
   commentsHeadingContainer: {
-    marginVertical: layout.spacingL,
     marginHorizontal: layout.spacing,
+    marginVertical: layout.spacingL,
   },
   titleContainer: {
     backgroundColor: colours.whiteTransparent,

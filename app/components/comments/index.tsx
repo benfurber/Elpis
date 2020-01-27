@@ -14,10 +14,8 @@ import { Replies } from "./replies";
 
 interface Props {
   commentId?: Comment["id"];
-  comments: Post["comments"];
-  content: Post["content"];
   navigation: NavigationType;
-  postId: Post["id"];
+  post: Post;
   setCommentId: (string) => void;
 }
 
@@ -35,7 +33,7 @@ class Comments extends Component<Props, State> {
 
   componentDidMount() {
     Analytics.trackContent({
-      contentId: this.props.postId,
+      contentId: this.props.post.id,
       contentType: "Comments",
     });
   }
@@ -46,13 +44,12 @@ class Comments extends Component<Props, State> {
   }
 
   header() {
-    return (
-      <Header comments={this.props.comments} content={this.props.content} />
-    );
+    const { content, title } = this.props.post;
+    return <Header content={content} title={title} />;
   }
 
   selectComment() {
-    const { comments } = this.props;
+    const { comments } = this.props.post;
     const { commentId } = this.state;
 
     return comments.filter(comment => {
@@ -75,7 +72,7 @@ class Comments extends Component<Props, State> {
 
   renderDisplay() {
     const { commentId } = this.state;
-    const { postId } = this.props;
+    const { id } = this.props.post;
 
     if (commentId !== null) {
       return (
@@ -91,12 +88,7 @@ class Comments extends Component<Props, State> {
     }
 
     return (
-      <Query
-        query={COMMENTS}
-        variables={{ id: postId }}
-        pollInterval={5000}
-        blueMode
-      >
+      <Query query={COMMENTS} variables={{ id }} pollInterval={5000} blueMode>
         {this.renderAllComments}
       </Query>
     );
@@ -117,7 +109,7 @@ class Comments extends Component<Props, State> {
   };
 
   render() {
-    const { navigation, postId } = this.props;
+    const { navigation, post } = this.props;
     const { commentId } = this.state;
 
     return (
@@ -126,7 +118,7 @@ class Comments extends Component<Props, State> {
         <ButtonAddReply
           commentId={commentId}
           navigation={navigation}
-          postId={postId}
+          postId={post.id}
         />
       </View>
     );
