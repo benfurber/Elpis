@@ -56,4 +56,15 @@ describe("formatDate", () => {
 
     expect(response).toEqual("Há poucos segundos");
   });
+
+  describe("capitalised", () => {
+    it("isn't when set to false", () => {
+      mockDateNow("2019-03-01");
+
+      const date = new Date("2019-01-01");
+      const response = formatDate(date, false);
+
+      expect(response).toEqual("há 2 meses");
+    });
+  });
 });
