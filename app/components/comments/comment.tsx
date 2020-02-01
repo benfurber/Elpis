@@ -28,10 +28,13 @@ class Comment extends Component<Props> {
           </View>
           <View style={styles.commentBodyContainer}>
             {title && <Title text={title} />}
+            <Text style={styles.metaDetails}>
+              <Text style={styles.name}>{`${author.name} `}</Text>
+              {formatDate(publishedAt, false)}
+            </Text>
             {content && (
               <Text style={styles.text}>{firstSentence(content)}</Text>
             )}
-            <Text style={styles.commentDate}>{formatDate(publishedAt)}</Text>
           </View>
           <View style={styles.iconContainer}>
             <Icon
@@ -60,15 +63,19 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     margin: layout.spacing,
   },
-  commentDate: {
-    marginBottom: layout.spacing,
-    ...elements.textDate,
-  },
   iconContainer: {
     alignItems: "center",
     flexDirection: "row",
     marginBottom: layout.spacing,
     marginRight: layout.spacingXS,
+  },
+  metaDetails: {
+    marginBottom: layout.spacing,
+    ...elements.textDate,
+  },
+  name: {
+    color: colours.navyBlueDark,
+    fontWeight: "bold",
   },
   text: {
     flex: 1,
