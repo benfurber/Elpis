@@ -1,16 +1,21 @@
 import moment from "moment";
 import "moment/locale/pt-br";
 
-const capitalise = time => {
+const capitaliseTime = time => {
   if (typeof time !== "string") return time;
   return time.charAt(0).toUpperCase() + time.slice(1);
 };
 
-const formatDate = (date: Date) => {
+const formatDate = (date: Date, capitalise = true) => {
   const timeSince = moment(date)
     .locale("pt-br")
     .fromNow();
-  return capitalise(timeSince);
+
+  if (capitalise) {
+    return capitaliseTime(timeSince);
+  }
+
+  return timeSince;
 };
 
 export { formatDate };
