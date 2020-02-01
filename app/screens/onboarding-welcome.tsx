@@ -30,11 +30,14 @@ function OnboardingWelcomeScreen(props: Props) {
   return (
     <BackgroundModal>
       <View style={styles.content}>
-        <Image source={require(mayImagePath)} style={styles.image} />
         <Title text={"1/4"} small />
         <Title style={styles.title} text={`${welcome.title} \n${name || ""}`} />
         <Text style={styles.text}>{welcome.text}</Text>
-        <Title style={styles.subtitle} text="May" />
+
+        <View style={styles.row}>
+          <Image source={require(mayImagePath)} style={styles.image} />
+          <Title style={styles.subtitle} text="May" />
+        </View>
 
         <View style={styles.row}>
           <ButtonSubmit
@@ -54,10 +57,11 @@ const styles = StyleSheet.create({
     padding: layout.spacingXL,
   },
   image: {
-    ...elements.imageRoundLarge,
+    ...elements.imageRound,
     borderColor: colours.navyBlueDark,
     borderWidth: 4,
     marginBottom: layout.spacingL,
+    marginLeft: layout.spacing,
   },
   row: {
     alignItems: "baseline",
