@@ -77,7 +77,7 @@ const styles = StyleSheet.create({
   back: {
     flexDirection: "row",
     paddingBottom: layout.spacing,
-    paddingHorizontal: layout.spacingL,
+    paddingHorizontal: layout.spacing,
   },
   fullHeight: {
     flex: 1,
