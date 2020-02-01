@@ -57,6 +57,27 @@ exports[`Comments<Comment> with replies renders correctly 1`] = `
       <Text
         style={
           Object {
+            "color": "rgb(51, 51, 51)",
+            "fontStyle": "italic",
+            "marginBottom": 10,
+          }
+        }
+      >
+        <Text
+          style={
+            Object {
+              "color": "rgb(45, 82, 113)",
+              "fontWeight": "bold",
+            }
+          }
+        >
+          Empodere Duas Mulheres 
+        </Text>
+        há 20 horas
+      </Text>
+      <Text
+        style={
+          Object {
             "flex": 1,
             "flexWrap": "nowrap",
             "marginBottom": 10,
@@ -64,17 +85,6 @@ exports[`Comments<Comment> with replies renders correctly 1`] = `
         }
       >
         Dá certo sim, o meu pai, por exemplo, fugiu quando eu tinha 5 anos e...
-      </Text>
-      <Text
-        style={
-          Object {
-            "color": "rgb(51, 51, 51)",
-            "fontStyle": "italic",
-            "marginBottom": 10,
-          }
-        }
-      >
-        Há 20 horas
       </Text>
     </View>
     <View
@@ -150,6 +160,27 @@ exports[`Comments<Comment> without replies renders correctly 1`] = `
       <Text
         style={
           Object {
+            "color": "rgb(51, 51, 51)",
+            "fontStyle": "italic",
+            "marginBottom": 10,
+          }
+        }
+      >
+        <Text
+          style={
+            Object {
+              "color": "rgb(45, 82, 113)",
+              "fontWeight": "bold",
+            }
+          }
+        >
+          Empodere Duas Mulheres 
+        </Text>
+        há 9 minutos
+      </Text>
+      <Text
+        style={
+          Object {
             "flex": 1,
             "flexWrap": "nowrap",
             "marginBottom": 10,
@@ -157,17 +188,6 @@ exports[`Comments<Comment> without replies renders correctly 1`] = `
         }
       >
         Dá certo sim, o meu pai, por exemplo, fugiu quando eu tinha 5 anos e...
-      </Text>
-      <Text
-        style={
-          Object {
-            "color": "rgb(51, 51, 51)",
-            "fontStyle": "italic",
-            "marginBottom": 10,
-          }
-        }
-      >
-        Há 9 minutos
       </Text>
     </View>
     <View
