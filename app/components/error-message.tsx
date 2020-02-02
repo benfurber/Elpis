@@ -43,8 +43,8 @@ const styles = StyleSheet.create({
     backgroundColor: colours.redTransparent,
     borderRadius: layout.borderRadiusL,
     flexDirection: "column",
-    margin: layout.spacingL,
     padding: layout.spacingL,
+    width: "100%",
   },
   text: {
     color: colours.pureWhite,
