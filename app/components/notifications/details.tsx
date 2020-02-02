@@ -5,7 +5,7 @@ import FlexImage from "react-native-flex-image";
 import { Icon } from "components";
 import { Notification } from "interfaces";
 import { colours, layout } from "styles";
-import { validURL } from "utils";
+import { firstSentence, validURL } from "utils";
 
 interface Props {
   item: Notification;
@@ -44,12 +44,16 @@ class Details extends Component<Props> {
     const { post, reply } = content;
 
     const text = reply ? reply.content : post.content;
+    const title = !reply ? post.title : null;
 
     if (newNotification) {
       return (
         <View style={[styles.row, styles.content]}>
           {this.contentPrefix()}
-          <Text style={styles.text}>{text}</Text>
+          <View style={styles.textContainer}>
+            {title && <Text style={[styles.text, styles.bold]}>{title}</Text>}
+            {text && <Text style={styles.text}>{firstSentence(text)}</Text>}
+          </View>
         </View>
       );
     }
@@ -59,10 +63,14 @@ class Details extends Component<Props> {
 }
 
 const styles = StyleSheet.create({
+  bold: {
+    fontWeight: "bold",
+  },
   content: {
     paddingVertical: layout.spacingL,
   },
   image: {
+    aspectRatio: 1,
     borderRadius: 5,
     overflow: "hidden",
   },
@@ -82,8 +90,12 @@ const styles = StyleSheet.create({
   },
   text: {
     color: colours.mediumGrey,
-    flex: 1,
     paddingHorizontal: layout.spacing,
+    width: "100%",
+  },
+  textContainer: {
+    flex: 2,
+    justifyContent: "center",
   },
 });
 
