@@ -356,6 +356,7 @@ exports[`PostScreen when post provided renders correctly 1`] = `
         "publishedAt": 2000-01-01T00:00:00.000Z,
       }
     }
+    postTabAction={true}
     setDisplay="post"
     styles={
       Object {
