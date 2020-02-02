@@ -19,12 +19,13 @@ interface Props {
 
 class PostScreen extends Component<Props> {
   postWithData = (data: { post: PostInterface }) => {
-    const { commentId, navigation, setDisplay } = this.props;
+    const { backToText, commentId, navigation, setDisplay } = this.props;
 
     return (
       <Post
         navigation={navigation}
         post={data.post}
+        postTabAction={backToText ? true : false}
         setDisplay={setDisplay}
         commentId={commentId}
       />
@@ -42,12 +43,14 @@ class PostScreen extends Component<Props> {
   }
 
   post() {
-    const { navigation, post, setDisplay } = this.props;
+    const { backToText, navigation, post, setDisplay } = this.props;
+
     if (post) {
       return (
         <Post
           navigation={navigation}
           post={post}
+          postTabAction={backToText ? true : false}
           setDisplay={setDisplay ? setDisplay : "post"}
           styles={styles.fullHeight}
         />
@@ -55,18 +58,25 @@ class PostScreen extends Component<Props> {
     }
   }
 
-  render() {
-    const { backToText, navigation, post } = this.props;
+  backButton() {
+    const { backToText, navigation } = this.props;
 
-    const backText = backToText ? backToText : labels.back.back;
+    if (backToText) {
+      return (
+        <TouchableOpacity style={styles.back} onPress={() => navigation.pop()}>
+          <Icon name="angle-double-left" style={styles.icon} />
+          <Text>{backToText}</Text>
+        </TouchableOpacity>
+      );
+    }
+  }
+
+  render() {
+    const { post } = this.props;
 
     return (
       <BackgroundContainer>
-        <TouchableOpacity style={styles.back} onPress={() => navigation.pop()}>
-          <Icon name="angle-double-left" style={styles.icon} />
-          <Text>{backText}</Text>
-        </TouchableOpacity>
-
+        {this.backButton()}
         {post ? this.post() : this.fetchPost()}
       </BackgroundContainer>
     );

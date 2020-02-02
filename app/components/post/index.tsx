@@ -14,6 +14,7 @@ import { Tabs } from "./tabs";
 interface Props {
   navigation: NavigationType;
   post: PostInterface;
+  postTabAction: boolean;
   feed?: true;
   setDisplay?: string;
   styles?: object;
@@ -52,7 +53,12 @@ class Post extends Component<Props, State> {
   }
 
   onPressPost() {
-    return () => this.navigate("body");
+    const { navigation, postTabAction } = this.props;
+
+    if (postTabAction) {
+      return () => this.navigate("body");
+    }
+    return () => navigation.popToTop();
   }
 
   navigate(setDisplay: string) {
@@ -63,7 +69,6 @@ class Post extends Component<Props, State> {
     }
 
     return navigation.navigate("Post", {
-      backToText: labels.back.toFeed,
       post,
       setDisplay,
     });
