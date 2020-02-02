@@ -2,25 +2,40 @@
 
 exports[`WelcomeScreen renders correctly 1`] = `
 <BackgroundContainer>
-  <View
-    style={
+  <KeyboardAwareScrollViewMock
+    contentContainerStyle={
       Object {
-        "alignItems": "stretch",
-        "flex": 1,
+        "paddingTop": 40,
       }
     }
+    enableAutomaticScroll={true}
+    enableOnAndroid={false}
+    enableResetScrollToCoords={true}
+    extraHeight={75}
+    extraScrollHeight={0}
+    keyboardOpeningTime={250}
+    viewIsInsideTabBar={false}
   >
-    <Logo />
-  </View>
-  <View
-    style={
-      Object {
-        "alignItems": "center",
-        "flex": 6,
+    <View
+      style={
+        Object {
+          "alignItems": "stretch",
+          "flex": 1,
+        }
       }
-    }
-  >
-    <LoginForm />
-  </View>
+    >
+      <Logo />
+    </View>
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "flex": 6,
+        }
+      }
+    >
+      <LoginForm />
+    </View>
+  </KeyboardAwareScrollViewMock>
 </BackgroundContainer>
 `;

@@ -1,8 +1,10 @@
 import React, { Component } from "react";
 import { StyleSheet, View } from "react-native";
+import { KeyboardAwareScrollView } from "react-native-keyboard-aware-scroll-view";
 
 import { BackgroundContainer, LoginForm, Logo } from "components";
 import { NavigationType } from "interfaces";
+import { layout } from "styles";
 import { Analytics } from "utils";
 
 interface Props {
@@ -19,25 +21,30 @@ class WelcomeScreen extends Component<Props> {
 
     return (
       <BackgroundContainer>
-        <View style={styles.logo}>
-          <Logo />
-        </View>
-        <View style={styles.loginForm}>
-          <LoginForm navigation={navigation} />
-        </View>
+        <KeyboardAwareScrollView contentContainerStyle={styles.container}>
+          <View style={styles.logo}>
+            <Logo />
+          </View>
+          <View style={styles.loginForm}>
+            <LoginForm navigation={navigation} />
+          </View>
+        </KeyboardAwareScrollView>
       </BackgroundContainer>
     );
   }
 }
 
 const styles = StyleSheet.create({
+  container: {
+    paddingTop: layout.spacingXL,
+  },
   loginForm: {
-    flex: 6,
     alignItems: "center",
+    flex: 6,
   },
   logo: {
-    flex: 1,
     alignItems: "stretch",
+    flex: 1,
   },
 });
 
