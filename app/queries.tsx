@@ -16,6 +16,7 @@ const POST_ATTRIBUTES = gql`
     }
     publishedAt
     content
+    title
     imagePath
     comments {
       id
