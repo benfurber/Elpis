@@ -69,6 +69,7 @@ class WebView extends Component<Props, State> {
           )}
           source={{ uri }}
           startInLoadingState={true}
+          geolocationEnabled={false}
         />
       </View>
     );
@@ -87,25 +88,25 @@ const styles = StyleSheet.create({
     height: "100%",
   },
   header: {
+    alignItems: "center",
     backgroundColor: colours.navyBlueDark,
     borderTopLeftRadius: layout.borderRadiusL,
     borderTopRightRadius: layout.borderRadiusL,
     flexDirection: "row",
-    alignItems: "center",
   },
   icon: {
     padding: layout.spacing,
-  },
-  textContainer: {
-    alignSelf: "center",
-    alignItems: "flex-start",
-    flex: 1,
-    overflow: "hidden",
   },
   text: {
     alignSelf: "flex-start",
     color: colours.whiteTransparent,
     width: "1000%",
+  },
+  textContainer: {
+    alignItems: "flex-start",
+    alignSelf: "center",
+    flex: 1,
+    overflow: "hidden",
   },
 });
 
