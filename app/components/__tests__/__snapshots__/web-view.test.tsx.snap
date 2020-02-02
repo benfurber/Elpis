@@ -52,6 +52,7 @@ exports[`WebView renders correctly 1`] = `
         "height": "100%",
       }
     }
+    geolocationEnabled={false}
     javaScriptEnabled={true}
     onNavigationStateChange={[Function]}
     originWhitelist={
