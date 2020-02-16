@@ -14,8 +14,8 @@ interface Props {
 const routeNameIcon = {
   Feed: "home",
   Feedback: "custom-thumbs",
+  Menu: "bars",
   Notification: "bell",
-  Settings: "bars",
 };
 
 function NotificationBadge() {

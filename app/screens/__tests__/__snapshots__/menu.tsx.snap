@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`SettingsScreen renders correctly 1`] = `
+exports[`MenuScreen renders correctly 1`] = `
 <BackgroundContainer>
   <Title
     style={
@@ -9,7 +9,7 @@ exports[`SettingsScreen renders correctly 1`] = `
         "margin": 20,
       }
     }
-    text="Configurações"
+    text="Menu"
   />
   <View>
     <TouchableOpacity

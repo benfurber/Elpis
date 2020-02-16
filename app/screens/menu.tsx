@@ -12,9 +12,9 @@ interface Props {
   navigation: NavigationType;
 }
 
-class SettingsScreen extends Component<Props> {
+class MenuScreen extends Component<Props> {
   componentDidMount() {
-    Analytics.track("Settings");
+    Analytics.track("Menu");
   }
 
   onPress = async () => {
@@ -27,7 +27,7 @@ class SettingsScreen extends Component<Props> {
   };
 
   render() {
-    const { logout, title } = labels.settings;
+    const { logout, title } = labels.menu;
 
     return (
       <BackgroundContainer>
@@ -65,4 +65,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export { SettingsScreen };
+export { MenuScreen };
