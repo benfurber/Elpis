@@ -82,7 +82,7 @@ class AddTopicScreen extends Component<Props, State> {
           returnKeyType="next"
           {...args}
         />
-        <Text style={form.label}>{labels.body}</Text>
+        <Text style={form.label}>{labels.body} *</Text>
         <TextInput
           {...args}
           autoFocus={false}
