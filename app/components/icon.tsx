@@ -13,18 +13,43 @@ interface Props {
   style?: object;
 }
 
+function TheIcon(props: Props) {
+  const { colour, name, size, solid, style } = props;
+
+  return (
+    <Icon
+      style={style || null}
+      color={colour || colours.darkGrey}
+      name={name}
+      size={size || 20}
+      solid={solid === undefined ? true : solid}
+    />
+  );
+}
+
 const customIcon = (props: Props) => {
-  const { colour, containerStyle, name, size, solid, style } = props;
+  const { containerStyle, name } = props;
+
+  if (name === "custom-thumbs") {
+    const newProps = {
+      ...props,
+      name: "thumbs-up",
+      size: (props.size || 20) * 0.8,
+    };
+
+    return (
+      <View style={{ flexDirection: "row" }}>
+        <TheIcon {...newProps} />
+        <View style={{ paddingRight: 5, transform: [{ rotate: "180deg" }] }}>
+          <TheIcon {...newProps} />
+        </View>
+      </View>
+    );
+  }
 
   return (
     <View style={containerStyle || null}>
-      <Icon
-        style={style || null}
-        color={colour || colours.darkGrey}
-        name={name}
-        size={size || 20}
-        solid={solid === undefined ? true : solid}
-      />
+      <TheIcon {...props} />
     </View>
   );
 };
