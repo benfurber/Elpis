@@ -2,9 +2,6 @@
 
 exports[`Comments<Replies> when there are no replies renders correctly 1`] = `
 <View>
-  <Text>
-    Header with post details
-  </Text>
   <View>
     <TouchableOpacity
       activeOpacity={0.2}
@@ -87,9 +84,6 @@ exports[`Comments<Replies> when there are no replies renders correctly 1`] = `
 
 exports[`Comments<Replies> when there are replies renders correctly 1`] = `
 <View>
-  <Text>
-    Header with post details
-  </Text>
   <View>
     <TouchableOpacity
       activeOpacity={0.2}

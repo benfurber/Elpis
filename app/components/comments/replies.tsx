@@ -18,7 +18,6 @@ import { Reply } from "./reply";
 
 interface Props {
   item: Comment;
-  header: object;
   navigation: NavigationType;
   noReplies: string;
   onPress: Function;
@@ -102,7 +101,6 @@ class Replies extends Component<Props> {
   render() {
     return (
       <View>
-        {this.props.header}
         {this.renderBackButton()}
         {this.renderComment()}
         {this.renderReplies()}
