@@ -62,7 +62,7 @@ class OnboardingFeaturesScreen extends Component<Props, State> {
           <View style={styles.row}>
             <Icon
               colour={iconColour}
-              name="file-signature"
+              name="custom-thumbs"
               size={iconSize}
               style={styles.feedbackIcon}
             />
