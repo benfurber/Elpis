@@ -75,7 +75,7 @@ class AddTopicScreen extends Component<Props, State> {
         <TextInput
           onSubmitEditing={() => this.secondtitleInput.focus()}
           style={form.title}
-          autoFocus={true}
+          autoFocus={false}
           placeholder={labels.addPlaceholderTitle}
           value={titleInput}
           returnKeyLabel={labels.next}
@@ -85,7 +85,7 @@ class AddTopicScreen extends Component<Props, State> {
         <Text style={form.label}>{labels.body} *</Text>
         <TextInput
           {...args}
-          autoFocus={false}
+          autoFocus={true}
           ref={input => (this.secondtitleInput = input)}
           onChangeText={contentInput => this.setState({ contentInput })}
           onSubmitEditing={() =>
