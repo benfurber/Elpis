@@ -99,7 +99,6 @@ class Comments extends Component<Props, State> {
 
     return (
       <Replies
-        header={this.header()}
         item={data.comment}
         navigation={navigation}
         noReplies={labels.noReplies}

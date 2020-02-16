@@ -43,13 +43,11 @@ describe("Comments<Replies>", () => {
         replies: [reply1, reply2],
         totalReplies: 2,
       };
-      const header = <Text>Header with post details</Text>;
       const noReplies = "No replies label";
       const onPress = () => jest.fn();
 
       const component = shallow(
         <Replies
-          header={header}
           item={item}
           navigation={navigation}
           noReplies={noReplies}
@@ -74,13 +72,11 @@ describe("Comments<Replies>", () => {
         replies: [],
         totalReplies: 0,
       };
-      const header = <Text>Header with post details</Text>;
       const noReplies = "No replies right now, add one!";
       const onPress = () => jest.fn();
 
       const component = shallow(
         <Replies
-          header={header}
           item={item}
           navigation={navigation}
           noReplies={noReplies}
