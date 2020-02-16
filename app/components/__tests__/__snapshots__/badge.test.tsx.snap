@@ -9,6 +9,16 @@ exports[`Icon when given a number larger than zero renders correctly 1`] = `
 </View>
 `;
 
+exports[`Icon when given a number larger than zero renders correctly when static display 1`] = `
+<View>
+  <Badge
+    left={5}
+    number={8}
+    staticPosition={true}
+  />
+</View>
+`;
+
 exports[`Icon when given zero renders null 1`] = `
 <View>
   <Badge

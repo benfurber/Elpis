@@ -63,13 +63,13 @@ class CommentsLoop extends Component<Props> {
 }
 
 const styles = StyleSheet.create({
+  commentsHeadingContainer: {
+    marginHorizontal: layout.spacing,
+    marginVertical: layout.spacingL,
+  },
   container: {
     flex: 1,
     width: "100%",
-  },
-  commentsHeadingContainer: {
-    marginVertical: layout.spacingL,
-    marginHorizontal: layout.spacing,
   },
   titleContainer: {
     backgroundColor: colours.whiteTransparent,

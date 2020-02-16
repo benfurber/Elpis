@@ -6,6 +6,7 @@ import { colours, typography } from "styles";
 interface Props {
   left: number;
   number;
+  staticPosition?: boolean;
 }
 
 class Badge extends Component<Props> {
@@ -14,10 +15,16 @@ class Badge extends Component<Props> {
   }
 
   render() {
-    if (this.props.number > 0) {
+    const { left, number, staticPosition } = this.props;
+    const { badgeContainer, dynamicPosition, text } = styles;
+
+    if (number > 0) {
+      const howFarLeft = { left };
+      const dynamicStyles = staticPosition ? null : dynamicPosition;
+
       return (
-        <View style={[styles.badge, this.left()]}>
-          <Text style={styles.badgeText}>{this.props.number}</Text>
+        <View style={[badgeContainer, howFarLeft, dynamicStyles]}>
+          <Text style={text}>{number}</Text>
         </View>
       );
     }
@@ -26,19 +33,21 @@ class Badge extends Component<Props> {
 }
 
 const styles = StyleSheet.create({
-  badge: {
+  badgeContainer: {
     alignItems: "center",
     backgroundColor: colours.navyBlueDark,
     borderRadius: 11,
     flexDirection: "column",
     height: 22,
     justifyContent: "center",
-    top: -5,
-    position: "absolute",
     width: 22,
+  },
+  dynamicPosition: {
+    position: "absolute",
+    top: -5,
     zIndex: 1,
   },
-  badgeText: {
+  text: {
     color: colours.pureWhite,
     fontSize: typography.fontSizeS,
   },
