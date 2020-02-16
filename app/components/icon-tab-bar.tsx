@@ -13,9 +13,9 @@ interface Props {
 
 const routeNameIcon = {
   Feed: "home",
-  Feedback: "file-signature",
+  Feedback: "custom-thumbs",
   Notification: "bell",
-  Settings: "cog",
+  Settings: "bars",
 };
 
 function NotificationBadge() {

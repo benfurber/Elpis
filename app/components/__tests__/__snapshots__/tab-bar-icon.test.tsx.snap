@@ -26,7 +26,7 @@ exports[`IconTabBar Feedback renders correctly when focused 1`] = `
 <View>
   <customIcon
     colour="rgb(51, 51, 51)"
-    name="file-signature"
+    name="custom-thumbs"
     size={30}
     solid={true}
   />
@@ -37,7 +37,7 @@ exports[`IconTabBar Feedback renders correctly when not focused 1`] = `
 <View>
   <customIcon
     colour="rgba(51,51,51,0.65)"
-    name="file-signature"
+    name="custom-thumbs"
     size={30}
     solid={true}
   />
@@ -72,7 +72,7 @@ exports[`IconTabBar Settings renders correctly when focused 1`] = `
 <View>
   <customIcon
     colour="rgb(51, 51, 51)"
-    name="cog"
+    name="bars"
     size={30}
     solid={true}
   />
@@ -83,7 +83,7 @@ exports[`IconTabBar Settings renders correctly when not focused 1`] = `
 <View>
   <customIcon
     colour="rgba(51,51,51,0.65)"
-    name="cog"
+    name="bars"
     size={30}
     solid={true}
   />
