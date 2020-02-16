@@ -19,7 +19,7 @@ const Tab = (props: Props) => {
   const { whiteTransparent, whiteTransparentHigh } = colours;
 
   const backgroundColor = selected ? whiteTransparent : whiteTransparentHigh;
-  const iconColour = selected ? colours.navyBlueDarkTransparentHigh : null;
+  const iconColour = selected ? null : colours.mediumGrey;
 
   const tabs = {
     flex: 1,
