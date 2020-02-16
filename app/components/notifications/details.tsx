@@ -89,7 +89,7 @@ const styles = StyleSheet.create({
     flexDirection: "row",
   },
   text: {
-    color: colours.mediumGrey,
+    color: colours.darkGrey,
     paddingHorizontal: layout.spacing,
     width: "100%",
   },
