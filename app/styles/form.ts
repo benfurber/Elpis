@@ -5,27 +5,27 @@ import { typography } from "./typography";
 import { colours } from "./colours";
 
 const form = StyleSheet.create({
-  label: {
-    color: colours.mediumGrey,
-    fontWeight: "bold",
-    paddingTop: layout.spacingXL,
-    paddingHorizontal: layout.spacingL,
-  },
   fieldContainer: {
-    width: "100%",
     flexDirection: "column",
+    width: "100%",
   },
-  title: {
-    padding: layout.spacingL,
-    fontFamily: "creteround-regular",
-    fontSize: typography.fontSizeXL,
-    flexWrap: "wrap",
+  label: {
+    color: colours.darkGrey,
+    fontWeight: "bold",
+    paddingHorizontal: layout.spacingL,
+    paddingTop: layout.spacingL,
   },
   text: {
     fontFamily: "creteround-regular",
     fontSize: typography.fontSizeL,
     padding: layout.spacingL,
     width: "100%",
+  },
+  title: {
+    flexWrap: "wrap",
+    fontFamily: "creteround-regular",
+    fontSize: typography.fontSizeL,
+    padding: layout.spacingL,
   },
 });
 

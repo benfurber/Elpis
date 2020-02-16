@@ -1,8 +1,8 @@
 const labels = {
   addNewTopic: "Adicione um novo tópico na discussão",
   addPhoto: "Adicionar foto",
-  addPlaceholderBody: "(Tudo o que você quiser dizer.)",
-  addPlaceholderTitle: "Nós adoraríamos ouvir mais de você.",
+  addPlaceholderBody: "Escreva o que você quiser dizer",
+  addPlaceholderTitle: "Dê um título para o seu tópico para ficar em destaque",
   addYourComment: "Adicione o seu comentário",
   addYourReply: "Adicione a sua resposta",
   askMeLater: "Pergunte-me depois",
