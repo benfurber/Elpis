@@ -14,7 +14,7 @@ exports[`IconTabBar Feed renders correctly when focused 1`] = `
 exports[`IconTabBar Feed renders correctly when not focused 1`] = `
 <View>
   <customIcon
-    colour="rgba(51,51,51,0.80)"
+    colour="rgba(51,51,51,0.65)"
     name="home"
     size={30}
     solid={true}
@@ -36,7 +36,7 @@ exports[`IconTabBar Feedback renders correctly when focused 1`] = `
 exports[`IconTabBar Feedback renders correctly when not focused 1`] = `
 <View>
   <customIcon
-    colour="rgba(51,51,51,0.80)"
+    colour="rgba(51,51,51,0.65)"
     name="file-signature"
     size={30}
     solid={true}
@@ -59,7 +59,7 @@ exports[`IconTabBar Notification renders correctly when focused 1`] = `
 exports[`IconTabBar Notification renders correctly when not focused 1`] = `
 <View>
   <customIcon
-    colour="rgba(51,51,51,0.80)"
+    colour="rgba(51,51,51,0.65)"
     name="bell"
     size={30}
     solid={true}
@@ -82,7 +82,7 @@ exports[`IconTabBar Settings renders correctly when focused 1`] = `
 exports[`IconTabBar Settings renders correctly when not focused 1`] = `
 <View>
   <customIcon
-    colour="rgba(51,51,51,0.80)"
+    colour="rgba(51,51,51,0.65)"
     name="cog"
     size={30}
     solid={true}

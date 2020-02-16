@@ -59,7 +59,7 @@ class NotificationTitle extends Component<Props> {
 
 const styles = StyleSheet.create({
   date: {
-    color: colours.mediumGrey,
+    color: colours.darkGrey,
   },
   headings: {
     flex: 1,

@@ -41,7 +41,7 @@ exports[`Post<Tabs> a remaining tab renders correctly when not selected 1`] = `
         number={23}
       />
       <customIcon
-        colour={null}
+        colour="rgba(51,51,51,0.65)"
         name="comments"
         size={30}
         style={
@@ -108,7 +108,7 @@ exports[`Post<Tabs> a remaining tab renders correctly when selected 1`] = `
         number={23}
       />
       <customIcon
-        colour="rgba(45, 82, 113, 0.60)"
+        colour={null}
         name="comments"
         size={30}
         style={
@@ -163,7 +163,7 @@ exports[`Post<Tabs> first tab renders correctly when not selected 1`] = `
         number={null}
       />
       <customIcon
-        colour={null}
+        colour="rgba(51,51,51,0.65)"
         name="image"
         size={30}
         style={
@@ -218,7 +218,7 @@ exports[`Post<Tabs> first tab renders correctly when selected 1`] = `
         number={null}
       />
       <customIcon
-        colour="rgba(45, 82, 113, 0.60)"
+        colour={null}
         name="image"
         size={30}
         style={
