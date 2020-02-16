@@ -24,6 +24,10 @@ const labels = {
   formButton: "Enviar",
   imageEmpty: "Nenhuma imagem de perfil.",
   login: "Entrar",
+  menu: {
+    logout: "Sair",
+    title: "Menu",
+  },
   next: "Próximo",
   noComments: "Nenhum comentário ainda - faça o primeiro!",
   noImageSelected: "Nenhuma imagem selecionada. Escolha uma e tente novamente.",
@@ -87,10 +91,6 @@ const labels = {
   replies: "Respostas",
   reply: "Resposta",
   select: "Selecionar",
-  settings: {
-    logout: "Sair",
-    title: "Configurações",
-  },
   submit: "Postar",
   title: "Título",
   topics: "Tópicos",

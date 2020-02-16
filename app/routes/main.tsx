@@ -5,10 +5,7 @@ import React from "react";
 import { createBottomTabNavigator } from "react-navigation-tabs";
 
 import { IconTabBar } from "components";
-import {
-  FeedbackScreen as Feedback,
-  SettingsScreen as Settings,
-} from "screens";
+import { FeedbackScreen as Feedback, MenuScreen as Menu } from "screens";
 
 import { Feed } from "./feed";
 import { Notification } from "./notification";
@@ -34,7 +31,7 @@ const screens = {
   Feed,
   Notification,
   Feedback,
-  Settings,
+  Menu,
 };
 
 const screen = createBottomTabNavigator(screens, options);

@@ -50,13 +50,13 @@ describe("IconTabBar", () => {
   describe("Settings", () => {
     it("renders correctly when not focused", () => {
       const component = shallow(
-        <IconTabBar routeName={"Settings"} focused={false} />,
+        <IconTabBar routeName={"Menu"} focused={false} />,
       );
       expect(component).toMatchSnapshot();
     });
     it("renders correctly when focused", () => {
       const component = shallow(
-        <IconTabBar routeName={"Settings"} focused={true} />,
+        <IconTabBar routeName={"Menu"} focused={true} />,
       );
       expect(component).toMatchSnapshot();
     });
