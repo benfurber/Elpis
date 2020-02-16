@@ -9,16 +9,28 @@ exports[`Post<Footer> renders correctly 1`] = `
         "borderBottomLeftRadius": 5,
         "borderBottomRightRadius": 5,
         "flex": 1,
-        "padding": 20,
       }
     }
-  />
+  >
+    <Text
+      style={
+        Object {
+          "color": "rgb(255, 255, 255)",
+          "fontWeight": "bold",
+          "padding": 10,
+        }
+      }
+    >
+      Empodere Duas Mulheres
+    </Text>
+  </View>
   <View
     style={
       Object {
-        "alignItems": "center",
+        "alignItems": "flex-end",
         "flex": 1,
         "flexDirection": "column",
+        "marginRight": 10,
       }
     }
   >
