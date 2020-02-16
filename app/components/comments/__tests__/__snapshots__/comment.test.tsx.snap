@@ -15,23 +15,25 @@ exports[`Comments<Comment> with replies renders correctly 1`] = `
     style={
       Object {
         "alignItems": "stretch",
+        "borderTopColor": "rgb(255, 255, 255)",
+        "borderTopWidth": 3,
         "flex": 1,
         "flexDirection": "row",
         "margin": 10,
+        "marginBottom": 0,
+        "paddingTop": 5,
       }
     }
   >
     <View
       style={
         Object {
+          "alignItems": "center",
+          "flexDirection": "row",
           "width": 60,
         }
       }
     >
-      <Badge
-        left={35}
-        number={1}
-      />
       <View>
         <Avatar
           avatarPath={
@@ -46,8 +48,8 @@ exports[`Comments<Comment> with replies renders correctly 1`] = `
       style={
         Object {
           "flex": 1,
-          "marginBottom": 10,
           "marginLeft": 10,
+          "marginVertical": 10,
         }
       }
     >
@@ -80,7 +82,6 @@ exports[`Comments<Comment> with replies renders correctly 1`] = `
           Object {
             "flex": 1,
             "flexWrap": "nowrap",
-            "marginBottom": 10,
           }
         }
       >
@@ -92,14 +93,14 @@ exports[`Comments<Comment> with replies renders correctly 1`] = `
         Object {
           "alignItems": "center",
           "flexDirection": "row",
-          "marginBottom": 10,
           "marginRight": 3.3333333333333335,
         }
       }
     >
-      <customIcon
-        colour="rgba(45, 82, 113, 0.60)"
-        name="angle-double-right"
+      <Badge
+        left={0}
+        number={1}
+        staticPosition={true}
       />
     </View>
   </View>
@@ -121,23 +122,25 @@ exports[`Comments<Comment> without replies renders correctly 1`] = `
     style={
       Object {
         "alignItems": "stretch",
+        "borderTopColor": "rgb(255, 255, 255)",
+        "borderTopWidth": 3,
         "flex": 1,
         "flexDirection": "row",
         "margin": 10,
+        "marginBottom": 0,
+        "paddingTop": 5,
       }
     }
   >
     <View
       style={
         Object {
+          "alignItems": "center",
+          "flexDirection": "row",
           "width": 60,
         }
       }
     >
-      <Badge
-        left={35}
-        number={0}
-      />
       <View>
         <Avatar
           avatarPath={
@@ -152,8 +155,8 @@ exports[`Comments<Comment> without replies renders correctly 1`] = `
       style={
         Object {
           "flex": 1,
-          "marginBottom": 10,
           "marginLeft": 10,
+          "marginVertical": 10,
         }
       }
     >
@@ -183,7 +186,6 @@ exports[`Comments<Comment> without replies renders correctly 1`] = `
           Object {
             "flex": 1,
             "flexWrap": "nowrap",
-            "marginBottom": 10,
           }
         }
       >
@@ -195,7 +197,6 @@ exports[`Comments<Comment> without replies renders correctly 1`] = `
         Object {
           "alignItems": "center",
           "flexDirection": "row",
-          "marginBottom": 10,
           "marginRight": 3.3333333333333335,
         }
       }

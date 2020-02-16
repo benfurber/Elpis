@@ -13,15 +13,28 @@ interface Props {
 }
 
 class Comment extends Component<Props> {
-  render() {
-    const { item } = this.props;
-    const { author, content, id, publishedAt, title, totalReplies } = item;
+  pressActionIcon() {
+    const { totalReplies } = this.props.item;
+
+    if (totalReplies > 0) {
+      return <Badge left={0} number={totalReplies} staticPosition />;
+    }
 
     return (
-      <TouchableOpacity onPress={() => this.props.onPress(id)}>
+      <Icon
+        colour={colours.navyBlueDarkTransparentHigh}
+        name="angle-double-right"
+      />
+    );
+  }
+  render() {
+    const { item, onPress } = this.props;
+    const { author, content, id, publishedAt, title } = item;
+
+    return (
+      <TouchableOpacity onPress={() => onPress(id)}>
         <View style={styles.commentContainer}>
           <View style={styles.avatarContainer}>
-            <Badge left={35} number={totalReplies} />
             <View>
               <Avatar avatarPath={author.avatarPath} />
             </View>
@@ -36,12 +49,7 @@ class Comment extends Component<Props> {
               <Text style={styles.text}>{firstSentence(content)}</Text>
             )}
           </View>
-          <View style={styles.iconContainer}>
-            <Icon
-              colour={colours.navyBlueDarkTransparentHigh}
-              name="angle-double-right"
-            />
-          </View>
+          <View style={styles.iconContainer}>{this.pressActionIcon()}</View>
         </View>
       </TouchableOpacity>
     );
@@ -50,23 +58,28 @@ class Comment extends Component<Props> {
 
 const styles = StyleSheet.create({
   avatarContainer: {
+    alignItems: "center",
+    flexDirection: "row",
     width: 60,
   },
   commentBodyContainer: {
     flex: 1,
-    marginBottom: layout.spacing,
     marginLeft: layout.spacing,
+    marginVertical: layout.spacing,
   },
   commentContainer: {
     alignItems: "stretch",
+    borderTopColor: colours.pureWhite,
+    borderTopWidth: 3,
     flex: 1,
     flexDirection: "row",
     margin: layout.spacing,
+    marginBottom: 0,
+    paddingTop: layout.spacingS,
   },
   iconContainer: {
     alignItems: "center",
     flexDirection: "row",
-    marginBottom: layout.spacing,
     marginRight: layout.spacingXS,
   },
   metaDetails: {
@@ -80,7 +93,6 @@ const styles = StyleSheet.create({
   text: {
     flex: 1,
     flexWrap: "nowrap",
-    marginBottom: layout.spacing,
   },
 });
 

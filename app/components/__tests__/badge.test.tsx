@@ -15,7 +15,18 @@ describe("Icon", () => {
 
       expect(component).toMatchSnapshot();
     });
+
+    it("renders correctly when static display", () => {
+      const component = shallow(
+        <View>
+          <Badge left={5} number={8} staticPosition />
+        </View>,
+      );
+
+      expect(component).toMatchSnapshot();
+    });
   });
+
   describe("when given zero", () => {
     it("renders null", () => {
       const component = shallow(
