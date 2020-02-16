@@ -85,9 +85,13 @@ exports[`Post when the body is set to display renders correctly 1`] = `
       }
     />
     <Footer
-      avatarPath={
+      author={
         Object {
-          "testUri": "../../../app/assets/images/empower_two_women_logo.png",
+          "avatarPath": Object {
+            "testUri": "../../../app/assets/images/empower_two_women_logo.png",
+          },
+          "id": "1235we",
+          "name": "Empodere Duas Mulheres",
         }
       }
     />
@@ -123,9 +127,13 @@ exports[`Post when the body is set to display renders correctly if no content is
       }
     />
     <Footer
-      avatarPath={
+      author={
         Object {
-          "testUri": "../../../app/assets/images/empower_two_women_logo.png",
+          "avatarPath": Object {
+            "testUri": "../../../app/assets/images/empower_two_women_logo.png",
+          },
+          "id": "1235we",
+          "name": "Empodere Duas Mulheres",
         }
       }
     />

@@ -81,7 +81,7 @@ class Post extends Component<Props, State> {
     const bodyContent = (
       <Content date={publishedAt} content={content} imagePath={imagePath} />
     );
-    const bodyFooter = <Footer avatarPath={author.avatarPath} />;
+    const bodyFooter = <Footer author={author} />;
 
     if (feed) {
       return (
