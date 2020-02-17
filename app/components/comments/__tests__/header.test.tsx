@@ -2,42 +2,30 @@ import "react-native";
 import React from "react";
 import { shallow } from "enzyme";
 
-import { comment } from "../../../factories";
-
 import { Header } from "../header";
 
 describe("Comments<Header>", () => {
-  describe("with comments", () => {
+  describe("with description", () => {
     it("renders correctly", () => {
-      const comments = [comment];
       const content = "Article description";
-
-      const component = shallow(
-        <Header comments={comments} content={content} />,
-      );
+      const component = shallow(<Header content={content} />);
 
       expect(component).toMatchSnapshot();
     });
   });
 
-  describe("without comments", () => {
+  describe("with title", () => {
     it("renders correctly", () => {
-      const comments = [];
-      const content = "A slightly longer article description";
-
-      const component = shallow(
-        <Header comments={comments} content={content} />,
-      );
+      const title = "Important post title";
+      const component = shallow(<Header title={title} />);
 
       expect(component).toMatchSnapshot();
     });
   });
 
   describe("without description", () => {
-    it("renders correctly", () => {
-      const comments = [comment];
-
-      const component = shallow(<Header comments={comments} content={null} />);
+    it("doesn't render", () => {
+      const component = shallow(<Header />);
 
       expect(component).toMatchSnapshot();
     });
