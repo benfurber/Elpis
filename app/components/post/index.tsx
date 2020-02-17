@@ -3,7 +3,6 @@ import { ScrollView, StyleSheet, View } from "react-native";
 
 import { Comments } from "components";
 import { NavigationType, Post as PostInterface } from "interfaces";
-import { labels } from "labels";
 import { layout } from "styles";
 import { calculateTotalComments } from "utils";
 
@@ -14,7 +13,7 @@ import { Tabs } from "./tabs";
 interface Props {
   navigation: NavigationType;
   post: PostInterface;
-  postTabAction: boolean;
+  postTabAction?: boolean;
   feed?: true;
   setDisplay?: string;
   styles?: object;
