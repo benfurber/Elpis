@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Comments<Header> with comments renders correctly 1`] = `
+exports[`Comments<Header> with description renders correctly 1`] = `
 <View
   style={
     Object {
@@ -17,7 +17,7 @@ exports[`Comments<Header> with comments renders correctly 1`] = `
 </View>
 `;
 
-exports[`Comments<Header> without comments renders correctly 1`] = `
+exports[`Comments<Header> with title renders correctly 1`] = `
 <View
   style={
     Object {
@@ -29,9 +29,9 @@ exports[`Comments<Header> without comments renders correctly 1`] = `
   }
 >
   <Title
-    text="A slightly longer article description"
+    text="Important post title"
   />
 </View>
 `;
 
-exports[`Comments<Header> without description renders correctly 1`] = `""`;
+exports[`Comments<Header> without description doesn't render 1`] = `""`;
