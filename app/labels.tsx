@@ -16,12 +16,18 @@ const labels = {
   cancel: "Cancelar",
   comment: "Comentar",
   comments: "Comentários",
+  communityRules: {
+    title: "Regras da Comunidade",
+  },
   email: "Email",
   enter: "Entrar",
   errors: {
     noContent: "Conteúdo não encontrado",
   },
   formButton: "Enviar",
+  howTo: {
+    title: "Como usar o aplicativo",
+  },
   imageEmpty: "Nenhuma imagem de perfil.",
   login: "Entrar",
   menu: {
