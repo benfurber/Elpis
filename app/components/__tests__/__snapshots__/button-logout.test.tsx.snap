@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ButtonLogout renders correctly 1`] = `
+<ButtonMenuWrapper
+  iconName="sign-out-alt"
+  onPress={[Function]}
+  text="Sair"
+/>
+`;
