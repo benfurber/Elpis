@@ -1,13 +1,15 @@
 import React, { Component } from "react";
 import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
+import { withMappedNavigationParams } from "react-navigation-props-mapper";
 
-import { BackgroundContainer, Icon } from "components";
+import { BackgroundContainer, Icon, Title } from "components";
 import { NavigationType } from "interfaces";
-import { layout } from "styles";
+import { colours, layout } from "styles";
 
 interface Props {
   backToText?: string;
   navigation: NavigationType;
+  title?: string;
 }
 
 class StaticContentScreen extends Component<Props> {
@@ -25,10 +27,12 @@ class StaticContentScreen extends Component<Props> {
   }
 
   render() {
+    const { title } = this.props;
+
     return (
       <BackgroundContainer>
         {this.backButton()}
-        <View></View>
+        <View style={styles.body}>{title && <Title text={title} />}</View>
       </BackgroundContainer>
     );
   }
@@ -40,12 +44,21 @@ const styles = StyleSheet.create({
     paddingBottom: layout.spacing,
     paddingHorizontal: layout.spacing,
   },
-  fullHeight: {
-    flex: 1,
+  body: {
+    backgroundColor: colours.whiteTransparent,
+    borderTopRightRadius: layout.borderRadius,
+    padding: layout.spacing,
+    width: "100%",
   },
   icon: {
     paddingRight: layout.spacingS,
   },
 });
 
-export { StaticContentScreen };
+const wrappedStaticContentScreen = withMappedNavigationParams()(
+  StaticContentScreen,
+);
+export {
+  wrappedStaticContentScreen as StaticContentScreen,
+  StaticContentScreen as UnwrappedStaticContentScreen,
+};

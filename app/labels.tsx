@@ -9,6 +9,7 @@ const labels = {
   back: {
     back: "Voltar",
     toFeed: "Voltar ao feed",
+    toMenu: "Voltar para o Menu",
     toNotifications: "Voltar às notificações",
     toTopics: "Voltar aos tópicos",
   },

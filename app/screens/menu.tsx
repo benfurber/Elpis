@@ -30,12 +30,22 @@ class MenuScreen extends Component<Props> {
         <Title style={styles.title} text={menu.title} />
         <ButtonMenuWrapper
           iconName="hands-helping"
-          onPress={() => navigation.navigate("CommunityRules")}
+          onPress={() =>
+            navigation.navigate("CommunityRules", {
+              backToText: labels.back.toMenu,
+              title: communityRules.title,
+            })
+          }
           text={communityRules.title}
         />
         <ButtonMenuWrapper
           iconName="mobile-alt"
-          onPress={() => navigation.navigate("HowTo")}
+          onPress={() =>
+            navigation.navigate("HowTo", {
+              backToText: labels.back.toMenu,
+              title: howTo.title,
+            })
+          }
           text={howTo.title}
         />
         <ButtonLogout navigation={navigation} />

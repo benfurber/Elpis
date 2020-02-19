@@ -1,7 +1,58 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`StaticContentScreen renders correctly 1`] = `
+exports[`StaticContentScreen renders correctly with optional props 1`] = `
 <BackgroundContainer>
-  <View />
+  <TouchableOpacity
+    activeOpacity={0.2}
+    onPress={[Function]}
+    style={
+      Object {
+        "flexDirection": "row",
+        "paddingBottom": 10,
+        "paddingHorizontal": 10,
+      }
+    }
+  >
+    <customIcon
+      name="angle-double-left"
+      style={
+        Object {
+          "paddingRight": 5,
+        }
+      }
+    />
+    <Text>
+      Back to Menu
+    </Text>
+  </TouchableOpacity>
+  <View
+    style={
+      Object {
+        "backgroundColor": "rgba(255, 255, 255, 0.85)",
+        "borderTopRightRadius": 5,
+        "padding": 10,
+        "width": "100%",
+      }
+    }
+  >
+    <Title
+      text="Title"
+    />
+  </View>
+</BackgroundContainer>
+`;
+
+exports[`StaticContentScreen renders correctly without optional props 1`] = `
+<BackgroundContainer>
+  <View
+    style={
+      Object {
+        "backgroundColor": "rgba(255, 255, 255, 0.85)",
+        "borderTopRightRadius": 5,
+        "padding": 10,
+        "width": "100%",
+      }
+    }
+  />
 </BackgroundContainer>
 `;
