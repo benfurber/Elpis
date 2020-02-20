@@ -9,6 +9,7 @@ const labels = {
   back: {
     back: "Voltar",
     toFeed: "Voltar ao feed",
+    toMenu: "Voltar para o Menu",
     toNotifications: "Voltar às notificações",
     toTopics: "Voltar aos tópicos",
   },
@@ -16,12 +17,18 @@ const labels = {
   cancel: "Cancelar",
   comment: "Comentar",
   comments: "Comentários",
+  communityRules: {
+    title: "Criando uma comunidade incrível",
+  },
   email: "Email",
   enter: "Entrar",
   errors: {
     noContent: "Conteúdo não encontrado",
   },
   formButton: "Enviar",
+  howTo: {
+    title: "Como usar o aplicativo",
+  },
   imageEmpty: "Nenhuma imagem de perfil.",
   login: "Entrar",
   menu: {

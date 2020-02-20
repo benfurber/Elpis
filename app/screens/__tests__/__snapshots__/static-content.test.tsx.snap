@@ -1,0 +1,72 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`StaticContentScreen renders correctly with optional props 1`] = `
+<BackgroundContainer>
+  <TouchableOpacity
+    activeOpacity={0.2}
+    onPress={[Function]}
+    style={
+      Object {
+        "flexDirection": "row",
+        "paddingBottom": 10,
+        "paddingHorizontal": 10,
+      }
+    }
+  >
+    <customIcon
+      name="angle-double-left"
+      style={
+        Object {
+          "paddingRight": 5,
+        }
+      }
+    />
+    <Text>
+      Back to Menu
+    </Text>
+  </TouchableOpacity>
+  <ScrollViewMock
+    style={
+      Object {
+        "backgroundColor": "rgba(255, 255, 255, 0.85)",
+        "borderTopLeftRadius": 10,
+        "borderTopRightRadius": 10,
+        "height": "100%",
+        "padding": 20,
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "width": "100%",
+        }
+      }
+    />
+  </ScrollViewMock>
+</BackgroundContainer>
+`;
+
+exports[`StaticContentScreen renders correctly without optional props 1`] = `
+<BackgroundContainer>
+  <ScrollViewMock
+    style={
+      Object {
+        "backgroundColor": "rgba(255, 255, 255, 0.85)",
+        "borderTopLeftRadius": 10,
+        "borderTopRightRadius": 10,
+        "height": "100%",
+        "padding": 20,
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "width": "100%",
+        }
+      }
+    />
+  </ScrollViewMock>
+</BackgroundContainer>
+`;

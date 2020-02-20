@@ -1,12 +1,18 @@
 import React, { Component } from "react";
-import { StyleSheet, View, TouchableOpacity, Text } from "react-native";
-import AsyncStorage from "@react-native-community/async-storage";
+import { StyleSheet } from "react-native";
 
-import { BackgroundContainer, Title, Icon } from "components";
+import {
+  BackgroundContainer,
+  ButtonMenuWrapper,
+  ButtonLogout,
+  Title,
+} from "components";
 import { NavigationType } from "interfaces";
 import { labels } from "labels";
 import { layout, typography, colours } from "styles";
 import { Analytics } from "utils";
+
+import { Community } from "../content/community";
 
 interface Props {
   navigation: NavigationType;
@@ -17,29 +23,33 @@ class MenuScreen extends Component<Props> {
     Analytics.track("Menu");
   }
 
-  onPress = async () => {
-    try {
-      await AsyncStorage.removeItem("token");
-      this.props.navigation.navigate("Welcome");
-    } catch (error) {
-      console.error(error);
-    }
-  };
-
   render() {
-    const { logout, title } = labels.menu;
+    const { communityRules, howTo, menu } = labels;
+    const { navigation } = this.props;
 
     return (
       <BackgroundContainer>
-        <Title style={styles.title} text={title} />
-        <View>
-          <TouchableOpacity style={styles.item} onPress={() => this.onPress()}>
-            <View style={styles.row}>
-              <Icon name={"sign-out-alt"} />
-              <Text style={styles.text}>{logout}</Text>
-            </View>
-          </TouchableOpacity>
-        </View>
+        <Title style={styles.title} text={menu.title} />
+        <ButtonMenuWrapper
+          iconName="hands-helping"
+          onPress={() =>
+            navigation.navigate("CommunityRules", {
+              backToText: labels.back.toMenu,
+              content: <Community />,
+            })
+          }
+          text={communityRules.title}
+        />
+        <ButtonMenuWrapper
+          iconName="mobile-alt"
+          onPress={() =>
+            navigation.navigate("HowTo", {
+              backToText: labels.back.toMenu,
+            })
+          }
+          text={howTo.title}
+        />
+        <ButtonLogout navigation={navigation} />
       </BackgroundContainer>
     );
   }

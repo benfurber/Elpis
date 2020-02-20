@@ -5,9 +5,10 @@ import React from "react";
 import { createBottomTabNavigator } from "react-navigation-tabs";
 
 import { IconTabBar } from "components";
-import { FeedbackScreen as Feedback, MenuScreen as Menu } from "screens";
+import { FeedbackScreen as Feedback } from "screens";
 
 import { Feed } from "./feed";
+import { Menu } from "./menu";
 import { Notification } from "./notification";
 
 const path = "";

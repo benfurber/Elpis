@@ -1,0 +1,51 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ButtonMenuWrapper renders correctly 1`] = `
+<TouchableOpacity
+  activeOpacity={0.2}
+  onPress={[Function]}
+  style={
+    Object {
+      "backgroundColor": "rgba(255, 255, 255, 0.85)",
+      "borderBottomColor": "rgb(255, 255, 255)",
+      "borderBottomWidth": 2,
+      "borderTopColor": "rgb(255, 255, 255)",
+      "borderTopWidth": 2,
+      "marginBottom": 10,
+      "padding": 20,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "flexDirection": "row",
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "flex": 1,
+        }
+      }
+    >
+      <customIcon
+        name="rocket"
+      />
+    </View>
+    <Text
+      style={
+        Object {
+          "flex": 12,
+          "fontSize": 14,
+          "paddingLeft": 10,
+        }
+      }
+    >
+      Button
+    </Text>
+  </View>
+</TouchableOpacity>
+`;

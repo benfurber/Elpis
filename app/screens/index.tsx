@@ -11,5 +11,6 @@ export { OnboardingFeaturesScreen } from "./onboarding-features";
 export { OnboardingThankYouScreen } from "./onboarding-thank-you";
 export { OnboardingWelcomeScreen } from "./onboarding-welcome";
 export { PostScreen } from "./post";
+export { StaticContentScreen } from "./static-content";
 export { WebBrowserScreen } from "./web-browser";
 export { WelcomeScreen } from "./welcome";
