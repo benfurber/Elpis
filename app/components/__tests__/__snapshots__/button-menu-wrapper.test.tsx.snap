@@ -24,12 +24,21 @@ exports[`ButtonMenuWrapper renders correctly 1`] = `
       }
     }
   >
-    <customIcon
-      name="rocket"
-    />
+    <View
+      style={
+        Object {
+          "flex": 1,
+        }
+      }
+    >
+      <customIcon
+        name="rocket"
+      />
+    </View>
     <Text
       style={
         Object {
+          "flex": 12,
           "fontSize": 14,
           "paddingLeft": 10,
         }

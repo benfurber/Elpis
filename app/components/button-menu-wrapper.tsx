@@ -17,7 +17,9 @@ class ButtonMenuWrapper extends Component<Props> {
     return (
       <TouchableOpacity style={styles.item} onPress={onPress}>
         <View style={styles.row}>
-          <Icon name={iconName} />
+          <View style={styles.icon}>
+            <Icon name={iconName} />
+          </View>
           <Text style={styles.text}>{text}</Text>
         </View>
       </TouchableOpacity>
@@ -26,6 +28,7 @@ class ButtonMenuWrapper extends Component<Props> {
 }
 
 const styles = StyleSheet.create({
+  icon: { flex: 1 },
   item: {
     backgroundColor: colours.whiteTransparent,
     borderBottomColor: colours.pureWhite,
@@ -40,6 +43,7 @@ const styles = StyleSheet.create({
     flexDirection: "row",
   },
   text: {
+    flex: 12,
     fontSize: typography.fontSizeS,
     paddingLeft: layout.spacing,
   },
