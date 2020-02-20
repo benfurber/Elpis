@@ -14,7 +14,7 @@ exports[`MenuScreen renders correctly 1`] = `
   <ButtonMenuWrapper
     iconName="hands-helping"
     onPress={[Function]}
-    text="Regras da Comunidade"
+    text="Criando uma comunidade incrível"
   />
   <ButtonMenuWrapper
     iconName="mobile-alt"

@@ -25,34 +25,48 @@ exports[`StaticContentScreen renders correctly with optional props 1`] = `
       Back to Menu
     </Text>
   </TouchableOpacity>
-  <View
+  <ScrollViewMock
     style={
       Object {
         "backgroundColor": "rgba(255, 255, 255, 0.85)",
-        "borderTopRightRadius": 5,
-        "padding": 10,
-        "width": "100%",
+        "borderTopLeftRadius": 10,
+        "borderTopRightRadius": 10,
+        "height": "100%",
+        "padding": 20,
       }
     }
   >
-    <Title
-      text="Title"
+    <View
+      style={
+        Object {
+          "width": "100%",
+        }
+      }
     />
-  </View>
+  </ScrollViewMock>
 </BackgroundContainer>
 `;
 
 exports[`StaticContentScreen renders correctly without optional props 1`] = `
 <BackgroundContainer>
-  <View
+  <ScrollViewMock
     style={
       Object {
         "backgroundColor": "rgba(255, 255, 255, 0.85)",
-        "borderTopRightRadius": 5,
-        "padding": 10,
-        "width": "100%",
+        "borderTopLeftRadius": 10,
+        "borderTopRightRadius": 10,
+        "height": "100%",
+        "padding": 20,
       }
     }
-  />
+  >
+    <View
+      style={
+        Object {
+          "width": "100%",
+        }
+      }
+    />
+  </ScrollViewMock>
 </BackgroundContainer>
 `;

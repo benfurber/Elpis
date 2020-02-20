@@ -12,6 +12,8 @@ import { labels } from "labels";
 import { layout, typography, colours } from "styles";
 import { Analytics } from "utils";
 
+import { Community } from "../content/community";
+
 interface Props {
   navigation: NavigationType;
 }
@@ -33,7 +35,7 @@ class MenuScreen extends Component<Props> {
           onPress={() =>
             navigation.navigate("CommunityRules", {
               backToText: labels.back.toMenu,
-              title: communityRules.title,
+              content: <Community />,
             })
           }
           text={communityRules.title}
@@ -43,7 +45,6 @@ class MenuScreen extends Component<Props> {
           onPress={() =>
             navigation.navigate("HowTo", {
               backToText: labels.back.toMenu,
-              title: howTo.title,
             })
           }
           text={howTo.title}

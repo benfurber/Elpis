@@ -1,15 +1,21 @@
 import React, { Component } from "react";
-import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
+import {
+  ScrollView,
+  StyleSheet,
+  Text,
+  TouchableOpacity,
+  View,
+} from "react-native";
 import { withMappedNavigationParams } from "react-navigation-props-mapper";
 
-import { BackgroundContainer, Icon, Title } from "components";
+import { BackgroundContainer, Icon } from "components";
 import { NavigationType } from "interfaces";
 import { colours, layout } from "styles";
 
 interface Props {
   backToText?: string;
+  content: Component;
   navigation: NavigationType;
-  title?: string;
 }
 
 class StaticContentScreen extends Component<Props> {
@@ -27,12 +33,14 @@ class StaticContentScreen extends Component<Props> {
   }
 
   render() {
-    const { title } = this.props;
+    const { content } = this.props;
 
     return (
       <BackgroundContainer>
         {this.backButton()}
-        <View style={styles.body}>{title && <Title text={title} />}</View>
+        <ScrollView style={styles.scrollView}>
+          <View style={styles.body}>{content}</View>
+        </ScrollView>
       </BackgroundContainer>
     );
   }
@@ -45,13 +53,17 @@ const styles = StyleSheet.create({
     paddingHorizontal: layout.spacing,
   },
   body: {
-    backgroundColor: colours.whiteTransparent,
-    borderTopRightRadius: layout.borderRadius,
-    padding: layout.spacing,
     width: "100%",
   },
   icon: {
     paddingRight: layout.spacingS,
+  },
+  scrollView: {
+    backgroundColor: colours.whiteTransparent,
+    borderTopLeftRadius: layout.borderRadiusL,
+    borderTopRightRadius: layout.borderRadiusL,
+    height: "100%",
+    padding: layout.spacingL,
   },
 });
 

@@ -18,7 +18,7 @@ const labels = {
   comment: "Comentar",
   comments: "Comentários",
   communityRules: {
-    title: "Regras da Comunidade",
+    title: "Criando uma comunidade incrível",
   },
   email: "Email",
   enter: "Entrar",
