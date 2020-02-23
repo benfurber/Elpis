@@ -34,7 +34,7 @@ class OnboardingAddPasswordScreen extends Component<Props, State> {
 
           <FormAddPassword
             navigation={navigation}
-            onPress={() => navigation.navigate("ThankYou")}
+            onPress={() => navigation.navigate("Final")}
           />
         </View>
       </BackgroundModal>

@@ -3,7 +3,7 @@ import { createStackNavigator } from "react-navigation-stack";
 import {
   OnboardingAddPasswordScreen,
   OnboardingFeaturesScreen,
-  OnboardingThankYouScreen,
+  OnboardingFinalScreen,
   OnboardingWelcomeScreen,
 } from "screens";
 
@@ -12,7 +12,7 @@ import { stackConfig } from "./config";
 const screens = {
   AddPassword: OnboardingAddPasswordScreen,
   Features: OnboardingFeaturesScreen,
-  ThankYou: OnboardingThankYouScreen,
+  Final: OnboardingFinalScreen,
   Welcome: OnboardingWelcomeScreen,
 };
 

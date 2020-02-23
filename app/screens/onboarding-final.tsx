@@ -4,6 +4,7 @@ import { Mutation } from "react-apollo";
 import OneSignal from "react-native-onesignal";
 
 import { BackgroundModal, ButtonSubmit, Title } from "components";
+import { OnboardingFinalContent } from "content";
 import { NavigationType } from "interfaces";
 import { labels } from "labels";
 import { USER_DETAILS } from "queries";
@@ -19,7 +20,7 @@ interface State {
   display: "active" | "loading";
 }
 
-class OnboardingThankYouScreen extends Component<Props, State> {
+class OnboardingFinalScreen extends Component<Props, State> {
   constructor(props) {
     super(props);
     this.state = {
@@ -29,8 +30,8 @@ class OnboardingThankYouScreen extends Component<Props, State> {
 
   componentDidMount() {
     Analytics.trackContent({
-      contentType: "Onboarding",
       contentId: "onboarding-thank-you",
+      contentType: "Onboarding",
     });
   }
 
@@ -63,14 +64,15 @@ class OnboardingThankYouScreen extends Component<Props, State> {
   }
 
   render() {
-    const { thankYou } = labels.onboarding;
+    const { title } = labels.onboarding.final;
 
     return (
       <BackgroundModal>
         <View style={styles.content}>
           <Title text="4/4" small />
-          <Title style={styles.title} text={thankYou.title} />
-          <Title style={styles.subtitle} text={thankYou.text} />
+          <Title style={styles.title} text={title} />
+          <OnboardingFinalContent />
+
           <View style={styles.row}>
             <Mutation mutation={COMPLETE_USER_ONBOARDING}>
               {(completeUserOnboarding, {}) => (
@@ -98,15 +100,10 @@ const styles = StyleSheet.create({
     flexDirection: "row-reverse",
     marginBottom: layout.spacingL,
   },
-  subtitle: {
-    fontStyle: "italic",
-    fontWeight: "normal",
-    paddingBottom: layout.spacingL,
-  },
   title: {
     fontSize: typography.fontSizeXL,
     paddingBottom: layout.spacingL,
   },
 });
 
-export { OnboardingThankYouScreen };
+export { OnboardingFinalScreen };

@@ -36,13 +36,18 @@ exports[`StaticContentScreen renders correctly with optional props 1`] = `
       }
     }
   >
+    <Title
+      text="Title"
+    />
     <View
       style={
         Object {
           "width": "100%",
         }
       }
-    />
+    >
+      <Component />
+    </View>
   </ScrollViewMock>
 </BackgroundContainer>
 `;
@@ -66,7 +71,9 @@ exports[`StaticContentScreen renders correctly without optional props 1`] = `
           "width": "100%",
         }
       }
-    />
+    >
+      <Component />
+    </View>
   </ScrollViewMock>
 </BackgroundContainer>
 `;

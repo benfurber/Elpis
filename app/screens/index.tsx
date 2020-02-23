@@ -8,7 +8,7 @@ export { MenuScreen } from "./menu";
 export { NotificationScreen } from "./notification";
 export { OnboardingAddPasswordScreen } from "./onboarding-add-password";
 export { OnboardingFeaturesScreen } from "./onboarding-features";
-export { OnboardingThankYouScreen } from "./onboarding-thank-you";
+export { OnboardingFinalScreen } from "./onboarding-final";
 export { OnboardingWelcomeScreen } from "./onboarding-welcome";
 export { PostScreen } from "./post";
 export { StaticContentScreen } from "./static-content";

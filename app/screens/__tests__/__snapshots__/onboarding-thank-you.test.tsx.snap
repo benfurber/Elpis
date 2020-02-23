@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`OnboardingThankYouScreen renders correctly 1`] = `
+exports[`OnboardingFinalScreen renders correctly 1`] = `
 <BackgroundModal>
   <View
     style={
@@ -21,20 +21,9 @@ exports[`OnboardingThankYouScreen renders correctly 1`] = `
           "paddingBottom": 20,
         }
       }
-      text="Por favor, complete o seu perfil."
+      text="Ajude a Comunidade"
     />
-    <Title
-      style={
-        Object {
-          "fontStyle": "italic",
-          "fontWeight": "normal",
-          "paddingBottom": 20,
-        }
-      }
-      text="Por favor, lembre-se de dar o máximo de feedback que puder.
-
-Nós não poderemos construir algo incrível se você não nos disser o que pensa."
-    />
+    <OnboardingFinalContent />
     <View
       style={
         Object {

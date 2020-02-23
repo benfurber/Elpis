@@ -34,7 +34,7 @@ target 'Elpis' do
   pod 'glog', :podspec => '../node_modules/react-native/third-party-podspecs/glog.podspec'
   pod 'Folly', :podspec => '../node_modules/react-native/third-party-podspecs/Folly.podspec'
 
-  pod 'Mixpanel', '~> 3.5.0'
+  pod 'Mixpanel', '3.5.1'
 
   pod 'react-native-onesignal', :path => '../node_modules/react-native-onesignal'
 
