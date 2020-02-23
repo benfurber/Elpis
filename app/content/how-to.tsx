@@ -11,7 +11,6 @@ const HowToContent = () => {
 
   return (
     <View>
-      <Icon name="hands-helping" size={40} colour={colours.navyBlueDark} />
       <Title text={title} large />
       <OnboardingFeaturesContent />
       <OnboardingFinalContent />
