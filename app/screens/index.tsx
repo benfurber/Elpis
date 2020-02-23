@@ -1,6 +1,7 @@
 export { AddReplyScreen } from "./add-reply";
 export { AddTopicScreen } from "./add-topic";
 export { AuthLoadingScreen } from "./auth-loading";
+export { EditProfileScreen } from "./edit-profile";
 export { FeedScreen } from "./feed";
 export { FeedbackScreen } from "./feedback";
 export { FormContainerScreen } from "./form-container";
