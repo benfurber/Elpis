@@ -8,14 +8,15 @@ import {
 } from "react-native";
 import { withMappedNavigationParams } from "react-navigation-props-mapper";
 
-import { BackgroundContainer, Icon } from "components";
+import { BackgroundContainer, Icon, Title } from "components";
 import { NavigationType } from "interfaces";
 import { colours, layout } from "styles";
 
 interface Props {
   backToText?: string;
-  content: Component;
+  content: () => JSX.Element | Component;
   navigation: NavigationType;
+  title?: string;
 }
 
 class StaticContentScreen extends Component<Props> {
@@ -33,12 +34,13 @@ class StaticContentScreen extends Component<Props> {
   }
 
   render() {
-    const { content } = this.props;
+    const { content, title } = this.props;
 
     return (
       <BackgroundContainer>
         {this.backButton()}
         <ScrollView style={styles.scrollView}>
+          {title && <Title text={title} />}
           <View style={styles.body}>{content}</View>
         </ScrollView>
       </BackgroundContainer>

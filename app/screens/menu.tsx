@@ -7,12 +7,11 @@ import {
   ButtonLogout,
   Title,
 } from "components";
+import { CommunityContent, HowToContent } from "content";
 import { NavigationType } from "interfaces";
 import { labels } from "labels";
 import { layout, typography, colours } from "styles";
 import { Analytics } from "utils";
-
-import { Community } from "../content/community";
 
 interface Props {
   navigation: NavigationType;
@@ -35,7 +34,7 @@ class MenuScreen extends Component<Props> {
           onPress={() =>
             navigation.navigate("CommunityRules", {
               backToText: labels.back.toMenu,
-              content: <Community />,
+              content: <CommunityContent />,
             })
           }
           text={communityRules.title}
@@ -45,6 +44,7 @@ class MenuScreen extends Component<Props> {
           onPress={() =>
             navigation.navigate("HowTo", {
               backToText: labels.back.toMenu,
+              content: <HowToContent />,
             })
           }
           text={howTo.title}
