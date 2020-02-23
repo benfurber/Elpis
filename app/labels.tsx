@@ -76,7 +76,8 @@ const labels = {
       title: "Por favor, complete o seu perfil.",
     },
     welcome: {
-      text: "Muitas palavras aqui.",
+      text:
+        "Estou muito feliz que você está aqui. Foram anos idealizando, planejando e desenvolvendo esse espaço. Quero que você se sinta acolhida e segura para ler sobre assuntos relacionados ao feminismo, aprender com outras usuárias e compartilhar suas experiências com a comunidade.",
       title: "Bem vinda à Elpis",
     },
   },
