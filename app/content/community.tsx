@@ -50,7 +50,7 @@ const SectionContainer = ({ sectionList }) => {
   ));
 };
 
-const Community = () => {
+const CommunityContent = () => {
   const { title } = labels.communityRules;
 
   return (
@@ -68,4 +68,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export { Community };
+export { CommunityContent };
