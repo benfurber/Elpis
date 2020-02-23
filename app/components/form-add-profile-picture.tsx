@@ -8,6 +8,7 @@ import {
   MessageBox,
   ProfilePictureField,
   Title,
+  Loading,
 } from "components";
 import { NavigationType } from "interfaces";
 import { labels } from "labels";
@@ -78,9 +79,9 @@ class FormAddProfilePicture extends Component<Props, State> {
     this.setState({ uploadCondition: "uploading" });
     sendImage({
       selectedImage,
+      setError,
       setProgress,
       setState,
-      setError,
     });
   };
 
@@ -130,6 +131,7 @@ class FormAddProfilePicture extends Component<Props, State> {
               labels.uploadingImage
             }: ${this.state.progressPercentage.toFixed(0)}%`}
           />
+          <Loading />
         </View>
       );
     }

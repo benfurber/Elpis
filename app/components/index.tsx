@@ -21,6 +21,7 @@ export { Logo } from "./logo";
 export { MessageBox } from "./message-box";
 export { NoContent } from "./no-content";
 export { Notifications } from "./notifications";
+export { ProfilePictureField } from "./profile-picture-field";
 export { Post } from "./post";
 export { Query } from "./query";
 export { RichTextDisplay } from "./rich-text-display";
