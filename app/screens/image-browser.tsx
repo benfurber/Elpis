@@ -6,13 +6,14 @@ import {
   StyleSheet,
   TouchableHighlight,
   View,
+  TouchableOpacity,
 } from "react-native";
 import { withMappedNavigationParams } from "react-navigation-props-mapper";
 
-import { BackgroundContainer } from "components";
+import { BackgroundContainer, Icon } from "components";
 import { NavigationType } from "interfaces";
 import { labels } from "labels";
-import { colours } from "styles";
+import { colours, layout } from "styles";
 
 const { width } = Dimensions.get("window");
 const borderWidth = 3;
@@ -26,27 +27,32 @@ interface Props {
 }
 
 class ImageBrowserScreen extends Component<Props> {
-  static navigationOptions = ({ navigation, sendImage }) => {
-    const button = (
-      <Button
-        onPress={() => {
-          navigation.pop();
-          return sendImage();
-        }}
-        title={labels.select}
-        color={colours.darkGrey}
-      />
-    );
-
-    return {
-      title: "Photos",
-      headerRight: button,
-    };
-  };
-
   state = {
     index: null,
   };
+
+  backAction() {
+    const { navigation, sendImage } = this.props;
+    const { index } = this.state;
+
+    if (index) {
+      return (
+        <Button
+          onPress={() => {
+            navigation.pop();
+            return sendImage();
+          }}
+          title={labels.select}
+          color={colours.darkGrey}
+        />
+      );
+    }
+    return (
+      <TouchableOpacity onPress={() => navigation.pop()}>
+        <Icon name="times-circle" size={30} />
+      </TouchableOpacity>
+    );
+  }
 
   setIndex = index => {
     const { navigation, selectImage } = this.props;
@@ -77,8 +83,8 @@ class ImageBrowserScreen extends Component<Props> {
       >
         <Image
           style={{
-            width: imageWidth,
             height: imageWidth,
+            width: imageWidth,
           }}
           source={{ uri: item.node.image.uri }}
         />
@@ -95,6 +101,10 @@ class ImageBrowserScreen extends Component<Props> {
   render() {
     return (
       <BackgroundContainer>
+        <View>
+          <View style={styles.closeContainer}>{this.backAction()}</View>
+        </View>
+
         <View style={styles.container}>{this.renderImageLoop()}</View>
       </BackgroundContainer>
     );
@@ -102,6 +112,10 @@ class ImageBrowserScreen extends Component<Props> {
 }
 
 const styles = StyleSheet.create({
+  closeContainer: {
+    flexDirection: "row-reverse",
+    padding: layout.spacing,
+  },
   container: {
     flexDirection: "row",
     flexWrap: "wrap",
@@ -115,8 +129,8 @@ const styles = StyleSheet.create({
     opacity: 0.5,
   },
   unselectedHighlight: {
-    opacity: 1,
     borderColor: colours.whiteTransparentHigh,
+    opacity: 1,
   },
 });
 
