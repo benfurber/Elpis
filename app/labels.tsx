@@ -27,6 +27,7 @@ const labels = {
     noContent: "Conteúdo não encontrado",
   },
   formButton: "Enviar",
+  editProfile: "Editar o meu perfil",
   howTo: {
     title: "Como usar o aplicativo",
   },
