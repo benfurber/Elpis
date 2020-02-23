@@ -1,6 +1,11 @@
 import { createStackNavigator } from "react-navigation-stack";
 
-import { MenuScreen, StaticContentScreen } from "screens";
+import {
+  EditProfileScreen,
+  ImageBrowserScreen,
+  MenuScreen,
+  StaticContentScreen,
+} from "screens";
 
 import { stackConfig } from "./config";
 
@@ -11,7 +16,9 @@ const options = {
 
 const screens = {
   CommunityRules: StaticContentScreen,
+  EditProfile: EditProfileScreen,
   HowTo: StaticContentScreen,
+  ImageBrowser: ImageBrowserScreen,
   Menu: MenuScreen,
 };
 
