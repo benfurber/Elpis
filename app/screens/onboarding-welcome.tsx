@@ -31,7 +31,10 @@ function OnboardingWelcomeScreen(props: Props) {
     <BackgroundModal>
       <View style={styles.content}>
         <Title text={"1/4"} small />
-        <Title style={styles.title} text={`${welcome.title} \n${name || ""}`} />
+        <Title
+          style={styles.title}
+          text={`${welcome.title}, \n${name || ""}`}
+        />
         <Text style={styles.text}>{welcome.text}</Text>
 
         <View style={styles.row}>

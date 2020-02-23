@@ -51,29 +51,31 @@ const labels = {
   ok: "OK",
   onboarding: {
     features: {
-      giveFeedbackBody:
-        "A menos que você nos diga o que pensa, não poderemos criar um ótimo espaço para mulheres debaterem e se sentirem seguras, para que assim possamos melhorar a qualidade das nossas discussões.",
-      giveFeedbackTitle: "Dê o seu feedback",
       joinDiscussionBody:
-        "Você pode entrar no debate e participar da discussão de cada post no feed de duas maneiras diferentes.",
-      joinDiscussionTitle: "Entre no debate",
+        "A ideia é incentivar conversas de maneira positiva. Você pode participar de todos os debates:",
+      joinDiscussionTitle: "Entre no debate construtivo",
       repliesBody:
-        "Cada tópico pode ter várias respostas. Assim como comentários em redes sociais. Assim, você pode adicionar respostas dentro de um tópico específico.",
+        "Cada tópico pode conter respostas, como comentários em redes sociais.",
+      repliesTitle: "Deixando Respostas",
       theFeedBody:
-        "Neste momento, temos apenas um feed muito simples com posts feitos por mim falando sobre assuntos relacionados ao feminismo.",
+        "Imagine que a comunidade é um grande fórum. Você vai encontrar uma série de posts que, por enquanto, serão escritos por mim.",
       theFeedTitle: "O Feed",
       title: "O que esperar",
       topicsBody:
-        "Você pode adicionar um novo tópico com um 'título' e uma 'mensagem'. Como tópicos em um fórum. Assim, você pode iniciar um novo debate onde qualquer usuária pode comentar.",
+        "Podem conter um ’título’ e uma ‘mensagem’. Dentro de cada tópico, usuárias podem responder o seu tópico - e responder a si mesmas, criando um debate.",
+      topicsTitle: "Criando Tópicos",
+    },
+    final: {
+      communityRulesBody:
+        "Lembre-se que estamos aqui para aprender e ensinar. Falar e também ouvir. Todas as usuárias da comunidade são mulheres reais.",
+      communityRulesTitle: "Criando uma\ncomunidade incrível",
+      feedbackBody:
+        "Nós queremos melhorar o aplicativo cada vez mais. Sua opinião sobre Elpis é muito importante para que possamos desenvolver um aplicativo incrível!",
+      feedbackTitle: "Feedback",
+      title: "Ajude a Comunidade",
     },
     password: {
       title: "Crie uma senha",
-    },
-    thankYou: {
-      text:
-        "Por favor, lembre-se de dar o máximo de feedback que puder.\r\r" +
-        "Nós não poderemos construir algo incrível se você não nos disser o que pensa.",
-      title: "Por favor, complete o seu perfil.",
     },
     welcome: {
       text:
