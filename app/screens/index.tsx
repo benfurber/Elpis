@@ -4,6 +4,7 @@ export { AuthLoadingScreen } from "./auth-loading";
 export { FeedScreen } from "./feed";
 export { FeedbackScreen } from "./feedback";
 export { FormContainerScreen } from "./form-container";
+export { ImageBrowserScreen } from "./image-browser";
 export { MenuScreen } from "./menu";
 export { NotificationScreen } from "./notification";
 export { OnboardingAddPasswordScreen } from "./onboarding-add-password";
