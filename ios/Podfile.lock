@@ -19,8 +19,8 @@ PODS:
     - DoubleConversion
     - glog
   - glog (0.3.5)
-  - Mixpanel (3.5.0)
-  - OneSignal (2.12.3)
+  - Mixpanel (3.5.1)
+  - OneSignal (2.12.6)
   - RCTRequired (0.61.4)
   - RCTTypeSafety (0.61.4):
     - FBLazyVector (= 0.61.4)
@@ -184,15 +184,15 @@ PODS:
     - React-cxxreact (= 0.61.4)
     - React-jsi (= 0.61.4)
   - React-jsinspector (0.61.4)
-  - react-native-cameraroll (1.1.1):
+  - react-native-cameraroll (1.4.1):
     - React
   - react-native-mixpanel (1.1.14):
     - Mixpanel (~> 3.5.0)
     - React
-  - react-native-onesignal (3.6.1):
-    - OneSignal (= 2.12.3)
+  - react-native-onesignal (3.6.4):
+    - OneSignal (= 2.12.6)
     - React (< 1.0.0, >= 0.13.0)
-  - react-native-webview (7.6.0):
+  - react-native-webview (8.0.3):
     - React
   - React-RCTActionSheet (0.61.4):
     - React-Core/RCTActionSheetHeaders (= 0.61.4)
@@ -231,11 +231,13 @@ PODS:
     - ReactCommon/jscallinvoker (= 0.61.4)
   - RNBootSplash (1.2.1):
     - React
-  - RNCAsyncStorage (1.7.1):
+  - RNCAsyncStorage (1.8.0):
     - React
-  - RNGestureHandler (1.5.3):
+  - RNGestureHandler (1.6.0):
     - React
-  - RNReanimated (1.4.0):
+  - RNReanimated (1.7.0):
+    - React
+  - RNScreens (2.0.0-beta.10):
     - React
   - RNVectorIcons (6.6.0):
     - React
@@ -247,7 +249,7 @@ DEPENDENCIES:
   - FBReactNativeSpec (from `../node_modules/react-native/Libraries/FBReactNativeSpec`)
   - Folly (from `../node_modules/react-native/third-party-podspecs/Folly.podspec`)
   - glog (from `../node_modules/react-native/third-party-podspecs/glog.podspec`)
-  - Mixpanel (~> 3.5.0)
+  - Mixpanel (= 3.5.1)
   - OneSignal (< 3.0, >= 2.9.3)
   - RCTRequired (from `../node_modules/react-native/Libraries/RCTRequired`)
   - RCTTypeSafety (from `../node_modules/react-native/Libraries/TypeSafety`)
@@ -279,6 +281,7 @@ DEPENDENCIES:
   - "RNCAsyncStorage (from `../node_modules/@react-native-community/async-storage`)"
   - RNGestureHandler (from `../node_modules/react-native-gesture-handler`)
   - RNReanimated (from `../node_modules/react-native-reanimated`)
+  - RNScreens (from `../node_modules/react-native-screens`)
   - RNVectorIcons (from `../node_modules/react-native-vector-icons`)
   - Yoga (from `../node_modules/react-native/ReactCommon/yoga`)
 
@@ -353,6 +356,8 @@ EXTERNAL SOURCES:
     :path: "../node_modules/react-native-gesture-handler"
   RNReanimated:
     :path: "../node_modules/react-native-reanimated"
+  RNScreens:
+    :path: "../node_modules/react-native-screens"
   RNVectorIcons:
     :path: "../node_modules/react-native-vector-icons"
   Yoga:
@@ -365,8 +370,8 @@ SPEC CHECKSUMS:
   FBReactNativeSpec: 51477b84b1bf7ab6f9ef307c24e3dd675391be44
   Folly: 30e7936e1c45c08d884aa59369ed951a8e68cf51
   glog: 1f3da668190260b06b429bb211bfbee5cd790c28
-  Mixpanel: 399997670f5452de026449f9e9ecd52eccbb9ff7
-  OneSignal: 30b6e03a1f14169c4313e301a7b7bdf467b5a575
+  Mixpanel: 1839fc7299c43b009c301883f895423715437431
+  OneSignal: a6df91542d1cf133b9dd19d89f2b533d8f2d3163
   RCTRequired: f3b3fb6f4723e8e52facb229d0c75fdc76773849
   RCTTypeSafety: 2ec60de6abb1db050b56ecc4b60188026078fd10
   React: 10e0130b57e55a7cd8c3dee37c1261102ce295f4
@@ -376,10 +381,10 @@ SPEC CHECKSUMS:
   React-jsi: ca921f4041505f9d5197139b2d09eeb020bb12e8
   React-jsiexecutor: 8dfb73b987afa9324e4009bdce62a18ce23d983c
   React-jsinspector: d15478d0a8ada19864aa4d1cc1c697b41b3fa92f
-  react-native-cameraroll: 976d4c5c72f3d06f0725a6e2e956b183744ea00e
+  react-native-cameraroll: 875e31fc43d4a5d8694c85a71c53dcf42f72f608
   react-native-mixpanel: 37a6602a70bc6ff835d506b6d0274b75edcec4da
-  react-native-onesignal: 9ff0097cc4af1bb141eb2c4774d65b43045dcbb0
-  react-native-webview: db4682f1698ab4b17a5e88f951031d203ff8aea8
+  react-native-onesignal: 80fc3683083d23b17a2aba180f965dc83bd77efd
+  react-native-webview: 57cdcf9981594a1a7de36ecfe7f079379543ef1f
   React-RCTActionSheet: 7369b7c85f99b6299491333affd9f01f5a130c22
   React-RCTAnimation: d07be15b2bd1d06d89417eb0343f98ffd2b099a7
   React-RCTBlob: 8e0b23d95c9baa98f6b0e127e07666aaafd96c34
@@ -391,12 +396,13 @@ SPEC CHECKSUMS:
   React-RCTVibration: 0f76400ee3cec6edb9c125da49fed279340d145a
   ReactCommon: a6a294e7028ed67b926d29551aa9394fd989c24c
   RNBootSplash: 823a7eacaf6aa6e4725bf8dee9f6eeb013b27bc9
-  RNCAsyncStorage: 44395cb9c7c1523104c2b499eb426ef7aff82bca
-  RNGestureHandler: 02905abe54e1f6e59c081a10b4bd689721e17aa6
-  RNReanimated: b2ab0b693dddd2339bd2f300e770f6302d2e960c
+  RNCAsyncStorage: 5d83b49070d41fd72906a116c5e7bdac4ea3a814
+  RNGestureHandler: dde546180bf24af0b5f737c8ad04b6f3fa51609a
+  RNReanimated: 031fe8d9ea93c2bd689a40f05320ef9d96f74d7f
+  RNScreens: c596b54c3ab63b0390aa3cb081edd438147d40ae
   RNVectorIcons: 0bb4def82230be1333ddaeee9fcba45f0b288ed4
   Yoga: ba3d99dbee6c15ea6bbe3783d1f0cb1ffb79af0f
 
-PODFILE CHECKSUM: 1fca7289f56f9bdbf130f0f04a75b076061cd18e
+PODFILE CHECKSUM: 654d74ce51f1e9d0ab5caac2a72ddadf05141bf6
 
 COCOAPODS: 1.8.4
