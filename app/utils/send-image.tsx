@@ -5,11 +5,11 @@ import { labels } from "labels";
 import { S3_USER_ACCESS, S3_USER_SECRET } from "react-native-dotenv";
 
 const options = {
-  acl: "public-read-write",
-  keyPrefix: "uploads/",
-  bucket: "elpis-profile-images",
-  region: "sa-east-1",
   accessKey: S3_USER_ACCESS,
+  acl: "public-read-write",
+  bucket: "elpis-profile-images",
+  keyPrefix: "uploads/",
+  region: "sa-east-1",
   secretKey: S3_USER_SECRET,
   successActionStatus: 201,
 };
@@ -31,9 +31,9 @@ const sendImage = (props: Props) => {
 
   const { filename, uri } = selectedImage.node.image;
   const file = {
-    uri,
     name: `${date}-${filename}`,
     type: "image/jpg",
+    uri,
   };
 
   RNS3.put(file, options)
