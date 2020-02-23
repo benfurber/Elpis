@@ -9,6 +9,7 @@ export { ButtonSubmit } from "./button-submit";
 export { Comments } from "./comments";
 export { DisplayContent } from "./display-content";
 export { ErrorMessage } from "./error-message";
+export { FormAddProfilePicture } from "./form-add-profile-picture";
 export { FormAddPassword } from "./form-add-password";
 export { IconTabBar } from "./icon-tab-bar";
 export { Icon } from "./icon";
