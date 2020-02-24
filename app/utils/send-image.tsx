@@ -19,11 +19,11 @@ interface Props {
   selectedImage: null | PhotoIdentifier;
   setError: (string) => void;
   setProgress: (number) => void;
-  setState: (string) => void;
+  successCallback: (url) => void;
 }
 
 const sendImage = (props: Props) => {
-  const { selectedImage, setError, setProgress, setState } = props;
+  const { selectedImage, setError, setProgress, successCallback } = props;
   if (selectedImage === null) {
     return setError(labels.noImageSelected);
   }
@@ -49,7 +49,8 @@ const sendImage = (props: Props) => {
           if (response.status !== 201) {
             throw setError("Failed to upload image to S3");
           }
-          return setState(response.body.postResponse.location);
+          const url = response.body.postResponse.location;
+          return successCallback(url);
         })
         .catch(error => {
           throw setError(error.text);

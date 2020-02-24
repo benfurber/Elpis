@@ -1,20 +1,13 @@
 import React, { Component } from "react";
 import { StyleSheet, View } from "react-native";
 import { PhotoIdentifier } from "@react-native-community/cameraroll";
-import { Mutation } from "react-apollo";
 
-import {
-  ButtonSubmit,
-  MessageBox,
-  ProfilePictureField,
-  Title,
-  Loading,
-} from "components";
+import { MessageBox, ProfilePictureField, Title, Loading } from "components";
 import { NavigationType } from "interfaces";
 import { labels } from "labels";
 import { ADD_USER_PROFILE_PICTURE } from "mutations";
 import { layout } from "styles";
-import { sendImage } from "utils";
+import { client, sendImage } from "utils";
 
 interface Props {
   navigation: NavigationType;
@@ -50,17 +43,22 @@ class FormAddProfilePicture extends Component<Props, State> {
     });
   }
 
-  sendImageCallback = () => {
+  sendImageCallback = async () => {
     const { selectedImage } = this.state;
 
-    const setState = remoteImagePath =>
+    const successCallback = async avatarPath => {
+      await client.mutate({
+        mutation: ADD_USER_PROFILE_PICTURE,
+        variables: { avatarPath },
+      });
       this.setState({
         display: "active",
         displayMessage: "passive",
         message: null,
-        remoteImagePath,
+        remoteImagePath: avatarPath,
         uploadCondition: "uploaded",
       });
+    };
 
     const setProgress = progressPercentage =>
       this.setState({
@@ -81,7 +79,7 @@ class FormAddProfilePicture extends Component<Props, State> {
       selectedImage,
       setError,
       setProgress,
-      setState,
+      successCallback,
     });
   };
 
@@ -150,18 +148,6 @@ class FormAddProfilePicture extends Component<Props, State> {
             this.setState({ selectedImage });
           }}
         />
-
-        <View style={styles.row}>
-          <Mutation mutation={ADD_USER_PROFILE_PICTURE}>
-            {(linkUserProfilePicture, {}) => (
-              <ButtonSubmit
-                display={display}
-                label={labels.formButton}
-                onPress={() => this.onPress(linkUserProfilePicture)}
-              />
-            )}
-          </Mutation>
-        </View>
       </View>
     );
   }
