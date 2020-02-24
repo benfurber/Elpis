@@ -1,3 +1,4 @@
+import ImageResizer from "react-native-image-resizer";
 import { RNS3 } from "react-native-s3-upload";
 import { PhotoIdentifier } from "@react-native-community/cameraroll";
 
@@ -30,25 +31,32 @@ const sendImage = (props: Props) => {
   const date = Date.now();
 
   const { filename, uri } = selectedImage.node.image;
-  const file = {
-    name: `${date}-${filename}`,
-    type: "image/jpg",
-    uri,
-  };
 
-  RNS3.put(file, options)
-    .progress(response => {
-      const percentage = response.loaded / response.total;
-      return setProgress(percentage);
-    })
+  ImageResizer.createResizedImage(uri, 300, 300, "JPEG", 85)
     .then(response => {
-      if (response.status !== 201) {
-        throw new Error("Failed to upload image to S3");
-      }
-      return setState(response.body.postResponse.location);
+      const file = {
+        name: `${date}-${filename}`,
+        type: "image/jpg",
+        uri: response.uri,
+      };
+
+      RNS3.put(file, options)
+        .progress(response => {
+          const percentage = response.loaded / response.total;
+          return setProgress(percentage);
+        })
+        .then(response => {
+          if (response.status !== 201) {
+            throw setError("Failed to upload image to S3");
+          }
+          return setState(response.body.postResponse.location);
+        })
+        .catch(error => {
+          throw setError(error.text);
+        });
     })
-    .catch(error => {
-      throw setError(error.text);
+    .catch(err => {
+      throw setError(err);
     });
 };
 
