@@ -3,6 +3,7 @@ import {
   Button,
   Dimensions,
   Image,
+  ScrollView,
   StyleSheet,
   TouchableHighlight,
   View,
@@ -104,8 +105,9 @@ class ImageBrowserScreen extends Component<Props> {
         <View>
           <View style={styles.closeContainer}>{this.backAction()}</View>
         </View>
-
-        <View style={styles.container}>{this.renderImageLoop()}</View>
+        <ScrollView contentContainerStyle={styles.container}>
+          {this.renderImageLoop()}
+        </ScrollView>
       </BackgroundContainer>
     );
   }
