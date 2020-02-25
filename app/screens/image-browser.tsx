@@ -2,23 +2,17 @@ import React, { Component } from "react";
 import {
   Button,
   Dimensions,
-  Image,
   ScrollView,
   StyleSheet,
-  TouchableHighlight,
   View,
   TouchableOpacity,
 } from "react-native";
 import { withMappedNavigationParams } from "react-navigation-props-mapper";
 
-import { BackgroundContainer, Icon } from "components";
+import { BackgroundContainer, Icon, ThumbnailImageBrowser } from "components";
 import { NavigationType } from "interfaces";
 import { labels } from "labels";
 import { colours, layout } from "styles";
-
-const { width } = Dimensions.get("window");
-const borderWidth = 3;
-const imageWidth = width / 3 - borderWidth * 2;
 
 interface Props {
   navigation: NavigationType;
@@ -48,6 +42,7 @@ class ImageBrowserScreen extends Component<Props> {
         />
       );
     }
+
     return (
       <TouchableOpacity onPress={() => navigation.pop()}>
         <Icon name="times-circle" size={30} />
@@ -67,36 +62,25 @@ class ImageBrowserScreen extends Component<Props> {
     return selectImage(index);
   };
 
-  renderItem(item, index) {
-    const selectStyles =
-      index === this.state.index
-        ? styles.selectedHighlight
-        : styles.unselectedHighlight;
-    const underlayColor =
-      index === this.state.index ? "transparent" : colours.emeraldGreen;
+  renderImage(image, index) {
+    const selected = index === this.state.index;
+    const { width } = Dimensions.get("window");
 
     return (
-      <TouchableHighlight
-        key={index}
-        onPress={() => this.setIndex(index)}
-        style={[styles.highlight, selectStyles]}
-        underlayColor={underlayColor}
-      >
-        <Image
-          style={{
-            height: imageWidth,
-            width: imageWidth,
-          }}
-          source={{ uri: item.node.image.uri }}
-        />
-      </TouchableHighlight>
+      <ThumbnailImageBrowser
+        image={image}
+        imageIndex={index}
+        selected={selected}
+        setIndexCallback={index => this.setIndex(index)}
+        width={width}
+      />
     );
   }
 
   renderImageLoop() {
     const { images } = this.props;
 
-    return images.map((image, index) => this.renderItem(image, index));
+    return images.map((image, index) => this.renderImage(image, index));
   }
 
   render() {
@@ -122,17 +106,6 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     flexWrap: "wrap",
     width: "100%",
-  },
-  highlight: {
-    borderWidth,
-  },
-  selectedHighlight: {
-    borderColor: colours.emeraldGreen,
-    opacity: 0.5,
-  },
-  unselectedHighlight: {
-    borderColor: colours.whiteTransparentHigh,
-    opacity: 1,
   },
 });
 

@@ -26,5 +26,6 @@ export { Post } from "./post";
 export { Query } from "./query";
 export { RichTextDisplay } from "./rich-text-display";
 export { TextInput } from "./text-input";
+export { ThumbnailImageBrowser } from "./thumbnail-image-browser";
 export { Title } from "./title";
 export { WebView } from "./web-view";
