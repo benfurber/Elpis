@@ -23,6 +23,7 @@
     "apollo-link-context": "1.0.19",
     "apollo-link-error": "1.1.12",
     "apollo-link-http": "1.5.16",
+    "aws-sdk": "^2.626.0",
     "enzyme": "3.11.0",
     "enzyme-adapter-react-16": "1.15.2",
     "enzyme-to-json": "3.4.3",
