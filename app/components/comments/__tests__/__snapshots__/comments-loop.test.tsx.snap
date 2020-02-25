@@ -5,6 +5,7 @@ exports[`Comments<CommentsLoop> when there are comments renders correctly 1`] = 
   style={
     Object {
       "flex": 1,
+      "paddingBottom": 20,
       "width": "100%",
     }
   }
@@ -71,6 +72,7 @@ exports[`Comments<CommentsLoop> when there are no comments renders correctly 1`]
   style={
     Object {
       "flex": 1,
+      "paddingBottom": 20,
       "width": "100%",
     }
   }

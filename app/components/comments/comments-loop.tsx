@@ -69,6 +69,7 @@ const styles = StyleSheet.create({
   },
   container: {
     flex: 1,
+    paddingBottom: layout.spacingL,
     width: "100%",
   },
   titleContainer: {
