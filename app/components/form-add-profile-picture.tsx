@@ -129,7 +129,7 @@ class FormAddProfilePicture extends Component<Props, State> {
               labels.uploadingImage
             }: ${this.state.progressPercentage.toFixed(0)}%`}
           />
-          <Loading />
+          <Loading blueMode />
         </View>
       );
     }
