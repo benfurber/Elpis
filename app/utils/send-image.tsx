@@ -1,19 +1,11 @@
 import ImageResizer from "react-native-image-resizer";
-import { RNS3 } from "react-native-s3-upload";
+import AWS from "aws-sdk/dist/aws-sdk-react-native";
 import { PhotoIdentifier } from "@react-native-community/cameraroll";
+import fs from "react-native-fs";
+import { decode } from "base64-arraybuffer";
 
 import { labels } from "labels";
 import { S3_USER_ACCESS, S3_USER_SECRET } from "react-native-dotenv";
-
-const options = {
-  accessKey: S3_USER_ACCESS,
-  acl: "public-read-write",
-  bucket: "elpis-profile-images",
-  keyPrefix: "uploads/",
-  region: "sa-east-1",
-  secretKey: S3_USER_SECRET,
-  successActionStatus: 201,
-};
 
 interface Props {
   selectedImage: null | PhotoIdentifier;
@@ -22,43 +14,54 @@ interface Props {
   successCallback: (url) => void;
 }
 
-const sendImage = (props: Props) => {
+async function sendImage(props: Props) {
   const { selectedImage, setError, setProgress, successCallback } = props;
   if (selectedImage === null) {
     return setError(labels.noImageSelected);
   }
 
   const date = Date.now();
-
   const { filename, uri } = selectedImage.node.image;
 
-  ImageResizer.createResizedImage(uri, 300, 300, "JPEG", 85)
-    .then(response => {
-      const file = {
-        name: `${date}-${filename}`,
-        type: "image/jpg",
-        uri: response.uri,
-      };
+  const resizedFile = await ImageResizer.createResizedImage(
+    uri,
+    300,
+    300,
+    "JPEG",
+    85,
+  );
 
-      RNS3.put(file, options)
-        .progress(response => {
-          const percentage = response.loaded / response.total;
-          return setProgress(percentage);
-        })
-        .then(response => {
-          if (response.status !== 201) {
-            throw setError("Failed to upload image to S3");
-          }
-          const url = response.body.postResponse.location;
-          return successCallback(url);
-        })
-        .catch(error => {
-          throw setError(error.text);
-        });
-    })
-    .catch(err => {
-      throw setError(err);
-    });
-};
+  const fPath = resizedFile.uri;
+  const base64 = await fs.readFile(fPath, "base64");
+
+  const arrayBuffer = decode(base64);
+
+  const initialiseOptions = {
+    accessKeyId: S3_USER_ACCESS,
+    region: "sa-east-1",
+    secretAccessKey: S3_USER_SECRET,
+  };
+  const s3 = new AWS.S3(initialiseOptions);
+
+  const uploadParams = {
+    ACL: "public-read-write",
+    Body: arrayBuffer,
+    Bucket: "elpis-profile-images",
+    ContentLength: resizedFile.size,
+    ContentType: "image/jpeg",
+    Key: `uploads/${date}-${filename}`,
+  };
+  const upload = s3.upload(uploadParams);
+
+  upload.on("httpUploadProgress", event => {
+    const percentage = event.loaded / (resizedFile.size || event.total);
+    setProgress(percentage);
+  });
+
+  upload.send((err, data) => {
+    if (err) setError(err.message);
+    return successCallback(data.Location);
+  });
+}
 
 export { sendImage };
