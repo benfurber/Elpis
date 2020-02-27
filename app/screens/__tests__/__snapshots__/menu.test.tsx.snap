@@ -21,6 +21,11 @@ exports[`MenuScreen renders correctly 1`] = `
     onPress={[Function]}
     text="Como usar o aplicativo"
   />
+  <ButtonMenuWrapper
+    iconName="user"
+    onPress={[Function]}
+    text="Editar o meu perfil"
+  />
   <ButtonLogout />
 </BackgroundContainer>
 `;

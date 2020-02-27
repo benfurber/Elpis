@@ -19,6 +19,10 @@ Object.assign(NativeModules, {
   },
 });
 
+jest.mock("react-native-fs", () => ({
+  fs: jest.fn(),
+}));
+
 jest.mock("react-native-mixpanel", () => ({
   sharedInstanceWithToken: jest.fn(() => Promise.resolve()),
   track: jest.fn(),

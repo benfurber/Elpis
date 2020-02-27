@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FormAddProfilePicture when active renders correctly 1`] = `
+<View>
+  <MessageBox
+    display="passive"
+    message="Por favor, deixe-nos ver o seu rosto."
+  />
+  <ProfilePictureField
+    clearUploadCondition={[Function]}
+    display="active"
+    image={null}
+    sendImage={[Function]}
+    setImage={[Function]}
+  />
+</View>
+`;

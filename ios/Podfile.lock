@@ -186,6 +186,8 @@ PODS:
   - React-jsinspector (0.61.4)
   - react-native-cameraroll (1.4.1):
     - React
+  - react-native-image-resizer (1.2.0):
+    - React
   - react-native-mixpanel (1.1.14):
     - Mixpanel (~> 3.5.0)
     - React
@@ -233,6 +235,8 @@ PODS:
     - React
   - RNCAsyncStorage (1.8.0):
     - React
+  - RNFS (2.16.6):
+    - React
   - RNGestureHandler (1.6.0):
     - React
   - RNReanimated (1.7.0):
@@ -263,6 +267,7 @@ DEPENDENCIES:
   - React-jsiexecutor (from `../node_modules/react-native/ReactCommon/jsiexecutor`)
   - React-jsinspector (from `../node_modules/react-native/ReactCommon/jsinspector`)
   - "react-native-cameraroll (from `../node_modules/@react-native-community/cameraroll`)"
+  - react-native-image-resizer (from `../node_modules/react-native-image-resizer`)
   - react-native-mixpanel (from `../node_modules/react-native-mixpanel`)
   - react-native-onesignal (from `../node_modules/react-native-onesignal`)
   - react-native-webview (from `../node_modules/react-native-webview`)
@@ -279,6 +284,7 @@ DEPENDENCIES:
   - ReactCommon/turbomodule/core (from `../node_modules/react-native/ReactCommon`)
   - RNBootSplash (from `../node_modules/react-native-bootsplash`)
   - "RNCAsyncStorage (from `../node_modules/@react-native-community/async-storage`)"
+  - RNFS (from `../node_modules/react-native-fs`)
   - RNGestureHandler (from `../node_modules/react-native-gesture-handler`)
   - RNReanimated (from `../node_modules/react-native-reanimated`)
   - RNScreens (from `../node_modules/react-native-screens`)
@@ -322,6 +328,8 @@ EXTERNAL SOURCES:
     :path: "../node_modules/react-native/ReactCommon/jsinspector"
   react-native-cameraroll:
     :path: "../node_modules/@react-native-community/cameraroll"
+  react-native-image-resizer:
+    :path: "../node_modules/react-native-image-resizer"
   react-native-mixpanel:
     :path: "../node_modules/react-native-mixpanel"
   react-native-onesignal:
@@ -352,6 +360,8 @@ EXTERNAL SOURCES:
     :path: "../node_modules/react-native-bootsplash"
   RNCAsyncStorage:
     :path: "../node_modules/@react-native-community/async-storage"
+  RNFS:
+    :path: "../node_modules/react-native-fs"
   RNGestureHandler:
     :path: "../node_modules/react-native-gesture-handler"
   RNReanimated:
@@ -382,6 +392,7 @@ SPEC CHECKSUMS:
   React-jsiexecutor: 8dfb73b987afa9324e4009bdce62a18ce23d983c
   React-jsinspector: d15478d0a8ada19864aa4d1cc1c697b41b3fa92f
   react-native-cameraroll: 875e31fc43d4a5d8694c85a71c53dcf42f72f608
+  react-native-image-resizer: efae8dd718cbd47755df95aa45ad859e701ad7d8
   react-native-mixpanel: 37a6602a70bc6ff835d506b6d0274b75edcec4da
   react-native-onesignal: 80fc3683083d23b17a2aba180f965dc83bd77efd
   react-native-webview: 57cdcf9981594a1a7de36ecfe7f079379543ef1f
@@ -397,6 +408,7 @@ SPEC CHECKSUMS:
   ReactCommon: a6a294e7028ed67b926d29551aa9394fd989c24c
   RNBootSplash: 823a7eacaf6aa6e4725bf8dee9f6eeb013b27bc9
   RNCAsyncStorage: 5d83b49070d41fd72906a116c5e7bdac4ea3a814
+  RNFS: 2bd9eb49dc82fa9676382f0585b992c424cd59df
   RNGestureHandler: dde546180bf24af0b5f737c8ad04b6f3fa51609a
   RNReanimated: 031fe8d9ea93c2bd689a40f05320ef9d96f74d7f
   RNScreens: c596b54c3ab63b0390aa3cb081edd438147d40ae

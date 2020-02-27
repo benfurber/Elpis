@@ -3,6 +3,7 @@ const labels = {
   addPhoto: "Adicionar foto",
   addPlaceholderBody: "Escreva o que você quiser dizer",
   addPlaceholderTitle: "Dê um título para o seu tópico para ficar em destaque",
+  addProfilePictureTitle: "Adicione uma imagem de perfil",
   addYourComment: "Adicione o seu comentário",
   addYourReply: "Adicione a sua resposta",
   askMeLater: "Pergunte-me depois",
@@ -26,6 +27,7 @@ const labels = {
     noContent: "Conteúdo não encontrado",
   },
   formButton: "Enviar",
+  editProfile: "Editar o meu perfil",
   howTo: {
     title: "Como usar o aplicativo",
   },

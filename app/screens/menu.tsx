@@ -23,7 +23,7 @@ class MenuScreen extends Component<Props> {
   }
 
   render() {
-    const { communityRules, howTo, menu } = labels;
+    const { communityRules, editProfile, howTo, menu } = labels;
     const { navigation } = this.props;
 
     return (
@@ -48,6 +48,15 @@ class MenuScreen extends Component<Props> {
             })
           }
           text={howTo.title}
+        />
+        <ButtonMenuWrapper
+          iconName="user"
+          onPress={() =>
+            navigation.navigate("EditProfile", {
+              backToText: labels.back.toMenu,
+            })
+          }
+          text={editProfile}
         />
         <ButtonLogout navigation={navigation} />
       </BackgroundContainer>

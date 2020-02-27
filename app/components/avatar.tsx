@@ -18,11 +18,11 @@ class Avatar extends Component<Props> {
     const path = avatarPath ? { uri: avatarPath } : require(annonProfilePath);
 
     const styleSet = {
-      small: elements.imageRoundSmall,
-      medium: elements.imageRound,
-      large: elements.imageRoundLarge,
-      xl: elements.imageRoundXL,
       feature: elements.imageRoundFeature,
+      large: elements.imageRoundLarge,
+      medium: elements.imageRound,
+      small: elements.imageRoundSmall,
+      xl: elements.imageRoundXL,
     };
 
     return (
