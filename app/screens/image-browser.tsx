@@ -32,14 +32,16 @@ class ImageBrowserScreen extends Component<Props> {
 
     if (index) {
       return (
-        <Button
-          onPress={() => {
-            navigation.pop();
-            return sendImage();
-          }}
-          title={labels.select}
-          color={colours.darkGrey}
-        />
+        <View style={styles.button}>
+          <Button
+            onPress={() => {
+              navigation.pop();
+              return sendImage();
+            }}
+            title={labels.select}
+            color={colours.pureWhite}
+          />
+        </View>
       );
     }
 
@@ -86,7 +88,7 @@ class ImageBrowserScreen extends Component<Props> {
   render() {
     return (
       <BackgroundContainer>
-        <View>
+        <View style={styles.header}>
           <View style={styles.closeContainer}>{this.backAction()}</View>
         </View>
         <ScrollView contentContainerStyle={styles.container}>
@@ -98,6 +100,10 @@ class ImageBrowserScreen extends Component<Props> {
 }
 
 const styles = StyleSheet.create({
+  button: {
+    backgroundColor: colours.emeraldGreen,
+    borderRadius: layout.borderRadius,
+  },
   closeContainer: {
     flexDirection: "row-reverse",
     padding: layout.spacing,
@@ -106,6 +112,9 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     flexWrap: "wrap",
     width: "100%",
+  },
+  header: {
+    height: 60,
   },
 });
 
