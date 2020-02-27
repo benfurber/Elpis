@@ -76,6 +76,7 @@ class FormAddProfilePicture extends Component<Props, State> {
 
     this.setState({ uploadCondition: "uploading" });
     sendImage({
+      resizeTo: { height: 300, width: 300 },
       selectedImage,
       setError,
       setProgress,

@@ -8,6 +8,7 @@ import { labels } from "labels";
 import { S3_USER_ACCESS, S3_USER_SECRET } from "react-native-dotenv";
 
 interface Props {
+  resizeTo: { height: number; width: number };
   selectedImage: null | PhotoIdentifier;
   setError: (string) => void;
   setProgress: (number) => void;
@@ -23,10 +24,11 @@ async function sendImage(props: Props) {
   const date = Date.now();
   const { filename, uri } = selectedImage.node.image;
 
+  const { height, width } = props.resizeTo;
   const resizedFile = await ImageResizer.createResizedImage(
     uri,
-    300,
-    300,
+    height,
+    width,
     "JPEG",
     85,
   );
