@@ -7,7 +7,9 @@ import CameraRoll, {
 import { Avatar, ButtonSubmit } from "components";
 import { NavigationType } from "interfaces";
 import { labels } from "labels";
+import { USER_AVATAR } from "queries";
 import { colours, elements, layout } from "styles";
+import { client } from "utils";
 
 interface Props {
   clearUploadCondition: () => void;
@@ -19,6 +21,7 @@ interface Props {
 }
 
 interface State {
+  currentAvatarPath: string | null;
   images: PhotoIdentifier[];
 }
 
@@ -26,8 +29,21 @@ class ProfilePictureField extends Component<Props, State> {
   constructor(props) {
     super(props);
     this.state = {
+      currentAvatarPath: null,
       images: [],
     };
+  }
+
+  async componentDidMount() {
+    if (!this.props.image) {
+      const query = USER_AVATAR;
+      const response = await client.query({
+        fetchPolicy: "network-only",
+        query,
+      });
+      const currentAvatarPath = response.data.me.avatarPath;
+      this.setState({ currentAvatarPath });
+    }
   }
 
   selectImage(index) {
@@ -47,11 +63,11 @@ class ProfilePictureField extends Component<Props, State> {
       const granted = await PermissionsAndroid.request(
         PermissionsAndroid.PERMISSIONS.READ_EXTERNAL_STORAGE,
         {
-          title: labels.permissionRequestPhotoLibraryBody,
-          message: labels.permissionRequestPhotoLibraryBody,
-          buttonNeutral: labels.askMeLater,
           buttonNegative: labels.cancel,
+          buttonNeutral: labels.askMeLater,
           buttonPositive: labels.ok,
+          message: labels.permissionRequestPhotoLibraryBody,
+          title: labels.permissionRequestPhotoLibraryBody,
         },
       );
       if (granted === PermissionsAndroid.RESULTS.GRANTED) {
@@ -72,24 +88,25 @@ class ProfilePictureField extends Component<Props, State> {
 
   handleButtonPress() {
     CameraRoll.getPhotos({
-      first: 500,
       assetType: "Photos",
+      first: 500,
     })
       .then(response => {
         this.setState({ images: response.edges });
         return this.navigateToImageBrowser();
       })
       .catch(error => {
-        console.log(error);
+        console.error(error);
       });
   }
 
   renderAvatar() {
     const { display, image } = this.props;
+    const { currentAvatarPath } = this.state;
     const errorStyle = display === "error" ? styles.imageContainerError : null;
 
     let path;
-    if (image) path = image.node.image.uri;
+    image ? (path = image.node.image.uri) : (path = currentAvatarPath);
 
     return (
       <View style={[styles.imageContainer, errorStyle]}>
@@ -118,10 +135,10 @@ const styles = StyleSheet.create({
     ...elements.imageRoundFeature,
   },
   imageContainer: {
-    borderRadius: elements.imageRoundFeature.borderRadius,
-    borderWidth: 2,
-    borderStyle: "dashed",
     borderColor: colours.emeraldGreen,
+    borderRadius: elements.imageRoundFeature.borderRadius,
+    borderStyle: "dashed",
+    borderWidth: 2,
     margin: layout.spacingS,
     marginRight: layout.spacing,
     padding: 2,

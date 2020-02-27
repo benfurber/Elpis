@@ -113,6 +113,15 @@ export const LINK = gql`
   }
 `;
 
+export const USER_AVATAR = gql`
+  query user {
+    me {
+      id
+      avatarPath
+    }
+  }
+`;
+
 export const USER_DETAILS = gql`
   query user {
     me {
