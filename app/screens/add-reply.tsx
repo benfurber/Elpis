@@ -56,7 +56,7 @@ class AddReplyScreen extends Component<Props, State> {
             autoFocus={true}
             editable={this.state.textInputEditable}
             multiline={true}
-            placeholder={labels.addPlaceholderTitle}
+            placeholder={labels.addPlaceholderBody}
             onChangeText={textInput => this.setState({ textInput })}
             value={this.state.textInput}
             returnKeyLabel={labels.submit}
