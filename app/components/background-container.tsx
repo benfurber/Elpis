@@ -1,23 +1,36 @@
 import React from "react";
 import { ImageBackground, SafeAreaView, StyleSheet, View } from "react-native";
 
-import { colours } from "styles";
+import { colours, layout } from "styles";
 
 interface Props {
   children: object;
+  header?: JSX.Element;
   style?: object;
   viewStyle?: object;
 }
 
+const Header = ({ header }: { header: Props["header"] }) => {
+  return (
+    <View style={styles.header}>
+      <View style={styles.closeContainer}>{header}</View>
+    </View>
+  );
+};
+
 const BackgroundContainer = (props: Props) => {
+  const { children, header, style, viewStyle } = props;
+  const { container, safeArea, viewContainer } = styles;
+
   return (
     <ImageBackground
       source={require("../assets/images/background.png")}
-      style={props.style || styles.container}
+      style={style || container}
     >
-      <SafeAreaView style={styles.safeArea}>
-        <View style={props.viewStyle || styles.viewContainer}>
-          {props.children}
+      <SafeAreaView style={safeArea}>
+        <View style={viewStyle || viewContainer}>
+          {header && <Header header={header} />}
+          {children}
         </View>
       </SafeAreaView>
     </ImageBackground>
@@ -25,10 +38,17 @@ const BackgroundContainer = (props: Props) => {
 };
 
 const styles = StyleSheet.create({
+  closeContainer: {
+    flexDirection: "row-reverse",
+    padding: layout.spacing,
+  },
   container: {
     backgroundColor: colours.transparentBlue,
     height: "100%",
     width: "100%",
+  },
+  header: {
+    height: 60,
   },
   safeArea: {
     flex: 1,
