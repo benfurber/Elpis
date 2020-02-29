@@ -11,7 +11,6 @@ exports[`FormAddProfilePicture when active renders correctly 1`] = `
     display="active"
     image={null}
     sendImage={[Function]}
-    setImage={[Function]}
   />
 </View>
 `;
