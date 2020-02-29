@@ -65,23 +65,23 @@ class FormAddProfilePicture extends Component<Props, State> {
         progressPercentage,
       });
 
-    const setError = error =>
+    this.setState({ uploadCondition: "uploading" });
+    try {
+      sendImage({
+        resizeTo: { height: 300, width: 300 },
+        selectedImage,
+        setProgress,
+        successCallback,
+      });
+    } catch (err) {
       this.setState({
         display: "error",
         displayMessage: "error",
-        message: error,
+        message: err.message,
         selectedImage: null,
         uploadCondition: null,
       });
-
-    this.setState({ uploadCondition: "uploading" });
-    sendImage({
-      resizeTo: { height: 300, width: 300 },
-      selectedImage,
-      setError,
-      setProgress,
-      successCallback,
-    });
+    }
   };
 
   onPress(mutation) {

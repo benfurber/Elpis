@@ -6,5 +6,6 @@ export { firstSentence } from "./first-sentence";
 export { formatDate } from "./format-date";
 export { ignoreWarnings } from "./ignore-warnings";
 export { pushNotifications } from "./push-notifications";
+export { resizeImage } from "./resize-image";
 export { sendImage } from "./send-image";
 export { validURL } from "./valid-url";
