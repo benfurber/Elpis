@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import {
+  PermissionsAndroid,
+  Platform,
   Button,
   Dimensions,
   ScrollView,
@@ -8,6 +10,9 @@ import {
   TouchableOpacity,
 } from "react-native";
 import { withMappedNavigationParams } from "react-navigation-props-mapper";
+import CameraRoll, {
+  PhotoIdentifier,
+} from "@react-native-community/cameraroll";
 
 import { BackgroundContainer, Icon, ThumbnailImageBrowser } from "components";
 import { NavigationType } from "interfaces";
@@ -16,27 +21,76 @@ import { colours, layout } from "styles";
 
 interface Props {
   navigation: NavigationType;
-  images: any;
   selectImage: (number) => any;
-  sendImage: () => void;
+  sendImage: (image) => void;
 }
 
-class ImageBrowserScreen extends Component<Props> {
+interface State {
+  accessPermission: boolean;
+  images: PhotoIdentifier[];
+  selectedImage: null | PhotoIdentifier;
+}
+
+class ImageBrowserScreen extends Component<Props, State> {
   state = {
-    index: null,
+    accessPermission: false,
+    images: [],
+    selectedImage: null,
   };
+
+  componentDidMount() {
+    const { accessPermission } = this.state;
+    if (!accessPermission) {
+      if (Platform.OS === "android") {
+        this.androidPermissionWrapper();
+      } else {
+        this.setState({ accessPermission: true });
+      }
+    }
+
+    CameraRoll.getPhotos({
+      assetType: "Photos",
+      first: 500,
+    })
+      .then(response => {
+        this.setState({ images: response.edges });
+      })
+      .catch(error => {
+        console.error(error);
+      });
+  }
+
+  async androidPermissionWrapper() {
+    try {
+      const granted = await PermissionsAndroid.request(
+        PermissionsAndroid.PERMISSIONS.READ_EXTERNAL_STORAGE,
+        {
+          buttonNegative: labels.cancel,
+          buttonNeutral: labels.askMeLater,
+          buttonPositive: labels.ok,
+          message: labels.permissionRequestPhotoLibraryBody,
+          title: labels.permissionRequestPhotoLibraryBody,
+        },
+      );
+      if (granted === PermissionsAndroid.RESULTS.GRANTED) {
+        return this.setState({ accessPermission: true });
+      }
+    } catch (err) {
+      console.warn(err);
+    }
+  }
 
   backAction() {
     const { navigation, sendImage } = this.props;
-    const { index } = this.state;
+    const { selectedImage } = this.state;
 
-    if (index) {
+    if (selectedImage) {
       return (
         <View style={styles.button}>
           <Button
             onPress={() => {
               navigation.pop();
-              return sendImage();
+              return sendImage(selectedImage);
             }}
             title={labels.select}
             color={colours.pureWhite}
@@ -52,47 +106,43 @@ class ImageBrowserScreen extends Component<Props> {
     );
   }
 
-  setIndex = index => {
-    const { navigation, selectImage } = this.props;
+  setImage = index => {
+    const { images } = this.state;
 
-    if (index === this.state.index) {
-      index = null;
-    }
-    this.setState({ index });
-    navigation.setParams({ index });
-
-    return selectImage(index);
+    this.setState({ selectedImage: images[index] });
   };
 
   renderImage(image, index) {
-    const selected = index === this.state.index;
+    const { selectedImage } = this.state;
     const { width } = Dimensions.get("window");
 
     return (
       <ThumbnailImageBrowser
         image={image}
         imageIndex={index}
-        selected={selected}
-        setIndexCallback={index => this.setIndex(index)}
+        selected={selectedImage === image}
+        setIndexCallback={index => this.setImage(index)}
         width={width}
       />
     );
   }
 
   renderImageLoop() {
-    const { images } = this.props;
+    const { images } = this.state;
 
     return images.map((image, index) => this.renderImage(image, index));
   }
 
   render() {
+    const { accessPermission, images } = this.state;
+
     return (
       <BackgroundContainer>
         <View style={styles.header}>
           <View style={styles.closeContainer}>{this.backAction()}</View>
         </View>
         <ScrollView contentContainerStyle={styles.container}>
-          {this.renderImageLoop()}
+          {accessPermission && images && this.renderImageLoop()}
         </ScrollView>
       </BackgroundContainer>
     );
