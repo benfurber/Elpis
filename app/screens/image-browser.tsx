@@ -3,7 +3,6 @@ import {
   PermissionsAndroid,
   Platform,
   Button,
-  Dimensions,
   ScrollView,
   StyleSheet,
   View,
@@ -14,7 +13,7 @@ import CameraRoll, {
   PhotoIdentifier,
 } from "@react-native-community/cameraroll";
 
-import { BackgroundContainer, Icon, ThumbnailImageBrowser } from "components";
+import { BackgroundContainer, Icon, WrapperThumbnailImage } from "components";
 import { NavigationType } from "interfaces";
 import { labels } from "labels";
 import { colours, layout } from "styles";
@@ -106,41 +105,27 @@ class ImageBrowserScreen extends Component<Props, State> {
     );
   }
 
-  setImage = index => {
-    const { images } = this.state;
+  renderImageLoop() {
+    const { images, selectedImage } = this.state;
 
-    this.setState({ selectedImage: images[index] });
-  };
-
-  renderImage(image, index) {
-    const { selectedImage } = this.state;
-    const { width } = Dimensions.get("window");
+    const setImage = index => {
+      this.setState({ selectedImage: images[index] });
+    };
 
     return (
-      <ThumbnailImageBrowser
-        image={image}
-        imageIndex={index}
-        selected={selectedImage === image}
-        setIndexCallback={index => this.setImage(index)}
-        width={width}
+      <WrapperThumbnailImage
+        images={images}
+        selectedImage={selectedImage}
+        setImage={index => setImage(index)}
       />
     );
-  }
-
-  renderImageLoop() {
-    const { images } = this.state;
-
-    return images.map((image, index) => this.renderImage(image, index));
   }
 
   render() {
     const { accessPermission, images } = this.state;
 
     return (
-      <BackgroundContainer>
-        <View style={styles.header}>
-          <View style={styles.closeContainer}>{this.backAction()}</View>
-        </View>
+      <BackgroundContainer header={this.backAction()}>
         <ScrollView contentContainerStyle={styles.container}>
           {accessPermission && images && this.renderImageLoop()}
         </ScrollView>
@@ -154,17 +139,10 @@ const styles = StyleSheet.create({
     backgroundColor: colours.emeraldGreen,
     borderRadius: layout.borderRadius,
   },
-  closeContainer: {
-    flexDirection: "row-reverse",
-    padding: layout.spacing,
-  },
   container: {
     flexDirection: "row",
     flexWrap: "wrap",
     width: "100%",
-  },
-  header: {
-    height: 60,
   },
 });
 

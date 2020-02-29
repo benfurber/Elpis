@@ -27,6 +27,7 @@ export { Query } from "./query";
 export { RemoteImage } from "./remote-image";
 export { RichTextDisplay } from "./rich-text-display";
 export { TextInput } from "./text-input";
-export { ThumbnailImageBrowser } from "./thumbnail-image-browser";
+export { ThumbnailImage } from "./thumbnail-image";
 export { Title } from "./title";
 export { WebView } from "./web-view";
+export { WrapperThumbnailImage } from "./wrapper-thumbnail-image";
