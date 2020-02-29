@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { StyleSheet, View } from "react-native";
 import Autolink from "react-native-autolink";
 
-import { LinkPreview } from "components";
+import { LinkPreview, RemoteImage } from "components";
 import { NavigationType, Reply as ReplyInterface } from "interfaces";
 import { colours, layout, typography } from "styles";
 
@@ -34,13 +34,23 @@ class RichTextDisplay extends Component<Props> {
     );
   }
 
-  render() {
+  previewContent() {
     const { item, navigation } = this.props;
-    const { link } = item;
+    const { imagePath, link } = item;
 
+    if (imagePath) {
+      return <RemoteImage imagePath={imagePath} />;
+    }
+    if (link) {
+      return <LinkPreview navigation={navigation} url={link} />;
+    }
+    return null;
+  }
+
+  render() {
     return (
       <View>
-        {link && <LinkPreview navigation={navigation} url={link} />}
+        {this.previewContent()}
         {this.renderContent()}
       </View>
     );

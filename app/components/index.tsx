@@ -24,6 +24,7 @@ export { Notifications } from "./notifications";
 export { ProfilePictureField } from "./profile-picture-field";
 export { Post } from "./post";
 export { Query } from "./query";
+export { RemoteImage } from "./remote-image";
 export { RichTextDisplay } from "./rich-text-display";
 export { TextInput } from "./text-input";
 export { ThumbnailImageBrowser } from "./thumbnail-image-browser";
