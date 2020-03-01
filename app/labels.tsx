@@ -1,4 +1,5 @@
 const labels = {
+  addImage: "Adicione uma imagem",
   addNewTopic: "Adicione um novo tópico na discussão",
   addPhoto: "Adicionar foto",
   addPlaceholderBody: "Escreva o que você quiser dizer",
@@ -21,13 +22,13 @@ const labels = {
   communityRules: {
     title: "Criando uma comunidade incrível",
   },
+  editProfile: "Editar o meu perfil",
   email: "Email",
   enter: "Entrar",
   errors: {
     noContent: "Conteúdo não encontrado",
   },
   formButton: "Enviar",
-  editProfile: "Editar o meu perfil",
   howTo: {
     title: "Como usar o aplicativo",
   },

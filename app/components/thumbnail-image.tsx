@@ -11,7 +11,7 @@ type Props = {
   width: number;
 };
 
-const ThumbnailImageBrowser = (props: Props) => {
+const ThumbnailImage = (props: Props) => {
   const { image, imageIndex, selected, setIndexCallback, width } = props;
   const borderWidth = 3;
   const imageWidth = width / 3 - borderWidth * 2;
@@ -38,7 +38,6 @@ const ThumbnailImageBrowser = (props: Props) => {
 
   return (
     <TouchableHighlight
-      key={imageIndex}
       onPress={() => setIndexCallback(imageIndex)}
       style={[styles.highlight, selectStyles]}
       underlayColor={underlayColor}
@@ -54,4 +53,4 @@ const ThumbnailImageBrowser = (props: Props) => {
   );
 };
 
-export { ThumbnailImageBrowser };
+export { ThumbnailImage };

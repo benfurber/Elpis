@@ -2,9 +2,6 @@
 
 exports[`RichTextDisplay renders correctly with a link 1`] = `
 <View>
-  <LinkPreview
-    url="https://www.bbc.co.uk/news/business-50656178"
-  />
   <Autolink
     email={true}
     hashtag={false}
@@ -34,6 +31,9 @@ exports[`RichTextDisplay renders correctly with a link 1`] = `
     twitter={false}
     url={true}
     webFallback={false}
+  />
+  <LinkPreview
+    url="https://www.bbc.co.uk/news/business-50656178"
   />
 </View>
 `;

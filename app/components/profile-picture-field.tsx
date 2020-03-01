@@ -1,8 +1,6 @@
 import React, { Component } from "react";
-import { PermissionsAndroid, Platform, StyleSheet, View } from "react-native";
-import CameraRoll, {
-  PhotoIdentifier,
-} from "@react-native-community/cameraroll";
+import { StyleSheet, View } from "react-native";
+import { PhotoIdentifier } from "@react-native-community/cameraroll";
 
 import { Avatar, ButtonSubmit } from "components";
 import { NavigationType } from "interfaces";
@@ -16,23 +14,17 @@ interface Props {
   display: "active" | "error" | "loading";
   navigation: NavigationType;
   image: null | PhotoIdentifier;
-  sendImage: () => void;
-  setImage: (PhotoIdentifier) => void;
+  sendImage: (PhotoIdentifier) => void;
 }
 
 interface State {
   currentAvatarPath: string | null;
-  images: PhotoIdentifier[];
 }
 
 class ProfilePictureField extends Component<Props, State> {
-  constructor(props) {
-    super(props);
-    this.state = {
-      currentAvatarPath: null,
-      images: [],
-    };
-  }
+  state = {
+    currentAvatarPath: null,
+  };
 
   async componentDidMount() {
     if (!this.props.image) {
@@ -46,58 +38,15 @@ class ProfilePictureField extends Component<Props, State> {
     }
   }
 
-  selectImage(index) {
-    this.props.setImage(this.state.images[index]);
-  }
-
   navigateToImageBrowser() {
     return this.props.navigation.navigate("ImageBrowser", {
-      images: this.state.images,
-      selectImage: index => this.selectImage(index),
-      sendImage: this.props.sendImage,
+      sendImage: image => this.props.sendImage(image),
     });
   }
 
-  async androidPermissionWrapper() {
-    try {
-      const granted = await PermissionsAndroid.request(
-        PermissionsAndroid.PERMISSIONS.READ_EXTERNAL_STORAGE,
-        {
-          buttonNegative: labels.cancel,
-          buttonNeutral: labels.askMeLater,
-          buttonPositive: labels.ok,
-          message: labels.permissionRequestPhotoLibraryBody,
-          title: labels.permissionRequestPhotoLibraryBody,
-        },
-      );
-      if (granted === PermissionsAndroid.RESULTS.GRANTED) {
-        return this.handleButtonPress();
-      }
-    } catch (err) {
-      console.warn(err);
-    }
-  }
-
   onPress() {
-    if (Platform.OS === "android") {
-      this.androidPermissionWrapper();
-    }
     this.props.clearUploadCondition();
-    return this.handleButtonPress();
-  }
-
-  handleButtonPress() {
-    CameraRoll.getPhotos({
-      assetType: "Photos",
-      first: 500,
-    })
-      .then(response => {
-        this.setState({ images: response.edges });
-        return this.navigateToImageBrowser();
-      })
-      .catch(error => {
-        console.error(error);
-      });
+    return this.navigateToImageBrowser();
   }
 
   renderAvatar() {

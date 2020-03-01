@@ -43,9 +43,7 @@ class FormAddProfilePicture extends Component<Props, State> {
     });
   }
 
-  sendImageCallback = async () => {
-    const { selectedImage } = this.state;
-
+  sendImageCallback = async selectedImage => {
     const successCallback = async avatarPath => {
       await client.mutate({
         mutation: ADD_USER_PROFILE_PICTURE,
@@ -65,23 +63,24 @@ class FormAddProfilePicture extends Component<Props, State> {
         progressPercentage,
       });
 
-    const setError = error =>
+    this.setState({ uploadCondition: "uploading" });
+    try {
+      sendImage({
+        bucket: "elpis-profile-images",
+        resizeTo: { height: 300, width: 300 },
+        selectedImage,
+        setProgress,
+        successCallback,
+      });
+    } catch (err) {
       this.setState({
         display: "error",
         displayMessage: "error",
-        message: error,
+        message: err.message,
         selectedImage: null,
         uploadCondition: null,
       });
-
-    this.setState({ uploadCondition: "uploading" });
-    sendImage({
-      resizeTo: { height: 300, width: 300 },
-      selectedImage,
-      setError,
-      setProgress,
-      successCallback,
-    });
+    }
   };
 
   onPress(mutation) {
@@ -144,10 +143,7 @@ class FormAddProfilePicture extends Component<Props, State> {
           display={display}
           image={selectedImage}
           navigation={navigation}
-          sendImage={this.sendImageCallback}
-          setImage={selectedImage => {
-            this.setState({ selectedImage });
-          }}
+          sendImage={image => this.sendImageCallback(image)}
         />
       </View>
     );

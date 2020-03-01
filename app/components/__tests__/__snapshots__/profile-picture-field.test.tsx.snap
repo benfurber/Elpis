@@ -224,7 +224,6 @@ exports[`ProfilePictureField when in active state renders correctly 1`] = `
     display="active"
     image={null}
     sendImage={[Function]}
-    setImage={[Function]}
   />
 </ApolloProvider>
 `;
@@ -453,7 +452,6 @@ exports[`ProfilePictureField when in error state renders correctly 1`] = `
     display="error"
     image={null}
     sendImage={[Function]}
-    setImage={[Function]}
   />
 </ApolloProvider>
 `;

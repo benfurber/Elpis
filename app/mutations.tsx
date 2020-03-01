@@ -9,8 +9,8 @@ export const ADD_COMMENT = gql`
 `;
 
 export const ADD_REPLY = gql`
-  mutation createReply($content: String!, $id: ID!) {
-    createReply(content: $content, id: $id) {
+  mutation createReply($id: ID!, $imagePath: URL, $content: String!) {
+    createReply(id: $id, imagePath: $imagePath, content: $content) {
       id
     }
   }
