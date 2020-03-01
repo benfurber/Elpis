@@ -19,7 +19,6 @@ describe("ProfilePictureField", () => {
             image={null}
             navigation={navigation}
             sendImage={() => jest.fn()}
-            setImage={() => jest.fn()}
           />
         </MockedProvider>,
       );
@@ -38,7 +37,6 @@ describe("ProfilePictureField", () => {
             image={null}
             navigation={navigation}
             sendImage={() => jest.fn()}
-            setImage={() => jest.fn()}
           />
         </MockedProvider>,
       );
