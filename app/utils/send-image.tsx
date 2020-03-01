@@ -13,6 +13,7 @@ const initialiseOptions = {
 };
 
 interface Props {
+  bucket: string;
   resizeTo: { height: number; width: number };
   selectedImage: null | PhotoIdentifier;
   setProgress?: (number) => void;
@@ -20,7 +21,13 @@ interface Props {
 }
 
 async function sendImage(props: Props) {
-  const { selectedImage, setProgress, successCallback, resizeTo } = props;
+  const {
+    bucket,
+    selectedImage,
+    setProgress,
+    successCallback,
+    resizeTo,
+  } = props;
   if (selectedImage === null) {
     throw Error(labels.noImageSelected);
   }
@@ -33,7 +40,7 @@ async function sendImage(props: Props) {
   const uploadParams = {
     ACL: "public-read-write",
     Body: newImage.image,
-    Bucket: "elpis-profile-images",
+    Bucket: bucket,
     ContentLength: newImage.size,
     ContentType: "image/jpeg",
     Key,

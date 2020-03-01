@@ -66,6 +66,7 @@ class FormAddProfilePicture extends Component<Props, State> {
     this.setState({ uploadCondition: "uploading" });
     try {
       sendImage({
+        bucket: "elpis-profile-images",
         resizeTo: { height: 300, width: 300 },
         selectedImage,
         setProgress,
