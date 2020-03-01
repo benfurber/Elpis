@@ -1,9 +1,10 @@
 import React, { Component } from "react";
-import { TextInput } from "react-native";
+import { TextInput, View } from "react-native";
 
 import { Mutation } from "react-apollo";
 import { withMappedNavigationParams } from "react-navigation-props-mapper";
 
+import { UploadImage } from "components";
 import { Comment, NavigationType } from "interfaces";
 import { labels } from "labels";
 import { ADD_REPLY } from "mutations";
@@ -16,6 +17,7 @@ interface Props {
 }
 
 interface State {
+  imagePath: null | string;
   textInput: string;
   textInputEditable: boolean;
 }
@@ -24,13 +26,14 @@ class AddReplyScreen extends Component<Props, State> {
   constructor(props) {
     super(props);
     this.state = {
+      imagePath: null,
       textInput: "",
       textInputEditable: true,
     };
   }
 
   onSubmitEditing(query) {
-    const { textInput } = this.state;
+    const { imagePath, textInput } = this.state;
     const { commentId, navigation } = this.props;
 
     this.setState({ textInputEditable: false });
@@ -39,6 +42,7 @@ class AddReplyScreen extends Component<Props, State> {
       variables: {
         content: textInput,
         id: commentId,
+        imagePath,
       },
     }).then(() => {
       this.setState({ textInput: "", textInputEditable: true });
@@ -46,22 +50,36 @@ class AddReplyScreen extends Component<Props, State> {
     });
   }
 
+  setImagePath = imagePath => {
+    this.setState({ imagePath });
+  };
+
   renderAddResponse(mutation) {
+    const { navigation } = this.props;
+    const { imagePath } = this.state;
+
     return (
       <Mutation mutation={mutation}>
         {(createReply, {}) => (
-          <TextInput
-            onSubmitEditing={() => this.onSubmitEditing(createReply)}
-            style={form.text}
-            autoFocus={true}
-            editable={this.state.textInputEditable}
-            multiline={true}
-            placeholder={labels.addPlaceholderBody}
-            onChangeText={textInput => this.setState({ textInput })}
-            value={this.state.textInput}
-            returnKeyLabel={labels.submit}
-            returnKeyType="send"
-          />
+          <View>
+            <TextInput
+              onSubmitEditing={() => this.onSubmitEditing(createReply)}
+              style={form.text}
+              autoFocus={true}
+              editable={this.state.textInputEditable}
+              multiline={true}
+              placeholder={labels.addPlaceholderBody}
+              onChangeText={textInput => this.setState({ textInput })}
+              value={this.state.textInput}
+              returnKeyLabel={labels.submit}
+              returnKeyType="send"
+            />
+            <UploadImage
+              imagePath={imagePath}
+              navigation={navigation}
+              setImagePath={this.setImagePath}
+            />
+          </View>
         )}
       </Mutation>
     );

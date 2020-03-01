@@ -1,10 +1,12 @@
 import React, { Component } from "react";
-import { StyleSheet, View } from "react-native";
+import { Dimensions, StyleSheet, View } from "react-native";
 import Autolink from "react-native-autolink";
 
 import { LinkPreview, RemoteImage } from "components";
 import { NavigationType, Reply as ReplyInterface } from "interfaces";
 import { colours, layout, typography } from "styles";
+
+const { width } = Dimensions.get("window");
 
 interface Props {
   item: ReplyInterface;
@@ -39,7 +41,11 @@ class RichTextDisplay extends Component<Props> {
     const { imagePath, link } = item;
 
     if (imagePath) {
-      return <RemoteImage imagePath={imagePath} />;
+      return (
+        <View style={styles.imageContainer}>
+          <RemoteImage imagePath={imagePath} />
+        </View>
+      );
     }
     if (link) {
       return <LinkPreview navigation={navigation} url={link} />;
@@ -50,8 +56,8 @@ class RichTextDisplay extends Component<Props> {
   render() {
     return (
       <View>
-        {this.previewContent()}
         {this.renderContent()}
+        {this.previewContent()}
       </View>
     );
   }
@@ -61,6 +67,11 @@ const styles = StyleSheet.create({
   body: {
     fontSize: typography.fontSize,
     paddingVertical: layout.spacing,
+  },
+  imageContainer: {
+    borderRadius: layout.borderRadiusL,
+    overflow: "hidden",
+    width: width * 0.7,
   },
   link: {
     color: colours.darkGrey,

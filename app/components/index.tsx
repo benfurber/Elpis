@@ -29,5 +29,6 @@ export { RichTextDisplay } from "./rich-text-display";
 export { TextInput } from "./text-input";
 export { ThumbnailImage } from "./thumbnail-image";
 export { Title } from "./title";
+export { UploadImage } from "./upload-image";
 export { WebView } from "./web-view";
 export { WrapperThumbnailImage } from "./wrapper-thumbnail-image";
