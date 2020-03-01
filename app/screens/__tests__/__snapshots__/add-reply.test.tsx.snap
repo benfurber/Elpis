@@ -32,20 +32,6 @@ exports[`AddReplyScreen renders correctly 1`] = `
                       "kind": "Argument",
                       "name": Object {
                         "kind": "Name",
-                        "value": "content",
-                      },
-                      "value": Object {
-                        "kind": "Variable",
-                        "name": Object {
-                          "kind": "Name",
-                          "value": "content",
-                        },
-                      },
-                    },
-                    Object {
-                      "kind": "Argument",
-                      "name": Object {
-                        "kind": "Name",
                         "value": "id",
                       },
                       "value": Object {
@@ -53,6 +39,34 @@ exports[`AddReplyScreen renders correctly 1`] = `
                         "name": Object {
                           "kind": "Name",
                           "value": "id",
+                        },
+                      },
+                    },
+                    Object {
+                      "kind": "Argument",
+                      "name": Object {
+                        "kind": "Name",
+                        "value": "imagePath",
+                      },
+                      "value": Object {
+                        "kind": "Variable",
+                        "name": Object {
+                          "kind": "Name",
+                          "value": "imagePath",
+                        },
+                      },
+                    },
+                    Object {
+                      "kind": "Argument",
+                      "name": Object {
+                        "kind": "Name",
+                        "value": "content",
+                      },
+                      "value": Object {
+                        "kind": "Variable",
+                        "name": Object {
+                          "kind": "Name",
+                          "value": "content",
                         },
                       },
                     },
@@ -93,7 +107,7 @@ exports[`AddReplyScreen renders correctly 1`] = `
                     "kind": "NamedType",
                     "name": Object {
                       "kind": "Name",
-                      "value": "String",
+                      "value": "ID",
                     },
                   },
                 },
@@ -101,7 +115,26 @@ exports[`AddReplyScreen renders correctly 1`] = `
                   "kind": "Variable",
                   "name": Object {
                     "kind": "Name",
-                    "value": "content",
+                    "value": "id",
+                  },
+                },
+              },
+              Object {
+                "defaultValue": undefined,
+                "directives": Array [],
+                "kind": "VariableDefinition",
+                "type": Object {
+                  "kind": "NamedType",
+                  "name": Object {
+                    "kind": "Name",
+                    "value": "URL",
+                  },
+                },
+                "variable": Object {
+                  "kind": "Variable",
+                  "name": Object {
+                    "kind": "Name",
+                    "value": "imagePath",
                   },
                 },
               },
@@ -115,7 +148,7 @@ exports[`AddReplyScreen renders correctly 1`] = `
                     "kind": "NamedType",
                     "name": Object {
                       "kind": "Name",
-                      "value": "ID",
+                      "value": "String",
                     },
                   },
                 },
@@ -123,7 +156,7 @@ exports[`AddReplyScreen renders correctly 1`] = `
                   "kind": "Variable",
                   "name": Object {
                     "kind": "Name",
-                    "value": "id",
+                    "value": "content",
                   },
                 },
               },
@@ -132,7 +165,7 @@ exports[`AddReplyScreen renders correctly 1`] = `
         ],
         "kind": "Document",
         "loc": Object {
-          "end": 120,
+          "end": 160,
           "start": 0,
         },
       }
