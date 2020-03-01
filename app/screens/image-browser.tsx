@@ -20,8 +20,7 @@ import { colours, layout } from "styles";
 
 interface Props {
   navigation: NavigationType;
-  selectImage: (number) => any;
-  sendImage: (image) => void;
+  sendImage: (PhotoIdentifier) => void;
 }
 
 interface State {
