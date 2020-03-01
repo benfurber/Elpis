@@ -15,7 +15,7 @@ const initialiseOptions = {
 interface Props {
   resizeTo: { height: number; width: number };
   selectedImage: null | PhotoIdentifier;
-  setProgress: (number) => void;
+  setProgress?: (number) => void;
   successCallback: (url) => void;
 }
 
@@ -40,10 +40,12 @@ async function sendImage(props: Props) {
   };
   const upload = s3.upload(uploadParams);
 
-  upload.on("httpUploadProgress", event => {
-    const percentage = event.loaded / (newImage.size || event.total);
-    setProgress(percentage);
-  });
+  if (setProgress) {
+    upload.on("httpUploadProgress", event => {
+      const percentage = event.loaded / (newImage.size || event.total);
+      setProgress(percentage);
+    });
+  }
 
   upload.send((err, data) => {
     if (err) throw Error(err.message);
