@@ -3,6 +3,7 @@ import { StyleSheet, Text, View } from "react-native";
 
 import { Avatar, RichTextDisplay, Title } from "components";
 import { NavigationType, Reply as ReplyInterface } from "interfaces";
+import { labels } from "labels";
 import { colours, elements, layout } from "styles";
 import { formatDate } from "utils";
 
@@ -14,7 +15,7 @@ interface Props {
 class Reply extends Component<Props> {
   render() {
     const { item, navigation } = this.props;
-    const { author, publishedAt } = item;
+    const { author, edited, publishedAt } = item;
 
     return (
       <View style={styles.commentContainer}>
@@ -23,7 +24,10 @@ class Reply extends Component<Props> {
 
           <View style={styles.authorDetails}>
             <Title text={author.name} small />
-            <Text style={elements.textDate}>{formatDate(publishedAt)}</Text>
+            <Text style={elements.textDate}>
+              {formatDate(publishedAt)}
+              {edited && ` (${labels.editedReply})`}
+            </Text>
           </View>
         </View>
         <View style={styles.textContainer}>

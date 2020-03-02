@@ -1,3 +1,5 @@
+import { Reply } from "interfaces";
+
 export const author = {
   avatarPath: require("assets/images/empower_two_women_logo.png"),
   id: "1235we",
@@ -23,10 +25,11 @@ export const preComment = {
   totalReplies: 0,
 };
 
-export const reply = {
+export const reply: Reply = {
   author,
   comment: preComment,
   content: "Nao.",
+  edited: false,
   id: "21097",
   link: null,
   publishedAt: new Date("2019-01-01"),

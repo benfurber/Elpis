@@ -37,6 +37,7 @@ const REPLY_ATTRIBUTES = gql`
     comment {
       id
     }
+    edited
     imagePath
     link
   }

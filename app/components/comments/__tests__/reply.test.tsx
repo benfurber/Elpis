@@ -14,4 +14,11 @@ describe("Comments<Reply>", () => {
 
     expect(component).toMatchSnapshot();
   });
+
+  it("renders correctly when edited", () => {
+    reply.edited = true;
+    const component = shallow(<Reply item={reply} navigation={navigation} />);
+
+    expect(component).toMatchSnapshot();
+  });
 });

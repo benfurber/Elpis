@@ -23,6 +23,7 @@ const labels = {
     title: "Criando uma comunidade incrível",
   },
   editProfile: "Editar o meu perfil",
+  editedReply: "Editada",
   email: "Email",
   enter: "Entrar",
   errors: {
