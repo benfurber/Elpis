@@ -11,8 +11,16 @@ interface State {
 }
 
 class RemoteImage extends Component<Props, State> {
+  validImageURL(url) {
+    return url.match(/\.(jpeg|jpg|gif|png)$/) != null;
+  }
+
   render() {
     const { imagePath } = this.props;
+
+    if (!this.validImageURL(imagePath)) {
+      return null;
+    }
 
     return <FlexImage source={{ uri: imagePath }} />;
   }
