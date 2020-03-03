@@ -24,7 +24,7 @@ exports[`RichTextDisplay renders correctly with a link 1`] = `
         "paddingVertical": 10,
       }
     }
-    text="Meu pai também fez o mesmo. Logo depois que minha mãe pediu o divórcio porque sofria violência dentro de casa, ele pegou as malas, se mudou e sumiu no mundo. Nem faço mais questão de saber pra onde ele foi."
+    text="Nao."
     truncate={32}
     truncateChars=".."
     truncateLocation="smart"
@@ -62,7 +62,7 @@ exports[`RichTextDisplay renders correctly without a link 1`] = `
         "paddingVertical": 10,
       }
     }
-    text="Meu pai também fez o mesmo. Logo depois que minha mãe pediu o divórcio porque sofria violência dentro de casa, ele pegou as malas, se mudou e sumiu no mundo. Nem faço mais questão de saber pra onde ele foi."
+    text="Nao."
     truncate={32}
     truncateChars=".."
     truncateLocation="smart"

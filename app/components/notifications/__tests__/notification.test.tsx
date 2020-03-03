@@ -3,7 +3,7 @@ import React from "react";
 import { shallow } from "enzyme";
 import { MockedProvider } from "@apollo/react-testing";
 
-import { comment } from "../../../factories";
+import { reply } from "factories";
 import { mockDateNow } from "../../../test-utils";
 
 import { Notification } from "../notification";
@@ -25,20 +25,6 @@ describe("Notification", () => {
     publishedAt: new Date("2019-09-23"),
   };
 
-  const baseReply = {
-    author: {
-      avatarPath: "",
-      id: "135fad2fe",
-      name: "May",
-    },
-    comment,
-    content:
-      "Mara fisto yoda ben jade. Mace ben wedge jinn leia luke. Lando mandalore.",
-    id: "986sasdfd",
-    link: null,
-    publishedAt: new Date("2019-09-23"),
-  };
-
   describe("new", () => {
     it("for comment type it renders correctly", () => {
       mockDateNow("2019-10-09");
@@ -46,7 +32,7 @@ describe("Notification", () => {
       const commentNotification = {
         content: {
           post: basePost,
-          reply: baseReply,
+          reply: reply,
           type: "comment",
         },
         createdAt: new Date("2019-09-23"),
@@ -94,7 +80,7 @@ describe("Notification", () => {
       const commentNotification = {
         content: {
           post: basePost,
-          reply: baseReply,
+          reply: reply,
           type: "comment",
         },
         createdAt: new Date("2019-09-23"),
