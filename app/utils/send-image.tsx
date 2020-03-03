@@ -1,4 +1,4 @@
-import AWS from "aws-sdk/dist/aws-sdk-react-native";
+import { S3 } from "aws-sdk/dist/aws-sdk-react-native";
 import { PhotoIdentifier } from "@react-native-community/cameraroll";
 
 import { labels } from "labels";
@@ -32,10 +32,10 @@ async function sendImage(props: Props) {
     throw Error(labels.noImageSelected);
   }
 
-  const s3 = new AWS.S3(initialiseOptions);
+  const s3 = new S3(initialiseOptions);
 
   const newImage = await resizeImage({ image: selectedImage, resizeTo });
-  const Key = `uploads/${Date.now()}-${selectedImage.node.image.filename}`;
+  const Key = `uploads/${Date.now()}-${selectedImage.node.image.filename.toLowerCase()}`;
 
   const uploadParams = {
     ACL: "public-read-write",
