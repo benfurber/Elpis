@@ -22,6 +22,7 @@ const labels = {
   communityRules: {
     title: "Criando uma comunidade incrível",
   },
+  deleteYourReply: "Excluir sua resposta",
   editProfile: "Editar o meu perfil",
   editedReply: "Editada",
   email: "Email",

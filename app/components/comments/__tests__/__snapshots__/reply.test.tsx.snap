@@ -1,73 +1,69 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Comments<Reply> renders correctly 1`] = `
-<View
-  style={
-    Object {
-      "borderBottomColor": "rgb(255, 255, 255)",
-      "borderBottomWidth": 3,
-      "margin": 10,
-    }
-  }
+<TouchableOpacity
+  activeOpacity={0.2}
+  onLongPress={[Function]}
 >
   <View
     style={
       Object {
-        "alignItems": "center",
-        "flexDirection": "row",
-        "paddingVertical": 10,
+        "borderBottomColor": "rgb(255, 255, 255)",
+        "borderBottomWidth": 3,
+        "margin": 10,
       }
     }
   >
-    <Avatar
-      avatarPath={
-        Object {
-          "testUri": "../../../app/assets/images/empower_two_women_logo.png",
-        }
-      }
-      size="small"
-    />
     <View
       style={
         Object {
-          "paddingLeft": 10,
+          "alignItems": "center",
+          "flexDirection": "row",
+          "paddingVertical": 10,
         }
       }
     >
-      <Title
-        small={true}
-        text="Empodere Duas Mulheres"
+      <Avatar
+        avatarPath={
+          Object {
+            "testUri": "../../../app/assets/images/empower_two_women_logo.png",
+          }
+        }
+        size="small"
       />
-      <Text
+      <View
         style={
           Object {
-            "color": "rgb(51, 51, 51)",
-            "fontStyle": "italic",
+            "paddingLeft": 10,
           }
         }
       >
-        Há um ano
-      </Text>
+        <Title
+          small={true}
+          text="Empodere Duas Mulheres"
+        />
+        <Text
+          style={
+            Object {
+              "color": "rgb(51, 51, 51)",
+              "fontStyle": "italic",
+            }
+          }
+        >
+          Há um ano
+        </Text>
+      </View>
     </View>
-  </View>
-  <View
-    style={
-      Object {
-        "paddingBottom": 20,
-      }
-    }
-  >
-    <RichTextDisplay
-      item={
+    <View
+      style={
         Object {
-          "author": Object {
-            "avatarPath": Object {
-              "testUri": "../../../app/assets/images/empower_two_women_logo.png",
-            },
-            "id": "1235we",
-            "name": "Empodere Duas Mulheres",
-          },
-          "comment": Object {
+          "paddingBottom": 20,
+        }
+      }
+    >
+      <RichTextDisplay
+        item={
+          Object {
             "author": Object {
               "avatarPath": Object {
                 "testUri": "../../../app/assets/images/empower_two_women_logo.png",
@@ -75,93 +71,108 @@ exports[`Comments<Reply> renders correctly 1`] = `
               "id": "1235we",
               "name": "Empodere Duas Mulheres",
             },
-            "content": "Dá certo sim, o meu pai, por exemplo, fugiu quando eu tinha 5 anos e eu não faço ideia da onde ele esteja. Nunca mais voltou, pena que a violência só piorou.",
+            "comment": Object {
+              "author": Object {
+                "avatarPath": Object {
+                  "testUri": "../../../app/assets/images/empower_two_women_logo.png",
+                },
+                "id": "1235we",
+                "name": "Empodere Duas Mulheres",
+              },
+              "content": "Dá certo sim, o meu pai, por exemplo, fugiu quando eu tinha 5 anos e eu não faço ideia da onde ele esteja. Nunca mais voltou, pena que a violência só piorou.",
+              "id": "21097",
+              "publishedAt": 2019-01-01T00:00:00.000Z,
+              "replies": Array [],
+              "totalReplies": 0,
+            },
+            "content": "Nao.",
+            "edited": false,
             "id": "21097",
+            "link": null,
             "publishedAt": 2019-01-01T00:00:00.000Z,
-            "replies": Array [],
-            "totalReplies": 0,
-          },
-          "content": "Nao.",
-          "edited": false,
-          "id": "21097",
-          "link": null,
-          "publishedAt": 2019-01-01T00:00:00.000Z,
+          }
         }
-      }
-    />
+      />
+    </View>
   </View>
-</View>
+  <ActionSheet
+    cancelButtonIndex={0}
+    onPress={[Function]}
+    options={
+      Array [
+        "Cancelar",
+        "Excluir sua resposta",
+      ]
+    }
+  />
+</TouchableOpacity>
 `;
 
 exports[`Comments<Reply> renders correctly when edited 1`] = `
-<View
-  style={
-    Object {
-      "borderBottomColor": "rgb(255, 255, 255)",
-      "borderBottomWidth": 3,
-      "margin": 10,
-    }
-  }
+<TouchableOpacity
+  activeOpacity={0.2}
+  onLongPress={[Function]}
 >
   <View
     style={
       Object {
-        "alignItems": "center",
-        "flexDirection": "row",
-        "paddingVertical": 10,
+        "borderBottomColor": "rgb(255, 255, 255)",
+        "borderBottomWidth": 3,
+        "margin": 10,
       }
     }
   >
-    <Avatar
-      avatarPath={
-        Object {
-          "testUri": "../../../app/assets/images/empower_two_women_logo.png",
-        }
-      }
-      size="small"
-    />
     <View
       style={
         Object {
-          "paddingLeft": 10,
+          "alignItems": "center",
+          "flexDirection": "row",
+          "paddingVertical": 10,
         }
       }
     >
-      <Title
-        small={true}
-        text="Empodere Duas Mulheres"
+      <Avatar
+        avatarPath={
+          Object {
+            "testUri": "../../../app/assets/images/empower_two_women_logo.png",
+          }
+        }
+        size="small"
       />
-      <Text
+      <View
         style={
           Object {
-            "color": "rgb(51, 51, 51)",
-            "fontStyle": "italic",
+            "paddingLeft": 10,
           }
         }
       >
-        Há um ano
-         (Editada)
-      </Text>
+        <Title
+          small={true}
+          text="Empodere Duas Mulheres"
+        />
+        <Text
+          style={
+            Object {
+              "color": "rgb(51, 51, 51)",
+              "fontStyle": "italic",
+            }
+          }
+        >
+          Há um ano
+           (Editada)
+        </Text>
+      </View>
     </View>
-  </View>
-  <View
-    style={
-      Object {
-        "paddingBottom": 20,
-      }
-    }
-  >
-    <RichTextDisplay
-      item={
+    <View
+      style={
         Object {
-          "author": Object {
-            "avatarPath": Object {
-              "testUri": "../../../app/assets/images/empower_two_women_logo.png",
-            },
-            "id": "1235we",
-            "name": "Empodere Duas Mulheres",
-          },
-          "comment": Object {
+          "paddingBottom": 20,
+        }
+      }
+    >
+      <RichTextDisplay
+        item={
+          Object {
             "author": Object {
               "avatarPath": Object {
                 "testUri": "../../../app/assets/images/empower_two_women_logo.png",
@@ -169,20 +180,39 @@ exports[`Comments<Reply> renders correctly when edited 1`] = `
               "id": "1235we",
               "name": "Empodere Duas Mulheres",
             },
-            "content": "Dá certo sim, o meu pai, por exemplo, fugiu quando eu tinha 5 anos e eu não faço ideia da onde ele esteja. Nunca mais voltou, pena que a violência só piorou.",
+            "comment": Object {
+              "author": Object {
+                "avatarPath": Object {
+                  "testUri": "../../../app/assets/images/empower_two_women_logo.png",
+                },
+                "id": "1235we",
+                "name": "Empodere Duas Mulheres",
+              },
+              "content": "Dá certo sim, o meu pai, por exemplo, fugiu quando eu tinha 5 anos e eu não faço ideia da onde ele esteja. Nunca mais voltou, pena que a violência só piorou.",
+              "id": "21097",
+              "publishedAt": 2019-01-01T00:00:00.000Z,
+              "replies": Array [],
+              "totalReplies": 0,
+            },
+            "content": "Nao.",
+            "edited": true,
             "id": "21097",
+            "link": null,
             "publishedAt": 2019-01-01T00:00:00.000Z,
-            "replies": Array [],
-            "totalReplies": 0,
-          },
-          "content": "Nao.",
-          "edited": true,
-          "id": "21097",
-          "link": null,
-          "publishedAt": 2019-01-01T00:00:00.000Z,
+          }
         }
-      }
-    />
+      />
+    </View>
   </View>
-</View>
+  <ActionSheet
+    cancelButtonIndex={0}
+    onPress={[Function]}
+    options={
+      Array [
+        "Cancelar",
+        "Excluir sua resposta",
+      ]
+    }
+  />
+</TouchableOpacity>
 `;
