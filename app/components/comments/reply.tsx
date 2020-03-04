@@ -5,8 +5,9 @@ import ActionSheet from "react-native-actionsheet";
 import { Avatar, RichTextDisplay, Title } from "components";
 import { NavigationType, Reply as ReplyInterface } from "interfaces";
 import { labels } from "labels";
+import { DELETE_REPLY } from "mutations";
 import { colours, elements, layout } from "styles";
-import { formatDate } from "utils";
+import { client, formatDate } from "utils";
 
 interface Props {
   item: ReplyInterface;
@@ -16,23 +17,42 @@ interface Props {
 class Reply extends Component<Props> {
   ActionSheet = ActionSheet;
 
-  actionSheetOnPress(index) {
+  state = {
+    deleting: false,
+  };
+
+  async actionSheetOnPress(index) {
     if (index === 1) {
-      return console.log("delete comment");
+      const { id } = this.props.item;
+      this.setState({ deleting: true });
+
+      await client.mutate({
+        mutation: DELETE_REPLY,
+        variables: {
+          id,
+        },
+      });
     }
   }
 
   onLongPress() {
-    this.ActionSheet.show();
+    const { isAuthorCurrentUser } = this.props.item;
+
+    if (isAuthorCurrentUser) {
+      this.ActionSheet.show();
+    }
   }
 
   render() {
     const { item, navigation } = this.props;
     const { author, edited, publishedAt } = item;
+    const { deleting } = this.state;
+
+    const opacity = deleting ? 0.5 : 1;
 
     return (
       <TouchableOpacity onLongPress={() => this.onLongPress()}>
-        <View style={styles.commentContainer}>
+        <View style={[styles.commentContainer, { opacity }]}>
           <View style={styles.details}>
             <Avatar avatarPath={author.avatarPath} size={"small"} />
 

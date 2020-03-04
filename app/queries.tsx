@@ -39,6 +39,7 @@ const REPLY_ATTRIBUTES = gql`
     }
     edited
     imagePath
+    isAuthorCurrentUser
     link
   }
   ${AUTHOR_ATTRIBUTES}
