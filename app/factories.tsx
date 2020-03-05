@@ -31,6 +31,7 @@ export const reply: Reply = {
   content: "Nao.",
   edited: false,
   id: "21097",
+  isAuthorCurrentUser: false,
   link: null,
   publishedAt: new Date("2019-01-01"),
 };
