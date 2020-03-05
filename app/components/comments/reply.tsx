@@ -33,6 +33,16 @@ class Reply extends Component<Props> {
         },
       });
     }
+
+    if (index === 2) {
+      const { item, navigation } = this.props;
+      const { comment, content, id, imagePath } = item;
+
+      const commentId = comment.id;
+      const currentReply = { content, id, imagePath };
+
+      navigation.navigate("AddReply", { commentId, currentReply });
+    }
   }
 
   onLongPress() {
@@ -47,6 +57,7 @@ class Reply extends Component<Props> {
     const { item, navigation } = this.props;
     const { author, edited, publishedAt } = item;
     const { deleting } = this.state;
+    const { cancel, deleteYourReply, editReply } = labels;
 
     const opacity = deleting ? 0.5 : 1;
 
@@ -70,7 +81,7 @@ class Reply extends Component<Props> {
         </View>
         <ActionSheet
           ref={o => (this.ActionSheet = o)}
-          options={[labels.cancel, labels.deleteYourReply]}
+          options={[cancel, deleteYourReply, editReply]}
           cancelButtonIndex={0}
           onPress={index => this.actionSheetOnPress(index)}
         />

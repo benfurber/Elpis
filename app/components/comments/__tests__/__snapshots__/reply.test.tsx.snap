@@ -7,11 +7,16 @@ exports[`Comments<Reply> renders correctly 1`] = `
 >
   <View
     style={
-      Object {
-        "borderBottomColor": "rgb(255, 255, 255)",
-        "borderBottomWidth": 3,
-        "margin": 10,
-      }
+      Array [
+        Object {
+          "borderBottomColor": "rgb(255, 255, 255)",
+          "borderBottomWidth": 3,
+          "margin": 10,
+        },
+        Object {
+          "opacity": 1,
+        },
+      ]
     }
   >
     <View
@@ -102,6 +107,7 @@ exports[`Comments<Reply> renders correctly 1`] = `
       Array [
         "Cancelar",
         "Excluir sua resposta",
+        "Editar resposta",
       ]
     }
   />
@@ -115,11 +121,16 @@ exports[`Comments<Reply> renders correctly when edited 1`] = `
 >
   <View
     style={
-      Object {
-        "borderBottomColor": "rgb(255, 255, 255)",
-        "borderBottomWidth": 3,
-        "margin": 10,
-      }
+      Array [
+        Object {
+          "borderBottomColor": "rgb(255, 255, 255)",
+          "borderBottomWidth": 3,
+          "margin": 10,
+        },
+        Object {
+          "opacity": 1,
+        },
+      ]
     }
   >
     <View
@@ -211,6 +222,7 @@ exports[`Comments<Reply> renders correctly when edited 1`] = `
       Array [
         "Cancelar",
         "Excluir sua resposta",
+        "Editar resposta",
       ]
     }
   />

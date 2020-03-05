@@ -24,6 +24,7 @@ const labels = {
   },
   deleteYourReply: "Excluir sua resposta",
   editProfile: "Editar o meu perfil",
+  editReply: "Editar resposta",
   editedReply: "Editada",
   email: "Email",
   enter: "Entrar",
