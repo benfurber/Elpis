@@ -13,40 +13,45 @@ interface Props {
 }
 
 class ActionSheetReply extends Component<Props> {
-  async actionSheetOnPress(index) {
-    if (index === 1) {
-      const { id } = this.props.item;
-      this.setState({ deleting: true });
+  async deleteReply() {
+    const { id } = this.props.item;
+    this.setState({ deleting: true });
 
-      await client.mutate({
-        mutation: DELETE_REPLY,
-        variables: {
-          id,
-        },
-      });
-    }
+    await client.mutate({
+      mutation: DELETE_REPLY,
+      variables: {
+        id,
+      },
+    });
+  }
 
-    if (index === 2) {
-      const { item, navigation } = this.props;
-      const { comment, content, id, imagePath } = item;
+  onPress(index) {
+    if (index === 1) this.deleteReply();
+    if (index === 2) this.updateReply();
+  }
 
-      const commentId = comment.id;
-      const currentReply = { content, id, imagePath };
+  updateReply() {
+    const { item, navigation } = this.props;
+    const { comment, content, id, imagePath } = item;
 
-      navigation.navigate("AddReply", { commentId, currentReply });
-    }
+    const commentId = comment.id;
+    const currentReply = { content, id, imagePath };
+
+    navigation.navigate("AddReply", { commentId, currentReply });
   }
 
   render() {
     const { refProp } = this.props;
     const { cancel, deleteYourReply, editReply } = labels;
 
+    const options = [cancel, deleteYourReply, editReply];
+
     return (
       <ActionSheet
         ref={refProp}
-        options={[cancel, deleteYourReply, editReply]}
+        options={options}
         cancelButtonIndex={0}
-        onPress={index => this.actionSheetOnPress(index)}
+        onPress={index => this.onPress(index)}
       />
     );
   }
