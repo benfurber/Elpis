@@ -2,48 +2,27 @@ import React, { Component } from "react";
 import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
 import ActionSheet from "react-native-actionsheet";
 
-import { Avatar, RichTextDisplay, Title } from "components";
+import { ActionSheetReply, Avatar, RichTextDisplay, Title } from "components";
 import { NavigationType, Reply as ReplyInterface } from "interfaces";
 import { labels } from "labels";
-import { DELETE_REPLY } from "mutations";
 import { colours, elements, layout } from "styles";
-import { client, formatDate } from "utils";
+import { formatDate } from "utils";
 
 interface Props {
   item: ReplyInterface;
   navigation: NavigationType;
 }
 
-class Reply extends Component<Props> {
+interface State {
+  deleting: boolean;
+}
+
+class Reply extends Component<Props, State> {
   ActionSheet = ActionSheet;
 
   state = {
     deleting: false,
   };
-
-  async actionSheetOnPress(index) {
-    if (index === 1) {
-      const { id } = this.props.item;
-      this.setState({ deleting: true });
-
-      await client.mutate({
-        mutation: DELETE_REPLY,
-        variables: {
-          id,
-        },
-      });
-    }
-
-    if (index === 2) {
-      const { item, navigation } = this.props;
-      const { comment, content, id, imagePath } = item;
-
-      const commentId = comment.id;
-      const currentReply = { content, id, imagePath };
-
-      navigation.navigate("AddReply", { commentId, currentReply });
-    }
-  }
 
   onLongPress() {
     const { isAuthorCurrentUser } = this.props.item;
@@ -57,7 +36,6 @@ class Reply extends Component<Props> {
     const { item, navigation } = this.props;
     const { author, edited, publishedAt } = item;
     const { deleting } = this.state;
-    const { cancel, deleteYourReply, editReply } = labels;
 
     const opacity = deleting ? 0.5 : 1;
 
@@ -79,11 +57,10 @@ class Reply extends Component<Props> {
             <RichTextDisplay item={item} navigation={navigation} />
           </View>
         </View>
-        <ActionSheet
-          ref={o => (this.ActionSheet = o)}
-          options={[cancel, deleteYourReply, editReply]}
-          cancelButtonIndex={0}
-          onPress={index => this.actionSheetOnPress(index)}
+        <ActionSheetReply
+          refProp={o => (this.ActionSheet = o)}
+          navigation={navigation}
+          item={item}
         />
       </TouchableOpacity>
     );

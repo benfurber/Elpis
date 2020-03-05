@@ -100,16 +100,38 @@ exports[`Comments<Reply> renders correctly 1`] = `
       />
     </View>
   </View>
-  <ActionSheet
-    cancelButtonIndex={0}
-    onPress={[Function]}
-    options={
-      Array [
-        "Cancelar",
-        "Excluir sua resposta",
-        "Editar resposta",
-      ]
+  <ActionSheetReply
+    item={
+      Object {
+        "author": Object {
+          "avatarPath": Object {
+            "testUri": "../../../app/assets/images/empower_two_women_logo.png",
+          },
+          "id": "1235we",
+          "name": "Empodere Duas Mulheres",
+        },
+        "comment": Object {
+          "author": Object {
+            "avatarPath": Object {
+              "testUri": "../../../app/assets/images/empower_two_women_logo.png",
+            },
+            "id": "1235we",
+            "name": "Empodere Duas Mulheres",
+          },
+          "content": "Dá certo sim, o meu pai, por exemplo, fugiu quando eu tinha 5 anos e eu não faço ideia da onde ele esteja. Nunca mais voltou, pena que a violência só piorou.",
+          "id": "21097",
+          "publishedAt": 2019-01-01T00:00:00.000Z,
+          "replies": Array [],
+          "totalReplies": 0,
+        },
+        "content": "Nao.",
+        "edited": false,
+        "id": "21097",
+        "link": null,
+        "publishedAt": 2019-01-01T00:00:00.000Z,
+      }
     }
+    refProp={[Function]}
   />
 </TouchableOpacity>
 `;
@@ -215,16 +237,38 @@ exports[`Comments<Reply> renders correctly when edited 1`] = `
       />
     </View>
   </View>
-  <ActionSheet
-    cancelButtonIndex={0}
-    onPress={[Function]}
-    options={
-      Array [
-        "Cancelar",
-        "Excluir sua resposta",
-        "Editar resposta",
-      ]
+  <ActionSheetReply
+    item={
+      Object {
+        "author": Object {
+          "avatarPath": Object {
+            "testUri": "../../../app/assets/images/empower_two_women_logo.png",
+          },
+          "id": "1235we",
+          "name": "Empodere Duas Mulheres",
+        },
+        "comment": Object {
+          "author": Object {
+            "avatarPath": Object {
+              "testUri": "../../../app/assets/images/empower_two_women_logo.png",
+            },
+            "id": "1235we",
+            "name": "Empodere Duas Mulheres",
+          },
+          "content": "Dá certo sim, o meu pai, por exemplo, fugiu quando eu tinha 5 anos e eu não faço ideia da onde ele esteja. Nunca mais voltou, pena que a violência só piorou.",
+          "id": "21097",
+          "publishedAt": 2019-01-01T00:00:00.000Z,
+          "replies": Array [],
+          "totalReplies": 0,
+        },
+        "content": "Nao.",
+        "edited": true,
+        "id": "21097",
+        "link": null,
+        "publishedAt": 2019-01-01T00:00:00.000Z,
+      }
     }
+    refProp={[Function]}
   />
 </TouchableOpacity>
 `;

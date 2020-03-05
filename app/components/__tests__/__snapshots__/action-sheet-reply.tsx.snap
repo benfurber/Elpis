@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ActionSheetReply renders correctly 1`] = `
+<ActionSheet
+  cancelButtonIndex={0}
+  onPress={[Function]}
+  options={
+    Array [
+      "Cancelar",
+      "Excluir sua resposta",
+      "Editar resposta",
+    ]
+  }
+/>
+`;
