@@ -1,24 +1,32 @@
 import React, { Component } from "react";
 import { TextInput, View } from "react-native";
 
+import { DocumentNode } from "graphql";
 import { Mutation } from "react-apollo";
 import { withMappedNavigationParams } from "react-navigation-props-mapper";
 
 import { UploadImage } from "components";
 import { Comment, NavigationType } from "interfaces";
 import { labels } from "labels";
-import { ADD_REPLY } from "mutations";
+import { ADD_REPLY, UPDATE_REPLY } from "mutations";
 import { FormContainerScreen } from "screens";
 import { form } from "styles";
 
 interface Props {
   commentId: Comment["id"];
   navigation: NavigationType;
+  currentReply?: {
+    id: string;
+    content: string;
+    imagePath: null | string;
+  };
 }
 
 interface State {
+  content: string;
+  id: string;
   imagePath: null | string;
-  textInput: string;
+  mutation: DocumentNode;
   textInputEditable: boolean;
 }
 
@@ -26,26 +34,39 @@ class AddReplyScreen extends Component<Props, State> {
   constructor(props) {
     super(props);
     this.state = {
+      content: "",
+      id: props.commentId,
       imagePath: null,
-      textInput: "",
+      mutation: ADD_REPLY,
       textInputEditable: true,
     };
   }
 
+  componentDidMount() {
+    const { currentReply } = this.props;
+
+    if (currentReply) {
+      const { content, id, imagePath } = currentReply;
+      const mutation = UPDATE_REPLY;
+
+      this.setState({ content, id, imagePath, mutation });
+    }
+  }
+
   onSubmitEditing(query) {
-    const { imagePath, textInput } = this.state;
-    const { commentId, navigation } = this.props;
+    const { id, imagePath, content } = this.state;
+    const { navigation } = this.props;
 
     this.setState({ textInputEditable: false });
 
     query({
       variables: {
-        content: textInput,
-        id: commentId,
+        content,
+        id,
         imagePath,
       },
     }).then(() => {
-      this.setState({ textInput: "", textInputEditable: true });
+      this.setState({ content: "", textInputEditable: true });
       navigation.dismiss();
     });
   }
@@ -54,23 +75,23 @@ class AddReplyScreen extends Component<Props, State> {
     this.setState({ imagePath });
   };
 
-  renderAddResponse(mutation) {
+  renderAddResponse() {
     const { navigation } = this.props;
-    const { imagePath } = this.state;
+    const { imagePath, mutation } = this.state;
 
     return (
       <Mutation mutation={mutation}>
-        {(createReply, {}) => (
+        {(call, {}) => (
           <View>
             <TextInput
-              onSubmitEditing={() => this.onSubmitEditing(createReply)}
+              onSubmitEditing={() => this.onSubmitEditing(call)}
               style={form.text}
               autoFocus={true}
               editable={this.state.textInputEditable}
               multiline={true}
               placeholder={labels.addPlaceholderBody}
-              onChangeText={textInput => this.setState({ textInput })}
-              value={this.state.textInput}
+              onChangeText={content => this.setState({ content })}
+              value={this.state.content}
               returnKeyLabel={labels.submit}
               returnKeyType="send"
             />
@@ -94,7 +115,7 @@ class AddReplyScreen extends Component<Props, State> {
         navigation={navigation}
         title={labels.addYourReply}
       >
-        {this.renderAddResponse(ADD_REPLY)}
+        {this.renderAddResponse()}
       </FormContainerScreen>
     );
   }

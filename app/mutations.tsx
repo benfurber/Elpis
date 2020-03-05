@@ -56,6 +56,14 @@ export const LOGIN_USER = gql`
   }
 `;
 
+export const UPDATE_REPLY = gql`
+  mutation updateReply($content: String, $id: ID!, $imagePath: URL) {
+    updateReply(content: $content, id: $id, imagePath: $imagePath) {
+      id
+    }
+  }
+`;
+
 export const UPDATE_USER_PASSWORD = gql`
   mutation updatePassword($password: String!) {
     updatePassword(password: $password) {
