@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { FlatList, StyleSheet, View, ScrollView } from "react-native";
 
-import { Post } from "interfaces";
+import { Post, NavigationType } from "interfaces";
 import { labels } from "labels";
 import { colours, layout } from "styles";
 import { calculateTotalComments } from "utils";
@@ -13,6 +13,7 @@ import { Title } from "components";
 interface Props {
   comments: Post["comments"];
   header: object;
+  navigation: NavigationType;
   noComments: string;
   onPress: (number) => void;
 }
@@ -37,6 +38,8 @@ class CommentsLoop extends Component<Props> {
   }
 
   render() {
+    const { navigation } = this.props;
+
     return (
       <View style={styles.container}>
         <ScrollView>
@@ -52,6 +55,7 @@ class CommentsLoop extends Component<Props> {
             renderItem={({ item }) => (
               <Comment
                 item={item}
+                navigation={navigation}
                 onPress={commentId => this.props.onPress(commentId)}
               />
             )}

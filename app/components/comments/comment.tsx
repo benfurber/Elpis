@@ -1,18 +1,22 @@
 import React, { Component } from "react";
 import { StyleSheet, Text, View } from "react-native";
 import { TouchableOpacity } from "react-native-gesture-handler";
+import ActionSheet from "react-native-actionsheet";
 
-import { Avatar, Badge, Icon, Title } from "components";
-import { Comment as CommentInterface } from "interfaces";
+import { Avatar, Badge, Icon, Title, ActionSheetComment } from "components";
+import { Comment as CommentInterface, NavigationType } from "interfaces";
 import { colours, elements, layout } from "styles";
 import { firstSentence, formatDate } from "utils";
 
 interface Props {
   item: CommentInterface;
+  navigation: NavigationType;
   onPress: (number) => void;
 }
 
 class Comment extends Component<Props> {
+  ActionSheet = ActionSheet;
+
   pressActionIcon() {
     const { totalReplies } = this.props.item;
 
@@ -27,12 +31,24 @@ class Comment extends Component<Props> {
       />
     );
   }
+
+  onLongPress() {
+    const { isAuthorCurrentUser } = this.props.item;
+
+    if (isAuthorCurrentUser) {
+      this.ActionSheet.show();
+    }
+  }
+
   render() {
-    const { item, onPress } = this.props;
+    const { item, navigation, onPress } = this.props;
     const { author, content, id, publishedAt, title } = item;
 
     return (
-      <TouchableOpacity onPress={() => onPress(id)}>
+      <TouchableOpacity
+        onPress={() => onPress(id)}
+        onLongPress={() => this.onLongPress()}
+      >
         <View style={styles.commentContainer}>
           <View style={styles.avatarContainer}>
             <View>
@@ -51,6 +67,11 @@ class Comment extends Component<Props> {
           </View>
           <View style={styles.iconContainer}>{this.pressActionIcon()}</View>
         </View>
+        <ActionSheetComment
+          refProp={o => (this.ActionSheet = o)}
+          navigation={navigation}
+          item={item}
+        />
       </TouchableOpacity>
     );
   }

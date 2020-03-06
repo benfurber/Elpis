@@ -25,6 +25,7 @@ interface ContentBase {
 export interface Comment extends ContentBase {
   replies: Reply[] | [];
   totalReplies: number;
+  isAuthorCurrentUser: boolean;
 }
 
 export interface Post extends ContentBase {

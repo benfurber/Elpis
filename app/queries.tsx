@@ -68,19 +68,19 @@ export const COMMENTS = gql`
     post(id: $id) {
       id
       comments {
-        id
         author {
-          id
-          name
-          avatarPath
+          ...authorAttributes
         }
-        publishedAt
         content
+        id
+        isAuthorCurrentUser
+        publishedAt
         title
         totalReplies
       }
     }
   }
+  ${AUTHOR_ATTRIBUTES}
 `;
 
 export const COMMENT_WITH_REPLIES = gql`
