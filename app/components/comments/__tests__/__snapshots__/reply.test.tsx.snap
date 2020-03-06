@@ -93,6 +93,7 @@ exports[`Comments<Reply> renders correctly 1`] = `
             "content": "Nao.",
             "edited": false,
             "id": "21097",
+            "isAuthorCurrentUser": false,
             "link": null,
             "publishedAt": 2019-01-01T00:00:00.000Z,
           }
@@ -127,6 +128,7 @@ exports[`Comments<Reply> renders correctly 1`] = `
         "content": "Nao.",
         "edited": false,
         "id": "21097",
+        "isAuthorCurrentUser": false,
         "link": null,
         "publishedAt": 2019-01-01T00:00:00.000Z,
       }
@@ -230,6 +232,7 @@ exports[`Comments<Reply> renders correctly when edited 1`] = `
             "content": "Nao.",
             "edited": true,
             "id": "21097",
+            "isAuthorCurrentUser": false,
             "link": null,
             "publishedAt": 2019-01-01T00:00:00.000Z,
           }
@@ -264,6 +267,7 @@ exports[`Comments<Reply> renders correctly when edited 1`] = `
         "content": "Nao.",
         "edited": true,
         "id": "21097",
+        "isAuthorCurrentUser": false,
         "link": null,
         "publishedAt": 2019-01-01T00:00:00.000Z,
       }
