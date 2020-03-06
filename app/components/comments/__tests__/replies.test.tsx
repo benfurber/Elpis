@@ -21,6 +21,7 @@ describe("Comments<Replies>", () => {
           "Meu pai também fez o mesmo. Logo depois que minha mãe pediu o divórcio porque sofria violência dentro de casa, ele pegou as malas, se mudou e sumiu no mundo. Nem faço mais questão de saber pra onde ele foi.",
         edited: false,
         id: "21098",
+        isAuthorCurrentUser: false,
         link: null,
         publishedAt: new Date("2019-01-02"),
       };
@@ -31,6 +32,7 @@ describe("Comments<Replies>", () => {
         content: "Nem faço mais questão de saber pra onde ele foi.",
         edited: true,
         id: "21099",
+        isAuthorCurrentUser: true,
         link: "https://www.bbc.co.uk/news/business-50656178",
         publishedAt: new Date("2019-01-03"),
       };
