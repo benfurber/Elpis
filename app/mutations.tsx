@@ -40,10 +40,26 @@ export const COMPLETE_USER_ONBOARDING = gql`
   }
 `;
 
+export const DELETE_REPLY = gql`
+  mutation deleteReply($id: ID!) {
+    deleteReply(id: $id) {
+      id
+    }
+  }
+`;
+
 export const LOGIN_USER = gql`
   mutation Login($email: String!, $password: String!) {
     login(email: $email, password: $password) {
       token
+    }
+  }
+`;
+
+export const UPDATE_REPLY = gql`
+  mutation updateReply($content: String, $id: ID!, $imagePath: URL) {
+    updateReply(content: $content, id: $id, imagePath: $imagePath) {
+      id
     }
   }
 `;

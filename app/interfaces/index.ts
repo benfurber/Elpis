@@ -36,6 +36,7 @@ export interface Reply extends ContentBase {
   comment: Comment;
   edited: boolean;
   link: string | null;
+  isAuthorCurrentUser: boolean;
 }
 
 export interface Notification {
