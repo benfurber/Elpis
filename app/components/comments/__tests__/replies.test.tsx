@@ -1,13 +1,12 @@
 import React from "react";
 import { shallow } from "enzyme";
 
-import { author, comment } from "factories";
+import { author, comment, post } from "factories";
 import { mockDateNow } from "../../../test-utils";
 
 import { Replies } from "../replies";
 
 let navigation;
-jest.mock(navigation, () => jest.fn());
 
 describe("Comments<Replies>", () => {
   describe("when there are replies", () => {
@@ -41,7 +40,9 @@ describe("Comments<Replies>", () => {
         author,
         content:
           "Dá certo sim, o meu pai, por exemplo, fugiu quando eu tinha 5 anos e eu não faço ideia da onde ele esteja. Nunca mais voltou, pena que a violência só piorou.",
+        edited: false,
         id: "21097",
+        isAuthorCurrentUser: false,
         publishedAt: new Date("2019-01-01"),
         replies: [reply1, reply2],
         totalReplies: 2,
@@ -55,6 +56,7 @@ describe("Comments<Replies>", () => {
           navigation={navigation}
           noReplies={noReplies}
           onPress={onPress}
+          postId={post.id}
         />,
       );
 
@@ -70,7 +72,9 @@ describe("Comments<Replies>", () => {
         author,
         content:
           "Dá certo sim, o meu pai, por exemplo, fugiu quando eu tinha 5 anos e eu não faço ideia da onde ele esteja. Nunca mais voltou, pena que a violência só piorou.",
+        edited: true,
         id: "21097",
+        isAuthorCurrentUser: false,
         publishedAt: new Date("2019-01-01"),
         replies: [],
         totalReplies: 0,
@@ -84,6 +88,7 @@ describe("Comments<Replies>", () => {
           navigation={navigation}
           noReplies={noReplies}
           onPress={onPress}
+          postId={post.id}
         />,
       );
 
