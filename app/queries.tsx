@@ -72,6 +72,7 @@ export const COMMENTS = gql`
           ...authorAttributes
         }
         content
+        edited
         id
         isAuthorCurrentUser
         publishedAt
@@ -92,6 +93,7 @@ export const COMMENT_WITH_REPLIES = gql`
         avatarPath
       }
       content
+      edited
       id
       isAuthorCurrentUser
       publishedAt

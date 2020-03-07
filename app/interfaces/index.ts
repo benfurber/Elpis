@@ -23,6 +23,7 @@ interface ContentBase {
 }
 
 export interface Comment extends ContentBase {
+  edited: boolean;
   replies: Reply[] | [];
   totalReplies: number;
   isAuthorCurrentUser: boolean;

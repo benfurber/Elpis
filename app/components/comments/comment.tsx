@@ -4,6 +4,7 @@ import ActionSheet from "react-native-actionsheet";
 
 import { ActionSheetComment, Avatar, Title } from "components";
 import { Comment as CommentType, NavigationType, Post } from "interfaces";
+import { labels } from "labels";
 import { colours, elements, layout } from "styles";
 import { formatDate } from "utils";
 
@@ -26,7 +27,7 @@ class Comment extends Component<Props> {
 
   render() {
     const { item, navigation, postId } = this.props;
-    const { author, content, publishedAt, title } = item;
+    const { author, content, edited, publishedAt, title } = item;
 
     return (
       <TouchableOpacity onLongPress={() => this.onLongPress()}>
@@ -36,7 +37,10 @@ class Comment extends Component<Props> {
 
             <View style={styles.featuredAuthorDetails}>
               <Title text={author.name} />
-              <Text style={elements.textDate}>{formatDate(publishedAt)}</Text>
+              <Text style={elements.textDate}>
+                {formatDate(publishedAt)}
+                {edited && ` (${labels.editedComment})`}
+              </Text>
             </View>
           </View>
 
