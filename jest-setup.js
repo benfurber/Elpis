@@ -23,6 +23,9 @@ jest.mock("react-native-fs", () => ({
   fs: jest.fn(),
 }));
 
+let navigation;
+jest.mock(navigation, () => jest.fn());
+
 jest.mock("react-native-mixpanel", () => ({
   sharedInstanceWithToken: jest.fn(() => Promise.resolve()),
   track: jest.fn(),
