@@ -16,6 +16,7 @@ interface Props {
   navigation: NavigationType;
   noComments: string;
   onPress: (number) => void;
+  postId: Post["id"];
 }
 
 class CommentsLoop extends Component<Props> {
@@ -38,7 +39,7 @@ class CommentsLoop extends Component<Props> {
   }
 
   render() {
-    const { navigation } = this.props;
+    const { navigation, postId } = this.props;
 
     return (
       <View style={styles.container}>
@@ -57,6 +58,7 @@ class CommentsLoop extends Component<Props> {
                 item={item}
                 navigation={navigation}
                 onPress={commentId => this.props.onPress(commentId)}
+                postId={postId}
               />
             )}
           />

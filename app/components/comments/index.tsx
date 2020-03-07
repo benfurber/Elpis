@@ -69,6 +69,7 @@ class Comments extends Component<Props, State> {
         navigation={navigation}
         noComments={labels.noComments}
         onPress={commentId => this.setDisplay(commentId)}
+        postId={data.post.id}
       />
     );
   };

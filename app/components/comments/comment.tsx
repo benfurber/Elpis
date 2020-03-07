@@ -4,7 +4,7 @@ import { TouchableOpacity } from "react-native-gesture-handler";
 import ActionSheet from "react-native-actionsheet";
 
 import { Avatar, Badge, Icon, Title, ActionSheetComment } from "components";
-import { Comment as CommentInterface, NavigationType } from "interfaces";
+import { Comment as CommentInterface, NavigationType, Post } from "interfaces";
 import { colours, elements, layout } from "styles";
 import { firstSentence, formatDate } from "utils";
 
@@ -12,6 +12,7 @@ interface Props {
   item: CommentInterface;
   navigation: NavigationType;
   onPress: (number) => void;
+  postId: Post["id"];
 }
 
 class Comment extends Component<Props> {
@@ -41,7 +42,7 @@ class Comment extends Component<Props> {
   }
 
   render() {
-    const { item, navigation, onPress } = this.props;
+    const { item, navigation, onPress, postId } = this.props;
     const { author, content, id, publishedAt, title } = item;
 
     return (
@@ -68,9 +69,10 @@ class Comment extends Component<Props> {
           <View style={styles.iconContainer}>{this.pressActionIcon()}</View>
         </View>
         <ActionSheetComment
-          refProp={o => (this.ActionSheet = o)}
-          navigation={navigation}
           item={item}
+          navigation={navigation}
+          postId={postId}
+          refProp={o => (this.ActionSheet = o)}
         />
       </TouchableOpacity>
     );
