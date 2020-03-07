@@ -1,4 +1,4 @@
-import { Reply } from "interfaces";
+import { Comment, Reply } from "interfaces";
 
 export const author = {
   avatarPath: require("assets/images/empower_two_women_logo.png"),
@@ -15,11 +15,12 @@ export const post = {
   publishedAt: new Date("2000-01-01"),
 };
 
-export const preComment = {
+export const preComment: Comment = {
   author,
   content:
     "Dá certo sim, o meu pai, por exemplo, fugiu quando eu tinha 5 anos e eu não faço ideia da onde ele esteja. Nunca mais voltou, pena que a violência só piorou.",
   id: "21097",
+  isAuthorCurrentUser: false,
   publishedAt: new Date("2019-01-01"),
   replies: [],
   totalReplies: 0,
@@ -36,11 +37,12 @@ export const reply: Reply = {
   publishedAt: new Date("2019-01-01"),
 };
 
-export const comment = {
+export const comment: Comment = {
   author,
   content:
     "Dá certo sim, o meu pai, por exemplo, fugiu quando eu tinha 5 anos e eu não faço ideia da onde ele esteja. Nunca mais voltou, pena que a violência só piorou.",
   id: "21097",
+  isAuthorCurrentUser: false,
   publishedAt: new Date("2019-01-01"),
   replies: [reply],
   title: "Meu pai fez o que ela mandou",

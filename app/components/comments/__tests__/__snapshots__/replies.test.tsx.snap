@@ -199,6 +199,7 @@ exports[`Comments<Replies> when there are replies renders correctly 1`] = `
               },
               "content": "Dá certo sim, o meu pai, por exemplo, fugiu quando eu tinha 5 anos e eu não faço ideia da onde ele esteja. Nunca mais voltou, pena que a violência só piorou.",
               "id": "21097",
+              "isAuthorCurrentUser": false,
               "publishedAt": 2019-01-01T00:00:00.000Z,
               "replies": Array [
                 Object {
@@ -219,6 +220,7 @@ exports[`Comments<Replies> when there are replies renders correctly 1`] = `
                     },
                     "content": "Dá certo sim, o meu pai, por exemplo, fugiu quando eu tinha 5 anos e eu não faço ideia da onde ele esteja. Nunca mais voltou, pena que a violência só piorou.",
                     "id": "21097",
+                    "isAuthorCurrentUser": false,
                     "publishedAt": 2019-01-01T00:00:00.000Z,
                     "replies": Array [],
                     "totalReplies": 0,
@@ -259,6 +261,7 @@ exports[`Comments<Replies> when there are replies renders correctly 1`] = `
               },
               "content": "Dá certo sim, o meu pai, por exemplo, fugiu quando eu tinha 5 anos e eu não faço ideia da onde ele esteja. Nunca mais voltou, pena que a violência só piorou.",
               "id": "21097",
+              "isAuthorCurrentUser": false,
               "publishedAt": 2019-01-01T00:00:00.000Z,
               "replies": Array [
                 Object {
@@ -279,6 +282,7 @@ exports[`Comments<Replies> when there are replies renders correctly 1`] = `
                     },
                     "content": "Dá certo sim, o meu pai, por exemplo, fugiu quando eu tinha 5 anos e eu não faço ideia da onde ele esteja. Nunca mais voltou, pena que a violência só piorou.",
                     "id": "21097",
+                    "isAuthorCurrentUser": false,
                     "publishedAt": 2019-01-01T00:00:00.000Z,
                     "replies": Array [],
                     "totalReplies": 0,
