@@ -2,80 +2,41 @@
 
 exports[`Comments<Replies> when there are no replies renders correctly 1`] = `
 <View>
-  <View>
-    <TouchableOpacity
-      activeOpacity={0.2}
-      onPress={[Function]}
-    >
-      <Text
-        style={
-          Object {
-            "fontStyle": "italic",
-            "marginHorizontal": 5,
-            "padding": 10,
-          }
-        }
-      >
-        &lt; 
-        Voltar aos tópicos
-      </Text>
-    </TouchableOpacity>
-  </View>
-  <View
-    style={
-      Object {
-        "backgroundColor": "rgba(198, 213, 225, 0.75)",
-        "marginBottom": 20,
-        "paddingHorizontal": 10,
-        "paddingVertical": 20,
-      }
-    }
+  <TouchableOpacity
+    activeOpacity={0.2}
+    onPress={[Function]}
   >
-    <View
+    <Text
       style={
         Object {
-          "alignItems": "center",
-          "flexDirection": "row",
-          "marginBottom": 10,
+          "fontStyle": "italic",
+          "marginHorizontal": 5,
+          "padding": 10,
         }
       }
     >
-      <Avatar
-        avatarPath={
-          Object {
+      &lt; 
+      Voltar aos tópicos
+    </Text>
+  </TouchableOpacity>
+  <Comment
+    item={
+      Object {
+        "author": Object {
+          "avatarPath": Object {
             "testUri": "../../../app/assets/images/empower_two_women_logo.png",
-          }
-        }
-        size="large"
-      />
-      <View
-        style={
-          Object {
-            "paddingLeft": 10,
-          }
-        }
-      >
-        <Title
-          text="Empodere Duas Mulheres"
-        />
-        <Text
-          style={
-            Object {
-              "color": "rgb(51, 51, 51)",
-              "fontStyle": "italic",
-            }
-          }
-        >
-          Há um dia
-        </Text>
-      </View>
-    </View>
-    <View>
-      <Text>
-        Dá certo sim, o meu pai, por exemplo, fugiu quando eu tinha 5 anos e eu não faço ideia da onde ele esteja. Nunca mais voltou, pena que a violência só piorou.
-      </Text>
-    </View>
-  </View>
+          },
+          "id": "1235we",
+          "name": "Empodere Duas Mulheres",
+        },
+        "content": "Dá certo sim, o meu pai, por exemplo, fugiu quando eu tinha 5 anos e eu não faço ideia da onde ele esteja. Nunca mais voltou, pena que a violência só piorou.",
+        "id": "21097",
+        "publishedAt": 2019-01-01T00:00:00.000Z,
+        "replies": Array [],
+        "totalReplies": 0,
+      }
+    }
+  />
   <NoContent
     text="No replies right now, add one!"
   />
@@ -84,80 +45,166 @@ exports[`Comments<Replies> when there are no replies renders correctly 1`] = `
 
 exports[`Comments<Replies> when there are replies renders correctly 1`] = `
 <View>
-  <View>
-    <TouchableOpacity
-      activeOpacity={0.2}
-      onPress={[Function]}
-    >
-      <Text
-        style={
-          Object {
-            "fontStyle": "italic",
-            "marginHorizontal": 5,
-            "padding": 10,
-          }
-        }
-      >
-        &lt; 
-        Voltar aos tópicos
-      </Text>
-    </TouchableOpacity>
-  </View>
-  <View
-    style={
-      Object {
-        "backgroundColor": "rgba(198, 213, 225, 0.75)",
-        "marginBottom": 20,
-        "paddingHorizontal": 10,
-        "paddingVertical": 20,
-      }
-    }
+  <TouchableOpacity
+    activeOpacity={0.2}
+    onPress={[Function]}
   >
-    <View
+    <Text
       style={
         Object {
-          "alignItems": "center",
-          "flexDirection": "row",
-          "marginBottom": 10,
+          "fontStyle": "italic",
+          "marginHorizontal": 5,
+          "padding": 10,
         }
       }
     >
-      <Avatar
-        avatarPath={
-          Object {
+      &lt; 
+      Voltar aos tópicos
+    </Text>
+  </TouchableOpacity>
+  <Comment
+    item={
+      Object {
+        "author": Object {
+          "avatarPath": Object {
             "testUri": "../../../app/assets/images/empower_two_women_logo.png",
-          }
-        }
-        size="large"
-      />
-      <View
-        style={
+          },
+          "id": "1235we",
+          "name": "Empodere Duas Mulheres",
+        },
+        "content": "Dá certo sim, o meu pai, por exemplo, fugiu quando eu tinha 5 anos e eu não faço ideia da onde ele esteja. Nunca mais voltou, pena que a violência só piorou.",
+        "id": "21097",
+        "publishedAt": 2019-01-01T00:00:00.000Z,
+        "replies": Array [
           Object {
-            "paddingLeft": 10,
-          }
-        }
-      >
-        <Title
-          text="Empodere Duas Mulheres"
-        />
-        <Text
-          style={
-            Object {
-              "color": "rgb(51, 51, 51)",
-              "fontStyle": "italic",
-            }
-          }
-        >
-          Há 3 dias
-        </Text>
-      </View>
-    </View>
-    <View>
-      <Text>
-        Dá certo sim, o meu pai, por exemplo, fugiu quando eu tinha 5 anos e eu não faço ideia da onde ele esteja. Nunca mais voltou, pena que a violência só piorou.
-      </Text>
-    </View>
-  </View>
+            "author": Object {
+              "avatarPath": Object {
+                "testUri": "../../../app/assets/images/empower_two_women_logo.png",
+              },
+              "id": "1235we",
+              "name": "Empodere Duas Mulheres",
+            },
+            "comment": Object {
+              "author": Object {
+                "avatarPath": Object {
+                  "testUri": "../../../app/assets/images/empower_two_women_logo.png",
+                },
+                "id": "1235we",
+                "name": "Empodere Duas Mulheres",
+              },
+              "content": "Dá certo sim, o meu pai, por exemplo, fugiu quando eu tinha 5 anos e eu não faço ideia da onde ele esteja. Nunca mais voltou, pena que a violência só piorou.",
+              "id": "21097",
+              "isAuthorCurrentUser": false,
+              "publishedAt": 2019-01-01T00:00:00.000Z,
+              "replies": Array [
+                Object {
+                  "author": Object {
+                    "avatarPath": Object {
+                      "testUri": "../../../app/assets/images/empower_two_women_logo.png",
+                    },
+                    "id": "1235we",
+                    "name": "Empodere Duas Mulheres",
+                  },
+                  "comment": Object {
+                    "author": Object {
+                      "avatarPath": Object {
+                        "testUri": "../../../app/assets/images/empower_two_women_logo.png",
+                      },
+                      "id": "1235we",
+                      "name": "Empodere Duas Mulheres",
+                    },
+                    "content": "Dá certo sim, o meu pai, por exemplo, fugiu quando eu tinha 5 anos e eu não faço ideia da onde ele esteja. Nunca mais voltou, pena que a violência só piorou.",
+                    "id": "21097",
+                    "isAuthorCurrentUser": false,
+                    "publishedAt": 2019-01-01T00:00:00.000Z,
+                    "replies": Array [],
+                    "totalReplies": 0,
+                  },
+                  "content": "Nao.",
+                  "edited": false,
+                  "id": "21097",
+                  "isAuthorCurrentUser": false,
+                  "link": null,
+                  "publishedAt": 2019-01-01T00:00:00.000Z,
+                },
+              ],
+              "title": "Meu pai fez o que ela mandou",
+              "totalReplies": 1,
+            },
+            "content": "Meu pai também fez o mesmo. Logo depois que minha mãe pediu o divórcio porque sofria violência dentro de casa, ele pegou as malas, se mudou e sumiu no mundo. Nem faço mais questão de saber pra onde ele foi.",
+            "edited": false,
+            "id": "21098",
+            "isAuthorCurrentUser": false,
+            "link": null,
+            "publishedAt": 2019-01-02T00:00:00.000Z,
+          },
+          Object {
+            "author": Object {
+              "avatarPath": Object {
+                "testUri": "../../../app/assets/images/empower_two_women_logo.png",
+              },
+              "id": "1235we",
+              "name": "Empodere Duas Mulheres",
+            },
+            "comment": Object {
+              "author": Object {
+                "avatarPath": Object {
+                  "testUri": "../../../app/assets/images/empower_two_women_logo.png",
+                },
+                "id": "1235we",
+                "name": "Empodere Duas Mulheres",
+              },
+              "content": "Dá certo sim, o meu pai, por exemplo, fugiu quando eu tinha 5 anos e eu não faço ideia da onde ele esteja. Nunca mais voltou, pena que a violência só piorou.",
+              "id": "21097",
+              "isAuthorCurrentUser": false,
+              "publishedAt": 2019-01-01T00:00:00.000Z,
+              "replies": Array [
+                Object {
+                  "author": Object {
+                    "avatarPath": Object {
+                      "testUri": "../../../app/assets/images/empower_two_women_logo.png",
+                    },
+                    "id": "1235we",
+                    "name": "Empodere Duas Mulheres",
+                  },
+                  "comment": Object {
+                    "author": Object {
+                      "avatarPath": Object {
+                        "testUri": "../../../app/assets/images/empower_two_women_logo.png",
+                      },
+                      "id": "1235we",
+                      "name": "Empodere Duas Mulheres",
+                    },
+                    "content": "Dá certo sim, o meu pai, por exemplo, fugiu quando eu tinha 5 anos e eu não faço ideia da onde ele esteja. Nunca mais voltou, pena que a violência só piorou.",
+                    "id": "21097",
+                    "isAuthorCurrentUser": false,
+                    "publishedAt": 2019-01-01T00:00:00.000Z,
+                    "replies": Array [],
+                    "totalReplies": 0,
+                  },
+                  "content": "Nao.",
+                  "edited": false,
+                  "id": "21097",
+                  "isAuthorCurrentUser": false,
+                  "link": null,
+                  "publishedAt": 2019-01-01T00:00:00.000Z,
+                },
+              ],
+              "title": "Meu pai fez o que ela mandou",
+              "totalReplies": 1,
+            },
+            "content": "Nem faço mais questão de saber pra onde ele foi.",
+            "edited": true,
+            "id": "21099",
+            "isAuthorCurrentUser": true,
+            "link": "https://www.bbc.co.uk/news/business-50656178",
+            "publishedAt": 2019-01-03T00:00:00.000Z,
+          },
+        ],
+        "totalReplies": 2,
+      }
+    }
+  />
   <View>
     <Text
       style={

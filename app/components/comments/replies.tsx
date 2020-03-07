@@ -7,20 +7,21 @@ import {
   FlatList,
 } from "react-native";
 
-import { Avatar, Title } from "components";
-import { Comment, NavigationType } from "interfaces";
+import { Comment as CommentType, NavigationType, Post } from "interfaces";
 import { labels } from "labels";
-import { colours, elements, layout, typography } from "styles";
-import { Analytics, formatDate } from "utils";
+import { layout } from "styles";
+import { Analytics } from "utils";
 
+import { Comment } from "./comment";
 import { NoContent } from "./no-content";
 import { Reply } from "./reply";
 
 interface Props {
-  item: Comment;
+  item: CommentType;
   navigation: NavigationType;
   noReplies: string;
   onPress: Function;
+  postId: Post["id"];
 }
 
 class Replies extends Component<Props> {
@@ -44,43 +45,6 @@ class Replies extends Component<Props> {
     );
   }
 
-  noReplies() {
-    return <NoContent text={this.props.noReplies} />;
-  }
-
-  renderBackButton() {
-    return (
-      <View>
-        <TouchableOpacity onPress={() => this.props.onPress()}>
-          <Text style={styles.link}>&#60; {labels.back.toTopics}</Text>
-        </TouchableOpacity>
-      </View>
-    );
-  }
-
-  renderComment() {
-    const { item } = this.props;
-    const { author, content, publishedAt, title } = item;
-
-    return (
-      <View style={styles.featured}>
-        <View style={styles.featuredDetails}>
-          <Avatar avatarPath={author.avatarPath} size={"large"} />
-
-          <View style={styles.featuredAuthorDetails}>
-            <Title text={author.name} />
-            <Text style={elements.textDate}>{formatDate(publishedAt)}</Text>
-          </View>
-        </View>
-
-        <View>
-          {title && <Title text={title} small />}
-          {content && <Text>{content}</Text>}
-        </View>
-      </View>
-    );
-  }
-
   renderReplies() {
     const { totalReplies } = this.props.item;
 
@@ -95,14 +59,20 @@ class Replies extends Component<Props> {
       );
     }
 
-    return this.noReplies();
+    return <NoContent text={this.props.noReplies} />;
   }
 
   render() {
+    const { item, navigation, postId } = this.props;
+
     return (
       <View>
-        {this.renderBackButton()}
-        {this.renderComment()}
+        <TouchableOpacity onPress={() => this.props.onPress()}>
+          <Text style={styles.link}>&#60; {labels.back.toTopics}</Text>
+        </TouchableOpacity>
+
+        <Comment item={item} navigation={navigation} postId={postId} />
+
         {this.renderReplies()}
       </View>
     );
@@ -110,27 +80,10 @@ class Replies extends Component<Props> {
 }
 
 const styles = StyleSheet.create({
-  featured: {
-    backgroundColor: colours.transparentBlue,
-    marginBottom: layout.spacingL,
-    paddingHorizontal: layout.spacing,
-    paddingVertical: layout.spacingL,
-  },
-  featuredAuthorDetails: {
-    paddingLeft: layout.spacing,
-  },
-  featuredDetails: {
-    alignItems: "center",
-    flexDirection: "row",
-    marginBottom: layout.spacing,
-  },
   link: {
     fontStyle: "italic",
     marginHorizontal: layout.spacingS,
     padding: layout.spacing,
-  },
-  smallTitle: {
-    fontSize: typography.fontSize,
   },
   subHeading: {
     fontStyle: "italic",

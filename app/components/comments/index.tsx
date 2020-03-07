@@ -107,6 +107,7 @@ class Comments extends Component<Props, State> {
         navigation={navigation}
         noReplies={labels.noReplies}
         onPress={() => this.setDisplay(null)}
+        postId={data.id}
       />
     );
   };
