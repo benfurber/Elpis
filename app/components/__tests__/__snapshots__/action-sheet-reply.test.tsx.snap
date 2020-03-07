@@ -7,7 +7,7 @@ exports[`ActionSheetReply renders correctly 1`] = `
   options={
     Array [
       "Cancelar",
-      "Excluir sua resposta",
+      "Excluir resposta",
       "Editar resposta",
     ]
   }

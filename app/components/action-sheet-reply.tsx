@@ -42,9 +42,9 @@ class ActionSheetReply extends Component<Props> {
 
   render() {
     const { refProp } = this.props;
-    const { cancel, deleteYourReply, editReply } = labels;
+    const { cancel, deleteReply, editReply } = labels;
 
-    const options = [cancel, deleteYourReply, editReply];
+    const options = [cancel, deleteReply, editReply];
 
     return (
       <ActionSheet
