@@ -3,81 +3,100 @@ import { Text, TextInput, View } from "react-native";
 
 import { Mutation } from "react-apollo";
 import { withMappedNavigationParams } from "react-navigation-props-mapper";
+import { DocumentNode } from "graphql";
 
 import { NavigationType, Post } from "interfaces";
 import { labels } from "labels";
-import { ADD_COMMENT } from "mutations";
+import { ADD_COMMENT, UPDATE_COMMENT } from "mutations";
 import { FormContainerScreen } from "screens";
 import { form } from "styles";
 import { firstSentence } from "utils";
 
 interface Props {
+  currentComment: {
+    content: string;
+    id: string;
+    title: null | string;
+  };
   navigation: NavigationType;
   postId: Post["id"];
 }
 
 interface State {
+  content: string;
   editable: boolean;
-  titleInput: string;
-  contentInput: string;
+  id: string;
+  mutation: DocumentNode;
+  title: null | string;
 }
 
 class AddTopicScreen extends Component<Props, State> {
-  constructor(props) {
-    super(props);
-    this.state = {
-      contentInput: "",
-      editable: true,
-      titleInput: "",
-    };
-  }
-  secondtitleInput = TextInput as any;
+  secondField = TextInput as any;
 
-  componentDidUpdate(_props, state) {
-    const titleInput = firstSentence(state.titleInput);
+  state = {
+    content: "",
+    editable: true,
+    id: this.props.postId,
+    mutation: ADD_COMMENT,
+    title: "",
+  };
 
-    if (titleInput !== state.titleInput) {
-      this.setState({ titleInput });
-      return this.secondtitleInput.focus();
+  componentDidMount() {
+    const { currentComment } = this.props;
+    if (currentComment) {
+      const { content, id, title } = currentComment;
+      const mutation = UPDATE_COMMENT;
+
+      this.setState({ content, id, mutation, title });
     }
   }
 
-  onSubmitEditing(query, id) {
-    const { titleInput, contentInput } = this.state;
+  componentDidUpdate(_props, state) {
+    const { title } = state;
+
+    if (title) {
+      const title = firstSentence(state.title);
+
+      if (title !== state.title) {
+        this.setState({ title });
+        return this.secondField.focus();
+      }
+    }
+  }
+
+  onSubmitEditing(call) {
+    const { title, id, content } = this.state;
     this.setState({ editable: false });
 
-    const title = titleInput.length > 0 ? titleInput : null;
-
-    query({
+    call({
       variables: {
-        content: contentInput,
+        content,
         id,
-        title,
+        title: title && title.length > 0 ? title : null,
       },
     }).then(() => {
-      this.setState({ editable: true, titleInput: "" });
       this.props.navigation.dismiss();
     });
   }
 
   form() {
-    const { titleInput, editable, contentInput } = this.state;
+    const { title, editable, content } = this.state;
 
     const args = {
       editable,
       multiline: true,
-      onChangeText: titleInput => this.setState({ titleInput }),
     };
 
     return (createComment, {}) => (
       <View style={form.fieldContainer}>
         <Text style={form.label}>{labels.title}</Text>
         <TextInput
-          onSubmitEditing={() => this.secondtitleInput.focus()}
-          style={form.title}
           autoFocus={false}
+          onChangeText={title => this.setState({ title })}
+          onSubmitEditing={() => this.secondField.focus()}
+          style={form.title}
           placeholder={labels.addPlaceholderTitle}
-          value={titleInput}
+          value={title}
           returnKeyLabel={labels.next}
           returnKeyType="next"
           {...args}
@@ -86,12 +105,10 @@ class AddTopicScreen extends Component<Props, State> {
         <TextInput
           {...args}
           autoFocus={true}
-          ref={input => (this.secondtitleInput = input)}
-          onChangeText={contentInput => this.setState({ contentInput })}
-          onSubmitEditing={() =>
-            this.onSubmitEditing(createComment, this.props.postId)
-          }
-          value={contentInput}
+          ref={input => (this.secondField = input)}
+          onChangeText={content => this.setState({ content })}
+          onSubmitEditing={() => this.onSubmitEditing(createComment)}
+          value={content}
           style={form.text}
           placeholder={labels.addPlaceholderBody}
           returnKeyLabel={labels.submit}
@@ -101,11 +118,9 @@ class AddTopicScreen extends Component<Props, State> {
     );
   }
 
-  renderAddResponse(mutation) {
-    return <Mutation mutation={mutation}>{this.form()}</Mutation>;
-  }
-
   render() {
+    const { mutation } = this.state;
+
     return (
       <FormContainerScreen
         analyticsContent={{
@@ -115,7 +130,7 @@ class AddTopicScreen extends Component<Props, State> {
         navigation={this.props.navigation}
         title={labels.addNewTopic}
       >
-        {this.renderAddResponse(ADD_COMMENT)}
+        <Mutation mutation={mutation}>{this.form()}</Mutation>
       </FormContainerScreen>
     );
   }
