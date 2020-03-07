@@ -6,7 +6,7 @@ import { labels } from "labels";
 import { colours, layout } from "styles";
 import { calculateTotalComments } from "utils";
 
-import { Comment } from "./comment";
+import { CommentPreview } from "./comment-preview";
 import { NoContent } from "./no-content";
 import { Title } from "components";
 
@@ -54,7 +54,7 @@ class CommentsLoop extends Component<Props> {
             data={this.props.comments}
             keyExtractor={({ id }) => id}
             renderItem={({ item }) => (
-              <Comment
+              <CommentPreview
                 item={item}
                 navigation={navigation}
                 onPress={commentId => this.props.onPress(commentId)}

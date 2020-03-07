@@ -15,7 +15,7 @@ interface Props {
   postId: Post["id"];
 }
 
-class Comment extends Component<Props> {
+class CommentPreview extends Component<Props> {
   ActionSheet = ActionSheet;
 
   pressActionIcon() {
@@ -119,4 +119,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export { Comment };
+export { CommentPreview };
