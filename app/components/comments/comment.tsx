@@ -1,98 +1,79 @@
 import React, { Component } from "react";
-import { StyleSheet, Text, View } from "react-native";
-import { TouchableOpacity } from "react-native-gesture-handler";
+import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
+import ActionSheet from "react-native-actionsheet";
 
-import { Avatar, Badge, Icon, Title } from "components";
-import { Comment as CommentInterface } from "interfaces";
+import { ActionSheetComment, Avatar, Title } from "components";
+import { Comment as CommentType, NavigationType, Post } from "interfaces";
+import { labels } from "labels";
 import { colours, elements, layout } from "styles";
-import { firstSentence, formatDate } from "utils";
+import { formatDate } from "utils";
 
 interface Props {
-  item: CommentInterface;
-  onPress: (number) => void;
+  item: CommentType;
+  navigation: NavigationType;
+  postId: Post["id"];
 }
 
 class Comment extends Component<Props> {
-  pressActionIcon() {
-    const { totalReplies } = this.props.item;
+  ActionSheet = ActionSheet;
 
-    if (totalReplies > 0) {
-      return <Badge left={0} number={totalReplies} staticPosition />;
+  onLongPress() {
+    const { isAuthorCurrentUser } = this.props.item;
+
+    if (isAuthorCurrentUser) {
+      this.ActionSheet.show();
     }
-
-    return (
-      <Icon
-        colour={colours.navyBlueDarkTransparentHigh}
-        name="angle-double-right"
-      />
-    );
   }
+
   render() {
-    const { item, onPress } = this.props;
-    const { author, content, id, publishedAt, title } = item;
+    const { item, navigation, postId } = this.props;
+    const { author, content, edited, publishedAt, title } = item;
 
     return (
-      <TouchableOpacity onPress={() => onPress(id)}>
-        <View style={styles.commentContainer}>
-          <View style={styles.avatarContainer}>
-            <View>
-              <Avatar avatarPath={author.avatarPath} />
+      <TouchableOpacity onLongPress={() => this.onLongPress()}>
+        <View style={styles.featured}>
+          <View style={styles.featuredDetails}>
+            <Avatar avatarPath={author.avatarPath} size={"large"} />
+
+            <View style={styles.featuredAuthorDetails}>
+              <Title text={author.name} />
+              <Text style={elements.textDate}>
+                {formatDate(publishedAt)}
+                {edited && ` (${labels.editedComment})`}
+              </Text>
             </View>
           </View>
-          <View style={styles.commentBodyContainer}>
-            {title && <Title text={title} />}
-            <Text style={styles.metaDetails}>
-              <Text style={styles.name}>{`${author.name} `}</Text>
-              {formatDate(publishedAt, false)}
-            </Text>
-            {content && (
-              <Text style={styles.text}>{firstSentence(content)}</Text>
-            )}
+
+          <View>
+            {title && <Title text={title} small />}
+            {content && <Text>{content}</Text>}
           </View>
-          <View style={styles.iconContainer}>{this.pressActionIcon()}</View>
         </View>
+        <ActionSheetComment
+          item={item}
+          navigation={navigation}
+          postId={postId}
+          refProp={o => (this.ActionSheet = o)}
+        />
       </TouchableOpacity>
     );
   }
 }
 
 const styles = StyleSheet.create({
-  avatarContainer: {
+  featured: {
+    backgroundColor: colours.transparentBlue,
+    marginBottom: layout.spacingL,
+    paddingHorizontal: layout.spacing,
+    paddingVertical: layout.spacingL,
+  },
+  featuredAuthorDetails: {
+    paddingLeft: layout.spacing,
+  },
+  featuredDetails: {
     alignItems: "center",
     flexDirection: "row",
-    width: 60,
-  },
-  commentBodyContainer: {
-    flex: 1,
-    marginLeft: layout.spacing,
-    marginVertical: layout.spacing,
-  },
-  commentContainer: {
-    alignItems: "stretch",
-    borderTopColor: colours.pureWhite,
-    borderTopWidth: 3,
-    flex: 1,
-    flexDirection: "row",
-    margin: layout.spacing,
-    marginBottom: 0,
-    paddingTop: layout.spacingS,
-  },
-  iconContainer: {
-    alignItems: "center",
-    flexDirection: "row",
-    marginRight: layout.spacingXS,
-  },
-  metaDetails: {
     marginBottom: layout.spacing,
-    ...elements.textDate,
-  },
-  name: {
-    color: colours.navyBlueDark,
-    fontWeight: "bold",
-  },
-  text: {
-    flex: 1,
-    flexWrap: "nowrap",
   },
 });
 

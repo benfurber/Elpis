@@ -52,7 +52,9 @@ describe("Post", () => {
             author,
             content:
               "Dá certo sim, o meu pai, por exemplo, fugiu quando eu tinha 5 anos e eu não faço ideia da onde ele esteja. Nunca mais voltou, pena que a violência só piorou.",
+            edited: false,
             id: "21097",
+            isAuthorCurrentUser: false,
             publishedAt: new Date("2019-01-01"),
             replies: [],
             totalReplies: 0,

@@ -19,12 +19,14 @@ interface ContentBase {
   id: string;
   imagePath?: string;
   publishedAt: Date;
-  title?: string;
+  title?: string | null;
 }
 
 export interface Comment extends ContentBase {
+  edited: boolean;
   replies: Reply[] | [];
   totalReplies: number;
+  isAuthorCurrentUser: boolean;
 }
 
 export interface Post extends ContentBase {

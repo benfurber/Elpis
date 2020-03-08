@@ -2,22 +2,15 @@ import React from "react";
 import { Text } from "react-native";
 import { shallow } from "enzyme";
 
-import { author } from "../../../factories";
+import { comment, post } from "factories";
 
 import { CommentsLoop } from "../comments-loop";
+
+let navigation;
 
 describe("Comments<CommentsLoop>", () => {
   describe("when there are comments", () => {
     it("renders correctly", () => {
-      const comment = {
-        author,
-        content:
-          "Dá certo sim, o meu pai, por exemplo, fugiu quando eu tinha 5 anos e eu não faço ideia da onde ele esteja. Nunca mais voltou, pena que a violência só piorou.",
-        id: "21097",
-        publishedAt: new Date("2019-01-01"),
-        replies: [],
-        totalReplies: 0,
-      };
       const header = <Text>Mock header</Text>;
       const noComments = "There are no comments :(";
       const onPress = number => jest.fn(number);
@@ -26,8 +19,10 @@ describe("Comments<CommentsLoop>", () => {
         <CommentsLoop
           comments={[comment]}
           header={header}
+          navigation={navigation}
           noComments={noComments}
           onPress={onPress}
+          postId={post.id}
         />,
       );
 
@@ -45,8 +40,10 @@ describe("Comments<CommentsLoop>", () => {
         <CommentsLoop
           comments={[]}
           header={header}
+          navigation={navigation}
           noComments={noComments}
           onPress={onPress}
+          postId={post.id}
         />,
       );
 

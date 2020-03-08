@@ -60,12 +60,16 @@ class Comments extends Component<Props, State> {
   }
 
   renderAllComments = data => {
+    const { navigation } = this.props;
+
     return (
       <CommentsLoop
         comments={data.post.comments}
         header={this.header()}
+        navigation={navigation}
         noComments={labels.noComments}
         onPress={commentId => this.setDisplay(commentId)}
+        postId={data.post.id}
       />
     );
   };
@@ -103,6 +107,7 @@ class Comments extends Component<Props, State> {
         navigation={navigation}
         noReplies={labels.noReplies}
         onPress={() => this.setDisplay(null)}
+        postId={data.id}
       />
     );
   };

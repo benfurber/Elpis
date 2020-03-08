@@ -40,6 +40,14 @@ export const COMPLETE_USER_ONBOARDING = gql`
   }
 `;
 
+export const DELETE_COMMENT = gql`
+  mutation deleteComment($id: ID!) {
+    deleteComment(id: $id) {
+      id
+    }
+  }
+`;
+
 export const DELETE_REPLY = gql`
   mutation deleteReply($id: ID!) {
     deleteReply(id: $id) {
@@ -52,6 +60,14 @@ export const LOGIN_USER = gql`
   mutation Login($email: String!, $password: String!) {
     login(email: $email, password: $password) {
       token
+    }
+  }
+`;
+
+export const UPDATE_COMMENT = gql`
+  mutation updateComment($content: String, $id: ID!, $title: String) {
+    updateComment(content: $content, id: $id, title: $title) {
+      id
     }
   }
 `;

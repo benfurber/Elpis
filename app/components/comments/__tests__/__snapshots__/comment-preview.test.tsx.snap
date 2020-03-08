@@ -1,17 +1,28 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Comments<Comment> renders correctly 1`] = `
+exports[`Comments<CommentPreview> with replies renders correctly 1`] = `
 <TouchableOpacity
   activeOpacity={0.2}
+  delayLongPress={600}
+  extraButtonProps={
+    Object {
+      "rippleColor": "transparent",
+    }
+  }
   onLongPress={[Function]}
+  onPress={[Function]}
 >
   <View
     style={
       Object {
-        "backgroundColor": "rgba(198, 213, 225, 0.75)",
-        "marginBottom": 20,
-        "paddingHorizontal": 10,
-        "paddingVertical": 20,
+        "alignItems": "stretch",
+        "borderTopColor": "rgb(255, 255, 255)",
+        "borderTopWidth": 3,
+        "flex": 1,
+        "flexDirection": "row",
+        "margin": 10,
+        "marginBottom": 0,
+        "paddingTop": 5,
       }
     }
   >
@@ -20,48 +31,78 @@ exports[`Comments<Comment> renders correctly 1`] = `
         Object {
           "alignItems": "center",
           "flexDirection": "row",
-          "marginBottom": 10,
+          "width": 60,
         }
       }
     >
-      <Avatar
-        avatarPath={
-          Object {
-            "testUri": "../../../app/assets/images/empower_two_women_logo.png",
+      <View>
+        <Avatar
+          avatarPath={
+            Object {
+              "testUri": "../../../app/assets/images/empower_two_women_logo.png",
+            }
           }
+        />
+      </View>
+    </View>
+    <View
+      style={
+        Object {
+          "flex": 1,
+          "marginLeft": 10,
+          "marginVertical": 10,
         }
-        size="large"
+      }
+    >
+      <Title
+        text="Meu pai fez o que ela mandou"
       />
-      <View
+      <Text
         style={
           Object {
-            "paddingLeft": 10,
+            "color": "rgb(51, 51, 51)",
+            "fontStyle": "italic",
+            "marginBottom": 10,
           }
         }
       >
-        <Title
-          text="Empodere Duas Mulheres"
-        />
         <Text
           style={
             Object {
-              "color": "rgb(51, 51, 51)",
-              "fontStyle": "italic",
+              "color": "rgb(45, 82, 113)",
+              "fontWeight": "bold",
             }
           }
         >
-          Há 20 horas
+          Empodere Duas Mulheres 
         </Text>
-      </View>
-    </View>
-    <View>
-      <Title
-        small={true}
-        text="Meu pai fez o que ela mandou"
-      />
-      <Text>
-        Dá certo sim, o meu pai, por exemplo, fugiu quando eu tinha 5 anos e eu não faço ideia da onde ele esteja. Nunca mais voltou, pena que a violência só piorou.
+        há 20 horas
       </Text>
+      <Text
+        style={
+          Object {
+            "flex": 1,
+            "flexWrap": "nowrap",
+          }
+        }
+      >
+        Dá certo sim, o meu pai, por exemplo, fugiu quando eu tinha 5 anos e...
+      </Text>
+    </View>
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "flexDirection": "row",
+          "marginRight": 3.3333333333333335,
+        }
+      }
+    >
+      <Badge
+        left={0}
+        number={1}
+        staticPosition={true}
+      />
     </View>
   </View>
   <ActionSheetComment
@@ -122,18 +163,29 @@ exports[`Comments<Comment> renders correctly 1`] = `
 </TouchableOpacity>
 `;
 
-exports[`Comments<Comment> renders correctly when comment is edited 1`] = `
+exports[`Comments<CommentPreview> without replies renders correctly 1`] = `
 <TouchableOpacity
   activeOpacity={0.2}
+  delayLongPress={600}
+  extraButtonProps={
+    Object {
+      "rippleColor": "transparent",
+    }
+  }
   onLongPress={[Function]}
+  onPress={[Function]}
 >
   <View
     style={
       Object {
-        "backgroundColor": "rgba(198, 213, 225, 0.75)",
-        "marginBottom": 20,
-        "paddingHorizontal": 10,
-        "paddingVertical": 20,
+        "alignItems": "stretch",
+        "borderTopColor": "rgb(255, 255, 255)",
+        "borderTopWidth": 3,
+        "flex": 1,
+        "flexDirection": "row",
+        "margin": 10,
+        "marginBottom": 0,
+        "paddingTop": 5,
       }
     }
   >
@@ -142,49 +194,78 @@ exports[`Comments<Comment> renders correctly when comment is edited 1`] = `
         Object {
           "alignItems": "center",
           "flexDirection": "row",
-          "marginBottom": 10,
+          "width": 60,
         }
       }
     >
-      <Avatar
-        avatarPath={
-          Object {
-            "testUri": "../../../app/assets/images/empower_two_women_logo.png",
+      <View>
+        <Avatar
+          avatarPath={
+            Object {
+              "testUri": "../../../app/assets/images/empower_two_women_logo.png",
+            }
           }
+        />
+      </View>
+    </View>
+    <View
+      style={
+        Object {
+          "flex": 1,
+          "marginLeft": 10,
+          "marginVertical": 10,
         }
-        size="large"
+      }
+    >
+      <Title
+        text="Meu pai fez o que ela mandou"
       />
-      <View
+      <Text
         style={
           Object {
-            "paddingLeft": 10,
+            "color": "rgb(51, 51, 51)",
+            "fontStyle": "italic",
+            "marginBottom": 10,
           }
         }
       >
-        <Title
-          text="Empodere Duas Mulheres"
-        />
         <Text
           style={
             Object {
-              "color": "rgb(51, 51, 51)",
-              "fontStyle": "italic",
+              "color": "rgb(45, 82, 113)",
+              "fontWeight": "bold",
             }
           }
         >
-          Há 20 horas
-           (Editado)
+          Empodere Duas Mulheres 
         </Text>
-      </View>
-    </View>
-    <View>
-      <Title
-        small={true}
-        text="Meu pai fez o que ela mandou"
-      />
-      <Text>
-        Dá certo sim, o meu pai, por exemplo, fugiu quando eu tinha 5 anos e eu não faço ideia da onde ele esteja. Nunca mais voltou, pena que a violência só piorou.
+        há 9 minutos
       </Text>
+      <Text
+        style={
+          Object {
+            "flex": 1,
+            "flexWrap": "nowrap",
+          }
+        }
+      >
+        Dá certo sim, o meu pai, por exemplo, fugiu quando eu tinha 5 anos e...
+      </Text>
+    </View>
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "flexDirection": "row",
+          "marginRight": 3.3333333333333335,
+        }
+      }
+    >
+      <Badge
+        left={0}
+        number={1}
+        staticPosition={true}
+      />
     </View>
   </View>
   <ActionSheetComment
@@ -198,7 +279,7 @@ exports[`Comments<Comment> renders correctly when comment is edited 1`] = `
           "name": "Empodere Duas Mulheres",
         },
         "content": "Dá certo sim, o meu pai, por exemplo, fugiu quando eu tinha 5 anos e eu não faço ideia da onde ele esteja. Nunca mais voltou, pena que a violência só piorou.",
-        "edited": true,
+        "edited": false,
         "id": "21097",
         "isAuthorCurrentUser": false,
         "publishedAt": 2019-01-01T00:00:00.000Z,
@@ -239,7 +320,7 @@ exports[`Comments<Comment> renders correctly when comment is edited 1`] = `
         "totalReplies": 1,
       }
     }
-    postId="213543"
+    postId="927164"
     refProp={[Function]}
   />
 </TouchableOpacity>
