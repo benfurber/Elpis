@@ -51,6 +51,7 @@ const styles = StyleSheet.create({
     paddingVertical: 8,
   },
   text: {
+    alignSelf: "center",
     color: colours.pureWhite,
     fontSize: 16,
     fontWeight: "bold",

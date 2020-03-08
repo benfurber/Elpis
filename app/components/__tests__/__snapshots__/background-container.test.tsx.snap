@@ -8,11 +8,14 @@ exports[`BackgroundContainer renders correctly 1`] = `
     }
   }
   style={
-    Object {
-      "backgroundColor": "rgba(198, 213, 225, 0.75)",
-      "height": "100%",
-      "width": "100%",
-    }
+    Array [
+      Object {
+        "backgroundColor": "rgba(198, 213, 225, 0.75)",
+        "height": "100%",
+        "width": "100%",
+      },
+      undefined,
+    ]
   }
 >
   <SafeAreaView

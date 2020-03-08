@@ -25,7 +25,7 @@ const BackgroundContainer = (props: Props) => {
   return (
     <ImageBackground
       source={require("../assets/images/background.png")}
-      style={style || container}
+      style={[container, style]}
     >
       <SafeAreaView style={safeArea}>
         <View style={viewStyle || viewContainer}>

@@ -21,6 +21,7 @@ exports[`ButtonSubmit When active renders correctly 1`] = `
     <Text
       style={
         Object {
+          "alignSelf": "center",
           "color": "rgb(255, 255, 255)",
           "fontSize": 16,
           "fontWeight": "bold",
@@ -54,6 +55,7 @@ exports[`ButtonSubmit When loading renders correctly 1`] = `
     <Text
       style={
         Object {
+          "alignSelf": "center",
           "color": "rgb(255, 255, 255)",
           "fontSize": 16,
           "fontWeight": "bold",
