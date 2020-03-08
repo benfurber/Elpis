@@ -39,6 +39,7 @@ class Replies extends Component<Props> {
       <FlatList
         contentContainerStyle={{ paddingBottom: layout.spacingXL }}
         data={this.props.item.replies}
+        initialNumToRender={5}
         keyExtractor={({ id }) => id}
         renderItem={({ item }) => <Reply navigation={navigation} item={item} />}
       />

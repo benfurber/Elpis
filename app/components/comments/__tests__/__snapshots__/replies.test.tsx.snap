@@ -370,7 +370,7 @@ exports[`Comments<Replies> when there are replies renders correctly 1`] = `
       }
       disableVirtualization={false}
       horizontal={false}
-      initialNumToRender={10}
+      initialNumToRender={5}
       keyExtractor={[Function]}
       maxToRenderPerBatch={10}
       numColumns={1}

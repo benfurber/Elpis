@@ -52,6 +52,7 @@ class CommentsLoop extends Component<Props> {
           <FlatList
             contentContainerStyle={{ paddingBottom: layout.spacingXL }}
             data={this.props.comments}
+            initialNumToRender={5}
             keyExtractor={({ id }) => id}
             renderItem={({ item }) => (
               <CommentPreview

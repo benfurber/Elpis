@@ -87,7 +87,7 @@ exports[`Comments<CommentsLoop> when there are comments renders correctly 1`] = 
       }
       disableVirtualization={false}
       horizontal={false}
-      initialNumToRender={10}
+      initialNumToRender={5}
       keyExtractor={[Function]}
       maxToRenderPerBatch={10}
       numColumns={1}
@@ -140,7 +140,7 @@ exports[`Comments<CommentsLoop> when there are no comments renders correctly 1`]
       data={Array []}
       disableVirtualization={false}
       horizontal={false}
-      initialNumToRender={10}
+      initialNumToRender={5}
       keyExtractor={[Function]}
       maxToRenderPerBatch={10}
       numColumns={1}
