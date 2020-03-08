@@ -19,7 +19,7 @@ interface ContentBase {
   id: string;
   imagePath?: string;
   publishedAt: Date;
-  title?: string;
+  title?: string | null;
 }
 
 export interface Comment extends ContentBase {
