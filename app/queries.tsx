@@ -46,8 +46,8 @@ const REPLY_ATTRIBUTES = gql`
 `;
 
 export const FEED = gql`
-  query {
-    feed {
+  query Feed($first: Int, $skip: Int) {
+    feed(first: $first, skip: $skip) {
       ...postAttributes
     }
   }

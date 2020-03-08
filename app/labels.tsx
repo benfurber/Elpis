@@ -7,6 +7,7 @@ const labels = {
   addProfilePictureTitle: "Adicione uma imagem de perfil",
   addYourComment: "Adicione o seu comentário",
   addYourReply: "Adicione a sua resposta",
+  allPostsLoaded: "Todas as publicações foram carregadas",
   askMeLater: "Pergunte-me depois",
   back: {
     back: "Voltar",
@@ -44,6 +45,7 @@ const labels = {
     logout: "Sair",
     title: "Menu",
   },
+  morePosts: "Mais postagens",
   next: "Próximo",
   noComments: "Nenhum comentário ainda - faça o primeiro!",
   noImageSelected: "Nenhuma imagem selecionada. Escolha uma e tente novamente.",
