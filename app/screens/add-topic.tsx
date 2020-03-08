@@ -5,7 +5,7 @@ import { Mutation } from "react-apollo";
 import { withMappedNavigationParams } from "react-navigation-props-mapper";
 import { DocumentNode } from "graphql";
 
-import { NavigationType, Post } from "interfaces";
+import { Comment as CommentType, NavigationType, Post } from "interfaces";
 import { labels } from "labels";
 import { ADD_COMMENT, UPDATE_COMMENT } from "mutations";
 import { FormContainerScreen } from "screens";
@@ -13,21 +13,21 @@ import { form } from "styles";
 import { firstSentence } from "utils";
 
 interface Props {
-  currentComment: {
-    content: string;
-    id: string;
-    title: null | string;
+  currentComment?: {
+    content: CommentType["content"];
+    id: CommentType["id"];
+    title: CommentType["title"];
   };
   navigation: NavigationType;
   postId: Post["id"];
 }
 
 interface State {
-  content: string;
+  content: CommentType["content"];
   editable: boolean;
   id: string;
   mutation: DocumentNode;
-  title: null | string;
+  title: CommentType["title"];
 }
 
 class AddTopicScreen extends Component<Props, State> {
