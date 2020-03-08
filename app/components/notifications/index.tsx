@@ -25,6 +25,7 @@ class Notifications extends Component<Props> {
     return (
       <FlatList
         data={data}
+        initialNumToRender={5}
         keyExtractor={({ id }) => id}
         renderItem={({ item }: { item: NotificationType }) => (
           <Notification navigation={this.props.navigation} item={item} />
