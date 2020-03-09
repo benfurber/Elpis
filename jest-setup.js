@@ -19,6 +19,11 @@ Object.assign(NativeModules, {
   },
 });
 
+jest.mock("bugsnag-react-native", () => ({
+  Client: jest.fn(() => ({ notify: jest.fn() })),
+  Configuration: jest.fn(),
+}));
+
 jest.mock("react-native-fs", () => ({
   fs: jest.fn(),
 }));

@@ -11,7 +11,7 @@ import { Icon, RemoteImage, Loading } from "components";
 import { NavigationType } from "interfaces";
 import { labels } from "labels";
 import { colours, layout, typography } from "styles";
-import { sendImage } from "utils";
+import { bugTracker, sendImage } from "utils";
 
 const { width } = Dimensions.get("window");
 
@@ -45,9 +45,10 @@ class UploadImage extends Component<Props, State> {
         selectedImage,
         successCallback,
       });
-    } catch (err) {
+    } catch (error) {
       this.setState({ uploading: false });
-      console.error(err.message);
+      bugTracker.notify(error);
+      console.error(error.message);
     }
   };
 

@@ -7,7 +7,7 @@ import { NavigationType } from "interfaces";
 import { labels } from "labels";
 import { ADD_USER_PROFILE_PICTURE } from "mutations";
 import { layout } from "styles";
-import { client, sendImage } from "utils";
+import { bugTracker, client, sendImage } from "utils";
 
 interface Props {
   navigation: NavigationType;
@@ -72,11 +72,12 @@ class FormAddProfilePicture extends Component<Props, State> {
         setProgress,
         successCallback,
       });
-    } catch (err) {
+    } catch (error) {
+      bugTracker.notify(error);
       this.setState({
         display: "error",
         displayMessage: "error",
-        message: err.message,
+        message: error.message,
         selectedImage: null,
         uploadCondition: null,
       });

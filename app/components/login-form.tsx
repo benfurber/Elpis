@@ -9,6 +9,7 @@ import { NavigationType } from "interfaces";
 import { labels } from "labels";
 import { colours, layout } from "styles";
 import { LOGIN_USER } from "mutations";
+import { bugTracker } from "utils";
 
 interface Props {
   navigation: NavigationType;
@@ -44,6 +45,7 @@ class LoginForm extends Component<Props, State> {
 
   setError(error) {
     if (error) {
+      bugTracker.notify(error);
       return this.setState({
         display: "error",
         errorMessage: error,
