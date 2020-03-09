@@ -2,7 +2,7 @@ import { S3 } from "aws-sdk/dist/aws-sdk-react-native";
 import { PhotoIdentifier } from "@react-native-community/cameraroll";
 
 import { labels } from "labels";
-import { resizeImage } from "utils";
+import { bugTracker, resizeImage } from "utils";
 
 import { S3_USER_ACCESS, S3_USER_SECRET } from "react-native-dotenv";
 
@@ -54,8 +54,12 @@ async function sendImage(props: Props) {
     });
   }
 
-  upload.send((err, data) => {
-    if (err) throw Error(err.message);
+  upload.send((error, data) => {
+    if (error) {
+      bugTracker.notify(error);
+      throw Error(error.message);
+    }
+
     return successCallback(data.Location);
   });
 }

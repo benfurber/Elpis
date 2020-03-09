@@ -17,6 +17,7 @@ import { BackgroundContainer, Icon, WrapperThumbnailImage } from "components";
 import { NavigationType } from "interfaces";
 import { labels } from "labels";
 import { colours, layout } from "styles";
+import { bugTracker } from "utils";
 
 interface Props {
   navigation: NavigationType;
@@ -54,6 +55,7 @@ class ImageBrowserScreen extends Component<Props, State> {
         this.setState({ images: response.edges });
       })
       .catch(error => {
+        bugTracker.notify(error);
         console.error(error);
       });
   }

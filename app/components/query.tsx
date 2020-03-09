@@ -3,6 +3,7 @@ import { RefreshControl, ScrollView, StyleSheet, View } from "react-native";
 import { Query } from "react-apollo";
 
 import { ErrorMessage, Loading } from "components";
+import { bugTracker } from "utils";
 
 interface Props {
   blueMode?: boolean;
@@ -70,6 +71,7 @@ class NewQuery extends Component<Props, State> {
           }
 
           if (args.error) {
+            bugTracker.notify(args.error);
             return this.renderError(args.error);
           }
 
