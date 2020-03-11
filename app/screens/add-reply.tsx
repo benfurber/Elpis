@@ -75,48 +75,44 @@ class AddReplyScreen extends Component<Props, State> {
     this.setState({ imagePath });
   };
 
-  renderAddResponse() {
-    const { navigation } = this.props;
-    const { imagePath, mutation } = this.state;
+  render() {
+    const { commentId, navigation } = this.props;
+    const { content, imagePath, mutation, textInputEditable } = this.state;
+
+    const buttonDisplay = textInputEditable && content.length !== 0;
 
     return (
       <Mutation mutation={mutation}>
         {(call, {}) => (
-          <View>
-            <TextInput
-              onSubmitEditing={() => this.onSubmitEditing(call)}
-              style={form.text}
-              autoFocus={true}
-              editable={this.state.textInputEditable}
-              multiline={true}
-              placeholder={labels.addPlaceholderBody}
-              onChangeText={content => this.setState({ content })}
-              value={this.state.content}
-              returnKeyLabel={labels.submit}
-              returnKeyType="send"
-            />
-            <UploadImage
-              imagePath={imagePath}
-              navigation={navigation}
-              setImagePath={this.setImagePath}
-            />
-          </View>
+          <FormContainerScreen
+            analyticsContent={{ contentId: commentId, contentType: "AddReply" }}
+            buttonDisplay={buttonDisplay}
+            navigation={navigation}
+            onSubmitEditing={() => this.onSubmitEditing(call)}
+            title={labels.addYourReply}
+          >
+            <View style={form.fieldContainer}>
+              <TextInput
+                onSubmitEditing={() => this.onSubmitEditing(call)}
+                style={form.text}
+                autoFocus={true}
+                editable={this.state.textInputEditable}
+                multiline={true}
+                placeholder={labels.addPlaceholderBody}
+                onChangeText={content => this.setState({ content })}
+                value={this.state.content}
+                returnKeyLabel={labels.submit}
+                returnKeyType="send"
+              />
+              <UploadImage
+                imagePath={imagePath}
+                navigation={navigation}
+                setImagePath={this.setImagePath}
+              />
+            </View>
+          </FormContainerScreen>
         )}
       </Mutation>
-    );
-  }
-
-  render() {
-    const { commentId, navigation } = this.props;
-
-    return (
-      <FormContainerScreen
-        analyticsContent={{ contentId: commentId, contentType: "AddReply" }}
-        navigation={navigation}
-        title={labels.addYourReply}
-      >
-        {this.renderAddResponse()}
-      </FormContainerScreen>
     );
   }
 }

@@ -1,150 +1,99 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`AddReplyScreen renders correctly 1`] = `
-<FormContainerScreen
-  analyticsContent={
+<Mutation
+  mutation={
     Object {
-      "contentId": "2332r",
-      "contentType": "AddTopic",
-    }
-  }
-  title="Adicione um novo tópico na discussão"
->
-  <Mutation
-    mutation={
-      Object {
-        "definitions": Array [
-          Object {
-            "directives": Array [],
-            "kind": "OperationDefinition",
-            "name": Object {
-              "kind": "Name",
-              "value": "createComment",
-            },
-            "operation": "mutation",
-            "selectionSet": Object {
-              "kind": "SelectionSet",
-              "selections": Array [
-                Object {
-                  "alias": undefined,
-                  "arguments": Array [
-                    Object {
-                      "kind": "Argument",
+      "definitions": Array [
+        Object {
+          "directives": Array [],
+          "kind": "OperationDefinition",
+          "name": Object {
+            "kind": "Name",
+            "value": "createComment",
+          },
+          "operation": "mutation",
+          "selectionSet": Object {
+            "kind": "SelectionSet",
+            "selections": Array [
+              Object {
+                "alias": undefined,
+                "arguments": Array [
+                  Object {
+                    "kind": "Argument",
+                    "name": Object {
+                      "kind": "Name",
+                      "value": "content",
+                    },
+                    "value": Object {
+                      "kind": "Variable",
                       "name": Object {
                         "kind": "Name",
                         "value": "content",
                       },
-                      "value": Object {
-                        "kind": "Variable",
-                        "name": Object {
-                          "kind": "Name",
-                          "value": "content",
-                        },
-                      },
                     },
-                    Object {
-                      "kind": "Argument",
+                  },
+                  Object {
+                    "kind": "Argument",
+                    "name": Object {
+                      "kind": "Name",
+                      "value": "id",
+                    },
+                    "value": Object {
+                      "kind": "Variable",
                       "name": Object {
                         "kind": "Name",
                         "value": "id",
                       },
-                      "value": Object {
-                        "kind": "Variable",
-                        "name": Object {
-                          "kind": "Name",
-                          "value": "id",
-                        },
-                      },
                     },
-                    Object {
-                      "kind": "Argument",
+                  },
+                  Object {
+                    "kind": "Argument",
+                    "name": Object {
+                      "kind": "Name",
+                      "value": "title",
+                    },
+                    "value": Object {
+                      "kind": "Variable",
                       "name": Object {
                         "kind": "Name",
                         "value": "title",
                       },
-                      "value": Object {
-                        "kind": "Variable",
-                        "name": Object {
-                          "kind": "Name",
-                          "value": "title",
-                        },
+                    },
+                  },
+                ],
+                "directives": Array [],
+                "kind": "Field",
+                "name": Object {
+                  "kind": "Name",
+                  "value": "createComment",
+                },
+                "selectionSet": Object {
+                  "kind": "SelectionSet",
+                  "selections": Array [
+                    Object {
+                      "alias": undefined,
+                      "arguments": Array [],
+                      "directives": Array [],
+                      "kind": "Field",
+                      "name": Object {
+                        "kind": "Name",
+                        "value": "id",
                       },
+                      "selectionSet": undefined,
                     },
                   ],
-                  "directives": Array [],
-                  "kind": "Field",
-                  "name": Object {
-                    "kind": "Name",
-                    "value": "createComment",
-                  },
-                  "selectionSet": Object {
-                    "kind": "SelectionSet",
-                    "selections": Array [
-                      Object {
-                        "alias": undefined,
-                        "arguments": Array [],
-                        "directives": Array [],
-                        "kind": "Field",
-                        "name": Object {
-                          "kind": "Name",
-                          "value": "id",
-                        },
-                        "selectionSet": undefined,
-                      },
-                    ],
-                  },
-                },
-              ],
-            },
-            "variableDefinitions": Array [
-              Object {
-                "defaultValue": undefined,
-                "directives": Array [],
-                "kind": "VariableDefinition",
-                "type": Object {
-                  "kind": "NonNullType",
-                  "type": Object {
-                    "kind": "NamedType",
-                    "name": Object {
-                      "kind": "Name",
-                      "value": "String",
-                    },
-                  },
-                },
-                "variable": Object {
-                  "kind": "Variable",
-                  "name": Object {
-                    "kind": "Name",
-                    "value": "content",
-                  },
                 },
               },
-              Object {
-                "defaultValue": undefined,
-                "directives": Array [],
-                "kind": "VariableDefinition",
-                "type": Object {
-                  "kind": "NonNullType",
-                  "type": Object {
-                    "kind": "NamedType",
-                    "name": Object {
-                      "kind": "Name",
-                      "value": "ID",
-                    },
-                  },
-                },
-                "variable": Object {
-                  "kind": "Variable",
-                  "name": Object {
-                    "kind": "Name",
-                    "value": "id",
-                  },
-                },
-              },
-              Object {
-                "defaultValue": undefined,
-                "directives": Array [],
-                "kind": "VariableDefinition",
+            ],
+          },
+          "variableDefinitions": Array [
+            Object {
+              "defaultValue": undefined,
+              "directives": Array [],
+              "kind": "VariableDefinition",
+              "type": Object {
+                "kind": "NonNullType",
                 "type": Object {
                   "kind": "NamedType",
                   "name": Object {
@@ -152,199 +101,230 @@ exports[`AddReplyScreen renders correctly 1`] = `
                     "value": "String",
                   },
                 },
-                "variable": Object {
-                  "kind": "Variable",
+              },
+              "variable": Object {
+                "kind": "Variable",
+                "name": Object {
+                  "kind": "Name",
+                  "value": "content",
+                },
+              },
+            },
+            Object {
+              "defaultValue": undefined,
+              "directives": Array [],
+              "kind": "VariableDefinition",
+              "type": Object {
+                "kind": "NonNullType",
+                "type": Object {
+                  "kind": "NamedType",
                   "name": Object {
                     "kind": "Name",
-                    "value": "title",
+                    "value": "ID",
                   },
                 },
               },
-            ],
-          },
-        ],
-        "kind": "Document",
-        "loc": Object {
-          "end": 155,
-          "start": 0,
+              "variable": Object {
+                "kind": "Variable",
+                "name": Object {
+                  "kind": "Name",
+                  "value": "id",
+                },
+              },
+            },
+            Object {
+              "defaultValue": undefined,
+              "directives": Array [],
+              "kind": "VariableDefinition",
+              "type": Object {
+                "kind": "NamedType",
+                "name": Object {
+                  "kind": "Name",
+                  "value": "String",
+                },
+              },
+              "variable": Object {
+                "kind": "Variable",
+                "name": Object {
+                  "kind": "Name",
+                  "value": "title",
+                },
+              },
+            },
+          ],
         },
-      }
+      ],
+      "kind": "Document",
+      "loc": Object {
+        "end": 155,
+        "start": 0,
+      },
     }
-  >
-    <Component />
-  </Mutation>
-</FormContainerScreen>
+  }
+>
+  <Component />
+</Mutation>
 `;
 
 exports[`AddReplyScreen renders correctly with currentComment 1`] = `
-<FormContainerScreen
-  analyticsContent={
+<Mutation
+  mutation={
     Object {
-      "contentId": "2332r",
-      "contentType": "AddTopic",
-    }
-  }
-  title="Adicione um novo tópico na discussão"
->
-  <Mutation
-    mutation={
-      Object {
-        "definitions": Array [
-          Object {
-            "directives": Array [],
-            "kind": "OperationDefinition",
-            "name": Object {
-              "kind": "Name",
-              "value": "updateComment",
-            },
-            "operation": "mutation",
-            "selectionSet": Object {
-              "kind": "SelectionSet",
-              "selections": Array [
-                Object {
-                  "alias": undefined,
-                  "arguments": Array [
-                    Object {
-                      "kind": "Argument",
+      "definitions": Array [
+        Object {
+          "directives": Array [],
+          "kind": "OperationDefinition",
+          "name": Object {
+            "kind": "Name",
+            "value": "updateComment",
+          },
+          "operation": "mutation",
+          "selectionSet": Object {
+            "kind": "SelectionSet",
+            "selections": Array [
+              Object {
+                "alias": undefined,
+                "arguments": Array [
+                  Object {
+                    "kind": "Argument",
+                    "name": Object {
+                      "kind": "Name",
+                      "value": "content",
+                    },
+                    "value": Object {
+                      "kind": "Variable",
                       "name": Object {
                         "kind": "Name",
                         "value": "content",
                       },
-                      "value": Object {
-                        "kind": "Variable",
-                        "name": Object {
-                          "kind": "Name",
-                          "value": "content",
-                        },
-                      },
                     },
-                    Object {
-                      "kind": "Argument",
+                  },
+                  Object {
+                    "kind": "Argument",
+                    "name": Object {
+                      "kind": "Name",
+                      "value": "id",
+                    },
+                    "value": Object {
+                      "kind": "Variable",
                       "name": Object {
                         "kind": "Name",
                         "value": "id",
                       },
-                      "value": Object {
-                        "kind": "Variable",
-                        "name": Object {
-                          "kind": "Name",
-                          "value": "id",
-                        },
-                      },
                     },
-                    Object {
-                      "kind": "Argument",
+                  },
+                  Object {
+                    "kind": "Argument",
+                    "name": Object {
+                      "kind": "Name",
+                      "value": "title",
+                    },
+                    "value": Object {
+                      "kind": "Variable",
                       "name": Object {
                         "kind": "Name",
                         "value": "title",
                       },
-                      "value": Object {
-                        "kind": "Variable",
-                        "name": Object {
-                          "kind": "Name",
-                          "value": "title",
-                        },
+                    },
+                  },
+                ],
+                "directives": Array [],
+                "kind": "Field",
+                "name": Object {
+                  "kind": "Name",
+                  "value": "updateComment",
+                },
+                "selectionSet": Object {
+                  "kind": "SelectionSet",
+                  "selections": Array [
+                    Object {
+                      "alias": undefined,
+                      "arguments": Array [],
+                      "directives": Array [],
+                      "kind": "Field",
+                      "name": Object {
+                        "kind": "Name",
+                        "value": "id",
                       },
+                      "selectionSet": undefined,
                     },
                   ],
-                  "directives": Array [],
-                  "kind": "Field",
-                  "name": Object {
-                    "kind": "Name",
-                    "value": "updateComment",
-                  },
-                  "selectionSet": Object {
-                    "kind": "SelectionSet",
-                    "selections": Array [
-                      Object {
-                        "alias": undefined,
-                        "arguments": Array [],
-                        "directives": Array [],
-                        "kind": "Field",
-                        "name": Object {
-                          "kind": "Name",
-                          "value": "id",
-                        },
-                        "selectionSet": undefined,
-                      },
-                    ],
-                  },
-                },
-              ],
-            },
-            "variableDefinitions": Array [
-              Object {
-                "defaultValue": undefined,
-                "directives": Array [],
-                "kind": "VariableDefinition",
-                "type": Object {
-                  "kind": "NamedType",
-                  "name": Object {
-                    "kind": "Name",
-                    "value": "String",
-                  },
-                },
-                "variable": Object {
-                  "kind": "Variable",
-                  "name": Object {
-                    "kind": "Name",
-                    "value": "content",
-                  },
-                },
-              },
-              Object {
-                "defaultValue": undefined,
-                "directives": Array [],
-                "kind": "VariableDefinition",
-                "type": Object {
-                  "kind": "NonNullType",
-                  "type": Object {
-                    "kind": "NamedType",
-                    "name": Object {
-                      "kind": "Name",
-                      "value": "ID",
-                    },
-                  },
-                },
-                "variable": Object {
-                  "kind": "Variable",
-                  "name": Object {
-                    "kind": "Name",
-                    "value": "id",
-                  },
-                },
-              },
-              Object {
-                "defaultValue": undefined,
-                "directives": Array [],
-                "kind": "VariableDefinition",
-                "type": Object {
-                  "kind": "NamedType",
-                  "name": Object {
-                    "kind": "Name",
-                    "value": "String",
-                  },
-                },
-                "variable": Object {
-                  "kind": "Variable",
-                  "name": Object {
-                    "kind": "Name",
-                    "value": "title",
-                  },
                 },
               },
             ],
           },
-        ],
-        "kind": "Document",
-        "loc": Object {
-          "end": 154,
-          "start": 0,
+          "variableDefinitions": Array [
+            Object {
+              "defaultValue": undefined,
+              "directives": Array [],
+              "kind": "VariableDefinition",
+              "type": Object {
+                "kind": "NamedType",
+                "name": Object {
+                  "kind": "Name",
+                  "value": "String",
+                },
+              },
+              "variable": Object {
+                "kind": "Variable",
+                "name": Object {
+                  "kind": "Name",
+                  "value": "content",
+                },
+              },
+            },
+            Object {
+              "defaultValue": undefined,
+              "directives": Array [],
+              "kind": "VariableDefinition",
+              "type": Object {
+                "kind": "NonNullType",
+                "type": Object {
+                  "kind": "NamedType",
+                  "name": Object {
+                    "kind": "Name",
+                    "value": "ID",
+                  },
+                },
+              },
+              "variable": Object {
+                "kind": "Variable",
+                "name": Object {
+                  "kind": "Name",
+                  "value": "id",
+                },
+              },
+            },
+            Object {
+              "defaultValue": undefined,
+              "directives": Array [],
+              "kind": "VariableDefinition",
+              "type": Object {
+                "kind": "NamedType",
+                "name": Object {
+                  "kind": "Name",
+                  "value": "String",
+                },
+              },
+              "variable": Object {
+                "kind": "Variable",
+                "name": Object {
+                  "kind": "Name",
+                  "value": "title",
+                },
+              },
+            },
+          ],
         },
-      }
+      ],
+      "kind": "Document",
+      "loc": Object {
+        "end": 154,
+        "start": 0,
+      },
     }
-  >
-    <Component />
-  </Mutation>
-</FormContainerScreen>
+  }
+>
+  <Component />
+</Mutation>
 `;
