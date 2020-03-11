@@ -11,8 +11,10 @@ describe("AddReplyScreen", () => {
   it("renders correctly", () => {
     const component = shallow(
       <FormContainerScreen
-        analyticsContent={{ contentType: "AddReply", contentId: "324234" }}
+        analyticsContent={{ contentId: "324234", contentType: "AddReply" }}
+        buttonDisplay={true}
         navigation={navigation}
+        onSubmitEditing={() => jest.fn()}
         title={"Important Form"}
       >
         <Text>Important Form contents</Text>

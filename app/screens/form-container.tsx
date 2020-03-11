@@ -1,9 +1,10 @@
 import React, { Component } from "react";
 import { ScrollView, StyleSheet, TouchableOpacity, View } from "react-native";
 
-import { BackgroundContainer, Icon, Title } from "components";
+import { BackgroundContainer, ButtonSubmit, Icon, Title } from "components";
 import { NavigationType } from "interfaces";
 import { layout, colours } from "styles";
+import { labels } from "labels";
 import { Analytics, AnalyticsContentTypes } from "utils";
 
 interface Props {
@@ -11,7 +12,9 @@ interface Props {
     contentType: AnalyticsContentTypes;
     contentId: string;
   };
+  buttonDisplay: boolean;
   navigation: NavigationType;
+  onSubmitEditing: () => void;
   title: string;
 }
 
@@ -20,13 +23,19 @@ class FormContainerScreen extends Component<Props> {
     const { contentType, contentId } = this.props.analyticsContent;
 
     Analytics.trackContent({
-      contentType,
       contentId,
+      contentType,
     });
   }
 
   render() {
-    const { children, navigation, title } = this.props;
+    const {
+      buttonDisplay,
+      children,
+      navigation,
+      onSubmitEditing,
+      title,
+    } = this.props;
 
     return (
       <BackgroundContainer>
@@ -41,6 +50,13 @@ class FormContainerScreen extends Component<Props> {
         <View style={styles.body}>
           <ScrollView>
             <View style={styles.row}>{children}</View>
+            <View style={styles.buttonContainer}>
+              <ButtonSubmit
+                display={buttonDisplay ? "active" : "loading"}
+                label={labels.formButton}
+                onPress={onSubmitEditing}
+              />
+            </View>
           </ScrollView>
         </View>
       </BackgroundContainer>
@@ -54,6 +70,12 @@ const styles = StyleSheet.create({
     borderTopLeftRadius: layout.borderRadiusL,
     borderTopRightRadius: layout.borderRadiusL,
     flex: 1,
+    paddingTop: layout.spacing,
+  },
+  buttonContainer: {
+    flexDirection: "row",
+    justifyContent: "flex-end",
+    margin: layout.spacing,
     paddingTop: layout.spacing,
   },
   closeContainer: {

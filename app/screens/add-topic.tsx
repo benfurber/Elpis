@@ -79,7 +79,7 @@ class AddTopicScreen extends Component<Props, State> {
     });
   }
 
-  form() {
+  form(call) {
     const { title, editable, content } = this.state;
 
     const args = {
@@ -87,7 +87,7 @@ class AddTopicScreen extends Component<Props, State> {
       multiline: true,
     };
 
-    return (createComment, {}) => (
+    return (
       <View style={form.fieldContainer}>
         <Text style={form.label}>{labels.title}</Text>
         <TextInput
@@ -107,7 +107,7 @@ class AddTopicScreen extends Component<Props, State> {
           autoFocus={true}
           ref={input => (this.secondField = input)}
           onChangeText={content => this.setState({ content })}
-          onSubmitEditing={() => this.onSubmitEditing(createComment)}
+          onSubmitEditing={() => this.onSubmitEditing(call)}
           value={content}
           style={form.text}
           placeholder={labels.addPlaceholderBody}
@@ -119,19 +119,27 @@ class AddTopicScreen extends Component<Props, State> {
   }
 
   render() {
-    const { mutation } = this.state;
+    const { content, editable, mutation } = this.state;
+
+    const buttonDisplay = editable && content.length !== 0;
 
     return (
-      <FormContainerScreen
-        analyticsContent={{
-          contentId: this.props.postId,
-          contentType: "AddTopic",
-        }}
-        navigation={this.props.navigation}
-        title={labels.addNewTopic}
-      >
-        <Mutation mutation={mutation}>{this.form()}</Mutation>
-      </FormContainerScreen>
+      <Mutation mutation={mutation}>
+        {(call, {}) => (
+          <FormContainerScreen
+            analyticsContent={{
+              contentId: this.props.postId,
+              contentType: "AddTopic",
+            }}
+            buttonDisplay={buttonDisplay}
+            navigation={this.props.navigation}
+            onSubmitEditing={() => this.onSubmitEditing(call)}
+            title={labels.addNewTopic}
+          >
+            {this.form(call)}
+          </FormContainerScreen>
+        )}
+      </Mutation>
     );
   }
 }
