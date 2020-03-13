@@ -1,0 +1,51 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`BackButton with a text prop renders correctly 1`] = `
+<TouchableOpacity
+  activeOpacity={0.2}
+  onPress={[Function]}
+  style={
+    Object {
+      "flexDirection": "row",
+      "padding": 10,
+    }
+  }
+>
+  <customIcon
+    name="angle-double-left"
+    style={
+      Object {
+        "paddingRight": 5,
+      }
+    }
+  />
+  <Text>
+    Back to home
+  </Text>
+</TouchableOpacity>
+`;
+
+exports[`BackButton without a text prop renders correctly 1`] = `
+<TouchableOpacity
+  activeOpacity={0.2}
+  onPress={[Function]}
+  style={
+    Object {
+      "flexDirection": "row",
+      "padding": 10,
+    }
+  }
+>
+  <customIcon
+    name="angle-double-left"
+    style={
+      Object {
+        "paddingRight": 5,
+      }
+    }
+  />
+  <Text>
+    Voltar
+  </Text>
+</TouchableOpacity>
+`;
