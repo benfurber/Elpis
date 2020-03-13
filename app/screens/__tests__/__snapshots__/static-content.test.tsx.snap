@@ -2,29 +2,9 @@
 
 exports[`StaticContentScreen renders correctly with optional props 1`] = `
 <BackgroundContainer>
-  <TouchableOpacity
-    activeOpacity={0.2}
-    onPress={[Function]}
-    style={
-      Object {
-        "flexDirection": "row",
-        "paddingBottom": 10,
-        "paddingHorizontal": 10,
-      }
-    }
-  >
-    <customIcon
-      name="angle-double-left"
-      style={
-        Object {
-          "paddingRight": 5,
-        }
-      }
-    />
-    <Text>
-      Back to Menu
-    </Text>
-  </TouchableOpacity>
+  <BackButton
+    text="Back to Menu"
+  />
   <ScrollViewMock
     style={
       Object {

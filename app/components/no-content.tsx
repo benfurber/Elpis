@@ -1,10 +1,8 @@
 import React, { Component } from "react";
-import { StyleSheet, Text, TouchableOpacity } from "react-native";
 
-import { BackgroundContainer, ErrorMessage, Icon } from "components";
+import { BackButton, BackgroundContainer, ErrorMessage } from "components";
 import { NavigationType } from "interfaces";
 import { labels } from "labels";
-import { layout } from "styles";
 
 interface Props {
   navigation: NavigationType;
@@ -14,31 +12,16 @@ class NoContent extends Component<Props> {
   render() {
     const { navigation } = this.props;
 
-    const goBack = () => navigation.pop();
     const message = labels.errors.noContent;
+    const text = labels.back.back;
 
     return (
       <BackgroundContainer>
-        <TouchableOpacity style={styles.back} onPress={() => goBack()}>
-          <Icon name="angle-double-left" style={styles.icon} />
-          <Text>{labels.back.back}</Text>
-        </TouchableOpacity>
-
+        <BackButton navigation={navigation} text={text} />
         <ErrorMessage error={{ message }} />
       </BackgroundContainer>
     );
   }
 }
-
-const styles = StyleSheet.create({
-  back: {
-    flexDirection: "row",
-    paddingHorizontal: layout.spacingL,
-    paddingTop: layout.spacingL,
-  },
-  icon: {
-    paddingRight: layout.spacingS,
-  },
-});
 
 export { NoContent };

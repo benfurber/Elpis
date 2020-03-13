@@ -1,12 +1,10 @@
 import React, { Component } from "react";
-import { StyleSheet, Text, TouchableOpacity } from "react-native";
+import { StyleSheet } from "react-native";
 import { withMappedNavigationParams } from "react-navigation-props-mapper";
 
-import { BackgroundContainer, Icon, Post, Query } from "components";
+import { BackButton, BackgroundContainer, Post, Query } from "components";
 import { NavigationType, Post as PostInterface } from "interfaces";
-import { labels } from "labels";
 import { POST } from "queries";
-import { layout } from "styles";
 
 interface Props {
   backToText?: string;
@@ -58,25 +56,12 @@ class PostScreen extends Component<Props> {
     }
   }
 
-  backButton() {
-    const { backToText, navigation } = this.props;
-
-    if (backToText) {
-      return (
-        <TouchableOpacity style={styles.back} onPress={() => navigation.pop()}>
-          <Icon name="angle-double-left" style={styles.icon} />
-          <Text>{backToText}</Text>
-        </TouchableOpacity>
-      );
-    }
-  }
-
   render() {
-    const { post } = this.props;
+    const { backToText, navigation, post } = this.props;
 
     return (
       <BackgroundContainer>
-        {this.backButton()}
+        {backToText && <BackButton navigation={navigation} text={backToText} />}
         {post ? this.post() : this.fetchPost()}
       </BackgroundContainer>
     );
@@ -84,16 +69,8 @@ class PostScreen extends Component<Props> {
 }
 
 const styles = StyleSheet.create({
-  back: {
-    flexDirection: "row",
-    paddingBottom: layout.spacing,
-    paddingHorizontal: layout.spacing,
-  },
   fullHeight: {
     flex: 1,
-  },
-  icon: {
-    paddingRight: layout.spacingS,
   },
 });
 
