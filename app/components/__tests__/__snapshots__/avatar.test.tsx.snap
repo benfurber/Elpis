@@ -1,7 +1,16 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Avatar renders no path correctly 1`] = `
-<Fragment>
+<TouchableOpacity
+  activeOpacity={0.2}
+  delayLongPress={600}
+  extraButtonProps={
+    Object {
+      "rippleColor": "transparent",
+    }
+  }
+  onPress={[Function]}
+>
   <Image
     source={
       Object {
@@ -21,11 +30,20 @@ exports[`Avatar renders no path correctly 1`] = `
       ]
     }
   />
-</Fragment>
+</TouchableOpacity>
 `;
 
 exports[`Avatar renders sizes correctly feature 1`] = `
-<Fragment>
+<TouchableOpacity
+  activeOpacity={0.2}
+  delayLongPress={600}
+  extraButtonProps={
+    Object {
+      "rippleColor": "transparent",
+    }
+  }
+  onPress={[Function]}
+>
   <Image
     source={
       Object {
@@ -45,11 +63,20 @@ exports[`Avatar renders sizes correctly feature 1`] = `
       ]
     }
   />
-</Fragment>
+</TouchableOpacity>
 `;
 
 exports[`Avatar renders sizes correctly large 1`] = `
-<Fragment>
+<TouchableOpacity
+  activeOpacity={0.2}
+  delayLongPress={600}
+  extraButtonProps={
+    Object {
+      "rippleColor": "transparent",
+    }
+  }
+  onPress={[Function]}
+>
   <Image
     source={
       Object {
@@ -69,11 +96,20 @@ exports[`Avatar renders sizes correctly large 1`] = `
       ]
     }
   />
-</Fragment>
+</TouchableOpacity>
 `;
 
 exports[`Avatar renders sizes correctly medium 1`] = `
-<Fragment>
+<TouchableOpacity
+  activeOpacity={0.2}
+  delayLongPress={600}
+  extraButtonProps={
+    Object {
+      "rippleColor": "transparent",
+    }
+  }
+  onPress={[Function]}
+>
   <Image
     source={
       Object {
@@ -93,11 +129,20 @@ exports[`Avatar renders sizes correctly medium 1`] = `
       ]
     }
   />
-</Fragment>
+</TouchableOpacity>
 `;
 
 exports[`Avatar renders sizes correctly small 1`] = `
-<Fragment>
+<TouchableOpacity
+  activeOpacity={0.2}
+  delayLongPress={600}
+  extraButtonProps={
+    Object {
+      "rippleColor": "transparent",
+    }
+  }
+  onPress={[Function]}
+>
   <Image
     source={
       Object {
@@ -117,11 +162,20 @@ exports[`Avatar renders sizes correctly small 1`] = `
       ]
     }
   />
-</Fragment>
+</TouchableOpacity>
 `;
 
 exports[`Avatar renders sizes correctly the default 1`] = `
-<Fragment>
+<TouchableOpacity
+  activeOpacity={0.2}
+  delayLongPress={600}
+  extraButtonProps={
+    Object {
+      "rippleColor": "transparent",
+    }
+  }
+  onPress={[Function]}
+>
   <Image
     source={
       Object {
@@ -141,11 +195,20 @@ exports[`Avatar renders sizes correctly the default 1`] = `
       ]
     }
   />
-</Fragment>
+</TouchableOpacity>
 `;
 
 exports[`Avatar renders sizes correctly xl 1`] = `
-<Fragment>
+<TouchableOpacity
+  activeOpacity={0.2}
+  delayLongPress={600}
+  extraButtonProps={
+    Object {
+      "rippleColor": "transparent",
+    }
+  }
+  onPress={[Function]}
+>
   <Image
     source={
       Object {
@@ -165,5 +228,40 @@ exports[`Avatar renders sizes correctly xl 1`] = `
       ]
     }
   />
-</Fragment>
+</TouchableOpacity>
+`;
+
+exports[`Avatar renders with navigation and userId 1`] = `
+<TouchableOpacity
+  activeOpacity={0.2}
+  delayLongPress={600}
+  extraButtonProps={
+    Object {
+      "rippleColor": "transparent",
+    }
+  }
+  onPress={[Function]}
+>
+  <Image
+    source={
+      Object {
+        "uri": Object {
+          "testUri": "../../../app/assets/images/empower_two_women_logo.png",
+        },
+      }
+    }
+    style={
+      Array [
+        Object {
+          "backgroundColor": "rgba(4, 71, 47, 0.75)",
+          "borderRadius": 25,
+          "height": 50,
+          "overflow": "hidden",
+          "width": 50,
+        },
+        undefined,
+      ]
+    }
+  />
+</TouchableOpacity>
 `;

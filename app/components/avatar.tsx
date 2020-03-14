@@ -1,17 +1,32 @@
-import React, { Component, Fragment } from "react";
+import React, { Component } from "react";
 import { Image } from "react-native";
+import { TouchableOpacity } from "react-native-gesture-handler";
 
+import { Author, NavigationType } from "interfaces";
 import { elements } from "styles";
 
 const annonProfilePath = "../assets/images/profile-pic-annon.png";
 
 interface Props {
-  avatarPath: string | null;
+  avatarPath: null | Author["avatarPath"];
+  navigation?: NavigationType;
+  userId?: Author["id"];
   size?: "small" | "medium" | "large" | "xl" | "feature";
   styles?: object;
 }
 
 class Avatar extends Component<Props> {
+  onPress() {
+    const { navigation, userId } = this.props;
+
+    if (navigation && userId) {
+      navigation.navigate("UserProfile", {
+        navigation,
+        userId,
+      });
+    }
+  }
+
   render() {
     const { avatarPath, size, styles } = this.props;
 
@@ -26,9 +41,9 @@ class Avatar extends Component<Props> {
     };
 
     return (
-      <Fragment>
+      <TouchableOpacity onPress={() => this.onPress()}>
         <Image source={path} style={[styleSet[size || "medium"], styles]} />
-      </Fragment>
+      </TouchableOpacity>
     );
   }
 }
