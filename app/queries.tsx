@@ -174,3 +174,13 @@ export const NOTIFICATIONS_UNREAD = gql`
     }
   }
 `;
+
+export const USER = gql`
+  query user($id: ID!) {
+    user(id: $id) {
+      id
+      name
+      avatarPath
+    }
+  }
+`;

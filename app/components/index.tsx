@@ -6,6 +6,7 @@ export { BackgroundContainer } from "./background-container";
 export { BackgroundModal } from "./background-modal";
 export { Badge } from "./badge";
 export { ButtonAddReply } from "./button-add-reply";
+export { ButtonClose } from "./button-close";
 export { ButtonLogout } from "./button-logout";
 export { ButtonMenuWrapper } from "./button-menu-wrapper";
 export { ButtonSubmit } from "./button-submit";

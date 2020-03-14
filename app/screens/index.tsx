@@ -14,5 +14,6 @@ export { OnboardingFinalScreen } from "./onboarding-final";
 export { OnboardingWelcomeScreen } from "./onboarding-welcome";
 export { PostScreen } from "./post";
 export { StaticContentScreen } from "./static-content";
+export { UserProfileScreen } from "./user-profile";
 export { WebBrowserScreen } from "./web-browser";
 export { WelcomeScreen } from "./welcome";
