@@ -1,6 +1,7 @@
 import React, { Component } from "react";
-import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
+import { StyleSheet, Text, View } from "react-native";
 import ActionSheet from "react-native-actionsheet";
+import { TouchableOpacity } from "react-native-gesture-handler";
 
 import { ActionSheetReply, Avatar, RichTextDisplay, Title } from "components";
 import { NavigationType, Reply as ReplyInterface } from "interfaces";
@@ -43,7 +44,12 @@ class Reply extends Component<Props, State> {
       <TouchableOpacity onLongPress={() => this.onLongPress()}>
         <View style={[styles.commentContainer, { opacity }]}>
           <View style={styles.details}>
-            <Avatar avatarPath={author.avatarPath} size={"small"} />
+            <Avatar
+              avatarPath={author.avatarPath}
+              navigation={navigation}
+              size={"small"}
+              userId={author.id}
+            />
 
             <View style={styles.authorDetails}>
               <Title text={author.name} small />

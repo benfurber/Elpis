@@ -53,7 +53,11 @@ class CommentPreview extends Component<Props> {
         <View style={styles.commentContainer}>
           <View style={styles.avatarContainer}>
             <View>
-              <Avatar avatarPath={author.avatarPath} />
+              <Avatar
+                avatarPath={author.avatarPath}
+                navigation={navigation}
+                userId={author.id}
+              />
             </View>
           </View>
           <View style={styles.commentBodyContainer}>

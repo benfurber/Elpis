@@ -3,6 +3,12 @@
 exports[`Comments<Comment> renders correctly 1`] = `
 <TouchableOpacity
   activeOpacity={0.2}
+  delayLongPress={600}
+  extraButtonProps={
+    Object {
+      "rippleColor": "transparent",
+    }
+  }
   onLongPress={[Function]}
 >
   <View
@@ -31,6 +37,7 @@ exports[`Comments<Comment> renders correctly 1`] = `
           }
         }
         size="large"
+        userId="1235we"
       />
       <View
         style={
@@ -125,6 +132,12 @@ exports[`Comments<Comment> renders correctly 1`] = `
 exports[`Comments<Comment> renders correctly when comment is edited 1`] = `
 <TouchableOpacity
   activeOpacity={0.2}
+  delayLongPress={600}
+  extraButtonProps={
+    Object {
+      "rippleColor": "transparent",
+    }
+  }
   onLongPress={[Function]}
 >
   <View
@@ -153,6 +166,7 @@ exports[`Comments<Comment> renders correctly when comment is edited 1`] = `
           }
         }
         size="large"
+        userId="1235we"
       />
       <View
         style={

@@ -245,9 +245,7 @@ exports[`Avatar renders with navigation and userId 1`] = `
   <Image
     source={
       Object {
-        "uri": Object {
-          "testUri": "../../../app/assets/images/empower_two_women_logo.png",
-        },
+        "uri": "https://elpis-profile-images.s3-sa-east-1.amazonaws.com/uploads/profile-pic-may.jpg",
       }
     }
     style={
