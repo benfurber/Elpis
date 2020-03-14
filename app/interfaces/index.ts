@@ -4,6 +4,8 @@ export interface Author {
   id: string;
   avatarPath: string;
   name: string;
+  totalReplies?: number;
+  totalTopics?: number;
 }
 
 export interface Feed {

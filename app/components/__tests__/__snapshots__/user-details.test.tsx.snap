@@ -15,7 +15,7 @@ exports[`UserDetails renders correctly 1`] = `
         "borderBottomColor": "rgb(255, 255, 255)",
         "borderBottomWidth": 3,
         "marginBottom": 10,
-        "paddingBottom": 10,
+        "paddingBottom": 20,
         "width": "100%",
       }
     }
@@ -37,6 +37,56 @@ exports[`UserDetails renders correctly 1`] = `
       }
       text="Empodere Duas Mulheres"
     />
+  </View>
+  <View
+    style={
+      Object {
+        "flexDirection": "row",
+      }
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "flex": 1,
+            "margin": 10,
+            "padding": 10,
+          },
+          Object {
+            "borderRightColor": "rgb(255, 255, 255)",
+            "borderRightWidth": 3,
+          },
+        ]
+      }
+    >
+      <Title
+        text="Tópicos"
+      />
+      <Title
+        large={true}
+        text="0"
+      />
+    </View>
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "flex": 1,
+          "margin": 10,
+          "padding": 10,
+        }
+      }
+    >
+      <Title
+        text="Respostas"
+      />
+      <Title
+        large={true}
+        text="0"
+      />
+    </View>
   </View>
 </View>
 `;
