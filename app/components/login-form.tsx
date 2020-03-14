@@ -114,7 +114,7 @@ class LoginForm extends Component<Props, State> {
                   displayStyle={display}
                   onChangeText={password => this.setState({ password })}
                   onSubmitEditing={() => this.onPress(login)}
-                  placeholder={labels.password}
+                  placeholder={labels.password.password}
                   secureTextEntry
                   forwardedRef={input => (this.secondInput = input)}
                   returnKeyLabel={labels.login}

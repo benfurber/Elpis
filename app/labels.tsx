@@ -94,17 +94,19 @@ const labels = {
       title: "Bem vinda à Elpis",
     },
   },
-  password: "Senha",
-  passwordEmpty: "Campo de senha vazio.",
-  passwordMedium: "Senha quase forte o suficiente.",
-  passwordMismatch: "As senhas não são idênticas.",
-  passwordRepeat: "Repita a senha",
-  passwordRequest: "Uma senha forte, por favor.",
-  passwordSet: "Defina uma senha",
-  passwordStrong: "Ótima senha!",
-  passwordWeak:
-    "Senha muito fraca. Deve incluir:\n" +
-    "- 1+ letra maiúscula\n- 1+ letra minúscula\n- 1+ número",
+  password: {
+    empty: "Campo de senha vazio.",
+    mismatch: "As senhas não são idênticas.",
+    password: "Senha",
+    repeat: "Repita a senha",
+    request: "Uma senha forte, por favor.",
+    set: "Defina uma senha",
+    stregthStrong: "Ótima senha!",
+    stregthWeak:
+      "Senha muito fraca. Deve incluir:\n" +
+      "- 1+ letra maiúscula\n- 1+ letra minúscula\n- 1+ número",
+    strengthMedium: "Senha quase forte o suficiente.",
+  },
   permissionRequestPhotoLibraryBody:
     "Elpis requer acesso ao seu álbum de fotos para atualizar sua imagem de perfil.",
   permissionRequestPhotoLibraryTitle: "Acesso ao álbum de fotos",
