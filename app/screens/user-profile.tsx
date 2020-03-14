@@ -53,7 +53,7 @@ class UserProfileScreen extends Component<Props, State> {
       <BackgroundContainer header={<ButtonClose navigation={navigation} />}>
         <View style={styles.container}>
           {isLoading && <Loading blueMode />}
-          {user && <UserDetails user={user} />}
+          {user && <UserDetails navigation={navigation} user={user} />}
         </View>
       </BackgroundContainer>
     );

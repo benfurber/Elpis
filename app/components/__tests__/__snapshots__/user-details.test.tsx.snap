@@ -37,6 +37,9 @@ exports[`UserDetails renders correctly 1`] = `
       }
       text="Empodere Duas Mulheres"
     />
+    <ButtonEditProfileLink
+      userId="1235we"
+    />
   </View>
   <View
     style={

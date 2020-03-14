@@ -1,27 +1,29 @@
 import React, { Component } from "react";
 import { StyleSheet, View } from "react-native";
 
-import { Avatar, ButtonSubmit, Title } from "components";
-import { Author } from "interfaces";
+import { Avatar, ButtonEditProfileLink, Title } from "components";
+import { Author, NavigationType } from "interfaces";
 import { labels } from "labels";
 import { colours, layout } from "styles";
 
 interface Props {
+  navigation: NavigationType;
   user: null | Author;
 }
 
 class UserDetails extends Component<Props> {
   render() {
-    const { user } = this.props;
+    const { navigation, user } = this.props;
 
     if (user) {
-      const { avatarPath, name, totalReplies, totalTopics } = user;
+      const { avatarPath, id, name, totalReplies, totalTopics } = user;
 
       return (
         <View style={styles.container}>
           <View style={styles.firstRow}>
             <Avatar avatarPath={avatarPath} size="feature" />
             <Title style={styles.title} text={name} large />
+            <ButtonEditProfileLink navigation={navigation} userId={id} />
           </View>
           <View style={styles.secondRow}>
             <View style={[styles.column, styles.bar]}>
