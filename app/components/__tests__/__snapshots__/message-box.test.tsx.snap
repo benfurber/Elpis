@@ -10,8 +10,9 @@ exports[`MessageBox and in error renders correctly 1`] = `
       "borderRadius": 10,
       "borderWidth": 2,
       "flexDirection": "row",
-      "marginVertical": 20,
-      "padding": 10,
+      "marginBottom": 20,
+      "marginTop": 10,
+      "padding": 5,
     }
   }
 >
@@ -20,7 +21,7 @@ exports[`MessageBox and in error renders correctly 1`] = `
     name="exclamation-triangle"
     style={
       Object {
-        "marginRight": 10,
+        "marginRight": 5,
       }
     }
   />
@@ -40,8 +41,9 @@ exports[`MessageBox when passive renders correctly 1`] = `
       "borderRadius": 10,
       "borderWidth": 2,
       "flexDirection": "row",
-      "marginVertical": 20,
-      "padding": 10,
+      "marginBottom": 20,
+      "marginTop": 10,
+      "padding": 5,
     }
   }
 >
@@ -50,7 +52,7 @@ exports[`MessageBox when passive renders correctly 1`] = `
     name="info-circle"
     style={
       Object {
-        "marginRight": 10,
+        "marginRight": 5,
       }
     }
   />
@@ -70,17 +72,18 @@ exports[`MessageBox when warning renders correctly 1`] = `
       "borderRadius": 10,
       "borderWidth": 2,
       "flexDirection": "row",
-      "marginVertical": 20,
-      "padding": 10,
+      "marginBottom": 20,
+      "marginTop": 10,
+      "padding": 5,
     }
   }
 >
   <customIcon
     colour="orange"
-    name="info-circle"
+    name="exclamation-circle"
     style={
       Object {
-        "marginRight": 10,
+        "marginRight": 5,
       }
     }
   />

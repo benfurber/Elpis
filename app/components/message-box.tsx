@@ -19,11 +19,15 @@ class MessageBox extends Component<Props> {
       warn: "orange",
     };
 
-    const name = display === "error" ? "exclamation-triangle" : "info-circle";
+    const name = {
+      error: "exclamation-triangle",
+      passive: "info-circle",
+      warn: "exclamation-circle",
+    };
 
     const styles = StyleSheet.create({
       icon: {
-        marginRight: layout.spacing,
+        marginRight: layout.spacingS,
       },
       messages: {
         alignItems: "center",
@@ -32,15 +36,20 @@ class MessageBox extends Component<Props> {
         borderRadius: layout.borderRadiusL,
         borderWidth: 2,
         flexDirection: "row",
-        marginVertical: layout.spacingL,
-        padding: layout.spacing,
+        marginBottom: layout.spacingL,
+        marginTop: layout.spacing,
+        padding: layout.spacingS,
       },
     });
 
     if (message) {
       return (
         <View style={styles.messages}>
-          <Icon colour={colour[display]} name={name} style={styles.icon} />
+          <Icon
+            colour={colour[display]}
+            name={name[display]}
+            style={styles.icon}
+          />
           <Text>{message}</Text>
         </View>
       );
