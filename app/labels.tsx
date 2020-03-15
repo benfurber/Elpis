@@ -110,7 +110,7 @@ const labels = {
   permissionRequestPhotoLibraryBody:
     "Elpis requer acesso ao seu álbum de fotos para atualizar sua imagem de perfil.",
   permissionRequestPhotoLibraryTitle: "Acesso ao álbum de fotos",
-  profilePictureRequest: "Por favor, deixe-nos ver o seu rosto.",
+  profilePictureRequest: "Atualize a imagem de perfil com uma foto sua.",
   replies: "Respostas",
   reply: "Resposta",
   select: "Selecionar",
