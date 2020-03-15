@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ButtonOutline without a text prop renders correctly 1`] = `
+<View>
+  <TouchableOpacity
+    activeOpacity={0.2}
+    onPress={[Function]}
+    style={
+      Object {
+        "borderColor": "rgba(4, 71, 47, 0.75)",
+        "borderRadius": 100,
+        "borderWidth": 3,
+        "marginVertical": 10,
+        "paddingHorizontal": 14,
+        "paddingVertical": 8,
+      }
+    }
+  >
+    <Text
+      style={
+        Object {
+          "alignSelf": "center",
+          "color": "rgba(4, 71, 47, 0.75)",
+          "fontSize": 14,
+          "fontWeight": "bold",
+        }
+      }
+    >
+      Tap here
+    </Text>
+  </TouchableOpacity>
+</View>
+`;

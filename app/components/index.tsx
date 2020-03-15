@@ -10,6 +10,7 @@ export { ButtonClose } from "./button-close";
 export { ButtonEditProfileLink } from "./button-edit-profile-link";
 export { ButtonLogout } from "./button-logout";
 export { ButtonMenuWrapper } from "./button-menu-wrapper";
+export { ButtonOutline } from "./button-outline";
 export { ButtonSubmit } from "./button-submit";
 export { Comments } from "./comments";
 export { DisplayContent } from "./display-content";
