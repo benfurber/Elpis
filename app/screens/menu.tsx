@@ -56,7 +56,7 @@ class MenuScreen extends Component<Props> {
               backToText: labels.back.toMenu,
             })
           }
-          text={editProfile}
+          text={editProfile.action}
         />
         <ButtonLogout navigation={navigation} />
       </BackgroundContainer>

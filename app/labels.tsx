@@ -26,7 +26,11 @@ const labels = {
   deleteComment: "Excluir comentário",
   deleteReply: "Excluir resposta",
   editComment: "Editar comentário",
-  editProfile: "Editar o meu perfil",
+  editProfile: {
+    action: "Editar o meu perfil",
+    otherInformation: "Minhas informações",
+    title: "Meu perfil",
+  },
   editReply: "Editar resposta",
   editedComment: "Editado",
   editedReply: "Editada",

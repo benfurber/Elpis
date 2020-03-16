@@ -19,7 +19,7 @@ function ButtonEditProfileLink(props: Props) {
     return (
       <ButtonSubmit
         display="active"
-        label={labels.editProfile}
+        label={labels.editProfile.action}
         onPress={() => navigation.navigate("EditProfile")}
         small
       />
