@@ -12,7 +12,7 @@ interface Props {
 
 const Header = ({ header }: { header: Props["header"] }) => {
   return (
-    <View style={styles.header}>
+    <View>
       <View style={styles.closeContainer}>{header}</View>
     </View>
   );
@@ -46,9 +46,6 @@ const styles = StyleSheet.create({
     backgroundColor: colours.transparentBlue,
     height: "100%",
     width: "100%",
-  },
-  header: {
-    height: 60,
   },
   safeArea: {
     flex: 1,

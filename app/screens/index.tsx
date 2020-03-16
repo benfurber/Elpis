@@ -1,6 +1,7 @@
 export { AddReplyScreen } from "./add-reply";
 export { AddTopicScreen } from "./add-topic";
 export { AuthLoadingScreen } from "./auth-loading";
+export { EditPasswordScreen } from "./edit-password";
 export { EditProfileScreen } from "./edit-profile";
 export { FeedScreen } from "./feed";
 export { FeedbackScreen } from "./feedback";
@@ -14,5 +15,6 @@ export { OnboardingFinalScreen } from "./onboarding-final";
 export { OnboardingWelcomeScreen } from "./onboarding-welcome";
 export { PostScreen } from "./post";
 export { StaticContentScreen } from "./static-content";
+export { UserProfileScreen } from "./user-profile";
 export { WebBrowserScreen } from "./web-browser";
 export { WelcomeScreen } from "./welcome";

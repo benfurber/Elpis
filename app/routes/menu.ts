@@ -1,6 +1,7 @@
 import { createStackNavigator } from "react-navigation-stack";
 
 import {
+  EditPasswordScreen,
   EditProfileScreen,
   ImageBrowserScreen,
   MenuScreen,
@@ -16,6 +17,7 @@ const options = {
 
 const screens = {
   CommunityRules: StaticContentScreen,
+  EditPassword: EditPasswordScreen,
   EditProfile: EditProfileScreen,
   HowTo: StaticContentScreen,
   ImageBrowser: ImageBrowserScreen,

@@ -3,20 +3,28 @@
 exports[`MessageBox and in error renders correctly 1`] = `
 <View
   style={
-    Array [
-      Object {
-        "backgroundColor": "rgba(255, 255, 255, 0.60)",
-        "borderRadius": 5,
-        "borderWidth": 2,
-        "marginVertical": 20,
-        "padding": 20,
-      },
-      Object {
-        "borderColor": "rgb(208, 2, 27)",
-      },
-    ]
+    Object {
+      "alignItems": "center",
+      "backgroundColor": "rgba(255, 255, 255, 0.60)",
+      "borderColor": "rgb(208, 2, 27)",
+      "borderRadius": 10,
+      "borderWidth": 2,
+      "flexDirection": "row",
+      "marginBottom": 20,
+      "marginTop": 10,
+      "padding": 5,
+    }
   }
 >
+  <customIcon
+    colour="rgb(208, 2, 27)"
+    name="exclamation-triangle"
+    style={
+      Object {
+        "marginRight": 5,
+      }
+    }
+  />
   <Text>
     PANIC!
   </Text>
@@ -26,20 +34,28 @@ exports[`MessageBox and in error renders correctly 1`] = `
 exports[`MessageBox when passive renders correctly 1`] = `
 <View
   style={
-    Array [
-      Object {
-        "backgroundColor": "rgba(255, 255, 255, 0.60)",
-        "borderRadius": 5,
-        "borderWidth": 2,
-        "marginVertical": 20,
-        "padding": 20,
-      },
-      Object {
-        "borderColor": "rgb(45, 82, 113)",
-      },
-    ]
+    Object {
+      "alignItems": "center",
+      "backgroundColor": "rgba(255, 255, 255, 0.60)",
+      "borderColor": "rgb(45, 82, 113)",
+      "borderRadius": 10,
+      "borderWidth": 2,
+      "flexDirection": "row",
+      "marginBottom": 20,
+      "marginTop": 10,
+      "padding": 5,
+    }
   }
 >
+  <customIcon
+    colour="rgb(45, 82, 113)"
+    name="info-circle"
+    style={
+      Object {
+        "marginRight": 5,
+      }
+    }
+  />
   <Text>
     Everything OK
   </Text>
@@ -49,20 +65,28 @@ exports[`MessageBox when passive renders correctly 1`] = `
 exports[`MessageBox when warning renders correctly 1`] = `
 <View
   style={
-    Array [
-      Object {
-        "backgroundColor": "rgba(255, 255, 255, 0.60)",
-        "borderRadius": 5,
-        "borderWidth": 2,
-        "marginVertical": 20,
-        "padding": 20,
-      },
-      Object {
-        "borderColor": "orange",
-      },
-    ]
+    Object {
+      "alignItems": "center",
+      "backgroundColor": "rgba(255, 255, 255, 0.60)",
+      "borderColor": "orange",
+      "borderRadius": 10,
+      "borderWidth": 2,
+      "flexDirection": "row",
+      "marginBottom": 20,
+      "marginTop": 10,
+      "padding": 5,
+    }
   }
 >
+  <customIcon
+    colour="orange"
+    name="exclamation-circle"
+    style={
+      Object {
+        "marginRight": 5,
+      }
+    }
+  />
   <Text>
     Are you sure?
   </Text>

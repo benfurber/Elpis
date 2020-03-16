@@ -42,6 +42,7 @@ exports[`Comments<CommentPreview> with replies renders correctly 1`] = `
               "testUri": "../../../app/assets/images/empower_two_women_logo.png",
             }
           }
+          userId="1235we"
         />
       </View>
     </View>
@@ -205,6 +206,7 @@ exports[`Comments<CommentPreview> without replies renders correctly 1`] = `
               "testUri": "../../../app/assets/images/empower_two_women_logo.png",
             }
           }
+          userId="1235we"
         />
       </View>
     </View>

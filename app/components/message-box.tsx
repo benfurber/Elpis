@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { StyleSheet, Text, View } from "react-native";
 
+import { Icon } from "components";
 import { colours, layout } from "styles";
 
 interface Props {
@@ -12,15 +13,43 @@ class MessageBox extends Component<Props> {
   render() {
     const { message, display } = this.props;
 
-    const style = {
-      error: styles.messagesError,
-      passive: styles.messagesPassive,
-      warn: styles.messagesWarn,
+    const colour = {
+      error: colours.red,
+      passive: colours.navyBlueDark,
+      warn: "orange",
     };
+
+    const name = {
+      error: "exclamation-triangle",
+      passive: "info-circle",
+      warn: "exclamation-circle",
+    };
+
+    const styles = StyleSheet.create({
+      icon: {
+        marginRight: layout.spacingS,
+      },
+      messages: {
+        alignItems: "center",
+        backgroundColor: colours.whiteTransparentHigh,
+        borderColor: colour[display],
+        borderRadius: layout.borderRadiusL,
+        borderWidth: 2,
+        flexDirection: "row",
+        marginBottom: layout.spacingL,
+        marginTop: layout.spacing,
+        padding: layout.spacingS,
+      },
+    });
 
     if (message) {
       return (
-        <View style={[styles.messages, style[display]]}>
+        <View style={styles.messages}>
+          <Icon
+            colour={colour[display]}
+            name={name[display]}
+            style={styles.icon}
+          />
           <Text>{message}</Text>
         </View>
       );
@@ -29,24 +58,5 @@ class MessageBox extends Component<Props> {
     return null;
   }
 }
-
-const styles = StyleSheet.create({
-  messages: {
-    backgroundColor: colours.whiteTransparentHigh,
-    borderRadius: layout.borderRadius,
-    borderWidth: 2,
-    marginVertical: layout.spacingL,
-    padding: layout.spacingL,
-  },
-  messagesError: {
-    borderColor: colours.red,
-  },
-  messagesPassive: {
-    borderColor: colours.navyBlueDark,
-  },
-  messagesWarn: {
-    borderColor: "orange",
-  },
-});
 
 export { MessageBox };

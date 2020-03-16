@@ -28,7 +28,7 @@ class FormAddPassword extends Component<Props, State> {
     this.state = {
       display: "active",
       displayMessage: "warn",
-      message: labels.passwordRequest,
+      message: labels.password.request,
       password: "",
       passwordRepeat: "",
     };
@@ -62,18 +62,18 @@ class FormAddPassword extends Component<Props, State> {
     const { password, passwordRepeat } = this.state;
 
     if (password === "" || passwordRepeat === "") {
-      return this.passwordError(labels.passwordEmpty);
+      return this.passwordError(labels.password.empty);
     }
 
     if (!this.passwordStrength(password)) {
-      return this.passwordError(labels.passwordWeak);
+      return this.passwordError(labels.password.stregthWeak);
     }
 
     if (password === passwordRepeat) {
       this.setState({ message: null });
       return true;
     } else {
-      return this.passwordError(labels.passwordMismatch);
+      return this.passwordError(labels.password.mismatch);
     }
   }
 
@@ -84,7 +84,7 @@ class FormAddPassword extends Component<Props, State> {
       this.setState({
         display: "active",
         displayMessage: "passive",
-        message: labels.passwordStrong,
+        message: labels.password.stregthStrong,
       });
       return true;
     }
@@ -93,14 +93,14 @@ class FormAddPassword extends Component<Props, State> {
       this.setState({
         display: "active",
         displayMessage: "warn",
-        message: labels.passwordMedium,
+        message: labels.password.strengthMedium,
       });
       return true;
     }
 
     this.setState({
       displayMessage: "warn",
-      message: labels.passwordRequest,
+      message: labels.password.request,
     });
 
     return false;
@@ -130,7 +130,7 @@ class FormAddPassword extends Component<Props, State> {
                   return this.setState({ password });
                 }}
                 onSubmitEditing={() => this.secondInput.focus()}
-                placeholder={labels.passwordSet}
+                placeholder={labels.password.set}
                 returnKeyLabel={labels.next}
                 returnKeyType="next"
                 secureTextEntry
@@ -147,7 +147,7 @@ class FormAddPassword extends Component<Props, State> {
                   this.setState({ passwordRepeat })
                 }
                 onSubmitEditing={() => this.onPress(updatePassword)}
-                placeholder={labels.passwordRepeat}
+                placeholder={labels.password.repeat}
                 returnKeyLabel={labels.submit}
                 returnKeyType="send"
                 secureTextEntry

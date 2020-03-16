@@ -1,6 +1,7 @@
 import React, { Component } from "react";
-import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
+import { StyleSheet, Text, View } from "react-native";
 import ActionSheet from "react-native-actionsheet";
+import { TouchableOpacity } from "react-native-gesture-handler";
 
 import { ActionSheetComment, Avatar, Title } from "components";
 import { Comment as CommentType, NavigationType, Post } from "interfaces";
@@ -33,7 +34,12 @@ class Comment extends Component<Props> {
       <TouchableOpacity onLongPress={() => this.onLongPress()}>
         <View style={styles.featured}>
           <View style={styles.featuredDetails}>
-            <Avatar avatarPath={author.avatarPath} size={"large"} />
+            <Avatar
+              avatarPath={author.avatarPath}
+              navigation={navigation}
+              size={"large"}
+              userId={author.id}
+            />
 
             <View style={styles.featuredAuthorDetails}>
               <Title text={author.name} />
