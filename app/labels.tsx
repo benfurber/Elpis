@@ -99,6 +99,7 @@ const labels = {
     },
   },
   password: {
+    action: "Alterar senha",
     empty: "Campo de senha vazio.",
     mismatch: "As senhas não são idênticas.",
     password: "Senha",

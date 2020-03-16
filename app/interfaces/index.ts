@@ -3,6 +3,7 @@ import { NavigationStackProp } from "react-navigation-stack";
 export interface Author {
   id: string;
   avatarPath: string;
+  email?: string;
   name: string;
   totalReplies?: number;
   totalTopics?: number;
