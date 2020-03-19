@@ -74,13 +74,13 @@ class Post extends Component<Props, State> {
   }
 
   renderBody() {
-    const { feed, post } = this.props;
+    const { feed, navigation, post } = this.props;
     const { author, content, publishedAt, imagePath } = post;
 
     const bodyContent = (
       <Content date={publishedAt} content={content} imagePath={imagePath} />
     );
-    const bodyFooter = <Footer author={author} />;
+    const bodyFooter = <Footer author={author} navigation={navigation} />;
 
     if (feed) {
       return (

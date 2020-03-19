@@ -40,6 +40,7 @@ exports[`Post<Footer> renders correctly 1`] = `
           "testUri": "../../../app/assets/images/empower_two_women_logo.png",
         }
       }
+      communityId="1235we"
       containerStyles={
         Object {
           "position": "absolute",

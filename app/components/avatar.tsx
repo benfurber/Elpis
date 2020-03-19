@@ -2,13 +2,14 @@ import React, { Component } from "react";
 import { Image, View } from "react-native";
 import { TouchableOpacity } from "react-native-gesture-handler";
 
-import { Author, NavigationType } from "interfaces";
+import { Author, Community, NavigationType } from "interfaces";
 import { elements } from "styles";
 
 const annonProfilePath = "../assets/images/profile-pic-annon.png";
 
 interface Props {
   avatarPath: null | Author["avatarPath"];
+  communityId?: Community["id"];
   containerStyles?: object;
   navigation?: NavigationType;
   userId?: Author["id"];
@@ -18,12 +19,19 @@ interface Props {
 
 class Avatar extends Component<Props> {
   onPress() {
-    const { navigation, userId } = this.props;
+    const { communityId, navigation, userId } = this.props;
 
     if (navigation && userId) {
       navigation.navigate("UserProfile", {
         navigation,
         userId,
+      });
+    }
+
+    if (navigation && communityId) {
+      navigation.navigate("CommunityProfile", {
+        communityId,
+        navigation,
       });
     }
   }

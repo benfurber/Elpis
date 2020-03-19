@@ -2,15 +2,17 @@ import React from "react";
 import { StyleSheet, Text, View } from "react-native";
 
 import { Avatar } from "components";
-import { Author } from "interfaces";
+import { Author, NavigationType } from "interfaces";
 import { colours, layout } from "styles";
 
 interface Props {
   author: Author;
+  navigation: NavigationType;
 }
 
 const Footer = (props: Props) => {
-  const { avatarPath, name } = props.author;
+  const { author, navigation } = props;
+  const { avatarPath, id, name } = author;
 
   return (
     <View>
@@ -20,7 +22,9 @@ const Footer = (props: Props) => {
       <View style={styles.avatarContainer}>
         <Avatar
           avatarPath={avatarPath}
+          communityId={id}
           containerStyles={styles.authorAvatarContainerStyles}
+          navigation={navigation}
           size={"large"}
           styles={styles.authorAvatar}
         />
