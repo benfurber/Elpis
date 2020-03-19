@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Image } from "react-native";
+import { Image, View } from "react-native";
 import { TouchableOpacity } from "react-native-gesture-handler";
 
 import { Author, NavigationType } from "interfaces";
@@ -9,6 +9,7 @@ const annonProfilePath = "../assets/images/profile-pic-annon.png";
 
 interface Props {
   avatarPath: null | Author["avatarPath"];
+  containerStyles?: object;
   navigation?: NavigationType;
   userId?: Author["id"];
   size?: "small" | "medium" | "large" | "xl" | "feature";
@@ -28,7 +29,7 @@ class Avatar extends Component<Props> {
   }
 
   render() {
-    const { avatarPath, size, styles } = this.props;
+    const { avatarPath, containerStyles, size, styles } = this.props;
 
     const path = avatarPath ? { uri: avatarPath } : require(annonProfilePath);
 
@@ -41,9 +42,11 @@ class Avatar extends Component<Props> {
     };
 
     return (
-      <TouchableOpacity onPress={() => this.onPress()}>
-        <Image source={path} style={[styleSet[size || "medium"], styles]} />
-      </TouchableOpacity>
+      <View style={containerStyles}>
+        <TouchableOpacity onPress={() => this.onPress()}>
+          <Image source={path} style={[styleSet[size || "medium"], styles]} />
+        </TouchableOpacity>
+      </View>
     );
   }
 }

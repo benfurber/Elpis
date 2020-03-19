@@ -20,6 +20,7 @@ const Footer = (props: Props) => {
       <View style={styles.avatarContainer}>
         <Avatar
           avatarPath={avatarPath}
+          containerStyles={styles.authorAvatarContainerStyles}
           size={"large"}
           styles={styles.authorAvatar}
         />
@@ -32,6 +33,8 @@ const styles = StyleSheet.create({
   authorAvatar: {
     borderColor: colours.navyBlueDark,
     borderWidth: 4,
+  },
+  authorAvatarContainerStyles: {
     position: "absolute",
     top: -50,
   },

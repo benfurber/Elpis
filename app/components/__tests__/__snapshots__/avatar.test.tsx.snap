@@ -1,265 +1,281 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Avatar renders no path correctly 1`] = `
-<TouchableOpacity
-  activeOpacity={0.2}
-  delayLongPress={600}
-  extraButtonProps={
-    Object {
-      "rippleColor": "transparent",
-    }
-  }
-  onPress={[Function]}
->
-  <Image
-    source={
+<View>
+  <TouchableOpacity
+    activeOpacity={0.2}
+    delayLongPress={600}
+    extraButtonProps={
       Object {
-        "testUri": "../../../app/assets/images/profile-pic-annon.png",
+        "rippleColor": "transparent",
       }
     }
-    style={
-      Array [
+    onPress={[Function]}
+  >
+    <Image
+      source={
         Object {
-          "backgroundColor": "rgba(4, 71, 47, 0.75)",
-          "borderRadius": 25,
-          "height": 50,
-          "overflow": "hidden",
-          "width": 50,
-        },
-        undefined,
-      ]
-    }
-  />
-</TouchableOpacity>
+          "testUri": "../../../app/assets/images/profile-pic-annon.png",
+        }
+      }
+      style={
+        Array [
+          Object {
+            "backgroundColor": "rgba(4, 71, 47, 0.75)",
+            "borderRadius": 25,
+            "height": 50,
+            "overflow": "hidden",
+            "width": 50,
+          },
+          undefined,
+        ]
+      }
+    />
+  </TouchableOpacity>
+</View>
 `;
 
 exports[`Avatar renders sizes correctly feature 1`] = `
-<TouchableOpacity
-  activeOpacity={0.2}
-  delayLongPress={600}
-  extraButtonProps={
-    Object {
-      "rippleColor": "transparent",
-    }
-  }
-  onPress={[Function]}
->
-  <Image
-    source={
+<View>
+  <TouchableOpacity
+    activeOpacity={0.2}
+    delayLongPress={600}
+    extraButtonProps={
       Object {
-        "uri": "https://elpis-profile-images.s3-sa-east-1.amazonaws.com/uploads/profile-pic-may.jpg",
+        "rippleColor": "transparent",
       }
     }
-    style={
-      Array [
+    onPress={[Function]}
+  >
+    <Image
+      source={
         Object {
-          "backgroundColor": "rgba(4, 71, 47, 0.75)",
-          "borderRadius": 50,
-          "height": 100,
-          "overflow": "hidden",
-          "width": 100,
-        },
-        undefined,
-      ]
-    }
-  />
-</TouchableOpacity>
+          "uri": "https://elpis-profile-images.s3-sa-east-1.amazonaws.com/uploads/profile-pic-may.jpg",
+        }
+      }
+      style={
+        Array [
+          Object {
+            "backgroundColor": "rgba(4, 71, 47, 0.75)",
+            "borderRadius": 50,
+            "height": 100,
+            "overflow": "hidden",
+            "width": 100,
+          },
+          undefined,
+        ]
+      }
+    />
+  </TouchableOpacity>
+</View>
 `;
 
 exports[`Avatar renders sizes correctly large 1`] = `
-<TouchableOpacity
-  activeOpacity={0.2}
-  delayLongPress={600}
-  extraButtonProps={
-    Object {
-      "rippleColor": "transparent",
-    }
-  }
-  onPress={[Function]}
->
-  <Image
-    source={
+<View>
+  <TouchableOpacity
+    activeOpacity={0.2}
+    delayLongPress={600}
+    extraButtonProps={
       Object {
-        "uri": "https://elpis-profile-images.s3-sa-east-1.amazonaws.com/uploads/profile-pic-may.jpg",
+        "rippleColor": "transparent",
       }
     }
-    style={
-      Array [
+    onPress={[Function]}
+  >
+    <Image
+      source={
         Object {
-          "backgroundColor": "rgba(4, 71, 47, 0.75)",
-          "borderRadius": 30,
-          "height": 60,
-          "overflow": "hidden",
-          "width": 60,
-        },
-        undefined,
-      ]
-    }
-  />
-</TouchableOpacity>
+          "uri": "https://elpis-profile-images.s3-sa-east-1.amazonaws.com/uploads/profile-pic-may.jpg",
+        }
+      }
+      style={
+        Array [
+          Object {
+            "backgroundColor": "rgba(4, 71, 47, 0.75)",
+            "borderRadius": 30,
+            "height": 60,
+            "overflow": "hidden",
+            "width": 60,
+          },
+          undefined,
+        ]
+      }
+    />
+  </TouchableOpacity>
+</View>
 `;
 
 exports[`Avatar renders sizes correctly medium 1`] = `
-<TouchableOpacity
-  activeOpacity={0.2}
-  delayLongPress={600}
-  extraButtonProps={
-    Object {
-      "rippleColor": "transparent",
-    }
-  }
-  onPress={[Function]}
->
-  <Image
-    source={
+<View>
+  <TouchableOpacity
+    activeOpacity={0.2}
+    delayLongPress={600}
+    extraButtonProps={
       Object {
-        "uri": "https://elpis-profile-images.s3-sa-east-1.amazonaws.com/uploads/profile-pic-may.jpg",
+        "rippleColor": "transparent",
       }
     }
-    style={
-      Array [
+    onPress={[Function]}
+  >
+    <Image
+      source={
         Object {
-          "backgroundColor": "rgba(4, 71, 47, 0.75)",
-          "borderRadius": 25,
-          "height": 50,
-          "overflow": "hidden",
-          "width": 50,
-        },
-        undefined,
-      ]
-    }
-  />
-</TouchableOpacity>
+          "uri": "https://elpis-profile-images.s3-sa-east-1.amazonaws.com/uploads/profile-pic-may.jpg",
+        }
+      }
+      style={
+        Array [
+          Object {
+            "backgroundColor": "rgba(4, 71, 47, 0.75)",
+            "borderRadius": 25,
+            "height": 50,
+            "overflow": "hidden",
+            "width": 50,
+          },
+          undefined,
+        ]
+      }
+    />
+  </TouchableOpacity>
+</View>
 `;
 
 exports[`Avatar renders sizes correctly small 1`] = `
-<TouchableOpacity
-  activeOpacity={0.2}
-  delayLongPress={600}
-  extraButtonProps={
-    Object {
-      "rippleColor": "transparent",
-    }
-  }
-  onPress={[Function]}
->
-  <Image
-    source={
+<View>
+  <TouchableOpacity
+    activeOpacity={0.2}
+    delayLongPress={600}
+    extraButtonProps={
       Object {
-        "uri": "https://elpis-profile-images.s3-sa-east-1.amazonaws.com/uploads/profile-pic-may.jpg",
+        "rippleColor": "transparent",
       }
     }
-    style={
-      Array [
+    onPress={[Function]}
+  >
+    <Image
+      source={
         Object {
-          "backgroundColor": "rgba(4, 71, 47, 0.75)",
-          "borderRadius": 23,
-          "height": 45,
-          "overflow": "hidden",
-          "width": 45,
-        },
-        undefined,
-      ]
-    }
-  />
-</TouchableOpacity>
+          "uri": "https://elpis-profile-images.s3-sa-east-1.amazonaws.com/uploads/profile-pic-may.jpg",
+        }
+      }
+      style={
+        Array [
+          Object {
+            "backgroundColor": "rgba(4, 71, 47, 0.75)",
+            "borderRadius": 23,
+            "height": 45,
+            "overflow": "hidden",
+            "width": 45,
+          },
+          undefined,
+        ]
+      }
+    />
+  </TouchableOpacity>
+</View>
 `;
 
 exports[`Avatar renders sizes correctly the default 1`] = `
-<TouchableOpacity
-  activeOpacity={0.2}
-  delayLongPress={600}
-  extraButtonProps={
-    Object {
-      "rippleColor": "transparent",
-    }
-  }
-  onPress={[Function]}
->
-  <Image
-    source={
+<View>
+  <TouchableOpacity
+    activeOpacity={0.2}
+    delayLongPress={600}
+    extraButtonProps={
       Object {
-        "uri": "https://elpis-profile-images.s3-sa-east-1.amazonaws.com/uploads/profile-pic-may.jpg",
+        "rippleColor": "transparent",
       }
     }
-    style={
-      Array [
+    onPress={[Function]}
+  >
+    <Image
+      source={
         Object {
-          "backgroundColor": "rgba(4, 71, 47, 0.75)",
-          "borderRadius": 25,
-          "height": 50,
-          "overflow": "hidden",
-          "width": 50,
-        },
-        undefined,
-      ]
-    }
-  />
-</TouchableOpacity>
+          "uri": "https://elpis-profile-images.s3-sa-east-1.amazonaws.com/uploads/profile-pic-may.jpg",
+        }
+      }
+      style={
+        Array [
+          Object {
+            "backgroundColor": "rgba(4, 71, 47, 0.75)",
+            "borderRadius": 25,
+            "height": 50,
+            "overflow": "hidden",
+            "width": 50,
+          },
+          undefined,
+        ]
+      }
+    />
+  </TouchableOpacity>
+</View>
 `;
 
 exports[`Avatar renders sizes correctly xl 1`] = `
-<TouchableOpacity
-  activeOpacity={0.2}
-  delayLongPress={600}
-  extraButtonProps={
-    Object {
-      "rippleColor": "transparent",
-    }
-  }
-  onPress={[Function]}
->
-  <Image
-    source={
+<View>
+  <TouchableOpacity
+    activeOpacity={0.2}
+    delayLongPress={600}
+    extraButtonProps={
       Object {
-        "uri": "https://elpis-profile-images.s3-sa-east-1.amazonaws.com/uploads/profile-pic-may.jpg",
+        "rippleColor": "transparent",
       }
     }
-    style={
-      Array [
+    onPress={[Function]}
+  >
+    <Image
+      source={
         Object {
-          "backgroundColor": "rgba(4, 71, 47, 0.75)",
-          "borderRadius": 35,
-          "height": 70,
-          "overflow": "hidden",
-          "width": 70,
-        },
-        undefined,
-      ]
-    }
-  />
-</TouchableOpacity>
+          "uri": "https://elpis-profile-images.s3-sa-east-1.amazonaws.com/uploads/profile-pic-may.jpg",
+        }
+      }
+      style={
+        Array [
+          Object {
+            "backgroundColor": "rgba(4, 71, 47, 0.75)",
+            "borderRadius": 35,
+            "height": 70,
+            "overflow": "hidden",
+            "width": 70,
+          },
+          undefined,
+        ]
+      }
+    />
+  </TouchableOpacity>
+</View>
 `;
 
 exports[`Avatar renders with navigation and userId 1`] = `
-<TouchableOpacity
-  activeOpacity={0.2}
-  delayLongPress={600}
-  extraButtonProps={
-    Object {
-      "rippleColor": "transparent",
-    }
-  }
-  onPress={[Function]}
->
-  <Image
-    source={
+<View>
+  <TouchableOpacity
+    activeOpacity={0.2}
+    delayLongPress={600}
+    extraButtonProps={
       Object {
-        "uri": "https://elpis-profile-images.s3-sa-east-1.amazonaws.com/uploads/profile-pic-may.jpg",
+        "rippleColor": "transparent",
       }
     }
-    style={
-      Array [
+    onPress={[Function]}
+  >
+    <Image
+      source={
         Object {
-          "backgroundColor": "rgba(4, 71, 47, 0.75)",
-          "borderRadius": 25,
-          "height": 50,
-          "overflow": "hidden",
-          "width": 50,
-        },
-        undefined,
-      ]
-    }
-  />
-</TouchableOpacity>
+          "uri": "https://elpis-profile-images.s3-sa-east-1.amazonaws.com/uploads/profile-pic-may.jpg",
+        }
+      }
+      style={
+        Array [
+          Object {
+            "backgroundColor": "rgba(4, 71, 47, 0.75)",
+            "borderRadius": 25,
+            "height": 50,
+            "overflow": "hidden",
+            "width": 50,
+          },
+          undefined,
+        ]
+      }
+    />
+  </TouchableOpacity>
+</View>
 `;

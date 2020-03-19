@@ -40,13 +40,17 @@ exports[`Post<Footer> renders correctly 1`] = `
           "testUri": "../../../app/assets/images/empower_two_women_logo.png",
         }
       }
+      containerStyles={
+        Object {
+          "position": "absolute",
+          "top": -50,
+        }
+      }
       size="large"
       styles={
         Object {
           "borderColor": "rgb(45, 82, 113)",
           "borderWidth": 4,
-          "position": "absolute",
-          "top": -50,
         }
       }
     />
