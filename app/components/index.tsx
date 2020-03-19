@@ -13,6 +13,7 @@ export { ButtonMenuWrapper } from "./button-menu-wrapper";
 export { ButtonOutline } from "./button-outline";
 export { ButtonSubmit } from "./button-submit";
 export { Comments } from "./comments";
+export { CommunityDetails } from "./community-details";
 export { DisplayContent } from "./display-content";
 export { ErrorMessage } from "./error-message";
 export { FormAddProfilePicture } from "./form-add-profile-picture";

@@ -50,3 +50,9 @@ export const comment: Comment = {
   title: "Meu pai fez o que ela mandou",
   totalReplies: 1,
 };
+
+export const community = {
+  avatarPath: require("assets/images/empower_two_women_logo.png"),
+  id: "1235we",
+  name: "Empodere Duas Mulheres",
+};

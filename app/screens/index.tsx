@@ -1,6 +1,7 @@
 export { AddReplyScreen } from "./add-reply";
 export { AddTopicScreen } from "./add-topic";
 export { AuthLoadingScreen } from "./auth-loading";
+export { CommunityProfileScreen } from "./community-profile";
 export { EditPasswordScreen } from "./edit-password";
 export { EditProfileScreen } from "./edit-profile";
 export { FeedScreen } from "./feed";

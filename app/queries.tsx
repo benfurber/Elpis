@@ -108,6 +108,16 @@ export const COMMENT_WITH_REPLIES = gql`
   ${REPLY_ATTRIBUTES}
 `;
 
+export const COMMUNITY = gql`
+  query community($id: ID!) {
+    community(id: $id) {
+      avatarPath
+      id
+      name
+    }
+  }
+`;
+
 export const LINK = gql`
   query Link($url: URL!) {
     link(url: $url) {

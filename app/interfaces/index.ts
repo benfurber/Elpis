@@ -17,7 +17,7 @@ export interface Feed {
 export type NavigationType = NavigationStackProp<any, any>;
 
 interface ContentBase {
-  author: Author;
+  author: Community;
   content: string | null;
   id: string;
   imagePath?: string;
@@ -30,6 +30,12 @@ export interface Comment extends ContentBase {
   replies: Reply[] | [];
   totalReplies: number;
   isAuthorCurrentUser: boolean;
+}
+
+export interface Community {
+  id: string;
+  avatarPath: string;
+  name: string;
 }
 
 export interface Post extends ContentBase {

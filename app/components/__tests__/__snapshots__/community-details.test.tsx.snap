@@ -1,0 +1,42 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CommunityDetails renders correctly 1`] = `
+<View
+  style={
+    Object {
+      "width": "100%",
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "borderBottomColor": "rgb(255, 255, 255)",
+        "borderBottomWidth": 3,
+        "marginBottom": 10,
+        "paddingBottom": 20,
+        "width": "100%",
+      }
+    }
+  >
+    <Avatar
+      avatarPath={
+        Object {
+          "testUri": "../../../app/assets/images/empower_two_women_logo.png",
+        }
+      }
+      size="feature"
+    />
+    <Title
+      large={true}
+      style={
+        Object {
+          "paddingVertical": 10,
+        }
+      }
+      text="Empodere Duas Mulheres"
+    />
+  </View>
+</View>
+`;
