@@ -4,11 +4,15 @@ import { shallow } from "enzyme";
 
 import { Footer } from "../footer";
 
-import { author } from "factories";
+import { community } from "factories";
+
+let navigation;
 
 describe("Post<Footer>", () => {
   it("renders correctly", () => {
-    const component = shallow(<Footer author={author} />);
+    const component = shallow(
+      <Footer community={community} navigation={navigation} />,
+    );
 
     expect(component).toMatchSnapshot();
   });

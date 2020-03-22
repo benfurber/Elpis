@@ -2,7 +2,7 @@ import "react-native";
 import React from "react";
 import { shallow } from "enzyme";
 
-import { author } from "../../../factories";
+import { community, user } from "factories";
 
 import { Post } from "components";
 
@@ -13,7 +13,7 @@ describe("Post", () => {
   describe("when the body is set to display", () => {
     it("renders correctly", () => {
       const post = {
-        author,
+        author: community,
         comments: [],
         content: null,
         id: "10387-314fs-12asdbj",
@@ -30,7 +30,7 @@ describe("Post", () => {
 
     it("renders correctly if no content is provided", () => {
       const post = {
-        author,
+        author: community,
         comments: [],
         content: null,
         id: "10387-314fs-12asdbj",
@@ -46,10 +46,10 @@ describe("Post", () => {
   describe("when comments are set to display", () => {
     it("renders correctly", () => {
       const post = {
-        author,
+        author: community,
         comments: [
           {
-            author,
+            author: user,
             content:
               "Dá certo sim, o meu pai, por exemplo, fugiu quando eu tinha 5 anos e eu não faço ideia da onde ele esteja. Nunca mais voltou, pena que a violência só piorou.",
             edited: false,

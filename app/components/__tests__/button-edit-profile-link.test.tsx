@@ -3,7 +3,7 @@ import React from "react";
 import { shallow } from "enzyme";
 import { MockedProvider } from "@apollo/react-testing";
 
-import { author } from "factories";
+import { user } from "factories";
 
 import { ButtonEditProfileLink } from "components";
 
@@ -13,7 +13,7 @@ describe("ButtonEditProfileLink", () => {
   it("renders correctly", () => {
     const component = shallow(
       <MockedProvider>
-        <ButtonEditProfileLink navigation={navigation} userId={author.id} />
+        <ButtonEditProfileLink navigation={navigation} userId={user.id} />
       </MockedProvider>,
     );
     expect(component).toMatchSnapshot();

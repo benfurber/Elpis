@@ -37,7 +37,7 @@ exports[`Comments<Reply> renders correctly 1`] = `
       <Avatar
         avatarPath={
           Object {
-            "testUri": "../../../app/assets/images/empower_two_women_logo.png",
+            "testUri": "../../../app/assets/images/profile-pic-annon.png",
           }
         }
         size="small"
@@ -52,7 +52,7 @@ exports[`Comments<Reply> renders correctly 1`] = `
       >
         <Title
           small={true}
-          text="Empodere Duas Mulheres"
+          text="May"
         />
         <Text
           style={
@@ -78,20 +78,18 @@ exports[`Comments<Reply> renders correctly 1`] = `
           Object {
             "author": Object {
               "avatarPath": Object {
-                "testUri": "../../../app/assets/images/empower_two_women_logo.png",
+                "testUri": "../../../app/assets/images/profile-pic-annon.png",
               },
               "id": "1235we",
-              "name": "Empodere Duas Mulheres",
-              "posts": Array [],
+              "name": "May",
             },
             "comment": Object {
               "author": Object {
                 "avatarPath": Object {
-                  "testUri": "../../../app/assets/images/empower_two_women_logo.png",
+                  "testUri": "../../../app/assets/images/profile-pic-annon.png",
                 },
                 "id": "1235we",
-                "name": "Empodere Duas Mulheres",
-                "posts": Array [],
+                "name": "May",
               },
               "content": "Dá certo sim, o meu pai, por exemplo, fugiu quando eu tinha 5 anos e eu não faço ideia da onde ele esteja. Nunca mais voltou, pena que a violência só piorou.",
               "edited": false,
@@ -117,20 +115,18 @@ exports[`Comments<Reply> renders correctly 1`] = `
       Object {
         "author": Object {
           "avatarPath": Object {
-            "testUri": "../../../app/assets/images/empower_two_women_logo.png",
+            "testUri": "../../../app/assets/images/profile-pic-annon.png",
           },
           "id": "1235we",
-          "name": "Empodere Duas Mulheres",
-          "posts": Array [],
+          "name": "May",
         },
         "comment": Object {
           "author": Object {
             "avatarPath": Object {
-              "testUri": "../../../app/assets/images/empower_two_women_logo.png",
+              "testUri": "../../../app/assets/images/profile-pic-annon.png",
             },
             "id": "1235we",
-            "name": "Empodere Duas Mulheres",
-            "posts": Array [],
+            "name": "May",
           },
           "content": "Dá certo sim, o meu pai, por exemplo, fugiu quando eu tinha 5 anos e eu não faço ideia da onde ele esteja. Nunca mais voltou, pena que a violência só piorou.",
           "edited": false,
@@ -190,7 +186,7 @@ exports[`Comments<Reply> renders correctly when edited 1`] = `
       <Avatar
         avatarPath={
           Object {
-            "testUri": "../../../app/assets/images/empower_two_women_logo.png",
+            "testUri": "../../../app/assets/images/profile-pic-annon.png",
           }
         }
         size="small"
@@ -205,7 +201,7 @@ exports[`Comments<Reply> renders correctly when edited 1`] = `
       >
         <Title
           small={true}
-          text="Empodere Duas Mulheres"
+          text="May"
         />
         <Text
           style={
@@ -232,20 +228,18 @@ exports[`Comments<Reply> renders correctly when edited 1`] = `
           Object {
             "author": Object {
               "avatarPath": Object {
-                "testUri": "../../../app/assets/images/empower_two_women_logo.png",
+                "testUri": "../../../app/assets/images/profile-pic-annon.png",
               },
               "id": "1235we",
-              "name": "Empodere Duas Mulheres",
-              "posts": Array [],
+              "name": "May",
             },
             "comment": Object {
               "author": Object {
                 "avatarPath": Object {
-                  "testUri": "../../../app/assets/images/empower_two_women_logo.png",
+                  "testUri": "../../../app/assets/images/profile-pic-annon.png",
                 },
                 "id": "1235we",
-                "name": "Empodere Duas Mulheres",
-                "posts": Array [],
+                "name": "May",
               },
               "content": "Dá certo sim, o meu pai, por exemplo, fugiu quando eu tinha 5 anos e eu não faço ideia da onde ele esteja. Nunca mais voltou, pena que a violência só piorou.",
               "edited": false,
@@ -271,20 +265,18 @@ exports[`Comments<Reply> renders correctly when edited 1`] = `
       Object {
         "author": Object {
           "avatarPath": Object {
-            "testUri": "../../../app/assets/images/empower_two_women_logo.png",
+            "testUri": "../../../app/assets/images/profile-pic-annon.png",
           },
           "id": "1235we",
-          "name": "Empodere Duas Mulheres",
-          "posts": Array [],
+          "name": "May",
         },
         "comment": Object {
           "author": Object {
             "avatarPath": Object {
-              "testUri": "../../../app/assets/images/empower_two_women_logo.png",
+              "testUri": "../../../app/assets/images/profile-pic-annon.png",
             },
             "id": "1235we",
-            "name": "Empodere Duas Mulheres",
-            "posts": Array [],
+            "name": "May",
           },
           "content": "Dá certo sim, o meu pai, por exemplo, fugiu quando eu tinha 5 anos e eu não faço ideia da onde ele esteja. Nunca mais voltou, pena que a violência só piorou.",
           "edited": false,

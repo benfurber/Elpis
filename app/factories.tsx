@@ -1,14 +1,20 @@
-import { Comment, Reply } from "interfaces";
+import { Comment, Community, Reply, User } from "interfaces";
 
-export const author = {
+export const community: Community = {
   avatarPath: require("assets/images/empower_two_women_logo.png"),
   id: "1235we",
   name: "Empodere Duas Mulheres",
   posts: [],
 };
 
+export const user: User = {
+  avatarPath: require("assets/images/profile-pic-annon.png"),
+  id: "1235we",
+  name: "May",
+};
+
 export const post = {
-  author,
+  author: community,
   comments: [],
   content: null,
   id: "10387-314fs-12asdbj",
@@ -17,7 +23,7 @@ export const post = {
 };
 
 export const preComment: Comment = {
-  author,
+  author: user,
   content:
     "Dá certo sim, o meu pai, por exemplo, fugiu quando eu tinha 5 anos e eu não faço ideia da onde ele esteja. Nunca mais voltou, pena que a violência só piorou.",
   edited: false,
@@ -29,7 +35,7 @@ export const preComment: Comment = {
 };
 
 export const reply: Reply = {
-  author,
+  author: user,
   comment: preComment,
   content: "Nao.",
   edited: false,
@@ -40,7 +46,7 @@ export const reply: Reply = {
 };
 
 export const comment: Comment = {
-  author,
+  author: user,
   content:
     "Dá certo sim, o meu pai, por exemplo, fugiu quando eu tinha 5 anos e eu não faço ideia da onde ele esteja. Nunca mais voltou, pena que a violência só piorou.",
   edited: false,
@@ -50,10 +56,4 @@ export const comment: Comment = {
   replies: [reply],
   title: "Meu pai fez o que ela mandou",
   totalReplies: 1,
-};
-
-export const community = {
-  avatarPath: require("assets/images/empower_two_women_logo.png"),
-  id: "1235we",
-  name: "Empodere Duas Mulheres",
 };

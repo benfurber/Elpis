@@ -46,6 +46,7 @@ exports[`CommunityDetails renders correctly 1`] = `
         "marginVertical": 10,
       }
     }
+    data={Array []}
     disableVirtualization={false}
     horizontal={false}
     initialNumToRender={10}

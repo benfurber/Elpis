@@ -23,7 +23,7 @@ exports[`UserDetails renders correctly 1`] = `
     <Avatar
       avatarPath={
         Object {
-          "testUri": "../../../app/assets/images/empower_two_women_logo.png",
+          "testUri": "../../../app/assets/images/profile-pic-annon.png",
         }
       }
       size="feature"
@@ -35,7 +35,7 @@ exports[`UserDetails renders correctly 1`] = `
           "paddingVertical": 10,
         }
       }
-      text="Empodere Duas Mulheres"
+      text="May"
     />
     <ButtonEditProfileLink
       userId="1235we"

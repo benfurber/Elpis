@@ -2,7 +2,7 @@ import "react-native";
 import React from "react";
 import { shallow } from "enzyme";
 
-import { author } from "factories";
+import { user } from "factories";
 import { UserDetails } from "components";
 
 let navigation;
@@ -10,7 +10,7 @@ let navigation;
 describe("UserDetails", () => {
   it("renders correctly", () => {
     const component = shallow(
-      <UserDetails navigation={navigation} user={author} />,
+      <UserDetails navigation={navigation} user={user} />,
     );
 
     expect(component).toMatchSnapshot();

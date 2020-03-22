@@ -43,11 +43,10 @@ exports[`UserProfileScreen renders correctly when user is set 1`] = `
       user={
         Object {
           "avatarPath": Object {
-            "testUri": "../../../app/assets/images/empower_two_women_logo.png",
+            "testUri": "../../../app/assets/images/profile-pic-annon.png",
           },
           "id": "1235we",
-          "name": "Empodere Duas Mulheres",
-          "posts": Array [],
+          "name": "May",
         }
       }
     />
