@@ -36,6 +36,7 @@ export interface Community {
   id: string;
   avatarPath: string;
   name: string;
+  posts: Post[] | [];
 }
 
 export interface Post extends ContentBase {

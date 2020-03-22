@@ -114,6 +114,11 @@ export const COMMUNITY = gql`
       avatarPath
       id
       name
+      posts {
+        id
+        imagePath
+        title
+      }
     }
   }
 `;

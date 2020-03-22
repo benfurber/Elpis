@@ -11,8 +11,9 @@ const labels = {
   askMeLater: "Pergunte-me depois",
   back: {
     back: "Voltar",
+    toCommunityBoard: "Voltar para o painel da comunidade",
     toFeed: "Voltar ao feed",
-    toMenu: "Voltar para o Menu",
+    toMenu: "Voltar para o menu",
     toNotifications: "Voltar às notificações",
     toTopics: "Voltar aos tópicos",
   },

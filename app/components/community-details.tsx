@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-import { StyleSheet, View } from "react-native";
+import { FlatList, StyleSheet, View } from "react-native";
 
-import { Avatar, Title } from "components";
+import { Avatar, ThumbnailImagePost, Title } from "components";
 import { Community, NavigationType } from "interfaces";
 import { colours, layout } from "styles";
 
@@ -12,17 +12,28 @@ interface Props {
 
 class CommunityDetails extends Component<Props> {
   render() {
-    const { community } = this.props;
+    const { community, navigation } = this.props;
 
     if (community) {
-      const { avatarPath, name } = community;
+      const { avatarPath, name, posts } = community;
 
       return (
         <View style={styles.container}>
-          <View style={styles.firstRow}>
-            <Avatar avatarPath={avatarPath} size="feature" />
-            <Title style={styles.title} text={name} large />
-          </View>
+          <FlatList
+            data={posts}
+            keyExtractor={({ id }) => id}
+            ListHeaderComponent={
+              <View style={styles.firstRow}>
+                <Avatar avatarPath={avatarPath} size="feature" />
+                <Title style={styles.title} text={name} large />
+              </View>
+            }
+            numColumns={2}
+            columnWrapperStyle={styles.separator}
+            renderItem={({ item }) => (
+              <ThumbnailImagePost post={item} navigation={navigation} />
+            )}
+          />
         </View>
       );
     }
@@ -30,17 +41,8 @@ class CommunityDetails extends Component<Props> {
 }
 
 const styles = StyleSheet.create({
-  bar: {
-    borderRightColor: colours.pureWhite,
-    borderRightWidth: 3,
-  },
-  column: {
-    alignItems: "center",
-    flex: 1,
-    margin: layout.spacing,
-    padding: layout.spacing,
-  },
   container: {
+    marginBottom: layout.spacingXL,
     width: "100%",
   },
   firstRow: {
@@ -48,11 +50,16 @@ const styles = StyleSheet.create({
     borderBottomColor: colours.pureWhite,
     borderBottomWidth: 3,
     marginBottom: layout.spacing,
-    paddingBottom: layout.spacingL,
     width: "100%",
   },
-  secondRow: {
-    flexDirection: "row",
+  image: {
+    borderRadius: layout.borderRadius,
+    flex: 1,
+    marginHorizontal: layout.spacing,
+    overflow: "hidden",
+  },
+  separator: {
+    marginVertical: layout.spacing,
   },
   title: {
     paddingVertical: layout.spacing,
