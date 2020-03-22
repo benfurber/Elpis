@@ -225,14 +225,20 @@ exports[`Notification new for comment type it renders correctly 1`] = `
         "content": Object {
           "post": Object {
             "author": Object {
-              "avatarPath": "",
-              "id": "1352fe",
-              "name": "E2M",
+              "avatarPath": Object {
+                "testUri": "../../../app/assets/images/empower_two_women_logo.png",
+              },
+              "id": "1235we",
+              "name": "Empodere Duas Mulheres",
+              "posts": Array [],
             },
-            "content": "Mara fisto yoda ben jade. Mace ben wedge jinn leia luke. Lando mandalore.",
-            "id": "986sasdfd",
-            "imagePath": "",
-            "publishedAt": 2019-09-23T00:00:00.000Z,
+            "comments": Array [],
+            "content": null,
+            "id": "10387-314fs-12asdbj",
+            "imagePath": Object {
+              "testUri": "../../../app/assets/images/image_post_1.jpg",
+            },
+            "publishedAt": 2000-01-01T00:00:00.000Z,
           },
           "reply": Object {
             "author": Object {
@@ -501,14 +507,20 @@ exports[`Notification new for post type it renders correctly 1`] = `
         "content": Object {
           "post": Object {
             "author": Object {
-              "avatarPath": "",
-              "id": "1352fe",
-              "name": "E2M",
+              "avatarPath": Object {
+                "testUri": "../../../app/assets/images/empower_two_women_logo.png",
+              },
+              "id": "1235we",
+              "name": "Empodere Duas Mulheres",
+              "posts": Array [],
             },
-            "content": "Mara fisto yoda ben jade. Mace ben wedge jinn leia luke. Lando mandalore.",
-            "id": "986sasdfd",
-            "imagePath": "",
-            "publishedAt": 2019-09-23T00:00:00.000Z,
+            "comments": Array [],
+            "content": null,
+            "id": "10387-314fs-12asdbj",
+            "imagePath": Object {
+              "testUri": "../../../app/assets/images/image_post_1.jpg",
+            },
+            "publishedAt": 2000-01-01T00:00:00.000Z,
           },
           "reply": null,
           "type": "post",
@@ -747,14 +759,20 @@ exports[`Notification old for comment type it renders correctly 1`] = `
         "content": Object {
           "post": Object {
             "author": Object {
-              "avatarPath": "",
-              "id": "1352fe",
-              "name": "E2M",
+              "avatarPath": Object {
+                "testUri": "../../../app/assets/images/empower_two_women_logo.png",
+              },
+              "id": "1235we",
+              "name": "Empodere Duas Mulheres",
+              "posts": Array [],
             },
-            "content": "Mara fisto yoda ben jade. Mace ben wedge jinn leia luke. Lando mandalore.",
-            "id": "986sasdfd",
-            "imagePath": "",
-            "publishedAt": 2019-09-23T00:00:00.000Z,
+            "comments": Array [],
+            "content": null,
+            "id": "10387-314fs-12asdbj",
+            "imagePath": Object {
+              "testUri": "../../../app/assets/images/image_post_1.jpg",
+            },
+            "publishedAt": 2000-01-01T00:00:00.000Z,
           },
           "reply": Object {
             "author": Object {
@@ -1023,14 +1041,20 @@ exports[`Notification old for post type it renders correctly 1`] = `
         "content": Object {
           "post": Object {
             "author": Object {
-              "avatarPath": "",
-              "id": "1352fe",
-              "name": "E2M",
+              "avatarPath": Object {
+                "testUri": "../../../app/assets/images/empower_two_women_logo.png",
+              },
+              "id": "1235we",
+              "name": "Empodere Duas Mulheres",
+              "posts": Array [],
             },
-            "content": "Mara fisto yoda ben jade. Mace ben wedge jinn leia luke. Lando mandalore.",
-            "id": "986sasdfd",
-            "imagePath": "",
-            "publishedAt": 2019-09-23T00:00:00.000Z,
+            "comments": Array [],
+            "content": null,
+            "id": "10387-314fs-12asdbj",
+            "imagePath": Object {
+              "testUri": "../../../app/assets/images/image_post_1.jpg",
+            },
+            "publishedAt": 2000-01-01T00:00:00.000Z,
           },
           "reply": null,
           "type": "post",
