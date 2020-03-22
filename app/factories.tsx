@@ -4,6 +4,7 @@ export const author = {
   avatarPath: require("assets/images/empower_two_women_logo.png"),
   id: "1235we",
   name: "Empodere Duas Mulheres",
+  posts: [],
 };
 
 export const post = {

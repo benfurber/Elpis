@@ -27,6 +27,7 @@ exports[`Post when comments are set to display renders correctly 1`] = `
           },
           "id": "1235we",
           "name": "Empodere Duas Mulheres",
+          "posts": Array [],
         },
         "comments": Array [
           Object {
@@ -36,6 +37,7 @@ exports[`Post when comments are set to display renders correctly 1`] = `
               },
               "id": "1235we",
               "name": "Empodere Duas Mulheres",
+              "posts": Array [],
             },
             "content": "Dá certo sim, o meu pai, por exemplo, fugiu quando eu tinha 5 anos e eu não faço ideia da onde ele esteja. Nunca mais voltou, pena que a violência só piorou.",
             "edited": false,
@@ -94,6 +96,7 @@ exports[`Post when the body is set to display renders correctly 1`] = `
           },
           "id": "1235we",
           "name": "Empodere Duas Mulheres",
+          "posts": Array [],
         }
       }
     />
@@ -136,6 +139,7 @@ exports[`Post when the body is set to display renders correctly if no content is
           },
           "id": "1235we",
           "name": "Empodere Duas Mulheres",
+          "posts": Array [],
         }
       }
     />

@@ -278,6 +278,7 @@ exports[`PostScreen when post provided renders correctly 1`] = `
           },
           "id": "1235we",
           "name": "Empodere Duas Mulheres",
+          "posts": Array [],
         },
         "comments": Array [],
         "content": null,

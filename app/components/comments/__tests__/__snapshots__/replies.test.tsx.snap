@@ -28,6 +28,7 @@ exports[`Comments<Replies> when there are no replies renders correctly 1`] = `
           },
           "id": "1235we",
           "name": "Empodere Duas Mulheres",
+          "posts": Array [],
         },
         "content": "Dá certo sim, o meu pai, por exemplo, fugiu quando eu tinha 5 anos e eu não faço ideia da onde ele esteja. Nunca mais voltou, pena que a violência só piorou.",
         "edited": true,
@@ -74,6 +75,7 @@ exports[`Comments<Replies> when there are replies renders correctly 1`] = `
           },
           "id": "1235we",
           "name": "Empodere Duas Mulheres",
+          "posts": Array [],
         },
         "content": "Dá certo sim, o meu pai, por exemplo, fugiu quando eu tinha 5 anos e eu não faço ideia da onde ele esteja. Nunca mais voltou, pena que a violência só piorou.",
         "edited": false,
@@ -88,6 +90,7 @@ exports[`Comments<Replies> when there are replies renders correctly 1`] = `
               },
               "id": "1235we",
               "name": "Empodere Duas Mulheres",
+              "posts": Array [],
             },
             "comment": Object {
               "author": Object {
@@ -96,6 +99,7 @@ exports[`Comments<Replies> when there are replies renders correctly 1`] = `
                 },
                 "id": "1235we",
                 "name": "Empodere Duas Mulheres",
+                "posts": Array [],
               },
               "content": "Dá certo sim, o meu pai, por exemplo, fugiu quando eu tinha 5 anos e eu não faço ideia da onde ele esteja. Nunca mais voltou, pena que a violência só piorou.",
               "edited": false,
@@ -110,6 +114,7 @@ exports[`Comments<Replies> when there are replies renders correctly 1`] = `
                     },
                     "id": "1235we",
                     "name": "Empodere Duas Mulheres",
+                    "posts": Array [],
                   },
                   "comment": Object {
                     "author": Object {
@@ -118,6 +123,7 @@ exports[`Comments<Replies> when there are replies renders correctly 1`] = `
                       },
                       "id": "1235we",
                       "name": "Empodere Duas Mulheres",
+                      "posts": Array [],
                     },
                     "content": "Dá certo sim, o meu pai, por exemplo, fugiu quando eu tinha 5 anos e eu não faço ideia da onde ele esteja. Nunca mais voltou, pena que a violência só piorou.",
                     "edited": false,
@@ -152,6 +158,7 @@ exports[`Comments<Replies> when there are replies renders correctly 1`] = `
               },
               "id": "1235we",
               "name": "Empodere Duas Mulheres",
+              "posts": Array [],
             },
             "comment": Object {
               "author": Object {
@@ -160,6 +167,7 @@ exports[`Comments<Replies> when there are replies renders correctly 1`] = `
                 },
                 "id": "1235we",
                 "name": "Empodere Duas Mulheres",
+                "posts": Array [],
               },
               "content": "Dá certo sim, o meu pai, por exemplo, fugiu quando eu tinha 5 anos e eu não faço ideia da onde ele esteja. Nunca mais voltou, pena que a violência só piorou.",
               "edited": false,
@@ -174,6 +182,7 @@ exports[`Comments<Replies> when there are replies renders correctly 1`] = `
                     },
                     "id": "1235we",
                     "name": "Empodere Duas Mulheres",
+                    "posts": Array [],
                   },
                   "comment": Object {
                     "author": Object {
@@ -182,6 +191,7 @@ exports[`Comments<Replies> when there are replies renders correctly 1`] = `
                       },
                       "id": "1235we",
                       "name": "Empodere Duas Mulheres",
+                      "posts": Array [],
                     },
                     "content": "Dá certo sim, o meu pai, por exemplo, fugiu quando eu tinha 5 anos e eu não faço ideia da onde ele esteja. Nunca mais voltou, pena que a violência só piorou.",
                     "edited": false,
@@ -245,6 +255,7 @@ exports[`Comments<Replies> when there are replies renders correctly 1`] = `
               },
               "id": "1235we",
               "name": "Empodere Duas Mulheres",
+              "posts": Array [],
             },
             "comment": Object {
               "author": Object {
@@ -253,6 +264,7 @@ exports[`Comments<Replies> when there are replies renders correctly 1`] = `
                 },
                 "id": "1235we",
                 "name": "Empodere Duas Mulheres",
+                "posts": Array [],
               },
               "content": "Dá certo sim, o meu pai, por exemplo, fugiu quando eu tinha 5 anos e eu não faço ideia da onde ele esteja. Nunca mais voltou, pena que a violência só piorou.",
               "edited": false,
@@ -267,6 +279,7 @@ exports[`Comments<Replies> when there are replies renders correctly 1`] = `
                     },
                     "id": "1235we",
                     "name": "Empodere Duas Mulheres",
+                    "posts": Array [],
                   },
                   "comment": Object {
                     "author": Object {
@@ -275,6 +288,7 @@ exports[`Comments<Replies> when there are replies renders correctly 1`] = `
                       },
                       "id": "1235we",
                       "name": "Empodere Duas Mulheres",
+                      "posts": Array [],
                     },
                     "content": "Dá certo sim, o meu pai, por exemplo, fugiu quando eu tinha 5 anos e eu não faço ideia da onde ele esteja. Nunca mais voltou, pena que a violência só piorou.",
                     "edited": false,
@@ -309,6 +323,7 @@ exports[`Comments<Replies> when there are replies renders correctly 1`] = `
               },
               "id": "1235we",
               "name": "Empodere Duas Mulheres",
+              "posts": Array [],
             },
             "comment": Object {
               "author": Object {
@@ -317,6 +332,7 @@ exports[`Comments<Replies> when there are replies renders correctly 1`] = `
                 },
                 "id": "1235we",
                 "name": "Empodere Duas Mulheres",
+                "posts": Array [],
               },
               "content": "Dá certo sim, o meu pai, por exemplo, fugiu quando eu tinha 5 anos e eu não faço ideia da onde ele esteja. Nunca mais voltou, pena que a violência só piorou.",
               "edited": false,
@@ -331,6 +347,7 @@ exports[`Comments<Replies> when there are replies renders correctly 1`] = `
                     },
                     "id": "1235we",
                     "name": "Empodere Duas Mulheres",
+                    "posts": Array [],
                   },
                   "comment": Object {
                     "author": Object {
@@ -339,6 +356,7 @@ exports[`Comments<Replies> when there are replies renders correctly 1`] = `
                       },
                       "id": "1235we",
                       "name": "Empodere Duas Mulheres",
+                      "posts": Array [],
                     },
                     "content": "Dá certo sim, o meu pai, por exemplo, fugiu quando eu tinha 5 anos e eu não faço ideia da onde ele esteja. Nunca mais voltou, pena que a violência só piorou.",
                     "edited": false,

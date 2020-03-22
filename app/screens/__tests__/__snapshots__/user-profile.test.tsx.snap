@@ -47,6 +47,7 @@ exports[`UserProfileScreen renders correctly when user is set 1`] = `
           },
           "id": "1235we",
           "name": "Empodere Duas Mulheres",
+          "posts": Array [],
         }
       }
     />
