@@ -2,17 +2,17 @@ import React from "react";
 import { StyleSheet, Text, View } from "react-native";
 
 import { Avatar } from "components";
-import { Author, NavigationType } from "interfaces";
+import { Community, NavigationType } from "interfaces";
 import { colours, layout } from "styles";
 
 interface Props {
-  author: Author;
+  community: Community;
   navigation: NavigationType;
 }
 
 const Footer = (props: Props) => {
-  const { author, navigation } = props;
-  const { avatarPath, id, name } = author;
+  const { community, navigation } = props;
+  const { avatarPath, id, name } = community;
 
   return (
     <View style={styles.container}>
