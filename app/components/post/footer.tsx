@@ -15,7 +15,7 @@ const Footer = (props: Props) => {
   const { avatarPath, id, name } = author;
 
   return (
-    <View>
+    <View style={styles.container}>
       <View style={styles.followingContainer}>
         <Text style={styles.text}>{name}</Text>
       </View>
@@ -47,6 +47,9 @@ const styles = StyleSheet.create({
     flex: 1,
     flexDirection: "column",
     marginRight: layout.spacing,
+  },
+  container: {
+    marginBottom: layout.spacing,
   },
   followingContainer: {
     backgroundColor: colours.navyBlueDark,

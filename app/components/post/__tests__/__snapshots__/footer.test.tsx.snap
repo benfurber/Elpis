@@ -1,7 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Post<Footer> renders correctly 1`] = `
-<View>
+<View
+  style={
+    Object {
+      "marginBottom": 10,
+    }
+  }
+>
   <View
     style={
       Object {
