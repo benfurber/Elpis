@@ -2,13 +2,13 @@ import React from "react";
 import { useQuery } from "@apollo/react-hooks";
 
 import { ButtonSubmit } from "components";
-import { Author, NavigationType } from "interfaces";
+import { NavigationType, User } from "interfaces";
 import { labels } from "labels";
 import { USER_AVATAR } from "queries";
 
 interface Props {
   navigation: NavigationType;
-  userId: Author["id"];
+  userId: User["id"];
 }
 
 function ButtonEditProfileLink(props: Props) {

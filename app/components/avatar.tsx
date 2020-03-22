@@ -2,17 +2,17 @@ import React, { Component } from "react";
 import { Image, View } from "react-native";
 import { TouchableOpacity } from "react-native-gesture-handler";
 
-import { Author, Community, NavigationType } from "interfaces";
+import { Community, NavigationType, User } from "interfaces";
 import { elements } from "styles";
 
 const annonProfilePath = "../assets/images/profile-pic-annon.png";
 
 interface Props {
-  avatarPath: null | Author["avatarPath"];
+  avatarPath: null | User["avatarPath"];
   communityId?: Community["id"];
   containerStyles?: object;
   navigation?: NavigationType;
-  userId?: Author["id"];
+  userId?: User["id"];
   size?: "small" | "medium" | "large" | "xl" | "feature";
   styles?: object;
 }

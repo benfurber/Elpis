@@ -9,7 +9,7 @@ import {
   FormAddProfilePicture,
   Title,
 } from "components";
-import { Author, NavigationType } from "interfaces";
+import { NavigationType, User } from "interfaces";
 import { labels } from "labels";
 import { USER_DETAILS } from "queries";
 import { colours, layout, typography } from "styles";
@@ -22,7 +22,7 @@ interface Props {
 }
 
 interface State {
-  user: null | Author;
+  user: null | User;
 }
 
 class EditProfileScreen extends Component<Props> {

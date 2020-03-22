@@ -2,13 +2,13 @@ import React, { Component } from "react";
 import { StyleSheet, View } from "react-native";
 
 import { Avatar, ButtonEditProfileLink, Title } from "components";
-import { Author, NavigationType } from "interfaces";
+import { NavigationType, User } from "interfaces";
 import { labels } from "labels";
 import { colours, layout } from "styles";
 
 interface Props {
   navigation: NavigationType;
-  user: null | Author;
+  user: null | User;
 }
 
 class UserDetails extends Component<Props> {

@@ -9,19 +9,19 @@ import {
   Loading,
   UserDetails,
 } from "components";
-import { Author, NavigationType } from "interfaces";
+import { NavigationType, User } from "interfaces";
 import { USER } from "queries";
 import { colours, layout } from "styles";
 import { Analytics, client } from "utils";
 
 interface Props {
   navigation: NavigationType;
-  userId: Author["id"];
+  userId: User["id"];
 }
 
 interface State {
   isLoading: boolean;
-  user: null | Author;
+  user: null | User;
 }
 
 class UserProfileScreen extends Component<Props, State> {
