@@ -3,7 +3,7 @@ import React from "react";
 import { shallow } from "enzyme";
 import { MockedProvider } from "@apollo/react-testing";
 
-import { reply } from "factories";
+import { post, reply } from "factories";
 import { mockDateNow } from "../../../test-utils";
 
 import { Notification } from "../notification";
@@ -12,26 +12,13 @@ let navigation;
 jest.mock(navigation, () => jest.fn());
 
 describe("Notification", () => {
-  const basePost = {
-    author: {
-      avatarPath: "",
-      id: "1352fe",
-      name: "E2M",
-    },
-    content:
-      "Mara fisto yoda ben jade. Mace ben wedge jinn leia luke. Lando mandalore.",
-    id: "986sasdfd",
-    imagePath: "",
-    publishedAt: new Date("2019-09-23"),
-  };
-
   describe("new", () => {
     it("for comment type it renders correctly", () => {
       mockDateNow("2019-10-09");
 
       const commentNotification = {
         content: {
-          post: basePost,
+          post,
           reply: reply,
           type: "comment",
         },
@@ -54,7 +41,7 @@ describe("Notification", () => {
 
       const postNotification = {
         content: {
-          post: basePost,
+          post,
           reply: null,
           type: "post",
         },
@@ -79,7 +66,7 @@ describe("Notification", () => {
 
       const commentNotification = {
         content: {
-          post: basePost,
+          post,
           reply: reply,
           type: "comment",
         },
@@ -102,7 +89,7 @@ describe("Notification", () => {
 
       const postNotification = {
         content: {
-          post: basePost,
+          post,
           reply: null,
           type: "post",
         },

@@ -1,6 +1,6 @@
 import { NavigationStackProp } from "react-navigation-stack";
 
-export interface Author {
+export interface User {
   id: string;
   avatarPath: string;
   email?: string;
@@ -17,7 +17,6 @@ export interface Feed {
 export type NavigationType = NavigationStackProp<any, any>;
 
 interface ContentBase {
-  author: Author;
   content: string | null;
   id: string;
   imagePath?: string;
@@ -26,18 +25,28 @@ interface ContentBase {
 }
 
 export interface Comment extends ContentBase {
+  author: User;
   edited: boolean;
   replies: Reply[] | [];
   totalReplies: number;
   isAuthorCurrentUser: boolean;
 }
 
+export interface Community {
+  id: string;
+  avatarPath: string;
+  name: string;
+  posts: Post[] | [];
+}
+
 export interface Post extends ContentBase {
+  author: Community;
   comments: Comment[] | [];
 }
 
 // eslint-disable-next-line @typescript-eslint/no-empty-interface
 export interface Reply extends ContentBase {
+  author: User;
   comment: Comment;
   edited: boolean;
   link: string | null;
@@ -48,7 +57,7 @@ export interface Notification {
   id: string;
   createdAt: Date;
   content: {
-    post: ContentBase;
+    post: Post;
     reply: null | Reply;
     type: string; // should be `"comment" | "post"` but there's a bug;
   };

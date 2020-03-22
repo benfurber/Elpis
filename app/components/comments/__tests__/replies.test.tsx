@@ -1,7 +1,7 @@
 import React from "react";
 import { shallow } from "enzyme";
 
-import { author, comment, post } from "factories";
+import { comment, post, user } from "factories";
 import { mockDateNow } from "../../../test-utils";
 
 import { Replies } from "../replies";
@@ -14,7 +14,7 @@ describe("Comments<Replies>", () => {
       mockDateNow("2019-01-03T13:00:00");
 
       const reply1 = {
-        author,
+        author: user,
         comment,
         content:
           "Meu pai também fez o mesmo. Logo depois que minha mãe pediu o divórcio porque sofria violência dentro de casa, ele pegou as malas, se mudou e sumiu no mundo. Nem faço mais questão de saber pra onde ele foi.",
@@ -26,7 +26,7 @@ describe("Comments<Replies>", () => {
       };
 
       const reply2 = {
-        author,
+        author: user,
         comment,
         content: "Nem faço mais questão de saber pra onde ele foi.",
         edited: true,
@@ -37,7 +37,7 @@ describe("Comments<Replies>", () => {
       };
 
       const item = {
-        author,
+        author: user,
         content:
           "Dá certo sim, o meu pai, por exemplo, fugiu quando eu tinha 5 anos e eu não faço ideia da onde ele esteja. Nunca mais voltou, pena que a violência só piorou.",
         edited: false,
@@ -69,7 +69,7 @@ describe("Comments<Replies>", () => {
       mockDateNow("2019-01-02");
 
       const item = {
-        author,
+        author: user,
         content:
           "Dá certo sim, o meu pai, por exemplo, fugiu quando eu tinha 5 anos e eu não faço ideia da onde ele esteja. Nunca mais voltou, pena que a violência só piorou.",
         edited: true,

@@ -2,15 +2,10 @@ import React, { Component } from "react";
 import FlexImage from "react-native-flex-image";
 
 interface Props {
-  imagePath: string;
+  imagePath: string | null | undefined;
 }
 
-interface State {
-  imageHeight: number;
-  imageWidth: number;
-}
-
-class RemoteImage extends Component<Props, State> {
+class RemoteImage extends Component<Props> {
   validImageURL(url) {
     return url.match(/\.(jpeg|jpg|gif|png)$/) != null;
   }
@@ -18,7 +13,7 @@ class RemoteImage extends Component<Props, State> {
   render() {
     const { imagePath } = this.props;
 
-    if (!this.validImageURL(imagePath)) {
+    if (!this.validImageURL(imagePath) || !imagePath) {
       return null;
     }
 

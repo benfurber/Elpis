@@ -1,5 +1,24 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`UserProfileScreen renders correctly when community is set 1`] = `
+<BackgroundContainer
+  header={<ButtonClose />}
+>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "rgba(255, 255, 255, 0.85)",
+        "borderTopLeftRadius": 10,
+        "borderTopRightRadius": 10,
+        "height": "100%",
+        "padding": 20,
+      }
+    }
+  />
+</BackgroundContainer>
+`;
+
 exports[`UserProfileScreen renders correctly when loading 1`] = `
 <BackgroundContainer
   header={<ButtonClose />}
@@ -18,37 +37,6 @@ exports[`UserProfileScreen renders correctly when loading 1`] = `
   >
     <Loading
       blueMode={true}
-    />
-  </View>
-</BackgroundContainer>
-`;
-
-exports[`UserProfileScreen renders correctly when user is set 1`] = `
-<BackgroundContainer
-  header={<ButtonClose />}
->
-  <View
-    style={
-      Object {
-        "alignItems": "center",
-        "backgroundColor": "rgba(255, 255, 255, 0.85)",
-        "borderTopLeftRadius": 10,
-        "borderTopRightRadius": 10,
-        "height": "100%",
-        "padding": 20,
-      }
-    }
-  >
-    <UserDetails
-      user={
-        Object {
-          "avatarPath": Object {
-            "testUri": "../../../app/assets/images/profile-pic-annon.png",
-          },
-          "id": "1235we",
-          "name": "May",
-        }
-      }
     />
   </View>
 </BackgroundContainer>

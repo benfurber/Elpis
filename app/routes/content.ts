@@ -1,13 +1,18 @@
-import { UserProfileScreen, WebBrowserScreen } from "screens";
+import {
+  CommunityProfileScreen as CommunityProfile,
+  UserProfileScreen as UserProfile,
+  WebBrowserScreen as Browser,
+} from "screens";
 
 import { AddContent } from "./add-content";
 import { Post } from "./post";
 
 const Content = {
   AddContent,
-  Browser: WebBrowserScreen,
+  Browser,
+  CommunityProfile,
   Post,
-  UserProfile: UserProfileScreen,
+  UserProfile,
 };
 
 export { Content };

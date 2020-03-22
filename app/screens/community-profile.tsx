@@ -6,54 +6,56 @@ import { withMappedNavigationParams } from "react-navigation-props-mapper";
 import {
   BackgroundContainer,
   ButtonClose,
+  CommunityDetails,
   Loading,
-  UserDetails,
 } from "components";
-import { NavigationType, User } from "interfaces";
-import { USER } from "queries";
+import { Community, NavigationType } from "interfaces";
+import { COMMUNITY } from "queries";
 import { colours, layout } from "styles";
 import { Analytics, client } from "utils";
 
 interface Props {
   navigation: NavigationType;
-  userId: User["id"];
+  communityId: Community["id"];
 }
 
 interface State {
+  community: null | Community;
   isLoading: boolean;
-  user: null | User;
 }
 
-class UserProfileScreen extends Component<Props, State> {
+class CommunityProfileScreen extends Component<Props, State> {
   state = {
+    community: null,
     isLoading: true,
-    user: null,
   };
 
   async fetchUser() {
-    const { userId } = this.props;
+    const { communityId } = this.props;
 
-    const query = USER;
-    const variables = { id: userId };
+    const query = COMMUNITY;
+    const variables = { id: communityId };
 
     const result = await client.query({ query, variables });
-    this.setState({ isLoading: false, user: result.data.user });
+    this.setState({ community: result.data.community, isLoading: false });
   }
 
   componentDidMount() {
-    Analytics.track("User Profile");
+    Analytics.track("Community Profile");
     this.fetchUser();
   }
 
   render() {
     const { navigation } = this.props;
-    const { isLoading, user } = this.state;
+    const { isLoading, community } = this.state;
 
     return (
       <BackgroundContainer header={<ButtonClose navigation={navigation} />}>
         <View style={styles.container}>
           {isLoading && <Loading blueMode />}
-          {user && <UserDetails navigation={navigation} user={user} />}
+          {community && (
+            <CommunityDetails navigation={navigation} community={community} />
+          )}
         </View>
       </BackgroundContainer>
     );
@@ -71,10 +73,10 @@ const styles = StyleSheet.create({
   },
 });
 
-const wrappedUserProfileScreen = withMappedNavigationParams()(
-  UserProfileScreen,
+const wrappedCommunityProfileScreen = withMappedNavigationParams()(
+  CommunityProfileScreen,
 );
 export {
-  wrappedUserProfileScreen as UserProfileScreen,
-  UserProfileScreen as UnwrappedUserProfileScreen,
+  wrappedCommunityProfileScreen as CommunityProfileScreen,
+  CommunityProfileScreen as UnwrappedCommunityProfileScreen,
 };

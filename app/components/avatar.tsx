@@ -1,23 +1,25 @@
 import React, { Component } from "react";
-import { Image } from "react-native";
+import { Image, View } from "react-native";
 import { TouchableOpacity } from "react-native-gesture-handler";
 
-import { Author, NavigationType } from "interfaces";
+import { Community, NavigationType, User } from "interfaces";
 import { elements } from "styles";
 
 const annonProfilePath = "../assets/images/profile-pic-annon.png";
 
 interface Props {
-  avatarPath: null | Author["avatarPath"];
+  avatarPath: null | User["avatarPath"];
+  communityId?: Community["id"];
+  containerStyles?: object;
   navigation?: NavigationType;
-  userId?: Author["id"];
+  userId?: User["id"];
   size?: "small" | "medium" | "large" | "xl" | "feature";
   styles?: object;
 }
 
 class Avatar extends Component<Props> {
   onPress() {
-    const { navigation, userId } = this.props;
+    const { communityId, navigation, userId } = this.props;
 
     if (navigation && userId) {
       navigation.navigate("UserProfile", {
@@ -25,10 +27,17 @@ class Avatar extends Component<Props> {
         userId,
       });
     }
+
+    if (navigation && communityId) {
+      navigation.navigate("CommunityProfile", {
+        communityId,
+        navigation,
+      });
+    }
   }
 
   render() {
-    const { avatarPath, size, styles } = this.props;
+    const { avatarPath, containerStyles, size, styles } = this.props;
 
     const path = avatarPath ? { uri: avatarPath } : require(annonProfilePath);
 
@@ -41,9 +50,11 @@ class Avatar extends Component<Props> {
     };
 
     return (
-      <TouchableOpacity onPress={() => this.onPress()}>
-        <Image source={path} style={[styleSet[size || "medium"], styles]} />
-      </TouchableOpacity>
+      <View style={containerStyles}>
+        <TouchableOpacity onPress={() => this.onPress()}>
+          <Image source={path} style={[styleSet[size || "medium"], styles]} />
+        </TouchableOpacity>
+      </View>
     );
   }
 }

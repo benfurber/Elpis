@@ -12,7 +12,9 @@ const POST_ATTRIBUTES = gql`
   fragment postAttributes on Post {
     id
     author {
-      ...authorAttributes
+      id
+      avatarPath
+      name
     }
     publishedAt
     content
@@ -23,7 +25,6 @@ const POST_ATTRIBUTES = gql`
       totalReplies
     }
   }
-  ${AUTHOR_ATTRIBUTES}
 `;
 
 const REPLY_ATTRIBUTES = gql`
@@ -105,6 +106,21 @@ export const COMMENT_WITH_REPLIES = gql`
     }
   }
   ${REPLY_ATTRIBUTES}
+`;
+
+export const COMMUNITY = gql`
+  query community($id: ID!) {
+    community(id: $id) {
+      avatarPath
+      id
+      name
+      posts {
+        id
+        imagePath
+        title
+      }
+    }
+  }
 `;
 
 export const LINK = gql`

@@ -2,15 +2,15 @@ import "react-native";
 import React from "react";
 import { shallow } from "enzyme";
 
-import { user } from "factories";
-import { UserDetails } from "components";
+import { community } from "factories";
+import { CommunityDetails } from "components";
 
 let navigation;
 
-describe("UserDetails", () => {
+describe("CommunityDetails", () => {
   it("renders correctly", () => {
     const component = shallow(
-      <UserDetails navigation={navigation} user={user} />,
+      <CommunityDetails navigation={navigation} community={community} />,
     );
 
     expect(component).toMatchSnapshot();

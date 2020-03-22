@@ -2,8 +2,6 @@ import "react-native";
 import React from "react";
 import { shallow } from "enzyme";
 
-import { author } from "factories";
-
 import { Avatar } from "components";
 
 let navigation;
