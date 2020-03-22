@@ -35,6 +35,7 @@ export { RemoteImage } from "./remote-image";
 export { RichTextDisplay } from "./rich-text-display";
 export { TextInput } from "./text-input";
 export { ThumbnailImage } from "./thumbnail-image";
+export { ThumbnailImagePost } from "./thumbnail-image-post";
 export { Title } from "./title";
 export { UploadImage } from "./upload-image";
 export { UserDetails } from "./user-details";
