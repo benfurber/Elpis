@@ -23,7 +23,7 @@ exports[`IconNav renders correctly when inactive 1`] = `
   onPress={[Function]}
 >
   <customIcon
-    colour="rgba(255, 255, 255, 0.60)"
+    colour="rgba(255, 255, 255, 0.30)"
     name="chevron-left"
     style={
       Object {

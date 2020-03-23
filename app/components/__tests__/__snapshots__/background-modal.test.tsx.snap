@@ -30,7 +30,7 @@ exports[`Icon renders correctly 1`] = `
     <ScrollViewMock
       style={
         Object {
-          "backgroundColor": "rgba(255, 255, 255, 0.60)",
+          "backgroundColor": "rgba(255, 255, 255, 0.30)",
           "borderTopLeftRadius": 10,
           "borderTopRightRadius": 10,
           "height": "100%",

@@ -5,7 +5,7 @@ exports[`MessageBox and in error renders correctly 1`] = `
   style={
     Object {
       "alignItems": "center",
-      "backgroundColor": "rgba(255, 255, 255, 0.60)",
+      "backgroundColor": "rgba(255, 255, 255, 0.30)",
       "borderColor": "rgb(208, 2, 27)",
       "borderRadius": 10,
       "borderWidth": 2,
@@ -36,7 +36,7 @@ exports[`MessageBox when passive renders correctly 1`] = `
   style={
     Object {
       "alignItems": "center",
-      "backgroundColor": "rgba(255, 255, 255, 0.60)",
+      "backgroundColor": "rgba(255, 255, 255, 0.30)",
       "borderColor": "rgb(45, 82, 113)",
       "borderRadius": 10,
       "borderWidth": 2,
@@ -67,7 +67,7 @@ exports[`MessageBox when warning renders correctly 1`] = `
   style={
     Object {
       "alignItems": "center",
-      "backgroundColor": "rgba(255, 255, 255, 0.60)",
+      "backgroundColor": "rgba(255, 255, 255, 0.30)",
       "borderColor": "orange",
       "borderRadius": 10,
       "borderWidth": 2,

@@ -8,7 +8,7 @@ exports[`StaticContentScreen renders correctly with optional props 1`] = `
   <ScrollViewMock
     style={
       Object {
-        "backgroundColor": "rgba(255, 255, 255, 0.85)",
+        "backgroundColor": "rgba(255, 255, 255, 0.70)",
         "borderTopLeftRadius": 10,
         "borderTopRightRadius": 10,
         "height": "100%",
@@ -37,7 +37,7 @@ exports[`StaticContentScreen renders correctly without optional props 1`] = `
   <ScrollViewMock
     style={
       Object {
-        "backgroundColor": "rgba(255, 255, 255, 0.85)",
+        "backgroundColor": "rgba(255, 255, 255, 0.70)",
         "borderTopLeftRadius": 10,
         "borderTopRightRadius": 10,
         "height": "100%",

@@ -37,7 +37,7 @@ exports[`WebView renders correctly 1`] = `
         style={
           Object {
             "alignSelf": "flex-start",
-            "color": "rgba(255, 255, 255, 0.85)",
+            "color": "rgba(255, 255, 255, 0.70)",
             "width": "1000%",
           }
         }

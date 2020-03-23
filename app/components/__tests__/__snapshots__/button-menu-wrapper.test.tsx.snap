@@ -6,7 +6,7 @@ exports[`ButtonMenuWrapper renders correctly 1`] = `
   onPress={[Function]}
   style={
     Object {
-      "backgroundColor": "rgba(255, 255, 255, 0.85)",
+      "backgroundColor": "rgba(255, 255, 255, 0.70)",
       "borderBottomColor": "rgb(255, 255, 255)",
       "borderBottomWidth": 2,
       "borderTopColor": "rgb(255, 255, 255)",

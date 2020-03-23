@@ -4,7 +4,7 @@ exports[`Post<Content> renders correctly 1`] = `
 <View
   style={
     Object {
-      "backgroundColor": "rgba(255, 255, 255, 0.85)",
+      "backgroundColor": "rgba(255, 255, 255, 0.70)",
       "borderTopRightRadius": 5,
       "padding": 10,
       "width": "100%",
@@ -44,7 +44,7 @@ exports[`Post<Content> with markdown renders correctly 1`] = `
 <View
   style={
     Object {
-      "backgroundColor": "rgba(255, 255, 255, 0.85)",
+      "backgroundColor": "rgba(255, 255, 255, 0.70)",
       "borderTopRightRadius": 5,
       "padding": 10,
       "width": "100%",

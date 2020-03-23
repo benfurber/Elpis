@@ -17,7 +17,7 @@ exports[`Post<Tabs> a remaining tab renders correctly when not selected 1`] = `
         "borderLeftColor": "transparent",
         "borderLeftWidth": 10,
         "borderStyle": "solid",
-        "borderTopColor": "rgba(255, 255, 255, 0.60)",
+        "borderTopColor": "rgba(255, 255, 255, 0.30)",
         "borderTopWidth": 46,
       }
     }
@@ -25,7 +25,7 @@ exports[`Post<Tabs> a remaining tab renders correctly when not selected 1`] = `
   <View
     style={
       Object {
-        "backgroundColor": "rgba(255, 255, 255, 0.60)",
+        "backgroundColor": "rgba(255, 255, 255, 0.30)",
         "flex": 1,
         "paddingHorizontal": 16,
         "paddingVertical": 8,
@@ -56,7 +56,7 @@ exports[`Post<Tabs> a remaining tab renders correctly when not selected 1`] = `
     style={
       Object {
         "backgroundColor": "transparent",
-        "borderBottomColor": "rgba(255, 255, 255, 0.60)",
+        "borderBottomColor": "rgba(255, 255, 255, 0.30)",
         "borderBottomWidth": 46,
         "borderRightColor": "transparent",
         "borderRightWidth": 10,
@@ -84,7 +84,7 @@ exports[`Post<Tabs> a remaining tab renders correctly when selected 1`] = `
         "borderLeftColor": "transparent",
         "borderLeftWidth": 10,
         "borderStyle": "solid",
-        "borderTopColor": "rgba(255, 255, 255, 0.85)",
+        "borderTopColor": "rgba(255, 255, 255, 0.70)",
         "borderTopWidth": 46,
       }
     }
@@ -92,7 +92,7 @@ exports[`Post<Tabs> a remaining tab renders correctly when selected 1`] = `
   <View
     style={
       Object {
-        "backgroundColor": "rgba(255, 255, 255, 0.85)",
+        "backgroundColor": "rgba(255, 255, 255, 0.70)",
         "flex": 1,
         "paddingHorizontal": 16,
         "paddingVertical": 8,
@@ -123,7 +123,7 @@ exports[`Post<Tabs> a remaining tab renders correctly when selected 1`] = `
     style={
       Object {
         "backgroundColor": "transparent",
-        "borderBottomColor": "rgba(255, 255, 255, 0.85)",
+        "borderBottomColor": "rgba(255, 255, 255, 0.70)",
         "borderBottomWidth": 46,
         "borderRightColor": "transparent",
         "borderRightWidth": 10,
@@ -147,7 +147,7 @@ exports[`Post<Tabs> first tab renders correctly when not selected 1`] = `
   <View
     style={
       Object {
-        "backgroundColor": "rgba(255, 255, 255, 0.60)",
+        "backgroundColor": "rgba(255, 255, 255, 0.30)",
         "flex": 1,
         "paddingHorizontal": 16,
         "paddingVertical": 8,
@@ -178,7 +178,7 @@ exports[`Post<Tabs> first tab renders correctly when not selected 1`] = `
     style={
       Object {
         "backgroundColor": "transparent",
-        "borderBottomColor": "rgba(255, 255, 255, 0.60)",
+        "borderBottomColor": "rgba(255, 255, 255, 0.30)",
         "borderBottomWidth": 46,
         "borderRightColor": "transparent",
         "borderRightWidth": 10,
@@ -202,7 +202,7 @@ exports[`Post<Tabs> first tab renders correctly when selected 1`] = `
   <View
     style={
       Object {
-        "backgroundColor": "rgba(255, 255, 255, 0.85)",
+        "backgroundColor": "rgba(255, 255, 255, 0.70)",
         "flex": 1,
         "paddingHorizontal": 16,
         "paddingVertical": 8,
@@ -233,7 +233,7 @@ exports[`Post<Tabs> first tab renders correctly when selected 1`] = `
     style={
       Object {
         "backgroundColor": "transparent",
-        "borderBottomColor": "rgba(255, 255, 255, 0.85)",
+        "borderBottomColor": "rgba(255, 255, 255, 0.70)",
         "borderBottomWidth": 46,
         "borderRightColor": "transparent",
         "borderRightWidth": 10,

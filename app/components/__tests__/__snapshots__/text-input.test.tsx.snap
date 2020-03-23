@@ -13,7 +13,7 @@ exports[`TextInput when active renders correctly 1`] = `
     Array [
       Object {
         "backgroundColor": "rgb(255, 255, 255)",
-        "borderColor": "rgba(255, 255, 255, 0.60)",
+        "borderColor": "rgba(255, 255, 255, 0.30)",
         "borderRadius": 5,
         "borderWidth": 2,
         "color": "rgb(51, 51, 51)",
@@ -73,7 +73,7 @@ exports[`TextInput when loading renders correctly 1`] = `
     Array [
       Object {
         "backgroundColor": "rgba(51,51,51,0.25)",
-        "borderColor": "rgba(255, 255, 255, 0.60)",
+        "borderColor": "rgba(255, 255, 255, 0.30)",
         "borderRadius": 5,
         "borderWidth": 2,
         "color": "rgb(51, 51, 51)",

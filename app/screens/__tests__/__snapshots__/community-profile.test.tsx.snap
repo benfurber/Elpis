@@ -8,7 +8,7 @@ exports[`UserProfileScreen renders correctly when community is set 1`] = `
     style={
       Object {
         "alignItems": "center",
-        "backgroundColor": "rgba(255, 255, 255, 0.85)",
+        "backgroundColor": "rgba(255, 255, 255, 0.70)",
         "borderTopLeftRadius": 10,
         "borderTopRightRadius": 10,
         "height": "100%",
@@ -27,7 +27,7 @@ exports[`UserProfileScreen renders correctly when loading 1`] = `
     style={
       Object {
         "alignItems": "center",
-        "backgroundColor": "rgba(255, 255, 255, 0.85)",
+        "backgroundColor": "rgba(255, 255, 255, 0.70)",
         "borderTopLeftRadius": 10,
         "borderTopRightRadius": 10,
         "height": "100%",
