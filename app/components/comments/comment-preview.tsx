@@ -6,7 +6,7 @@ import ActionSheet from "react-native-actionsheet";
 import { Avatar, Badge, Icon, Title, ActionSheetComment } from "components";
 import { Comment as CommentInterface, NavigationType, Post } from "interfaces";
 import { colours, elements, layout } from "styles";
-import { firstSentence, formatDate } from "utils";
+import { formatDate } from "utils";
 
 interface Props {
   item: CommentInterface;
@@ -17,6 +17,15 @@ interface Props {
 
 class CommentPreview extends Component<Props> {
   ActionSheet = ActionSheet;
+
+  displayContent() {
+    const { content } = this.props.item;
+    const characterLimit = 250;
+
+    if (!content || content.length < characterLimit) return content;
+
+    return content.substring(0, characterLimit) + "...";
+  }
 
   pressActionIcon() {
     const { totalReplies } = this.props.item;
@@ -43,7 +52,7 @@ class CommentPreview extends Component<Props> {
 
   render() {
     const { item, navigation, onPress, postId } = this.props;
-    const { author, content, id, publishedAt, title } = item;
+    const { author, id, publishedAt, title } = item;
 
     return (
       <TouchableOpacity
@@ -76,9 +85,7 @@ class CommentPreview extends Component<Props> {
             </View>
           </View>
           <View style={styles.contentContainer}>
-            {content && (
-              <Text style={styles.text}>{firstSentence(content)}</Text>
-            )}
+            <Text style={styles.text}>{this.displayContent()}</Text>
             <View style={styles.iconContainer}>{this.pressActionIcon()}</View>
           </View>
         </View>
@@ -137,7 +144,6 @@ const styles = StyleSheet.create({
   iconContainer: {
     alignItems: "center",
     flexDirection: "row",
-    marginRight: layout.spacingXS,
   },
   metaDetails: {
     marginBottom: layout.spacing,
@@ -150,6 +156,7 @@ const styles = StyleSheet.create({
   text: {
     flex: 1,
     flexWrap: "nowrap",
+    marginRight: layout.spacingXL,
   },
   titleContainer: {
     flex: 1,
