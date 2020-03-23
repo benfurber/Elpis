@@ -2,13 +2,11 @@ import React, { Component } from "react";
 import { FlatList, StyleSheet, View, ScrollView } from "react-native";
 
 import { Post, NavigationType } from "interfaces";
-import { labels } from "labels";
 import { colours, layout } from "styles";
 import { calculateTotalComments } from "utils";
 
 import { CommentPreview } from "./comment-preview";
 import { NoContent } from "./no-content";
-import { Title } from "components";
 
 interface Props {
   comments: Post["comments"];
@@ -26,18 +24,6 @@ class CommentsLoop extends Component<Props> {
     }
   }
 
-  title() {
-    const { comments } = this.props;
-
-    const titleText = `${comments.length} ${labels.topics}`;
-
-    return (
-      <View style={styles.commentsHeadingContainer}>
-        <Title text={titleText} />
-      </View>
-    );
-  }
-
   render() {
     const { navigation, postId } = this.props;
 
@@ -45,8 +31,6 @@ class CommentsLoop extends Component<Props> {
       <View style={styles.container}>
         <ScrollView>
           {this.props.header}
-          {this.title()}
-
           {this.noComments()}
 
           <FlatList
@@ -70,10 +54,6 @@ class CommentsLoop extends Component<Props> {
 }
 
 const styles = StyleSheet.create({
-  commentsHeadingContainer: {
-    marginHorizontal: layout.spacing,
-    marginVertical: layout.spacingL,
-  },
   container: {
     flex: 1,
     paddingBottom: layout.spacingL,

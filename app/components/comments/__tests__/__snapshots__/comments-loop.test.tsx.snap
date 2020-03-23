@@ -14,18 +14,6 @@ exports[`Comments<CommentsLoop> when there are comments renders correctly 1`] = 
     <Text>
       Mock header
     </Text>
-    <View
-      style={
-        Object {
-          "marginHorizontal": 10,
-          "marginVertical": 20,
-        }
-      }
-    >
-      <Title
-        text="1 Tópicos"
-      />
-    </View>
     <FlatList
       contentContainerStyle={
         Object {
@@ -116,18 +104,6 @@ exports[`Comments<CommentsLoop> when there are no comments renders correctly 1`]
     <Text>
       Mock header
     </Text>
-    <View
-      style={
-        Object {
-          "marginHorizontal": 10,
-          "marginVertical": 20,
-        }
-      }
-    >
-      <Title
-        text="0 Tópicos"
-      />
-    </View>
     <NoContent
       text="There are no comments :("
     />
