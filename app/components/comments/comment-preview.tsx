@@ -59,12 +59,20 @@ class CommentPreview extends Component<Props> {
                 userId={author.id}
               />
             </View>
-            <View>
+            <View style={styles.titleContainer}>
               {title && <Title text={title} />}
               <Text style={styles.metaDetails}>
                 <Text style={styles.name}>{`${author.name} `}</Text>
                 {formatDate(publishedAt, false)}
               </Text>
+            </View>
+            <View style={styles.categoryContainer}>
+              <Icon
+                colour={colours.pureWhite}
+                containerStyle={styles.categoryIconContainer}
+                name="holly-berry"
+                size={18}
+              />
             </View>
           </View>
           <View style={styles.contentContainer}>
@@ -91,6 +99,22 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     width: 60,
   },
+  categoryContainer: {
+    alignItems: "flex-end",
+    zIndex: 99,
+  },
+  categoryIconContainer: {
+    backgroundColor: "rgb(186, 202, 214)",
+    borderBottomRightRadius: 0,
+    borderColor: colours.pureWhite,
+    borderRadius: 30,
+    borderWidth: 5,
+    padding: layout.spacing,
+    position: "absolute",
+    right: -10,
+    top: -30,
+    zIndex: 99,
+  },
   commentContainer: {
     alignItems: "stretch",
     backgroundColor: colours.pureWhite,
@@ -98,6 +122,7 @@ const styles = StyleSheet.create({
     flex: 1,
     marginBottom: layout.spacingL,
     marginLeft: layout.spacing,
+    marginTop: 20,
     padding: layout.spacing,
   },
   contentContainer: {
@@ -107,6 +132,7 @@ const styles = StyleSheet.create({
   },
   headerRow: {
     flexDirection: "row",
+    justifyContent: "space-between",
   },
   iconContainer: {
     alignItems: "center",
@@ -124,6 +150,9 @@ const styles = StyleSheet.create({
   text: {
     flex: 1,
     flexWrap: "nowrap",
+  },
+  titleContainer: {
+    flex: 1,
   },
 });
 

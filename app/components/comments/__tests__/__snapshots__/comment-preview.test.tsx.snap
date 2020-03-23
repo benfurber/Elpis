@@ -21,6 +21,7 @@ exports[`Comments<CommentPreview> with replies renders correctly 1`] = `
         "flex": 1,
         "marginBottom": 20,
         "marginLeft": 10,
+        "marginTop": 20,
         "padding": 10,
       }
     }
@@ -29,6 +30,7 @@ exports[`Comments<CommentPreview> with replies renders correctly 1`] = `
       style={
         Object {
           "flexDirection": "row",
+          "justifyContent": "space-between",
         }
       }
     >
@@ -50,7 +52,13 @@ exports[`Comments<CommentPreview> with replies renders correctly 1`] = `
           userId="1235we"
         />
       </View>
-      <View>
+      <View
+        style={
+          Object {
+            "flex": 1,
+          }
+        }
+      >
         <Title
           text="Meu pai fez o que ela mandou"
         />
@@ -75,6 +83,34 @@ exports[`Comments<CommentPreview> with replies renders correctly 1`] = `
           </Text>
           há 20 horas
         </Text>
+      </View>
+      <View
+        style={
+          Object {
+            "alignItems": "flex-end",
+            "zIndex": 99,
+          }
+        }
+      >
+        <customIcon
+          colour="rgb(255, 255, 255)"
+          containerStyle={
+            Object {
+              "backgroundColor": "rgb(186, 202, 214)",
+              "borderBottomRightRadius": 0,
+              "borderColor": "rgb(255, 255, 255)",
+              "borderRadius": 30,
+              "borderWidth": 5,
+              "padding": 10,
+              "position": "absolute",
+              "right": -10,
+              "top": -30,
+              "zIndex": 99,
+            }
+          }
+          name="holly-berry"
+          size={18}
+        />
       </View>
     </View>
     <View
@@ -192,6 +228,7 @@ exports[`Comments<CommentPreview> without replies renders correctly 1`] = `
         "flex": 1,
         "marginBottom": 20,
         "marginLeft": 10,
+        "marginTop": 20,
         "padding": 10,
       }
     }
@@ -200,6 +237,7 @@ exports[`Comments<CommentPreview> without replies renders correctly 1`] = `
       style={
         Object {
           "flexDirection": "row",
+          "justifyContent": "space-between",
         }
       }
     >
@@ -221,7 +259,13 @@ exports[`Comments<CommentPreview> without replies renders correctly 1`] = `
           userId="1235we"
         />
       </View>
-      <View>
+      <View
+        style={
+          Object {
+            "flex": 1,
+          }
+        }
+      >
         <Title
           text="Meu pai fez o que ela mandou"
         />
@@ -246,6 +290,34 @@ exports[`Comments<CommentPreview> without replies renders correctly 1`] = `
           </Text>
           há 9 minutos
         </Text>
+      </View>
+      <View
+        style={
+          Object {
+            "alignItems": "flex-end",
+            "zIndex": 99,
+          }
+        }
+      >
+        <customIcon
+          colour="rgb(255, 255, 255)"
+          containerStyle={
+            Object {
+              "backgroundColor": "rgb(186, 202, 214)",
+              "borderBottomRightRadius": 0,
+              "borderColor": "rgb(255, 255, 255)",
+              "borderRadius": 30,
+              "borderWidth": 5,
+              "padding": 10,
+              "position": "absolute",
+              "right": -10,
+              "top": -30,
+              "zIndex": 99,
+            }
+          }
+          name="holly-berry"
+          size={18}
+        />
       </View>
     </View>
     <View
