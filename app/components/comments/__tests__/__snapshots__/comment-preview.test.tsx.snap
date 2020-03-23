@@ -16,26 +16,31 @@ exports[`Comments<CommentPreview> with replies renders correctly 1`] = `
     style={
       Object {
         "alignItems": "stretch",
-        "borderTopColor": "rgb(255, 255, 255)",
-        "borderTopWidth": 3,
+        "backgroundColor": "rgb(255, 255, 255)",
+        "borderRadius": 10,
         "flex": 1,
-        "flexDirection": "row",
-        "margin": 10,
-        "marginBottom": 0,
-        "paddingTop": 5,
+        "marginBottom": 20,
+        "marginLeft": 10,
+        "padding": 10,
       }
     }
   >
     <View
       style={
         Object {
-          "alignItems": "center",
           "flexDirection": "row",
-          "width": 60,
         }
       }
     >
-      <View>
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "flexDirection": "row",
+            "width": 60,
+          }
+        }
+      >
         <Avatar
           avatarPath={
             Object {
@@ -45,40 +50,42 @@ exports[`Comments<CommentPreview> with replies renders correctly 1`] = `
           userId="1235we"
         />
       </View>
+      <View>
+        <Title
+          text="Meu pai fez o que ela mandou"
+        />
+        <Text
+          style={
+            Object {
+              "color": "rgb(51, 51, 51)",
+              "fontStyle": "italic",
+              "marginBottom": 10,
+            }
+          }
+        >
+          <Text
+            style={
+              Object {
+                "color": "rgb(45, 82, 113)",
+                "fontWeight": "bold",
+              }
+            }
+          >
+            May 
+          </Text>
+          há 20 horas
+        </Text>
+      </View>
     </View>
     <View
       style={
         Object {
           "flex": 1,
-          "marginLeft": 10,
+          "flexDirection": "row",
           "marginVertical": 10,
         }
       }
     >
-      <Title
-        text="Meu pai fez o que ela mandou"
-      />
-      <Text
-        style={
-          Object {
-            "color": "rgb(51, 51, 51)",
-            "fontStyle": "italic",
-            "marginBottom": 10,
-          }
-        }
-      >
-        <Text
-          style={
-            Object {
-              "color": "rgb(45, 82, 113)",
-              "fontWeight": "bold",
-            }
-          }
-        >
-          May 
-        </Text>
-        há 20 horas
-      </Text>
       <Text
         style={
           Object {
@@ -89,21 +96,21 @@ exports[`Comments<CommentPreview> with replies renders correctly 1`] = `
       >
         Dá certo sim, o meu pai, por exemplo, fugiu quando eu tinha 5 anos e...
       </Text>
-    </View>
-    <View
-      style={
-        Object {
-          "alignItems": "center",
-          "flexDirection": "row",
-          "marginRight": 3.3333333333333335,
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "flexDirection": "row",
+            "marginRight": 3.3333333333333335,
+          }
         }
-      }
-    >
-      <Badge
-        left={0}
-        number={1}
-        staticPosition={true}
-      />
+      >
+        <Badge
+          left={0}
+          number={1}
+          staticPosition={true}
+        />
+      </View>
     </View>
   </View>
   <ActionSheetComment
@@ -180,26 +187,31 @@ exports[`Comments<CommentPreview> without replies renders correctly 1`] = `
     style={
       Object {
         "alignItems": "stretch",
-        "borderTopColor": "rgb(255, 255, 255)",
-        "borderTopWidth": 3,
+        "backgroundColor": "rgb(255, 255, 255)",
+        "borderRadius": 10,
         "flex": 1,
-        "flexDirection": "row",
-        "margin": 10,
-        "marginBottom": 0,
-        "paddingTop": 5,
+        "marginBottom": 20,
+        "marginLeft": 10,
+        "padding": 10,
       }
     }
   >
     <View
       style={
         Object {
-          "alignItems": "center",
           "flexDirection": "row",
-          "width": 60,
         }
       }
     >
-      <View>
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "flexDirection": "row",
+            "width": 60,
+          }
+        }
+      >
         <Avatar
           avatarPath={
             Object {
@@ -209,40 +221,42 @@ exports[`Comments<CommentPreview> without replies renders correctly 1`] = `
           userId="1235we"
         />
       </View>
+      <View>
+        <Title
+          text="Meu pai fez o que ela mandou"
+        />
+        <Text
+          style={
+            Object {
+              "color": "rgb(51, 51, 51)",
+              "fontStyle": "italic",
+              "marginBottom": 10,
+            }
+          }
+        >
+          <Text
+            style={
+              Object {
+                "color": "rgb(45, 82, 113)",
+                "fontWeight": "bold",
+              }
+            }
+          >
+            May 
+          </Text>
+          há 9 minutos
+        </Text>
+      </View>
     </View>
     <View
       style={
         Object {
           "flex": 1,
-          "marginLeft": 10,
+          "flexDirection": "row",
           "marginVertical": 10,
         }
       }
     >
-      <Title
-        text="Meu pai fez o que ela mandou"
-      />
-      <Text
-        style={
-          Object {
-            "color": "rgb(51, 51, 51)",
-            "fontStyle": "italic",
-            "marginBottom": 10,
-          }
-        }
-      >
-        <Text
-          style={
-            Object {
-              "color": "rgb(45, 82, 113)",
-              "fontWeight": "bold",
-            }
-          }
-        >
-          May 
-        </Text>
-        há 9 minutos
-      </Text>
       <Text
         style={
           Object {
@@ -253,21 +267,21 @@ exports[`Comments<CommentPreview> without replies renders correctly 1`] = `
       >
         Dá certo sim, o meu pai, por exemplo, fugiu quando eu tinha 5 anos e...
       </Text>
-    </View>
-    <View
-      style={
-        Object {
-          "alignItems": "center",
-          "flexDirection": "row",
-          "marginRight": 3.3333333333333335,
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "flexDirection": "row",
+            "marginRight": 3.3333333333333335,
+          }
         }
-      }
-    >
-      <Badge
-        left={0}
-        number={1}
-        staticPosition={true}
-      />
+      >
+        <Badge
+          left={0}
+          number={1}
+          staticPosition={true}
+        />
+      </View>
     </View>
   </View>
   <ActionSheetComment

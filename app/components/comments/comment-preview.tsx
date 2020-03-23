@@ -51,26 +51,28 @@ class CommentPreview extends Component<Props> {
         onLongPress={() => this.onLongPress()}
       >
         <View style={styles.commentContainer}>
-          <View style={styles.avatarContainer}>
-            <View>
+          <View style={styles.headerRow}>
+            <View style={styles.avatarContainer}>
               <Avatar
                 avatarPath={author.avatarPath}
                 navigation={navigation}
                 userId={author.id}
               />
             </View>
+            <View>
+              {title && <Title text={title} />}
+              <Text style={styles.metaDetails}>
+                <Text style={styles.name}>{`${author.name} `}</Text>
+                {formatDate(publishedAt, false)}
+              </Text>
+            </View>
           </View>
-          <View style={styles.commentBodyContainer}>
-            {title && <Title text={title} />}
-            <Text style={styles.metaDetails}>
-              <Text style={styles.name}>{`${author.name} `}</Text>
-              {formatDate(publishedAt, false)}
-            </Text>
+          <View style={styles.contentContainer}>
             {content && (
               <Text style={styles.text}>{firstSentence(content)}</Text>
             )}
+            <View style={styles.iconContainer}>{this.pressActionIcon()}</View>
           </View>
-          <View style={styles.iconContainer}>{this.pressActionIcon()}</View>
         </View>
         <ActionSheetComment
           item={item}
@@ -89,20 +91,22 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     width: 60,
   },
-  commentBodyContainer: {
-    flex: 1,
-    marginLeft: layout.spacing,
-    marginVertical: layout.spacing,
-  },
   commentContainer: {
     alignItems: "stretch",
-    borderTopColor: colours.pureWhite,
-    borderTopWidth: 3,
+    backgroundColor: colours.pureWhite,
+    borderRadius: layout.borderRadiusL,
+    flex: 1,
+    marginBottom: layout.spacingL,
+    marginLeft: layout.spacing,
+    padding: layout.spacing,
+  },
+  contentContainer: {
     flex: 1,
     flexDirection: "row",
-    margin: layout.spacing,
-    marginBottom: 0,
-    paddingTop: layout.spacingS,
+    marginVertical: layout.spacing,
+  },
+  headerRow: {
+    flexDirection: "row",
   },
   iconContainer: {
     alignItems: "center",
