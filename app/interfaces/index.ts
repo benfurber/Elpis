@@ -26,6 +26,7 @@ interface ContentBase {
 
 export interface Comment extends ContentBase {
   author: User;
+  discussionLevel: number;
   edited: boolean;
   replies: Reply[] | [];
   totalReplies: number;
