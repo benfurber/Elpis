@@ -1,6 +1,7 @@
 export { Analytics, AnalyticsContentTypes } from "./analytics";
 export { bugTracker } from "./bug-tracker";
 export { calculateTotalComments } from "./calculate-total-comments";
+export { commentsByDiscussionLevel } from "./comments-by-discussion-level";
 export { checkPasswordStrength } from "./check-password-strength";
 export { client } from "./client";
 export { firstSentence } from "./first-sentence";
