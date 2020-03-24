@@ -1,0 +1,98 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`IconNav at level one renders correctly 1`] = `
+<customIcon
+  colour="rgb(255, 255, 255)"
+  containerStyle={
+    Array [
+      Object {
+        "alignItems": "center",
+        "borderRadius": 40,
+        "flexDirection": "row",
+        "height": 40,
+        "justifyContent": "center",
+        "padding": 10,
+        "width": 40,
+      },
+      Object {
+        "backgroundColor": "rgb(144, 171, 190)",
+      },
+    ]
+  }
+  name="seedling"
+  size={18}
+/>
+`;
+
+exports[`IconNav at level two renders correctly 1`] = `
+<customIcon
+  colour="rgb(255, 255, 255)"
+  containerStyle={
+    Array [
+      Object {
+        "alignItems": "center",
+        "borderRadius": 40,
+        "flexDirection": "row",
+        "height": 40,
+        "justifyContent": "center",
+        "padding": 10,
+        "width": 40,
+      },
+      Object {
+        "backgroundColor": "rgb(117, 150, 173)",
+      },
+    ]
+  }
+  name="spa"
+  size={18}
+/>
+`;
+
+exports[`IconNav at level zero renders correctly 1`] = `
+<customIcon
+  colour="rgb(255, 255, 255)"
+  containerStyle={
+    Array [
+      Object {
+        "alignItems": "center",
+        "borderRadius": 40,
+        "flexDirection": "row",
+        "height": 40,
+        "justifyContent": "center",
+        "padding": 10,
+        "width": 40,
+      },
+      Object {
+        "backgroundColor": "rgb(186, 202, 214)",
+      },
+    ]
+  }
+  name="holly-berry"
+  size={18}
+/>
+`;
+
+exports[`IconNav with optional props renders correctly 1`] = `
+<customIcon
+  colour="rgb(255, 255, 255)"
+  containerStyle={
+    Array [
+      Object {
+        "alignItems": "center",
+        "borderRadius": 50,
+        "borderTopRightRadius": 0,
+        "flexDirection": "row",
+        "height": 50,
+        "justifyContent": "center",
+        "padding": 10,
+        "width": 50,
+      },
+      Object {
+        "backgroundColor": "rgb(186, 202, 214)",
+      },
+    ]
+  }
+  name="holly-berry"
+  size={25}
+/>
+`;

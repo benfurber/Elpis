@@ -3,7 +3,14 @@ import { StyleSheet, Text, View } from "react-native";
 import { TouchableOpacity } from "react-native-gesture-handler";
 import ActionSheet from "react-native-actionsheet";
 
-import { Avatar, Badge, Icon, Title, ActionSheetComment } from "components";
+import {
+  Avatar,
+  Badge,
+  IconDiscussionLevel,
+  Icon,
+  Title,
+  ActionSheetComment,
+} from "components";
 import { Comment as CommentInterface, NavigationType, Post } from "interfaces";
 import { colours, elements, layout } from "styles";
 import { formatDate } from "utils";
@@ -52,7 +59,7 @@ class CommentPreview extends Component<Props> {
 
   render() {
     const { item, navigation, onPress, postId } = this.props;
-    const { author, id, publishedAt, title } = item;
+    const { author, discussionLevel, id, publishedAt, title } = item;
 
     return (
       <TouchableOpacity
@@ -76,12 +83,12 @@ class CommentPreview extends Component<Props> {
               </Text>
             </View>
             <View style={styles.categoryContainer}>
-              <Icon
-                colour={colours.pureWhite}
-                containerStyle={styles.categoryIconContainer}
-                name="holly-berry"
-                size={18}
-              />
+              <View style={styles.categoryIconContainer}>
+                <IconDiscussionLevel
+                  containerStyle={{ borderBottomRightRadius: 0 }}
+                  level={discussionLevel}
+                />
+              </View>
             </View>
           </View>
           <View style={styles.contentContainer}>
@@ -108,19 +115,18 @@ const styles = StyleSheet.create({
   },
   categoryContainer: {
     alignItems: "flex-end",
-    zIndex: 99,
+    width: 40,
   },
   categoryIconContainer: {
-    backgroundColor: "rgb(186, 202, 214)",
     borderBottomRightRadius: 0,
     borderColor: colours.pureWhite,
     borderRadius: 30,
     borderWidth: 5,
-    padding: layout.spacing,
+    overflow: "hidden",
     position: "absolute",
     right: -10,
     top: -30,
-    zIndex: 99,
+    zIndex: 1,
   },
   commentContainer: {
     alignItems: "stretch",

@@ -88,29 +88,34 @@ exports[`Comments<CommentPreview> with replies renders correctly 1`] = `
         style={
           Object {
             "alignItems": "flex-end",
-            "zIndex": 99,
+            "width": 40,
           }
         }
       >
-        <customIcon
-          colour="rgb(255, 255, 255)"
-          containerStyle={
+        <View
+          style={
             Object {
-              "backgroundColor": "rgb(186, 202, 214)",
               "borderBottomRightRadius": 0,
               "borderColor": "rgb(255, 255, 255)",
               "borderRadius": 30,
               "borderWidth": 5,
-              "padding": 10,
+              "overflow": "hidden",
               "position": "absolute",
               "right": -10,
               "top": -30,
-              "zIndex": 99,
+              "zIndex": 1,
             }
           }
-          name="holly-berry"
-          size={18}
-        />
+        >
+          <IconDiscussionLevel
+            containerStyle={
+              Object {
+                "borderBottomRightRadius": 0,
+              }
+            }
+            level={0}
+          />
+        </View>
       </View>
     </View>
     <View
@@ -297,29 +302,34 @@ exports[`Comments<CommentPreview> without replies renders correctly 1`] = `
         style={
           Object {
             "alignItems": "flex-end",
-            "zIndex": 99,
+            "width": 40,
           }
         }
       >
-        <customIcon
-          colour="rgb(255, 255, 255)"
-          containerStyle={
+        <View
+          style={
             Object {
-              "backgroundColor": "rgb(186, 202, 214)",
               "borderBottomRightRadius": 0,
               "borderColor": "rgb(255, 255, 255)",
               "borderRadius": 30,
               "borderWidth": 5,
-              "padding": 10,
+              "overflow": "hidden",
               "position": "absolute",
               "right": -10,
               "top": -30,
-              "zIndex": 99,
+              "zIndex": 1,
             }
           }
-          name="holly-berry"
-          size={18}
-        />
+        >
+          <IconDiscussionLevel
+            containerStyle={
+              Object {
+                "borderBottomRightRadius": 0,
+              }
+            }
+            level={0}
+          />
+        </View>
       </View>
     </View>
     <View
