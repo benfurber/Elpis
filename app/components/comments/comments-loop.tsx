@@ -1,11 +1,12 @@
 import React, { Component } from "react";
-import { FlatList, StyleSheet, View, ScrollView } from "react-native";
+import { SectionList, StyleSheet, Text, View, ScrollView } from "react-native";
 
 import { Post, NavigationType } from "interfaces";
 import { colours, layout } from "styles";
-import { calculateTotalComments } from "utils";
+import { calculateTotalComments, commentsByDiscussionLevel } from "utils";
 
 import { CommentPreview } from "./comment-preview";
+import { CommentsSectionHeader } from "./comments-section-header";
 import { NoContent } from "./no-content";
 
 interface Props {
@@ -25,7 +26,7 @@ class CommentsLoop extends Component<Props> {
   }
 
   render() {
-    const { navigation, postId } = this.props;
+    const { comments, navigation, postId } = this.props;
 
     return (
       <View style={styles.container}>
@@ -33,11 +34,13 @@ class CommentsLoop extends Component<Props> {
           {this.props.header}
           {this.noComments()}
 
-          <FlatList
+          <SectionList
             contentContainerStyle={{ paddingBottom: layout.spacingXL }}
-            data={this.props.comments}
+            sections={commentsByDiscussionLevel(comments)}
             initialNumToRender={5}
-            keyExtractor={({ id }) => id}
+            renderSectionHeader={({ section: { level } }) => (
+              <CommentsSectionHeader level={level} />
+            )}
             renderItem={({ item }) => (
               <CommentPreview
                 item={item}
