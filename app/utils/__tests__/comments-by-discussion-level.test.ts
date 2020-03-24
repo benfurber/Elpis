@@ -8,7 +8,7 @@ describe("commentsByDiscussionLevel", () => {
     const expectation = [
       {
         data: [comment],
-        level: 0,
+        level: 1,
       },
     ];
     const call = commentsByDiscussionLevel([comment]);
@@ -16,9 +16,9 @@ describe("commentsByDiscussionLevel", () => {
   });
 
   it("returns comments when by all discussion levels", () => {
-    const commentLevelOne = {
+    const commentLevelZero = {
       ...comment,
-      discussionLevel: 1,
+      discussionLevel: 0,
     };
 
     const commentLevelTwo = {
@@ -32,19 +32,19 @@ describe("commentsByDiscussionLevel", () => {
         level: 2,
       },
       {
-        data: [commentLevelOne],
+        data: [comment],
         level: 1,
       },
       {
-        data: [comment],
+        data: [commentLevelZero],
         level: 0,
       },
     ];
 
     const comments: Array<Comment> = [
-      commentLevelOne,
       comment,
       commentLevelTwo,
+      commentLevelZero,
     ];
     const call = commentsByDiscussionLevel(comments);
 

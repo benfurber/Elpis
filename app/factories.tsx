@@ -50,7 +50,7 @@ export const comment: Comment = {
   author: user,
   content:
     "Dá certo sim, o meu pai, por exemplo, fugiu quando eu tinha 5 anos e eu não faço ideia da onde ele esteja. Nunca mais voltou, pena que a violência só piorou.",
-  discussionLevel: 0,
+  discussionLevel: 1,
   edited: false,
   id: "21097",
   isAuthorCurrentUser: false,
@@ -58,4 +58,18 @@ export const comment: Comment = {
   replies: [reply],
   title: "Meu pai fez o que ela mandou",
   totalReplies: 1,
+};
+
+export const commentWithoutReplies: Comment = {
+  author: user,
+  content:
+    "São pontos de vista sobre cuidado... a gente só se ofende com esse tipo de pergunta e ponto de vista porque ainda concorda que essas coisas são uma forma de se cuidar. Eu acho que fazer as unhas é umas das coisas mais fúteis, inúteis, burras de se fazer com o próprio tempo e dinheiro. Maquiagem um pouco também. E que se foda se alguém achar que eu me cuido pouco pq não faço as unhas.",
+  discussionLevel: 0,
+  edited: false,
+  id: "21097",
+  isAuthorCurrentUser: false,
+  publishedAt: new Date("2019-01-01"),
+  replies: [],
+  title: "Meu pai fez o que ela mandou",
+  totalReplies: 0,
 };
