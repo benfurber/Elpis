@@ -3,10 +3,17 @@ import { StyleSheet, Text, View } from "react-native";
 import { TouchableOpacity } from "react-native-gesture-handler";
 import ActionSheet from "react-native-actionsheet";
 
-import { Avatar, Badge, Icon, Title, ActionSheetComment } from "components";
+import {
+  Avatar,
+  Badge,
+  IconDiscussionLevel,
+  Icon,
+  Title,
+  ActionSheetComment,
+} from "components";
 import { Comment as CommentInterface, NavigationType, Post } from "interfaces";
 import { colours, elements, layout } from "styles";
-import { firstSentence, formatDate } from "utils";
+import { formatDate } from "utils";
 
 interface Props {
   item: CommentInterface;
@@ -17,6 +24,15 @@ interface Props {
 
 class CommentPreview extends Component<Props> {
   ActionSheet = ActionSheet;
+
+  displayContent() {
+    const { content } = this.props.item;
+    const characterLimit = 250;
+
+    if (!content || content.length < characterLimit) return content;
+
+    return content.substring(0, characterLimit) + "...";
+  }
 
   pressActionIcon() {
     const { totalReplies } = this.props.item;
@@ -43,7 +59,7 @@ class CommentPreview extends Component<Props> {
 
   render() {
     const { item, navigation, onPress, postId } = this.props;
-    const { author, content, id, publishedAt, title } = item;
+    const { author, discussionLevel, id, publishedAt, title } = item;
 
     return (
       <TouchableOpacity
@@ -51,26 +67,34 @@ class CommentPreview extends Component<Props> {
         onLongPress={() => this.onLongPress()}
       >
         <View style={styles.commentContainer}>
-          <View style={styles.avatarContainer}>
-            <View>
+          <View style={styles.headerRow}>
+            <View style={styles.avatarContainer}>
               <Avatar
                 avatarPath={author.avatarPath}
                 navigation={navigation}
                 userId={author.id}
               />
             </View>
+            <View style={styles.titleContainer}>
+              {title && <Title text={title} />}
+              <Text style={styles.metaDetails}>
+                <Text style={styles.name}>{`${author.name} `}</Text>
+                {formatDate(publishedAt, false)}
+              </Text>
+            </View>
+            <View style={styles.categoryContainer}>
+              <View style={styles.categoryIconContainer}>
+                <IconDiscussionLevel
+                  containerStyle={{ borderBottomRightRadius: 0 }}
+                  level={discussionLevel}
+                />
+              </View>
+            </View>
           </View>
-          <View style={styles.commentBodyContainer}>
-            {title && <Title text={title} />}
-            <Text style={styles.metaDetails}>
-              <Text style={styles.name}>{`${author.name} `}</Text>
-              {formatDate(publishedAt, false)}
-            </Text>
-            {content && (
-              <Text style={styles.text}>{firstSentence(content)}</Text>
-            )}
+          <View style={styles.contentContainer}>
+            <Text style={styles.text}>{this.displayContent()}</Text>
+            <View style={styles.iconContainer}>{this.pressActionIcon()}</View>
           </View>
-          <View style={styles.iconContainer}>{this.pressActionIcon()}</View>
         </View>
         <ActionSheetComment
           item={item}
@@ -89,25 +113,43 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     width: 60,
   },
-  commentBodyContainer: {
-    flex: 1,
-    marginLeft: layout.spacing,
-    marginVertical: layout.spacing,
+  categoryContainer: {
+    alignItems: "flex-end",
+    width: 40,
+  },
+  categoryIconContainer: {
+    borderBottomRightRadius: 0,
+    borderColor: colours.pureWhite,
+    borderRadius: 30,
+    borderWidth: 5,
+    overflow: "hidden",
+    position: "absolute",
+    right: -10,
+    top: -30,
+    zIndex: 1,
   },
   commentContainer: {
     alignItems: "stretch",
-    borderTopColor: colours.pureWhite,
-    borderTopWidth: 3,
+    backgroundColor: colours.pureWhite,
+    borderRadius: layout.borderRadiusL,
+    flex: 1,
+    marginBottom: layout.spacingL,
+    marginLeft: layout.spacing,
+    marginTop: 20,
+    padding: layout.spacing,
+  },
+  contentContainer: {
     flex: 1,
     flexDirection: "row",
-    margin: layout.spacing,
-    marginBottom: 0,
-    paddingTop: layout.spacingS,
+    marginVertical: layout.spacing,
+  },
+  headerRow: {
+    flexDirection: "row",
+    justifyContent: "space-between",
   },
   iconContainer: {
     alignItems: "center",
     flexDirection: "row",
-    marginRight: layout.spacingXS,
   },
   metaDetails: {
     marginBottom: layout.spacing,
@@ -120,6 +162,10 @@ const styles = StyleSheet.create({
   text: {
     flex: 1,
     flexWrap: "nowrap",
+    marginRight: layout.spacingXL,
+  },
+  titleContainer: {
+    flex: 1,
   },
 });
 

@@ -41,10 +41,7 @@ const styles = StyleSheet.create({
     marginVertical: layout.spacingL,
   },
   titleContainer: {
-    backgroundColor: colours.whiteTransparent,
-    borderRadius: layout.borderRadius,
-    margin: layout.spacing,
-    padding: layout.spacing,
+    margin: layout.spacingL,
   },
 });
 

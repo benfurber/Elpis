@@ -122,6 +122,21 @@ const labels = {
   select: "Selecionar",
   submit: "Postar",
   title: "Título",
+  topicDiscussionLevels: {
+    0: {
+      description:
+        "Tópicos plantados e estão prontos para receber a sua atenção",
+      title: "Debates Sementes",
+    },
+    1: {
+      description: "Tópicos em constante crescimento",
+      title: "Debates Florescendo",
+    },
+    2: {
+      description: "Tópicos que amadureceram e criaram raízes",
+      title: "Debates Maduros",
+    },
+  },
   topics: "Tópicos",
   uploadingImage: "Carregando imagem",
 };

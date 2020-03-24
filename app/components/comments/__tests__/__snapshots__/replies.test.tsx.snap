@@ -29,12 +29,14 @@ exports[`Comments<Replies> when there are no replies renders correctly 1`] = `
           "id": "1235we",
           "name": "May",
         },
-        "content": "Dá certo sim, o meu pai, por exemplo, fugiu quando eu tinha 5 anos e eu não faço ideia da onde ele esteja. Nunca mais voltou, pena que a violência só piorou.",
-        "edited": true,
+        "content": "São pontos de vista sobre cuidado... a gente só se ofende com esse tipo de pergunta e ponto de vista porque ainda concorda que essas coisas são uma forma de se cuidar. Eu acho que fazer as unhas é umas das coisas mais fúteis, inúteis, burras de se fazer com o próprio tempo e dinheiro. Maquiagem um pouco também. E que se foda se alguém achar que eu me cuido pouco pq não faço as unhas.",
+        "discussionLevel": 0,
+        "edited": false,
         "id": "21097",
         "isAuthorCurrentUser": false,
         "publishedAt": 2019-01-01T00:00:00.000Z,
         "replies": Array [],
+        "title": "Meu pai fez o que ela mandou",
         "totalReplies": 0,
       }
     }
@@ -76,6 +78,7 @@ exports[`Comments<Replies> when there are replies renders correctly 1`] = `
           "name": "May",
         },
         "content": "Dá certo sim, o meu pai, por exemplo, fugiu quando eu tinha 5 anos e eu não faço ideia da onde ele esteja. Nunca mais voltou, pena que a violência só piorou.",
+        "discussionLevel": 1,
         "edited": false,
         "id": "21097",
         "isAuthorCurrentUser": false,
@@ -89,55 +92,7 @@ exports[`Comments<Replies> when there are replies renders correctly 1`] = `
               "id": "1235we",
               "name": "May",
             },
-            "comment": Object {
-              "author": Object {
-                "avatarPath": Object {
-                  "testUri": "../../../app/assets/images/profile-pic-annon.png",
-                },
-                "id": "1235we",
-                "name": "May",
-              },
-              "content": "Dá certo sim, o meu pai, por exemplo, fugiu quando eu tinha 5 anos e eu não faço ideia da onde ele esteja. Nunca mais voltou, pena que a violência só piorou.",
-              "edited": false,
-              "id": "21097",
-              "isAuthorCurrentUser": false,
-              "publishedAt": 2019-01-01T00:00:00.000Z,
-              "replies": Array [
-                Object {
-                  "author": Object {
-                    "avatarPath": Object {
-                      "testUri": "../../../app/assets/images/profile-pic-annon.png",
-                    },
-                    "id": "1235we",
-                    "name": "May",
-                  },
-                  "comment": Object {
-                    "author": Object {
-                      "avatarPath": Object {
-                        "testUri": "../../../app/assets/images/profile-pic-annon.png",
-                      },
-                      "id": "1235we",
-                      "name": "May",
-                    },
-                    "content": "Dá certo sim, o meu pai, por exemplo, fugiu quando eu tinha 5 anos e eu não faço ideia da onde ele esteja. Nunca mais voltou, pena que a violência só piorou.",
-                    "edited": false,
-                    "id": "21097",
-                    "isAuthorCurrentUser": false,
-                    "publishedAt": 2019-01-01T00:00:00.000Z,
-                    "replies": Array [],
-                    "totalReplies": 0,
-                  },
-                  "content": "Nao.",
-                  "edited": false,
-                  "id": "21097",
-                  "isAuthorCurrentUser": false,
-                  "link": null,
-                  "publishedAt": 2019-01-01T00:00:00.000Z,
-                },
-              ],
-              "title": "Meu pai fez o que ela mandou",
-              "totalReplies": 1,
-            },
+            "comment": [Circular],
             "content": "Meu pai também fez o mesmo. Logo depois que minha mãe pediu o divórcio porque sofria violência dentro de casa, ele pegou as malas, se mudou e sumiu no mundo. Nem faço mais questão de saber pra onde ele foi.",
             "edited": false,
             "id": "21098",
@@ -153,55 +108,7 @@ exports[`Comments<Replies> when there are replies renders correctly 1`] = `
               "id": "1235we",
               "name": "May",
             },
-            "comment": Object {
-              "author": Object {
-                "avatarPath": Object {
-                  "testUri": "../../../app/assets/images/profile-pic-annon.png",
-                },
-                "id": "1235we",
-                "name": "May",
-              },
-              "content": "Dá certo sim, o meu pai, por exemplo, fugiu quando eu tinha 5 anos e eu não faço ideia da onde ele esteja. Nunca mais voltou, pena que a violência só piorou.",
-              "edited": false,
-              "id": "21097",
-              "isAuthorCurrentUser": false,
-              "publishedAt": 2019-01-01T00:00:00.000Z,
-              "replies": Array [
-                Object {
-                  "author": Object {
-                    "avatarPath": Object {
-                      "testUri": "../../../app/assets/images/profile-pic-annon.png",
-                    },
-                    "id": "1235we",
-                    "name": "May",
-                  },
-                  "comment": Object {
-                    "author": Object {
-                      "avatarPath": Object {
-                        "testUri": "../../../app/assets/images/profile-pic-annon.png",
-                      },
-                      "id": "1235we",
-                      "name": "May",
-                    },
-                    "content": "Dá certo sim, o meu pai, por exemplo, fugiu quando eu tinha 5 anos e eu não faço ideia da onde ele esteja. Nunca mais voltou, pena que a violência só piorou.",
-                    "edited": false,
-                    "id": "21097",
-                    "isAuthorCurrentUser": false,
-                    "publishedAt": 2019-01-01T00:00:00.000Z,
-                    "replies": Array [],
-                    "totalReplies": 0,
-                  },
-                  "content": "Nao.",
-                  "edited": false,
-                  "id": "21097",
-                  "isAuthorCurrentUser": false,
-                  "link": null,
-                  "publishedAt": 2019-01-01T00:00:00.000Z,
-                },
-              ],
-              "title": "Meu pai fez o que ela mandou",
-              "totalReplies": 1,
-            },
+            "comment": [Circular],
             "content": "Nem faço mais questão de saber pra onde ele foi.",
             "edited": true,
             "id": "21099",
@@ -210,7 +117,8 @@ exports[`Comments<Replies> when there are replies renders correctly 1`] = `
             "publishedAt": 2019-01-03T00:00:00.000Z,
           },
         ],
-        "totalReplies": 2,
+        "title": "Meu pai fez o que ela mandou",
+        "totalReplies": 1,
       }
     }
     postId="10387-314fs-12asdbj"
@@ -226,7 +134,7 @@ exports[`Comments<Replies> when there are replies renders correctly 1`] = `
         }
       }
     >
-      2
+      1
        
       Respostas
     </Text>
@@ -255,43 +163,12 @@ exports[`Comments<Replies> when there are replies renders correctly 1`] = `
                 "name": "May",
               },
               "content": "Dá certo sim, o meu pai, por exemplo, fugiu quando eu tinha 5 anos e eu não faço ideia da onde ele esteja. Nunca mais voltou, pena que a violência só piorou.",
+              "discussionLevel": 1,
               "edited": false,
               "id": "21097",
               "isAuthorCurrentUser": false,
               "publishedAt": 2019-01-01T00:00:00.000Z,
-              "replies": Array [
-                Object {
-                  "author": Object {
-                    "avatarPath": Object {
-                      "testUri": "../../../app/assets/images/profile-pic-annon.png",
-                    },
-                    "id": "1235we",
-                    "name": "May",
-                  },
-                  "comment": Object {
-                    "author": Object {
-                      "avatarPath": Object {
-                        "testUri": "../../../app/assets/images/profile-pic-annon.png",
-                      },
-                      "id": "1235we",
-                      "name": "May",
-                    },
-                    "content": "Dá certo sim, o meu pai, por exemplo, fugiu quando eu tinha 5 anos e eu não faço ideia da onde ele esteja. Nunca mais voltou, pena que a violência só piorou.",
-                    "edited": false,
-                    "id": "21097",
-                    "isAuthorCurrentUser": false,
-                    "publishedAt": 2019-01-01T00:00:00.000Z,
-                    "replies": Array [],
-                    "totalReplies": 0,
-                  },
-                  "content": "Nao.",
-                  "edited": false,
-                  "id": "21097",
-                  "isAuthorCurrentUser": false,
-                  "link": null,
-                  "publishedAt": 2019-01-01T00:00:00.000Z,
-                },
-              ],
+              "replies": [Circular],
               "title": "Meu pai fez o que ela mandou",
               "totalReplies": 1,
             },
@@ -319,43 +196,12 @@ exports[`Comments<Replies> when there are replies renders correctly 1`] = `
                 "name": "May",
               },
               "content": "Dá certo sim, o meu pai, por exemplo, fugiu quando eu tinha 5 anos e eu não faço ideia da onde ele esteja. Nunca mais voltou, pena que a violência só piorou.",
+              "discussionLevel": 1,
               "edited": false,
               "id": "21097",
               "isAuthorCurrentUser": false,
               "publishedAt": 2019-01-01T00:00:00.000Z,
-              "replies": Array [
-                Object {
-                  "author": Object {
-                    "avatarPath": Object {
-                      "testUri": "../../../app/assets/images/profile-pic-annon.png",
-                    },
-                    "id": "1235we",
-                    "name": "May",
-                  },
-                  "comment": Object {
-                    "author": Object {
-                      "avatarPath": Object {
-                        "testUri": "../../../app/assets/images/profile-pic-annon.png",
-                      },
-                      "id": "1235we",
-                      "name": "May",
-                    },
-                    "content": "Dá certo sim, o meu pai, por exemplo, fugiu quando eu tinha 5 anos e eu não faço ideia da onde ele esteja. Nunca mais voltou, pena que a violência só piorou.",
-                    "edited": false,
-                    "id": "21097",
-                    "isAuthorCurrentUser": false,
-                    "publishedAt": 2019-01-01T00:00:00.000Z,
-                    "replies": Array [],
-                    "totalReplies": 0,
-                  },
-                  "content": "Nao.",
-                  "edited": false,
-                  "id": "21097",
-                  "isAuthorCurrentUser": false,
-                  "link": null,
-                  "publishedAt": 2019-01-01T00:00:00.000Z,
-                },
-              ],
+              "replies": [Circular],
               "title": "Meu pai fez o que ela mandou",
               "totalReplies": 1,
             },

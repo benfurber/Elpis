@@ -1,7 +1,7 @@
 import React from "react";
 import { shallow } from "enzyme";
 
-import { comment, post, user } from "factories";
+import { comment, commentWithoutReplies, post, user } from "factories";
 import { mockDateNow } from "../../../test-utils";
 
 import { Replies } from "../replies";
@@ -36,23 +36,14 @@ describe("Comments<Replies>", () => {
         publishedAt: new Date("2019-01-03"),
       };
 
-      const item = {
-        author: user,
-        content:
-          "Dá certo sim, o meu pai, por exemplo, fugiu quando eu tinha 5 anos e eu não faço ideia da onde ele esteja. Nunca mais voltou, pena que a violência só piorou.",
-        edited: false,
-        id: "21097",
-        isAuthorCurrentUser: false,
-        publishedAt: new Date("2019-01-01"),
-        replies: [reply1, reply2],
-        totalReplies: 2,
-      };
+      comment.replies = [reply1, reply2];
+
       const noReplies = "No replies label";
       const onPress = () => jest.fn();
 
       const component = shallow(
         <Replies
-          item={item}
+          item={comment}
           navigation={navigation}
           noReplies={noReplies}
           onPress={onPress}
@@ -68,23 +59,12 @@ describe("Comments<Replies>", () => {
     it("renders correctly", () => {
       mockDateNow("2019-01-02");
 
-      const item = {
-        author: user,
-        content:
-          "Dá certo sim, o meu pai, por exemplo, fugiu quando eu tinha 5 anos e eu não faço ideia da onde ele esteja. Nunca mais voltou, pena que a violência só piorou.",
-        edited: true,
-        id: "21097",
-        isAuthorCurrentUser: false,
-        publishedAt: new Date("2019-01-01"),
-        replies: [],
-        totalReplies: 0,
-      };
       const noReplies = "No replies right now, add one!";
       const onPress = () => jest.fn();
 
       const component = shallow(
         <Replies
-          item={item}
+          item={commentWithoutReplies}
           navigation={navigation}
           noReplies={noReplies}
           onPress={onPress}

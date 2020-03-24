@@ -1,14 +1,13 @@
 import React, { Component } from "react";
-import { FlatList, StyleSheet, View, ScrollView } from "react-native";
+import { SectionList, StyleSheet, Text, View, ScrollView } from "react-native";
 
 import { Post, NavigationType } from "interfaces";
-import { labels } from "labels";
 import { colours, layout } from "styles";
-import { calculateTotalComments } from "utils";
+import { calculateTotalComments, commentsByDiscussionLevel } from "utils";
 
 import { CommentPreview } from "./comment-preview";
+import { CommentsSectionHeader } from "./comments-section-header";
 import { NoContent } from "./no-content";
-import { Title } from "components";
 
 interface Props {
   comments: Post["comments"];
@@ -26,34 +25,22 @@ class CommentsLoop extends Component<Props> {
     }
   }
 
-  title() {
-    const { comments } = this.props;
-
-    const titleText = `${comments.length} ${labels.topics}`;
-
-    return (
-      <View style={styles.commentsHeadingContainer}>
-        <Title text={titleText} />
-      </View>
-    );
-  }
-
   render() {
-    const { navigation, postId } = this.props;
+    const { comments, navigation, postId } = this.props;
 
     return (
       <View style={styles.container}>
         <ScrollView>
           {this.props.header}
-          {this.title()}
-
           {this.noComments()}
 
-          <FlatList
+          <SectionList
             contentContainerStyle={{ paddingBottom: layout.spacingXL }}
-            data={this.props.comments}
+            sections={commentsByDiscussionLevel(comments)}
             initialNumToRender={5}
-            keyExtractor={({ id }) => id}
+            renderSectionHeader={({ section: { level } }) => (
+              <CommentsSectionHeader level={level} />
+            )}
             renderItem={({ item }) => (
               <CommentPreview
                 item={item}
@@ -70,10 +57,6 @@ class CommentsLoop extends Component<Props> {
 }
 
 const styles = StyleSheet.create({
-  commentsHeadingContainer: {
-    marginHorizontal: layout.spacing,
-    marginVertical: layout.spacingL,
-  },
   container: {
     flex: 1,
     paddingBottom: layout.spacingL,
