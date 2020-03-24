@@ -73,6 +73,7 @@ export const COMMENTS = gql`
           ...authorAttributes
         }
         content
+        discussionLevel
         edited
         id
         isAuthorCurrentUser
