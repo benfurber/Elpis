@@ -11,11 +11,7 @@ interface Props {
 }
 
 const Header = ({ header }: { header: Props["header"] }) => {
-  return (
-    <View>
-      <View style={styles.closeContainer}>{header}</View>
-    </View>
-  );
+  return <View style={styles.closeContainer}>{header}</View>;
 };
 
 const BackgroundContainer = (props: Props) => {
@@ -39,8 +35,9 @@ const BackgroundContainer = (props: Props) => {
 
 const styles = StyleSheet.create({
   closeContainer: {
-    flexDirection: "row-reverse",
+    alignItems: "flex-end",
     padding: layout.spacing,
+    width: "100%",
   },
   container: {
     backgroundColor: colours.transparentBlue,

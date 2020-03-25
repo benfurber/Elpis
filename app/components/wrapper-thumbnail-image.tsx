@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Dimensions } from "react-native";
+import { Dimensions, FlatList } from "react-native";
 import { PhotoIdentifier } from "@react-native-community/cameraroll";
 
 import { ThumbnailImage } from "components";
@@ -30,7 +30,14 @@ class WrapperThumbnailImage extends Component<Props> {
   render() {
     const { images } = this.props;
 
-    return images.map((image, index) => this.renderImage(image, index));
+    return (
+      <FlatList
+        data={images}
+        numColumns={3}
+        keyExtractor={(_, index) => index.toString()}
+        renderItem={({ item, index }) => this.renderImage(item, index)}
+      />
+    );
   }
 }
 

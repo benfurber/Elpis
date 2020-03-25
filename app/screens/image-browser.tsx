@@ -84,25 +84,25 @@ class ImageBrowserScreen extends Component<Props, State> {
     const { navigation, sendImage } = this.props;
     const { selectedImage } = this.state;
 
-    if (selectedImage) {
-      return (
-        <View style={styles.button}>
-          <Button
-            onPress={() => {
-              navigation.pop();
-              return sendImage(selectedImage);
-            }}
-            title={labels.select}
-            color={colours.pureWhite}
-          />
-        </View>
-      );
-    }
-
     return (
-      <TouchableOpacity onPress={() => navigation.pop()}>
-        <Icon name="times-circle" size={30} />
-      </TouchableOpacity>
+      <View style={styles.headerContainer}>
+        <TouchableOpacity onPress={() => navigation.pop()}>
+          <Icon name="times-circle" size={30} style={styles.icon} />
+        </TouchableOpacity>
+
+        {selectedImage && (
+          <View style={styles.button}>
+            <Button
+              onPress={() => {
+                navigation.pop();
+                return sendImage(selectedImage);
+              }}
+              title={labels.select}
+              color={colours.pureWhite}
+            />
+          </View>
+        )}
+      </View>
     );
   }
 
@@ -144,6 +144,16 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     flexWrap: "wrap",
     width: "100%",
+  },
+  headerContainer: {
+    alignContent: "stretch",
+    alignItems: "center",
+    flexDirection: "row",
+    justifyContent: "space-between",
+    width: "100%",
+  },
+  icon: {
+    marginVertical: layout.spacingS,
   },
 });
 
