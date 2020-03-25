@@ -85,6 +85,7 @@ class AddTopicScreen extends Component<Props, State> {
     const args = {
       editable,
       multiline: true,
+      placeholderTextColor: "rgb(170,170,170)",
     };
 
     return (

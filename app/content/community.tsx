@@ -97,7 +97,7 @@ const Section = (props: SectionProps) => {
 
   return (
     <View style={styles.section}>
-      {heading && <Title text={heading} small />}
+      {heading && <Title text={heading} bold small />}
       <Text>
         {subHeading && (
           <Text style={{ fontWeight: "bold" }}>{subHeading} </Text>

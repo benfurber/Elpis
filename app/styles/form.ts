@@ -16,7 +16,6 @@ const form = StyleSheet.create({
     paddingTop: layout.spacingL,
   },
   text: {
-    fontFamily: "Dosis-ExtraLight",
     fontSize: typography.fontSizeL,
     padding: layout.spacingL,
     width: "100%",
@@ -25,6 +24,7 @@ const form = StyleSheet.create({
     flexWrap: "wrap",
     fontFamily: "Dosis-ExtraLight",
     fontSize: typography.fontSizeL,
+    fontWeight: "500",
     padding: layout.spacingL,
   },
 });

@@ -3,7 +3,7 @@ import { StyleSheet, Text, View } from "react-native";
 
 import { Icon, Title } from "components";
 import { labels } from "labels";
-import { colours, layout, typography } from "styles";
+import { colours, layout } from "styles";
 
 class OnboardingFinalContent extends Component {
   render() {
@@ -16,13 +16,21 @@ class OnboardingFinalContent extends Component {
       <View>
         <View style={styles.row}>
           <Icon colour={iconColour} name="custom-thumbs" size={iconSize} />
-          <Title style={styles.subtitle} text={final.feedbackTitle} />
+          <Title
+            style={styles.subtitle}
+            text={final.feedbackTitle}
+            bold={false}
+          />
         </View>
         <Text style={styles.text}>{final.feedbackBody}</Text>
 
         <View style={styles.row}>
           <Icon colour={iconColour} name="hands-helping" size={iconSize} />
-          <Title style={styles.subtitle} text={final.communityRulesTitle} />
+          <Title
+            style={styles.subtitle}
+            text={final.communityRulesTitle}
+            bold={false}
+          />
         </View>
         <Text style={styles.text}>{final.communityRulesBody}</Text>
       </View>
@@ -41,8 +49,6 @@ const styles = StyleSheet.create({
     marginTop: layout.spacing,
   },
   subtitle: {
-    fontStyle: "italic",
-    fontWeight: "normal",
     marginBottom: 0,
     paddingLeft: layout.spacing,
   },

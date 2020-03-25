@@ -4,6 +4,7 @@ import { StyleSheet, Text } from "react-native";
 import { layout, typography } from "styles";
 
 interface Props {
+  bold?: boolean;
   large?: true;
   small?: true;
   style?: object;
@@ -12,15 +13,15 @@ interface Props {
 
 const Title = (props: Props) => {
   const { fontSize, fontSizeL, fontSizeXL } = typography;
-  const { small, large } = props;
+  const { bold, small, large } = props;
 
   const size = (small && fontSize) || (large && fontSizeXL) || fontSizeL;
-
+  const notBold = (small && (bold === undefined || false)) || bold === false;
   const styles = StyleSheet.create({
     title: {
       fontFamily: "Dosis-ExtraLight",
       fontSize: size,
-      fontWeight: small ? "500" : "600",
+      fontWeight: notBold ? "500" : "600",
       marginBottom: layout.spacingS,
     },
   });

@@ -16,13 +16,21 @@ class OnboardingFeaturesContent extends Component {
       <View>
         <View style={styles.row}>
           <Icon colour={iconColour} name="home" size={iconSize} />
-          <Title style={styles.subtitle} text={features.theFeedTitle} />
+          <Title
+            style={styles.subtitle}
+            text={features.theFeedTitle}
+            bold={false}
+          />
         </View>
         <Text style={styles.text}>{features.theFeedBody}</Text>
 
         <View style={styles.row}>
           <Icon colour={iconColour} name="comments" size={iconSize} />
-          <Title style={styles.subtitle} text={features.joinDiscussionTitle} />
+          <Title
+            style={styles.subtitle}
+            text={features.joinDiscussionTitle}
+            bold={false}
+          />
         </View>
         <Text style={styles.text}>{features.joinDiscussionBody}</Text>
 
@@ -47,8 +55,6 @@ const styles = StyleSheet.create({
     marginTop: layout.spacing,
   },
   subtitle: {
-    fontStyle: "italic",
-    fontWeight: "normal",
     marginBottom: 0,
     paddingLeft: layout.spacing,
   },

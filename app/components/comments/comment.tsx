@@ -51,7 +51,7 @@ class Comment extends Component<Props> {
           </View>
 
           <View>
-            {title && <Title text={title} small />}
+            {title && <Title text={title} small bold />}
             {content && <Text>{content}</Text>}
           </View>
         </View>
