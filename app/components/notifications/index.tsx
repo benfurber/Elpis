@@ -5,7 +5,7 @@ import { Badge, Query, Title } from "components";
 import { NavigationType, Notification as NotificationType } from "interfaces";
 import { labels } from "labels";
 import { NOTIFICATIONS } from "queries";
-import { layout, typography } from "styles";
+import { colours, layout, typography } from "styles";
 
 import { Notification } from "./notification";
 
@@ -43,7 +43,9 @@ class Notifications extends Component<Props> {
     } = labels.notifications;
     const length = notifications.length;
 
-    const badge = <Badge left={65} number={notifications.length} />;
+    const badge = (
+      <Badge colour={colours.red} left={65} number={notifications.length} />
+    );
 
     if (length > 0) {
       const multiple = type === "new" ? newMultiple : oldMultiple;

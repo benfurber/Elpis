@@ -19,6 +19,16 @@ exports[`Icon when given a number larger than zero renders correctly when static
 </View>
 `;
 
+exports[`Icon when given custom colour renders null 1`] = `
+<View>
+  <Badge
+    colour="rgb(208,2,27)"
+    left={15}
+    number={0}
+  />
+</View>
+`;
+
 exports[`Icon when given zero renders null 1`] = `
 <View>
   <Badge

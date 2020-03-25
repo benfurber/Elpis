@@ -21,7 +21,14 @@ const routeNameIcon = {
 function NotificationBadge() {
   const { data } = useQuery(NOTIFICATIONS_UNREAD);
 
-  if (data) return <Badge left={20} number={data.me.unreadNotifications} />;
+  if (data)
+    return (
+      <Badge
+        colour={colours.red}
+        left={20}
+        number={data.me.unreadNotifications}
+      />
+    );
   return null;
 }
 

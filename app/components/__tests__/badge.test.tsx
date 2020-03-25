@@ -38,4 +38,16 @@ describe("Icon", () => {
       expect(component).toMatchSnapshot();
     });
   });
+
+  describe("when given custom colour", () => {
+    it("renders null", () => {
+      const component = shallow(
+        <View>
+          <Badge left={15} number={0} colour="rgb(208,2,27)" />
+        </View>,
+      );
+
+      expect(component).toMatchSnapshot();
+    });
+  });
 });
