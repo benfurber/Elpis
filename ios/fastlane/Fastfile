@@ -28,13 +28,13 @@ platform :ios do
       scheme: "Elpis - Production",
       export_xcargs: "-allowProvisioningUpdates",
     )
-    
-    add_git_tag
-    push_to_git_remote
 
     upload_to_testflight(
       uses_non_exempt_encryption: true,
       reject_build_waiting_for_review: true,
     )
+
+    add_git_tag
+    push_to_git_remote
   end
 end
