@@ -63,7 +63,7 @@ class FormAddProfilePicture extends Component<Props, State> {
         progressPercentage,
       });
 
-    this.setState({ uploadCondition: "uploading" });
+    this.setState({ message: null, uploadCondition: "uploading" });
     try {
       sendImage({
         bucket: "elpis-profile-images",
