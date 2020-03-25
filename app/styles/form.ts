@@ -16,14 +16,14 @@ const form = StyleSheet.create({
     paddingTop: layout.spacingL,
   },
   text: {
-    fontFamily: "creteround-regular",
+    fontFamily: "Dosis-ExtraLight",
     fontSize: typography.fontSizeL,
     padding: layout.spacingL,
     width: "100%",
   },
   title: {
     flexWrap: "wrap",
-    fontFamily: "creteround-regular",
+    fontFamily: "Dosis-ExtraLight",
     fontSize: typography.fontSizeL,
     padding: layout.spacingL,
   },

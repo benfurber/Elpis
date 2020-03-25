@@ -31,8 +31,9 @@ const styles = StyleSheet.create({
   text: {
     alignSelf: "flex-end",
     color: colours.darkGrey,
-    fontFamily: "creteround-regular",
+    fontFamily: "Dosis-ExtraLight",
     fontSize: 32,
+    fontWeight: "600",
     marginLeft: layout.spacing,
     textAlign: "center",
   },

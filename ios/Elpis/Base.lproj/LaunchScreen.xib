@@ -10,28 +10,21 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB">
-            <rect key="frame" x="0.0" y="0.0" width="480" height="480"/>
+            <rect key="frame" x="0.0" y="0.0" width="280" height="120"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LaunchScreen" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="o7j-kK-T9u">
-                    <rect key="frame" x="0.0" y="0.0" width="480" height="480"/>
-                    <constraints>
-                        <constraint firstAttribute="width" secondItem="o7j-kK-T9u" secondAttribute="height" multiplier="1:1" id="ryn-1p-IpL"/>
-                    </constraints>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="LaunchScreen" translatesAutoresizingMaskIntoConstraints="NO" id="uwl-eG-mig">
+                    <rect key="frame" x="0.0" y="0.0" width="280" height="120"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                 </imageView>
             </subviews>
-            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-            <constraints>
-                <constraint firstAttribute="bottom" secondItem="o7j-kK-T9u" secondAttribute="bottom" id="911-aX-Eee"/>
-                <constraint firstItem="o7j-kK-T9u" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="IBK-Gy-tHO"/>
-                <constraint firstItem="o7j-kK-T9u" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="KFn-tX-rwM"/>
-            </constraints>
+            <color key="backgroundColor" red="0.77647058823529413" green="0.83529411764705885" blue="0.88235294117647056" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <point key="canvasLocation" x="547.82608695652175" y="454.6875"/>
+            <point key="canvasLocation" x="411.59420289855075" y="333.48214285714283"/>
         </view>
     </objects>
     <resources>
-        <image name="LaunchScreen" width="320" height="480"/>
+        <image name="LaunchScreen" width="280" height="120"/>
     </resources>
 </document>

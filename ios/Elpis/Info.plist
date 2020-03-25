@@ -35,10 +35,10 @@
 	</array>
 	<key>CFBundleVersion</key>
 	<string>22</string>
-	<key>LSRequiresIPhoneOS</key>
-	<true/>
 	<key>ITSAppUsesNonExemptEncryption</key>
 	<false/>
+	<key>LSRequiresIPhoneOS</key>
+	<true/>
 	<key>NSAppTransportSecurity</key>
 	<dict>
 		<key>NSAllowsArbitraryLoads</key>
@@ -52,12 +52,12 @@
 			</dict>
 		</dict>
 	</dict>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>So that users can connect to the app's main api for all content and user data.</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>So that users can connect to the app's main api for all content and user data.</string>
 	<key>NSPhotoLibraryUsageDescription</key>
 	<string>So that you can select photos for us to use on the platform.</string>
-	<key>NSLocationAlwaysUsageDescription</key>
-	<string>So that users can connect to the app&apos;s main api for all content and user data.</string>
-	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>So that users can connect to the app&apos;s main api for all content and user data.</string>
 	<key>UIAppFonts</key>
 	<array>
 		<string>fa-solid-900.ttf</string>
@@ -83,6 +83,7 @@
 		<string>lato-italic.ttf</string>
 		<string>lato-regular.ttf</string>
 		<string>Fontisto.ttf</string>
+		<string>Dosis-ExtraLight.ttf</string>
 	</array>
 	<key>UIBackgroundModes</key>
 	<array>

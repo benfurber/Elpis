@@ -69,9 +69,9 @@ const styles = StyleSheet.create({
     color: colours.navyBlueDark,
   },
   title: {
-    fontFamily: "creteround-regular",
+    fontFamily: "Dosis-ExtraLight",
     fontSize: typography.fontSize,
-    fontWeight: "normal",
+    fontWeight: "500",
   },
 });
 

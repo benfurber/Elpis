@@ -11,28 +11,21 @@ interface Props {
 }
 
 const Title = (props: Props) => {
-  const fontSize = () => {
-    if (props.small) {
-      return typography.fontSize;
-    }
-    if (props.large) {
-      return typography.fontSizeXL;
-    }
-    return typography.fontSizeL;
-  };
+  const { fontSize, fontSizeL, fontSizeXL } = typography;
+  const { small, large } = props;
 
-  return (
-    <Text style={[styles.title, { fontSize: fontSize() }, props.style]}>
-      {props.text}
-    </Text>
-  );
+  const size = (small && fontSize) || (large && fontSizeXL) || fontSizeL;
+
+  const styles = StyleSheet.create({
+    title: {
+      fontFamily: "Dosis-ExtraLight",
+      fontSize: size,
+      fontWeight: small ? "500" : "600",
+      marginBottom: layout.spacingS,
+    },
+  });
+
+  return <Text style={[styles.title, props.style]}>{props.text}</Text>;
 };
-
-const styles = StyleSheet.create({
-  title: {
-    fontFamily: "creteround-regular",
-    marginBottom: layout.spacingS,
-  },
-});
 
 export { Title };

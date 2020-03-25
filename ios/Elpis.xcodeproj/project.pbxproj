@@ -16,6 +16,7 @@
 		20BE7BA72C324D1BB9D6701E /* creteround-italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9AF282CCAEA24A0A80785647 /* creteround-italic.ttf */; };
 		253584B0237C814000F7C7D8 /* NotificationService.m in Sources */ = {isa = PBXBuildFile; fileRef = 253584AF237C814000F7C7D8 /* NotificationService.m */; };
 		253584B4237C814000F7C7D8 /* OneSignalNotificationServiceExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 253584AC237C814000F7C7D8 /* OneSignalNotificationServiceExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		25ED0E54242AB0BE0040678B /* Dosis-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 25ED0E53242AB0BE0040678B /* Dosis-ExtraLight.ttf */; };
 		2D02E4BC1E0B4A80006451C7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		2D02E4BD1E0B4A84006451C7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		2D02E4BF1E0B4AB3006451C7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
@@ -86,6 +87,7 @@
 		253584AF237C814000F7C7D8 /* NotificationService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NotificationService.m; sourceTree = "<group>"; };
 		253584B1237C814000F7C7D8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		253584B9237C823900F7C7D8 /* OneSignalNotificationServiceExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = OneSignalNotificationServiceExtension.entitlements; sourceTree = "<group>"; };
+		25ED0E53242AB0BE0040678B /* Dosis-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Dosis-ExtraLight.ttf"; path = "../app/assets/fonts/Dosis-ExtraLight.ttf"; sourceTree = "<group>"; };
 		2D02E47B1E0B4A5D006451C7 /* Elpis-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Elpis-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D02E4901E0B4A5D006451C7 /* Elpis-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Elpis-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		351D499A3C3AAD00FAE03097 /* libPods-Elpis.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Elpis.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -259,6 +261,7 @@
 			children = (
 				9AF282CCAEA24A0A80785647 /* creteround-italic.ttf */,
 				A24F7C6C7448424BA8F0C120 /* creteround-regular.ttf */,
+				25ED0E53242AB0BE0040678B /* Dosis-ExtraLight.ttf */,
 				F72D6AC4A5CE41509394CFF7 /* fa-solid-900.ttf */,
 				C587B699423A4587831B8699 /* lato-bold.ttf */,
 				FC922C9E387A443EA23379DD /* lato-bolditalic.ttf */,
@@ -444,6 +447,7 @@
 				20BE7BA72C324D1BB9D6701E /* creteround-italic.ttf in Resources */,
 				D12F49B163B94D95ADA32EF8 /* creteround-regular.ttf in Resources */,
 				F10EBFDF7BC049179B01AE03 /* fa-solid-900.ttf in Resources */,
+				25ED0E54242AB0BE0040678B /* Dosis-ExtraLight.ttf in Resources */,
 				3DD59D4DAF704AB3BF69A9F3 /* lato-bold.ttf in Resources */,
 				1DD63E5C1A96416B8561D641 /* lato-bolditalic.ttf in Resources */,
 				3C3B0BC73F5345B7A6C13DCF /* lato-italic.ttf in Resources */,
