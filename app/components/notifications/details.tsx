@@ -5,7 +5,7 @@ import FlexImage from "react-native-flex-image";
 import { Icon } from "components";
 import { Notification } from "interfaces";
 import { colours, layout } from "styles";
-import { firstSentence, validURL } from "utils";
+import { validURL } from "utils";
 
 interface Props {
   item: Notification;
@@ -39,11 +39,20 @@ class Details extends Component<Props> {
     }
   }
 
+  displayText() {
+    const { post, reply } = this.props.item.content;
+    const text = reply ? reply.content : post.content;
+    const characterLimit = 250;
+
+    if (!text || text.length < characterLimit) return text;
+
+    return text.substring(0, characterLimit) + "...";
+  }
+
   render() {
     const { content, newNotification } = this.props.item;
     const { post, reply } = content;
 
-    const text = reply ? reply.content : post.content;
     const title = !reply ? post.title : null;
 
     if (newNotification) {
@@ -52,7 +61,7 @@ class Details extends Component<Props> {
           {this.contentPrefix()}
           <View style={styles.textContainer}>
             {title && <Text style={[styles.text, styles.bold]}>{title}</Text>}
-            {text && <Text style={styles.text}>{firstSentence(text)}</Text>}
+            <Text style={styles.text}>{this.displayText()}</Text>
           </View>
         </View>
       );
