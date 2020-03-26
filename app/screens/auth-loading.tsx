@@ -32,8 +32,6 @@ class AuthLoadingScreen extends Component<Props> {
     });
     Analytics.identifyUser(data.me.id);
 
-    console.log(data.me);
-
     return navigate(data.me.onboarded ? "Main" : "Onboarding");
   }
 
