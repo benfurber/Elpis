@@ -14,7 +14,7 @@ class ButtonLogout extends Component<Props> {
   onPress = async () => {
     try {
       await AsyncStorage.removeItem("token");
-      this.props.navigation.navigate("Welcome");
+      this.props.navigation.navigate("Login");
     } catch (error) {
       bugTracker.notify(error);
       console.error(error);

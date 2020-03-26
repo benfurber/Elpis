@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`WelcomeScreen renders correctly 1`] = `
+exports[`LoginScreen renders correctly 1`] = `
 <BackgroundContainer>
   <KeyboardAwareScrollViewMock
     contentContainerStyle={

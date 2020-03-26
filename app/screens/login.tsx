@@ -11,7 +11,7 @@ interface Props {
   navigation: NavigationType;
 }
 
-class WelcomeScreen extends Component<Props> {
+class LoginScreen extends Component<Props> {
   componentDidMount() {
     Analytics.track("Login");
   }
@@ -48,4 +48,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export { WelcomeScreen };
+export { LoginScreen };

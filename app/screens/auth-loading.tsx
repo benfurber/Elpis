@@ -17,7 +17,7 @@ class AuthLoadingScreen extends Component<Props> {
     const token = await AsyncStorage.getItem("token");
 
     if (token === null) {
-      return navigate("Welcome");
+      return navigate("Login");
     }
 
     this.callClient();
