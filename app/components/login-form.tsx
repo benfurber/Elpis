@@ -87,6 +87,8 @@ class LoginForm extends Component<Props, State> {
   render() {
     const { email, display, password } = this.state;
 
+    const fieldsPopulated = (email.length && password.length) > 0;
+
     return (
       <View style={styles.container}>
         {this.renderErrorMessage()}
@@ -125,7 +127,7 @@ class LoginForm extends Component<Props, State> {
               </View>
               <View style={styles.row}>
                 <ButtonSubmit
-                  display={display}
+                  display={fieldsPopulated ? display : "loading"}
                   label={labels.login}
                   onPress={() => this.onPress(login)}
                 />
@@ -142,7 +144,6 @@ const styles = StyleSheet.create({
   container: {
     alignItems: "flex-end",
     flexDirection: "column",
-    padding: layout.spacingXL,
   },
   containerErrorMessage: {
     backgroundColor: colours.redTransparent,

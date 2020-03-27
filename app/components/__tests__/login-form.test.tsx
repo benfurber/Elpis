@@ -16,6 +16,16 @@ describe("LoginForm", () => {
     });
   });
 
+  describe("when email and password are set", () => {
+    it("renders correctly", () => {
+      const component = shallow(<LoginForm navigation={navigation} />);
+
+      component.setState({ email: "me@me.com", password: "1234" });
+
+      expect(component).toMatchSnapshot();
+    });
+  });
+
   describe("when loading", () => {
     it("renders correctly", () => {
       const component = shallow(<LoginForm navigation={navigation} />);
