@@ -64,6 +64,14 @@ export const LOGIN_USER = gql`
   }
 `;
 
+export const REQUEST_PASSWORD_RESET = gql`
+  mutation RequestPasswordReset($email: String!) {
+    requestPasswordReset(email: $email) {
+      id
+    }
+  }
+`;
+
 export const UPDATE_COMMENT = gql`
   mutation updateComment($content: String, $id: ID!, $title: String) {
     updateComment(content: $content, id: $id, title: $title) {

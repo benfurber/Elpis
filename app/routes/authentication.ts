@@ -3,6 +3,7 @@ import { createSwitchNavigator } from "react-navigation";
 import {
   AuthLoadingScreen as AuthLoading,
   LoginScreen as Login,
+  RequestNewPasswordScreen as RequestNewPassword,
 } from "screens";
 
 import { stackConfig } from "./config";
@@ -15,6 +16,7 @@ const options = {
 const screens = {
   AuthLoading,
   Login,
+  RequestNewPassword,
 };
 
 const Authentication = createSwitchNavigator(screens, options);
