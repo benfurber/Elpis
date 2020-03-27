@@ -29,12 +29,29 @@ exports[`LoginScreen renders correctly 1`] = `
     <View
       style={
         Object {
-          "alignItems": "center",
+          "alignItems": "flex-end",
           "flex": 6,
+          "padding": 40,
         }
       }
     >
       <LoginForm />
+      <TouchableOpacity
+        activeOpacity={0.2}
+        onPress={[Function]}
+      >
+        <Text
+          style={
+            Object {
+              "color": "rgb(51, 51, 51)",
+              "marginLeft": 5,
+              "textDecorationLine": "underline",
+            }
+          }
+        >
+          Esqueci a minha senha
+        </Text>
+      </TouchableOpacity>
     </View>
   </KeyboardAwareScrollViewMock>
 </BackgroundContainer>
