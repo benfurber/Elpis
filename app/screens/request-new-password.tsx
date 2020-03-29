@@ -49,9 +49,10 @@ class RequestNewPasswordScreen extends Component<Props, State> {
 
           <View style={styles.form}>
             <Title style={styles.title} text={title} large />
-            <Title style={styles.subtitle} text={subtitle} bold={false} />
             {!requested && (
               <Fragment>
+                <Title style={styles.subtitle} text={subtitle} bold={false} />
+
                 <FormRequestPasswordReset
                   navigation={navigation}
                   setRequestedState={requested => this.setState({ requested })}
