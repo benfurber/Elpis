@@ -1,5 +1,7 @@
 import React, { Component } from "react";
-import { Animated, StyleSheet, TouchableOpacity } from "react-native";
+import { Animated, StyleSheet } from "react-native";
+
+import { TouchableOpacity } from "react-native-gesture-handler";
 
 import { Icon, Title } from "components";
 import { Comment, NavigationType, Post } from "interfaces";
@@ -18,8 +20,8 @@ interface State {
 
 class ButtonAddReply extends Component<Props, State> {
   state = {
-    fade: new Animated.Value(0),
     delay: new Animated.Value(0),
+    fade: new Animated.Value(0),
   };
 
   componentDidMount() {
@@ -28,13 +30,13 @@ class ButtonAddReply extends Component<Props, State> {
 
   animate() {
     const delayTiming = {
-      toValue: 1,
       duration: 2000,
+      toValue: 1,
     };
 
     const timing = {
-      toValue: 0.85,
       duration: 1000,
+      toValue: 0.85,
     };
 
     Animated.sequence([
@@ -49,7 +51,7 @@ class ButtonAddReply extends Component<Props, State> {
     const { commentId, postId } = this.props;
     const screen = commentId ? "AddReply" : "AddTopic";
 
-    return this.props.navigation.navigate(screen, { postId, commentId });
+    return this.props.navigation.navigate(screen, { commentId, postId });
   }
 
   render() {
@@ -59,7 +61,7 @@ class ButtonAddReply extends Component<Props, State> {
     const text = commentId ? labels.addYourReply : labels.addNewTopic;
 
     return (
-      <Animated.View style={{ opacity: fade }}>
+      <Animated.View style={[styles.container, { opacity: fade }]}>
         <TouchableOpacity style={styles.button} onPress={() => this.onPress()}>
           <Icon style={styles.icon} name="comment-medical" />
           <Title text={text} style={styles.buttonText} small />
@@ -68,21 +70,25 @@ class ButtonAddReply extends Component<Props, State> {
     );
   }
 }
+
 const styles = StyleSheet.create({
   button: {
+    flexDirection: "row",
+  },
+  buttonText: {
+    color: colours.pureWhite,
+  },
+  container: {
     backgroundColor: colours.navyBlueDark,
     borderRadius: layout.borderRadiusL,
     bottom: layout.spacing,
     flexDirection: "row",
-    margin: layout.spacing,
-    paddingVertical: layout.spacing,
-    paddingHorizontal: layout.spacing * 1.5,
-    position: "absolute",
     left: layout.spacingS,
+    margin: layout.spacing,
+    paddingHorizontal: layout.spacing * 1.5,
+    paddingVertical: layout.spacing,
+    position: "absolute",
     zIndex: 1,
-  },
-  buttonText: {
-    color: colours.pureWhite,
   },
   icon: {
     color: colours.pureWhite,

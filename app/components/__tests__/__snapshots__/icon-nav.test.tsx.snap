@@ -3,6 +3,12 @@
 exports[`IconNav renders correctly when active 1`] = `
 <TouchableOpacity
   activeOpacity={0.2}
+  delayLongPress={600}
+  extraButtonProps={
+    Object {
+      "rippleColor": "transparent",
+    }
+  }
   onPress={[Function]}
 >
   <customIcon
@@ -20,6 +26,12 @@ exports[`IconNav renders correctly when active 1`] = `
 exports[`IconNav renders correctly when inactive 1`] = `
 <TouchableOpacity
   activeOpacity={0.2}
+  delayLongPress={600}
+  extraButtonProps={
+    Object {
+      "rippleColor": "transparent",
+    }
+  }
   onPress={[Function]}
 >
   <customIcon

@@ -1,5 +1,7 @@
 import React, { Component } from "react";
-import { ScrollView, StyleSheet, TouchableOpacity, View } from "react-native";
+import { ScrollView, StyleSheet, View } from "react-native";
+
+import { TouchableOpacity } from "react-native-gesture-handler";
 
 import { BackgroundContainer, ButtonSubmit, Icon, Title } from "components";
 import { NavigationType } from "interfaces";

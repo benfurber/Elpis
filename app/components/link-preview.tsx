@@ -1,6 +1,8 @@
 import React from "react";
-import { Image, StyleSheet, Text, TouchableOpacity, View } from "react-native";
+import { Image, StyleSheet, Text, View } from "react-native";
+
 import { useQuery } from "@apollo/react-hooks";
+import { TouchableOpacity } from "react-native-gesture-handler";
 
 import { Title } from "components";
 import { NavigationType } from "interfaces";
@@ -57,8 +59,8 @@ const styles = StyleSheet.create({
     backgroundColor: colours.emeraldGreen,
     borderRadius: layout.borderRadius,
     flexDirection: "row",
-    padding: layout.spacingS,
     marginBottom: layout.spacing,
+    padding: layout.spacingS,
   },
   containerText: {
     flex: 1,
