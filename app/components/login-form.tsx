@@ -12,6 +12,7 @@ import { LOGIN_USER } from "mutations";
 import { bugTracker } from "utils";
 
 interface Props {
+  error?: null | { message: string };
   navigation: NavigationType;
 }
 interface State {
@@ -30,6 +31,13 @@ class LoginForm extends Component<Props, State> {
       errorMessage: null,
       password: "",
     };
+  }
+
+  componentDidMount() {
+    const { error } = this.props;
+    if (error) {
+      this.setError(error);
+    }
   }
 
   secondInput = TextInput as any;

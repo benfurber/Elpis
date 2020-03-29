@@ -48,4 +48,15 @@ describe("LoginForm", () => {
       expect(component).toMatchSnapshot();
     });
   });
+
+  describe("when provided an error prop", () => {
+    it("renders correctly", () => {
+      const error = { message: "Problem with the API" };
+      const component = shallow(
+        <LoginForm error={error} navigation={navigation} />,
+      );
+
+      expect(component).toMatchSnapshot();
+    });
+  });
 });
