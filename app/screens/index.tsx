@@ -17,6 +17,7 @@ export { OnboardingFinalScreen } from "./onboarding-final";
 export { OnboardingWelcomeScreen } from "./onboarding-welcome";
 export { PostScreen } from "./post";
 export { RequestNewPasswordScreen } from "./request-new-password";
+export { ResetPasswordScreen } from "./reset-password";
 export { StaticContentScreen } from "./static-content";
 export { UserProfileScreen } from "./user-profile";
 export { WebBrowserScreen } from "./web-browser";

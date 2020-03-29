@@ -12,6 +12,7 @@ const screens = {
 
 const options = {
   initialRouteName: "Authentication",
+  path: "",
 };
 
 const Root = createSwitchNavigator(screens, options);
