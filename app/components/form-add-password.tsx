@@ -5,13 +5,14 @@ import { Mutation } from "react-apollo";
 import { ButtonSubmit, MessageBox, TextInput } from "components";
 import { NavigationType } from "interfaces";
 import { labels } from "labels";
-import { UPDATE_USER_PASSWORD } from "mutations";
+import { RESET_PASSWORD, UPDATE_USER_PASSWORD } from "mutations";
 import { layout } from "styles";
 import { checkPasswordStrength } from "utils";
 
 interface Props {
+  extraProps?: { id: string; passwordRequest: string };
   navigation: NavigationType;
-  onPress: () => void;
+  onPress: (string?) => void;
 }
 
 interface State {
@@ -36,17 +37,26 @@ class FormAddPassword extends Component<Props, State> {
 
   secondInput = TextInput as any;
 
-  onPress(mutation) {
+  async onPress(mutation) {
+    const { extraProps, onPress } = this.props;
+    const { password } = this.state;
+
     if (this.passwordChecks()) {
-      this.setState({ display: "loading" });
-      mutation({
-        variables: {
-          password: this.state.password,
-        },
-      }).then(() => {
+      try {
+        this.setState({ display: "loading" });
+        const result = await mutation({
+          variables: {
+            password,
+            ...extraProps,
+          },
+        });
         this.setState({ display: "active" });
-        return this.props.onPress();
-      });
+        const token = result.data.resetPassword.token;
+
+        return token ? onPress(token) : onPress();
+      } catch (error) {
+        this.passwordError(error.message);
+      }
     }
   }
 
@@ -107,6 +117,7 @@ class FormAddPassword extends Component<Props, State> {
   }
 
   render() {
+    const { extraProps } = this.props;
     const {
       display,
       displayMessage,
@@ -115,9 +126,11 @@ class FormAddPassword extends Component<Props, State> {
       passwordRepeat,
     } = this.state;
 
+    const mutation = extraProps ? RESET_PASSWORD : UPDATE_USER_PASSWORD;
+
     return (
-      <Mutation mutation={UPDATE_USER_PASSWORD}>
-        {(updatePassword, {}) => (
+      <Mutation mutation={mutation}>
+        {(mutate, {}) => (
           <View>
             <MessageBox display={displayMessage} message={message} />
 
@@ -146,7 +159,7 @@ class FormAddPassword extends Component<Props, State> {
                 onChangeText={passwordRepeat =>
                   this.setState({ passwordRepeat })
                 }
-                onSubmitEditing={() => this.onPress(updatePassword)}
+                onSubmitEditing={() => this.onPress(mutate)}
                 placeholder={labels.password.repeat}
                 returnKeyLabel={labels.submit}
                 returnKeyType="send"
@@ -160,7 +173,7 @@ class FormAddPassword extends Component<Props, State> {
               <ButtonSubmit
                 display={display}
                 label={labels.formButton}
-                onPress={() => this.onPress(updatePassword)}
+                onPress={() => this.onPress(mutate)}
               />
             </View>
           </View>
