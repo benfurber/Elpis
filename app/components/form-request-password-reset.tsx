@@ -2,77 +2,56 @@ import React, { Component, Fragment } from "react";
 import { StyleSheet, View } from "react-native";
 
 import { Mutation } from "react-apollo";
-import AsyncStorage from "@react-native-community/async-storage";
 
 import { ButtonSubmit, ErrorMessage, TextInput } from "components";
 import { NavigationType } from "interfaces";
 import { labels } from "labels";
 import { colours, layout } from "styles";
-import { LOGIN_USER } from "mutations";
+import { REQUEST_PASSWORD_RESET } from "mutations";
 import { bugTracker } from "utils";
 
 interface Props {
-  error?: null | { message: string };
   navigation: NavigationType;
+  setRequestedState: (boolean) => void;
 }
+
 interface State {
   display: "active" | "error" | "loading";
   email: string;
   errorMessage: null | { message: string };
-  password: string;
 }
 
-class LoginForm extends Component<Props, State> {
+class FormRequestPasswordReset extends Component<Props, State> {
   constructor(props) {
     super(props);
     this.state = {
       display: "active",
       email: "",
       errorMessage: null,
-      password: "",
     };
   }
 
-  componentDidMount() {
-    const { error } = this.props;
-    if (error) {
-      this.setError(error);
-    }
-  }
-
-  secondInput = TextInput as any;
-
-  storeToken = async token => {
-    try {
-      await AsyncStorage.setItem("token", token);
-      this.props.navigation.navigate("AuthLoading");
-    } catch (error) {
-      console.log(error);
-    }
-  };
-
   setError(error) {
     if (error) {
+      console.log({ error });
       bugTracker.notify(error);
       return this.setState({
         display: "error",
         errorMessage: error,
-        password: "",
       });
     }
   }
 
   onPress(login) {
-    const { email, password } = this.state;
+    const { email } = this.state;
     this.setState({ display: "loading" });
 
     login({
-      variables: { email, password },
+      variables: { email },
     })
       .then(result => {
         if (!result.errors) {
-          const token = result.data.login.token;
-          this.storeToken(token);
+          this.props.setRequestedState(true);
         } else {
           this.setError(result.errors);
         }
@@ -93,15 +72,13 @@ class LoginForm extends Component<Props, State> {
   }
 
   render() {
-    const { email, display, password } = this.state;
-
-    const fieldsPopulated = (email.length && password.length) > 0;
+    const { email, display } = this.state;
 
     return (
       <View style={styles.container}>
         {this.renderErrorMessage()}
 
-        <Mutation mutation={LOGIN_USER}>
+        <Mutation mutation={REQUEST_PASSWORD_RESET}>
           {login => (
             <Fragment>
               <View style={styles.row}>
@@ -111,31 +88,17 @@ class LoginForm extends Component<Props, State> {
                   displayStyle={display}
                   keyboardType="email-address"
                   onChangeText={email => this.setState({ email })}
-                  onSubmitEditing={() => this.secondInput.focus()}
+                  onSubmitEditing={() => this.onPress(login)}
                   placeholder={labels.email}
-                  returnKeyLabel={labels.next}
-                  returnKeyType="next"
+                  returnKeyLabel={"Send"}
+                  returnKeyType="send"
                   textContentType="emailAddress"
                   value={email}
                 />
               </View>
               <View style={styles.row}>
-                <TextInput
-                  displayStyle={display}
-                  onChangeText={password => this.setState({ password })}
-                  onSubmitEditing={() => this.onPress(login)}
-                  placeholder={labels.password.password}
-                  secureTextEntry
-                  forwardedRef={input => (this.secondInput = input)}
-                  returnKeyLabel={labels.login}
-                  returnKeyType="send"
-                  textContentType="password"
-                  value={password}
-                />
-              </View>
-              <View style={styles.row}>
                 <ButtonSubmit
-                  display={fieldsPopulated ? display : "loading"}
+                  display={email.length > 0 ? display : "loading"}
                   label={labels.login}
                   onPress={() => this.onPress(login)}
                 />
@@ -165,4 +128,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export { LoginForm };
+export { FormRequestPasswordReset };

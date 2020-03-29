@@ -1,17 +1,18 @@
 import { StyleSheet } from "react-native";
 
+import { typography } from "./typography";
 import { colours } from "styles";
 
 const standard = StyleSheet.create({
   basicInputField: {
     backgroundColor: colours.pureWhite,
+    borderColor: colours.whiteTransparentHigh,
     borderRadius: 5,
+    borderWidth: 2,
+    color: colours.darkGrey,
     flex: 1,
     height: 40,
     padding: 10,
-    borderColor: colours.whiteTransparentHigh,
-    borderWidth: 2,
-    color: colours.darkGrey,
   },
   image: {
     backgroundColor: colours.emeraldGreen,
@@ -20,24 +21,11 @@ const standard = StyleSheet.create({
 });
 
 const elements = StyleSheet.create({
-  standardText: {
-    fontFamily: "lato-regular",
-  },
   button: {
     backgroundColor: colours.emeraldGreen,
     borderRadius: 100,
     paddingHorizontal: 20,
     paddingVertical: 10,
-  },
-  textDate: {
-    color: colours.darkGrey,
-    fontStyle: "italic",
-  },
-  imageRoundSmall: {
-    ...standard.image,
-    borderRadius: 23,
-    height: 45,
-    width: 45,
   },
   imageRound: {
     ...standard.image,
@@ -57,11 +45,25 @@ const elements = StyleSheet.create({
     height: 60,
     width: 60,
   },
+  imageRoundSmall: {
+    ...standard.image,
+    borderRadius: 23,
+    height: 45,
+    width: 45,
+  },
   imageRoundXL: {
     ...standard.image,
     borderRadius: 35,
     height: 70,
     width: 70,
+  },
+  standardText: {
+    fontFamily: "lato-regular",
+    fontSize: typography.fontSize,
+  },
+  textDate: {
+    color: colours.darkGrey,
+    fontStyle: "italic",
   },
   textInputField: standard.basicInputField,
   textInputFieldError: {

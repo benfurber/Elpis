@@ -18,6 +18,7 @@ export { DisplayContent } from "./display-content";
 export { ErrorMessage } from "./error-message";
 export { FormAddProfilePicture } from "./form-add-profile-picture";
 export { FormAddPassword } from "./form-add-password";
+export { FormRequestPasswordReset } from "./form-request-password-reset";
 export { IconDiscussionLevel } from "./icon-discussion-level";
 export { IconNav } from "./icon-nav";
 export { IconTabBar } from "./icon-tab-bar";

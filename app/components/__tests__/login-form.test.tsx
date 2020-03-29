@@ -16,6 +16,16 @@ describe("LoginForm", () => {
     });
   });
 
+  describe("when email and password are set", () => {
+    it("renders correctly", () => {
+      const component = shallow(<LoginForm navigation={navigation} />);
+
+      component.setState({ email: "me@me.com", password: "1234" });
+
+      expect(component).toMatchSnapshot();
+    });
+  });
+
   describe("when loading", () => {
     it("renders correctly", () => {
       const component = shallow(<LoginForm navigation={navigation} />);
@@ -34,6 +44,17 @@ describe("LoginForm", () => {
         display: "error",
         errorMessage: "PANIC! There's a problem!",
       });
+
+      expect(component).toMatchSnapshot();
+    });
+  });
+
+  describe("when provided an error prop", () => {
+    it("renders correctly", () => {
+      const error = { message: "Problem with the API" };
+      const component = shallow(
+        <LoginForm error={error} navigation={navigation} />,
+      );
 
       expect(component).toMatchSnapshot();
     });

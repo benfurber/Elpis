@@ -69,4 +69,21 @@ describe("FormAddPassword", () => {
       expect(component).toMatchSnapshot();
     });
   });
+
+  describe("when extra props are provided", () => {
+    it("renders correctly", () => {
+      const extraProps = { id: "349ugdfs", passwordRequest: "1234425wr" };
+      const onPress = () => jest.fn();
+
+      const component = shallow(
+        <FormAddPassword
+          extraProps={extraProps}
+          navigation={navigation}
+          onPress={onPress}
+        />,
+      );
+
+      expect(component).toMatchSnapshot();
+    });
+  });
 });

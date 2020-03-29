@@ -5,7 +5,10 @@ import { Title } from "components";
 import { colours, layout } from "styles";
 
 const labels = {
+  emailAddressNotFound:
+    "E-mail não cadastrado. Por favor, insira um e-mail válido e registrado no aplicativo.",
   error: "erro",
+  invalidPassword: "Senha inválida",
   networkRequestFailed:
     "Houve um problema de conexão.\rQuando a internet estiver conectada, reinicie o aplicativo.",
 };
@@ -18,11 +21,19 @@ interface Props {
 
 class ErrorMessage extends Component<Props> {
   message() {
-    const { message } = this.props.error;
+    let { message } = this.props.error;
 
-    if (message === "Network error: Network request failed") {
-      return labels.networkRequestFailed;
-    }
+    const messages = {
+      "Invalid password": labels.invalidPassword,
+      "Network request failed": labels.networkRequestFailed,
+      "No such user found for email": labels.emailAddressNotFound,
+    };
+
+    Object.keys(messages).forEach(key => {
+      if (message.includes(key)) {
+        message = messages[key];
+      }
+    });
 
     return message;
   }

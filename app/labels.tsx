@@ -13,6 +13,7 @@ const labels = {
     back: "Voltar",
     toCommunityBoard: "Voltar para o painel da comunidade",
     toFeed: "Voltar ao feed",
+    toLoginForm: "Voltar para o login",
     toMenu: "Voltar para o menu",
     toNotifications: "Voltar às notificações",
     toTopics: "Voltar aos tópicos",
@@ -112,6 +113,14 @@ const labels = {
       "Senha muito fraca. Deve incluir:\n" +
       "- 1+ letra maiúscula\n- 1+ letra minúscula\n- 1+ número",
     strengthMedium: "Senha quase forte o suficiente.",
+  },
+  passwordReset: {
+    request: {
+      cta: "Esqueci a minha senha",
+      requestSent: "Por favor, cheque o seu e-mail para resetar a sua senha.",
+      subtitle: "Insira o seu endereço de e-mail para receber uma nova senha.",
+      title: "Crie uma nova senha",
+    },
   },
   permissionRequestPhotoLibraryBody:
     "Elpis requer acesso ao seu álbum de fotos para atualizar sua imagem de perfil.",

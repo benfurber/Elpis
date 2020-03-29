@@ -4,7 +4,7 @@ import AsyncStorage from "@react-native-community/async-storage";
 import { ButtonMenuWrapper } from "components";
 import { NavigationType } from "interfaces";
 import { labels } from "labels";
-import { bugTracker } from "utils";
+import { bugTracker, client } from "utils";
 
 interface Props {
   navigation: NavigationType;
@@ -14,7 +14,9 @@ class ButtonLogout extends Component<Props> {
   onPress = async () => {
     try {
       await AsyncStorage.removeItem("token");
-      this.props.navigation.navigate("Welcome");
+      client.resetStore();
+
+      this.props.navigation.navigate("Login");
     } catch (error) {
       bugTracker.notify(error);
       console.error(error);

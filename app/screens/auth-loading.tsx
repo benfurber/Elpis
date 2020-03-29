@@ -1,49 +1,53 @@
-import React from "react";
+import React, { Component } from "react";
 import { StyleSheet, View } from "react-native";
 import AsyncStorage from "@react-native-community/async-storage";
-import { useQuery } from "@apollo/react-hooks";
 
 import { BackgroundContainer, Loading } from "components";
 import { NavigationType } from "interfaces";
 import { USER_DETAILS } from "queries";
-import { Analytics } from "utils";
+import { Analytics, client } from "utils";
 
 interface Props {
   navigation: NavigationType;
 }
 
-function AuthLoadingScreen(props: Props) {
-  const { navigate } = props.navigation;
-  const { loading, error, data } = useQuery(USER_DETAILS);
-
-  const getToken = async () => {
+class AuthLoadingScreen extends Component<Props> {
+  async componentDidMount() {
+    const { navigate } = this.props.navigation;
     const token = await AsyncStorage.getItem("token");
 
-    const feedRoute = ({ me }) => {
-      Analytics.identifyUser(me.id);
-      navigate(me.onboarded ? "Main" : "Onboarding");
-    };
-
-    if (token) {
-      if (loading) return <Loading />;
-      if (error) return navigate("Welcome");
-      if (data && data.me) {
-        return feedRoute(data);
-      }
+    if (token === null) {
+      return navigate("Login");
     }
 
-    return navigate("Welcome");
-  };
+    this.callClient();
+  }
 
-  getToken();
+  async callClient() {
+    const { navigate } = this.props.navigation;
 
-  return (
-    <BackgroundContainer>
-      <View style={styles.container}>
-        <Loading />
-      </View>
-    </BackgroundContainer>
-  );
+    try {
+      const { data } = await client.query({
+        fetchPolicy: "network-only",
+        query: USER_DETAILS,
+      });
+      Analytics.identifyUser(data.me.id);
+
+      return navigate(data.me.onboarded ? "Main" : "Onboarding");
+    } catch (error) {
+      navigate("Login", { error });
+    }
+  }
+
+  render() {
+    return (
+      <BackgroundContainer>
+        <View style={styles.container}>
+          <Loading />
+        </View>
+      </BackgroundContainer>
+    );
+  }
 }
 
 const styles = StyleSheet.create({
