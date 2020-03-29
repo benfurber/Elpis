@@ -26,13 +26,17 @@ class AuthLoadingScreen extends Component<Props> {
   async callClient() {
     const { navigate } = this.props.navigation;
 
-    const { data } = await client.query({
-      fetchPolicy: "network-only",
-      query: USER_DETAILS,
-    });
-    Analytics.identifyUser(data.me.id);
+    try {
+      const { data } = await client.query({
+        fetchPolicy: "network-only",
+        query: USER_DETAILS,
+      });
+      Analytics.identifyUser(data.me.id);
 
-    return navigate(data.me.onboarded ? "Main" : "Onboarding");
+      return navigate(data.me.onboarded ? "Main" : "Onboarding");
+    } catch (error) {
+      navigate("Login", { error });
+    }
   }
 
   render() {
