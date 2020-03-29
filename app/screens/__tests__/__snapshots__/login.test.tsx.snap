@@ -56,3 +56,67 @@ exports[`LoginScreen renders correctly 1`] = `
   </KeyboardAwareScrollViewMock>
 </BackgroundContainer>
 `;
+
+exports[`LoginScreen renders correctly when given an error 1`] = `
+<BackgroundContainer>
+  <KeyboardAwareScrollViewMock
+    contentContainerStyle={
+      Object {
+        "paddingTop": 40,
+      }
+    }
+    enableAutomaticScroll={true}
+    enableOnAndroid={false}
+    enableResetScrollToCoords={true}
+    extraHeight={75}
+    extraScrollHeight={0}
+    keyboardOpeningTime={250}
+    viewIsInsideTabBar={false}
+  >
+    <View
+      style={
+        Object {
+          "alignItems": "stretch",
+          "flex": 1,
+        }
+      }
+    >
+      <Logo />
+    </View>
+    <View
+      style={
+        Object {
+          "alignItems": "flex-end",
+          "flex": 6,
+          "padding": 40,
+        }
+      }
+    >
+      <LoginForm
+        error={
+          Object {
+            "message": "There was a problem",
+          }
+        }
+      />
+      <TouchableOpacity
+        activeOpacity={0.2}
+        onPress={[Function]}
+      >
+        <Text
+          style={
+            Object {
+              "color": "rgb(51, 51, 51)",
+              "marginLeft": 5,
+              "textDecorationLine": "underline",
+            }
+          }
+        >
+          There was a problem
+          Esqueci a minha senha
+        </Text>
+      </TouchableOpacity>
+    </View>
+  </KeyboardAwareScrollViewMock>
+</BackgroundContainer>
+`;

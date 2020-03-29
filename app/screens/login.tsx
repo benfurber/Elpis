@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
+
 import { KeyboardAwareScrollView } from "react-native-keyboard-aware-scroll-view";
+import { withMappedNavigationParams } from "react-navigation-props-mapper";
 
 import { BackgroundContainer, LoginForm, Logo } from "components";
 import { NavigationType } from "interfaces";
@@ -9,6 +11,7 @@ import { labels } from "labels";
 import { Analytics } from "utils";
 
 interface Props {
+  error?: null | { message: string };
   navigation: NavigationType;
 }
 
@@ -18,7 +21,7 @@ class LoginScreen extends Component<Props> {
   }
 
   render() {
-    const { navigation } = this.props;
+    const { error, navigation } = this.props;
 
     return (
       <BackgroundContainer>
@@ -27,11 +30,12 @@ class LoginScreen extends Component<Props> {
             <Logo />
           </View>
           <View style={styles.loginForm}>
-            <LoginForm navigation={navigation} />
+            <LoginForm error={error} navigation={navigation} />
             <TouchableOpacity
               onPress={() => navigation.navigate("RequestNewPassword")}
             >
               <Text style={styles.text}>
+                {error && error.message}
                 {labels.passwordReset.request.cta}
               </Text>
             </TouchableOpacity>
@@ -62,4 +66,8 @@ const styles = StyleSheet.create({
   },
 });
 
-export { LoginScreen };
+const wrappedLoginScreen = withMappedNavigationParams()(LoginScreen);
+export {
+  wrappedLoginScreen as LoginScreen,
+  LoginScreen as UnwrappedLoginScreen,
+};
