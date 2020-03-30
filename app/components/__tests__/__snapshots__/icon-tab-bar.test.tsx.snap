@@ -5,7 +5,7 @@ exports[`IconTabBar Feed renders correctly when focused 1`] = `
   <customIcon
     colour="rgb(51, 51, 51)"
     name="home"
-    size={30}
+    size={25}
     solid={true}
   />
 </View>
@@ -16,7 +16,7 @@ exports[`IconTabBar Feed renders correctly when not focused 1`] = `
   <customIcon
     colour="rgba(51,51,51,0.65)"
     name="home"
-    size={30}
+    size={25}
     solid={true}
   />
 </View>
@@ -27,7 +27,7 @@ exports[`IconTabBar Feedback renders correctly when focused 1`] = `
   <customIcon
     colour="rgb(51, 51, 51)"
     name="custom-thumbs"
-    size={30}
+    size={25}
     solid={true}
   />
 </View>
@@ -38,7 +38,7 @@ exports[`IconTabBar Feedback renders correctly when not focused 1`] = `
   <customIcon
     colour="rgba(51,51,51,0.65)"
     name="custom-thumbs"
-    size={30}
+    size={25}
     solid={true}
   />
 </View>
@@ -49,7 +49,7 @@ exports[`IconTabBar Notification renders correctly when focused 1`] = `
   <customIcon
     colour="rgb(51, 51, 51)"
     name="bell"
-    size={30}
+    size={25}
     solid={true}
   />
   <NotificationBadge />
@@ -61,7 +61,7 @@ exports[`IconTabBar Notification renders correctly when not focused 1`] = `
   <customIcon
     colour="rgba(51,51,51,0.65)"
     name="bell"
-    size={30}
+    size={25}
     solid={true}
   />
   <NotificationBadge />
@@ -73,7 +73,7 @@ exports[`IconTabBar Settings renders correctly when focused 1`] = `
   <customIcon
     colour="rgb(51, 51, 51)"
     name="bars"
-    size={30}
+    size={25}
     solid={true}
   />
 </View>
@@ -84,7 +84,7 @@ exports[`IconTabBar Settings renders correctly when not focused 1`] = `
   <customIcon
     colour="rgba(51,51,51,0.65)"
     name="bars"
-    size={30}
+    size={25}
     solid={true}
   />
 </View>

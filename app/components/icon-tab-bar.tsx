@@ -42,7 +42,7 @@ function IconTabBar(props: Props) {
       <Icon
         colour={focused ? colours.darkGrey : colours.mediumGrey}
         name={name}
-        size={30}
+        size={25}
         solid={true}
       />
       {routeName === "Notification" && <NotificationBadge />}
