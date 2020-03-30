@@ -51,9 +51,12 @@ class FormAddPassword extends Component<Props, State> {
           },
         });
         this.setState({ display: "active" });
-        const token = result.data.resetPassword.token;
 
-        return token ? onPress(token) : onPress();
+        if (extraProps) {
+          const token = result.data.resetPassword.token;
+          return onPress(token);
+        }
+        return onPress();
       } catch (error) {
         this.passwordError(error.message);
       }
