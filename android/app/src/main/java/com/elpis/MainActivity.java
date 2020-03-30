@@ -1,4 +1,4 @@
-package com.elpis;
+package com.elpis.app;
 
 import com.facebook.react.ReactActivity;
 import com.facebook.react.ReactActivityDelegate;

@@ -1,4 +1,4 @@
-package com.elpis;
+package com.elpis.app;
 
 import android.app.Application;
 import android.content.Context;

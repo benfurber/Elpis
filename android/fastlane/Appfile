@@ -1,0 +1,2 @@
+json_key_file("./.playstore-json/api-4941142760807148596-314066-ead39716a11f.json") # Path to the json secret file - Follow https://docs.fastlane.tools/actions/supply/#setup to get one
+package_name("com.elpis.app") # e.g. com.krausefx.app
