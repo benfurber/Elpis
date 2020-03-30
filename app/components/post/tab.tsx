@@ -1,5 +1,7 @@
 import React from "react";
-import { StyleSheet, TouchableOpacity, View } from "react-native";
+import { StyleSheet, View } from "react-native";
+
+import { TouchableOpacity } from "react-native-gesture-handler";
 
 import { colours } from "styles";
 import { Badge, Icon } from "components";
@@ -21,16 +23,10 @@ const Tab = (props: Props) => {
   const backgroundColor = selected ? whiteTransparent : whiteTransparentHigh;
   const iconColour = selected ? null : colours.mediumGrey;
 
-  const tabs = {
-    flex: 1,
-    paddingHorizontal: 16,
-    paddingVertical: 8,
-  };
-
   const styles = StyleSheet.create({
     background: {
-      ...tabs,
       backgroundColor,
+      flex: 1,
     },
     borderLeft: {
       backgroundColor: "transparent",
@@ -56,6 +52,10 @@ const Tab = (props: Props) => {
       flexDirection: "row",
       left: first ? 0 : -5,
     },
+    touchable: {
+      marginVertical: 8,
+      paddingHorizontal: 16,
+    },
   });
 
   return (
@@ -63,13 +63,15 @@ const Tab = (props: Props) => {
       {!first && <View style={styles.borderLeft} />}
       <View style={styles.background}>
         <TouchableOpacity onPress={onPress}>
-          <Badge left={52} number={number} />
-          <Icon
-            colour={iconColour}
-            name={name}
-            size={iconSize}
-            style={styles.iconCentre}
-          />
+          <View style={styles.touchable}>
+            <Badge left={65} number={number} />
+            <Icon
+              colour={iconColour}
+              name={name}
+              size={iconSize}
+              style={styles.iconCentre}
+            />
+          </View>
         </TouchableOpacity>
       </View>
       <View style={styles.borderRight} />

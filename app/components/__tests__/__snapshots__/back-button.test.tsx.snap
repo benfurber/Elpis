@@ -3,6 +3,12 @@
 exports[`BackButton with a text prop renders correctly 1`] = `
 <TouchableOpacity
   activeOpacity={0.2}
+  delayLongPress={600}
+  extraButtonProps={
+    Object {
+      "rippleColor": "transparent",
+    }
+  }
   onPress={[Function]}
   style={
     Object {
@@ -28,6 +34,12 @@ exports[`BackButton with a text prop renders correctly 1`] = `
 exports[`BackButton without a text prop renders correctly 1`] = `
 <TouchableOpacity
   activeOpacity={0.2}
+  delayLongPress={600}
+  extraButtonProps={
+    Object {
+      "rippleColor": "transparent",
+    }
+  }
   onPress={[Function]}
   style={
     Object {

@@ -4,7 +4,13 @@ exports[`ButtonSubmit When active renders correctly 1`] = `
 <View>
   <TouchableOpacity
     activeOpacity={0.2}
+    delayLongPress={600}
     disabled={false}
+    extraButtonProps={
+      Object {
+        "rippleColor": "transparent",
+      }
+    }
     onPress={[Function]}
     style={
       Array [
@@ -38,7 +44,13 @@ exports[`ButtonSubmit When loading renders correctly 1`] = `
 <View>
   <TouchableOpacity
     activeOpacity={0.2}
+    delayLongPress={600}
     disabled={true}
+    extraButtonProps={
+      Object {
+        "rippleColor": "transparent",
+      }
+    }
     onPress={[Function]}
     style={
       Array [
@@ -72,7 +84,13 @@ exports[`ButtonSubmit When small renders correctly 1`] = `
 <View>
   <TouchableOpacity
     activeOpacity={0.2}
+    delayLongPress={600}
     disabled={false}
+    extraButtonProps={
+      Object {
+        "rippleColor": "transparent",
+      }
+    }
     onPress={[Function]}
     style={
       Array [

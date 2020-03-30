@@ -1,6 +1,8 @@
 import React from "react";
-import { StyleSheet, TouchableOpacity, View } from "react-native";
+import { StyleSheet, View } from "react-native";
+
 import { useMutation } from "@apollo/react-hooks";
+import { TouchableOpacity } from "react-native-gesture-handler";
 
 import { NavigationType, Notification as NotificationType } from "interfaces";
 import { labels } from "labels";

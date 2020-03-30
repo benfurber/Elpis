@@ -38,6 +38,12 @@ exports[`LoginScreen renders correctly 1`] = `
       <LoginForm />
       <TouchableOpacity
         activeOpacity={0.2}
+        delayLongPress={600}
+        extraButtonProps={
+          Object {
+            "rippleColor": "transparent",
+          }
+        }
         onPress={[Function]}
       >
         <Text
@@ -101,6 +107,12 @@ exports[`LoginScreen renders correctly when given an error 1`] = `
       />
       <TouchableOpacity
         activeOpacity={0.2}
+        delayLongPress={600}
+        extraButtonProps={
+          Object {
+            "rippleColor": "transparent",
+          }
+        }
         onPress={[Function]}
       >
         <Text

@@ -1,5 +1,7 @@
 import React, { Component } from "react";
-import { StyleSheet, TouchableOpacity, View } from "react-native";
+import { StyleSheet, View } from "react-native";
+
+import { TouchableOpacity } from "react-native-gesture-handler";
 import { withMappedNavigationParams } from "react-navigation-props-mapper";
 
 import { BackgroundContainer, Icon, WebView } from "components";
@@ -15,8 +17,8 @@ interface Props {
 class WebBrowserScreen extends Component<Props> {
   componentDidMount() {
     Analytics.trackContent({
-      contentType: "WebBrowser",
       contentId: "",
+      contentType: "WebBrowser",
     });
   }
 
