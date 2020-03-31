@@ -86,6 +86,17 @@ export const COMMENTS = gql`
   ${AUTHOR_ATTRIBUTES}
 `;
 
+export const POST_ID_FROM_COMMENT_ID = gql`
+  query Comment($id: ID!) {
+    comment(id: $id) {
+      id
+      post {
+        id
+      }
+    }
+  }
+`;
+
 export const COMMENT_WITH_REPLIES = gql`
   query Comment($id: ID!) {
     comment(id: $id) {
@@ -104,6 +115,9 @@ export const COMMENT_WITH_REPLIES = gql`
       }
       title
       totalReplies
+      post {
+        id
+      }
     }
   }
   ${REPLY_ATTRIBUTES}
