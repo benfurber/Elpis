@@ -33,7 +33,6 @@ class FormRequestPasswordReset extends Component<Props, State> {
 
   setError(error) {
     if (error) {
-      console.log({ error });
       bugTracker.notify(error);
       return this.setState({
         display: "error",

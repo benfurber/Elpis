@@ -47,7 +47,7 @@ class LoginForm extends Component<Props, State> {
       await AsyncStorage.setItem("token", token);
       this.props.navigation.navigate("AuthLoading");
     } catch (error) {
-      console.log(error);
+      this.setError(error);
     }
   };
 
