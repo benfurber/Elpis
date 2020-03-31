@@ -1,5 +1,6 @@
 export { ActionSheetComment } from "./action-sheet-comment";
 export { ActionSheetReply } from "./action-sheet-reply";
+export { AuthorInfo } from "./author-info";
 export { Avatar } from "./avatar";
 export { BackButton } from "./back-button";
 export { BackgroundContainer } from "./background-container";
