@@ -31,6 +31,7 @@ export interface Comment extends ContentBase {
   replies: Reply[] | [];
   totalReplies: number;
   isAuthorCurrentUser: boolean;
+  post?: Post;
 }
 
 export interface Community {
