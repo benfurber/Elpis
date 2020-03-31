@@ -1,19 +1,18 @@
 import React, { Component } from "react";
 import { StyleSheet, Text, View } from "react-native";
-import { TouchableOpacity } from "react-native-gesture-handler";
+
 import ActionSheet from "react-native-actionsheet";
+import { TouchableOpacity } from "react-native-gesture-handler";
 
 import {
-  Avatar,
+  AuthorInfo,
   Badge,
   IconDiscussionLevel,
   Icon,
-  Title,
   ActionSheetComment,
 } from "components";
 import { Comment as CommentInterface, NavigationType, Post } from "interfaces";
 import { colours, elements, layout } from "styles";
-import { formatDate } from "utils";
 
 interface Props {
   backToText?: string;
@@ -60,7 +59,7 @@ class CommentPreview extends Component<Props> {
 
   render() {
     const { backToText, item, navigation, postId, totalComments } = this.props;
-    const { author, discussionLevel, id, publishedAt, title } = item;
+    const { discussionLevel, id } = item;
 
     const onPress = () =>
       navigation.navigate("Reply", {
@@ -78,19 +77,8 @@ class CommentPreview extends Component<Props> {
       >
         <View style={styles.commentContainer}>
           <View style={styles.headerRow}>
-            <View style={styles.avatarContainer}>
-              <Avatar
-                avatarPath={author.avatarPath}
-                navigation={navigation}
-                userId={author.id}
-              />
-            </View>
             <View style={styles.titleContainer}>
-              {title && <Title text={title} />}
-              <Text style={styles.metaDetails}>
-                <Text style={styles.name}>{`${author.name} `}</Text>
-                {formatDate(publishedAt, false)}
-              </Text>
+              <AuthorInfo navigation={navigation} item={item} />
             </View>
             <View style={styles.categoryContainer}>
               <View style={styles.categoryIconContainer}>
