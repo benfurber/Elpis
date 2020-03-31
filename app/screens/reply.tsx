@@ -9,7 +9,7 @@ import {
   ReplyList,
 } from "components";
 import { Comment as CommentType, NavigationType, Post } from "interfaces";
-import { colours } from "styles";
+import { layout, colours } from "styles";
 import { Analytics, getPostId, getTotalComments } from "utils";
 
 import { Tabs } from "../components/post/tabs";
@@ -120,6 +120,7 @@ const styles = StyleSheet.create({
     alignItems: "stretch",
     backgroundColor: colours.whiteTransparent,
     flex: 1,
+    paddingBottom: layout.spacing,
     width: "100%",
   },
 });
