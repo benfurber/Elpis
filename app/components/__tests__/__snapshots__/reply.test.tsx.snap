@@ -16,9 +16,12 @@ exports[`Reply renders correctly 1`] = `
     style={
       Array [
         Object {
-          "borderBottomColor": "rgb(255, 255, 255)",
-          "borderBottomWidth": 3,
+          "backgroundColor": "rgb(255, 255, 255)",
+          "borderRadius": 10,
           "margin": 10,
+          "marginBottom": 20,
+          "paddingHorizontal": 20,
+          "paddingTop": 10,
         },
         Object {
           "opacity": 1,
@@ -29,48 +32,7 @@ exports[`Reply renders correctly 1`] = `
     <View
       style={
         Object {
-          "alignItems": "center",
-          "flexDirection": "row",
-          "paddingVertical": 10,
-        }
-      }
-    >
-      <Avatar
-        avatarPath={
-          Object {
-            "testUri": "../../../app/assets/images/profile-pic-annon.png",
-          }
-        }
-        size="small"
-        userId="1235we"
-      />
-      <View
-        style={
-          Object {
-            "paddingLeft": 10,
-          }
-        }
-      >
-        <Title
-          small={true}
-          text="May"
-        />
-        <Text
-          style={
-            Object {
-              "color": "rgb(51, 51, 51)",
-              "fontStyle": "italic",
-            }
-          }
-        >
-          Há um ano
-        </Text>
-      </View>
-    </View>
-    <View
-      style={
-        Object {
-          "paddingBottom": 20,
+          "paddingTop": 10,
         }
       }
     >
@@ -127,6 +89,69 @@ exports[`Reply renders correctly 1`] = `
           }
         }
       />
+    </View>
+    <View
+      style={
+        Object {
+          "alignItems": "flex-end",
+          "flexDirection": "row",
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "rgba(4, 71, 47, 0.75)",
+            "borderColor": "rgb(255, 255, 255)",
+            "borderRadius": 30,
+            "borderWidth": 5,
+            "height": 60,
+            "overflow": "hidden",
+            "top": 15,
+            "width": 60,
+          }
+        }
+      >
+        <Avatar
+          avatarPath={
+            Object {
+              "testUri": "../../../app/assets/images/profile-pic-annon.png",
+            }
+          }
+          size="large"
+          userId="1235we"
+        />
+      </View>
+      <View
+        style={
+          Object {
+            "paddingLeft": 10,
+          }
+        }
+      >
+        <Text
+          style={
+            Object {
+              "color": "rgb(51, 51, 51)",
+              "fontStyle": "italic",
+              "marginBottom": 10,
+            }
+          }
+        >
+          <Text
+            style={
+              Object {
+                "color": "rgb(45, 82, 113)",
+                "fontWeight": "bold",
+              }
+            }
+          >
+            May 
+          </Text>
+          há um ano
+        </Text>
+      </View>
     </View>
   </View>
   <ActionSheetReply
@@ -202,9 +227,12 @@ exports[`Reply renders correctly when edited 1`] = `
     style={
       Array [
         Object {
-          "borderBottomColor": "rgb(255, 255, 255)",
-          "borderBottomWidth": 3,
+          "backgroundColor": "rgb(255, 255, 255)",
+          "borderRadius": 10,
           "margin": 10,
+          "marginBottom": 20,
+          "paddingHorizontal": 20,
+          "paddingTop": 10,
         },
         Object {
           "opacity": 1,
@@ -215,49 +243,7 @@ exports[`Reply renders correctly when edited 1`] = `
     <View
       style={
         Object {
-          "alignItems": "center",
-          "flexDirection": "row",
-          "paddingVertical": 10,
-        }
-      }
-    >
-      <Avatar
-        avatarPath={
-          Object {
-            "testUri": "../../../app/assets/images/profile-pic-annon.png",
-          }
-        }
-        size="small"
-        userId="1235we"
-      />
-      <View
-        style={
-          Object {
-            "paddingLeft": 10,
-          }
-        }
-      >
-        <Title
-          small={true}
-          text="May"
-        />
-        <Text
-          style={
-            Object {
-              "color": "rgb(51, 51, 51)",
-              "fontStyle": "italic",
-            }
-          }
-        >
-          Há um ano
-           (Editada)
-        </Text>
-      </View>
-    </View>
-    <View
-      style={
-        Object {
-          "paddingBottom": 20,
+          "paddingTop": 10,
         }
       }
     >
@@ -314,6 +300,70 @@ exports[`Reply renders correctly when edited 1`] = `
           }
         }
       />
+    </View>
+    <View
+      style={
+        Object {
+          "alignItems": "flex-end",
+          "flexDirection": "row",
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "rgba(4, 71, 47, 0.75)",
+            "borderColor": "rgb(255, 255, 255)",
+            "borderRadius": 30,
+            "borderWidth": 5,
+            "height": 60,
+            "overflow": "hidden",
+            "top": 15,
+            "width": 60,
+          }
+        }
+      >
+        <Avatar
+          avatarPath={
+            Object {
+              "testUri": "../../../app/assets/images/profile-pic-annon.png",
+            }
+          }
+          size="large"
+          userId="1235we"
+        />
+      </View>
+      <View
+        style={
+          Object {
+            "paddingLeft": 10,
+          }
+        }
+      >
+        <Text
+          style={
+            Object {
+              "color": "rgb(51, 51, 51)",
+              "fontStyle": "italic",
+              "marginBottom": 10,
+            }
+          }
+        >
+          <Text
+            style={
+              Object {
+                "color": "rgb(45, 82, 113)",
+                "fontWeight": "bold",
+              }
+            }
+          >
+            May 
+          </Text>
+          há um ano
+           (Editada)
+        </Text>
+      </View>
     </View>
   </View>
   <ActionSheetReply
