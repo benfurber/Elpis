@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { StyleSheet, View } from "react-native";
 
-import { ButtonAddReply, Query } from "components";
+import { ButtonAddTopic, Query } from "components";
 import { Comment, NavigationType, Post } from "interfaces";
 import { labels } from "labels";
 import { colours, layout } from "styles";
@@ -72,16 +72,11 @@ class Comments extends Component<Props, State> {
 
   render() {
     const { navigation, post } = this.props;
-    const { commentId } = this.state;
 
     return (
       <View style={styles.container}>
         {this.renderDisplay()}
-        <ButtonAddReply
-          commentId={commentId}
-          navigation={navigation}
-          postId={post.id}
-        />
+        <ButtonAddTopic navigation={navigation} postId={post.id} />
       </View>
     );
   }
