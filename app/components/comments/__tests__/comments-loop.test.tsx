@@ -13,7 +13,6 @@ describe("Comments<CommentsLoop>", () => {
     it("renders correctly", () => {
       const header = <Text>Mock header</Text>;
       const noComments = "There are no comments :(";
-      const onPress = number => jest.fn(number);
 
       const component = shallow(
         <CommentsLoop
@@ -21,8 +20,8 @@ describe("Comments<CommentsLoop>", () => {
           header={header}
           navigation={navigation}
           noComments={noComments}
-          onPress={onPress}
           postId={post.id}
+          totalComments={2}
         />,
       );
 
@@ -34,7 +33,6 @@ describe("Comments<CommentsLoop>", () => {
     it("renders correctly", () => {
       const header = <Text>Mock header</Text>;
       const noComments = "There are no comments :(";
-      const onPress = number => jest.fn(number);
 
       const component = shallow(
         <CommentsLoop
@@ -42,8 +40,8 @@ describe("Comments<CommentsLoop>", () => {
           header={header}
           navigation={navigation}
           noComments={noComments}
-          onPress={onPress}
           postId={post.id}
+          totalComments={0}
         />,
       );
 

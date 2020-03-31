@@ -21,9 +21,9 @@ class PostScreen extends Component<Props> {
 
     return (
       <Post
+        backToText={backToText}
         navigation={navigation}
         post={data.post}
-        postTabAction={backToText ? true : false}
         setDisplay={setDisplay}
         commentId={commentId}
       />
@@ -46,9 +46,9 @@ class PostScreen extends Component<Props> {
     if (post) {
       return (
         <Post
+          backToText={backToText}
           navigation={navigation}
           post={post}
-          postTabAction={backToText ? true : false}
           setDisplay={setDisplay ? setDisplay : "post"}
           styles={styles.fullHeight}
         />
@@ -61,7 +61,13 @@ class PostScreen extends Component<Props> {
 
     return (
       <BackgroundContainer>
-        {backToText && <BackButton navigation={navigation} text={backToText} />}
+        {backToText && (
+          <BackButton
+            navigation={navigation}
+            text={backToText}
+            onPress={() => navigation.popToTop()}
+          />
+        )}
         {post ? this.post() : this.fetchPost()}
       </BackgroundContainer>
     );

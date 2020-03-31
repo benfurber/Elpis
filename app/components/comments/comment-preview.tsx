@@ -16,10 +16,11 @@ import { colours, elements, layout } from "styles";
 import { formatDate } from "utils";
 
 interface Props {
+  backToText?: string;
   item: CommentInterface;
   navigation: NavigationType;
-  onPress: (number) => void;
   postId: Post["id"];
+  totalComments: number;
 }
 
 class CommentPreview extends Component<Props> {
@@ -58,12 +59,21 @@ class CommentPreview extends Component<Props> {
   }
 
   render() {
-    const { item, navigation, onPress, postId } = this.props;
+    const { backToText, item, navigation, postId, totalComments } = this.props;
     const { author, discussionLevel, id, publishedAt, title } = item;
+
+    const onPress = () =>
+      navigation.navigate("Reply", {
+        backToText,
+        id,
+        isFromTopic: true,
+        postId,
+        totalComments,
+      });
 
     return (
       <TouchableOpacity
-        onPress={() => onPress(id)}
+        onPress={onPress}
         onLongPress={() => this.onLongPress()}
       >
         <View style={styles.commentContainer}>

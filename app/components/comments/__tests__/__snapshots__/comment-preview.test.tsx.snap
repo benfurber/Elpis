@@ -169,6 +169,23 @@ exports[`Comments<CommentPreview> with replies renders correctly at discussionLe
         "edited": false,
         "id": "21097",
         "isAuthorCurrentUser": false,
+        "post": Object {
+          "author": Object {
+            "avatarPath": Object {
+              "testUri": "../../../app/assets/images/empower_two_women_logo.png",
+            },
+            "id": "1235we",
+            "name": "Empodere Duas Mulheres",
+            "posts": Array [],
+          },
+          "comments": Array [],
+          "content": null,
+          "id": "10387-314fs-12asdbj",
+          "imagePath": Object {
+            "testUri": "../../../app/assets/images/image_post_1.jpg",
+          },
+          "publishedAt": 2000-01-01T00:00:00.000Z,
+        },
         "publishedAt": 2019-01-01T00:00:00.000Z,
         "replies": Array [
           Object {
@@ -192,6 +209,23 @@ exports[`Comments<CommentPreview> with replies renders correctly at discussionLe
               "edited": false,
               "id": "21097",
               "isAuthorCurrentUser": false,
+              "post": Object {
+                "author": Object {
+                  "avatarPath": Object {
+                    "testUri": "../../../app/assets/images/empower_two_women_logo.png",
+                  },
+                  "id": "1235we",
+                  "name": "Empodere Duas Mulheres",
+                  "posts": Array [],
+                },
+                "comments": Array [],
+                "content": null,
+                "id": "10387-314fs-12asdbj",
+                "imagePath": Object {
+                  "testUri": "../../../app/assets/images/image_post_1.jpg",
+                },
+                "publishedAt": 2000-01-01T00:00:00.000Z,
+              },
               "publishedAt": 2019-01-01T00:00:00.000Z,
               "replies": Array [],
               "totalReplies": 0,
@@ -383,6 +417,23 @@ exports[`Comments<CommentPreview> with replies renders correctly at discussionLe
         "edited": false,
         "id": "21097",
         "isAuthorCurrentUser": false,
+        "post": Object {
+          "author": Object {
+            "avatarPath": Object {
+              "testUri": "../../../app/assets/images/empower_two_women_logo.png",
+            },
+            "id": "1235we",
+            "name": "Empodere Duas Mulheres",
+            "posts": Array [],
+          },
+          "comments": Array [],
+          "content": null,
+          "id": "10387-314fs-12asdbj",
+          "imagePath": Object {
+            "testUri": "../../../app/assets/images/image_post_1.jpg",
+          },
+          "publishedAt": 2000-01-01T00:00:00.000Z,
+        },
         "publishedAt": 2019-01-01T00:00:00.000Z,
         "replies": Array [
           Object {
@@ -406,6 +457,23 @@ exports[`Comments<CommentPreview> with replies renders correctly at discussionLe
               "edited": false,
               "id": "21097",
               "isAuthorCurrentUser": false,
+              "post": Object {
+                "author": Object {
+                  "avatarPath": Object {
+                    "testUri": "../../../app/assets/images/empower_two_women_logo.png",
+                  },
+                  "id": "1235we",
+                  "name": "Empodere Duas Mulheres",
+                  "posts": Array [],
+                },
+                "comments": Array [],
+                "content": null,
+                "id": "10387-314fs-12asdbj",
+                "imagePath": Object {
+                  "testUri": "../../../app/assets/images/image_post_1.jpg",
+                },
+                "publishedAt": 2000-01-01T00:00:00.000Z,
+              },
               "publishedAt": 2019-01-01T00:00:00.000Z,
               "replies": Array [],
               "totalReplies": 0,
@@ -596,6 +664,23 @@ exports[`Comments<CommentPreview> without replies renders correctly 1`] = `
         "edited": false,
         "id": "21097",
         "isAuthorCurrentUser": false,
+        "post": Object {
+          "author": Object {
+            "avatarPath": Object {
+              "testUri": "../../../app/assets/images/empower_two_women_logo.png",
+            },
+            "id": "1235we",
+            "name": "Empodere Duas Mulheres",
+            "posts": Array [],
+          },
+          "comments": Array [],
+          "content": null,
+          "id": "10387-314fs-12asdbj",
+          "imagePath": Object {
+            "testUri": "../../../app/assets/images/image_post_1.jpg",
+          },
+          "publishedAt": 2000-01-01T00:00:00.000Z,
+        },
         "publishedAt": 2019-01-01T00:00:00.000Z,
         "replies": Array [],
         "title": "Meu pai fez o que ela mandou",

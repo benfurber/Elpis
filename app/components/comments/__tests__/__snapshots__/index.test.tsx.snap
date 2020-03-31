@@ -291,8 +291,7 @@ exports[`Comments when there are comments renders correctly 1`] = `
   >
     <Component />
   </NewQuery>
-  <ButtonAddReply
-    commentId={null}
+  <ButtonAddTopic
     postId="10387-314fs-12asdbj"
   />
 </View>
@@ -589,8 +588,7 @@ exports[`Comments when there are no comments renders correctly 1`] = `
   >
     <Component />
   </NewQuery>
-  <ButtonAddReply
-    commentId={null}
+  <ButtonAddTopic
     postId="10387-314fs-12asdbj"
   />
 </View>

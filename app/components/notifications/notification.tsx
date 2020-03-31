@@ -20,17 +20,27 @@ interface Props {
 
 function Notification(props: Props) {
   const onPress = () => {
-    const { content } = props.item;
+    const { item, navigation } = props;
+    const { content } = item;
     const { post, reply } = content;
 
-    const params = {
-      backToText: labels.back.toNotifications,
-      commentId: reply && reply.comment.id,
-      id: post.id,
-      setDisplay: reply ? "comments" : "body",
-    };
+    const backToText = labels.back.toNotifications;
 
-    return props.navigation.navigate("Post", params);
+    if (reply) {
+      const params = {
+        backToText,
+        id: reply.comment.id,
+        postId: post.id,
+      };
+      return navigation.push("Reply", params);
+    }
+
+    const params = {
+      backToText,
+      id: post.id,
+      setDisplay: "body",
+    };
+    return navigation.push("Post", params);
   };
 
   const { item } = props;

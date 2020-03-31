@@ -10,12 +10,13 @@ import { CommentsSectionHeader } from "./comments-section-header";
 import { NoContent } from "./no-content";
 
 interface Props {
+  backToText?: string;
   comments: Post["comments"];
   header: object;
   navigation: NavigationType;
   noComments: string;
-  onPress: (number) => void;
   postId: Post["id"];
+  totalComments: number;
 }
 
 class CommentsLoop extends Component<Props> {
@@ -26,7 +27,13 @@ class CommentsLoop extends Component<Props> {
   }
 
   render() {
-    const { comments, navigation, postId } = this.props;
+    const {
+      backToText,
+      comments,
+      navigation,
+      postId,
+      totalComments,
+    } = this.props;
 
     return (
       <View style={styles.container}>
@@ -43,10 +50,11 @@ class CommentsLoop extends Component<Props> {
             )}
             renderItem={({ item }) => (
               <CommentPreview
+                backToText={backToText}
                 item={item}
                 navigation={navigation}
-                onPress={commentId => this.props.onPress(commentId)}
                 postId={postId}
+                totalComments={totalComments}
               />
             )}
           />

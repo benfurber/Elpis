@@ -14,15 +14,15 @@ describe("Comments<CommentPreview>", () => {
     it("renders correctly at discussionLevel 1", () => {
       mockDateNow("2019-01-01T20:04:23");
 
-      const onPress = () => jest.fn();
       const postId = "213543";
+      const totalComments = 2;
 
       const component = shallow(
         <CommentPreview
           item={comment}
-          onPress={onPress}
           navigation={navigation}
           postId={postId}
+          totalComments={totalComments}
         />,
       );
 
@@ -34,15 +34,15 @@ describe("Comments<CommentPreview>", () => {
 
       comment.discussionLevel = 2;
 
-      const onPress = () => jest.fn();
       const postId = "213543";
+      const totalComments = 2;
 
       const component = shallow(
         <CommentPreview
           item={comment}
-          onPress={onPress}
           navigation={navigation}
           postId={postId}
+          totalComments={totalComments}
         />,
       );
 
@@ -54,15 +54,15 @@ describe("Comments<CommentPreview>", () => {
     it("renders correctly", () => {
       mockDateNow("2019-01-01T00:09:00");
 
-      const onPress = () => jest.fn();
       const postId = "927164";
+      const totalComments = 0;
 
       const component = shallow(
         <CommentPreview
           item={commentWithoutReplies}
-          onPress={onPress}
           navigation={navigation}
           postId={postId}
+          totalComments={totalComments}
         />,
       );
 

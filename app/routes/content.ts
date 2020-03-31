@@ -6,12 +6,14 @@ import {
 
 import { AddContent } from "./add-content";
 import { Post } from "./post";
+import { Reply } from "./reply";
 
 const Content = {
   AddContent,
   Browser,
   CommunityProfile,
   Post,
+  Reply,
   UserProfile,
 };
 
