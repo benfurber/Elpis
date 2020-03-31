@@ -106,6 +106,7 @@ export const COMMENT_WITH_REPLIES = gql`
         avatarPath
       }
       content
+      discussionLevel
       edited
       id
       isAuthorCurrentUser

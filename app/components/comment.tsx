@@ -4,11 +4,14 @@ import { StyleSheet, Text, View } from "react-native";
 import ActionSheet from "react-native-actionsheet";
 import { TouchableOpacity } from "react-native-gesture-handler";
 
-import { ActionSheetComment, Avatar, Title } from "components";
+import {
+  ActionSheetComment,
+  AuthorInfo,
+  IconDiscussionLevel,
+  Title,
+} from "components";
 import { Comment as CommentType, NavigationType } from "interfaces";
-import { labels } from "labels";
-import { colours, elements, layout } from "styles";
-import { formatDate } from "utils";
+import { colours, layout } from "styles";
 
 interface Props {
   item: CommentType;
@@ -28,33 +31,31 @@ class Comment extends Component<Props> {
 
   render() {
     const { item, navigation } = this.props;
-    const { author, content, edited, post, publishedAt, title } = item;
+    const { content, discussionLevel, isAuthorCurrentUser, post, title } = item;
 
     return (
-      <TouchableOpacity onLongPress={() => this.onLongPress()}>
+      <TouchableOpacity
+        onLongPress={() => this.onLongPress()}
+        disabled={!isAuthorCurrentUser}
+      >
         <View style={styles.featured}>
-          <View style={styles.featuredDetails}>
-            <Avatar
-              avatarPath={author.avatarPath}
-              navigation={navigation}
-              size={"large"}
-              userId={author.id}
-            />
-
-            <View style={styles.featuredAuthorDetails}>
-              <Title text={author.name} />
-              <Text style={elements.textDate}>
-                {formatDate(publishedAt)}
-                {edited && ` (${labels.editedComment})`}
-              </Text>
+          <View style={styles.categoryContainer}>
+            <View style={styles.categoryIconContainer}>
+              <IconDiscussionLevel
+                containerStyle={{ borderBottomLeftRadius: 0 }}
+                level={discussionLevel}
+                size={25}
+              />
             </View>
           </View>
 
-          <View>
-            {title && <Title text={title} small bold />}
-            {content && <Text>{content}</Text>}
+          <View style={styles.body}>
+            <AuthorInfo navigation={navigation} item={item} />
+
+            <Text style={styles.content}>{content}</Text>
           </View>
         </View>
+
         {post && (
           <ActionSheetComment
             item={item}
@@ -69,9 +70,34 @@ class Comment extends Component<Props> {
 }
 
 const styles = StyleSheet.create({
+  body: {
+    marginHorizontal: layout.spacingXL,
+    marginTop: layout.spacing,
+  },
+  categoryContainer: {
+    alignItems: "flex-end",
+    width: 40,
+  },
+  categoryIconContainer: {
+    borderBottomLeftRadius: 0,
+    borderColor: colours.navyBlueLight,
+    borderRadius: 30,
+    borderWidth: 5,
+    left: -10,
+    overflow: "hidden",
+    position: "absolute",
+    top: -40,
+    zIndex: 1,
+  },
+  content: {
+    marginTop: layout.spacing,
+  },
   featured: {
-    backgroundColor: colours.transparentBlue,
-    marginBottom: layout.spacingL,
+    backgroundColor: colours.navyBlueLight,
+    borderBottomRightRadius: layout.borderRadiusL,
+    borderTopRightRadius: layout.borderRadiusL,
+    marginRight: layout.spacing,
+    marginVertical: layout.spacingL,
     paddingHorizontal: layout.spacing,
     paddingVertical: layout.spacingL,
   },

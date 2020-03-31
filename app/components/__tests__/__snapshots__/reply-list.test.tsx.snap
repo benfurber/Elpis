@@ -42,7 +42,7 @@ exports[`ReplyList when there are no replies renders correctly 1`] = `
       "link": MockLink {
         "addTypename": true,
         "mockedResponsesByKey": Object {
-          "{\\"query\\":\\"query Comment($id: ID!) {\\\\n  comment(id: $id) {\\\\n    author {\\\\n      id\\\\n      name\\\\n      avatarPath\\\\n      __typename\\\\n    }\\\\n    content\\\\n    edited\\\\n    id\\\\n    isAuthorCurrentUser\\\\n    publishedAt\\\\n    replies {\\\\n      ...replyAttributes\\\\n      __typename\\\\n    }\\\\n    title\\\\n    totalReplies\\\\n    post {\\\\n      id\\\\n      __typename\\\\n    }\\\\n    __typename\\\\n  }\\\\n}\\\\n\\\\nfragment replyAttributes on Reply {\\\\n  id\\\\n  author {\\\\n    ...authorAttributes\\\\n    __typename\\\\n  }\\\\n  publishedAt\\\\n  content\\\\n  comment {\\\\n    id\\\\n    __typename\\\\n  }\\\\n  edited\\\\n  imagePath\\\\n  isAuthorCurrentUser\\\\n  link\\\\n  __typename\\\\n}\\\\n\\\\nfragment authorAttributes on User {\\\\n  id\\\\n  avatarPath\\\\n  name\\\\n  __typename\\\\n}\\\\n\\"}": Array [
+          "{\\"query\\":\\"query Comment($id: ID!) {\\\\n  comment(id: $id) {\\\\n    author {\\\\n      id\\\\n      name\\\\n      avatarPath\\\\n      __typename\\\\n    }\\\\n    content\\\\n    discussionLevel\\\\n    edited\\\\n    id\\\\n    isAuthorCurrentUser\\\\n    publishedAt\\\\n    replies {\\\\n      ...replyAttributes\\\\n      __typename\\\\n    }\\\\n    title\\\\n    totalReplies\\\\n    post {\\\\n      id\\\\n      __typename\\\\n    }\\\\n    __typename\\\\n  }\\\\n}\\\\n\\\\nfragment replyAttributes on Reply {\\\\n  id\\\\n  author {\\\\n    ...authorAttributes\\\\n    __typename\\\\n  }\\\\n  publishedAt\\\\n  content\\\\n  comment {\\\\n    id\\\\n    __typename\\\\n  }\\\\n  edited\\\\n  imagePath\\\\n  isAuthorCurrentUser\\\\n  link\\\\n  __typename\\\\n}\\\\n\\\\nfragment authorAttributes on User {\\\\n  id\\\\n  avatarPath\\\\n  name\\\\n  __typename\\\\n}\\\\n\\"}": Array [
             Object {
               "request": Object {
                 "query": Object {
@@ -141,6 +141,17 @@ exports[`ReplyList when there are no replies renders correctly 1`] = `
                                   "name": Object {
                                     "kind": "Name",
                                     "value": "content",
+                                  },
+                                  "selectionSet": undefined,
+                                },
+                                Object {
+                                  "alias": undefined,
+                                  "arguments": Array [],
+                                  "directives": Array [],
+                                  "kind": "Field",
+                                  "name": Object {
+                                    "kind": "Name",
+                                    "value": "discussionLevel",
                                   },
                                   "selectionSet": undefined,
                                 },
@@ -491,7 +502,7 @@ exports[`ReplyList when there are no replies renders correctly 1`] = `
                   ],
                   "kind": "Document",
                   "loc": Object {
-                    "end": 612,
+                    "end": 634,
                     "start": 0,
                   },
                 },
@@ -626,7 +637,7 @@ exports[`ReplyList when there are no replies renders correctly 1`] = `
         "link": MockLink {
           "addTypename": true,
           "mockedResponsesByKey": Object {
-            "{\\"query\\":\\"query Comment($id: ID!) {\\\\n  comment(id: $id) {\\\\n    author {\\\\n      id\\\\n      name\\\\n      avatarPath\\\\n      __typename\\\\n    }\\\\n    content\\\\n    edited\\\\n    id\\\\n    isAuthorCurrentUser\\\\n    publishedAt\\\\n    replies {\\\\n      ...replyAttributes\\\\n      __typename\\\\n    }\\\\n    title\\\\n    totalReplies\\\\n    post {\\\\n      id\\\\n      __typename\\\\n    }\\\\n    __typename\\\\n  }\\\\n}\\\\n\\\\nfragment replyAttributes on Reply {\\\\n  id\\\\n  author {\\\\n    ...authorAttributes\\\\n    __typename\\\\n  }\\\\n  publishedAt\\\\n  content\\\\n  comment {\\\\n    id\\\\n    __typename\\\\n  }\\\\n  edited\\\\n  imagePath\\\\n  isAuthorCurrentUser\\\\n  link\\\\n  __typename\\\\n}\\\\n\\\\nfragment authorAttributes on User {\\\\n  id\\\\n  avatarPath\\\\n  name\\\\n  __typename\\\\n}\\\\n\\"}": Array [
+            "{\\"query\\":\\"query Comment($id: ID!) {\\\\n  comment(id: $id) {\\\\n    author {\\\\n      id\\\\n      name\\\\n      avatarPath\\\\n      __typename\\\\n    }\\\\n    content\\\\n    discussionLevel\\\\n    edited\\\\n    id\\\\n    isAuthorCurrentUser\\\\n    publishedAt\\\\n    replies {\\\\n      ...replyAttributes\\\\n      __typename\\\\n    }\\\\n    title\\\\n    totalReplies\\\\n    post {\\\\n      id\\\\n      __typename\\\\n    }\\\\n    __typename\\\\n  }\\\\n}\\\\n\\\\nfragment replyAttributes on Reply {\\\\n  id\\\\n  author {\\\\n    ...authorAttributes\\\\n    __typename\\\\n  }\\\\n  publishedAt\\\\n  content\\\\n  comment {\\\\n    id\\\\n    __typename\\\\n  }\\\\n  edited\\\\n  imagePath\\\\n  isAuthorCurrentUser\\\\n  link\\\\n  __typename\\\\n}\\\\n\\\\nfragment authorAttributes on User {\\\\n  id\\\\n  avatarPath\\\\n  name\\\\n  __typename\\\\n}\\\\n\\"}": Array [
               Object {
                 "request": Object {
                   "query": Object {
@@ -725,6 +736,17 @@ exports[`ReplyList when there are no replies renders correctly 1`] = `
                                     "name": Object {
                                       "kind": "Name",
                                       "value": "content",
+                                    },
+                                    "selectionSet": undefined,
+                                  },
+                                  Object {
+                                    "alias": undefined,
+                                    "arguments": Array [],
+                                    "directives": Array [],
+                                    "kind": "Field",
+                                    "name": Object {
+                                      "kind": "Name",
+                                      "value": "discussionLevel",
                                     },
                                     "selectionSet": undefined,
                                   },
@@ -1075,7 +1097,7 @@ exports[`ReplyList when there are no replies renders correctly 1`] = `
                     ],
                     "kind": "Document",
                     "loc": Object {
-                      "end": 612,
+                      "end": 634,
                       "start": 0,
                     },
                   },
@@ -1265,7 +1287,7 @@ exports[`ReplyList when there are replies renders correctly 1`] = `
       "link": MockLink {
         "addTypename": true,
         "mockedResponsesByKey": Object {
-          "{\\"query\\":\\"query Comment($id: ID!) {\\\\n  comment(id: $id) {\\\\n    author {\\\\n      id\\\\n      name\\\\n      avatarPath\\\\n      __typename\\\\n    }\\\\n    content\\\\n    edited\\\\n    id\\\\n    isAuthorCurrentUser\\\\n    publishedAt\\\\n    replies {\\\\n      ...replyAttributes\\\\n      __typename\\\\n    }\\\\n    title\\\\n    totalReplies\\\\n    post {\\\\n      id\\\\n      __typename\\\\n    }\\\\n    __typename\\\\n  }\\\\n}\\\\n\\\\nfragment replyAttributes on Reply {\\\\n  id\\\\n  author {\\\\n    ...authorAttributes\\\\n    __typename\\\\n  }\\\\n  publishedAt\\\\n  content\\\\n  comment {\\\\n    id\\\\n    __typename\\\\n  }\\\\n  edited\\\\n  imagePath\\\\n  isAuthorCurrentUser\\\\n  link\\\\n  __typename\\\\n}\\\\n\\\\nfragment authorAttributes on User {\\\\n  id\\\\n  avatarPath\\\\n  name\\\\n  __typename\\\\n}\\\\n\\"}": Array [
+          "{\\"query\\":\\"query Comment($id: ID!) {\\\\n  comment(id: $id) {\\\\n    author {\\\\n      id\\\\n      name\\\\n      avatarPath\\\\n      __typename\\\\n    }\\\\n    content\\\\n    discussionLevel\\\\n    edited\\\\n    id\\\\n    isAuthorCurrentUser\\\\n    publishedAt\\\\n    replies {\\\\n      ...replyAttributes\\\\n      __typename\\\\n    }\\\\n    title\\\\n    totalReplies\\\\n    post {\\\\n      id\\\\n      __typename\\\\n    }\\\\n    __typename\\\\n  }\\\\n}\\\\n\\\\nfragment replyAttributes on Reply {\\\\n  id\\\\n  author {\\\\n    ...authorAttributes\\\\n    __typename\\\\n  }\\\\n  publishedAt\\\\n  content\\\\n  comment {\\\\n    id\\\\n    __typename\\\\n  }\\\\n  edited\\\\n  imagePath\\\\n  isAuthorCurrentUser\\\\n  link\\\\n  __typename\\\\n}\\\\n\\\\nfragment authorAttributes on User {\\\\n  id\\\\n  avatarPath\\\\n  name\\\\n  __typename\\\\n}\\\\n\\"}": Array [
             Object {
               "request": Object {
                 "query": Object {
@@ -1364,6 +1386,17 @@ exports[`ReplyList when there are replies renders correctly 1`] = `
                                   "name": Object {
                                     "kind": "Name",
                                     "value": "content",
+                                  },
+                                  "selectionSet": undefined,
+                                },
+                                Object {
+                                  "alias": undefined,
+                                  "arguments": Array [],
+                                  "directives": Array [],
+                                  "kind": "Field",
+                                  "name": Object {
+                                    "kind": "Name",
+                                    "value": "discussionLevel",
                                   },
                                   "selectionSet": undefined,
                                 },
@@ -1714,7 +1747,7 @@ exports[`ReplyList when there are replies renders correctly 1`] = `
                   ],
                   "kind": "Document",
                   "loc": Object {
-                    "end": 612,
+                    "end": 634,
                     "start": 0,
                   },
                 },
@@ -1882,7 +1915,7 @@ exports[`ReplyList when there are replies renders correctly 1`] = `
         "link": MockLink {
           "addTypename": true,
           "mockedResponsesByKey": Object {
-            "{\\"query\\":\\"query Comment($id: ID!) {\\\\n  comment(id: $id) {\\\\n    author {\\\\n      id\\\\n      name\\\\n      avatarPath\\\\n      __typename\\\\n    }\\\\n    content\\\\n    edited\\\\n    id\\\\n    isAuthorCurrentUser\\\\n    publishedAt\\\\n    replies {\\\\n      ...replyAttributes\\\\n      __typename\\\\n    }\\\\n    title\\\\n    totalReplies\\\\n    post {\\\\n      id\\\\n      __typename\\\\n    }\\\\n    __typename\\\\n  }\\\\n}\\\\n\\\\nfragment replyAttributes on Reply {\\\\n  id\\\\n  author {\\\\n    ...authorAttributes\\\\n    __typename\\\\n  }\\\\n  publishedAt\\\\n  content\\\\n  comment {\\\\n    id\\\\n    __typename\\\\n  }\\\\n  edited\\\\n  imagePath\\\\n  isAuthorCurrentUser\\\\n  link\\\\n  __typename\\\\n}\\\\n\\\\nfragment authorAttributes on User {\\\\n  id\\\\n  avatarPath\\\\n  name\\\\n  __typename\\\\n}\\\\n\\"}": Array [
+            "{\\"query\\":\\"query Comment($id: ID!) {\\\\n  comment(id: $id) {\\\\n    author {\\\\n      id\\\\n      name\\\\n      avatarPath\\\\n      __typename\\\\n    }\\\\n    content\\\\n    discussionLevel\\\\n    edited\\\\n    id\\\\n    isAuthorCurrentUser\\\\n    publishedAt\\\\n    replies {\\\\n      ...replyAttributes\\\\n      __typename\\\\n    }\\\\n    title\\\\n    totalReplies\\\\n    post {\\\\n      id\\\\n      __typename\\\\n    }\\\\n    __typename\\\\n  }\\\\n}\\\\n\\\\nfragment replyAttributes on Reply {\\\\n  id\\\\n  author {\\\\n    ...authorAttributes\\\\n    __typename\\\\n  }\\\\n  publishedAt\\\\n  content\\\\n  comment {\\\\n    id\\\\n    __typename\\\\n  }\\\\n  edited\\\\n  imagePath\\\\n  isAuthorCurrentUser\\\\n  link\\\\n  __typename\\\\n}\\\\n\\\\nfragment authorAttributes on User {\\\\n  id\\\\n  avatarPath\\\\n  name\\\\n  __typename\\\\n}\\\\n\\"}": Array [
               Object {
                 "request": Object {
                   "query": Object {
@@ -1981,6 +2014,17 @@ exports[`ReplyList when there are replies renders correctly 1`] = `
                                     "name": Object {
                                       "kind": "Name",
                                       "value": "content",
+                                    },
+                                    "selectionSet": undefined,
+                                  },
+                                  Object {
+                                    "alias": undefined,
+                                    "arguments": Array [],
+                                    "directives": Array [],
+                                    "kind": "Field",
+                                    "name": Object {
+                                      "kind": "Name",
+                                      "value": "discussionLevel",
                                     },
                                     "selectionSet": undefined,
                                   },
@@ -2331,7 +2375,7 @@ exports[`ReplyList when there are replies renders correctly 1`] = `
                     ],
                     "kind": "Document",
                     "loc": Object {
-                      "end": 612,
+                      "end": 634,
                       "start": 0,
                     },
                   },

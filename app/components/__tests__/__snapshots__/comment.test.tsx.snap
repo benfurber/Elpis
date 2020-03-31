@@ -4,6 +4,7 @@ exports[`Comment renders correctly 1`] = `
 <TouchableOpacity
   activeOpacity={0.2}
   delayLongPress={600}
+  disabled={true}
   extraButtonProps={
     Object {
       "rippleColor": "transparent",
@@ -14,8 +15,11 @@ exports[`Comment renders correctly 1`] = `
   <View
     style={
       Object {
-        "backgroundColor": "rgba(198, 213, 225, 0.75)",
-        "marginBottom": 20,
+        "backgroundColor": "rgb(216, 226, 234)",
+        "borderBottomRightRadius": 10,
+        "borderTopRightRadius": 10,
+        "marginRight": 10,
+        "marginVertical": 20,
         "paddingHorizontal": 10,
         "paddingVertical": 20,
       }
@@ -24,50 +28,141 @@ exports[`Comment renders correctly 1`] = `
     <View
       style={
         Object {
-          "alignItems": "center",
-          "flexDirection": "row",
-          "marginBottom": 10,
+          "alignItems": "flex-end",
+          "width": 40,
         }
       }
     >
-      <Avatar
-        avatarPath={
-          Object {
-            "testUri": "../../../app/assets/images/profile-pic-annon.png",
-          }
-        }
-        size="large"
-        userId="1235we"
-      />
       <View
         style={
           Object {
-            "paddingLeft": 10,
+            "borderBottomLeftRadius": 0,
+            "borderColor": "rgb(216, 226, 234)",
+            "borderRadius": 30,
+            "borderWidth": 5,
+            "left": -10,
+            "overflow": "hidden",
+            "position": "absolute",
+            "top": -40,
+            "zIndex": 1,
           }
         }
       >
-        <Title
-          text="May"
-        />
-        <Text
-          style={
+        <IconDiscussionLevel
+          containerStyle={
             Object {
-              "color": "rgb(51, 51, 51)",
-              "fontStyle": "italic",
+              "borderBottomLeftRadius": 0,
             }
           }
-        >
-          Há 20 horas
-        </Text>
+          level={1}
+          size={25}
+        />
       </View>
     </View>
-    <View>
-      <Title
-        bold={true}
-        small={true}
-        text="Meu pai fez o que ela mandou"
+    <View
+      style={
+        Object {
+          "marginHorizontal": 40,
+          "marginTop": 10,
+        }
+      }
+    >
+      <AuthorInfo
+        item={
+          Object {
+            "author": Object {
+              "avatarPath": Object {
+                "testUri": "../../../app/assets/images/profile-pic-annon.png",
+              },
+              "id": "1235we",
+              "name": "May",
+            },
+            "content": "Dá certo sim, o meu pai, por exemplo, fugiu quando eu tinha 5 anos e eu não faço ideia da onde ele esteja. Nunca mais voltou, pena que a violência só piorou.",
+            "discussionLevel": 1,
+            "edited": false,
+            "id": "21097",
+            "isAuthorCurrentUser": false,
+            "post": Object {
+              "author": Object {
+                "avatarPath": Object {
+                  "testUri": "../../../app/assets/images/empower_two_women_logo.png",
+                },
+                "id": "1235we",
+                "name": "Empodere Duas Mulheres",
+                "posts": Array [],
+              },
+              "comments": Array [],
+              "content": null,
+              "id": "10387-314fs-12asdbj",
+              "imagePath": Object {
+                "testUri": "../../../app/assets/images/image_post_1.jpg",
+              },
+              "publishedAt": 2000-01-01T00:00:00.000Z,
+            },
+            "publishedAt": 2019-01-01T00:00:00.000Z,
+            "replies": Array [
+              Object {
+                "author": Object {
+                  "avatarPath": Object {
+                    "testUri": "../../../app/assets/images/profile-pic-annon.png",
+                  },
+                  "id": "1235we",
+                  "name": "May",
+                },
+                "comment": Object {
+                  "author": Object {
+                    "avatarPath": Object {
+                      "testUri": "../../../app/assets/images/profile-pic-annon.png",
+                    },
+                    "id": "1235we",
+                    "name": "May",
+                  },
+                  "content": "Dá certo sim, o meu pai, por exemplo, fugiu quando eu tinha 5 anos e eu não faço ideia da onde ele esteja. Nunca mais voltou, pena que a violência só piorou.",
+                  "discussionLevel": 0,
+                  "edited": false,
+                  "id": "21097",
+                  "isAuthorCurrentUser": false,
+                  "post": Object {
+                    "author": Object {
+                      "avatarPath": Object {
+                        "testUri": "../../../app/assets/images/empower_two_women_logo.png",
+                      },
+                      "id": "1235we",
+                      "name": "Empodere Duas Mulheres",
+                      "posts": Array [],
+                    },
+                    "comments": Array [],
+                    "content": null,
+                    "id": "10387-314fs-12asdbj",
+                    "imagePath": Object {
+                      "testUri": "../../../app/assets/images/image_post_1.jpg",
+                    },
+                    "publishedAt": 2000-01-01T00:00:00.000Z,
+                  },
+                  "publishedAt": 2019-01-01T00:00:00.000Z,
+                  "replies": Array [],
+                  "totalReplies": 0,
+                },
+                "content": "Nao.",
+                "edited": false,
+                "id": "21097",
+                "isAuthorCurrentUser": false,
+                "link": null,
+                "publishedAt": 2019-01-01T00:00:00.000Z,
+              },
+            ],
+            "title": "Meu pai fez o que ela mandou",
+            "totalReplies": 1,
+          }
+        }
       />
-      <Text>
+      <Text
+        style={
+          Object {
+            "marginTop": 10,
+          }
+        }
+      >
         Dá certo sim, o meu pai, por exemplo, fugiu quando eu tinha 5 anos e eu não faço ideia da onde ele esteja. Nunca mais voltou, pena que a violência só piorou.
       </Text>
     </View>
@@ -170,6 +265,7 @@ exports[`Comment renders correctly when edited 1`] = `
 <TouchableOpacity
   activeOpacity={0.2}
   delayLongPress={600}
+  disabled={true}
   extraButtonProps={
     Object {
       "rippleColor": "transparent",
@@ -180,8 +276,11 @@ exports[`Comment renders correctly when edited 1`] = `
   <View
     style={
       Object {
-        "backgroundColor": "rgba(198, 213, 225, 0.75)",
-        "marginBottom": 20,
+        "backgroundColor": "rgb(216, 226, 234)",
+        "borderBottomRightRadius": 10,
+        "borderTopRightRadius": 10,
+        "marginRight": 10,
+        "marginVertical": 20,
         "paddingHorizontal": 10,
         "paddingVertical": 20,
       }
@@ -190,51 +289,141 @@ exports[`Comment renders correctly when edited 1`] = `
     <View
       style={
         Object {
-          "alignItems": "center",
-          "flexDirection": "row",
-          "marginBottom": 10,
+          "alignItems": "flex-end",
+          "width": 40,
         }
       }
     >
-      <Avatar
-        avatarPath={
-          Object {
-            "testUri": "../../../app/assets/images/profile-pic-annon.png",
-          }
-        }
-        size="large"
-        userId="1235we"
-      />
       <View
         style={
           Object {
-            "paddingLeft": 10,
+            "borderBottomLeftRadius": 0,
+            "borderColor": "rgb(216, 226, 234)",
+            "borderRadius": 30,
+            "borderWidth": 5,
+            "left": -10,
+            "overflow": "hidden",
+            "position": "absolute",
+            "top": -40,
+            "zIndex": 1,
           }
         }
       >
-        <Title
-          text="May"
-        />
-        <Text
-          style={
+        <IconDiscussionLevel
+          containerStyle={
             Object {
-              "color": "rgb(51, 51, 51)",
-              "fontStyle": "italic",
+              "borderBottomLeftRadius": 0,
             }
           }
-        >
-          Há 20 horas
-           (Editado)
-        </Text>
+          level={1}
+          size={25}
+        />
       </View>
     </View>
-    <View>
-      <Title
-        bold={true}
-        small={true}
-        text="Meu pai fez o que ela mandou"
+    <View
+      style={
+        Object {
+          "marginHorizontal": 40,
+          "marginTop": 10,
+        }
+      }
+    >
+      <AuthorInfo
+        item={
+          Object {
+            "author": Object {
+              "avatarPath": Object {
+                "testUri": "../../../app/assets/images/profile-pic-annon.png",
+              },
+              "id": "1235we",
+              "name": "May",
+            },
+            "content": "Dá certo sim, o meu pai, por exemplo, fugiu quando eu tinha 5 anos e eu não faço ideia da onde ele esteja. Nunca mais voltou, pena que a violência só piorou.",
+            "discussionLevel": 1,
+            "edited": true,
+            "id": "21097",
+            "isAuthorCurrentUser": false,
+            "post": Object {
+              "author": Object {
+                "avatarPath": Object {
+                  "testUri": "../../../app/assets/images/empower_two_women_logo.png",
+                },
+                "id": "1235we",
+                "name": "Empodere Duas Mulheres",
+                "posts": Array [],
+              },
+              "comments": Array [],
+              "content": null,
+              "id": "10387-314fs-12asdbj",
+              "imagePath": Object {
+                "testUri": "../../../app/assets/images/image_post_1.jpg",
+              },
+              "publishedAt": 2000-01-01T00:00:00.000Z,
+            },
+            "publishedAt": 2019-01-01T00:00:00.000Z,
+            "replies": Array [
+              Object {
+                "author": Object {
+                  "avatarPath": Object {
+                    "testUri": "../../../app/assets/images/profile-pic-annon.png",
+                  },
+                  "id": "1235we",
+                  "name": "May",
+                },
+                "comment": Object {
+                  "author": Object {
+                    "avatarPath": Object {
+                      "testUri": "../../../app/assets/images/profile-pic-annon.png",
+                    },
+                    "id": "1235we",
+                    "name": "May",
+                  },
+                  "content": "Dá certo sim, o meu pai, por exemplo, fugiu quando eu tinha 5 anos e eu não faço ideia da onde ele esteja. Nunca mais voltou, pena que a violência só piorou.",
+                  "discussionLevel": 0,
+                  "edited": false,
+                  "id": "21097",
+                  "isAuthorCurrentUser": false,
+                  "post": Object {
+                    "author": Object {
+                      "avatarPath": Object {
+                        "testUri": "../../../app/assets/images/empower_two_women_logo.png",
+                      },
+                      "id": "1235we",
+                      "name": "Empodere Duas Mulheres",
+                      "posts": Array [],
+                    },
+                    "comments": Array [],
+                    "content": null,
+                    "id": "10387-314fs-12asdbj",
+                    "imagePath": Object {
+                      "testUri": "../../../app/assets/images/image_post_1.jpg",
+                    },
+                    "publishedAt": 2000-01-01T00:00:00.000Z,
+                  },
+                  "publishedAt": 2019-01-01T00:00:00.000Z,
+                  "replies": Array [],
+                  "totalReplies": 0,
+                },
+                "content": "Nao.",
+                "edited": false,
+                "id": "21097",
+                "isAuthorCurrentUser": false,
+                "link": null,
+                "publishedAt": 2019-01-01T00:00:00.000Z,
+              },
+            ],
+            "title": "Meu pai fez o que ela mandou",
+            "totalReplies": 1,
+          }
+        }
       />
-      <Text>
+      <Text
+        style={
+          Object {
+            "marginTop": 10,
+          }
+        }
+      >
         Dá certo sim, o meu pai, por exemplo, fugiu quando eu tinha 5 anos e eu não faço ideia da onde ele esteja. Nunca mais voltou, pena que a violência só piorou.
       </Text>
     </View>
