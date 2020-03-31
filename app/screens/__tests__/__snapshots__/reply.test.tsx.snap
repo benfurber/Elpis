@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ReplyScreen renders correctly 1`] = `
+<BackgroundContainer>
+  <Tabs
+    display="comments"
+    onPressComments={[Function]}
+    onPressPost={[Function]}
+    totalComments={0}
+  />
+  <View
+    style={
+      Object {
+        "alignItems": "stretch",
+        "backgroundColor": "rgba(255, 255, 255, 0.70)",
+        "flex": 1,
+        "width": "100%",
+      }
+    }
+  >
+    <BackButton
+      onPress={[Function]}
+      text="Voltar aos tópicos"
+    />
+    <ReplyList
+      id="21097"
+    />
+  </View>
+  <ButtonAddReply
+    commentId="21097"
+  />
+</BackgroundContainer>
+`;
