@@ -57,9 +57,15 @@ describe("ReplyList", () => {
         },
       ];
 
+      const backButtonOnPress = () => jest.fn();
+
       const component = shallow(
         <MockedProvider mocks={mocks}>
-          <ReplyList id={comment.id} navigation={navigation} />
+          <ReplyList
+            backButtonOnPress={backButtonOnPress}
+            id={comment.id}
+            navigation={navigation}
+          />
         </MockedProvider>,
       );
 
@@ -87,9 +93,15 @@ describe("ReplyList", () => {
         },
       ];
 
+      const backButtonOnPress = () => jest.fn();
+
       const component = shallow(
         <MockedProvider mocks={mocks}>
-          <ReplyList id={commentWithoutReplies.id} navigation={navigation} />
+          <ReplyList
+            backButtonOnPress={backButtonOnPress}
+            id={commentWithoutReplies.id}
+            navigation={navigation}
+          />
         </MockedProvider>,
       );
 

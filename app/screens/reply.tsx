@@ -9,7 +9,6 @@ import {
   ReplyList,
 } from "components";
 import { Comment as CommentType, NavigationType, Post } from "interfaces";
-import { labels } from "labels";
 import { colours } from "styles";
 import { Analytics, getPostId, getTotalComments } from "utils";
 
@@ -87,7 +86,6 @@ class ReplyScreen extends Component<Props, State> {
   render() {
     const { backToText, id, navigation } = this.props;
     const { totalComments } = this.state;
-    const { toTopics } = labels.back;
 
     return (
       <BackgroundContainer>
@@ -105,12 +103,11 @@ class ReplyScreen extends Component<Props, State> {
           totalComments={totalComments || 0}
         />
         <View style={styles.container}>
-          <BackButton
+          <ReplyList
+            backButtonOnPress={() => this.onPressComments()}
+            id={id}
             navigation={navigation}
-            text={toTopics}
-            onPress={() => this.onPressComments()}
           />
-          <ReplyList id={id} navigation={navigation} />
         </View>
         <ButtonAddReply commentId={id} navigation={navigation} />
       </BackgroundContainer>

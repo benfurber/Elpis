@@ -1240,6 +1240,7 @@ exports[`ReplyList when there are no replies renders correctly 1`] = `
   }
 >
   <ReplyList
+    backButtonOnPress={[Function]}
     id="21097"
   />
 </ApolloProvider>
@@ -2551,6 +2552,7 @@ exports[`ReplyList when there are replies renders correctly 1`] = `
   }
 >
   <ReplyList
+    backButtonOnPress={[Function]}
     id="21097"
   />
 </ApolloProvider>

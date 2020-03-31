@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-import { FlatList } from "react-native";
+import { FlatList, View } from "react-native";
 
-import { Comment, Query, Reply } from "components";
+import { BackButton, Comment, Query, Reply } from "components";
 import {
   Comment as CommentType,
   NavigationType,
@@ -14,6 +14,7 @@ import { layout } from "styles";
 import { NoContent } from "./comments/no-content";
 
 interface Props {
+  backButtonOnPress: () => void;
   id: string;
   navigation: NavigationType;
 }
@@ -33,7 +34,8 @@ class ReplyList extends Component<Props, State> {
   }
 
   renderList = ({ comment }) => {
-    const { navigation } = this.props;
+    const { backButtonOnPress, navigation } = this.props;
+    const { toTopics } = labels.back;
 
     if (comment) {
       return (
@@ -42,7 +44,14 @@ class ReplyList extends Component<Props, State> {
           data={comment.replies}
           ListEmptyComponent={<NoContent text={labels.noReplies} />}
           ListHeaderComponent={
-            <Comment item={comment} navigation={navigation} />
+            <View>
+              <BackButton
+                navigation={navigation}
+                text={toTopics}
+                onPress={() => backButtonOnPress()}
+              />
+              <Comment item={comment} navigation={navigation} />
+            </View>
           }
           initialNumToRender={5}
           keyExtractor={({ id }) => id}

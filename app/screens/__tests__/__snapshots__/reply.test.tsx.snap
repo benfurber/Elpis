@@ -18,11 +18,8 @@ exports[`ReplyScreen renders correctly 1`] = `
       }
     }
   >
-    <BackButton
-      onPress={[Function]}
-      text="Voltar aos tópicos"
-    />
     <ReplyList
+      backButtonOnPress={[Function]}
       id="21097"
     />
   </View>
