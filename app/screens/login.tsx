@@ -36,7 +36,6 @@ class LoginScreen extends Component<Props> {
               onPress={() => navigation.navigate("RequestNewPassword")}
             >
               <Text style={styles.text}>
-                {error && error.message}
                 {labels.passwordReset.request.cta}
               </Text>
             </TouchableOpacity>

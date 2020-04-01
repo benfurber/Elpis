@@ -124,7 +124,6 @@ exports[`LoginScreen renders correctly when given an error 1`] = `
             }
           }
         >
-          There was a problem
           Esqueci a minha senha
         </Text>
       </TouchableOpacity>
