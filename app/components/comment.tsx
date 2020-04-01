@@ -116,14 +116,6 @@ const styles = StyleSheet.create({
     paddingHorizontal: layout.spacing,
     paddingVertical: layout.spacingL,
   },
-  featuredAuthorDetails: {
-    paddingLeft: layout.spacing,
-  },
-  featuredDetails: {
-    alignItems: "center",
-    flexDirection: "row",
-    marginBottom: layout.spacing,
-  },
 });
 
 export { Comment };

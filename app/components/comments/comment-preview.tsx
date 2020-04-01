@@ -149,14 +149,6 @@ const styles = StyleSheet.create({
     alignItems: "center",
     flexDirection: "row",
   },
-  metaDetails: {
-    marginBottom: layout.spacing,
-    ...elements.textDate,
-  },
-  name: {
-    color: colours.navyBlueDark,
-    fontWeight: "bold",
-  },
   text: {
     flex: 1,
     flexWrap: "nowrap",
