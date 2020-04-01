@@ -7,8 +7,8 @@ import { TouchableOpacity } from "react-native-gesture-handler";
 import {
   ActionSheetComment,
   AuthorInfo,
+  Badge,
   IconDiscussionLevel,
-  Title,
 } from "components";
 import { Comment as CommentType, NavigationType } from "interfaces";
 import { colours, layout } from "styles";
@@ -31,7 +31,13 @@ class Comment extends Component<Props> {
 
   render() {
     const { item, navigation } = this.props;
-    const { content, discussionLevel, isAuthorCurrentUser, post, title } = item;
+    const {
+      content,
+      discussionLevel,
+      isAuthorCurrentUser,
+      post,
+      totalReplies,
+    } = item;
 
     return (
       <TouchableOpacity
@@ -54,6 +60,10 @@ class Comment extends Component<Props> {
 
             <Text style={styles.content}>{content}</Text>
           </View>
+
+          <View style={styles.badgeContainer}>
+            <Badge left={layout.spacing} number={totalReplies} staticPosition />
+          </View>
         </View>
 
         {post && (
@@ -70,8 +80,12 @@ class Comment extends Component<Props> {
 }
 
 const styles = StyleSheet.create({
+  badgeContainer: {
+    top: -30,
+    width: 40,
+  },
   body: {
-    marginHorizontal: layout.spacingXL,
+    flex: 1,
     marginTop: layout.spacing,
   },
   categoryContainer: {
@@ -87,7 +101,6 @@ const styles = StyleSheet.create({
     overflow: "hidden",
     position: "absolute",
     top: -40,
-    zIndex: 1,
   },
   content: {
     marginTop: layout.spacing,
@@ -96,8 +109,10 @@ const styles = StyleSheet.create({
     backgroundColor: colours.navyBlueLight,
     borderBottomRightRadius: layout.borderRadiusL,
     borderTopRightRadius: layout.borderRadiusL,
+    flexDirection: "row",
+    marginBottom: layout.spacing,
     marginRight: layout.spacing,
-    marginVertical: layout.spacingL,
+    marginTop: layout.spacingL,
     paddingHorizontal: layout.spacing,
     paddingVertical: layout.spacingL,
   },

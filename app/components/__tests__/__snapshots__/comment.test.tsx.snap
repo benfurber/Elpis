@@ -18,8 +18,10 @@ exports[`Comment renders correctly 1`] = `
         "backgroundColor": "rgb(216, 226, 234)",
         "borderBottomRightRadius": 10,
         "borderTopRightRadius": 10,
+        "flexDirection": "row",
+        "marginBottom": 10,
         "marginRight": 10,
-        "marginVertical": 20,
+        "marginTop": 20,
         "paddingHorizontal": 10,
         "paddingVertical": 20,
       }
@@ -44,7 +46,6 @@ exports[`Comment renders correctly 1`] = `
             "overflow": "hidden",
             "position": "absolute",
             "top": -40,
-            "zIndex": 1,
           }
         }
       >
@@ -62,7 +63,7 @@ exports[`Comment renders correctly 1`] = `
     <View
       style={
         Object {
-          "marginHorizontal": 40,
+          "flex": 1,
           "marginTop": 10,
         }
       }
@@ -165,6 +166,20 @@ exports[`Comment renders correctly 1`] = `
       >
         Dá certo sim, o meu pai, por exemplo, fugiu quando eu tinha 5 anos e eu não faço ideia da onde ele esteja. Nunca mais voltou, pena que a violência só piorou.
       </Text>
+    </View>
+    <View
+      style={
+        Object {
+          "top": -30,
+          "width": 40,
+        }
+      }
+    >
+      <Badge
+        left={10}
+        number={1}
+        staticPosition={true}
+      />
     </View>
   </View>
   <ActionSheetComment
@@ -279,8 +294,10 @@ exports[`Comment renders correctly when edited 1`] = `
         "backgroundColor": "rgb(216, 226, 234)",
         "borderBottomRightRadius": 10,
         "borderTopRightRadius": 10,
+        "flexDirection": "row",
+        "marginBottom": 10,
         "marginRight": 10,
-        "marginVertical": 20,
+        "marginTop": 20,
         "paddingHorizontal": 10,
         "paddingVertical": 20,
       }
@@ -305,7 +322,6 @@ exports[`Comment renders correctly when edited 1`] = `
             "overflow": "hidden",
             "position": "absolute",
             "top": -40,
-            "zIndex": 1,
           }
         }
       >
@@ -323,7 +339,7 @@ exports[`Comment renders correctly when edited 1`] = `
     <View
       style={
         Object {
-          "marginHorizontal": 40,
+          "flex": 1,
           "marginTop": 10,
         }
       }
@@ -426,6 +442,20 @@ exports[`Comment renders correctly when edited 1`] = `
       >
         Dá certo sim, o meu pai, por exemplo, fugiu quando eu tinha 5 anos e eu não faço ideia da onde ele esteja. Nunca mais voltou, pena que a violência só piorou.
       </Text>
+    </View>
+    <View
+      style={
+        Object {
+          "top": -30,
+          "width": 40,
+        }
+      }
+    >
+      <Badge
+        left={10}
+        number={1}
+        staticPosition={true}
+      />
     </View>
   </View>
   <ActionSheetComment
