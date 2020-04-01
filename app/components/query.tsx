@@ -63,7 +63,6 @@ class NewQuery extends Component<Props, State> {
         query={this.props.query}
         variables={this.props.variables}
         pollInterval={this.props.pollInterval || undefined}
-        notifyOnNetworkStatusChange
       >
         {args => {
           if (args.networkStatus === 1) {

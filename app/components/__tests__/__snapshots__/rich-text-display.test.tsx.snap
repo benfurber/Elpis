@@ -21,7 +21,6 @@ exports[`RichTextDisplay renders correctly with a link 1`] = `
     style={
       Object {
         "fontSize": 16,
-        "paddingVertical": 10,
       }
     }
     text="Nao."
@@ -59,7 +58,6 @@ exports[`RichTextDisplay renders correctly without a link 1`] = `
     style={
       Object {
         "fontSize": 16,
-        "paddingVertical": 10,
       }
     }
     text="Nao."

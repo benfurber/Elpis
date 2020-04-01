@@ -1,25 +1,25 @@
 import React, { Component } from "react";
 import { StyleSheet, Text, View } from "react-native";
-import { TouchableOpacity } from "react-native-gesture-handler";
+
 import ActionSheet from "react-native-actionsheet";
+import { TouchableOpacity } from "react-native-gesture-handler";
 
 import {
-  Avatar,
+  AuthorInfo,
   Badge,
   IconDiscussionLevel,
   Icon,
-  Title,
   ActionSheetComment,
 } from "components";
 import { Comment as CommentInterface, NavigationType, Post } from "interfaces";
 import { colours, elements, layout } from "styles";
-import { formatDate } from "utils";
 
 interface Props {
+  backToText?: string;
   item: CommentInterface;
   navigation: NavigationType;
-  onPress: (number) => void;
   postId: Post["id"];
+  totalComments: number;
 }
 
 class CommentPreview extends Component<Props> {
@@ -58,29 +58,27 @@ class CommentPreview extends Component<Props> {
   }
 
   render() {
-    const { item, navigation, onPress, postId } = this.props;
-    const { author, discussionLevel, id, publishedAt, title } = item;
+    const { backToText, item, navigation, postId, totalComments } = this.props;
+    const { discussionLevel, id } = item;
+
+    const onPress = () =>
+      navigation.navigate("Reply", {
+        backToText,
+        id,
+        isFromTopic: true,
+        postId,
+        totalComments,
+      });
 
     return (
       <TouchableOpacity
-        onPress={() => onPress(id)}
+        onPress={onPress}
         onLongPress={() => this.onLongPress()}
       >
         <View style={styles.commentContainer}>
           <View style={styles.headerRow}>
-            <View style={styles.avatarContainer}>
-              <Avatar
-                avatarPath={author.avatarPath}
-                navigation={navigation}
-                userId={author.id}
-              />
-            </View>
             <View style={styles.titleContainer}>
-              {title && <Title text={title} />}
-              <Text style={styles.metaDetails}>
-                <Text style={styles.name}>{`${author.name} `}</Text>
-                {formatDate(publishedAt, false)}
-              </Text>
+              <AuthorInfo navigation={navigation} item={item} />
             </View>
             <View style={styles.categoryContainer}>
               <View style={styles.categoryIconContainer}>
@@ -150,14 +148,6 @@ const styles = StyleSheet.create({
   iconContainer: {
     alignItems: "center",
     flexDirection: "row",
-  },
-  metaDetails: {
-    marginBottom: layout.spacing,
-    ...elements.textDate,
-  },
-  name: {
-    color: colours.navyBlueDark,
-    fontWeight: "bold",
   },
   text: {
     flex: 1,

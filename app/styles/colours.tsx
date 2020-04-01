@@ -5,6 +5,7 @@ const colours = {
   mediumGrey: "rgba(51,51,51,0.65)",
   navyBlueDark: "rgb(45, 82, 113)",
   navyBlueDarkTransparentHigh: "rgba(45, 82, 113, 0.60)",
+  navyBlueLight: "rgb(216, 226, 234)",
   pureWhite: "rgb(255, 255, 255)",
   red: "rgb(208, 2, 27)",
   redTransparent: "rgba(208, 2, 27, 0.75)",

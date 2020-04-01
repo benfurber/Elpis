@@ -66,7 +66,6 @@ class RichTextDisplay extends Component<Props> {
 const styles = StyleSheet.create({
   body: {
     fontSize: typography.fontSize,
-    paddingVertical: layout.spacing,
   },
   imageContainer: {
     borderRadius: layout.borderRadiusL,

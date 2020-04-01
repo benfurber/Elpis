@@ -6,13 +6,14 @@ import { layout, colours } from "styles";
 
 interface Props {
   containerStyle?: object;
-  level: number;
+  level?: number;
   size?: number;
 }
 
 class IconDiscussionLevel extends Component<Props> {
   render() {
-    const { containerStyle, level, size } = this.props;
+    const { containerStyle, size } = this.props;
+    const level = this.props.level || 0;
 
     const backgroundColours = [
       "rgb(186, 202, 214)",

@@ -3,6 +3,7 @@
 exports[`PostScreen when no post provided renders correctly 1`] = `
 <BackgroundContainer>
   <BackButton
+    onPress={[Function]}
     text="Voltar às notificações"
   />
   <NewQuery
@@ -267,9 +268,11 @@ exports[`PostScreen when no post provided renders correctly 1`] = `
 exports[`PostScreen when post provided renders correctly 1`] = `
 <BackgroundContainer>
   <BackButton
+    onPress={[Function]}
     text="Voltar ao feed"
   />
   <Post
+    backToText="Voltar ao feed"
     post={
       Object {
         "author": Object {
@@ -289,7 +292,6 @@ exports[`PostScreen when post provided renders correctly 1`] = `
         "publishedAt": 2000-01-01T00:00:00.000Z,
       }
     }
-    postTabAction={true}
     setDisplay="post"
     styles={
       Object {

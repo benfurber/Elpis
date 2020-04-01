@@ -6,6 +6,8 @@ export { checkPasswordStrength } from "./check-password-strength";
 export { client } from "./client";
 export { firstSentence } from "./first-sentence";
 export { formatDate } from "./format-date";
+export { getPostId } from "./get-post-id";
+export { getTotalComments } from "./get-total-comments";
 export { ignoreWarnings } from "./ignore-warnings";
 export { pushNotifications } from "./push-notifications";
 export { resizeImage } from "./resize-image";

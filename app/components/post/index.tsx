@@ -11,9 +11,9 @@ import { Footer } from "./footer";
 import { Tabs } from "./tabs";
 
 interface Props {
+  backToText?: string;
   navigation: NavigationType;
   post: PostInterface;
-  postTabAction?: boolean;
   feed?: true;
   setDisplay?: string;
   styles?: object;
@@ -23,6 +23,7 @@ interface Props {
 interface State {
   commentId: string | undefined;
   display: string;
+  totalComments: number;
 }
 
 class Post extends Component<Props, State> {
@@ -32,6 +33,7 @@ class Post extends Component<Props, State> {
     this.state = {
       commentId: props.commentId || undefined,
       display: "body",
+      totalComments: calculateTotalComments(props.post.comments),
     };
   }
 
@@ -52,9 +54,9 @@ class Post extends Component<Props, State> {
   }
 
   onPressPost() {
-    const { navigation, postTabAction } = this.props;
+    const { backToText, navigation } = this.props;
 
-    if (postTabAction) {
+    if (backToText) {
       return () => this.navigate("body");
     }
     return () => navigation.popToTop();
@@ -100,15 +102,17 @@ class Post extends Component<Props, State> {
   }
 
   renderComments() {
-    const { post } = this.props;
-    const { commentId } = this.state;
+    const { backToText, post } = this.props;
+    const { commentId, totalComments } = this.state;
 
     return (
       <Comments
-        post={post}
-        navigation={this.props.navigation}
+        backToText={backToText}
         commentId={commentId}
+        navigation={this.props.navigation}
+        post={post}
         setCommentId={commentId => this.setState({ commentId })}
+        totalComments={totalComments}
       />
     );
   }
@@ -125,7 +129,7 @@ class Post extends Component<Props, State> {
   }
 
   render() {
-    const totalComments = calculateTotalComments(this.props.post.comments);
+    const { totalComments } = this.state;
 
     return (
       <View style={[this.fullHeight(), this.props.styles]}>

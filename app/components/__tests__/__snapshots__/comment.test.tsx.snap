@@ -1,0 +1,553 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Comment renders correctly 1`] = `
+<TouchableOpacity
+  activeOpacity={0.2}
+  delayLongPress={600}
+  disabled={true}
+  extraButtonProps={
+    Object {
+      "rippleColor": "transparent",
+    }
+  }
+  onLongPress={[Function]}
+>
+  <View
+    style={
+      Object {
+        "backgroundColor": "rgb(216, 226, 234)",
+        "borderBottomRightRadius": 10,
+        "borderTopRightRadius": 10,
+        "flexDirection": "row",
+        "marginBottom": 10,
+        "marginRight": 10,
+        "marginTop": 20,
+        "paddingHorizontal": 10,
+        "paddingVertical": 20,
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "alignItems": "flex-end",
+          "width": 40,
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "borderBottomLeftRadius": 0,
+            "borderColor": "rgb(216, 226, 234)",
+            "borderRadius": 30,
+            "borderWidth": 5,
+            "left": -10,
+            "overflow": "hidden",
+            "position": "absolute",
+            "top": -40,
+          }
+        }
+      >
+        <IconDiscussionLevel
+          containerStyle={
+            Object {
+              "borderBottomLeftRadius": 0,
+            }
+          }
+          level={1}
+          size={25}
+        />
+      </View>
+    </View>
+    <View
+      style={
+        Object {
+          "flex": 1,
+          "marginTop": 10,
+        }
+      }
+    >
+      <AuthorInfo
+        item={
+          Object {
+            "author": Object {
+              "avatarPath": Object {
+                "testUri": "../../../app/assets/images/profile-pic-annon.png",
+              },
+              "id": "1235we",
+              "name": "May",
+            },
+            "content": "Dá certo sim, o meu pai, por exemplo, fugiu quando eu tinha 5 anos e eu não faço ideia da onde ele esteja. Nunca mais voltou, pena que a violência só piorou.",
+            "discussionLevel": 1,
+            "edited": false,
+            "id": "21097",
+            "isAuthorCurrentUser": false,
+            "post": Object {
+              "author": Object {
+                "avatarPath": Object {
+                  "testUri": "../../../app/assets/images/empower_two_women_logo.png",
+                },
+                "id": "1235we",
+                "name": "Empodere Duas Mulheres",
+                "posts": Array [],
+              },
+              "comments": Array [],
+              "content": null,
+              "id": "10387-314fs-12asdbj",
+              "imagePath": Object {
+                "testUri": "../../../app/assets/images/image_post_1.jpg",
+              },
+              "publishedAt": 2000-01-01T00:00:00.000Z,
+            },
+            "publishedAt": 2019-01-01T00:00:00.000Z,
+            "replies": Array [
+              Object {
+                "author": Object {
+                  "avatarPath": Object {
+                    "testUri": "../../../app/assets/images/profile-pic-annon.png",
+                  },
+                  "id": "1235we",
+                  "name": "May",
+                },
+                "comment": Object {
+                  "author": Object {
+                    "avatarPath": Object {
+                      "testUri": "../../../app/assets/images/profile-pic-annon.png",
+                    },
+                    "id": "1235we",
+                    "name": "May",
+                  },
+                  "content": "Dá certo sim, o meu pai, por exemplo, fugiu quando eu tinha 5 anos e eu não faço ideia da onde ele esteja. Nunca mais voltou, pena que a violência só piorou.",
+                  "discussionLevel": 0,
+                  "edited": false,
+                  "id": "21097",
+                  "isAuthorCurrentUser": false,
+                  "post": Object {
+                    "author": Object {
+                      "avatarPath": Object {
+                        "testUri": "../../../app/assets/images/empower_two_women_logo.png",
+                      },
+                      "id": "1235we",
+                      "name": "Empodere Duas Mulheres",
+                      "posts": Array [],
+                    },
+                    "comments": Array [],
+                    "content": null,
+                    "id": "10387-314fs-12asdbj",
+                    "imagePath": Object {
+                      "testUri": "../../../app/assets/images/image_post_1.jpg",
+                    },
+                    "publishedAt": 2000-01-01T00:00:00.000Z,
+                  },
+                  "publishedAt": 2019-01-01T00:00:00.000Z,
+                  "replies": Array [],
+                  "totalReplies": 0,
+                },
+                "content": "Nao.",
+                "edited": false,
+                "id": "21097",
+                "isAuthorCurrentUser": false,
+                "link": null,
+                "publishedAt": 2019-01-01T00:00:00.000Z,
+              },
+            ],
+            "title": "Meu pai fez o que ela mandou",
+            "totalReplies": 1,
+          }
+        }
+      />
+      <Text
+        style={
+          Object {
+            "marginTop": 10,
+          }
+        }
+      >
+        Dá certo sim, o meu pai, por exemplo, fugiu quando eu tinha 5 anos e eu não faço ideia da onde ele esteja. Nunca mais voltou, pena que a violência só piorou.
+      </Text>
+    </View>
+    <View
+      style={
+        Object {
+          "top": -30,
+          "width": 40,
+        }
+      }
+    >
+      <Badge
+        left={10}
+        number={1}
+        staticPosition={true}
+      />
+    </View>
+  </View>
+  <ActionSheetComment
+    item={
+      Object {
+        "author": Object {
+          "avatarPath": Object {
+            "testUri": "../../../app/assets/images/profile-pic-annon.png",
+          },
+          "id": "1235we",
+          "name": "May",
+        },
+        "content": "Dá certo sim, o meu pai, por exemplo, fugiu quando eu tinha 5 anos e eu não faço ideia da onde ele esteja. Nunca mais voltou, pena que a violência só piorou.",
+        "discussionLevel": 1,
+        "edited": false,
+        "id": "21097",
+        "isAuthorCurrentUser": false,
+        "post": Object {
+          "author": Object {
+            "avatarPath": Object {
+              "testUri": "../../../app/assets/images/empower_two_women_logo.png",
+            },
+            "id": "1235we",
+            "name": "Empodere Duas Mulheres",
+            "posts": Array [],
+          },
+          "comments": Array [],
+          "content": null,
+          "id": "10387-314fs-12asdbj",
+          "imagePath": Object {
+            "testUri": "../../../app/assets/images/image_post_1.jpg",
+          },
+          "publishedAt": 2000-01-01T00:00:00.000Z,
+        },
+        "publishedAt": 2019-01-01T00:00:00.000Z,
+        "replies": Array [
+          Object {
+            "author": Object {
+              "avatarPath": Object {
+                "testUri": "../../../app/assets/images/profile-pic-annon.png",
+              },
+              "id": "1235we",
+              "name": "May",
+            },
+            "comment": Object {
+              "author": Object {
+                "avatarPath": Object {
+                  "testUri": "../../../app/assets/images/profile-pic-annon.png",
+                },
+                "id": "1235we",
+                "name": "May",
+              },
+              "content": "Dá certo sim, o meu pai, por exemplo, fugiu quando eu tinha 5 anos e eu não faço ideia da onde ele esteja. Nunca mais voltou, pena que a violência só piorou.",
+              "discussionLevel": 0,
+              "edited": false,
+              "id": "21097",
+              "isAuthorCurrentUser": false,
+              "post": Object {
+                "author": Object {
+                  "avatarPath": Object {
+                    "testUri": "../../../app/assets/images/empower_two_women_logo.png",
+                  },
+                  "id": "1235we",
+                  "name": "Empodere Duas Mulheres",
+                  "posts": Array [],
+                },
+                "comments": Array [],
+                "content": null,
+                "id": "10387-314fs-12asdbj",
+                "imagePath": Object {
+                  "testUri": "../../../app/assets/images/image_post_1.jpg",
+                },
+                "publishedAt": 2000-01-01T00:00:00.000Z,
+              },
+              "publishedAt": 2019-01-01T00:00:00.000Z,
+              "replies": Array [],
+              "totalReplies": 0,
+            },
+            "content": "Nao.",
+            "edited": false,
+            "id": "21097",
+            "isAuthorCurrentUser": false,
+            "link": null,
+            "publishedAt": 2019-01-01T00:00:00.000Z,
+          },
+        ],
+        "title": "Meu pai fez o que ela mandou",
+        "totalReplies": 1,
+      }
+    }
+    postId="10387-314fs-12asdbj"
+    refProp={[Function]}
+  />
+</TouchableOpacity>
+`;
+
+exports[`Comment renders correctly when edited 1`] = `
+<TouchableOpacity
+  activeOpacity={0.2}
+  delayLongPress={600}
+  disabled={true}
+  extraButtonProps={
+    Object {
+      "rippleColor": "transparent",
+    }
+  }
+  onLongPress={[Function]}
+>
+  <View
+    style={
+      Object {
+        "backgroundColor": "rgb(216, 226, 234)",
+        "borderBottomRightRadius": 10,
+        "borderTopRightRadius": 10,
+        "flexDirection": "row",
+        "marginBottom": 10,
+        "marginRight": 10,
+        "marginTop": 20,
+        "paddingHorizontal": 10,
+        "paddingVertical": 20,
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "alignItems": "flex-end",
+          "width": 40,
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "borderBottomLeftRadius": 0,
+            "borderColor": "rgb(216, 226, 234)",
+            "borderRadius": 30,
+            "borderWidth": 5,
+            "left": -10,
+            "overflow": "hidden",
+            "position": "absolute",
+            "top": -40,
+          }
+        }
+      >
+        <IconDiscussionLevel
+          containerStyle={
+            Object {
+              "borderBottomLeftRadius": 0,
+            }
+          }
+          level={1}
+          size={25}
+        />
+      </View>
+    </View>
+    <View
+      style={
+        Object {
+          "flex": 1,
+          "marginTop": 10,
+        }
+      }
+    >
+      <AuthorInfo
+        item={
+          Object {
+            "author": Object {
+              "avatarPath": Object {
+                "testUri": "../../../app/assets/images/profile-pic-annon.png",
+              },
+              "id": "1235we",
+              "name": "May",
+            },
+            "content": "Dá certo sim, o meu pai, por exemplo, fugiu quando eu tinha 5 anos e eu não faço ideia da onde ele esteja. Nunca mais voltou, pena que a violência só piorou.",
+            "discussionLevel": 1,
+            "edited": true,
+            "id": "21097",
+            "isAuthorCurrentUser": false,
+            "post": Object {
+              "author": Object {
+                "avatarPath": Object {
+                  "testUri": "../../../app/assets/images/empower_two_women_logo.png",
+                },
+                "id": "1235we",
+                "name": "Empodere Duas Mulheres",
+                "posts": Array [],
+              },
+              "comments": Array [],
+              "content": null,
+              "id": "10387-314fs-12asdbj",
+              "imagePath": Object {
+                "testUri": "../../../app/assets/images/image_post_1.jpg",
+              },
+              "publishedAt": 2000-01-01T00:00:00.000Z,
+            },
+            "publishedAt": 2019-01-01T00:00:00.000Z,
+            "replies": Array [
+              Object {
+                "author": Object {
+                  "avatarPath": Object {
+                    "testUri": "../../../app/assets/images/profile-pic-annon.png",
+                  },
+                  "id": "1235we",
+                  "name": "May",
+                },
+                "comment": Object {
+                  "author": Object {
+                    "avatarPath": Object {
+                      "testUri": "../../../app/assets/images/profile-pic-annon.png",
+                    },
+                    "id": "1235we",
+                    "name": "May",
+                  },
+                  "content": "Dá certo sim, o meu pai, por exemplo, fugiu quando eu tinha 5 anos e eu não faço ideia da onde ele esteja. Nunca mais voltou, pena que a violência só piorou.",
+                  "discussionLevel": 0,
+                  "edited": false,
+                  "id": "21097",
+                  "isAuthorCurrentUser": false,
+                  "post": Object {
+                    "author": Object {
+                      "avatarPath": Object {
+                        "testUri": "../../../app/assets/images/empower_two_women_logo.png",
+                      },
+                      "id": "1235we",
+                      "name": "Empodere Duas Mulheres",
+                      "posts": Array [],
+                    },
+                    "comments": Array [],
+                    "content": null,
+                    "id": "10387-314fs-12asdbj",
+                    "imagePath": Object {
+                      "testUri": "../../../app/assets/images/image_post_1.jpg",
+                    },
+                    "publishedAt": 2000-01-01T00:00:00.000Z,
+                  },
+                  "publishedAt": 2019-01-01T00:00:00.000Z,
+                  "replies": Array [],
+                  "totalReplies": 0,
+                },
+                "content": "Nao.",
+                "edited": false,
+                "id": "21097",
+                "isAuthorCurrentUser": false,
+                "link": null,
+                "publishedAt": 2019-01-01T00:00:00.000Z,
+              },
+            ],
+            "title": "Meu pai fez o que ela mandou",
+            "totalReplies": 1,
+          }
+        }
+      />
+      <Text
+        style={
+          Object {
+            "marginTop": 10,
+          }
+        }
+      >
+        Dá certo sim, o meu pai, por exemplo, fugiu quando eu tinha 5 anos e eu não faço ideia da onde ele esteja. Nunca mais voltou, pena que a violência só piorou.
+      </Text>
+    </View>
+    <View
+      style={
+        Object {
+          "top": -30,
+          "width": 40,
+        }
+      }
+    >
+      <Badge
+        left={10}
+        number={1}
+        staticPosition={true}
+      />
+    </View>
+  </View>
+  <ActionSheetComment
+    item={
+      Object {
+        "author": Object {
+          "avatarPath": Object {
+            "testUri": "../../../app/assets/images/profile-pic-annon.png",
+          },
+          "id": "1235we",
+          "name": "May",
+        },
+        "content": "Dá certo sim, o meu pai, por exemplo, fugiu quando eu tinha 5 anos e eu não faço ideia da onde ele esteja. Nunca mais voltou, pena que a violência só piorou.",
+        "discussionLevel": 1,
+        "edited": true,
+        "id": "21097",
+        "isAuthorCurrentUser": false,
+        "post": Object {
+          "author": Object {
+            "avatarPath": Object {
+              "testUri": "../../../app/assets/images/empower_two_women_logo.png",
+            },
+            "id": "1235we",
+            "name": "Empodere Duas Mulheres",
+            "posts": Array [],
+          },
+          "comments": Array [],
+          "content": null,
+          "id": "10387-314fs-12asdbj",
+          "imagePath": Object {
+            "testUri": "../../../app/assets/images/image_post_1.jpg",
+          },
+          "publishedAt": 2000-01-01T00:00:00.000Z,
+        },
+        "publishedAt": 2019-01-01T00:00:00.000Z,
+        "replies": Array [
+          Object {
+            "author": Object {
+              "avatarPath": Object {
+                "testUri": "../../../app/assets/images/profile-pic-annon.png",
+              },
+              "id": "1235we",
+              "name": "May",
+            },
+            "comment": Object {
+              "author": Object {
+                "avatarPath": Object {
+                  "testUri": "../../../app/assets/images/profile-pic-annon.png",
+                },
+                "id": "1235we",
+                "name": "May",
+              },
+              "content": "Dá certo sim, o meu pai, por exemplo, fugiu quando eu tinha 5 anos e eu não faço ideia da onde ele esteja. Nunca mais voltou, pena que a violência só piorou.",
+              "discussionLevel": 0,
+              "edited": false,
+              "id": "21097",
+              "isAuthorCurrentUser": false,
+              "post": Object {
+                "author": Object {
+                  "avatarPath": Object {
+                    "testUri": "../../../app/assets/images/empower_two_women_logo.png",
+                  },
+                  "id": "1235we",
+                  "name": "Empodere Duas Mulheres",
+                  "posts": Array [],
+                },
+                "comments": Array [],
+                "content": null,
+                "id": "10387-314fs-12asdbj",
+                "imagePath": Object {
+                  "testUri": "../../../app/assets/images/image_post_1.jpg",
+                },
+                "publishedAt": 2000-01-01T00:00:00.000Z,
+              },
+              "publishedAt": 2019-01-01T00:00:00.000Z,
+              "replies": Array [],
+              "totalReplies": 0,
+            },
+            "content": "Nao.",
+            "edited": false,
+            "id": "21097",
+            "isAuthorCurrentUser": false,
+            "link": null,
+            "publishedAt": 2019-01-01T00:00:00.000Z,
+          },
+        ],
+        "title": "Meu pai fez o que ela mandou",
+        "totalReplies": 1,
+      }
+    }
+    postId="10387-314fs-12asdbj"
+    refProp={[Function]}
+  />
+</TouchableOpacity>
+`;

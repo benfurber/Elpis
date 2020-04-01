@@ -3,7 +3,6 @@ import React from "react";
 import { shallow } from "enzyme";
 
 import { comment, post } from "factories";
-
 import { Comments } from "..";
 
 let navigation;
@@ -22,6 +21,7 @@ describe("Comments", () => {
           post={postForTest}
           navigation={navigation}
           setCommentId={() => jest.fn()}
+          totalComments={2}
         />,
       );
 
@@ -36,6 +36,7 @@ describe("Comments", () => {
           post={post}
           navigation={navigation}
           setCommentId={() => jest.fn()}
+          totalComments={0}
         />,
       );
 
