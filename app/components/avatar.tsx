@@ -13,7 +13,7 @@ interface Props {
   containerStyles?: object;
   navigation?: NavigationType;
   userId?: User["id"];
-  size?: "small" | "medium" | "large" | "xl" | "feature";
+  size?: "xs" | "small" | "medium" | "large" | "xl" | "feature";
   styles?: object;
 }
 
@@ -47,6 +47,7 @@ class Avatar extends Component<Props> {
       medium: elements.imageRound,
       small: elements.imageRoundSmall,
       xl: elements.imageRoundXL,
+      xs: elements.imageRoundXS,
     };
 
     return (

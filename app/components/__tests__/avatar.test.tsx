@@ -15,6 +15,10 @@ describe("Avatar", () => {
       const component = shallow(<Avatar avatarPath={avatarPath} />);
       expect(component).toMatchSnapshot();
     });
+    it("extra small", () => {
+      const component = shallow(<Avatar avatarPath={avatarPath} size="xs" />);
+      expect(component).toMatchSnapshot();
+    });
     it("small", () => {
       const component = shallow(
         <Avatar avatarPath={avatarPath} size="small" />,
