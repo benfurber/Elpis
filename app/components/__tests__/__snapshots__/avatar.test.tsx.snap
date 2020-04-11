@@ -35,6 +35,41 @@ exports[`Avatar renders no path correctly 1`] = `
 </View>
 `;
 
+exports[`Avatar renders sizes correctly extra small 1`] = `
+<View>
+  <TouchableOpacity
+    activeOpacity={0.2}
+    delayLongPress={600}
+    extraButtonProps={
+      Object {
+        "rippleColor": "transparent",
+      }
+    }
+    onPress={[Function]}
+  >
+    <Image
+      source={
+        Object {
+          "uri": "https://elpis-profile-images.s3-sa-east-1.amazonaws.com/uploads/profile-pic-may.jpg",
+        }
+      }
+      style={
+        Array [
+          Object {
+            "backgroundColor": "rgba(4, 71, 47, 0.75)",
+            "borderRadius": 15,
+            "height": 30,
+            "overflow": "hidden",
+            "width": 30,
+          },
+          undefined,
+        ]
+      }
+    />
+  </TouchableOpacity>
+</View>
+`;
+
 exports[`Avatar renders sizes correctly feature 1`] = `
 <View>
   <TouchableOpacity

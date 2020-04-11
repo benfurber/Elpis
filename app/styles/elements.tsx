@@ -57,6 +57,12 @@ const elements = StyleSheet.create({
     height: 70,
     width: 70,
   },
+  imageRoundXS: {
+    ...standard.image,
+    borderRadius: 15,
+    height: 30,
+    width: 30,
+  },
   standardText: {
     fontFamily: "lato-regular",
     fontSize: typography.fontSize,
