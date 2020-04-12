@@ -1,4 +1,10 @@
-import { Comment, Community, Reply, User } from "interfaces";
+import {
+  Comment,
+  Community,
+  Message,
+  Reply,
+  User,
+} from "interfaces";
 
 export const community: Community = {
   avatarPath: require("assets/images/empower_two_women_logo.png"),
@@ -75,4 +81,12 @@ export const commentWithoutReplies: Comment = {
   replies: [],
   title: "Meu pai fez o que ela mandou",
   totalReplies: 0,
+};
+
+export const message: Message = {
+  author: user,
+  content:
+    "Eu acho que fazer as unhas é umas das coisas mais fúteis, inúteis, burras de se fazer com o próprio tempo e dinheiro. Maquiagem um pouco também. E que se foda se alguém achar que eu me cuido pouco pq não faço as unhas.",
+  createdAt: new Date("2019-01-01"),
+  id: "2143r97dc",
 };
