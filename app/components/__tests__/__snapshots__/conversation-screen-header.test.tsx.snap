@@ -1,0 +1,50 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ConversationScreenHeader renders correctly 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "baseline",
+      "flexDirection": "row",
+    }
+  }
+>
+  <Avatar
+    avatarPath={
+      Object {
+        "testUri": "../../../app/assets/images/profile-pic-annon.png",
+      }
+    }
+    containerStyles={
+      Object {
+        "backgroundColor": "rgba(255, 255, 255, 0.70)",
+        "borderTopLeftRadius": 40,
+        "borderTopRightRadius": 40,
+        "padding": 10,
+        "paddingBottom": 0,
+      }
+    }
+    size="large"
+    userId="1235we"
+  />
+  <View
+    style={
+      Object {
+        "backgroundColor": "rgba(255, 255, 255, 0.70)",
+        "borderTopRightRadius": 10,
+        "flex": 1,
+      }
+    }
+  >
+    <Title
+      style={
+        Object {
+          "marginBottom": 0,
+          "padding": 5,
+        }
+      }
+      text="May"
+    />
+  </View>
+</View>
+`;
