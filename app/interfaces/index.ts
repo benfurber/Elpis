@@ -55,6 +55,13 @@ export interface Reply extends ContentBase {
   isAuthorCurrentUser: boolean;
 }
 
+export interface Message {
+  author: User;
+  content: string;
+  createdAt: Date;
+  id: string;
+}
+
 export interface Notification {
   id: string;
   createdAt: Date;
