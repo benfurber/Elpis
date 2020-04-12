@@ -9,6 +9,7 @@ import { FeedbackScreen as Feedback } from "screens";
 
 import { Feed } from "./feed";
 import { Menu } from "./menu";
+import { Conversation } from "./conversation";
 import { Notification } from "./notification";
 
 const path = "";
@@ -31,6 +32,7 @@ const options = {
 const screens = {
   Feed,
   Notification,
+  Conversation,
   Feedback,
   Menu,
 };
