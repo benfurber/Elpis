@@ -8,6 +8,17 @@ const AUTHOR_ATTRIBUTES = gql`
   }
 `;
 
+const CONVERSATION_ATTRIBUTES = gql`
+  fragment conversationAttributes on Conversation {
+    id
+    remainingParticipants {
+      avatarPath
+      id
+      name
+    }
+  }
+`;
+
 const POST_ATTRIBUTES = gql`
   fragment postAttributes on Post {
     id
@@ -171,6 +182,24 @@ export const USER_DETAILS = gql`
       unreadNotifications
     }
   }
+`;
+
+export const MESSAGE_LIST = gql`
+  query conversation($id: ID!) {
+    conversation(id: $id) {
+      ...conversationAttributes
+      messages {
+        author {
+          avatarPath
+          id
+        }
+        id
+        content
+        createdAt
+      }
+    }
+  }
+  ${CONVERSATION_ATTRIBUTES}
 `;
 
 export const NOTIFICATIONS = gql`

@@ -12,6 +12,7 @@ const labels = {
   back: {
     back: "Voltar",
     toCommunityBoard: "Voltar para o painel da comunidade",
+    toConversations: "Back to all conversations",
     toFeed: "Voltar ao feed",
     toLoginForm: "Voltar para o login",
     toMenu: "Voltar para o menu",
