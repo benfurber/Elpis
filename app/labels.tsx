@@ -52,6 +52,10 @@ const labels = {
     logout: "Sair",
     title: "Menu",
   },
+  messages: {
+    groupDiscussion: "Group chat",
+    title: "Messages",
+  },
   morePosts: "Mais postagens",
   next: "Próximo",
   noComments: "Nenhum comentário ainda - faça o primeiro!",

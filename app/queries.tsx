@@ -135,6 +135,18 @@ export const COMMENT_WITH_REPLIES = gql`
   ${REPLY_ATTRIBUTES}
 `;
 
+export const CONVERSATION_LIST = gql`
+  query user {
+    me {
+      id
+      conversations {
+        ...conversationAttributes
+      }
+    }
+  }
+  ${CONVERSATION_ATTRIBUTES}
+`;
+
 export const COMMUNITY = gql`
   query community($id: ID!) {
     community(id: $id) {
