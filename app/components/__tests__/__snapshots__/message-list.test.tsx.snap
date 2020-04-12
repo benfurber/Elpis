@@ -1,0 +1,39 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Message renders correctly 1`] = `
+<FlatList
+  contentContainerStyle={
+    Object {
+      "paddingBottom": 40,
+    }
+  }
+  data={
+    Array [
+      Object {
+        "author": Object {
+          "avatarPath": Object {
+            "testUri": "../../../app/assets/images/profile-pic-annon.png",
+          },
+          "id": "1235we",
+          "name": "May",
+        },
+        "content": "Eu acho que fazer as unhas é umas das coisas mais fúteis, inúteis, burras de se fazer com o próprio tempo e dinheiro. Maquiagem um pouco também. E que se foda se alguém achar que eu me cuido pouco pq não faço as unhas.",
+        "createdAt": 2019-01-01T00:00:00.000Z,
+        "id": "2143r97dc",
+      },
+    ]
+  }
+  disableVirtualization={false}
+  horizontal={false}
+  initialNumToRender={5}
+  keyExtractor={[Function]}
+  maxToRenderPerBatch={10}
+  numColumns={1}
+  onEndReachedThreshold={2}
+  removeClippedSubviews={false}
+  renderItem={[Function]}
+  scrollEventThrottle={50}
+  updateCellsBatchingPeriod={50}
+  windowSize={21}
+/>
+`;
