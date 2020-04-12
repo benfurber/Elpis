@@ -12,6 +12,7 @@ interface Props {
 }
 
 const routeNameIcon = {
+  Conversation: "envelope",
   Feed: "home",
   Feedback: "custom-thumbs",
   Menu: "bars",

@@ -5,13 +5,15 @@ import { shallow } from "enzyme";
 import { IconTabBar } from "components";
 
 describe("IconTabBar", () => {
-  describe("Feed", () => {
+  describe("Conversation", () => {
     it("renders correctly when not focused", () => {
       const component = shallow(
-        <IconTabBar routeName={"Feed"} focused={false} />,
+        <IconTabBar routeName={"Conversation"} focused={false} />,
       );
       expect(component).toMatchSnapshot();
     });
+  });
+  describe("Feed", () => {
     it("renders correctly when focused", () => {
       const component = shallow(
         <IconTabBar routeName={"Feed"} focused={true} />,
@@ -26,37 +28,19 @@ describe("IconTabBar", () => {
       );
       expect(component).toMatchSnapshot();
     });
-    it("renders correctly when focused", () => {
-      const component = shallow(
-        <IconTabBar routeName={"Feedback"} focused={true} />,
-      );
-      expect(component).toMatchSnapshot();
-    });
   });
-  describe("Notification", () => {
-    it("renders correctly when not focused", () => {
-      const component = shallow(
-        <IconTabBar routeName={"Notification"} focused={false} />,
-      );
-      expect(component).toMatchSnapshot();
-    });
-    it("renders correctly when focused", () => {
-      const component = shallow(
-        <IconTabBar routeName={"Notification"} focused={true} />,
-      );
-      expect(component).toMatchSnapshot();
-    });
-  });
-  describe("Settings", () => {
+  describe("Menu", () => {
     it("renders correctly when not focused", () => {
       const component = shallow(
         <IconTabBar routeName={"Menu"} focused={false} />,
       );
       expect(component).toMatchSnapshot();
     });
+  });
+  describe("Notification", () => {
     it("renders correctly when focused", () => {
       const component = shallow(
-        <IconTabBar routeName={"Menu"} focused={true} />,
+        <IconTabBar routeName={"Notification"} focused={true} />,
       );
       expect(component).toMatchSnapshot();
     });
