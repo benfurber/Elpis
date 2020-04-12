@@ -1,0 +1,211 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Message when another user renders correctly 1`] = `
+<TouchableOpacity
+  activeOpacity={0.2}
+  delayLongPress={600}
+  extraButtonProps={
+    Object {
+      "rippleColor": "transparent",
+    }
+  }
+>
+  <View
+    style={
+      Array [
+        Object {
+          "alignItems": "center",
+        },
+        Object {
+          "flexDirection": "row-reverse",
+          "marginLeft": 20,
+        },
+      ]
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "margin": 5,
+            "position": "absolute",
+            "zIndex": 1,
+          },
+        ]
+      }
+    >
+      <Avatar
+        avatarPath={
+          Object {
+            "testUri": "../../../app/assets/images/profile-pic-annon.png",
+          }
+        }
+        size="xs"
+      />
+    </View>
+    <View
+      style={
+        Array [
+          Object {
+            "width": "100%",
+          },
+        ]
+      }
+    >
+      <View
+        style={
+          Array [
+            Object {
+              "paddingHorizontal": 25,
+              "paddingVertical": 20,
+            },
+            Object {
+              "backgroundColor": "rgb(255, 255, 255)",
+              "borderBottomRightRadius": 10,
+              "borderTopRightRadius": 10,
+              "marginRight": 20,
+            },
+            Object {
+              "opacity": 1,
+            },
+          ]
+        }
+      >
+        <Text>
+          Eu acho que fazer as unhas é umas das coisas mais fúteis, inúteis, burras de se fazer com o próprio tempo e dinheiro. Maquiagem um pouco também. E que se foda se alguém achar que eu me cuido pouco pq não faço as unhas.
+        </Text>
+      </View>
+    </View>
+  </View>
+  <View
+    style={
+      Array [
+        Object {
+          "marginBottom": 10,
+          "marginTop": 3.3333333333333335,
+          "paddingHorizontal": 25,
+        },
+        Object {
+          "alignItems": "flex-start",
+        },
+      ]
+    }
+  >
+    <Text
+      style={
+        Object {
+          "color": "rgba(51,51,51,0.65)",
+          "fontSize": 12,
+        }
+      }
+    >
+      Há um ano
+    </Text>
+  </View>
+</TouchableOpacity>
+`;
+
+exports[`Message when current user renders correctly 1`] = `
+<TouchableOpacity
+  activeOpacity={0.2}
+  delayLongPress={600}
+  extraButtonProps={
+    Object {
+      "rippleColor": "transparent",
+    }
+  }
+>
+  <View
+    style={
+      Array [
+        Object {
+          "alignItems": "center",
+        },
+        Object {
+          "flexDirection": "row",
+          "marginLeft": 20,
+        },
+      ]
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "margin": 5,
+            "position": "absolute",
+            "zIndex": 1,
+          },
+        ]
+      }
+    >
+      <Avatar
+        avatarPath={
+          Object {
+            "testUri": "../../../app/assets/images/profile-pic-annon.png",
+          }
+        }
+        size="xs"
+      />
+    </View>
+    <View
+      style={
+        Array [
+          Object {
+            "width": "100%",
+          },
+        ]
+      }
+    >
+      <View
+        style={
+          Array [
+            Object {
+              "paddingHorizontal": 25,
+              "paddingVertical": 20,
+            },
+            Object {
+              "backgroundColor": "rgb(216, 226, 234)",
+              "borderBottomLeftRadius": 10,
+              "borderTopLeftRadius": 10,
+              "marginLeft": 20,
+            },
+            Object {
+              "opacity": 1,
+            },
+          ]
+        }
+      >
+        <Text>
+          Eu acho que fazer as unhas é umas das coisas mais fúteis, inúteis, burras de se fazer com o próprio tempo e dinheiro. Maquiagem um pouco também. E que se foda se alguém achar que eu me cuido pouco pq não faço as unhas.
+        </Text>
+      </View>
+    </View>
+  </View>
+  <View
+    style={
+      Array [
+        Object {
+          "marginBottom": 10,
+          "marginTop": 3.3333333333333335,
+          "paddingHorizontal": 25,
+        },
+        Object {
+          "alignItems": "flex-end",
+        },
+      ]
+    }
+  >
+    <Text
+      style={
+        Object {
+          "color": "rgba(51,51,51,0.65)",
+          "fontSize": 12,
+        }
+      }
+    >
+      Há um ano
+    </Text>
+  </View>
+</TouchableOpacity>
+`;
