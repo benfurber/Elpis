@@ -1,6 +1,7 @@
 import {
   Comment,
   Community,
+  Conversation,
   Message,
   Reply,
   User,
@@ -89,4 +90,10 @@ export const message: Message = {
     "Eu acho que fazer as unhas é umas das coisas mais fúteis, inúteis, burras de se fazer com o próprio tempo e dinheiro. Maquiagem um pouco também. E que se foda se alguém achar que eu me cuido pouco pq não faço as unhas.",
   createdAt: new Date("2019-01-01"),
   id: "2143r97dc",
+};
+
+export const conversation: Conversation = {
+  id: "123gsdvhu",
+  messages: [message],
+  remainingParticipants: [user],
 };

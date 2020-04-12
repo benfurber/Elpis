@@ -34,6 +34,12 @@ export interface Comment extends ContentBase {
   post?: Post;
 }
 
+export interface Conversation {
+  id: string;
+  messages?: Message[];
+  remainingParticipants: User[];
+}
+
 export interface Community {
   id: string;
   avatarPath: string;
