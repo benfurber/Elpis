@@ -31,6 +31,7 @@ export { LinkPreview } from "./link-preview";
 export { Loading } from "./loading";
 export { LoginForm } from "./login-form";
 export { Logo } from "./logo";
+export { Message } from "./message";
 export { MessageBox } from "./message-box";
 export { NoContent } from "./no-content";
 export { Notifications } from "./notifications";
