@@ -30,6 +30,7 @@ export { IconDiscussionLevel } from "./icon-discussion-level";
 export { IconNav } from "./icon-nav";
 export { IconTabBar } from "./icon-tab-bar";
 export { Icon } from "./icon";
+export { KeyboardAddMessage } from "./keyboard-add-message";
 export { LinkPreview } from "./link-preview";
 export { Loading } from "./loading";
 export { LoginForm } from "./login-form";

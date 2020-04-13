@@ -8,6 +8,14 @@ export const ADD_COMMENT = gql`
   }
 `;
 
+export const ADD_MESSAGE = gql`
+  mutation createMessage($conversationId: ID!, $content: String!) {
+    createMessage(conversationId: $conversationId, content: $content) {
+      id
+    }
+  }
+`;
+
 export const ADD_REPLY = gql`
   mutation createReply($id: ID!, $imagePath: URL, $content: String!) {
     createReply(id: $id, imagePath: $imagePath, content: $content) {

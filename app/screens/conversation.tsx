@@ -1,11 +1,13 @@
 import React, { Component } from "react";
 import { StyleSheet, View } from "react-native";
+
 import { withMappedNavigationParams } from "react-navigation-props-mapper";
 
 import {
   BackButton,
   BackgroundContainer,
   ConversationScreenHeader,
+  KeyboardAddMessage,
   MessageList,
   Query,
 } from "components";
@@ -59,6 +61,7 @@ class ConversationScreen extends Component<Props> {
             )}
           </Query>
         </View>
+        <KeyboardAddMessage conversationId={id} />
       </BackgroundContainer>
     );
   }
