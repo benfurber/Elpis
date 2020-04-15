@@ -23,6 +23,7 @@
     "apollo-link-context": "1.0.19",
     "apollo-link-error": "1.1.12",
     "apollo-link-http": "1.5.16",
+    "apollo-link-ws": "^1.0.20",
     "aws-sdk": "^2.626.0",
     "base64-arraybuffer": "^0.2.0",
     "bugsnag-react-native": "^2.23.6",
@@ -57,7 +58,8 @@
     "react-navigation": "4.0.10",
     "react-navigation-props-mapper": "^1.0.1",
     "react-navigation-stack": "^1.10.3",
-    "react-navigation-tabs": "2.6.2"
+    "react-navigation-tabs": "2.6.2",
+    "subscriptions-transport-ws": "^0.9.16"
   },
   "devDependencies": {
     "@apollo/react-testing": "3.1.3",
