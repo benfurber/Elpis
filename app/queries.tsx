@@ -19,6 +19,18 @@ const CONVERSATION_ATTRIBUTES = gql`
   }
 `;
 
+const MESSAGE_ATTRIBUTES = gql`
+  fragment messageAttributes on Message {
+    id
+    author {
+      ...authorAttributes
+    }
+    content
+    createdAt
+  }
+  ${AUTHOR_ATTRIBUTES}
+`;
+
 const POST_ATTRIBUTES = gql`
   fragment postAttributes on Post {
     id
@@ -196,22 +208,17 @@ export const USER_DETAILS = gql`
   }
 `;
 
-export const MESSAGE_LIST = gql`
-  query conversation($id: ID!) {
-    conversation(id: $id) {
+export const MESSAGE_FEED = gql`
+  query messageFeed($before: ID, $conversationId: ID!, $last: Int) {
+    messageFeed(before: $before, conversationId: $conversationId, last: $last) {
       ...conversationAttributes
       messages {
-        author {
-          avatarPath
-          id
-        }
-        id
-        content
-        createdAt
+        ...messageAttributes
       }
     }
   }
   ${CONVERSATION_ATTRIBUTES}
+  ${MESSAGE_ATTRIBUTES}
 `;
 
 export const NOTIFICATIONS = gql`
@@ -256,6 +263,23 @@ export const USER = gql`
       name
       totalReplies
       totalTopics
+    }
+  }
+`;
+
+export const CONVERSATION_SUBSCRIPTION = gql`
+  subscription conversationSubscription($id: ID!) {
+    conversationSubscription(id: $id) {
+      mutation
+      node {
+        author {
+          avatarPath
+          id
+        }
+        id
+        content
+        createdAt
+      }
     }
   }
 `;

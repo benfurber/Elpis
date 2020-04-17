@@ -21,6 +21,7 @@ export { CommunityDetails } from "./community-details";
 export { ConversationList } from "./conversation-list";
 export { ConversationListItem } from "./conversation-list-item";
 export { ConversationScreenHeader } from "./conversation-screen-header";
+export { ConversationQuery } from "./conversation-query";
 export { DisplayContent } from "./display-content";
 export { ErrorMessage } from "./error-message";
 export { FormAddProfilePicture } from "./form-add-profile-picture";
