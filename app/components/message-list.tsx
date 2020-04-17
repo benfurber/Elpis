@@ -14,6 +14,7 @@ interface Props {
   conversation: Conversation;
   currentUserId: User["id"];
   navigation: NavigationType;
+  subscribeToNewMessages?: any;
 }
 
 interface State {
@@ -21,6 +22,10 @@ interface State {
 }
 
 class MessageList extends Component<Props, State> {
+  componentDidMount() {
+    this.props.subscribeToNewMessages();
+  }
+
   render() {
     const { conversation, currentUserId, navigation } = this.props;
 

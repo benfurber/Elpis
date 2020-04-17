@@ -38,7 +38,7 @@ class NewQuery extends Component<Props, State> {
     );
   }
 
-  renderData(args, data) {
+  renderData(args) {
     return (
       <ScrollView
         refreshControl={
@@ -48,7 +48,7 @@ class NewQuery extends Component<Props, State> {
           />
         }
       >
-        {this.renderContent(data)}
+        {this.renderContent(args.data)}
       </ScrollView>
     );
   }
@@ -73,8 +73,7 @@ class NewQuery extends Component<Props, State> {
             bugTracker.notify(args.error);
             return this.renderError(args.error);
           }
-
-          return this.renderData(args, args.data);
+          return this.renderData(args);
         }}
       </Query>
     );

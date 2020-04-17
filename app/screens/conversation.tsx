@@ -7,14 +7,12 @@ import {
   BackButton,
   BackgroundContainer,
   ConversationScreenHeader,
+  ConversationQuery,
   KeyboardAddMessage,
-  MessageList,
-  Query,
 } from "components";
 import { Conversation, NavigationType, User } from "interfaces";
 import { layout, colours } from "styles";
 import { labels } from "labels";
-import { MESSAGE_LIST } from "queries";
 import { Analytics } from "utils";
 
 interface Props {
@@ -25,7 +23,15 @@ interface Props {
   navigation: NavigationType;
 }
 
-class ConversationScreen extends Component<Props> {
+interface State {
+  feedScrollView: any;
+}
+
+class ConversationScreen extends Component<Props, State> {
+  state = {
+    feedScrollView: null,
+  };
+
   componentDidMount() {
     Analytics.track("Conversation");
   }
@@ -39,6 +45,8 @@ class ConversationScreen extends Component<Props> {
       id,
     } = this.props;
 
+    const { feedScrollView } = this.state;
+
     return (
       <BackgroundContainer>
         <BackButton
@@ -51,17 +59,17 @@ class ConversationScreen extends Component<Props> {
           remainingParticipants={remainingParticipants}
         />
         <View style={styles.container}>
-          <Query query={MESSAGE_LIST} variables={{ id }} blueMode>
-            {({ conversation }) => (
-              <MessageList
-                conversation={conversation}
-                currentUserId={currentUserId}
-                navigation={navigation}
-              />
-            )}
-          </Query>
+          <ConversationQuery
+            id={id}
+            currentUserId={currentUserId}
+            navigation={navigation}
+            setFeedScrollView={feedScrollView => this.setState(feedScrollView)}
+          />
         </View>
-        <KeyboardAddMessage conversationId={id} />
+        <KeyboardAddMessage
+          conversationId={id}
+          feedScrollView={feedScrollView}
+        />
       </BackgroundContainer>
     );
   }

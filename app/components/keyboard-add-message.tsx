@@ -12,6 +12,7 @@ import { labels } from "labels";
 
 interface Props {
   conversationId: Conversation["id"];
+  feedScrollView: any;
 }
 
 interface State {
@@ -44,7 +45,12 @@ class KeyboardAddMessage extends Component<Props, State> {
   }
 
   render() {
+    const { feedScrollView } = this.props;
     const { content, display } = this.state;
+
+    if (feedScrollView == null) {
+      return null;
+    }
 
     return (
       <KeyboardAccessoryView
@@ -62,6 +68,7 @@ class KeyboardAddMessage extends Component<Props, State> {
                   displayStyle={display}
                   multiline={true}
                   onChangeText={content => this.setState({ content })}
+                  onFocus={feedScrollView.scrollToEnd()}
                   onSubmitEditing={() => this.onPress(login)}
                   placeholder={labels.email}
                   returnKeyLabel={"Send"}
