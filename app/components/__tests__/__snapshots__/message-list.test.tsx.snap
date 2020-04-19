@@ -4,7 +4,7 @@ exports[`Message renders correctly 1`] = `
 <FlatList
   contentContainerStyle={
     Object {
-      "paddingBottom": 40,
+      "paddingBottom": 5,
     }
   }
   data={
@@ -25,7 +25,7 @@ exports[`Message renders correctly 1`] = `
   }
   disableVirtualization={false}
   horizontal={false}
-  initialNumToRender={5}
+  initialNumToRender={10}
   keyExtractor={[Function]}
   maxToRenderPerBatch={10}
   numColumns={1}

@@ -14,7 +14,7 @@ interface Props {
   conversation: Conversation;
   currentUserId: User["id"];
   navigation: NavigationType;
-  subscribeToNewMessages?: any;
+  subscribeToNewMessages: () => void;
 }
 
 interface State {
@@ -31,9 +31,9 @@ class MessageList extends Component<Props, State> {
 
     return (
       <FlatList
-        contentContainerStyle={{ paddingBottom: layout.spacingXL }}
+        contentContainerStyle={{ paddingBottom: layout.spacingS }}
         data={conversation.messages}
-        initialNumToRender={5}
+        initialNumToRender={10}
         keyExtractor={({ id }) => id}
         renderItem={({ item }: { item: MessageType }) => (
           <Message

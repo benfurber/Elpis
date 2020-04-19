@@ -1,5 +1,5 @@
 import React, { Component, Fragment } from "react";
-import { StyleSheet, View } from "react-native";
+import { Keyboard, StyleSheet, View } from "react-native";
 
 import { Mutation } from "react-apollo";
 import { KeyboardAccessoryView } from "react-native-keyboard-accessory";
@@ -12,7 +12,6 @@ import { labels } from "labels";
 
 interface Props {
   conversationId: Conversation["id"];
-  feedScrollView: any;
 }
 
 interface State {
@@ -45,32 +44,24 @@ class KeyboardAddMessage extends Component<Props, State> {
   }
 
   render() {
-    const { feedScrollView } = this.props;
     const { content, display } = this.state;
-
-    if (feedScrollView == null) {
-      return null;
-    }
 
     return (
       <KeyboardAccessoryView
         androidAdjustResize
         animateOn="all"
         alwaysVisible={true}
+        avoidKeyboard
       >
         <View style={styles.textInputView}>
           <Mutation mutation={ADD_MESSAGE}>
             {login => (
               <Fragment>
                 <TextInput
-                  autoCapitalize="none"
-                  autoFocus={true}
                   displayStyle={display}
                   multiline={true}
                   onChangeText={content => this.setState({ content })}
-                  onFocus={feedScrollView.scrollToEnd()}
                   onSubmitEditing={() => this.onPress(login)}
-                  placeholder={labels.email}
                   returnKeyLabel={"Send"}
                   returnKeyType="send"
                   value={content}

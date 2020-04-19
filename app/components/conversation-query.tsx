@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { RefreshControl, ScrollView, View } from "react-native";
+import { Keyboard, RefreshControl, ScrollView, View } from "react-native";
 import { Query } from "react-apollo";
 
 import { ErrorMessage, Loading, MessageList } from "components";
@@ -11,22 +11,33 @@ interface Props {
   currentUserId: User["id"];
   id: Conversation["id"];
   navigation: NavigationType;
-  setFeedScrollView: any;
 }
 
 interface State {
   before: null | string;
+  shouldScrollToBottom: boolean;
 }
+
+const last = 10;
 
 class ConversationQuery extends Component<Props, State> {
   scrollView;
+  keyboardDidShowListener = Keyboard.addListener(
+    "keyboardDidShow",
+    this.keyboardDidShow.bind(this),
+  );
 
   state = {
     before: null,
+    shouldScrollToBottom: true,
   };
 
-  componentDidMount() {
-    this.props.setFeedScrollView(this.scrollView);
+  componentWillUnmount() {
+    this.keyboardDidShowListener.remove();
+  }
+
+  keyboardDidShow() {
+    this.scrollView.scrollToEnd();
   }
 
   shouldUpdateState(data) {
@@ -55,9 +66,7 @@ class ConversationQuery extends Component<Props, State> {
           }),
         });
       },
-      variables: {
-        before,
-      },
+      variables: { before },
     });
   }
 
@@ -71,12 +80,16 @@ class ConversationQuery extends Component<Props, State> {
 
   render() {
     const { id, currentUserId, navigation } = this.props;
+    const { shouldScrollToBottom } = this.state;
 
     const subscribeToNewMessages = subscribeToMore => {
       subscribeToMore({
         document: CONVERSATION_SUBSCRIPTION,
         updateQuery: (prev, { subscriptionData }) => {
           if (!subscriptionData.data) return prev;
+
+          this.setState({ shouldScrollToBottom: true });
+
           const newMessageItem =
             subscriptionData.data.conversationSubscription.node;
           return Object.assign({}, prev, {
@@ -92,7 +105,7 @@ class ConversationQuery extends Component<Props, State> {
     return (
       <Query
         query={MESSAGE_FEED}
-        variables={{ conversationId: id, last: 1 }}
+        variables={{ conversationId: id, last }}
         partialRefetch={true}
       >
         {args => {
@@ -110,10 +123,13 @@ class ConversationQuery extends Component<Props, State> {
 
             return (
               <ScrollView
-                ref={ref => {
-                  this.scrollView = ref;
+                onContentSizeChange={() => {
+                  if (shouldScrollToBottom) {
+                    this.scrollView.scrollToEnd({ animate: false });
+                    this.setState({ shouldScrollToBottom: false });
+                  }
                 }}
-                onContentSizeChange={() => this.scrollView.scrollToEnd()}
+                ref={ref => (this.scrollView = ref)}
                 refreshControl={
                   <RefreshControl
                     refreshing={args.networkStatus === 4}
