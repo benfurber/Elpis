@@ -1,7 +1,18 @@
+import "apollo-link-ws";
 import Enzyme from "enzyme";
 import Adapter from "enzyme-adapter-react-16";
 import { NativeModules } from "react-native";
 import MockAsyncStorage from "mock-async-storage";
+
+import { client } from "utils";
+
+jest.mock("apollo-link-ws");
+
+Object.assign(client, {
+  ApolloClient: {
+    new: () => jest.fn(),
+  },
+});
 
 Enzyme.configure({ adapter: new Adapter() });
 
