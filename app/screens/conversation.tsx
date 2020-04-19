@@ -23,15 +23,7 @@ interface Props {
   navigation: NavigationType;
 }
 
-interface State {
-  feedScrollView: any;
-}
-
-class ConversationScreen extends Component<Props, State> {
-  state = {
-    feedScrollView: null,
-  };
-
+class ConversationScreen extends Component<Props> {
   componentDidMount() {
     Analytics.track("Conversation");
   }
@@ -44,8 +36,6 @@ class ConversationScreen extends Component<Props, State> {
       remainingParticipants,
       id,
     } = this.props;
-
-    const { feedScrollView } = this.state;
 
     return (
       <BackgroundContainer>
@@ -63,13 +53,9 @@ class ConversationScreen extends Component<Props, State> {
             id={id}
             currentUserId={currentUserId}
             navigation={navigation}
-            setFeedScrollView={feedScrollView => this.setState(feedScrollView)}
           />
+          <KeyboardAddMessage conversationId={id} />
         </View>
-        <KeyboardAddMessage
-          conversationId={id}
-          feedScrollView={feedScrollView}
-        />
       </BackgroundContainer>
     );
   }

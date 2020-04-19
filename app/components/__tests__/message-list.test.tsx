@@ -10,12 +10,14 @@ let navigation;
 describe("Message", () => {
   it("renders correctly", () => {
     const currentUserId = "126g";
+    const subscribeToNewMessages = () => jest.fn();
 
     const component = shallow(
       <MessageList
         conversation={conversation}
         currentUserId={currentUserId}
         navigation={navigation}
+        subscribeToNewMessages={subscribeToNewMessages}
       />,
     );
 
