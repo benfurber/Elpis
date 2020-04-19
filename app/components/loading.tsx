@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Animated, StyleSheet } from "react-native";
+import { Animated, StyleSheet, View } from "react-native";
 
 interface Props {
   blueMode?: boolean;
@@ -19,12 +19,12 @@ class Loading extends Component<Props> {
 
   animationLoop() {
     const fadeIn = {
-      toValue: 1,
       duration: 500,
+      toValue: 1,
     };
     const fadeOut = {
-      toValue: 0,
       duration: 500,
+      toValue: 0,
     };
 
     Animated.sequence([
@@ -47,40 +47,42 @@ class Loading extends Component<Props> {
   }
 
   render() {
-    let { fade1, fade2, fade3, fade4 } = this.state;
+    const { fade1, fade2, fade3, fade4 } = this.state;
 
     return (
-      <Animated.View
-        style={[
-          { opacity: fade1 },
-          styles.circle1,
-          this.backgroundColour("circle1"),
-        ]}
-      >
+      <View style={styles.container}>
         <Animated.View
           style={[
-            { opacity: fade2 },
-            styles.circle2,
-            this.backgroundColour("circle2"),
+            { opacity: fade1 },
+            styles.circle1,
+            this.backgroundColour("circle1"),
           ]}
         >
           <Animated.View
             style={[
-              { opacity: fade3 },
-              styles.circle3,
-              this.backgroundColour("circle3"),
+              { opacity: fade2 },
+              styles.circle2,
+              this.backgroundColour("circle2"),
             ]}
           >
             <Animated.View
               style={[
-                { opacity: fade4 },
-                styles.circle4,
-                this.backgroundColour("circle4"),
+                { opacity: fade3 },
+                styles.circle3,
+                this.backgroundColour("circle3"),
               ]}
-            />
+            >
+              <Animated.View
+                style={[
+                  { opacity: fade4 },
+                  styles.circle4,
+                  this.backgroundColour("circle4"),
+                ]}
+              />
+            </Animated.View>
           </Animated.View>
         </Animated.View>
-      </Animated.View>
+      </View>
     );
   }
 }
@@ -94,25 +96,28 @@ const styles = StyleSheet.create({
   circle2: {
     borderRadius: 125,
     height: 250,
-    width: 250,
-    marginTop: 35,
     marginLeft: 30,
+    marginTop: 35,
+    width: 250,
   },
   circle3: {
     backgroundColor: "rgba(255,255,255,0.5)",
     borderRadius: 80,
     height: 160,
-    width: 160,
-    marginTop: 50,
     marginLeft: 25,
+    marginTop: 50,
+    width: 160,
   },
   circle4: {
     backgroundColor: "rgba(255,255,255,0.8)",
     borderRadius: 40,
     height: 80,
-    width: 80,
-    marginTop: 20,
     marginLeft: 50,
+    marginTop: 20,
+    width: 80,
+  },
+  container: {
+    alignSelf: "center",
   },
 });
 
