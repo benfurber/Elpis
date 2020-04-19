@@ -1,14 +1,13 @@
 import React, { Component, Fragment } from "react";
-import { Keyboard, StyleSheet, View } from "react-native";
+import { StyleSheet, View } from "react-native";
 
 import { Mutation } from "react-apollo";
 import { KeyboardAccessoryView } from "react-native-keyboard-accessory";
 
-import { ButtonSubmit, TextInput } from "components";
+import { ButtonIcon, TextInput } from "components";
 import { Conversation } from "interfaces";
 import { layout, colours } from "styles";
 import { ADD_MESSAGE } from "mutations";
-import { labels } from "labels";
 
 interface Props {
   conversationId: Conversation["id"];
@@ -52,24 +51,29 @@ class KeyboardAddMessage extends Component<Props, State> {
         animateOn="all"
         alwaysVisible={true}
         avoidKeyboard
+        hideBorder={true}
+        style={styles.keyboardContainer}
       >
         <View style={styles.textInputView}>
           <Mutation mutation={ADD_MESSAGE}>
-            {login => (
+            {add => (
               <Fragment>
-                <TextInput
-                  displayStyle={display}
-                  multiline={true}
-                  onChangeText={content => this.setState({ content })}
-                  onSubmitEditing={() => this.onPress(login)}
-                  returnKeyLabel={"Send"}
-                  returnKeyType="send"
-                  value={content}
-                />
-                <ButtonSubmit
+                <View style={styles.textInputContainer}>
+                  <TextInput
+                    displayStyle={display}
+                    multiline={true}
+                    onChangeText={content => this.setState({ content })}
+                    onSubmitEditing={() => this.onPress(add)}
+                    returnKeyLabel={"Send"}
+                    returnKeyType="send"
+                    style={styles.textInput}
+                    value={content}
+                  />
+                </View>
+                <ButtonIcon
                   display={content.length > 0 ? display : "loading"}
-                  label={labels.login}
-                  onPress={() => this.onPress(login)}
+                  onPress={() => this.onPress(add)}
+                  style={styles.submit}
                 />
               </Fragment>
             )}
@@ -88,24 +92,45 @@ const styles = StyleSheet.create({
     paddingTop: layout.spacing,
     width: "100%",
   },
+  keyboardContainer: {
+    alignSelf: "baseline",
+    backgroundColor: "transparent",
+    margin: 0,
+    padding: 0,
+  },
+  submit: {
+    alignSelf: "flex-end",
+    backgroundColor: colours.navyBlueDark,
+    right: 20,
+    zIndex: 1,
+  },
   textInput: {
-    borderColor: "#CCC",
-    borderRadius: 10,
-    borderWidth: 1,
-    flexGrow: 1,
+    alignSelf: "stretch",
+    flex: 1,
     fontSize: 16,
-    marginRight: 10,
-    padding: 10,
+    height: "auto",
+    justifyContent: "space-around",
+    margin: 0,
+    padding: 0,
     textAlignVertical: "top",
   },
   textInputButton: {
     flexShrink: 1,
   },
+  textInputContainer: {
+    alignItems: "center",
+    backgroundColor: colours.pureWhite,
+    borderTopLeftRadius: 30,
+    borderTopRightRadius: 30,
+    flex: 1,
+    flexDirection: "row",
+    justifyContent: "space-between",
+    padding: 15,
+  },
   textInputView: {
     alignItems: "center",
     flexDirection: "row",
     justifyContent: "space-between",
-    padding: 8,
   },
 });
 
