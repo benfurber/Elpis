@@ -36,7 +36,7 @@ class Message extends Component<Props, State> {
     };
 
     return (
-      <TouchableOpacity>
+      <TouchableOpacity disabled={true}>
         <View style={[styles.container, userStyle.container]}>
           <View style={[styles.avatarContainer]}>
             <Avatar avatarPath={author.avatarPath} size="xs" />

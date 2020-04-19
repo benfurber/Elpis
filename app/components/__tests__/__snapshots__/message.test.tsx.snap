@@ -4,6 +4,7 @@ exports[`Message when another user renders correctly 1`] = `
 <TouchableOpacity
   activeOpacity={0.2}
   delayLongPress={600}
+  disabled={true}
   extraButtonProps={
     Object {
       "rippleColor": "transparent",
@@ -109,6 +110,7 @@ exports[`Message when current user renders correctly 1`] = `
 <TouchableOpacity
   activeOpacity={0.2}
   delayLongPress={600}
+  disabled={true}
   extraButtonProps={
     Object {
       "rippleColor": "transparent",
