@@ -78,7 +78,7 @@
     "eslint-plugin-import": "2.19.1",
     "eslint-plugin-jest": "23.2.0",
     "eslint-plugin-jsx-a11y": "^6.2.1",
-    "eslint-plugin-react": "7.17.0",
+    "eslint-plugin-react": "7.21.3",
     "eslint-plugin-react-native": "3.8.1",
     "eslint-plugin-sort-keys-fix": "^1.1.0",
     "jest": "24.9.0",
