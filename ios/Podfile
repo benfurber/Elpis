@@ -36,7 +36,6 @@ target 'Elpis' do
 
   pod 'Mixpanel', '3.5.1'
 
-  pod 'react-native-onesignal', :path => '../node_modules/react-native-onesignal'
 
   target 'OneSignalNotificationServiceExtension' do
     pod 'OneSignal', '>= 2.9.3', '< 3.0'
